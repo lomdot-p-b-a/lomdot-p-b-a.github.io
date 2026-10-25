@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>לומדת חובת קריאה: טיפול בילדה שחוותה התעללות מינית במשפחה - במסגרת קבוצת פסיכודרמה לילדים</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Rubik:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: a study notebook. Home = illustrated cover + topic cards; topic = one reading card at a time, with a highlighter for key terms and drawn figures */
+:root{
+  --bg:#eef2f4; --surface:#ffffff; --raised:#f7f9fa; --ink:#15222a; --muted:#4c5b66; --line:#dbe2e6;
+  --accent:#2457a6; --mark:#ffe27a; --good:#23855a; --good-soft:#e2f4ea; --bad:#c2452d; --bad-soft:#fbe6e1;
+  --t1:#d35d36; --t2:#3667cf; --t3:#0e8a7c; --t4:#8448c9; --t5:#b9800c; --t6:#2a7fa6;
+  --display:"Suez One","Frank Ruhl Libre","David",serif;
+  --body:"Rubik","Arial Hebrew","Segoe UI",Arial,sans-serif;
+  --shadow:0 1px 2px rgba(21,34,42,.06),0 8px 24px rgba(21,34,42,.07);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;font-weight:500;line-height:1.75;direction:rtl}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
+p{margin:0}
+.stack{display:flex;flex-direction:column;gap:16px}
+.muted{color:var(--muted)}
+mark{background:linear-gradient(transparent 38%,var(--mark) 38%,var(--mark) 92%,transparent 92%);color:inherit;padding:0 2px;font-weight:600}
+button{font:inherit;cursor:pointer;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:11px 18px}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button[disabled]{opacity:.55;cursor:default}
+.primary{background:var(--c,var(--accent));border-color:var(--c,var(--accent));color:var(--surface);font-weight:600}
+.ghost{background:transparent;border:none;color:var(--muted);padding:6px 2px}
+.ghost:hover{color:var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.badge{display:inline-block;align-self:flex-start;font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:99px;background:var(--accent);color:var(--surface);margin-bottom:6px}.entitle{display:inline;unicode-bidi:isolate;font-family:Rubik,system-ui,sans-serif;font-weight:800}.hetitle{margin:4px 0 0;font-weight:700;font-size:1.05rem}.cite{text-align:right;margin:4px 0 0;font-size:.85rem;color:var(--muted)}.cite a{color:var(--accent)}
+.eyebrow{font-size:.8rem;letter-spacing:.05em;font-weight:600;color:var(--c,var(--muted))}
+
+/* home */
+.cover{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.cover-art{background:var(--raised);border-bottom:1px solid var(--line);padding:8px 8px 0}
+.cover-art svg{display:block;width:100%;height:auto;max-height:230px}
+.cover-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px}
+.cover h1{font-size:clamp(2rem,6vw,2.6rem);font-weight:900}
+.stats{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.ring{--p:0;width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center;flex:none}
+.ring span{width:50px;height:50px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.9rem;font-variant-numeric:tabular-nums}
+.stat-text{display:flex;flex-direction:column;line-height:1.35;flex:1;min-width:160px}
+.stat-text b{font-size:1.05rem}
+.review-btn{display:flex;align-items:center;gap:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.tcard{--c:var(--accent);text-align:right;padding:0;overflow:hidden;border:none;border-radius:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s}
+.tcard:hover{transform:translateY(-2px)}
+.tcard .band{background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.tcard .band svg{width:44px;height:44px}
+.tcard .n{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;opacity:.85}
+.tcard .body{padding:12px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tcard .t{font-weight:700;font-size:1.05rem;line-height:1.35}
+.bar{height:7px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--c);border-radius:4px}
+.meta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip{font-size:.75rem;padding:3px 10px;border-radius:99px;font-weight:600;background:color-mix(in srgb,var(--c,var(--accent)) 14%,transparent);color:var(--c,var(--accent));white-space:nowrap}
+.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+
+/* topic */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;display:flex;flex-direction:column;gap:8px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.steps{display:flex;gap:5px}
+.steps i{flex:1;height:5px;border-radius:3px;background:var(--line)}
+.steps i.on{background:var(--c)}
+.prog{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tt{font-size:1.6rem;font-weight:900}
+.card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px}
+.card h3{font-size:1.25rem;color:var(--c)}
+.fig{background:var(--raised);border-radius:14px;padding:10px;margin-inline:-4px}
+.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{font-size:.8rem;color:var(--muted);text-align:center;margin-top:4px}
+figure{margin:0}
+.def{border:1.5px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 6%,var(--surface));border-radius:14px;padding:14px 16px}
+.lbl{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:var(--c);margin-bottom:4px}
+.who{display:flex;gap:12px;align-items:flex-start}
+.who .av{flex:none;width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.15rem}
+.who .yr{font-size:.8rem;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.tile{background:var(--raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile svg{width:32px;height:32px;color:var(--c)}
+.tile b{font-size:.98rem}
+.tile span{font-size:.88rem;color:var(--muted);line-height:1.45}
+.ex{background:var(--raised);border-radius:12px;padding:12px 14px;font-size:.95rem}
+.ex .lbl{color:var(--muted)}
+.yesno{display:flex;flex-wrap:wrap;gap:8px}
+.yn{padding:5px 12px;border-radius:99px;font-size:.88rem;font-weight:500;display:inline-flex;gap:6px;align-items:center}
+.yn.y{background:var(--good-soft);color:var(--good)} .yn.n{background:var(--bad-soft);color:var(--bad)}
+.spectrum{display:flex;flex-direction:column;gap:6px}
+.spectrum .track{height:12px;border-radius:6px;background:linear-gradient(90deg,var(--bad),var(--line) 50%,var(--good));position:relative}
+.spectrum .dot{position:absolute;top:50%;left:50%;width:20px;height:20px;border-radius:50%;background:var(--surface);border:3px solid var(--ink);transform:translate(-50%,-50%)}
+.spectrum .ends{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);gap:10px}
+.remember{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;border-top:1px dashed var(--line);padding-top:12px}
+.remember svg{flex:none;width:22px;height:22px;color:var(--c)}
+
+/* question */
+.q{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:12px}
+.qtext{font-weight:600;font-size:1.08rem;line-height:1.55}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{text-align:right;line-height:1.45;display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--raised);border:1.5px solid transparent}
+.opt:hover:not([disabled]){border-color:var(--c)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:8px;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.85rem;color:var(--c)}
+.opt.right{background:var(--good-soft);border-color:var(--good);opacity:1}
+.opt.right .k{background:var(--good);color:var(--surface)}
+.opt.wrong{background:var(--bad-soft);border-color:var(--bad);opacity:1}
+.opt.wrong .k{background:var(--bad);color:var(--surface)}
+.fb{padding:12px 14px;border-radius:12px;font-size:.95rem;display:flex;gap:10px;align-items:flex-start}
+.fb svg{flex:none;width:22px;height:22px;margin-top:2px}
+.fb.ok{background:var(--good-soft)} .fb.ok svg{color:var(--good)}
+.fb.no{background:var(--bad-soft)} .fb.no svg{color:var(--bad)}
+.fb strong{display:block}
+.big{font-family:var(--display);font-size:3.4rem;font-weight:900;color:var(--c);font-variant-numeric:tabular-nums;line-height:1}
+@media (prefers-reduced-motion:no-preference){.fade{animation:f .3s ease-out}@keyframes f{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+
+/* svg figure classes */
+.s-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.s-c{stroke:var(--c);stroke-width:2;fill:none}
+.f-c{fill:var(--c)}
+.f-soft{fill:color-mix(in srgb,var(--c) 16%,var(--surface))}
+.f-surf{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.f-ink{fill:var(--ink)}
+.f-mut{fill:var(--muted)}
+.f-inv{fill:var(--surface)}
+svg text{font-family:var(--body)}
+h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
+.card p,.def p,.tile span,.ex p{font-weight:500}
+.qtext{font-weight:700}
+.tile b,.who b{font-weight:700}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:.95rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.tbl th,.tbl td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl th{background:color-mix(in srgb,var(--c) 10%,var(--surface));color:var(--c);font-weight:700;font-size:.85rem}
+.tbl .in{color:var(--c);font-weight:700}.tbl .out{color:var(--muted);font-weight:700}
+.tblwrap{overflow-x:auto}
+.en{font-size:.82em;color:var(--muted);font-weight:500;direction:ltr;unicode-bidi:isolate}
+</style>
+<style>:root{--accent:#6a46c2}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent:#ad90f2}}:root[data-theme="dark"]{--accent:#ad90f2}</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const CONFIG={key:"lomda-intro-psychodrama",cover:"cover16",eyebrow:"מבוא לפסיכולוגיה · מאמר בעברית",title:"טיפול בילדה שחוותה התעללות מינית במשפחה - במסגרת קבוצת פסיכודרמה לילדים - תאור מקרה",cite:`אבנון כלב, א' (1998). טיפול בילדה שחוותה התעללות מינית במשפחה, במסגרת קבוצת פסיכודרמה לילדים: תאור מקרה. <i>סוגיות בחינוך מיוחד ובשיקום, 13</i>(2), 39–44.`,note:"מבוסס על המאמר בסוגיות בחינוך מיוחד ובשיקום (1998). השם \"דנה\" בדוי, כמו במאמר."};
+const I={
+ building:'<path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h2M14 8h2M8 12h2M14 12h2M10 21v-4h4v4"/>',
+ people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
+ cycle:'<path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/>',
+ pyramid:'<path d="M12 3L2.5 20h19z"/><path d="M8.2 10.5h7.6M5.5 15.2h13"/>',
+ chart:'<path d="M4 20V10M9.5 20V4M15 20v-7M20.5 20V8M2 20h20"/>',
+ gear:'<circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="7.5" stroke-dasharray="3.2 2.7" stroke-width="3.2"/>',
+ sprout:'<path d="M12 21v-9"/><path d="M12 14C7 14 4.5 11 4.5 6.5 9 6.5 12 9 12 14z"/><path d="M12 12c0-4.5 3-7 7.5-7 0 4.5-3 7-7.5 7z"/>',
+ scales:'<path d="M12 3v17M7 20h10M4 7h16"/><path d="M4 7l-2.5 6h5zM20 7l-2.5 6h5z"/>',
+ factory:'<path d="M3 21V10l5 3v-3l5 3V5h4v16zM1.5 21h21M17 9h4v12"/>',
+ question:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 1 1 3.6 2.4c-.8.4-1.1.9-1.1 1.8"/><path d="M12 17h.01"/>',
+ data:'<ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6M4.5 11.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6"/>',
+ doc:'<path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/>',
+ split:'<circle cx="12" cy="4.5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="12" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/><path d="M12 6.7v10M12 11l-6 6M12 11l6 6"/>',
+ grad:'<path d="M1.5 9L12 4l10.5 5L12 14z"/><path d="M6 11.2V16c3.3 2.4 8.7 2.4 12 0v-4.8M21 10v5"/>',
+ copies:'<rect x="3" y="7" width="12" height="14" rx="2"/><path d="M7 4h11a2 2 0 0 1 2 2v12"/>',
+ link:'<rect x="2" y="8" width="11" height="8" rx="4"/><rect x="11" y="8" width="11" height="8" rx="4"/>',
+ hand:'<circle cx="8" cy="7" r="3"/><circle cx="16" cy="7" r="3"/><path d="M2.5 20c0-3.3 2.5-6 5.5-6 1.6 0 3 .7 4 1.9 1-1.2 2.4-1.9 4-1.9 3 0 5.5 2.7 5.5 6"/>',
+ target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',
+ id:'<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><circle cx="8.5" cy="11" r="2.3"/><path d="M5 16c.6-1.6 2-2.4 3.5-2.4S11.4 14.4 12 16M14.5 10h4M14.5 13.5h3"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>',
+ pie:'<path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/>',
+ cart:'<path d="M2 3h3l2.5 12h11l2-8H6.5"/><circle cx="9" cy="19.5" r="1.6"/><circle cx="17" cy="19.5" r="1.6"/>',
+ bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/>',
+ check:'<circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/>',
+ x:'<circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/>',
+ lock:'<rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>',
+ moon:'<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>',
+ brain:'<path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a2 2 0 0 0-3-1z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/>',
+ phone:'<rect x="6.5" y="2" width="11" height="20" rx="2.5"/><path d="M10.5 18.5h3"/>',
+ flask:'<path d="M9 2.5h6M10 2.5v6L4.5 19a2 2 0 0 0 1.8 2.9h11.4a2 2 0 0 0 1.8-2.9L14 8.5v-6"/><path d="M7 15h10"/>',
+ leaf:'<path d="M5 19C5 10 11 4 20 4c0 9-6 15-15 15z"/><path d="M5 19l8-8"/>'
+};
+const ic=(k,cls="")=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="${cls}" aria-hidden="true">${I[k]}</svg>`;
+
+const arrowDef=id=>`<defs><marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="f-c"/></marker></defs>`;
+
+const FIG={
+ cover16:()=>`<svg viewBox="0 0 400 228" role="img" aria-label="במה עם וילון ושתי מסכות">
+  <rect x="70" y="24" width="260" height="180" rx="12" class="f-soft"/>
+  <path d="M70 24h70c-6 50-6 120 0 180H70z M330 24h-70c6 50 6 120 0 180h70z" class="f-c" opacity=".85"/>
+  <rect x="70" y="176" width="260" height="28" rx="6" class="f-surf"/>
+  <path d="M168 84a26 26 0 0 0 0 52a26 26 0 0 0 0-52z" class="f-surf"/><circle cx="160" cy="104" r="3" class="f-ink"/><circle cx="176" cy="104" r="3" class="f-ink"/><path d="M158 118q10 9 20 0" class="s-line" fill="none" stroke-width="2.5"/>
+  <path d="M232 92a26 26 0 0 0 0 52a26 26 0 0 0 0-52z" class="f-surf"/><circle cx="224" cy="112" r="3" class="f-ink"/><circle cx="240" cy="112" r="3" class="f-ink"/><path d="M222 132q10-8 20 0" class="s-line" fill="none" stroke-width="2.5"/></svg>`,
+ session:()=>{const S=[["שיחה","עם הקו־תרפיסט"],["חימום","משחקים קבוצתיים"],["פרוטגוניסט","נבחר גיבור"],["הכנה","תפקידים, תפאורה"],["הצגה","הפסיכודרמה"]];
+  return `<svg viewBox="0 0 400 140" role="img" aria-label="מבנה קבוע של כל מפגש">${arrowDef("ss")}
+  ${S.map(([h,d],i)=>{const x=356-i*78;return `<rect x="${x-36}" y="24" width="72" height="74" rx="12" class="${i==4?"f-c":"f-soft"}"/><text x="${x}" y="44" text-anchor="middle" font-size="13" font-weight="800" class="${i==4?"f-inv":"f-c"}">${i+1}</text><text x="${x}" y="66" text-anchor="middle" font-size="11" font-weight="700" class="${i==4?"f-inv":"f-ink"}">${h}</text><text x="${x}" y="84" text-anchor="middle" font-size="8.8" class="${i==4?"f-inv":"f-mut"}">${d}</text>${i<4?`<line x1="${x-38}" y1="61" x2="${x-40}" y2="61" class="s-c" marker-end="url(#ss)"/>`:""}`}).join("")}
+  <text x="200" y="124" text-anchor="middle" font-size="11.5" class="f-mut">פעם בשבוע, שעה וחצי, במשך שנתיים</text></svg>`},
+ journey:()=>{const J=[["1","החתונה","ניתוק"],["2","סינדרלה","כעס ועלפון"],["\u20663–4\u2069","הסיפור של לילי","דחייה"],["5","הפחד","חוויה מתקנת"],["6","המכתב","פרידה"]];
+  return `<svg viewBox="0 0 400 150" role="img" aria-label="שש הפסיכודרמות של דנה">${arrowDef("jj")}
+  <line x1="388" y1="58" x2="12" y2="58" class="s-line" marker-end="url(#jj)"/>
+  ${J.map(([n,h,d],i)=>{const x=352-i*76;return `<circle cx="${x}" cy="58" r="20" class="${i==3?"f-c":"f-surf"}"/><text x="${x}" y="63" text-anchor="middle" font-size="12" font-weight="800" class="${i==3?"f-inv":"f-ink"}">${n}</text><text x="${x}" y="100" text-anchor="middle" font-size="11.5" font-weight="700" class="f-ink">${h}</text><text x="${x}" y="118" text-anchor="middle" font-size="10.5" class="f-mut">${d}</text>`}).join("")}
+  <text x="200" y="20" text-anchor="middle" font-size="11.5" class="f-mut">מגיל 10 עד 12</text></svg>`}
+};
+const E=t=>`<span class="en">(${t})</span>`;
+const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</figcaption>`:""}</figure>`;
+const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
+const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;
+const tiles=a=>`<div class="tiles">${a.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`;
+const ex=h=>`<div class="ex"><span class="lbl">דוגמה</span><p>${h}</p></div>`;
+const rem=h=>`<div class="remember">${ic("bulb")}<p>${h}</p></div>`;
+const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")}${t}</span>`).join("")}${n.map(t=>`<span class="yn n">${ic("x")}${t}</span>`).join("")}</div>`;
+const spectrum=(r,l,dot)=>`<div class="spectrum"><div class="track">${dot?'<span class="dot"></span>':""}</div><div class="ends"><span>${r}</span><span>${l}</span></div></div>`;
+document.head.insertAdjacentHTML("beforeend",'<style>.yn svg{width:16px;height:16px}</style>');
+
+const T=[
+ {id:"t1",icon:"people",title:"מהי פסיכודרמה",blocks:[
+  {h:"הגדרה",html:`${def("מושג מפתח",`<mark>פסיכודרמה</mark> ${E("Psychodrama")}: אמצעי טיפולי שבו האדם <b>חווה מחדש</b> מצבים משמעותיים בחייו ונפגש, בהמחזה, עם דמויות משמעותיות עבורו.`)}${tiles([["sprout","קתרזיס","פורקן רגשי בזמן ההמחזה"],["bulb","תובנה","הבנה של מה שקורה"],["target","דרכים חדשות","חיפוש אפשרויות חדשות להתמודדות"]])}${ex("מורנו, <b>אבי הפסיכודרמה</b>, התחיל לעבוד כך עם ילדים לפני כשישים שנה. לטענתו, לאפשר לילדים לשחק באופן ספונטני את בעיותיהם מביא לתוצאות טיפוליות.")}`,q:"q1"},
+  {h:"פסיכודרמה עם ילדים",html:`<p>בקבוצות ילדים יש קונפליקט חריף בין הצורך לשמור על התהליך הקבוצתי לבין הצרכים האישיים (יאלום). לכן הותאמה השיטה:</p>${tiles([["people","אין קהל","כולם משתתפים בתפקידים"],["copies","תפאורה ותלבושות","חלק מהחימום, וגם ביטוי לא מילולי ויצירתי ושיתוף פעולה"],["doc","מטאפורה","ילדים נשארים לרוב בתחום המטאפורה (אגדות, סיפורים), בעוד מבוגרים מעלים בעיות ישירות"]])}${rem("דרך המטאפורה הילד נפגש עם רגשותיו ועם הדמויות המשמעותיות, חווה <b>קתרזיס</b>, ומגייס כוחות להתמודד.")}`,q:"q3"},
+  {h:"לפרש או לא לפרש?",html:`${tiles([["x","באום (1973)","עימות ישיר עם שורשי הקונפליקט עלול להעלות חרדה והתנגדות אצל ילדים עם בעיות קשות"],["check","אנה פרויד","חשוב מאוד לפרש ולהביא לילד הבנה של משמעות המשחק הסימבולי"]])}${def("עמדת הכותבת",`יש <b>להתאים</b> את הטיפול לאישיות ולכוחות של המטופל, ולשקול את השאלה כל פעם מחדש. התשובה משתנה מילד לילד ומפסיכודרמה לפסיכודרמה.`)}`,q:"q5"}
+ ]},
+ {id:"t2",icon:"id",title:"הקבוצה ודנה",blocks:[
+  {h:"הקבוצה",html:`<p>הקבוצה פעלה <b>במוסד טיפולי</b> שבו גרו הילדים: 6 ילדים (3 בנים, 3 בנות) בגילאי 10 עד 12, שבעה מבוגרים <b>קו־תרפיסטים</b> (עובדים סוציאליים של המוסד, כל אחד צמוד לילד קבוע), והמנחה.</p>${fig("session")}${rem("<b>הפרוטגוניסט</b>, הגיבור המרכזי, סיפר את הסיפור, חילק תפקידים והנחה את התפאורה והתחפושות. מעניין: הילדים כמעט לא הביאו את המציאות של חייהם, אלא אגדות או סיפורים דמיוניים.")}`,q:"q7"},
+  {h:"דנה",html:`<p>דנה (שם בדוי) טופלה בקבוצה <b>מגיל 10 עד 12</b>. היא הגיעה למוסד בעקבות טראומה של התעללות מינית מצד אביה, שעליה ריצה האב עונש מאסר.</p>${tiles([["x","בעיות התנהגות","קשות, והפרעות רגשיות (אפקטיביות)"],["brain","ריכוז וניתוקים","הפרעות ריכוז, ניתוקים ובעיות הסתגלות"],["people","דחייה חברתית","הילדים דחו אותה, והיא הרבתה לדבר לעצמה"]])}${rem("ההפרעות האלה <b>שכיחות</b> אצל נפגעי התעללות מינית.")}`,q:"q9"},
+  {h:"מטרות הטיפול",html:`${tiles([["brain","1. עיבוד","לאפשר לה לעבד את הטראומה"],["link","2. אמון","לפתח קשרים עם בני גילה ועם מבוגרים, על בסיס יכולת לתת אמון"],["clock","3. ויסות","לדחות סיפוקים ולא להגיב בתוקפנות לתסכול"],["sprout","4. דימוי","לפתח דימוי עצמי ודימוי גוף חיוביים"]])}${fig("journey","הפסיכודרמות שבהן דנה הייתה הגיבורה")}`,q:"q11"}
+ ]},
+ {id:"t3",icon:"cycle",title:"ניתוק, כעס ואמון",blocks:[
+  {h:"פסיכודרמה 1: החתונה",html:`<p>כחודש אחרי תחילת הקבוצה, דנה ביקשה להציג חתונה, בתפקיד <b>הכלה</b>. כל הילדים השתתפו בהכנות. מתחת לחופה, לפתע עיניה התרוצצו \"כחיה המבקשת מוצא\": היא <b>התנתקה</b> מהמתרחש והוצפה חרדות.</p>${def("מנגנון ההינתקות",`<mark>ניתוק (דיסוציאציה)</mark> ${E("Dissociation")}: מנגנון שדנה השתמשה בו לעתים קרובות, ושכיח אצל נפגעות אלימות מינית.`)}${rem("הקבוצה עוד לא הייתה בשלה. \"אם הכלה\" הודיעה שהכלה חשה ברע והחגיגה נדחית, והמוזמנים הבטיחו לבוא. כך הקבוצה <b>הכילה</b> את דנה ונתנה <b>אישור</b> לתגובת הניתוק.")}`,q:"q13"},
+  {h:"פסיכודרמה 2: סינדרלה והעלפון",html:`<p>בתפקיד סינדרלה דנה כעסה על האם החורגת: \"לא שמרת עלי!\". ייתכן שזה ביטוי לכעס על אם שלא הגנה עליה. אחר כך ביקשה שוב את החתונה, בלי להזמין את אבי הכלה, ולחשה: \"אני מתעלפת!\".</p>${def("הכפיל",`המנחה כרעה לצידה ולחשה: \"אני כל כך פוחדת. כולם ילכו ואני אשאר איתו\", והציעה לה לחזור על המילים רק אם הן מדויקות לה. דנה חזרה. זה תפקיד ה<mark>כפיל</mark> ${E("Double")}, ונתינת מילים לרגש <b>הוציאה אותה מהניתוק</b>.`)}`,q:"q15"},
+  {h:"חילופי תפקידים",html:`<p>דנה ביקשה עזרה מ<b>אמא</b>. במציאות האם התעלמה ממצוקתה, אבל כאן ביקשה <b>אם אידיאלית</b> שתגן עליה. ב<mark>חילופי תפקידים</mark> ${E("Role reversal")} דנה שיחקה גם את הכלה וגם את האם, ואחר כך גם את החתן.</p>${tiles([["x","החלק הפגוע","נפחד ומסרב לתת אמון"],["check","החלק המאמין","מאמין בכוחו ובזולת"]])}${rem("למלא <b>שלושה תפקידים</b> לסירוגין היה הישג גדול לילדה נוקשה מאוד. הכלה ביקשה מהחתן שלא יפגע בה, הוא נשבע, והיא חזרה לאורחים. דנה בחנה כאן את יכולתה <b>לתת אמון</b> בבני המין השני.")}`,q:"q17"}
+ ]},
+ {id:"t4",icon:"doc",title:"הסיפור של לילי",blocks:[
+  {h:"להיות חלק",html:`<p>בחודשיים שאחרי, דנה מילאה תפקידים בפסיכודרמות של ילדים אחרים, בגמישות הולכת וגדלה.</p>${rem("לילדה מנותקת ומסוגרת היה ערך רב ל<b>תחושת השייכות</b>: לקבל תפקידים, לבצע אותם באמפתיה, ולהסתפק לפעמים בתפקיד שולי ולא להיות במרכז.")}`,q:"q19"},
+  {h:"פסיכודרמה 3: הסיפור",html:`<p>דנה כתבה סיפור על לילי, שמגיעה לחברותיה. אביהן מחזר אחריה, מגרש את אשתו, ובסוף מבקש את ידה. לילי נעתרת לו, ואומרת לנסיך שליבה נתון לאחר.</p>${def("גישת הכותבת",`בגישה הפסיכודרמטית היא <b>לא פירשה</b> את הסיפור, אלא אפשרה לדנה לחוות את התוכן דרך ההצגה. בסיפור יש תכנים <mark>השלכתיים</mark> ${E("Projective")} רבים.`)}${tiles([["scales","אמביוולנטיות","דמות האב מבלבלת: לפעמים אלימה ומפחידה, לפעמים רכה ומפתה"],["x","רגשות אשם","דמות האם השלילית היא אולי ניסיון של לילי להצדיק את מעשיה"],["lock","בידוד","היער שמקיף את הבית מבטא את הבידוד והניתוק של המשפחה"]])}`,q:"q21"},
+  {h:"פסיכודרמה 4: סוף אחר",html:`<p>בסוף ההצגה המנחה הציעה להמציא סוף אחר, ודנה <b>סירבה</b>. לפי הכותבת, זה מבטא את הקושי לדחות את האב, אפילו בהמחזה.</p>${ex("כחודש אחר כך דנה ביקשה להציג שוב. הפעם, כשהאב ביקש את ידה, צעקה: \"אני לא רוצה אותך ולא את המתנות שלך!\", וגייסה את כל כוחה כדי להרחיק אותו. בסוף נראתה מותשת, עם חיוך של <b>הקלה ושחרור</b>.")}${rem("אחרי הפסיכודרמה הזו הצוות דיווח על <b>שינוי משמעותי</b>: היא התחילה לשלוט בצרכיה, נעשתה רגועה יותר, ויכולת הריכוז שלה בכיתה עלתה.")}`,q:"q23"}
+ ]},
+ {id:"t5",icon:"sprout",title:"חוויה מתקנת ופרידה",blocks:[
+  {h:"פסיכודרמה 5: הפחד",html:`<p>כשנה אחרי ההתחלה דנה התחילה להקפיד על הופעתה, הופיעו סימני התבגרות, והיא התחילה להגיב <b>בחום למגע</b> שבעבר נרתעה ממנו.</p>${def("למה להציג את הפחד",`הצגת \"הדבר שאני פוחד ממנו\" נותנת <b>תחושת שליטה</b>: הילד הוא המחזאי, הבמאי והשחקן הראשי, וזה מקנה ביטחון.`)}<p>דנה סיפרה על פחד מדמות של איש שבא בלילה. בחילופי התפקידים היא קפאה. המנחה הסבירה שכאן היא <b>מוגנת</b>, שהיא יכולה לבחור תגובה אחרת מזו שבמציאות, ושהקבוצה תעזור בכל כיוון. הצוות בדק בזהירות כל הזמן אם היא רוצה להמשיך.</p>`,q:"q25"},
+  {h:"חוויה מתקנת",html:`${ex("דנה בחרה להילחם והרחיקה את האיש: \"אני מספיק חזקה כדי להילחם בך! ... אני לא פוחדת ממך יותר!\"")}${def("מושג מפתח",`<mark>חוויה מתקנת</mark> ${E("Corrective experience")}: לחוות מחדש מצב טראומטי ולהגיב אחרת, מתוך כוח. כאן זה אפשר לדנה להשתחרר מתחושת <b>חוסר האונים</b>.`)}${rem("בתמונה האחרונה דנה \"הגדולה\", בת 12, פגשה את דנה \"הקטנה\" ואמרה לה שהיא מבינה שאז לא יכלה לעשות כלום, כי הייתה קטנה ולא היה מי שיעזור, אבל <b>עכשיו היא תמיד תשמור עליה</b>.")}`,q:"q27"},
+  {h:"פסיכודרמה 6: המכתב",html:`<p>לקראת הסיום, אחרי כשנתיים: הישגיה השתפרו, היא אחראית, מתחשבת ומקובלת, ויש לה חבר מהמוסד. אמה, שהתגרשה, ביקשה לגדל אותה שוב.</p>${def("ביבליותרפיה",`כדי לברר מה דנה באמת רוצה (ולא רק לרצות את אמה), המנחה השתמשה ב<mark>ביבליותרפיה</mark> ${E("Bibliotherapy")}: סיפור על ילד שגר אצל דודיו, ומקבל מכתב מהוריו שמבקשים שיחזור. כל ילד כתב את המכתב של הילד.`)}${ex("דנה כתבה שהילד מודה לדודים שטיפלו בו באהבה, אבל מתגעגע ורוצה לחזור. היא הקריאה את המכתב והוסיפה שגם היא מקווה לחזור לחיות עם אמה.")}`,q:"q29"}
+ ]},
+ {id:"t6",icon:"check",title:"סיכום",blocks:[
+  {h:"מה השתנה",html:`<p>במשך שנתיים דנה בנתה יחסים של <b>אמון ופתיחות</b> עם הקבוצה, ביטאה את פחדיה, את רגשות האשם ואת הכעס כלפי אביה, <b>בלי ששמו הוזכר במפורש ולו פעם אחת</b>. היא למדה לקבל ולאהוב את עצמה ואת גופה.</p>${tiles([["id","דימוי עצמי","מילדה מוזנחת בחיצוניות לילדה נעימה ומטופחת"],["grad","לימודים","שיפור ניכר בהישגים"],["people","חברה","הפכה למנהיגה טבעית, והילדים הצטערו על עזיבתה"]])}`,q:"q31"},
+  {h:"איך להבין את השינוי",html:`${def("שלושת שלבי השינוי (קזדין)",`שינוי ב<b>תחושה הסובייקטיבית</b> של הדימוי העצמי, <b>ירידה בסימפטומים</b>, ו<b>שינוי בתפקוד</b>. לפי הכותבת, שלושתם קרו אצל דנה.`)}${def("מנגנון ההדחקה",`בהתחלה דנה השתמשה ב<mark>הדחקה</mark> ${E("Repression")} כדי להעלים מהתודעה את האירועים. ההדחקה צורכת <b>הרבה אנרגיה</b>, ולא נשארו כוחות לחשיבה, למידה וזכירה. כשהטראומה עובדה בפסיכודרמה, <b>השתחררו כוחות</b> לדברים אחרים.`)}${rem("מורנו: \"הדרמה הספונטנית משפיעה באורח תרפויטי על השחקן, אשר יוצר את הדרמה ובו בזמן משחרר עצמו ממנה\". דנה שחזרה את הטראומה באופן השלכתי, ובמקביל שחררה את עצמה ממנה.")}`,q:"q33"}
+ ]}
+];
+const Q={
+q1:{t:"t1",v:[
+ {q:"מהי פסיכודרמה?",a:"אמצעי טיפולי שבו האדם חווה מחדש מצבים משמעותיים ונפגש בהמחזה עם דמויות משמעותיות",w:["הצגת תיאטרון לקהל","טיפול תרופתי","מבחן אישיות"],e:"המטופל מגיע לקתרזיס, לתובנה ולדרכי התמודדות חדשות."},
+ {q:"מהו קתרזיס?",a:"פורקן רגשי",w:["פחד מבמה","סוג של מבחן","שכחה"],e:"אחד השלבים בפסיכודרמה."}]},
+q2:{t:"t1",v:[
+ {q:"מי נחשב לאבי הפסיכודרמה?",a:"מורנו",w:["פרויד","יאלום","קזדין"],e:"הוא גם התחיל לעבוד כך עם ילדים."},
+ {q:"מה טען מורנו על משחק ספונטני של ילדים?",a:"שלאפשר להם לשחק את בעיותיהם באופן ספונטני מביא לתוצאות טיפוליות",w:["שזה מזיק","שילדים לא יכולים לשחק","שצריך תסריט קבוע"],e:"זה הבסיס לעבודה עם ילדים."}]},
+q3:{t:"t1",v:[
+ {q:"מה ההבדל המרכזי בין פסיכודרמה קלאסית לפסיכודרמה עם ילדים?",a:"אצל ילדים אין קהל וכולם משתתפים בתפקידים",w:["אצל ילדים אין הצגה","אצל ילדים יש רק מבוגרים","אין הבדל"],e:"וגם דגש על תפאורה, תלבושות ואיפור."},
+ {q:"למה ניתן דגש על תפאורה ותלבושות בקבוצת ילדים?",a:"הם חלק מהחימום, וגם ביטוי לא מילולי ויצירתי ותרגול שיתוף פעולה",w:["כדי שההצגה תהיה יפה לקהל","כדי לבזבז זמן","כי הילדים ביקשו"],e:"אין קהל, אז התפאורה משרתת את התהליך."}]},
+q4:{t:"t1",v:[
+ {q:"איך ילדים נוטים להעלות את בעיותיהם בפסיכודרמה?",a:"דרך מטאפורה, כמו אגדות וסיפורים",w:["באופן ישיר תמיד","בכתב בלבד","הם לא מעלים בעיות"],e:"מבוגרים נוטים להעלות בעיות ישירות."},
+ {q:"איזה קונפליקט חריף במיוחד בקבוצות ילדים, לפי יאלום?",a:"בין שמירה על התהליך הקבוצתי לבין הצרכים האישיים",w:["בין הורים למורים","בין משחק ללימודים","בין קיץ לחורף"],e:"לכן הותאמה השיטה."}]},
+q5:{t:"t1",v:[
+ {q:"מה עמדת באום לגבי עימות ישיר עם ילדים?",a:"הוא עלול להעלות חרדה והתנגדות אצל ילדים עם בעיות קשות",w:["שהוא תמיד הכרחי","שהוא מרגיע","שאין לו השפעה"],e:"באום (1973)."},
+ {q:"מה עמדת אנה פרויד לגבי פירוש המשחק?",a:"חשוב מאוד לפרש ולהביא לילד הבנה של משמעות המשחק הסימבולי",w:["אסור לפרש בכלל","צריך רק לצפות","פירוש מזיק תמיד"],e:"עמדה הפוכה לבאום."}]},
+q6:{t:"t1",v:[
+ {q:"מה עמדת הכותבת בשאלה אם לפרש?",a:"להתאים לכל ילד ולכל פסיכודרמה, ולשקול כל פעם מחדש",w:["לפרש תמיד","לא לפרש לעולם","להחליט לפי ההורים"],e:"היא מתאימה את הטיפול לאישיות ולכוחות המטופל."},
+ {q:"מה פירוש \"השלכתי\" בהקשר של הפסיכודרמה של ילדים?",a:"הילד מבטא רגשות ובעיות שלו דרך דמויות וסיפורים",w:["הילד זורק חפצים","הילד מצלם","הילד מספר רק עובדות"],e:"כך דנה ביטאה רגשות דרך לילי וסינדרלה."}]},
+q7:{t:"t2",v:[
+ {q:"מי היו הקו־תרפיסטים בקבוצה?",a:"עובדים סוציאליים של המוסד, כל אחד צמוד לילד קבוע",w:["ההורים","ילדים אחרים","סטודנטים לתיאטרון"],e:"שבעה מבוגרים, ועוד המנחה."},
+ {q:"מהו \"פרוטגוניסט\"?",a:"הגיבור המרכזי של המפגש",w:["הקהל","הבמאי החיצוני","המבקר"],e:"הוא מספר את סיפורו, מחלק תפקידים ומנחה."}]},
+q8:{t:"t2",v:[
+ {q:"מה היה המבנה הקבוע של המפגש?",a:"שיחה עם הקו־תרפיסט, חימום, בחירת פרוטגוניסט, הכנה והצגה",w:["רק הצגה","הרצאה ומבחן","ארוחה ומשחק"],e:"פעם בשבוע, שעה וחצי, שנתיים."},
+ {q:"מה מעניין בנושאים שהילדים בחרו להצגות?",a:"הם כמעט לא הביאו את המציאות של חייהם, אלא אגדות וסיפורים דמיוניים",w:["הם הביאו רק סיפורים אמיתיים","הם לא בחרו נושאים","הם הציגו רק סרטים"],e:"זה מתאים לעבודה דרך מטאפורה."}]},
+q9:{t:"t2",v:[
+ {q:"באיזה גיל טופלה דנה בקבוצה?",a:"מגיל 10 עד 12",w:["מגיל 5 עד 7","מגיל 14 עד 16","בגיל 18"],e:"במשך שנתיים."},
+ {q:"בגלל מה הופנתה דנה לטיפול?",a:"בעיות התנהגות קשות, הפרעות רגשיות, הפרעות ריכוז, ניתוקים ובעיות הסתגלות",w:["רק בגלל ציונים","בגלל מחלה גופנית","בגלל בקשת ההורים"],e:"הפרעות שכיחות אצל נפגעי התעללות."}]},
+q10:{t:"t2",v:[
+ {q:"איך תוארה דנה בתחילת הטיפול?",a:"מרושלת, צנומה, נדחית ע\"י הילדים, ומדברת לעצמה",w:["מקובלת ומנהיגה","שקטה ומסודרת","עליזה וחברותית"],e:"מאוד שונה מהתמונה בסוף הטיפול."},
+ {q:"מה ידוע על ההפרעות של דנה בהקשר רחב יותר?",a:"הן שכיחות אצל נפגעי התעללות מינית",w:["הן נדירות מאוד","הן מופיעות רק אצל מבוגרים","הן לא קשורות לטראומה"],e:"המאמר מציין זאת במבוא."}]},
+q11:{t:"t2",v:[
+ {q:"איזו מהבאות לא הייתה מטרה של הטיפול בדנה?",a:"להחזיר אותה מיד לבית האב",w:["לעבד את הטראומה","לפתח יכולת לתת אמון","לפתח דימוי עצמי ודימוי גוף חיוביים"],e:"וגם לדחות סיפוקים ולא להגיב בתוקפנות."},
+ {q:"מטרה 3 של הטיפול הייתה:",a:"לעזור לה לדחות סיפוקים ולא להגיב בתוקפנות לתסכול",w:["לשפר ציונים בחשבון","ללמד אותה לשחק בתיאטרון","להחליף מוסד"],e:"ויסות רגשי."}]},
+q12:{t:"t2",v:[
+ {q:"כמה ילדים היו בקבוצה?",a:"6, שלושה בנים ושלוש בנות",w:["20","2","12"],e:"בגילאי 10 עד 12."},
+ {q:"האם הילדים קיבלו טיפול פסיכולוגי אחר באותה תקופה?",a:"לא",w:["כן, טיפול פרטני כל יום","כן, טיפול תרופתי","כן, טיפול משפחתי"],e:"הקבוצה הייתה הטיפול הפסיכולוגי היחיד."}]},
+q13:{t:"t3",v:[
+ {q:"מה קרה לדנה מתחת לחופה בפסיכודרמה הראשונה?",a:"היא התנתקה מהמתרחש והוצפה חרדות",w:["היא צחקה","היא ברחה מהחדר","היא נשאה נאום"],e:"\"כחיה המבקשת מוצא\"."},
+ {q:"מה זה מנגנון ההינתקות (דיסוציאציה)?",a:"התנתקות מהמתרחש, מנגנון שכיח אצל נפגעות אלימות מינית",w:["ריכוז גבוה","זיכרון מצוין","שמחה"],e:"המפגש איפשר למנחה לצפות בו."}]},
+q14:{t:"t3",v:[
+ {q:"איך הגיבה הקבוצה לניתוק של דנה?",a:"\"אם הכלה\" הודיעה שהכלה חשה ברע, והמוזמנים הבטיחו לבוא בהמשך",w:["הם כעסו","הם המשיכו כרגיל","הם עזבו"],e:"כך הקבוצה הכילה אותה ונתנה אישור לניתוק."},
+ {q:"למה לא טיפלו בנושא כבר בפסיכודרמה הראשונה?",a:"כי דנה והקבוצה עוד לא היו בשלים, בשלב של בניית אמון",w:["כי לא היה זמן","כי המנחה לא שמה לב","כי דנה ביקשה"],e:"קצב שמתאים למטופלת."}]},
+q15:{t:"t3",v:[
+ {q:"מה אמרה דנה בתפקיד סינדרלה לאם החורגת?",a:"\"לא שמרת עלי!\"",w:["\"תודה רבה\"","\"אני אוהבת אותך\"","\"לכי מכאן\""],e:"ייתכן שזה ביטוי לכעס על אם שלא הגנה עליה."},
+ {q:"מהו תפקיד ה\"כפיל\" בפסיכודרמה?",a:"מי שנותן מילים לרגשות של הגיבור, שהגיבור יכול לאמץ אם הן מדויקות לו",w:["שחקן שמחליף את הגיבור","הבמאי","הקהל"],e:"המנחה לחשה: \"אני כל כך פוחדת...\"."}]},
+q16:{t:"t3",v:[
+ {q:"מה עשה מתן המילים לרגש במצב ה\"עלפון\"?",a:"הוציא את דנה ממצב של ניתוק",w:["גרם לה להתעלף באמת","הפסיק את ההצגה","לא השפיע"],e:"זה היה בעל חשיבות עצומה."},
+ {q:"מה עשתה המנחה כשדנה רצתה לברוח מהחדר?",a:"הציעה לה למצוא מחבוא בתוך החדר",w:["נעלה את הדלת","שלחה אותה החוצה","התעלמה"],e:"הבחירה נשארה של דנה: \"זו ההצגה שלך\"."}]},
+q17:{t:"t3",v:[
+ {q:"מהם \"חילופי תפקידים\"?",a:"הגיבור משחק לסירוגין גם את עצמו וגם דמויות אחרות",w:["החלפת קבוצה","החלפת מנחה","החלפת תחפושות בלבד"],e:"דנה שיחקה את הכלה, את האם ואת החתן."},
+ {q:"למה היה הישג לדנה למלא שלושה תפקידים?",a:"כי היא הייתה בעלת אישיות נוקשה מאוד, וזה דרש גמישות",w:["כי היא לא אהבה לשחק","כי זה קל","כי היא שחקנית מקצועית"],e:"גיוס הגמישות היה משמעותי."}]},
+q18:{t:"t3",v:[
+ {q:"איזו אם ביקשה דנה בפסיכודרמה?",a:"אם אידיאלית שתגן עליה",w:["אם שתעניש אותה","אם שתתעלם ממנה","לא ביקשה אם"],e:"במציאות האם התעלמה ממצוקתה."},
+ {q:"מה בחנה דנה בסוף הפסיכודרמה השנייה?",a:"את היכולת לתת אמון בבני המין השני",w:["את היכולת לרקוד","את הזיכרון שלה","את הקול שלה"],e:"החתן נשבע שלא יפגע בה."}]},
+q19:{t:"t4",v:[
+ {q:"למה היה חשוב לדנה למלא תפקידים בהצגות של ילדים אחרים?",a:"זה בנה תחושת שייכות ויכולת להיות לא במרכז",w:["כדי לקבל פרס","כי היא חייבה","כדי להתאמן לבגרות"],e:"לילדה מנותקת ומסוגרת זה היה משמעותי מאוד."},
+ {q:"מה השתנה אצל דנה בחודשיים שבין הפסיכודרמה השנייה לשלישית?",a:"היא מילאה תפקידים בפסיכודרמות של אחרים בגמישות הולכת וגדלה",w:["היא הפסיקה להגיע","היא עברה מוסד","היא לא השתנתה"],e:"באמפתיה, ולפעמים בתפקידים שוליים."}]},
+q20:{t:"t4",v:[
+ {q:"האם המנחה פירשה את הסיפור של דנה על לילי?",a:"לא, היא אפשרה לה לחוות את התוכן דרך ההצגה",w:["כן, מיד","כן, בפני כל הקבוצה","היא לא קראה אותו"],e:"זו הגישה הפסיכודרמטית שלה."},
+ {q:"מה מבטאת דמות האב בסיפור של לילי, לפי הכותבת?",a:"אמביוולנטיות: לפעמים אלים ומפחיד, לפעמים רך ומפתה",w:["רק טוב","רק רע","שום דבר"],e:"זו הדמות המבלבלת של האב."}]},
+q21:{t:"t4",v:[
+ {q:"מה מבטא היער שמקיף את הבית בסיפור?",a:"את תחושת הבידוד והניתוק של המשפחה",w:["את החופש","את השמחה","את הטבע"],e:"פרשנות של הכותבת במאמר."},
+ {q:"מה ייתכן שמבטאת דמות האם השלילית בסיפור?",a:"ניסיון של לילי להצדיק את מעשיה, מתוך רגשות אשם",w:["שהאם הייתה מושלמת","שלילי אוהבת את האם","כלום"],e:"התמודדות עם רגשות אשם."}]},
+q22:{t:"t4",v:[
+ {q:"מה עשתה דנה כשהוצע לה להמציא סוף אחר?",a:"סירבה",w:["כתבה מיד סוף חדש","בכתה","עזבה את הקבוצה"],e:"לפי הכותבת, זה מבטא קושי לדחות את האב."},
+ {q:"מה מראה הסירוב לסוף אחר?",a:"את הקושי לדחות את האב, אפילו בהמחזה",w:["שדנה אהבה את הסיפור","שהיא לא הבינה","שהיא עייפה"],e:"הדחייה הגיעה רק כחודש אחר כך."}]},
+q23:{t:"t4",v:[
+ {q:"מה השתנה כשדנה הציגה את הסיפור שוב, כחודש אחר כך?",a:"היא דחתה את האב בצעקה ובמאבק פיזי, ונראתה משוחררת",w:["היא נישאה לו","היא לא הציגה","היא ברחה"],e:"\"אני לא רוצה אותך ולא את המתנות שלך!\"."},
+ {q:"מה דיווח הצוות אחרי הפסיכודרמה הרביעית?",a:"שליטה בצרכים, רוגע ושיפור בריכוז בכיתה",w:["החמרה","שום שינוי","שהיא עזבה"],e:"שינוי משמעותי בהתנהגות."}]},
+q24:{t:"t4",v:[
+ {q:"מה הקשר בין העיבוד הרגשי לשיפור בריכוז, לפי הכותבת?",a:"כשהטראומה מעובדת, משתחררת אנרגיה שהייתה מושקעת בהדחקה",w:["אין קשר","הריכוז ירד","התרופות עזרו"],e:"זה ההסבר בסיכום המאמר."},
+ {q:"מה מראה ההבדל בין הפעם הראשונה לשנייה שבה הוצג סיפור לילי?",a:"שינוי הדרגתי: מקושי לדחות את האב ליכולת להרחיק אותו",w:["שדנה שכחה את הסיפור","שהקבוצה החליטה במקומה","שאין שינוי"],e:"עיבוד דרך חזרה."}]},
+q25:{t:"t5",v:[
+ {q:"למה הצגת \"הדבר שאני פוחד ממנו\" עוזרת?",a:"כי היא נותנת תחושת שליטה: הילד הוא המחזאי, הבמאי והשחקן הראשי",w:["כי היא מפחידה יותר","כי היא מצחיקה","כי אין בה רגשות"],e:"זה מקנה תחושת ביטחון."},
+ {q:"איזה שינוי ניכר אצל דנה כשנה אחרי תחילת הטיפול?",a:"היא הקפידה על הופעתה והגיבה בחום למגע שבעבר נרתעה ממנו",w:["היא הפסיקה לדבר","היא נעשתה אלימה","היא עזבה"],e:"גם סימני התבגרות הופיעו."}]},
+q26:{t:"t5",v:[
+ {q:"למה ייתכן שדנה ביקשה לשחק את תפקיד האיש המפחיד?",a:"בגלל הפחד להיות בתפקיד הקורבן",w:["כי היא אהבה אותו","כי ביקשו ממנה","במקרה"],e:"פרשנות של הכותבת."},
+ {q:"איך נוהלה הסצנה הקשה בפסיכודרמה החמישית?",a:"בזהירות רבה, עם בדיקה מתמדת אם היא רוצה להמשיך והדגשת התמיכה",w:["בלי לשאול אותה","מהר ככל האפשר","המנחה יצאה מהחדר"],e:"הבטיחות של המטופלת קודמת."}]},
+q27:{t:"t5",v:[
+ {q:"מהי \"חוויה מתקנת\"?",a:"לחוות מחדש מצב טראומטי ולהגיב אחרת, מתוך כוח",w:["תיקון של טעות בכתב","עונש","חזרה על אותה תגובה"],e:"אצל דנה זה שחרר אותה מחוסר האונים."},
+ {q:"מה אמרה דנה \"הגדולה\" לדנה \"הקטנה\"?",a:"שהיא מבינה שאז לא יכלה לעשות כלום, ועכשיו תמיד תשמור עליה",w:["שזו אשמתה","שתשכח הכל","שתברח"],e:"הסצנה סגרה את הפסיכודרמה החמישית."}]},
+q28:{t:"t5",v:[
+ {q:"מה המשמעות של הפגישה בין דנה \"הגדולה\" ל\"קטנה\"?",a:"הורדת האשמה העצמית ולקיחת אחריות מגינה על עצמה",w:["משחק בלי משמעות","מבחן זיכרון","תרגיל בדיבור"],e:"היא הבינה שהייתה קטנה ובלי עזרה."},
+ {q:"מה הסבירה המנחה לדנה כשקפאה?",a:"שכאן היא מוגנת ויכולה לבחור תגובה אחרת מזו שבמציאות",w:["שצריך להפסיק","שהיא חייבת להמשיך","שזה לא אמיתי ולכן לא חשוב"],e:"והקבוצה תעזור בכל כיוון."}]},
+q29:{t:"t5",v:[
+ {q:"באיזו טכניקה השתמשה המנחה כדי לברר אם דנה רוצה לחזור לאמה?",a:"ביבליותרפיה: סיפור על ילד שגר אצל דודיו ומקבל מכתב מהוריו",w:["שאלון","ראיון עם האם","הגרלה"],e:"כל ילד כתב את מכתב התשובה."},
+ {q:"למה לא שאלו את דנה ישירות?",a:"כי רצו לברר את רצונה האמיתי ולא תשובה שנועדה לרצות את אמה",w:["כי היא לא מדברת","כי אסור לשאול","כי היא כבר עזבה"],e:"האם לחצה עליה בכיוון הזה."}]},
+q30:{t:"t5",v:[
+ {q:"מה כתבה דנה במכתב?",a:"שהילד מודה לדודים אבל רוצה לחזור להוריו, והוסיפה שגם היא מקווה לחזור לאמה",w:["שהילד רוצה להישאר","שהילד כועס","לא כתבה"],e:"זה בירר את רצונה."},
+ {q:"איך תוארה דנה לקראת סיום הטיפול?",a:"אחראית, מתחשבת, מקובלת, עם הישגים טובים יותר וחבר",w:["מנותקת ונדחית","אלימה","בלי שינוי"],e:"שינוי משמעותי לעומת ההתחלה."}]},
+q31:{t:"t6",v:[
+ {q:"מה מיוחד בכך שדנה ביטאה כעס כלפי אביה?",a:"שהיא עשתה זאת בלי ששמו הוזכר במפורש ולו פעם אחת",w:["שהיא צעקה עליו בפועל","שהיא כתבה לו מכתב","שהיא לא כעסה"],e:"הכל נעשה דרך מטאפורה."},
+ {q:"איזה מעמד קיבלה דנה במוסד בסוף?",a:"מנהיגה טבעית, והילדים הצטערו על עזיבתה",w:["נשארה דחויה","עזבה בלי שאיש שם לב","הוענשה"],e:"מילדה דחויה למנהיגה."}]},
+q32:{t:"t6",v:[
+ {q:"מה מראה השינוי בהופעה החיצונית של דנה?",a:"שיפור בדימוי העצמי ובדימוי הגוף, אחת ממטרות הטיפול",w:["שינוי אופנה בלבד","שהיא נעשתה שחצנית","שום דבר"],e:"מוזנחת לנעימה ומטופחת."},
+ {q:"מה ניתן ללמוד מכך שהשינוי ארך שנתיים?",a:"שעיבוד טראומה הוא תהליך הדרגתי, ובקצב שמתאים למטופל",w:["שהטיפול היה איטי מדי","שאין טעם לטפל","שאפשר בשבוע"],e:"כל פסיכודרמה הוסיפה שלב."}]},
+q33:{t:"t6",v:[
+ {q:"מהם שלושת שלבי השינוי לפי קזדין?",a:"שינוי בתחושה הסובייקטיבית של הדימוי העצמי, ירידה בסימפטומים ושינוי בתפקוד",w:["לידה, ילדות, בגרות","אבחון, תרופה, החלמה","כעס, עצב, שמחה"],e:"לפי הכותבת, שלושתם קרו אצל דנה."},
+ {q:"למה ההדחקה פגעה בלימודים של דנה?",a:"כי היא צורכת הרבה אנרגיה, ולא נשארו כוחות לחשיבה, למידה וזכירה",w:["כי היא לא אהבה ללמוד","כי המורים לא ידעו","כי היא החמיצה שיעורים"],e:"אחרי העיבוד השתחררו כוחות."}]},
+q34:{t:"t6",v:[
+ {q:"מה טען מורנו על הדרמה הספונטנית?",a:"שהיא משפיעה באורח תרפויטי על השחקן, שיוצר את הדרמה ובו בזמן משתחרר ממנה",w:["שהיא מזיקה","שהיא רק בידור","שהיא מיועדת לקהל"],e:"דנה שחזרה את הטראומה והשתחררה ממנה."},
+ {q:"מהי ההדחקה?",a:"מנגנון שמעלים מהתודעה אירועים קשים",w:["זיכרון חזק","סוג של משחק","טיפול תרופתי"],e:"דנה השתמשה בה בתחילת הטיפול."}]}
+};
+for(const t of T) t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id);
+const KEY=CONFIG.key;
+let S={q:{},read:{}};
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.q) S=s;}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const st=id=>S.q[id]||(S.q[id]={n:0,c:0,w:0,t:0,lv:-1});
+const mastered=id=>(S.q[id]?.c||0)>=2;
+const topicPct=t=>Math.round(100*t.qids.filter(mastered).length/t.qids.length);
+const topicStarted=t=>S.read[t.id]||t.qids.some(id=>S.q[id]&&S.q[id].n);
+const allIds=Object.keys(Q);
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+const pickVariant=id=>{const s=st(id),n=Q[id].v.length;return n>1?(s.lv+1)%n:0};
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const color=t=>`var(--${t.id})`;
+const app=document.getElementById("app");
+const LET=["א","ב","ג","ד"];
+
+function qCard(id,onDone,label){
+  const vi=pickVariant(id),v=Q[id].v[vi],opts=shuffle([v.a,...v.w]);
+  const box=document.createElement("div");box.className="q fade";
+  box.innerHTML=(label?`<span class="eyebrow">${label}</span>`:"")+`<div class="qtext">${esc(v.q)}</div><div class="opts"></div>`;
+  const wrap=box.querySelector(".opts");
+  opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt";b.dataset.a=o===v.a?"1":"";
+    b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+    b.onclick=()=>{const ok=o===v.a,s=st(id);s.n++;s.t=Date.now();s.lv=vi;ok?s.c++:(s.c=0,s.w++);save();
+      wrap.querySelectorAll("button").forEach(x=>{x.disabled=true;if(x.dataset.a)x.classList.add("right")});
+      if(!ok)b.classList.add("wrong");
+      const fb=document.createElement("div");fb.className="fb fade "+(ok?"ok":"no");
+      fb.innerHTML=`${ic(ok?"check":"x")}<div><strong>${ok?"נכון!":"לא בדיוק"}</strong>${esc(v.e)}</div>`;box.appendChild(fb);
+      const nx=document.createElement("button");nx.className="primary";nx.textContent="המשך";nx.style.alignSelf="flex-start";
+      nx.onclick=()=>onDone(ok);box.appendChild(nx);nx.focus({preventScroll:true});nx.scrollIntoView({block:"nearest",behavior:"smooth"});
+    };wrap.appendChild(b)});
+  return box;
+}
+
+function home(){
+  document.body.style.removeProperty("--c");
+  const started=T.filter(topicStarted);
+  const total=Math.round(100*allIds.filter(mastered).length/allIds.length);
+  const weak=allIds.filter(id=>S.q[id]&&S.q[id].n&&!mastered(id)).length;
+  app.innerHTML=`<div class="stack fade">
+   <section class="cover" style="--c:var(--accent)">
+    <div class="cover-art">${FIG[CONFIG.cover]()}</div>
+    <div class="cover-body">
+     <span class="eyebrow">${CONFIG.eyebrow}</span>
+     ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
+     <p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר עם שאלות גם מנושאים קודמים.</p>
+     <div class="stats">
+      <div class="ring" style="--p:${total}"><span>${total}%</span></div>
+      <div class="stat-text"><b>${total===0?"עוד לא התחלת":total>=80?"אתה שולט בחומר":"בדרך"}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
+      <button class="primary review-btn" id="rev" ${started.length?"":"disabled"}>${ic("cycle")}<span>${started.length?"חזרה מהירה":"חזרה מהירה (אחרי נושא ראשון)"}</span></button>
+     </div>
+    </div>
+   </section>
+   <div class="grid" id="list"></div>
+   <div class="foot"><a href="../#intro" style="color:var(--accent);font-weight:700;text-decoration:none">→ לקורס</a><span>${CONFIG.note}</span><button class="ghost" id="reset">איפוס התקדמות</button></div>
+  </div>`;
+  document.querySelector("#rev svg").style.cssText="width:20px;height:20px";
+  const list=app.querySelector("#list");
+  T.forEach((t,i)=>{const p=topicPct(t),b=document.createElement("button");b.className="tcard";b.style.setProperty("--c",color(t));
+    const status=!topicStarted(t)?"לא התחלת":p>=80?"שולט":"בתהליך";
+    b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
+    b.onclick=()=>topic(i,0);list.appendChild(b)});
+  app.querySelector("#rev").onclick=review;
+  const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
+  scrollTo(0,0);
+}
+
+function bar(title,n,i,label){
+  return `<div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">${label}</span></div><div class="steps">${Array.from({length:n},(_,k)=>`<i class="${k<=i?"on":""}"></i>`).join("")}</div></div><span class="eyebrow">${title}</span>`;
+}
+
+function topic(ti,bi){
+  const t=T[ti],blk=t.blocks[bi];document.body.style.setProperty("--c",color(t));
+  app.innerHTML=`<div class="stack">${bar(`נושא ${ti+1} · ${t.title}`,t.blocks.length+1,bi,`קטע ${bi+1} מתוך ${t.blocks.length}`)}
+   <article class="card fade"><h3>${blk.h}</h3>${blk.html}</article><div id="slot"></div></div>`;
+  app.querySelector("#back").onclick=home;
+  const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;save();quiz(ti)}};
+  const slot=app.querySelector("#slot");
+  if(blk.q)slot.appendChild(qCard(blk.q,next,"בדיקה קצרה"));
+  else{const b=document.createElement("button");b.className="primary";b.textContent="המשך";b.onclick=next;slot.appendChild(b)}
+  scrollTo(0,0);
+}
+
+function runSet(title,ids,c,onEnd){
+  let i=0,right=0;document.body.style.setProperty("--c",c);
+  const step=()=>{
+    if(i>=ids.length)return onEnd(right,ids.length);
+    const id=ids[i],from=T.find(t=>t.id===Q[id].t);
+    app.innerHTML=`<div class="stack">${bar(title,ids.length,i,`שאלה ${i+1} מתוך ${ids.length}`)}<div id="slot"></div></div>`;
+    app.querySelector("#back").onclick=home;
+    const card=qCard(id,ok=>{if(ok)right++;i++;step()},from.title);card.style.setProperty("--c",color(from));
+    app.querySelector("#slot").appendChild(card);scrollTo(0,0);
+  };step();
+}
+
+function quiz(ti){
+  const t=T[ti];
+  const prev=T.slice(0,ti).filter(topicStarted).flatMap(x=>x.qids);
+  const extra=shuffle(prev).sort((a,b)=>st(a).c-st(b).c).slice(0,2);
+  runSet(`מבחן סיום · ${t.title}`,shuffle(t.qids).concat(extra),color(t),(r,n)=>done(r,n,ti));
+}
+
+function review(){
+  const pool=T.filter(topicStarted).flatMap(t=>t.qids),now=Date.now();
+  const score=id=>{const s=S.q[id]||{n:0,c:0,w:0,t:0};return (s.n?0:2)+s.w*2+(s.c<2?3:0)+Math.min(3,(now-s.t)/864e5)+Math.random()*2};
+  const ids=pool.map(id=>[id,score(id)]).sort((a,b)=>b[1]-a[1]).slice(0,12).map(x=>x[0]);
+  runSet("חזרה מהירה",shuffle(ids),"var(--accent)",(r,n)=>done(r,n,null));
+}
+
+function done(r,n,ti){
+  const nextT=ti!=null&&ti+1<T.length?ti+1:null,pct=Math.round(100*r/n);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">${ti!=null?`סיום נושא ${ti+1} · ${T[ti].title}`:"סיום חזרה מהירה"}</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct};--accent:var(--c)"><span>${pct}%</span></div><div class="big">${r}/${n}</div></div>
+    <p>${r===n?"מצוין, הכל נכון.":r>=n*0.7?"טוב מאוד. מה שטעית בו יחזור בחזרה המהירה, בניסוח אחר.":"כדאי לעבור שוב על הנושא. השאלות שטעית בהן יחזרו בחזרה המהירה."}</p>
+    <div class="row">${nextT!=null?`<button class="primary" id="nx" style="--c:${color(T[nextT])}">לנושא הבא: ${T[nextT].title}</button>`:""}<button id="hm">לכל הנושאים</button></div>
+   </article></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;
+  const nx=app.querySelector("#nx");if(nx)nx.onclick=()=>topic(nextT,0);
+  scrollTo(0,0);
+}
+home();
+</script>
+</body>
+</html>
