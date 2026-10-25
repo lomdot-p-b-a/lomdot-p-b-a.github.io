@@ -184,7 +184,6 @@ const ic=(k,cls="")=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
 
 const arrowDef=id=>`<defs><marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="f-c"/></marker></defs>`;
 
-const E=t=>`<span class="en">(${t})</span>`;
 const FIG={
  factors:()=>{const g=[[318,64,"התופס",["עמדות ומניעים","תחומי עניין","ניסיון וציפיות"]],[82,64,"המטרה",["חידוש, תנועה, קולות","גודל ורקע","קרבה ודמיון"]],[200,210,"המצב",["זמן","סביבת עבודה","סביבה חברתית"]]];
   return `<svg viewBox="0 0 400 262" role="img" aria-label="שלושה גורמים שמשפיעים על התפיסה">${arrowDef("fa")}
@@ -206,6 +205,7 @@ const FIG={
   
   <text x="200" y="214" text-anchor="middle" font-size="13" font-weight="600" class="f-mut">מה שאנחנו רואים קובע מה שאנחנו מחליטים</text></svg>`
 };
+const E=t=>`<span class="en">(${t})</span>`;
 const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</figcaption>`:""}</figure>`;
 const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
 const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;

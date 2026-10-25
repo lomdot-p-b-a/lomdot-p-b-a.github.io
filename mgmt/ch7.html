@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>לומדת חובת קריאה: מוטיבציה</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Rubik:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: a study notebook. Home = illustrated cover + topic cards; topic = one reading card at a time, with a highlighter for key terms and drawn figures */
+:root{
+  --bg:#eef2f4; --surface:#ffffff; --raised:#f7f9fa; --ink:#15222a; --muted:#4c5b66; --line:#dbe2e6;
+  --accent:#2457a6; --mark:#ffe27a; --good:#23855a; --good-soft:#e2f4ea; --bad:#c2452d; --bad-soft:#fbe6e1;
+  --t1:#d35d36; --t2:#3667cf; --t3:#0e8a7c; --t4:#8448c9; --t5:#b9800c; --t6:#2a7fa6;
+  --display:"Suez One","Frank Ruhl Libre","David",serif;
+  --body:"Rubik","Arial Hebrew","Segoe UI",Arial,sans-serif;
+  --shadow:0 1px 2px rgba(21,34,42,.06),0 8px 24px rgba(21,34,42,.07);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;font-weight:500;line-height:1.75;direction:rtl}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
+p{margin:0}
+.stack{display:flex;flex-direction:column;gap:16px}
+.muted{color:var(--muted)}
+mark{background:linear-gradient(transparent 38%,var(--mark) 38%,var(--mark) 92%,transparent 92%);color:inherit;padding:0 2px;font-weight:600}
+button{font:inherit;cursor:pointer;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:11px 18px}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button[disabled]{opacity:.55;cursor:default}
+.primary{background:var(--c,var(--accent));border-color:var(--c,var(--accent));color:var(--surface);font-weight:600}
+.ghost{background:transparent;border:none;color:var(--muted);padding:6px 2px}
+.ghost:hover{color:var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.eyebrow{font-size:.8rem;letter-spacing:.05em;font-weight:600;color:var(--c,var(--muted))}
+
+/* home */
+.cover{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.cover-art{background:var(--raised);border-bottom:1px solid var(--line);padding:8px 8px 0}
+.cover-art svg{display:block;width:100%;height:auto;max-height:230px}
+.cover-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px}
+.cover h1{font-size:clamp(2rem,6vw,2.6rem);font-weight:900}
+.stats{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.ring{--p:0;width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center;flex:none}
+.ring span{width:50px;height:50px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.9rem;font-variant-numeric:tabular-nums}
+.stat-text{display:flex;flex-direction:column;line-height:1.35;flex:1;min-width:160px}
+.stat-text b{font-size:1.05rem}
+.review-btn{display:flex;align-items:center;gap:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.tcard{--c:var(--accent);text-align:right;padding:0;overflow:hidden;border:none;border-radius:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s}
+.tcard:hover{transform:translateY(-2px)}
+.tcard .band{background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.tcard .band svg{width:44px;height:44px}
+.tcard .n{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;opacity:.85}
+.tcard .body{padding:12px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tcard .t{font-weight:700;font-size:1.05rem;line-height:1.35}
+.bar{height:7px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--c);border-radius:4px}
+.meta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip{font-size:.75rem;padding:3px 10px;border-radius:99px;font-weight:600;background:color-mix(in srgb,var(--c,var(--accent)) 14%,transparent);color:var(--c,var(--accent));white-space:nowrap}
+.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+
+/* topic */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;display:flex;flex-direction:column;gap:8px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.steps{display:flex;gap:5px}
+.steps i{flex:1;height:5px;border-radius:3px;background:var(--line)}
+.steps i.on{background:var(--c)}
+.prog{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tt{font-size:1.6rem;font-weight:900}
+.card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px}
+.card h3{font-size:1.25rem;color:var(--c)}
+.fig{background:var(--raised);border-radius:14px;padding:10px;margin-inline:-4px}
+.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{font-size:.8rem;color:var(--muted);text-align:center;margin-top:4px}
+figure{margin:0}
+.def{border:1.5px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 6%,var(--surface));border-radius:14px;padding:14px 16px}
+.lbl{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:var(--c);margin-bottom:4px}
+.who{display:flex;gap:12px;align-items:flex-start}
+.who .av{flex:none;width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.15rem}
+.who .yr{font-size:.8rem;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.tile{background:var(--raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile svg{width:32px;height:32px;color:var(--c)}
+.tile b{font-size:.98rem}
+.tile span{font-size:.88rem;color:var(--muted);line-height:1.45}
+.ex{background:var(--raised);border-radius:12px;padding:12px 14px;font-size:.95rem}
+.ex .lbl{color:var(--muted)}
+.yesno{display:flex;flex-wrap:wrap;gap:8px}
+.yn{padding:5px 12px;border-radius:99px;font-size:.88rem;font-weight:500;display:inline-flex;gap:6px;align-items:center}
+.yn.y{background:var(--good-soft);color:var(--good)} .yn.n{background:var(--bad-soft);color:var(--bad)}
+.spectrum{display:flex;flex-direction:column;gap:6px}
+.spectrum .track{height:12px;border-radius:6px;background:linear-gradient(90deg,var(--bad),var(--line) 50%,var(--good));position:relative}
+.spectrum .dot{position:absolute;top:50%;left:50%;width:20px;height:20px;border-radius:50%;background:var(--surface);border:3px solid var(--ink);transform:translate(-50%,-50%)}
+.spectrum .ends{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);gap:10px}
+.remember{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;border-top:1px dashed var(--line);padding-top:12px}
+.remember svg{flex:none;width:22px;height:22px;color:var(--c)}
+
+/* question */
+.q{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:12px}
+.qtext{font-weight:600;font-size:1.08rem;line-height:1.55}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{text-align:right;line-height:1.45;display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--raised);border:1.5px solid transparent}
+.opt:hover:not([disabled]){border-color:var(--c)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:8px;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.85rem;color:var(--c)}
+.opt.right{background:var(--good-soft);border-color:var(--good);opacity:1}
+.opt.right .k{background:var(--good);color:var(--surface)}
+.opt.wrong{background:var(--bad-soft);border-color:var(--bad);opacity:1}
+.opt.wrong .k{background:var(--bad);color:var(--surface)}
+.fb{padding:12px 14px;border-radius:12px;font-size:.95rem;display:flex;gap:10px;align-items:flex-start}
+.fb svg{flex:none;width:22px;height:22px;margin-top:2px}
+.fb.ok{background:var(--good-soft)} .fb.ok svg{color:var(--good)}
+.fb.no{background:var(--bad-soft)} .fb.no svg{color:var(--bad)}
+.fb strong{display:block}
+.big{font-family:var(--display);font-size:3.4rem;font-weight:900;color:var(--c);font-variant-numeric:tabular-nums;line-height:1}
+@media (prefers-reduced-motion:no-preference){.fade{animation:f .3s ease-out}@keyframes f{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+
+/* svg figure classes */
+.s-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.s-c{stroke:var(--c);stroke-width:2;fill:none}
+.f-c{fill:var(--c)}
+.f-soft{fill:color-mix(in srgb,var(--c) 16%,var(--surface))}
+.f-surf{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.f-ink{fill:var(--ink)}
+.f-mut{fill:var(--muted)}
+.f-inv{fill:var(--surface)}
+svg text{font-family:var(--body)}
+h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
+.card p,.def p,.tile span,.ex p{font-weight:500}
+.qtext{font-weight:700}
+.tile b,.who b{font-weight:700}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:.95rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.tbl th,.tbl td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl th{background:color-mix(in srgb,var(--c) 10%,var(--surface));color:var(--c);font-weight:700;font-size:.85rem}
+.tbl .in{color:var(--c);font-weight:700}.tbl .out{color:var(--muted);font-weight:700}
+.tblwrap{overflow-x:auto}
+.en{font-size:.82em;color:var(--muted);font-weight:500;direction:ltr;unicode-bidi:isolate}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const CONFIG={key:"lomda-mgmt-ch7",cover:"cover3",eyebrow:"מבוא לניהול ומבנה ארגוני · פרק 7",title:"מוטיבציה",note:"מבוסס על פרק 7 בספר הקורס (באנגלית). המונחים באנגלית מופיעים בסוגריים."};
+const I={
+ building:'<path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h2M14 8h2M8 12h2M14 12h2M10 21v-4h4v4"/>',
+ people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
+ cycle:'<path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/>',
+ pyramid:'<path d="M12 3L2.5 20h19z"/><path d="M8.2 10.5h7.6M5.5 15.2h13"/>',
+ chart:'<path d="M4 20V10M9.5 20V4M15 20v-7M20.5 20V8M2 20h20"/>',
+ gear:'<circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="7.5" stroke-dasharray="3.2 2.7" stroke-width="3.2"/>',
+ sprout:'<path d="M12 21v-9"/><path d="M12 14C7 14 4.5 11 4.5 6.5 9 6.5 12 9 12 14z"/><path d="M12 12c0-4.5 3-7 7.5-7 0 4.5-3 7-7.5 7z"/>',
+ scales:'<path d="M12 3v17M7 20h10M4 7h16"/><path d="M4 7l-2.5 6h5zM20 7l-2.5 6h5z"/>',
+ factory:'<path d="M3 21V10l5 3v-3l5 3V5h4v16zM1.5 21h21M17 9h4v12"/>',
+ question:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 1 1 3.6 2.4c-.8.4-1.1.9-1.1 1.8"/><path d="M12 17h.01"/>',
+ data:'<ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6M4.5 11.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6"/>',
+ doc:'<path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/>',
+ split:'<circle cx="12" cy="4.5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="12" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/><path d="M12 6.7v10M12 11l-6 6M12 11l6 6"/>',
+ grad:'<path d="M1.5 9L12 4l10.5 5L12 14z"/><path d="M6 11.2V16c3.3 2.4 8.7 2.4 12 0v-4.8M21 10v5"/>',
+ copies:'<rect x="3" y="7" width="12" height="14" rx="2"/><path d="M7 4h11a2 2 0 0 1 2 2v12"/>',
+ link:'<rect x="2" y="8" width="11" height="8" rx="4"/><rect x="11" y="8" width="11" height="8" rx="4"/>',
+ hand:'<circle cx="8" cy="7" r="3"/><circle cx="16" cy="7" r="3"/><path d="M2.5 20c0-3.3 2.5-6 5.5-6 1.6 0 3 .7 4 1.9 1-1.2 2.4-1.9 4-1.9 3 0 5.5 2.7 5.5 6"/>',
+ target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',
+ id:'<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><circle cx="8.5" cy="11" r="2.3"/><path d="M5 16c.6-1.6 2-2.4 3.5-2.4S11.4 14.4 12 16M14.5 10h4M14.5 13.5h3"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>',
+ pie:'<path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/>',
+ cart:'<path d="M2 3h3l2.5 12h11l2-8H6.5"/><circle cx="9" cy="19.5" r="1.6"/><circle cx="17" cy="19.5" r="1.6"/>',
+ bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/>',
+ check:'<circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/>',
+ x:'<circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/>',
+ lock:'<rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>'
+};
+const ic=(k,cls="")=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="${cls}" aria-hidden="true">${I[k]}</svg>`;
+
+const arrowDef=id=>`<defs><marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="f-c"/></marker></defs>`;
+
+const FIG={
+ maslow:()=>{const L=[["מימוש עצמי","צמיחה, מיצוי הפוטנציאל"],["הערכה","כבוד עצמי, הכרה, מעמד"],["חברתיים","שייכות, חברות, קבלה"],["ביטחון","הגנה מפגיעה פיזית ורגשית"],["פיזיולוגיים","רעב, צמא, מחסה"]];
+  return `<svg viewBox="0 0 400 270" role="img" aria-label="פירמידת הצרכים של מאסלו">${L.map(([t,s],i)=>{const y0=10+i*50,y1=y0+46,hw0=14+i*24,hw1=hw0+22,cx=112;return `<polygon points="${cx-hw0},${y0} ${cx+hw0},${y0} ${cx+hw1},${y1} ${cx-hw1},${y1}" class="${i==0?"f-c":"f-soft"}" ${i>2?'opacity=".75"':""}/><text x="250" y="${y0+20}" text-anchor="end" font-size="14" font-weight="700" class="f-ink">${t}</text><text x="250" y="${y0+37}" font-size="11" class="f-mut" text-anchor="end">${s}</text>`}).join("")}
+  
+  <line x1="20" y1="158" x2="390" y2="158" class="s-line" stroke-dasharray="4 4"/></svg>`},
+ herzberg:()=>`<svg viewBox="0 0 400 200" role="img" aria-label="שני הרצפים של הרצברג">
+  <text x="200" y="22" text-anchor="middle" font-size="13" font-weight="700" class="f-ink">רצף 1: גורמים מניעים</text>
+  <rect x="30" y="34" width="340" height="14" rx="7" class="f-soft"/><rect x="200" y="34" width="170" height="14" rx="7" class="f-c"/>
+  <text x="370" y="68" text-anchor="start" font-size="12" font-weight="700" class="f-c">שביעות רצון</text><text x="30" y="68" text-anchor="end" font-size="12" class="f-mut">אין שביעות רצון</text>
+  <text x="200" y="112" text-anchor="middle" font-size="13" font-weight="700" class="f-ink">רצף 2: גורמי היגיינה</text>
+  <rect x="30" y="124" width="340" height="14" rx="7" class="f-soft"/><rect x="30" y="124" width="170" height="14" rx="7" class="f-mut" opacity=".55"/>
+  <text x="370" y="158" text-anchor="start" font-size="12" font-weight="700" class="f-ink">אין חוסר שביעות רצון</text><text x="30" y="158" text-anchor="end" font-size="12" class="f-mut">חוסר שביעות רצון</text>
+  <text x="200" y="190" text-anchor="middle" font-size="11.5" class="f-mut">ההפך משביעות רצון הוא "אין שביעות רצון", לא חוסר שביעות רצון</text></svg>`,
+ expect:()=>{const b=[[340,"מאמץ"],[200,"ביצועים"],[60,"תגמולים"]];
+  return `<svg viewBox="0 0 400 190" role="img" aria-label="שלושת הקשרים בתורת הציפיות">${arrowDef("ea")}
+  ${b.map(([x,t],i)=>`<rect x="${x-50}" y="30" width="100" height="46" rx="12" class="${i==1?"f-c":"f-soft"}"/><text x="${x}" y="58" text-anchor="middle" font-size="14" font-weight="700" class="${i==1?"f-inv":"f-ink"}">${t}</text>`).join("")}
+  <line x1="288" y1="53" x2="252" y2="53" class="s-c" marker-end="url(#ea)"/><line x1="148" y1="53" x2="112" y2="53" class="s-c" marker-end="url(#ea)"/>
+  <rect x="10" y="118" width="100" height="40" rx="12" class="f-soft"/><text x="60" y="143" text-anchor="middle" font-size="12.5" font-weight="700" class="f-ink">מטרות אישיות</text>
+  <line x1="60" y1="78" x2="60" y2="114" class="s-c" marker-end="url(#ea)"/>
+  <circle cx="270" cy="96" r="11" class="f-c"/><text x="270" y="100" text-anchor="middle" font-size="11" font-weight="700" class="f-inv">1</text>
+  <circle cx="130" cy="96" r="11" class="f-c"/><text x="130" y="100" text-anchor="middle" font-size="11" font-weight="700" class="f-inv">2</text>
+  <circle cx="84" cy="98" r="11" class="f-c"/><text x="84" y="102" text-anchor="middle" font-size="11" font-weight="700" class="f-inv">3</text>
+  <text x="390" y="140" text-anchor="start" font-size="11.5" class="f-mut">1 מאמץ ← ביצועים</text><text x="390" y="157" text-anchor="start" font-size="11.5" class="f-mut">2 ביצועים ← תגמול</text><text x="390" y="174" text-anchor="start" font-size="11.5" class="f-mut">3 תגמול ← מטרות אישיות</text></svg>`},
+ cover3:()=>`<svg viewBox="0 0 400 228" role="img" aria-label="חץ שעולה במדרגות לעבר מטרה">${arrowDef("m3")}
+  <rect x="60" y="150" width="70" height="40" rx="6" class="f-soft"/><rect x="140" y="118" width="70" height="72" rx="6" class="f-soft"/><rect x="220" y="86" width="70" height="104" rx="6" class="f-soft"/>
+  <path d="M70 140L170 104L250 72L318 44" class="s-c" stroke-width="4" marker-end="url(#m3)"/>
+  <circle cx="338" cy="40" r="26" class="f-surf"/><circle cx="338" cy="40" r="17" class="s-c"/><circle cx="338" cy="40" r="7" class="f-c"/>
+  <text x="200" y="216" text-anchor="middle" font-size="13" font-weight="600" class="f-mut">עוצמה, כיוון והתמדה</text></svg>`
+};
+const E=t=>`<span class="en">(${t})</span>`;
+const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</figcaption>`:""}</figure>`;
+const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
+const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;
+const tiles=a=>`<div class="tiles">${a.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`;
+const ex=h=>`<div class="ex"><span class="lbl">דוגמה</span><p>${h}</p></div>`;
+const rem=h=>`<div class="remember">${ic("bulb")}<p>${h}</p></div>`;
+const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")}${t}</span>`).join("")}${n.map(t=>`<span class="yn n">${ic("x")}${t}</span>`).join("")}</div>`;
+const spectrum=(r,l,dot)=>`<div class="spectrum"><div class="track">${dot?'<span class="dot"></span>':""}</div><div class="ends"><span>${r}</span><span>${l}</span></div></div>`;
+document.head.insertAdjacentHTML("beforeend",'<style>.yn svg{width:16px;height:16px}</style>');
+
+const T=[
+ {id:"t1",icon:"target",title:"מהי מוטיבציה",blocks:[
+  {h:"שלושת המרכיבים",html:`${def("מושג מפתח",`<mark>מוטיבציה</mark> ${E("Motivation")}: התהליכים שמסבירים את <b>העוצמה</b>, <b>הכיוון</b> וה<b>התמדה</b> של המאמץ של אדם להשגת מטרה.`)}${tiles([["chart","עוצמה (Intensity)","כמה קשה האדם מתאמץ. זה מה שרוב האנשים חושבים עליו כשהם אומרים מוטיבציה"],["target","כיוון (Direction)","לאן המאמץ מופנה. מאמץ גבוה לא יעזור אם הוא לא מכוון למטרות הארגון"],["clock","התמדה (Persistence)","כמה זמן האדם מצליח להחזיק את המאמץ, עד שהוא משיג את המטרה"]])}${rem("מוטיבציה היא לא תכונה קבועה: אותו אדם יכול להיות עם מוטיבציה גבוהה במשימה אחת ונמוכה במשימה אחרת.")}`,q:"m1"}
+ ]},
+ {id:"t2",icon:"pyramid",title:"התיאוריות המוקדמות",blocks:[
+  {h:"פירמידת הצרכים של מאסלו",html:`<p><b>אברהם מאסלו</b> טען שבכל אדם יש היררכיה של חמישה צרכים. צורך שסופק במידה רבה <mark>כבר לא מניע</mark>, ואז הצורך הבא בתור הופך לדומיננטי.</p>${fig("maslow")}${def("שתי קבוצות",`<mark>צרכים נמוכים</mark> (פיזיולוגיים וביטחון) מסופקים בעיקר <b>מבחוץ</b>, למשל בשכר וקביעות. <mark>צרכים גבוהים</mark> (חברתיים, הערכה ומימוש עצמי) מסופקים <b>מבפנים</b>.`)}${rem("התיאוריה מאוד מוכרת ואינטואיטיבית, אבל המחקר כמעט לא תומך בה.")}`,q:"m2"},
+  {h:"תיאוריה X ותיאוריה Y",html:`${who("מ","דאגלס מקגרגור","","הציע שתי השקפות על בני אדם, שמעצבות את ההתנהגות של מנהלים כלפי העובדים.")}${tiles([["lock","תיאוריה X (שלילית)","עובדים לא אוהבים לעבוד, מתחמקים מאחריות, וצריך לכוון ואפילו לכפות עליהם"],["sprout","תיאוריה Y (חיובית)","עבודה טבעית כמו מנוחה או משחק. האדם הממוצע יכול לקבל ואף לחפש אחריות"]])}<p>מקגרגור האמין ב-Y, והמליץ על השתתפות בקבלת החלטות, עבודה מאתגרת ויחסים טובים בקבוצה. <b>אבל:</b> אין ראיות מחקריות שאף אחת מההנחות נכונה.</p>`,q:"m4"},
+  {h:"תיאוריית שני הגורמים של הרצברג",html:`<p><b>פרדריק הרצברג</b> שאל אנשים מתי הרגישו טוב או רע במיוחד בעבודה. התשובות היו שונות לגמרי:</p>${tiles([["bulb","גורמים מניעים (פנימיים)","קידום, הכרה, אחריות, הישגים. אלה יוצרים שביעות רצון"],["hand","גורמי היגיינה (חיצוניים)","שכר, פיקוח, מדיניות החברה, תנאי עבודה, ביטחון תעסוקתי. הם רק מונעים חוסר שביעות רצון"]])}${fig("herzberg")}${rem("מנהל שמתקן רק את גורמי ההיגיינה \"מרגיע\" את העובדים, אבל לא מניע אותם.")}`,q:"m5"},
+  {h:"תורת הצרכים של מקללנד",html:`<p><b>דייוויד מקללנד</b> הציע שלושה צרכים שמסבירים מוטיבציה:</p>${tiles([["chart","צורך בהישגים (nAch)","הדחף להצטיין ולהצליח מול סטנדרט"],["pyramid","צורך בכוח (nPow)","הצורך לגרום לאחרים להתנהג כפי שלא היו מתנהגים אחרת"],["people","צורך בשייכות (nAff)","הרצון ביחסים חמים וקרובים עם אחרים"]])}${def("שימו לב",`בעלי צורך גבוה בהישגים מעדיפים משימות עם <mark>סיכוי של 50% להצליח</mark>: לא קלות מדי (אין אתגר) ולא תלויות במזל. הם מצליחים בעבודה עם אחריות אישית, משוב וסיכון בינוני.`)}`,q:"m8"}
+ ]},
+ {id:"t3",icon:"sprout",title:"מוטיבציה פנימית ומעורבות",blocks:[
+  {h:"תורת ההכוונה העצמית",html:`${ex("מרשה התנדבה בעמותה לאימוץ חיות ונהנתה מכל רגע. אחרי שהתחילו לשלם לה על אותה עבודה בדיוק, היא נהנית הרבה פחות.")}${def("מושג מפתח",`<mark>תורת ההכוונה העצמית</mark> ${E("Self-determination theory")}: אנשים רוצים להרגיש שליטה במעשים שלהם. כל דבר שהופך משימה מהנה ל"חובה" פוגע במוטיבציה.`)}<p>חלק מרכזי בה הוא <mark>תורת ההערכה הקוגניטיבית</mark> ${E("Cognitive evaluation theory")}: תגמול חיצוני על משימה שהייתה מהנה בפני עצמה עלול <b>להוריד</b> את המוטיבציה, אם התגמול נתפס כשולט.</p>${def("מושג נלווה",`<mark>התאמה עצמית</mark> ${E("Self-concordance")}: עד כמה הסיבות לרדוף אחרי מטרה מתאימות לתחומי העניין ולערכים של האדם. מי שרודף מטרה מסיבות פנימיות, מצליח יותר ומאושר יותר, גם אם לא השיג אותה.`)}`,q:"m10"},
+  {h:"מעורבות בעבודה",html:`${def("מושג מפתח",`<mark>מעורבות בעבודה</mark> ${E("Job engagement")}: השקעה של אנרגיה <b>פיזית, קוגניטיבית ורגשית</b> של העובד בביצוע העבודה.`)}${ex("אחות שכשהיא בעבודה, כל השאר נעלם: הרגשות, המחשבות וההתנהגות שלה מופנים לטיפול במטופלים, והיא אפילו לא שמה לב כמה זמן עבר.")}${rem("מעורבות היא יותר מלאהוב את העבודה או למצוא אותה מעניינת. זו מחויבות עמוקה שמניעה ביצועים.")}`,q:"m12"}
+ ]},
+ {id:"t4",icon:"target",title:"הצבת מטרות ומסוגלות עצמית",blocks:[
+  {h:"תורת הצבת המטרות",html:`${who("ל","אדווין לוק","שנות ה-60","הכוונה לפעול להשגת מטרה היא מקור מרכזי למוטיבציה בעבודה.")}${tiles([["target","מטרות ספציפיות","משיגות יותר מ\"תעשה כמיטב יכולתך\""],["chart","מטרות קשות","כשהן מתקבלות, מביאות לביצועים גבוהים יותר ממטרות קלות"],["cycle","משוב","מוביל לביצועים טובים יותר מאשר בלי משוב"]])}<p><b>שלושה גורמים ממתנים:</b> <mark>מחויבות למטרה</mark> (גבוהה יותר כשהמטרה פומבית, כשלאדם יש מיקוד שליטה פנימי וכשהוא הציב אותה בעצמו), <mark>מאפייני המשימה</mark> (ההשפעה חזקה יותר במשימות פשוטות, מוכרות ועצמאיות), ו<mark>תרבות</mark>.</p>`,q:"m13"},
+  {h:"ניהול לפי יעדים (MBO)",html:`${def("מושג מפתח",`<mark>ניהול לפי יעדים</mark> ${E("Management by objectives")}: תוכנית של מטרות ספציפיות, שנקבעות <b>בשיתוף</b>, לתקופת זמן מוגדרת, עם משוב על ההתקדמות.`)}<p>יעדי הארגון מתורגמים ליעדים לכל רמה: חטיבה, מחלקה, עובד. מכיוון שמנהלים בדרגים נמוכים משתתפים בקביעת היעדים, השיטה עובדת גם מלמטה למעלה.</p>${tiles([["target","ספציפיות היעדים",""],["people","השתתפות בקבלת החלטות",""],["clock","תקופת זמן מוגדרת",""],["cycle","משוב על הביצועים",""]])}`,q:"m15"},
+  {h:"מסוגלות עצמית",html:`${def("מושג מפתח",`<mark>מסוגלות עצמית</mark> ${E("Self-efficacy")}: האמונה של אדם שהוא <b>מסוגל</b> לבצע משימה. במצב קשה, מי שמסוגלותו נמוכה מוריד את המאמץ, ומי שמסוגלותו גבוהה מתאמץ יותר.`)}<p><b>אלברט בנדורה</b>: ארבע דרכים להעלות מסוגלות עצמית:</p>${tiles([["chart","שליטה מתוך ביצוע","ניסיון מוצלח במשימה. <b>המקור החשוב ביותר</b>"],["people","למידה מצפייה","לראות מישהו אחר מצליח, במיוחד מישהו דומה לנו"],["hand","שכנוע מילולי","מישהו משכנע אותנו שיש לנו את הכישורים"],["bulb","עוררות","מצב אנרגטי ש\"מדליק\" אותנו לפני ביצוע"]])}${rem("הצבת מטרות ומסוגלות עצמית משלימות: מנהל שמציב לך מטרה קשה משדר שהוא מאמין בך, וזה מעלה את המסוגלות שלך.")}`,q:"m17"}
+ ]},
+ {id:"t5",icon:"scales",title:"חיזוק, הוגנות וציפיות",blocks:[
+  {h:"תורת החיזוק",html:`${def("מושג מפתח",`<mark>תורת החיזוק</mark> ${E("Reinforcement theory")}: התנהגות היא פונקציה של <b>התוצאות</b> שלה. מה שמגיע מיד אחרי התנהגות ומגדיל את הסיכוי שתחזור, הוא חיזוק.`)}<p>בניגוד להצבת מטרות (גישה קוגניטיבית), תורת החיזוק מתעלמת ממה שקורה בתוך האדם. לכן, במובן הצר, היא אפילו לא תיאוריה של מוטיבציה.</p>${tiles([["cycle","ביהביוריזם","התנהגות באה בעקבות גירויים, באופן כמעט לא מחושב"],["people","למידה חברתית","לומדים גם מצפייה באחרים, ולא רק מניסיון ישיר"]])}`,q:"m19"},
+  {h:"תורת ההוגנות",html:`${def("מושג מפתח",`<mark>תורת ההוגנות</mark> ${E("Equity theory")}: אנשים משווים את היחס בין <b>התשומות</b> שלהם (מאמץ, ניסיון, השכלה) ל<b>תוצאות</b> (שכר, קידום, הכרה) לאותו יחס אצל אחרים, ופועלים לתקן חוסר הוגנות.`)}<p><b>ארבעה סוגי השוואה:</b> עצמי-בפנים (תפקיד אחר שלי בארגון), עצמי-בחוץ (עבודה קודמת שלי), אחר-בפנים (עמית בארגון), אחר-בחוץ (מישהו בארגון אחר).</p><p><b>שש תגובות לחוסר הוגנות:</b> לשנות את התשומות, לשנות את התוצאות, לעוות את התפיסה של עצמי, לעוות את התפיסה של אחרים, לבחור מישהו אחר להשוות אליו, או לעזוב.</p>${rem("תשלום יתר כמעט לא משנה התנהגות: אנשים סובלניים הרבה יותר לחוסר הוגנות לטובתם.")}`,q:"m21"},
+  {h:"צדק ארגוני",html:`<p>הצדק הארגוני מרחיב את תורת ההוגנות לתמונה רחבה יותר:</p>${tiles([["pie","צדק חלוקתי","האם <b>הכמות</b> והחלוקה של התגמולים הוגנות"],["doc","צדק פרוצדורלי","האם <b>התהליך</b> שבו הוחלט הוגן. כולל שליטה בתהליך (להשמיע את עמדתך) והסברים"],["hand","צדק בין-אישי (אינטראקטיבי)","האם מתייחסים אליי <b>בכבוד, באכפתיות ובהתחשבות</b>"]])}${rem("צדק פרוצדורלי הופך חשוב במיוחד כשהצדק החלוקתי חסר: כשלא קיבלנו מה שרצינו, אנחנו מתמקדים בשאלה למה.")}`,q:"m24"},
+  {h:"תורת הציפיות של ורום",html:`<p>אחת התיאוריות המקובלות ביותר: עובד יתאמץ אם הוא מאמין שהמאמץ יוביל להערכה טובה, שההערכה תוביל לתגמול, ושהתגמול יספק את המטרות האישיות שלו.</p>${fig("expect")}${ex("סטודנט שבטוח שגם אם ילמד קשה לא יקבל ציון גבוה (קשר 1 חלש), או שהציון לא ישנה לו כלום (קשר 3 חלש), לא יתאמץ.")}`,q:"m26"}
+ ]}
+];
+const Q={
+m1:{t:"t1",v:[
+ {q:"מהם שלושת המרכיבים של מוטיבציה?",a:"עוצמה, כיוון והתמדה",w:["צורך, דחף ותגמול","מאמץ, ביצועים ותגמול","הישגים, כוח ושייכות"],e:"עוצמה = כמה מתאמצים, כיוון = לאן, התמדה = כמה זמן."},
+ {q:"עובד מתאמץ מאוד, אבל על משימות שלא תורמות לארגון. איזה מרכיב של מוטיבציה חסר לו?",a:"כיוון",w:["עוצמה","התמדה","מסוגלות"],e:"עוצמה גבוהה לא מספיקה אם המאמץ לא מופנה למטרות הארגון."}]},
+m2:{t:"t2",v:[
+ {q:"לפי מאסלו, מה קורה לצורך שסופק במידה רבה?",a:"הוא כבר לא מניע, והצורך הבא בהיררכיה הופך לדומיננטי",w:["הוא הופך לחזק יותר","הוא נעלם לגמרי לתמיד","הוא הופך לצורך גבוה"],e:"לכן כדי להניע אדם צריך לדעת באיזו רמה בהיררכיה הוא נמצא."},
+ {q:"מהו הסדר הנכון בפירמידת מאסלו, מלמטה למעלה?",a:"פיזיולוגיים, ביטחון, חברתיים, הערכה, מימוש עצמי",w:["ביטחון, פיזיולוגיים, הערכה, חברתיים, מימוש עצמי","פיזיולוגיים, חברתיים, ביטחון, הערכה, מימוש עצמי","מימוש עצמי, הערכה, חברתיים, ביטחון, פיזיולוגיים"],e:"מתחילים בצרכים הבסיסיים של הגוף, ומסיימים בצמיחה ומיצוי הפוטנציאל."}]},
+m3:{t:"t2",v:[
+ {q:"אילו צרכים נחשבים אצל מאסלו \"צרכים גבוהים\"?",a:"חברתיים, הערכה ומימוש עצמי",w:["פיזיולוגיים וביטחון","ביטחון והערכה","רק מימוש עצמי"],e:"הצרכים הגבוהים מסופקים מבפנים, הנמוכים מבחוץ."},
+ {q:"מה נכון לגבי התמיכה המחקרית בתיאוריית מאסלו?",a:"היא מוכרת מאוד, אבל המחקר כמעט לא תומך בה",w:["היא אחת התיאוריות הנתמכות ביותר במחקר","היא הוכחה במלואה בכל התרבויות","היא נתמכת רק לגבי צרכים גבוהים"],e:"זו נקודה שאוהבים לשאול עליה: פופולריות לא שווה תמיכה מחקרית."}]},
+m4:{t:"t2",v:[
+ {q:"מנהל שמאמין שעובדים לא אוהבים לעבוד וצריך לפקח עליהם צמוד, מחזיק ב:",a:"תיאוריה X",w:["תיאוריה Y","תורת הציפיות","תורת שני הגורמים"],e:"תיאוריה X היא ההשקפה השלילית של מקגרגור."},
+ {q:"לפי תיאוריה Y:",a:"עבודה יכולה להיות טבעית כמו מנוחה, ואנשים יכולים לקבל ואף לחפש אחריות",w:["צריך לכפות על עובדים לעבוד","רוב העובדים מתחמקים מאחריות","עובדים מונעים רק מכסף"],e:"מקגרגור האמין ב-Y, אבל אין ראיות מחקריות לאף אחת מההנחות."}]},
+m5:{t:"t2",v:[
+ {q:"לפי הרצברג, מה ההפך משביעות רצון?",a:"אין שביעות רצון",w:["חוסר שביעות רצון","תסכול","שחיקה"],e:"שני רצפים נפרדים: שביעות רצון ↔ אין שביעות רצון, וחוסר שביעות רצון ↔ אין חוסר שביעות רצון."},
+ {q:"מנהל העלה שכר ושיפר את תנאי העבודה, אבל העובדים לא הפכו מונעים יותר. מה הרצברג היה אומר?",a:"אלה גורמי היגיינה: הם מונעים חוסר שביעות רצון, אבל לא יוצרים מוטיבציה",w:["השכר לא היה גבוה מספיק","צריך להציב מטרות קשות יותר","העובדים לא מסוגלים להיות מונעים"],e:"כדי להניע צריך גורמים מניעים: הישגים, הכרה, אחריות, קידום."}]},
+m6:{t:"t2",v:[
+ {q:"איזה מהבאים הוא גורם מניע לפי הרצברג?",a:"הכרה בהישגים",w:["שכר","תנאי עבודה פיזיים","מדיניות החברה"],e:"גורמים מניעים הם פנימיים: הכרה, אחריות, הישגים, קידום."},
+ {q:"איזה מהבאים הוא גורם היגיינה לפי הרצברג?",a:"ביטחון תעסוקתי",w:["אחריות","קידום","הישגים"],e:"גורמי היגיינה הם חיצוניים: שכר, פיקוח, מדיניות, תנאים, ביטחון."}]},
+m7:{t:"t2",v:[
+ {q:"מהי ביקורת מרכזית על תיאוריית שני הגורמים?",a:"היא נשענת על דיווח עצמי: כשהולך טוב אנשים לוקחים קרדיט, וכשרע מאשימים את הסביבה",w:["היא לא עוסקת בשכר","היא נבדקה רק על מנהלים","היא לא מבחינה בין צרכים"],e:"זו בעצם ההטיה לטובת העצמי, שמעוותת את הנתונים."}]},
+m8:{t:"t2",v:[
+ {q:"בעלי צורך גבוה בהישגים מעדיפים משימות עם סיכוי הצלחה של:",a:"כ-50%",w:["כ-90%","כ-10%","100%"],e:"קל מדי זה בלי אתגר, קשה מדי זה מזל. 50% זה בדיוק האתגר שהם אוהבים."},
+ {q:"\"הצורך לגרום לאחרים להתנהג כפי שלא היו מתנהגים אחרת\" הוא לפי מקללנד:",a:"צורך בכוח (nPow)",w:["צורך בהישגים (nAch)","צורך בשייכות (nAff)","צורך במימוש עצמי"],e:"שלושת הצרכים של מקללנד: הישגים, כוח, שייכות."}]},
+m9:{t:"t2",v:[
+ {q:"באיזו עבודה בעלי צורך גבוה בהישגים יצליחו במיוחד?",a:"עבודה עם אחריות אישית, משוב, וסיכון בינוני, כמו ניהול עסק עצמאי",w:["עבודה שגרתית ובטוחה לחלוטין","עבודה שתלויה בעיקר במזל","עבודה בלי משוב על הביצועים"],e:"הם רוצים לדעת שההצלחה תלויה בהם, ולקבל משוב עליה."}]},
+m10:{t:"t3",v:[
+ {q:"מתנדבת נהנתה מעבודתה, אבל אחרי שהתחילו לשלם לה היא נהנית פחות. איזו תיאוריה מסבירה זאת?",a:"תורת ההכוונה העצמית (ותורת ההערכה הקוגניטיבית)",w:["תורת ההוגנות","תורת שני הגורמים","פירמידת מאסלו"],e:"התגמול החיצוני הפך את מה שהיה בחירה חופשית לתחושה של חובה."},
+ {q:"לפי תורת ההערכה הקוגניטיבית, מה קורה כשנותנים תגמול חיצוני על משימה שהייתה מהנה בפני עצמה?",a:"המוטיבציה הכללית עלולה לרדת, אם התגמול נתפס כשולט",w:["המוטיבציה תמיד עולה","אין שום השפעה","המוטיבציה עולה רק אצל מנהלים"],e:"זה נשמע הפוך מהאינטואיציה, ולכן זה נושא שאוהבים לשאול עליו."}]},
+m11:{t:"t3",v:[
+ {q:"מהי התאמה עצמית (Self-concordance)?",a:"עד כמה הסיבות לרדוף אחרי מטרה תואמות את תחומי העניין והערכים של האדם",w:["עד כמה אדם מאמין ביכולת שלו","עד כמה המטרות של העובד והארגון זהות","עד כמה אדם עקבי בהתנהגות שלו"],e:"מי שפועל מסיבות פנימיות מצליח יותר ומאושר יותר, גם כשלא הצליח."}]},
+m12:{t:"t3",v:[
+ {q:"מהי מעורבות בעבודה (Job engagement)?",a:"השקעה של אנרגיה פיזית, קוגניטיבית ורגשית בביצוע העבודה",w:["שביעות רצון מהשכר","מספר השעות שאדם עובד","נאמנות לארגון לאורך שנים"],e:"זה יותר מאשר לאהוב את העבודה: זו שקיעה מלאה בה."}]},
+m13:{t:"t4",v:[
+ {q:"לפי תורת הצבת המטרות, מה מוביל לביצועים הגבוהים ביותר?",a:"מטרות ספציפיות וקשות, עם משוב",w:["\"תעשה כמיטב יכולתך\"","מטרות קלות שקל לעמוד בהן","מטרות כלליות בלי משוב"],e:"ספציפיות, קושי (כשהמטרה מתקבלת) ומשוב."},
+ {q:"מי פיתח את תורת הצבת המטרות?",a:"אדווין לוק",w:["אברהם מאסלו","ויקטור ורום","פרדריק הרצברג"],e:"לוק, בשנות ה-60."}]},
+m14:{t:"t4",v:[
+ {q:"מתי המחויבות למטרה גבוהה יותר?",a:"כשהמטרה פומבית, כשלאדם מיקוד שליטה פנימי, וכשהוא הציב אותה בעצמו",w:["כשהמטרה סודית","כשהמטרה הוכתבה מלמעלה","כשהמשימה מורכבת וחדשה"],e:"מחויבות היא אחד משלושת הגורמים הממתנים."},
+ {q:"באיזו משימה ההשפעה של הצבת מטרות חזקה יותר?",a:"משימה פשוטה, מוכרת ועצמאית",w:["משימה מורכבת וחדשה","משימה שתלויה באחרים","משימה בלי מדד הצלחה"],e:"במשימות תלויות זו בזו עדיף להציב מטרות קבוצתיות."}]},
+m15:{t:"t4",v:[
+ {q:"איזה מהבאים אינו אחד מארבעת המרכיבים של ניהול לפי יעדים (MBO)?",a:"תגמול כספי על כל יעד",w:["ספציפיות היעדים","השתתפות בקבלת החלטות","משוב על הביצועים"],e:"ארבעת המרכיבים: ספציפיות, השתתפות, תקופת זמן מוגדרת ומשוב."},
+ {q:"מה מיוחד ב-MBO לעומת הצבת יעדים רגילה מלמעלה?",a:"היעדים נקבעים בשיתוף העובדים, ולכן השיטה עובדת גם מלמטה למעלה",w:["אין בה יעדים כתובים","היא עובדת בלי משוב","היא מתאימה רק לדרג הבכיר"],e:"יעדי הארגון מתורגמים ליעדים לכל רמה, אבל הדרגים הנמוכים שותפים בקביעתם."}]},
+m16:{t:"t4",v:[
+ {q:"מהי מסוגלות עצמית?",a:"האמונה של אדם שהוא מסוגל לבצע משימה",w:["היכולת האמיתית של אדם","הערכה עצמית כללית","שביעות רצון מהעבודה"],e:"זו אמונה, לא יכולת בפועל. נקראת גם תיאוריה קוגניטיבית חברתית."}]},
+m17:{t:"t4",v:[
+ {q:"לפי בנדורה, מהו המקור החשוב ביותר להגברת מסוגלות עצמית?",a:"שליטה מתוך ביצוע: ניסיון מוצלח במשימה",w:["שכנוע מילולי","עוררות","למידה מצפייה"],e:"אם כבר הצלחת בעבר, אתה בטוח יותר שתצליח שוב."},
+ {q:"חבר שלך ירד במשקל, ועכשיו אתה בטוח שגם אתה מסוגל. איזה מקור של מסוגלות עצמית זה?",a:"למידה מצפייה",w:["שליטה מתוך ביצוע","שכנוע מילולי","עוררות"],e:"היא יעילה במיוחד כשהאדם שצופים בו דומה לנו."}]},
+m18:{t:"t4",v:[
+ {q:"איך הצבת מטרות ומסוגלות עצמית קשורות?",a:"הן משלימות: מטרה קשה מהמנהל משדרת אמון ומעלה את המסוגלות",w:["הן סותרות זו את זו","אין קשר ביניהן","מסוגלות גבוהה מבטלת את הצורך במטרות"],e:"מסוגלות גבוהה גורמת לאדם להציב לעצמו מטרות גבוהות יותר, וכך הביצועים עולים."}]},
+m19:{t:"t5",v:[
+ {q:"לפי תורת החיזוק, מה קובע התנהגות?",a:"התוצאות שלה",w:["המטרות של האדם","הצרכים הפנימיים","ההשוואה לאחרים"],e:"חיזוק שמגיע מיד אחרי התנהגות מגדיל את הסיכוי שהיא תחזור."},
+ {q:"למה תורת החיזוק אינה, במובן הצר, תיאוריה של מוטיבציה?",a:"כי היא מתעלמת ממה שקורה בתוך האדם ומה שמניע את ההתנהגות",w:["כי היא עוסקת רק בעונשים","כי היא נבדקה רק על בעלי חיים","כי היא חדשה מדי"],e:"היא מתמקדת רק במה שקורה אחרי שהאדם פועל."}]},
+m20:{t:"t5",v:[
+ {q:"מה ההבדל בין ביהביוריזם ללמידה חברתית?",a:"בלמידה חברתית לומדים גם מצפייה באחרים, ולא רק מניסיון ישיר",w:["בביהביוריזם יש מקום לחשיבה","למידה חברתית מתעלמת מתוצאות","אין הבדל"],e:"ביהביוריזם רואה התנהגות כתגובה כמעט לא מחושבת לגירויים."}]},
+m21:{t:"t5",v:[
+ {q:"לפי תורת ההוגנות, מה משווים?",a:"את היחס בין התשומות לתוצאות שלי, לאותו יחס אצל אחרים",w:["את השכר שלי לשכר הממוצע במשק","את המאמץ שלי לביצועים שלי","את המטרות שלי למטרות הארגון"],e:"לא משנה רק כמה אני מקבל, אלא כמה אני מקבל ביחס למה שאני נותן, בהשוואה לאחרים."},
+ {q:"עובדת משווה את השכר שלה לשכר של חברה שעובדת בחברה אחרת. איזה סוג השוואה זה?",a:"אחר-בחוץ",w:["אחר-בפנים","עצמי-בחוץ","עצמי-בפנים"],e:"אדם אחר, מחוץ לארגון שלה."}]},
+m22:{t:"t5",v:[
+ {q:"איזו מהבאות אינה אחת התגובות לחוסר הוגנות לפי תורת ההוגנות?",a:"לבקש ממישהו אחר להחליט במקומי",w:["לשנות את התשומות","לבחור מישהו אחר להשוות אליו","לעזוב"],e:"שש התגובות: לשנות תשומות, לשנות תוצאות, לעוות תפיסה עצמית, לעוות תפיסת אחרים, להחליף מושא השוואה, לעזוב."}]},
+m23:{t:"t5",v:[
+ {q:"מה נמצא לגבי תשלום יתר (כשאני מקבל יותר מאחרים)?",a:"הוא כמעט לא משנה התנהגות, כי אנשים סובלניים יותר לחוסר הוגנות לטובתם",w:["הוא גורם לאנשים לעבוד הרבה יותר קשה","הוא גורם לאנשים לעזוב","הוא משפיע כמו תשלום חסר"],e:"זו נקודת חולשה של התיאוריה: חצי מהמשוואה לא עובד."}]},
+m24:{t:"t5",v:[
+ {q:"עובד לא קיבל קידום, אבל הסבירו לו בדיוק איך התקבלה ההחלטה ונתנו לו להציג את עמדתו. איזה סוג צדק נשמר כאן?",a:"צדק פרוצדורלי",w:["צדק חלוקתי","צדק בין-אישי","תועלתנות"],e:"התהליך היה הוגן: שליטה בתהליך והסברים."},
+ {q:"מהו צדק חלוקתי?",a:"ההוגנות הנתפסת של כמות התגמולים וחלוקתם",w:["ההוגנות של התהליך שבו הוחלט","יחס של כבוד ואכפתיות","חלוקה שווה בדיוק בין כולם"],e:"חלוקתי = מה קיבלתי. פרוצדורלי = איך הוחלט. בין-אישי = איך התייחסו אליי."},
+ {q:"מנהל מודיע לעובדת על החלטה בצורה מזלזלת ומשפילה. איזה סוג צדק נפגע?",a:"צדק בין-אישי (אינטראקטיבי)",w:["צדק חלוקתי","צדק פרוצדורלי","צדק תועלתני"],e:"צדק בין-אישי עוסק ביחס בכבוד, באכפתיות ובהתחשבות."}]},
+m25:{t:"t5",v:[
+ {q:"מתי צדק פרוצדורלי הופך חשוב במיוחד?",a:"כשהצדק החלוקתי חסר, כלומר כשלא קיבלנו את מה שרצינו",w:["כשקיבלנו יותר ממה שציפינו","רק בארגונים ציבוריים","רק כשיש איגוד עובדים"],e:"כשלא קיבלנו, אנחנו מתחילים לשאול למה ואיך הוחלט."}]},
+m26:{t:"t5",v:[
+ {q:"מהם שלושת הקשרים בתורת הציפיות של ורום?",a:"מאמץ-ביצועים, ביצועים-תגמול, תגמול-מטרות אישיות",w:["צורך-דחף-תגמול","תשומות-תוצאות-השוואה","מטרה-משוב-ביצועים"],e:"אם אחד מהקשרים חלש, המוטיבציה נפגעת."},
+ {q:"עובדת בטוחה שגם אם תעבוד קשה, הבונוס יחולק לפי קשרים ולא לפי ביצועים. איזה קשר חלש אצלה?",a:"ביצועים-תגמול",w:["מאמץ-ביצועים","תגמול-מטרות אישיות","כולם חזקים"],e:"היא לא מאמינה שביצועים טובים יובילו לתגמול."}]},
+m27:{t:"t5",v:[
+ {q:"עובד מקבל בונוס כספי, אבל מה שבאמת חשוב לו זה זמן עם המשפחה. איזה קשר חלש בתורת הציפיות?",a:"תגמול-מטרות אישיות",w:["מאמץ-ביצועים","ביצועים-תגמול","אף אחד"],e:"התגמול לא מספק את המטרות האישיות שלו, ולכן לא מניע."}]}
+};
+for(const t of T) t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id);
+const KEY=CONFIG.key;
+let S={q:{},read:{}};
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.q) S=s;}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const st=id=>S.q[id]||(S.q[id]={n:0,c:0,w:0,t:0,lv:-1});
+const mastered=id=>(S.q[id]?.c||0)>=2;
+const topicPct=t=>Math.round(100*t.qids.filter(mastered).length/t.qids.length);
+const topicStarted=t=>S.read[t.id]||t.qids.some(id=>S.q[id]&&S.q[id].n);
+const allIds=Object.keys(Q);
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+const pickVariant=id=>{const s=st(id),n=Q[id].v.length;return n>1?(s.lv+1)%n:0};
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const color=t=>`var(--${t.id})`;
+const app=document.getElementById("app");
+const LET=["א","ב","ג","ד"];
+
+function qCard(id,onDone,label){
+  const vi=pickVariant(id),v=Q[id].v[vi],opts=shuffle([v.a,...v.w]);
+  const box=document.createElement("div");box.className="q fade";
+  box.innerHTML=(label?`<span class="eyebrow">${label}</span>`:"")+`<div class="qtext">${esc(v.q)}</div><div class="opts"></div>`;
+  const wrap=box.querySelector(".opts");
+  opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt";b.dataset.a=o===v.a?"1":"";
+    b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+    b.onclick=()=>{const ok=o===v.a,s=st(id);s.n++;s.t=Date.now();s.lv=vi;ok?s.c++:(s.c=0,s.w++);save();
+      wrap.querySelectorAll("button").forEach(x=>{x.disabled=true;if(x.dataset.a)x.classList.add("right")});
+      if(!ok)b.classList.add("wrong");
+      const fb=document.createElement("div");fb.className="fb fade "+(ok?"ok":"no");
+      fb.innerHTML=`${ic(ok?"check":"x")}<div><strong>${ok?"נכון!":"לא בדיוק"}</strong>${esc(v.e)}</div>`;box.appendChild(fb);
+      const nx=document.createElement("button");nx.className="primary";nx.textContent="המשך";nx.style.alignSelf="flex-start";
+      nx.onclick=()=>onDone(ok);box.appendChild(nx);nx.focus({preventScroll:true});nx.scrollIntoView({block:"nearest",behavior:"smooth"});
+    };wrap.appendChild(b)});
+  return box;
+}
+
+function home(){
+  document.body.style.removeProperty("--c");
+  const started=T.filter(topicStarted);
+  const total=Math.round(100*allIds.filter(mastered).length/allIds.length);
+  const weak=allIds.filter(id=>S.q[id]&&S.q[id].n&&!mastered(id)).length;
+  app.innerHTML=`<div class="stack fade">
+   <section class="cover" style="--c:var(--accent)">
+    <div class="cover-art">${FIG[CONFIG.cover]()}</div>
+    <div class="cover-body">
+     <span class="eyebrow">${CONFIG.eyebrow}</span>
+     <h1>לומדת חובת קריאה: ${CONFIG.title}</h1>
+     <p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר עם שאלות גם מנושאים קודמים.</p>
+     <div class="stats">
+      <div class="ring" style="--p:${total}"><span>${total}%</span></div>
+      <div class="stat-text"><b>${total===0?"עוד לא התחלת":total>=80?"אתה שולט בחומר":"בדרך"}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
+      <button class="primary review-btn" id="rev" ${started.length?"":"disabled"}>${ic("cycle")}<span>${started.length?"חזרה מהירה":"חזרה מהירה (אחרי נושא ראשון)"}</span></button>
+     </div>
+    </div>
+   </section>
+   <div class="grid" id="list"></div>
+   <div class="foot"><a href="../#mgmt" style="color:var(--accent);font-weight:700;text-decoration:none">→ לקורס</a><span>${CONFIG.note}</span><button class="ghost" id="reset">איפוס התקדמות</button></div>
+  </div>`;
+  document.querySelector("#rev svg").style.cssText="width:20px;height:20px";
+  const list=app.querySelector("#list");
+  T.forEach((t,i)=>{const p=topicPct(t),b=document.createElement("button");b.className="tcard";b.style.setProperty("--c",color(t));
+    const status=!topicStarted(t)?"לא התחלת":p>=80?"שולט":"בתהליך";
+    b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
+    b.onclick=()=>topic(i,0);list.appendChild(b)});
+  app.querySelector("#rev").onclick=review;
+  const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
+  scrollTo(0,0);
+}
+
+function bar(title,n,i,label){
+  return `<div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">${label}</span></div><div class="steps">${Array.from({length:n},(_,k)=>`<i class="${k<=i?"on":""}"></i>`).join("")}</div></div><span class="eyebrow">${title}</span>`;
+}
+
+function topic(ti,bi){
+  const t=T[ti],blk=t.blocks[bi];document.body.style.setProperty("--c",color(t));
+  app.innerHTML=`<div class="stack">${bar(`נושא ${ti+1} · ${t.title}`,t.blocks.length+1,bi,`קטע ${bi+1} מתוך ${t.blocks.length}`)}
+   <article class="card fade"><h3>${blk.h}</h3>${blk.html}</article><div id="slot"></div></div>`;
+  app.querySelector("#back").onclick=home;
+  const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;save();quiz(ti)}};
+  const slot=app.querySelector("#slot");
+  if(blk.q)slot.appendChild(qCard(blk.q,next,"בדיקה קצרה"));
+  else{const b=document.createElement("button");b.className="primary";b.textContent="המשך";b.onclick=next;slot.appendChild(b)}
+  scrollTo(0,0);
+}
+
+function runSet(title,ids,c,onEnd){
+  let i=0,right=0;document.body.style.setProperty("--c",c);
+  const step=()=>{
+    if(i>=ids.length)return onEnd(right,ids.length);
+    const id=ids[i],from=T.find(t=>t.id===Q[id].t);
+    app.innerHTML=`<div class="stack">${bar(title,ids.length,i,`שאלה ${i+1} מתוך ${ids.length}`)}<div id="slot"></div></div>`;
+    app.querySelector("#back").onclick=home;
+    const card=qCard(id,ok=>{if(ok)right++;i++;step()},from.title);card.style.setProperty("--c",color(from));
+    app.querySelector("#slot").appendChild(card);scrollTo(0,0);
+  };step();
+}
+
+function quiz(ti){
+  const t=T[ti];
+  const prev=T.slice(0,ti).filter(topicStarted).flatMap(x=>x.qids);
+  const extra=shuffle(prev).sort((a,b)=>st(a).c-st(b).c).slice(0,2);
+  runSet(`מבחן סיום · ${t.title}`,shuffle(t.qids).concat(extra),color(t),(r,n)=>done(r,n,ti));
+}
+
+function review(){
+  const pool=T.filter(topicStarted).flatMap(t=>t.qids),now=Date.now();
+  const score=id=>{const s=S.q[id]||{n:0,c:0,w:0,t:0};return (s.n?0:2)+s.w*2+(s.c<2?3:0)+Math.min(3,(now-s.t)/864e5)+Math.random()*2};
+  const ids=pool.map(id=>[id,score(id)]).sort((a,b)=>b[1]-a[1]).slice(0,12).map(x=>x[0]);
+  runSet("חזרה מהירה",shuffle(ids),"var(--accent)",(r,n)=>done(r,n,null));
+}
+
+function done(r,n,ti){
+  const nextT=ti!=null&&ti+1<T.length?ti+1:null,pct=Math.round(100*r/n);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">${ti!=null?`סיום נושא ${ti+1} · ${T[ti].title}`:"סיום חזרה מהירה"}</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct};--accent:var(--c)"><span>${pct}%</span></div><div class="big">${r}/${n}</div></div>
+    <p>${r===n?"מצוין, הכל נכון.":r>=n*0.7?"טוב מאוד. מה שטעית בו יחזור בחזרה המהירה, בניסוח אחר.":"כדאי לעבור שוב על הנושא. השאלות שטעית בהן יחזרו בחזרה המהירה."}</p>
+    <div class="row">${nextT!=null?`<button class="primary" id="nx" style="--c:${color(T[nextT])}">לנושא הבא: ${T[nextT].title}</button>`:""}<button id="hm">לכל הנושאים</button></div>
+   </article></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;
+  const nx=app.querySelector("#nx");if(nx)nx.onclick=()=>topic(nextT,0);
+  scrollTo(0,0);
+}
+home();
+</script>
+</body>
+</html>
