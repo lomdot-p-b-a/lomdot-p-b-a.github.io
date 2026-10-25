@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>לומדת חובת קריאה: אספרגר - הפרעת קשר ותקשורת: תיאור מקרה בטיפול פסיכולוגי</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Rubik:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: a study notebook. Home = illustrated cover + topic cards; topic = one reading card at a time, with a highlighter for key terms and drawn figures */
+:root{
+  --bg:#eef2f4; --surface:#ffffff; --raised:#f7f9fa; --ink:#15222a; --muted:#4c5b66; --line:#dbe2e6;
+  --accent:#2457a6; --mark:#ffe27a; --good:#23855a; --good-soft:#e2f4ea; --bad:#c2452d; --bad-soft:#fbe6e1;
+  --t1:#d35d36; --t2:#3667cf; --t3:#0e8a7c; --t4:#8448c9; --t5:#b9800c; --t6:#2a7fa6;
+  --display:"Suez One","Frank Ruhl Libre","David",serif;
+  --body:"Rubik","Arial Hebrew","Segoe UI",Arial,sans-serif;
+  --shadow:0 1px 2px rgba(21,34,42,.06),0 8px 24px rgba(21,34,42,.07);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;font-weight:500;line-height:1.75;direction:rtl}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
+p{margin:0}
+.stack{display:flex;flex-direction:column;gap:16px}
+.muted{color:var(--muted)}
+mark{background:linear-gradient(transparent 38%,var(--mark) 38%,var(--mark) 92%,transparent 92%);color:inherit;padding:0 2px;font-weight:600}
+button{font:inherit;cursor:pointer;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:11px 18px}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button[disabled]{opacity:.55;cursor:default}
+.primary{background:var(--c,var(--accent));border-color:var(--c,var(--accent));color:var(--surface);font-weight:600}
+.ghost{background:transparent;border:none;color:var(--muted);padding:6px 2px}
+.ghost:hover{color:var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.badge{display:inline-block;align-self:flex-start;font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:99px;background:var(--accent);color:var(--surface);margin-bottom:6px}.entitle{display:inline;unicode-bidi:isolate;font-family:Rubik,system-ui,sans-serif;font-weight:800}.hetitle{margin:4px 0 0;font-weight:700;font-size:1.05rem}.cite{text-align:right;margin:4px 0 0;font-size:.85rem;color:var(--muted)}.cite a{color:var(--accent)}
+.eyebrow{font-size:.8rem;letter-spacing:.05em;font-weight:600;color:var(--c,var(--muted))}
+
+/* home */
+.cover{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.cover-art{background:var(--raised);border-bottom:1px solid var(--line);padding:8px 8px 0}
+.cover-art svg{display:block;width:100%;height:auto;max-height:230px}
+.cover-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px}
+.cover h1{font-size:clamp(2rem,6vw,2.6rem);font-weight:900}
+.stats{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.ring{--p:0;width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center;flex:none}
+.ring span{width:50px;height:50px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.9rem;font-variant-numeric:tabular-nums}
+.stat-text{display:flex;flex-direction:column;line-height:1.35;flex:1;min-width:160px}
+.stat-text b{font-size:1.05rem}
+.review-btn{display:flex;align-items:center;gap:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.tcard{--c:var(--accent);text-align:right;padding:0;overflow:hidden;border:none;border-radius:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s}
+.tcard:hover{transform:translateY(-2px)}
+.tcard .band{background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.tcard .band svg{width:44px;height:44px}
+.tcard .n{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;opacity:.85}
+.tcard .body{padding:12px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tcard .t{font-weight:700;font-size:1.05rem;line-height:1.35}
+.bar{height:7px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--c);border-radius:4px}
+.meta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip{font-size:.75rem;padding:3px 10px;border-radius:99px;font-weight:600;background:color-mix(in srgb,var(--c,var(--accent)) 14%,transparent);color:var(--c,var(--accent));white-space:nowrap}
+.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+
+/* topic */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;display:flex;flex-direction:column;gap:8px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.steps{display:flex;gap:5px}
+.steps i{flex:1;height:5px;border-radius:3px;background:var(--line)}
+.steps i.on{background:var(--c)}
+.prog{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tt{font-size:1.6rem;font-weight:900}
+.card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px}
+.card h3{font-size:1.25rem;color:var(--c)}
+.fig{background:var(--raised);border-radius:14px;padding:10px;margin-inline:-4px}
+.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{font-size:.8rem;color:var(--muted);text-align:center;margin-top:4px}
+figure{margin:0}
+.def{border:1.5px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 6%,var(--surface));border-radius:14px;padding:14px 16px}
+.lbl{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:var(--c);margin-bottom:4px}
+.who{display:flex;gap:12px;align-items:flex-start}
+.who .av{flex:none;width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.15rem}
+.who .yr{font-size:.8rem;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.tile{background:var(--raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile svg{width:32px;height:32px;color:var(--c)}
+.tile b{font-size:.98rem}
+.tile span{font-size:.88rem;color:var(--muted);line-height:1.45}
+.ex{background:var(--raised);border-radius:12px;padding:12px 14px;font-size:.95rem}
+.ex .lbl{color:var(--muted)}
+.yesno{display:flex;flex-wrap:wrap;gap:8px}
+.yn{padding:5px 12px;border-radius:99px;font-size:.88rem;font-weight:500;display:inline-flex;gap:6px;align-items:center}
+.yn.y{background:var(--good-soft);color:var(--good)} .yn.n{background:var(--bad-soft);color:var(--bad)}
+.spectrum{display:flex;flex-direction:column;gap:6px}
+.spectrum .track{height:12px;border-radius:6px;background:linear-gradient(90deg,var(--bad),var(--line) 50%,var(--good));position:relative}
+.spectrum .dot{position:absolute;top:50%;left:50%;width:20px;height:20px;border-radius:50%;background:var(--surface);border:3px solid var(--ink);transform:translate(-50%,-50%)}
+.spectrum .ends{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);gap:10px}
+.remember{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;border-top:1px dashed var(--line);padding-top:12px}
+.remember svg{flex:none;width:22px;height:22px;color:var(--c)}
+
+/* question */
+.q{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:12px}
+.qtext{font-weight:600;font-size:1.08rem;line-height:1.55}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{text-align:right;line-height:1.45;display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--raised);border:1.5px solid transparent}
+.opt:hover:not([disabled]){border-color:var(--c)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:8px;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.85rem;color:var(--c)}
+.opt.right{background:var(--good-soft);border-color:var(--good);opacity:1}
+.opt.right .k{background:var(--good);color:var(--surface)}
+.opt.wrong{background:var(--bad-soft);border-color:var(--bad);opacity:1}
+.opt.wrong .k{background:var(--bad);color:var(--surface)}
+.fb{padding:12px 14px;border-radius:12px;font-size:.95rem;display:flex;gap:10px;align-items:flex-start}
+.fb svg{flex:none;width:22px;height:22px;margin-top:2px}
+.fb.ok{background:var(--good-soft)} .fb.ok svg{color:var(--good)}
+.fb.no{background:var(--bad-soft)} .fb.no svg{color:var(--bad)}
+.fb strong{display:block}
+.big{font-family:var(--display);font-size:3.4rem;font-weight:900;color:var(--c);font-variant-numeric:tabular-nums;line-height:1}
+@media (prefers-reduced-motion:no-preference){.fade{animation:f .3s ease-out}@keyframes f{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+
+/* svg figure classes */
+.s-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.s-c{stroke:var(--c);stroke-width:2;fill:none}
+.f-c{fill:var(--c)}
+.f-soft{fill:color-mix(in srgb,var(--c) 16%,var(--surface))}
+.f-surf{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.f-ink{fill:var(--ink)}
+.f-mut{fill:var(--muted)}
+.f-inv{fill:var(--surface)}
+svg text{font-family:var(--body)}
+h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
+.card p,.def p,.tile span,.ex p{font-weight:500}
+.qtext{font-weight:700}
+.tile b,.who b{font-weight:700}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:.95rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.tbl th,.tbl td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl th{background:color-mix(in srgb,var(--c) 10%,var(--surface));color:var(--c);font-weight:700;font-size:.85rem}
+.tbl .in{color:var(--c);font-weight:700}.tbl .out{color:var(--muted);font-weight:700}
+.tblwrap{overflow-x:auto}
+.en{font-size:.82em;color:var(--muted);font-weight:500;direction:ltr;unicode-bidi:isolate}
+</style>
+<style>:root{--accent:#6a46c2}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent:#ad90f2}}:root[data-theme="dark"]{--accent:#ad90f2}</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const CONFIG={key:"lomda-intro-asperger",cover:"cover14",eyebrow:"מבוא לפסיכולוגיה · מאמר בעברית",title:"אספרגר - הפרעת קשר ותקשורת: תיאור מקרה בטיפול פסיכולוגי",cite:`רוטפלד, ע' (2017). אספרגר — הפרעת קשר ותקשורת: תיאור מקרה בטיפול פסיכולוגי. <i>עיונים בחינוך, 15–16</i>, 439–455.`,note:"מבוסס על המאמר בעיונים בחינוך (2017). המטופל מכונה במאמר ת'."};
+const I={
+ building:'<path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h2M14 8h2M8 12h2M14 12h2M10 21v-4h4v4"/>',
+ people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
+ cycle:'<path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/>',
+ pyramid:'<path d="M12 3L2.5 20h19z"/><path d="M8.2 10.5h7.6M5.5 15.2h13"/>',
+ chart:'<path d="M4 20V10M9.5 20V4M15 20v-7M20.5 20V8M2 20h20"/>',
+ gear:'<circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="7.5" stroke-dasharray="3.2 2.7" stroke-width="3.2"/>',
+ sprout:'<path d="M12 21v-9"/><path d="M12 14C7 14 4.5 11 4.5 6.5 9 6.5 12 9 12 14z"/><path d="M12 12c0-4.5 3-7 7.5-7 0 4.5-3 7-7.5 7z"/>',
+ scales:'<path d="M12 3v17M7 20h10M4 7h16"/><path d="M4 7l-2.5 6h5zM20 7l-2.5 6h5z"/>',
+ factory:'<path d="M3 21V10l5 3v-3l5 3V5h4v16zM1.5 21h21M17 9h4v12"/>',
+ question:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 1 1 3.6 2.4c-.8.4-1.1.9-1.1 1.8"/><path d="M12 17h.01"/>',
+ data:'<ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6M4.5 11.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6"/>',
+ doc:'<path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/>',
+ split:'<circle cx="12" cy="4.5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="12" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/><path d="M12 6.7v10M12 11l-6 6M12 11l6 6"/>',
+ grad:'<path d="M1.5 9L12 4l10.5 5L12 14z"/><path d="M6 11.2V16c3.3 2.4 8.7 2.4 12 0v-4.8M21 10v5"/>',
+ copies:'<rect x="3" y="7" width="12" height="14" rx="2"/><path d="M7 4h11a2 2 0 0 1 2 2v12"/>',
+ link:'<rect x="2" y="8" width="11" height="8" rx="4"/><rect x="11" y="8" width="11" height="8" rx="4"/>',
+ hand:'<circle cx="8" cy="7" r="3"/><circle cx="16" cy="7" r="3"/><path d="M2.5 20c0-3.3 2.5-6 5.5-6 1.6 0 3 .7 4 1.9 1-1.2 2.4-1.9 4-1.9 3 0 5.5 2.7 5.5 6"/>',
+ target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',
+ id:'<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><circle cx="8.5" cy="11" r="2.3"/><path d="M5 16c.6-1.6 2-2.4 3.5-2.4S11.4 14.4 12 16M14.5 10h4M14.5 13.5h3"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>',
+ pie:'<path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/>',
+ cart:'<path d="M2 3h3l2.5 12h11l2-8H6.5"/><circle cx="9" cy="19.5" r="1.6"/><circle cx="17" cy="19.5" r="1.6"/>',
+ bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/>',
+ check:'<circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/>',
+ x:'<circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/>',
+ lock:'<rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>',
+ moon:'<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>',
+ brain:'<path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a2 2 0 0 0-3-1z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/>',
+ phone:'<rect x="6.5" y="2" width="11" height="20" rx="2.5"/><path d="M10.5 18.5h3"/>',
+ flask:'<path d="M9 2.5h6M10 2.5v6L4.5 19a2 2 0 0 0 1.8 2.9h11.4a2 2 0 0 0 1.8-2.9L14 8.5v-6"/><path d="M7 15h10"/>',
+ leaf:'<path d="M5 19C5 10 11 4 20 4c0 9-6 15-15 15z"/><path d="M5 19l8-8"/>'
+};
+const ic=(k,cls="")=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="${cls}" aria-hidden="true">${I[k]}</svg>`;
+
+const arrowDef=id=>`<defs><marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="f-c"/></marker></defs>`;
+
+const FIG={
+ cover14:()=>`<svg viewBox="0 0 400 228" role="img" aria-label="שתי בועות דיבור ופאזל">
+  <circle cx="200" cy="112" r="90" class="f-soft"/>
+  <path d="M110 60h110a14 14 0 0 1 14 14v44a14 14 0 0 1-14 14h-70l-22 20v-20h-18a14 14 0 0 1-14-14V74a14 14 0 0 1 14-14z" class="f-c"/>
+  <path d="M190 104h96a14 14 0 0 1 14 14v38a14 14 0 0 1-14 14h-14v18l-20-18h-62a14 14 0 0 1-14-14v-38a14 14 0 0 1 14-14z" class="f-surf"/>
+  <circle cx="140" cy="96" r="6" class="f-inv"/><circle cx="165" cy="96" r="6" class="f-inv"/><circle cx="190" cy="96" r="6" class="f-inv"/>
+  <path d="M212 136h66M212 150h44" class="s-line" stroke-width="4" stroke-linecap="round"/></svg>`,
+ circles:()=>`<svg viewBox="0 0 400 210" role="img" aria-label="שלושה מעגלי התערבות">
+  <circle cx="200" cy="108" r="96" class="f-soft"/><circle cx="200" cy="120" r="66" class="f-surf"/><circle cx="200" cy="134" r="36" class="f-c"/>
+  <text x="200" y="139" text-anchor="middle" font-size="13" font-weight="800" class="f-inv">ת'</text>
+  <text x="200" y="76" text-anchor="middle" font-size="12.5" font-weight="700" class="f-ink">המשפחה</text>
+  <text x="200" y="32" text-anchor="middle" font-size="12.5" font-weight="700" class="f-ink">מעגל החיים</text>
+  <text x="200" y="48" text-anchor="middle" font-size="10.5" class="f-mut">תיכון · עבודה · צבא</text>
+  <text x="200" y="200" text-anchor="middle" font-size="11" class="f-mut">ולצדם: הצוות החינוכי בבית הספר</text></svg>`,
+ scores:()=>{const R=[["הבנה",4,9],["סידור תמונות",2,8]];
+  return `<svg viewBox="0 0 400 200" role="img" aria-label="ציוני תקן בתחילת הטיפול ובסופו">
+  <line x1="20" y1="150" x2="380" y2="150" class="s-line"/>
+  ${R.map(([n,a,b],i)=>{const cx=290-i*180;return `<rect x="${cx+6}" y="${150-a*9}" width="34" height="${a*9}" rx="4" class="f-mut" opacity=".5"/><rect x="${cx-40}" y="${150-b*9}" width="34" height="${b*9}" rx="4" class="f-c"/><text x="${cx+23}" y="${144-a*9}" text-anchor="middle" font-size="12" font-weight="800" class="f-ink">${a}</text><text x="${cx-23}" y="${144-b*9}" text-anchor="middle" font-size="12" font-weight="800" class="f-ink">${b}</text><text x="${cx}" y="170" text-anchor="middle" font-size="12.5" font-weight="700" class="f-ink">${n}</text>`}).join("")}
+  <rect x="246" y="184" width="12" height="10" rx="2" class="f-mut" opacity=".5"/><text x="240" y="193" text-anchor="start" font-size="11" class="f-ink">בהתחלה (גיל 12)</text>
+  <rect x="116" y="184" width="12" height="10" rx="2" class="f-c"/><text x="110" y="193" text-anchor="start" font-size="11" class="f-ink">בסוף (גיל 16)</text></svg>`}
+};
+const E=t=>`<span class="en">(${t})</span>`;
+const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</figcaption>`:""}</figure>`;
+const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
+const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;
+const tiles=a=>`<div class="tiles">${a.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`;
+const ex=h=>`<div class="ex"><span class="lbl">דוגמה</span><p>${h}</p></div>`;
+const rem=h=>`<div class="remember">${ic("bulb")}<p>${h}</p></div>`;
+const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")}${t}</span>`).join("")}${n.map(t=>`<span class="yn n">${ic("x")}${t}</span>`).join("")}</div>`;
+const spectrum=(r,l,dot)=>`<div class="spectrum"><div class="track">${dot?'<span class="dot"></span>':""}</div><div class="ends"><span>${r}</span><span>${l}</span></div></div>`;
+document.head.insertAdjacentHTML("beforeend",'<style>.yn svg{width:16px;height:16px}</style>');
+
+const T=[
+ {id:"t1",icon:"id",title:"ת': הרקע והאבחון",blocks:[
+  {h:"על מה המאמר",html:`<p>תיאור מקרה של <b>טיפול פסיכולוגי פרטני</b> שנמשך יותר מארבע שנים, עם מתבגר שאובחן כבר בגיל הגן כבעל <mark>תסמונת אספרגר</mark> ${E("Asperger")}. בטיפול שולבו <b>באופן אקלקטי</b> טכניקות מגוונות, תוך התייחסות לא רק למטופל אלא גם למשפחתו ולמערכת החינוך.</p>${rem("מה הפך את התהליך ליעיל: <b>המוטיבציה הגבוהה</b> של המטופל להצליח, האהבה והעזרה של המשפחה, והקשר הטוב שנוצר בין המטפלת, המטופל ובני משפחתו.")}`,q:"q1"},
+  {h:"הפגישה הראשונה",html:`<p>ת' הגיע בגיל <b>12</b> עם הוריו ל<b>אבחון פסיכו־דידקטי</b> בגלל קשיים חברתיים, בהמלצת בית הספר. התמונה: נער בודד ודחוי, נתון ללעג ולהצקות. בפגישה ישב <b>נוקשה וזקוף</b> וענה באופן מונוטוני \"ככה\".</p>${tiles([["target","עיסוק רב ובלעדי","בכל הקשור למטוסים ולחלל"],["people","קשיים חברתיים","עם בני הגיל"],["hand","נוקשות","בתנועות הגוף"],["x","קשר עין","מינימלי, אם בכלל"]])}`,q:"q3"},
+  {h:"האבחנה מגיל הגן",html:`<p>התברר שכבר בגיל <b>ארבע וחצי</b> אובחן \"אספרגר קל\" אצל רופא מומחה. מגיל שנתיים וחצי קיבל טיפולים פרא־רפואיים (ריפוי בדיבור וריפוי בעיסוק), ובהמלצת המומחה המשיך ללמוד <b>במסגרת חינוכית רגילה</b>, והצליח.</p>${def("ההמלצה",`המטפלת הבהירה להורים את הקשר בין האבחנה לבין הסיבה שהגיעו, והביעה דעה שיש צורך <b>לטפל בקשיים</b> במקום לאבחן. ההורים התעקשו על האבחון, ובמהלכו היא חיזקה את ההבנה שלהם ואת ה<b>קבלה הרגשית</b> של האבחנה.`)}`,q:"q5"}
+ ]},
+ {id:"t2",icon:"target",title:"התחלה: מטרה קטנה וגיוס הכיתה",blocks:[
+  {h:"מטרה אחת קטנה",html:`<p>בפגישה הראשונה ת' ישב <b>זקוף ונוקשה</b> והתכחש לכל צורה למצבו החברתי. המטפלת הציעה <b>מטרה אחת קטנה מאוד</b>: בכיתה ת' השמיע קולות, שרק ודיבר לעצמו, וזה גרר הצקות ואף אלימות.</p>${def("הטריק",`ת' טען שהוא לא משמיע קולות. כדי לעקוף את ההתנגדות, ובידיעה שהוא <b>מדייק</b> מאוד, היא ביקשה ממנו לרשום בטבלה במשך שבוע כל הערה שהופנתה אליו: יום, שעה, תגובה. ת' חזר <b>בלי אף רישום</b>: לא העירו לו. המחנכת אישרה שהכיתה רגועה.`)}${rem("הדייקנות שלו, או אם תרצו הנוקשות, הפכו ל<b>נקודות חוזק</b> שעזרו להשיג את המטרה. הבעיה שנבחרה הייתה <b>דחופה ומערכתית</b>, ופתרונה הביא רווחה לכולם.")}`,q:"q7"},
+  {h:"גיוס הצוות החינוכי",html:`<p>התערבות מערכתית הייתה <b>מחויבת המציאות</b>. הצוות שוחח עם התלמידים <b>בלי נוכחותו של ת'</b>, על \"החוש החברתי\":</p>${ex("כמו שלפעמים נפגעים חושים כמו ראייה או שמיעה ומסייעים באמצעים רפואיים, כך כשהחוש החברתי נפגע, <b>החברים</b> הם שיכולים לעזור.")}${tiles([["check","ההצקות פסקו","לחלוטין"],["people","שיתוף","התחילו להזמין אותו לפעילויות. ילד אחד הגיע כל פעם לביתו לקחת אותו"],["hand","ערכים","הכיתה רכשה ערכים של עזרה לזולת"]])}`,q:"q9"}
+ ]},
+ {id:"t3",icon:"brain",title:"התערבות ברמת הפרט",blocks:[
+  {h:"הרקע התאורטי",html:`<p>ידע חברתי לא נלמד באף בית ספר. המטפלת פעלה ב<b>שלושה מעגלים</b>:</p>${fig("circles")}${tiles([["brain","תאוריה של הנפש","ג'ורדן ופאואל: קושי לנבא התנהגות של אחרים, לקרוא כוונות ולהסביר רגשות"],["link","הובסון","כדי שתהיה הבנה בין־אישית, צריך להגיב באופן טבעי לרגשות, להבעות ולמעשים של אחרים"],["id","\"עצמי חווה\"","קושי לחוות אירועים באופן סובייקטיבי ולזכור אותם. לכן צריך מבנה ברור והדגשה"]])}`,q:"q11"},
+  {h:"להבין את האחר",html:`${tiles([["doc","תמונות מעיתונים","ת' הביא תמונות, ושוחחו על הבעות ורגשות. אחר כך יצרו שיחה או תסריט: מה קרה לפני, למה היא בוכה"],["copies","קלפים וסיפורים","בניית סיפור עם כמה סיומים אפשריים, כדי לפתח <b>גמישות מחשבתית</b>"],["hand","משחקי תקשורת","דיבור גב אל גב או פנים אל פנים, פנטומימה ופתגמים"],["question","טון והקשר","ת' למד שלפעמים אומרים \"כן\" ומתכוונים \"לא\". כמה מבלבל!"]])}${rem("לפי אטווד, לאדם עם אספרגר יש לעתים קרובות קושי ב<b>גמישות קוגניטיבית</b>: \"ראש בנתיב אחד\". לכן תרגלו כל פעם מצב חיים והעלו כמה פתרונות חלופיים.")}`,q:"q13"},
+  {h:"שיחות, סרטים וכלבה",html:`${tiles([["phone","מיומנויות שיחה","תרגול שיחות טלפון ופנים אל פנים, בתפקידים שונים. בשלב מתקדם: להביא בעצמו נושא לכל מפגש. משימה שהתחילה כחובה הפכה למיומנות טבעית"],["chart","סרטים","שיחות על דמויות, דילמות ושינויים, למשל בסרט \"בעולם טוב יותר\": נקמה מול סלחנות, ומחיר של הבעת דעה שונה מהרוב"],["hand","הכלבה","ת' צפה באיך הכלבה יוצרת קשר ולמד להבחין בניואנסים. הכלבה שימשה <b>גשר לקשר</b>"]])}`,q:"q15"},
+  {h:"להבין את העצמי",html:`<p>בגיל ההתבגרות דימוי הגוף רגיש מאוד. איך לשפר שפת גוף נוקשה בלי לפגוע? בעזרת <b>מראה</b> בקליניקה: ת' תיאר מה הוא אוהב במראהו וזיהה בעצמו מה טעון שיפור (\"סבתא שלי אומרת שאני רשמי\").</p>${def("המללת תחושות בטן",`ת' היה \"יס־מן\": קיבל את דעת האחר ולא הביע את רצונו. הוא למד לזהות את <b>הסימנים המקדימים</b>, לחזק את \"הקולות הפנימיים\", ולהגיב <b>באסרטיביות</b>, כולל אמירת \"לא\" שאינה פוגעת.`)}${ex("לקראת החופש הגדול נראה שהוא מסכים להמשיך טיפול רק כדי לא לפגוע במטפלת. היא המלילה את רגשותיו ואפשרה לו לצאת לחופשה, בתנאי שבעתיד יביע את רצונו האמיתי.")}`,q:"q17"}
+ ]},
+ {id:"t4",icon:"people",title:"המשפחה וחברים",blocks:[
+  {h:"התערבות במשפחה",html:`<p>במבנה המשפחתי היו קשיי תקשורת בין־אישיים, והאח הבריא <b>מילא תפקיד הורי</b>: גער וחינך את ת', אבל היה רחוק ממנו רגשית.</p>${tiles([["cycle","להחזיר תפקידים","ההורים ימלאו תפקיד הורי, והאח יחזור להיות אח, ויתחבר אל ת' כאח"],["hand","ביקורת בונה","האח קיבל כלים: \"אני אומר לך כי אכפת לי ממך\""],["link","סימנים מוסכמים","למשל \"אור אדום\" למצבי מצוקה, כדי שהמציק יפסיק"]])}`,q:"q19"},
+  {h:"הדרכת ההורים",html:`${tiles([["phone","תרגול בבית","שיחות טלפון, יציאה לפעילויות. האב לקח אותו לשחק כדורסל"],["copies","להתמודד עם נוקשות","להציע אפשרויות בחירה: \"אם אתה עייף תלך לישון, ואם לא, אפשר לצפות בטלוויזיה\""],["sprout","עצמאות","בהדרגה קיבל תפקידים: לענות לטלפון, לחכות בתור. \"טעויות קורות, ולומדים מהן\""],["phone","טלפון סלולרי","ההורים הבינו שהוא כלי חשוב לתקשורת עם בני הגיל, וקנו לו"]])}`,q:"q21"},
+  {h:"חבר עם צרכים מיוחדים",html:`<p>בשנה השנייה ת' יצר קשר עקבי עם נער אחר עם צרכים מיוחדים, שלא היה מקובל בחברה.</p>${def("הדילמה",`לתמוך בחברות, או לחשוש ש<b>שניהם בשולי החברה</b> וזה ימנע מת' קשרים \"בריאים\" יותר?`)}${rem("התוצאה, בניגוד לחששות המטפלת: הקשר <b>חיזק</b> את ת'. הוא חווה קשר חיובי ולא מאיים, וקיבל הזדמנות <b>לעזור ולא רק להיעזר</b>.")}`,q:"q23"}
+ ]},
+ {id:"t5",icon:"scales",title:"דילמות ומעגל החיים",blocks:[
+  {h:"לקרוא לילד בשמו?",html:`<p>האם לספר לת' שיש לו אספרגר? ומתי? ההורים, המחנכת והיועצת ידעו. לאחיו ולתלמידי הכיתה הסבירו על <b>הקשיים</b>, בלי המינוח הרפואי.</p>${def("ההפתעה",`לקראת הצבא, המטפלת נכנסה לשיחה בחשש. אבל ת' כבר <b>שמע את המונח</b> בבית, חיפש באינטרנט, הבין במה מדובר, וגילה <b>אופטימיות</b>: הבין שהמצב בר שיפור.`)}${rem("הלקח של המטפלת: חשוב לבדוק את הבנת המטופל ולשתף אותו במינוח, \"ואולי יפה שעה אחת קודם\".")}`,q:"q25"},
+  {h:"מעברים: תיכון ועבודה",html:`<p>מעברים ומצבים חדשים קשים לאדם עם אספרגר (אטווד). צריך שיחות הכנה ותרגול, הכנה של ההורים, ולפעמים התערבות במערכת.</p>${tiles([["grad","מגמת מחשבים","חסרו לו 5 נקודות במתמטיקה. המטפלת פנתה ליועצת, והציון הועלה בזכות תפקודו המצוין. הוא קיבל <b>תעודת הצטיינות</b> כבר במחצית הראשונה"],["question","התחום האפור","ת' התקשה להבין שנכנס \"לפנים משורת הדין\". זה מאפיין של אספרגר, ולכן צריך ליווי מתמיד"],["building","עבודה בקיץ","חודש במפעל של קרוב משפחה, בסביבה תומכת. משכורת ראשונה"]])}`,q:"q27"},
+  {h:"הגיוס לצה\"ל",html:`<p>ההורים חששו, ולא היה להם ניסיון אישי בגיוס. המטפלת האמינה שהשירות חשוב: <b>פטור</b> על רקע פסיכיאטרי עלול להיות מכשול בהמשך החיים, והצבא הוא מסגרת מובנית לצבירת ניסיון.</p>${tiles([["doc","הכנה","התייעצות עם הצבא ועם עמותת אפ\"י, ומכתב על התקדמותו"],["cycle","משחקי תפקידים","מתגייס ומראיין, עד שהיה נינוח ורגוע"],["check","התוצאה","ת' גויס, אם כי לא לתפקידים קרביים שדורשים נשק"]])}${rem("המטפלת מודעת לכך ש<b>האמונות האישיות שלה</b> (חשיבות התרומה למדינה) השפיעו על הכיוון. זו אחת השאלות שהמאמר מעלה: איך להתייחס לאמונות של המטפל.")}`,q:"q29"}
+ ]},
+ {id:"t6",icon:"check",title:"סיכום והערכת הטיפול",blocks:[
+  {h:"מה עזר",html:`${tiles([["check","אבחנה קלה","ת' אובחן כאספרגר בדרגה קלה"],["target","גיוס מהמפגש הראשון","מטרה הכרחית, ושימוש במוטיבציה ובהתמדה שלו"],["people","הורים","שיתפו פעולה לאורך כל הטיפול"],["link","משולש טיפולי","קשר טוב בין מטופל, מטפלת והורים"],["building","הצוות החינוכי","שיתוף פעולה מלא ויישום ההמלצות"]])}${rem("סגנון הטיפול: למידה בעזרת מה שיש בחדר ובסביבה (מראה, חיית מחמד, סרטים), ושימוש בתכנים שהמטופל הביא \"<b>כאן ועכשיו</b>\".")}`,q:"q31"},
+  {h:"איך יודעים שזה עבד",html:`${tiles([["clock","ארבע שנים","הגיע ברצון ובעקביות"],["doc","דיווחים חיוביים","מהמחנכת, מהיועצת וממרכזת השכבה"],["people","קשרים חברתיים","יותר, ובאיכות טובה יותר. השתתף בפעילויות"],["hand","הבעות וחיוך","כבר בשנה השנייה, וצחוק והומור במפגשים"]])}${fig("scores","מבחני הבנה חברתית ושיפוט מציאות: ציוני תקן בתחילת הטיפול ובסופו")}${def("המסקנה",`מתפקוד <b>נמוך מהממוצע</b> בהבנה חברתית ובשיפוט מציאות, לתפקוד <b>בתחום הממוצע</b>.`)}`,q:"q33"}
+ ]}
+];
+const Q={
+q1:{t:"t1",v:[
+ {q:"על מה המאמר?",a:"תיאור מקרה של טיפול פסיכולוגי פרטני במתבגר עם אספרגר, שנמשך יותר מארבע שנים",w:["מחקר כמותי על 200 ילדים עם אספרגר","סקירה של תרופות לאספרגר","ניסוי מעבדה בזיכרון"],e:"תיאור מקרה, עם התייחסות גם למשפחה ולבית הספר."},
+ {q:"מה פירוש שהטיפול שילב טכניקות \"באופן אקלקטי\"?",a:"שולבו טכניקות מגישות שונות, לפי הצורך",w:["השתמשו רק בתרופות","השתמשו בטכניקה אחת קבועה","הטיפול נעשה רק בכתב"],e:"מטלות מובנות, שיטות קוגניטיביות ואמצעים אמנותיים."}]},
+q2:{t:"t1",v:[
+ {q:"מה הפך את התהליך ליעיל, לפי המאמר?",a:"מוטיבציה גבוהה של המטופל, עזרת המשפחה והקשר הטוב עם המטפלת",w:["תרופה חדשה","החלפת בית ספר","טיפול קבוצתי בלבד"],e:"כל אלה סייעו לשיתוף הפעולה."},
+ {q:"למי התייחס הטיפול, חוץ מהמטופל עצמו?",a:"למשפחה ולמערכת החינוך",w:["רק לשכנים","לאף אחד","רק לרופא המשפחה"],e:"זו התערבות מערכתית."}]},
+q3:{t:"t1",v:[
+ {q:"בשביל מה הגיע ת' בגיל 12?",a:"לאבחון פסיכו־דידקטי בגלל קשיים חברתיים",w:["לטיפול בדיכאון","בגלל ציונים נמוכים בלבד","לבדיקה רפואית"],e:"בהמלצת הצוות החינוכי בבית הספר."},
+ {q:"איזה מהבאים לא היה אחד מהמאפיינים שעלו בפגישה הראשונה?",a:"התפרצויות זעם תכופות",w:["עיסוק רב במטוסים ובחלל","קשר עין מינימלי","נוקשות בתנועות הגוף"],e:"וגם קשיים חברתיים עם בני הגיל."}]},
+q4:{t:"t1",v:[
+ {q:"איך ענה ת' לשאלות בפגישה הראשונה?",a:"באופן מונוטוני, וחזר על \"ככה\"",w:["בהתלהבות רבה","בצעקות","בכתב בלבד"],e:"וישב נוקשה וזקוף בין הוריו."},
+ {q:"איך תואר מצבו החברתי בכיתה?",a:"בודד ודחוי, נתון ללעג ולהצקות",w:["מנהיג הכיתה","מקובל מאוד","לא הלך לבית ספר"],e:"לפי ההורים והדיווח מבית הספר."}]},
+q5:{t:"t1",v:[
+ {q:"מתי אובחן ת' לראשונה?",a:"בגיל ארבע וחצי, \"אספרגר קל\"",w:["בגיל 12","בגיל 16","בתיכון"],e:"אצל רופא מומחה להפרעת קשר ותקשורת."},
+ {q:"איזה טיפול קיבל ת' בגיל הגן?",a:"טיפולים פרא־רפואיים: ריפוי בדיבור וריפוי בעיסוק",w:["טיפול תרופתי","פסיכואנליזה","שום טיפול"],e:"מגיל שנתיים וחצי."}]},
+q6:{t:"t1",v:[
+ {q:"מה המליצה המטפלת להורים כשראתה את האבחנה הקודמת?",a:"שיש צורך לטפל בקשיים במקום לערוך אבחון נוסף",w:["להעביר אותו לחינוך מיוחד","לא לעשות כלום","להתחיל תרופות"],e:"ההורים התעקשו על האבחון, והיא חיזקה את הקבלה הרגשית של האבחנה."},
+ {q:"באיזו מסגרת למד ת'?",a:"במסגרת חינוכית רגילה, בהמלצת המומחה",w:["בחינוך מיוחד","בבית","בפנימייה"],e:"והוא הצליח בה."}]},
+q7:{t:"t2",v:[
+ {q:"מה הייתה מטרת הטיפול הראשונה?",a:"להפסיק להשמיע קולות בכיתה",w:["למצוא חבר","להתגייס לצבא","לשפר ציון במתמטיקה"],e:"מטרה קטנה מאוד, אבל דחופה ומערכתית."},
+ {q:"איך המטפלת עקפה את ההתנגדות של ת', שטען שהוא לא משמיע קולות?",a:"ביקשה ממנו לרשום בטבלה כל הערה שקיבל במשך שבוע",w:["הקליטה אותו בכיתה","הענישה אותו","ביקשה מהמורה להעניש"],e:"היא השתמשה בדייקנות שלו."}]},
+q8:{t:"t2",v:[
+ {q:"מה קרה אחרי שבוע של רישום?",a:"ת' חזר בלי אף רישום, כי לא העירו לו, והכיתה נרגעה",w:["הטבלה הייתה מלאה","הוא סירב לרשום","המורה התלוננה עוד"],e:"המחנכת אישרה את השיפור."},
+ {q:"איזו תכונה של ת' הפכה כאן לנקודת חוזק?",a:"הדייקנות (או הנוקשות) שלו",w:["השקט שלו","הכעס שלו","האדישות שלו"],e:"היא עזרה בהתמדה ובהשגת המטרה."}]},
+q9:{t:"t2",v:[
+ {q:"איך הסבירו לתלמידי הכיתה את מצבו של ת'?",a:"דרך הרעיון של \"החוש החברתי\", שכמו חושים אחרים יכול להיפגע",w:["אמרו להם את האבחנה הרפואית","לא הסבירו כלום","אמרו שהוא חולה מאוד"],e:"וכשהחוש החברתי נפגע, החברים יכולים לעזור."},
+ {q:"האם ת' היה נוכח בשיחה עם התלמידים?",a:"לא, השיחה נערכה בלי נוכחותו",w:["כן, הוא הוביל אותה","כן, הוא הציג את עצמו","היא נערכה בבית שלו"],e:"כדי לא לחשוף ולא לפגוע בו."}]},
+q10:{t:"t2",v:[
+ {q:"מה קרה אחרי ההתערבות בכיתה?",a:"ההצקות פסקו, והתלמידים התחילו לשתף אותו בפעילויות",w:["ההצקות גברו","ת' עבר כיתה","לא קרה כלום"],e:"ילד אחד אף הגיע כל פעם לביתו לקחת אותו."},
+ {q:"למה בחירת בעיה דחופה ומערכתית הייתה חכמה?",a:"כי פתרונה הביא רווחה מורגשת לכולם וגייס את ת' ואת הסביבה",w:["כי היא הייתה הכי קלה","כי ההורים ביקשו","כי לא היו בעיות אחרות"],e:"כך נסללה הדרך לשיתוף פעולה."}]},
+q11:{t:"t3",v:[
+ {q:"מהם שלושת המעגלים שבהם פעלה המטפלת?",a:"המטופל, משפחתו ומעגל החיים ההתפתחותי",w:["בית, רחוב ובית חולים","מורים, תלמידים וחברים","גוף, נפש ורוח"],e:"ולצדם שיתוף פעולה עם הצוות החינוכי."},
+ {q:"מה הליקוי ב\"תאוריה של הנפש\" אצל ילדים עם אספרגר, לפי ג'ורדן ופאואל?",a:"קושי לנבא התנהגות של אחרים, לקרוא כוונות ולהסביר רגשות",w:["קושי בזיכרון לטווח ארוך","קושי בראייה","קושי בחשבון"],e:"זה גורם לפחד ולהימנעות מחברת אנשים."}]},
+q12:{t:"t3",v:[
+ {q:"מה הכוונה ב\"עצמי חווה\" (Jordan & Powell)?",a:"היכולת לחוות אירועים באופן סובייקטיבי ולזכור אותם, שקשה לאוטיסטים",w:["זיכרון של מספרים","היכולת לרוץ מהר","היכולת לדבר בשתי שפות"],e:"לכן צריך מבנה ברור והדגשה בלמידה."},
+ {q:"מה הציעה אליזבת ניוסון?",a:"הוראה ישירה של מטפורות, למשל בעזרת ספרים שמסבירים מה אנשים מתכוונים",w:["ענישה על טעויות","להימנע מדיבור","תרופות"],e:"סדרת ספרים של לן קוליס, כמו Things We Say."}]},
+q13:{t:"t3",v:[
+ {q:"מה עשו עם תמונות מעיתונים?",a:"שוחחו על הבעות ורגשות, ויצרו שיחה או תסריט על מה שקרה",w:["גזרו אותן לקולאז'","מכרו אותן","לא השתמשו בהן"],e:"כדי ללמוד את שפת הגוף של הזולת."},
+ {q:"למה הציעו כמה סיומים שונים לסיפור?",a:"כדי לפתח גמישות מחשבתית",w:["כדי לבלבל אותו","כי שכחו את הסוף","כדי לקצר את המפגש"],e:"לפי אטווד, יש קושי בגמישות קוגניטיבית."}]},
+q14:{t:"t3",v:[
+ {q:"מה למד ת' על טון הדיבור?",a:"שלפעמים אומרים \"כן\" ומתכוונים \"לא\"",w:["שטון לא חשוב","שתמיד מתכוונים למה שאומרים","שצריך לדבר בשקט"],e:"הוא למד לפענח את הכוונות שמאחורי המילים."},
+ {q:"\"ראש בנתיב אחד\" מתאר:",a:"קושי בגמישות קוגניטיבית",w:["ריכוז טוב","זיכרון מצוין","שמיעה חלשה"],e:"החשיבה נוקשה ולא מתאימה את עצמה לשינוי."}]},
+q15:{t:"t3",v:[
+ {q:"מה המשימה שת' קיבל בשלב מתקדם?",a:"להביא בעצמו נושא לכל מפגש",w:["לכתוב חיבור","לפתור תרגילים","לא לדבר"],e:"משימה שהתחילה כחובה והפכה למיומנות טבעית."},
+ {q:"מה שימש \"גשר לקשר\" בטיפול?",a:"הכלבה של ת'",w:["מחשב","ספר","טלפון"],e:"דרכה למד להבחין בניואנסים של יצירת קשר."}]},
+q16:{t:"t3",v:[
+ {q:"למה סרטים הם כלי טוב לנוער בטיפול, לפי המאמר?",a:"כי צפייה בסרטים היא ממילא בילוי של נוער, ואפשר לכוון אותה למטרות טיפוליות",w:["כי סרטים מחליפים טיפול","כי נוער לא מדבר","כי אין כלים אחרים"],e:"מנתחים דמויות ומיישמים לחיים האישיים."},
+ {q:"על מה שוחחו אחרי הסרט \"בעולם טוב יותר\"?",a:"על הדרך להתמודד עם אלימות: נקמה מול סלחנות",w:["על אפקטים מיוחדים","על השחקנים","על המוזיקה"],e:"וגם על המחיר של הבעת דעה שונה מהרוב."}]},
+q17:{t:"t3",v:[
+ {q:"איך עבדו על שפת הגוף הנוקשה בלי לפגוע בדימוי הגוף?",a:"בעזרת מראה: ת' תיאר מה הוא אוהב וזיהה בעצמו מה לשפר",w:["צילמו אותו בכיתה","ביקשו מחברים לבקר אותו","לא עבדו על זה"],e:"כי בגיל ההתבגרות דימוי הגוף רגיש מאוד."},
+ {q:"מה הכוונה שת' היה \"יס־מן\"?",a:"הוא קיבל את דעת האחר ולא הביע את רצונו האמיתי",w:["הוא תמיד צדק","הוא אהב לעזור","הוא אמר לא לכל דבר"],e:"הוא למד להגיב באסרטיביות, כולל \"לא\" שאינו פוגע."}]},
+q18:{t:"t3",v:[
+ {q:"מה עשתה המטפלת כשנראה שת' מסכים להמשיך טיפול בקיץ רק כדי לא לפגוע בה?",a:"המלילה את רגשותיו ואפשרה לו לצאת לחופשה, בתנאי שבעתיד יביע את רצונו",w:["הכריחה אותו להמשיך","הפסיקה את הטיפול לגמרי","פנתה להורים בלבד"],e:"זו הזדמנות לתרגל הבעת רצון."},
+ {q:"מה החשש שנשאר גם אחרי ההתקדמות?",a:"שת' ניתן לניצול",w:["שהוא יהיה אלים","שהוא יעזוב את הבית","שהוא ישכח הכל"],e:"אירוע כזה קרה בעבר וטופל מיד."}]},
+q19:{t:"t4",v:[
+ {q:"איזה תפקיד מילא האח של ת' לפני הטיפול?",a:"תפקיד הורי: גער בו וחינך אותו, אבל היה רחוק ממנו רגשית",w:["חבר קרוב","מטפל","לא היה לו קשר"],e:"מטרת הטיפול הייתה להחזיר לכל אחד את תפקידו."},
+ {q:"מה הייתה מטרת הטיפול במשפחה?",a:"להחזיר לכל אחד את תפקידו: ההורים כהורים והאח כאח",w:["להוציא את ת' מהבית","לנתק את האח","להחליף את ההורים"],e:"כך האח יוכל להתחבר אל ת' כאח."}]},
+q20:{t:"t4",v:[
+ {q:"איזה כלי קיבל האח?",a:"איך לבטא ביקורת בונה: \"אני אומר לך כי אכפת לי ממך\"",w:["איך להעניש","איך להתעלם","איך לצעוק"],e:"וגם סימנים מוסכמים כמו \"אור אדום\"."},
+ {q:"למה נוצרו סימנים מוסכמים כמו \"אור אדום\"?",a:"כדי לאותת על מצוקה, כך שהמציק יפסיק",w:["כדי לשחק","כדי לסמן ציונים","כדי לסמן זמן ארוחה"],e:"שיפר גם את הקרבה בין האחים."}]},
+q21:{t:"t4",v:[
+ {q:"איך הודרכו ההורים להתמודד עם הנוקשות של ת'?",a:"להציע לו אפשרויות בחירה במצבים משתנים",w:["לוותר תמיד","להעניש","להתעלם"],e:"למשל לגבי שעת השינה."},
+ {q:"איך ההורים קידמו את העצמאות של ת'?",a:"בהדרגה נתנו לו תפקידים, כמו לענות לטלפון ולחכות בתור",w:["עשו הכל במקומו","שלחו אותו לגור לבד","לא שינו דבר"],e:"והבינו שטעויות קורות ולומדים מהן."}]},
+q22:{t:"t4",v:[
+ {q:"למה ההורים שינו את דעתם וקנו לת' טלפון סלולרי?",a:"כי הבינו שהוא כלי חשוב לתקשורת עם בני הגיל",w:["כי הוא היה זול","כי המורה חייבה","כי הוא איבד את הקודם"],e:"והטלפון אכן עזר לו."},
+ {q:"מה עשה האב בנושא המיניות וההתבגרות?",a:"התגייס לשוחח עם ת' על בנות ועל חברויות בגיל ההתבגרות",w:["אסר לדבר על זה","שלח אותו לרופא","לא היה מעורב"],e:"ההורים הודרכו איך לדבר על הנושא."}]},
+q23:{t:"t4",v:[
+ {q:"מה הייתה הדילמה לגבי החבר עם הצרכים המיוחדים?",a:"לתמוך בחברות, או לחשוש ששניהם בשולי החברה וזה ימנע קשרים אחרים",w:["אם לספר להורים","אם לשלם לו","אם להעביר כיתה"],e:"החשש: שהחברות תעכב את ההתפתחות."},
+ {q:"מה הייתה התוצאה של החברות?",a:"היא חיזקה את ת', והוא קיבל הזדמנות לעזור ולא רק להיעזר",w:["היא פגעה בו","היא נגמרה מיד","היא גרמה להצקות"],e:"בניגוד לחששות המטפלת."}]},
+q24:{t:"t4",v:[
+ {q:"מה מראה המקרה של החבר לגבי עבודה טיפולית?",a:"שכדאי לבחון בפועל ולא להחליט רק לפי חשש מוקדם",w:["שתמיד צריך למנוע חברויות","שהמטפל תמיד צודק","שחברויות לא חשובות"],e:"המעקב הראה שהקשר תרם."},
+ {q:"מה דיווחו ההורים על הקשרים החברתיים של ת' לאורך הטיפול?",a:"מגמת שיפור במספר הקשרים ובאיכותם",w:["ירידה","שום שינוי","הוא הפסיק להיפגש עם אנשים"],e:"זה אחד ממדדי ההערכה."}]},
+q25:{t:"t5",v:[
+ {q:"למי נאמר המינוח \"אספרגר\" בשלב הראשון?",a:"להורים, למחנכת וליועצת. לאח ולכיתה הסבירו רק על הקשיים",w:["לכל הכיתה","לת' עצמו מיד","לאף אחד"],e:"ההסברים יצרו אמפתיה ורצון לעזור."},
+ {q:"מה התגלה כשהמטפלת ניגשה לספר לת' על האבחנה?",a:"הוא כבר שמע את המונח, חיפש באינטרנט והבין שהמצב בר שיפור",w:["הוא נבהל מאוד","הוא לא הבין","הוא כעס על ההורים"],e:"\"ואולי יפה שעה אחת קודם\"."}]},
+q26:{t:"t5",v:[
+ {q:"מה הלקח של המטפלת מהשיחה על האבחנה?",a:"חשוב לבדוק מוקדם את הבנת המטופל ולשתף אותו במינוח",w:["אף פעם לא לספר","לספר רק אחרי הצבא","לתת להורים להחליט לבד"],e:"תוך התחשבות בגיל ובבשלות."},
+ {q:"מתי בפועל דובר עם ת' על האבחנה?",a:"לקראת המיון לצה\"ל",w:["בגיל הגן","ביום הראשון של הטיפול","לעולם לא"],e:"כי היה צריך לשלוח מסמכים רפואיים לצבא."}]},
+q27:{t:"t5",v:[
+ {q:"איך ת' התקבל למגמת מחשבים?",a:"המטפלת פנתה ליועצת, והציון במתמטיקה הועלה בזכות תפקודו המצוין",w:["הוא עבר מבחן מיוחד","ההורים שילמו","הוא לא התקבל"],e:"וקיבל תעודת הצטיינות כבר במחצית הראשונה."},
+ {q:"מה היה קשה לת' להבין לגבי הקבלה למגמה?",a:"את \"התחום האפור\", שהתקבל באופן שונה מהמקובל",w:["את החומר במחשבים","את המורים","את המתמטיקה"],e:"זה מאפיין של אספרגר שאולי ניתן רק לצמצום."}]},
+q28:{t:"t5",v:[
+ {q:"מה מציין אטווד לגבי מעברים?",a:"שינויים בשגרה עלולים לגרום מצוקה חריפה, ולכן צריך הכנה",w:["שמעברים קלים לאנשים עם אספרגר","שאין צורך בהכנה","שצריך לשנות כל יום"],e:"לכן היו שיחות הכנה ותרגול."},
+ {q:"איפה עבד ת' בחופש הגדול?",a:"חודש במפעל של קרוב משפחה, בסביבה תומכת",w:["בצבא","בחנות מחשבים","בבית ספר"],e:"חוויה חיובית והמשכורת הראשונה שלו."}]},
+q29:{t:"t5",v:[
+ {q:"למה המטפלת חשבה שחשוב שת' יתגייס?",a:"פטור על רקע פסיכיאטרי עלול להיות מכשול בהמשך, והצבא הוא מסגרת מובנית לצבירת ניסיון",w:["כי ההורים רצו","כי זה חובה לכולם בלי יוצא מן הכלל","כי הוא רצה להיות טייס"],e:"היא גם מודעת לכך שהאמונות שלה השפיעו."},
+ {q:"מה היה בסוף עם הגיוס?",a:"ת' גויס, אבל לא לתפקידים קרביים שדורשים נשק",w:["הוא קיבל פטור","הוא נעשה קצין קרבי","הוא סירב"],e:"הבשורה שימחה את כל המעורבים."}]},
+q30:{t:"t5",v:[
+ {q:"איך הכינו את ת' לראיונות בתהליך הגיוס?",a:"במשחקי תפקידים: מתגייס ומראיין",w:["בהרצאות","בלי הכנה","בעזרת סרטון בלבד"],e:"בסוף נראה נינוח ורגוע."},
+ {q:"איזו שאלה המאמר מעלה לגבי המטפלת?",a:"איך האמונות והדעות האישיות של המטפלת משפיעות על הטיפול",w:["כמה היא מרוויחה","איפה היא גרה","כמה מטופלים יש לה"],e:"כמו האמונה בחשיבות התרומה למדינה."}]},
+q31:{t:"t6",v:[
+ {q:"איזה מהבאים לא נמנה בגורמים שסייעו לטיפול?",a:"טיפול תרופתי",w:["אבחנה בדרגה קלה","שיתוף פעולה של ההורים","שיתוף פעולה עם הצוות החינוכי"],e:"וגם הגיוס מהמפגש הראשון והמשולש הטיפולי."},
+ {q:"מהו \"המשולש הטיפולי\" במאמר?",a:"מטופל, מטפלת והורים",w:["מורה, יועצת ומנהל","אח, אחות והורים","רופא, אחות ופסיכולוג"],e:"קשר טוב ביניהם עזר להצלחה."}]},
+q32:{t:"t6",v:[
+ {q:"מה מאפיין את סגנון הטיפול שתואר?",a:"למידה בעזרת מה שבחדר ובסביבה, ושימוש בתכנים שהמטופל הביא \"כאן ועכשיו\"",w:["טיפול לפי ספר קבוע בלבד","טיפול רק בשיחה על העבר","טיפול בלי קשר לחיים"],e:"מראה, חיית מחמד וסרטים."},
+ {q:"איזה סימן להתקדמות הופיע כבר בשנה השנייה?",a:"חיוך והבעות פנים מגוונות, וצחוק והומור במפגשים",w:["ציונים גבוהים","גיוס לצבא","מעבר דירה"],e:"זה אחד ממדדי ההערכה."}]},
+q33:{t:"t6",v:[
+ {q:"מה הראו מבחני ההבנה החברתית ושיפוט המציאות?",a:"שיפור מתפקוד נמוך מהממוצע לתפקוד בתחום הממוצע",w:["ירידה","שום שינוי","מעבר לתפקוד מעולה"],e:"בהשוואה בין תחילת הטיפול לסופו."},
+ {q:"איזה מהבאים הוא מדד להערכת הטיפול במאמר?",a:"ת' הגיע ברצון ובעקביות לאורך ארבע שנים",w:["ת' קיבל פרס ארצי","ת' עבר לגור לבד","ת' הפסיק ללמוד"],e:"וגם דיווחים חיוביים מבית הספר ומההורים."}]},
+q34:{t:"t6",v:[
+ {q:"מה מראה תיאור המקרה על תפקיד המטפל במעברים בחיים?",a:"שיש צורך בהתערבות, הסברה והכוונה של המטפל במעברים",w:["שהמטפל לא צריך להתערב","שרק ההורים מטפלים במעברים","שמעברים לא חשובים"],e:"כמו בחירת מגמה בתיכון או הגיוס."},
+ {q:"מה העיקרון שעולה מבחירת המטרה הראשונה?",a:"לגייס את המטופל דרך בעיה דחופה שפתרונה מביא רווחה מורגשת, תוך שימוש בנקודות החוזק שלו",w:["להתחיל מהבעיה הכי עמוקה","להתעלם מהכיתה","להתחיל בתרופות"],e:"כך נבנה שיתוף הפעולה."}]}
+};
+for(const t of T) t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id);
+const KEY=CONFIG.key;
+let S={q:{},read:{}};
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.q) S=s;}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const st=id=>S.q[id]||(S.q[id]={n:0,c:0,w:0,t:0,lv:-1});
+const mastered=id=>(S.q[id]?.c||0)>=2;
+const topicPct=t=>Math.round(100*t.qids.filter(mastered).length/t.qids.length);
+const topicStarted=t=>S.read[t.id]||t.qids.some(id=>S.q[id]&&S.q[id].n);
+const allIds=Object.keys(Q);
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+const pickVariant=id=>{const s=st(id),n=Q[id].v.length;return n>1?(s.lv+1)%n:0};
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const color=t=>`var(--${t.id})`;
+const app=document.getElementById("app");
+const LET=["א","ב","ג","ד"];
+
+function qCard(id,onDone,label){
+  const vi=pickVariant(id),v=Q[id].v[vi],opts=shuffle([v.a,...v.w]);
+  const box=document.createElement("div");box.className="q fade";
+  box.innerHTML=(label?`<span class="eyebrow">${label}</span>`:"")+`<div class="qtext">${esc(v.q)}</div><div class="opts"></div>`;
+  const wrap=box.querySelector(".opts");
+  opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt";b.dataset.a=o===v.a?"1":"";
+    b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+    b.onclick=()=>{const ok=o===v.a,s=st(id);s.n++;s.t=Date.now();s.lv=vi;ok?s.c++:(s.c=0,s.w++);save();
+      wrap.querySelectorAll("button").forEach(x=>{x.disabled=true;if(x.dataset.a)x.classList.add("right")});
+      if(!ok)b.classList.add("wrong");
+      const fb=document.createElement("div");fb.className="fb fade "+(ok?"ok":"no");
+      fb.innerHTML=`${ic(ok?"check":"x")}<div><strong>${ok?"נכון!":"לא בדיוק"}</strong>${esc(v.e)}</div>`;box.appendChild(fb);
+      const nx=document.createElement("button");nx.className="primary";nx.textContent="המשך";nx.style.alignSelf="flex-start";
+      nx.onclick=()=>onDone(ok);box.appendChild(nx);nx.focus({preventScroll:true});nx.scrollIntoView({block:"nearest",behavior:"smooth"});
+    };wrap.appendChild(b)});
+  return box;
+}
+
+function home(){
+  document.body.style.removeProperty("--c");
+  const started=T.filter(topicStarted);
+  const total=Math.round(100*allIds.filter(mastered).length/allIds.length);
+  const weak=allIds.filter(id=>S.q[id]&&S.q[id].n&&!mastered(id)).length;
+  app.innerHTML=`<div class="stack fade">
+   <section class="cover" style="--c:var(--accent)">
+    <div class="cover-art">${FIG[CONFIG.cover]()}</div>
+    <div class="cover-body">
+     <span class="eyebrow">${CONFIG.eyebrow}</span>
+     ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
+     <p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר עם שאלות גם מנושאים קודמים.</p>
+     <div class="stats">
+      <div class="ring" style="--p:${total}"><span>${total}%</span></div>
+      <div class="stat-text"><b>${total===0?"עוד לא התחלת":total>=80?"אתה שולט בחומר":"בדרך"}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
+      <button class="primary review-btn" id="rev" ${started.length?"":"disabled"}>${ic("cycle")}<span>${started.length?"חזרה מהירה":"חזרה מהירה (אחרי נושא ראשון)"}</span></button>
+     </div>
+    </div>
+   </section>
+   <div class="grid" id="list"></div>
+   <div class="foot"><a href="../#intro" style="color:var(--accent);font-weight:700;text-decoration:none">→ לקורס</a><span>${CONFIG.note}</span><button class="ghost" id="reset">איפוס התקדמות</button></div>
+  </div>`;
+  document.querySelector("#rev svg").style.cssText="width:20px;height:20px";
+  const list=app.querySelector("#list");
+  T.forEach((t,i)=>{const p=topicPct(t),b=document.createElement("button");b.className="tcard";b.style.setProperty("--c",color(t));
+    const status=!topicStarted(t)?"לא התחלת":p>=80?"שולט":"בתהליך";
+    b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
+    b.onclick=()=>topic(i,0);list.appendChild(b)});
+  app.querySelector("#rev").onclick=review;
+  const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
+  scrollTo(0,0);
+}
+
+function bar(title,n,i,label){
+  return `<div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">${label}</span></div><div class="steps">${Array.from({length:n},(_,k)=>`<i class="${k<=i?"on":""}"></i>`).join("")}</div></div><span class="eyebrow">${title}</span>`;
+}
+
+function topic(ti,bi){
+  const t=T[ti],blk=t.blocks[bi];document.body.style.setProperty("--c",color(t));
+  app.innerHTML=`<div class="stack">${bar(`נושא ${ti+1} · ${t.title}`,t.blocks.length+1,bi,`קטע ${bi+1} מתוך ${t.blocks.length}`)}
+   <article class="card fade"><h3>${blk.h}</h3>${blk.html}</article><div id="slot"></div></div>`;
+  app.querySelector("#back").onclick=home;
+  const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;save();quiz(ti)}};
+  const slot=app.querySelector("#slot");
+  if(blk.q)slot.appendChild(qCard(blk.q,next,"בדיקה קצרה"));
+  else{const b=document.createElement("button");b.className="primary";b.textContent="המשך";b.onclick=next;slot.appendChild(b)}
+  scrollTo(0,0);
+}
+
+function runSet(title,ids,c,onEnd){
+  let i=0,right=0;document.body.style.setProperty("--c",c);
+  const step=()=>{
+    if(i>=ids.length)return onEnd(right,ids.length);
+    const id=ids[i],from=T.find(t=>t.id===Q[id].t);
+    app.innerHTML=`<div class="stack">${bar(title,ids.length,i,`שאלה ${i+1} מתוך ${ids.length}`)}<div id="slot"></div></div>`;
+    app.querySelector("#back").onclick=home;
+    const card=qCard(id,ok=>{if(ok)right++;i++;step()},from.title);card.style.setProperty("--c",color(from));
+    app.querySelector("#slot").appendChild(card);scrollTo(0,0);
+  };step();
+}
+
+function quiz(ti){
+  const t=T[ti];
+  const prev=T.slice(0,ti).filter(topicStarted).flatMap(x=>x.qids);
+  const extra=shuffle(prev).sort((a,b)=>st(a).c-st(b).c).slice(0,2);
+  runSet(`מבחן סיום · ${t.title}`,shuffle(t.qids).concat(extra),color(t),(r,n)=>done(r,n,ti));
+}
+
+function review(){
+  const pool=T.filter(topicStarted).flatMap(t=>t.qids),now=Date.now();
+  const score=id=>{const s=S.q[id]||{n:0,c:0,w:0,t:0};return (s.n?0:2)+s.w*2+(s.c<2?3:0)+Math.min(3,(now-s.t)/864e5)+Math.random()*2};
+  const ids=pool.map(id=>[id,score(id)]).sort((a,b)=>b[1]-a[1]).slice(0,12).map(x=>x[0]);
+  runSet("חזרה מהירה",shuffle(ids),"var(--accent)",(r,n)=>done(r,n,null));
+}
+
+function done(r,n,ti){
+  const nextT=ti!=null&&ti+1<T.length?ti+1:null,pct=Math.round(100*r/n);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">${ti!=null?`סיום נושא ${ti+1} · ${T[ti].title}`:"סיום חזרה מהירה"}</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct};--accent:var(--c)"><span>${pct}%</span></div><div class="big">${r}/${n}</div></div>
+    <p>${r===n?"מצוין, הכל נכון.":r>=n*0.7?"טוב מאוד. מה שטעית בו יחזור בחזרה המהירה, בניסוח אחר.":"כדאי לעבור שוב על הנושא. השאלות שטעית בהן יחזרו בחזרה המהירה."}</p>
+    <div class="row">${nextT!=null?`<button class="primary" id="nx" style="--c:${color(T[nextT])}">לנושא הבא: ${T[nextT].title}</button>`:""}<button id="hm">לכל הנושאים</button></div>
+   </article></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;
+  const nx=app.querySelector("#nx");if(nx)nx.onclick=()=>topic(nextT,0);
+  scrollTo(0,0);
+}
+home();
+</script>
+</body>
+</html>
