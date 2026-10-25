@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>לומדת חובת קריאה: עיצוב התנהגות בבית ספר לילדים קשיי חינוך</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Rubik:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: a study notebook. Home = illustrated cover + topic cards; topic = one reading card at a time, with a highlighter for key terms and drawn figures */
+:root{
+  --bg:#eef2f4; --surface:#ffffff; --raised:#f7f9fa; --ink:#15222a; --muted:#4c5b66; --line:#dbe2e6;
+  --accent:#2457a6; --mark:#ffe27a; --good:#23855a; --good-soft:#e2f4ea; --bad:#c2452d; --bad-soft:#fbe6e1;
+  --t1:#d35d36; --t2:#3667cf; --t3:#0e8a7c; --t4:#8448c9; --t5:#b9800c; --t6:#2a7fa6;
+  --display:"Suez One","Frank Ruhl Libre","David",serif;
+  --body:"Rubik","Arial Hebrew","Segoe UI",Arial,sans-serif;
+  --shadow:0 1px 2px rgba(21,34,42,.06),0 8px 24px rgba(21,34,42,.07);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;font-weight:500;line-height:1.75;direction:rtl}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
+p{margin:0}
+.stack{display:flex;flex-direction:column;gap:16px}
+.muted{color:var(--muted)}
+mark{background:linear-gradient(transparent 38%,var(--mark) 38%,var(--mark) 92%,transparent 92%);color:inherit;padding:0 2px;font-weight:600}
+button{font:inherit;cursor:pointer;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:11px 18px}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button[disabled]{opacity:.55;cursor:default}
+.primary{background:var(--c,var(--accent));border-color:var(--c,var(--accent));color:var(--surface);font-weight:600}
+.ghost{background:transparent;border:none;color:var(--muted);padding:6px 2px}
+.ghost:hover{color:var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.badge{display:inline-block;align-self:flex-start;font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:99px;background:var(--accent);color:var(--surface);margin-bottom:6px}.entitle{display:inline;unicode-bidi:isolate;font-family:Rubik,system-ui,sans-serif;font-weight:800}.hetitle{margin:4px 0 0;font-weight:700;font-size:1.05rem}.cite{text-align:right;margin:4px 0 0;font-size:.85rem;color:var(--muted)}.cite a{color:var(--accent)}
+.eyebrow{font-size:.8rem;letter-spacing:.05em;font-weight:600;color:var(--c,var(--muted))}
+
+/* home */
+.cover{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.cover-art{background:var(--raised);border-bottom:1px solid var(--line);padding:8px 8px 0}
+.cover-art svg{display:block;width:100%;height:auto;max-height:230px}
+.cover-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px}
+.cover h1{font-size:clamp(2rem,6vw,2.6rem);font-weight:900}
+.stats{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.ring{--p:0;width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center;flex:none}
+.ring span{width:50px;height:50px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.9rem;font-variant-numeric:tabular-nums}
+.stat-text{display:flex;flex-direction:column;line-height:1.35;flex:1;min-width:160px}
+.stat-text b{font-size:1.05rem}
+.review-btn{display:flex;align-items:center;gap:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.tcard{--c:var(--accent);text-align:right;padding:0;overflow:hidden;border:none;border-radius:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s}
+.tcard:hover{transform:translateY(-2px)}
+.tcard .band{background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.tcard .band svg{width:44px;height:44px}
+.tcard .n{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;opacity:.85}
+.tcard .body{padding:12px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tcard .t{font-weight:700;font-size:1.05rem;line-height:1.35}
+.bar{height:7px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--c);border-radius:4px}
+.meta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip{font-size:.75rem;padding:3px 10px;border-radius:99px;font-weight:600;background:color-mix(in srgb,var(--c,var(--accent)) 14%,transparent);color:var(--c,var(--accent));white-space:nowrap}
+.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+
+/* topic */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;display:flex;flex-direction:column;gap:8px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.steps{display:flex;gap:5px}
+.steps i{flex:1;height:5px;border-radius:3px;background:var(--line)}
+.steps i.on{background:var(--c)}
+.prog{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tt{font-size:1.6rem;font-weight:900}
+.card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px}
+.card h3{font-size:1.25rem;color:var(--c)}
+.fig{background:var(--raised);border-radius:14px;padding:10px;margin-inline:-4px}
+.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{font-size:.8rem;color:var(--muted);text-align:center;margin-top:4px}
+figure{margin:0}
+.def{border:1.5px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 6%,var(--surface));border-radius:14px;padding:14px 16px}
+.lbl{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:var(--c);margin-bottom:4px}
+.who{display:flex;gap:12px;align-items:flex-start}
+.who .av{flex:none;width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.15rem}
+.who .yr{font-size:.8rem;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.tile{background:var(--raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile svg{width:32px;height:32px;color:var(--c)}
+.tile b{font-size:.98rem}
+.tile span{font-size:.88rem;color:var(--muted);line-height:1.45}
+.ex{background:var(--raised);border-radius:12px;padding:12px 14px;font-size:.95rem}
+.ex .lbl{color:var(--muted)}
+.yesno{display:flex;flex-wrap:wrap;gap:8px}
+.yn{padding:5px 12px;border-radius:99px;font-size:.88rem;font-weight:500;display:inline-flex;gap:6px;align-items:center}
+.yn.y{background:var(--good-soft);color:var(--good)} .yn.n{background:var(--bad-soft);color:var(--bad)}
+.spectrum{display:flex;flex-direction:column;gap:6px}
+.spectrum .track{height:12px;border-radius:6px;background:linear-gradient(90deg,var(--bad),var(--line) 50%,var(--good));position:relative}
+.spectrum .dot{position:absolute;top:50%;left:50%;width:20px;height:20px;border-radius:50%;background:var(--surface);border:3px solid var(--ink);transform:translate(-50%,-50%)}
+.spectrum .ends{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);gap:10px}
+.remember{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;border-top:1px dashed var(--line);padding-top:12px}
+.remember svg{flex:none;width:22px;height:22px;color:var(--c)}
+
+/* question */
+.q{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:12px}
+.qtext{font-weight:600;font-size:1.08rem;line-height:1.55}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{text-align:right;line-height:1.45;display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--raised);border:1.5px solid transparent}
+.opt:hover:not([disabled]){border-color:var(--c)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:8px;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.85rem;color:var(--c)}
+.opt.right{background:var(--good-soft);border-color:var(--good);opacity:1}
+.opt.right .k{background:var(--good);color:var(--surface)}
+.opt.wrong{background:var(--bad-soft);border-color:var(--bad);opacity:1}
+.opt.wrong .k{background:var(--bad);color:var(--surface)}
+.fb{padding:12px 14px;border-radius:12px;font-size:.95rem;display:flex;gap:10px;align-items:flex-start}
+.fb svg{flex:none;width:22px;height:22px;margin-top:2px}
+.fb.ok{background:var(--good-soft)} .fb.ok svg{color:var(--good)}
+.fb.no{background:var(--bad-soft)} .fb.no svg{color:var(--bad)}
+.fb strong{display:block}
+.big{font-family:var(--display);font-size:3.4rem;font-weight:900;color:var(--c);font-variant-numeric:tabular-nums;line-height:1}
+@media (prefers-reduced-motion:no-preference){.fade{animation:f .3s ease-out}@keyframes f{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+
+/* svg figure classes */
+.s-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.s-c{stroke:var(--c);stroke-width:2;fill:none}
+.f-c{fill:var(--c)}
+.f-soft{fill:color-mix(in srgb,var(--c) 16%,var(--surface))}
+.f-surf{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.f-ink{fill:var(--ink)}
+.f-mut{fill:var(--muted)}
+.f-inv{fill:var(--surface)}
+svg text{font-family:var(--body)}
+h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
+.card p,.def p,.tile span,.ex p{font-weight:500}
+.qtext{font-weight:700}
+.tile b,.who b{font-weight:700}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:.95rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.tbl th,.tbl td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl th{background:color-mix(in srgb,var(--c) 10%,var(--surface));color:var(--c);font-weight:700;font-size:.85rem}
+.tbl .in{color:var(--c);font-weight:700}.tbl .out{color:var(--muted);font-weight:700}
+.tblwrap{overflow-x:auto}
+.en{font-size:.82em;color:var(--muted);font-weight:500;direction:ltr;unicode-bidi:isolate}
+</style>
+<style>:root{--accent:#6a46c2}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent:#ad90f2}}:root[data-theme="dark"]{--accent:#ad90f2}</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const CONFIG={key:"lomda-intro-tokens",cover:"cover13",eyebrow:"מבוא לפסיכולוגיה · מאמר בעברית",title:"עיצוב התנהגות בבית ספר לילדים קשיי חינוך",cite:`גולדברג וטייכמן. עיצוב ההתנהגות בבית־ספר לילדים קשיי חינוך: ניסוי בכלכלת אסימונים. עמ' 334–340.`,note:"מבוסס על המאמר \"עיצוב ההתנהגות בבית־ספר לילדים קשיי חינוך: ניסוי בכלכלת אסימונים\"."};
+const I={
+ building:'<path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h2M14 8h2M8 12h2M14 12h2M10 21v-4h4v4"/>',
+ people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
+ cycle:'<path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/>',
+ pyramid:'<path d="M12 3L2.5 20h19z"/><path d="M8.2 10.5h7.6M5.5 15.2h13"/>',
+ chart:'<path d="M4 20V10M9.5 20V4M15 20v-7M20.5 20V8M2 20h20"/>',
+ gear:'<circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="7.5" stroke-dasharray="3.2 2.7" stroke-width="3.2"/>',
+ sprout:'<path d="M12 21v-9"/><path d="M12 14C7 14 4.5 11 4.5 6.5 9 6.5 12 9 12 14z"/><path d="M12 12c0-4.5 3-7 7.5-7 0 4.5-3 7-7.5 7z"/>',
+ scales:'<path d="M12 3v17M7 20h10M4 7h16"/><path d="M4 7l-2.5 6h5zM20 7l-2.5 6h5z"/>',
+ factory:'<path d="M3 21V10l5 3v-3l5 3V5h4v16zM1.5 21h21M17 9h4v12"/>',
+ question:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 1 1 3.6 2.4c-.8.4-1.1.9-1.1 1.8"/><path d="M12 17h.01"/>',
+ data:'<ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6M4.5 11.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6"/>',
+ doc:'<path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/>',
+ split:'<circle cx="12" cy="4.5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="12" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/><path d="M12 6.7v10M12 11l-6 6M12 11l6 6"/>',
+ grad:'<path d="M1.5 9L12 4l10.5 5L12 14z"/><path d="M6 11.2V16c3.3 2.4 8.7 2.4 12 0v-4.8M21 10v5"/>',
+ copies:'<rect x="3" y="7" width="12" height="14" rx="2"/><path d="M7 4h11a2 2 0 0 1 2 2v12"/>',
+ link:'<rect x="2" y="8" width="11" height="8" rx="4"/><rect x="11" y="8" width="11" height="8" rx="4"/>',
+ hand:'<circle cx="8" cy="7" r="3"/><circle cx="16" cy="7" r="3"/><path d="M2.5 20c0-3.3 2.5-6 5.5-6 1.6 0 3 .7 4 1.9 1-1.2 2.4-1.9 4-1.9 3 0 5.5 2.7 5.5 6"/>',
+ target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',
+ id:'<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><circle cx="8.5" cy="11" r="2.3"/><path d="M5 16c.6-1.6 2-2.4 3.5-2.4S11.4 14.4 12 16M14.5 10h4M14.5 13.5h3"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>',
+ pie:'<path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/>',
+ cart:'<path d="M2 3h3l2.5 12h11l2-8H6.5"/><circle cx="9" cy="19.5" r="1.6"/><circle cx="17" cy="19.5" r="1.6"/>',
+ bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/>',
+ check:'<circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/>',
+ x:'<circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/>',
+ lock:'<rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>',
+ moon:'<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>',
+ brain:'<path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a2 2 0 0 0-3-1z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/>',
+ phone:'<rect x="6.5" y="2" width="11" height="20" rx="2.5"/><path d="M10.5 18.5h3"/>',
+ flask:'<path d="M9 2.5h6M10 2.5v6L4.5 19a2 2 0 0 0 1.8 2.9h11.4a2 2 0 0 0 1.8-2.9L14 8.5v-6"/><path d="M7 15h10"/>',
+ leaf:'<path d="M5 19C5 10 11 4 20 4c0 9-6 15-15 15z"/><path d="M5 19l8-8"/>'
+};
+const ic=(k,cls="")=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="${cls}" aria-hidden="true">${I[k]}</svg>`;
+
+const arrowDef=id=>`<defs><marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="f-c"/></marker></defs>`;
+
+const FIG={
+ cover13:()=>`<svg viewBox="0 0 400 228" role="img" aria-label="אסימונים וכוכב">
+  <circle cx="200" cy="112" r="90" class="f-soft"/>
+  ${[[150,150],[200,160],[250,150],[175,120],[225,120],[200,90]].map(([x,y],i)=>`<circle cx="${x}" cy="${y}" r="24" class="${i==5?"f-c":"f-surf"}"/><circle cx="${x}" cy="${y}" r="16" fill="none" class="s-line"/>`).join("")}
+  <path d="M200 76l4 9 10 1-7 7 2 10-9-5-9 5 2-10-7-7 10-1z" class="f-inv"/></svg>`,
+ phases:()=>{const P=[["A1","קו בסיס","שבועיים",false],["B1","פרסים מוחשיים","5 שבועות",true],["A2","הפסקה","יומיים",false],["B2","פרסים חברתיים","שבועות 9 עד 16",true]];
+  return `<svg viewBox="0 0 400 168" role="img" aria-label="ארבעת שלבי הניסוי">${arrowDef("ph")}
+  <line x1="390" y1="96" x2="12" y2="96" class="s-line" marker-end="url(#ph)"/>
+  ${P.map(([c,h,d,on],i)=>{const x=342-i*94;return `<rect x="${x-44}" y="18" width="88" height="62" rx="12" class="${on?"f-c":"f-soft"}"/><text x="${x}" y="44" text-anchor="middle" font-size="17" font-weight="800" class="${on?"f-inv":"f-ink"}">${c}</text><text x="${x}" y="66" text-anchor="middle" font-size="10.5" class="${on?"f-inv":"f-mut"}">${d}</text><text x="${x}" y="120" text-anchor="middle" font-size="11" font-weight="700" class="f-ink">${h}</text>`}).join("")}</svg>`},
+ table:()=>{const B=[["איחורים",[14.0,0.0,4.0,0.0]],["הסתובבויות",[25.9,0.0,10.4,2.4]],["דיבור בלי הצבעה",[27.6,2.4,15.6,6.5]]];const L=["A1","B1","A2","B2"],s=4.2;
+  return `<svg viewBox="0 0 400 228" role="img" aria-label="ממוצע ההתנהגויות החריגות לשיעור בכל שלב">
+  <line x1="12" y1="180" x2="388" y2="180" class="s-line"/>
+  ${B.map(([n,v],g)=>{const cx=322-g*124;return v.map((y,i)=>{const x=cx+42-i*28,h=Math.max(y*s,1.5),hi=(i%2==1);return `<rect x="${x-11}" y="${180-h}" width="22" height="${h}" rx="3" class="${hi?"f-c":"f-mut"}" ${hi?"":'opacity=".5"'}/><text x="${x}" y="${174-h}" text-anchor="middle" font-size="9.5" font-weight="700" class="f-ink">${y.toFixed(1)}</text><text x="${x}" y="194" text-anchor="middle" font-size="9.5" class="f-mut">${L[i]}</text>`}).join("")+`<text x="${cx}" y="214" text-anchor="middle" font-size="11.5" font-weight="700" class="f-ink">${n}</text>`}).join("")}</svg>`}
+};
+const E=t=>`<span class="en">(${t})</span>`;
+const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</figcaption>`:""}</figure>`;
+const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
+const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;
+const tiles=a=>`<div class="tiles">${a.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`;
+const ex=h=>`<div class="ex"><span class="lbl">דוגמה</span><p>${h}</p></div>`;
+const rem=h=>`<div class="remember">${ic("bulb")}<p>${h}</p></div>`;
+const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")}${t}</span>`).join("")}${n.map(t=>`<span class="yn n">${ic("x")}${t}</span>`).join("")}</div>`;
+const spectrum=(r,l,dot)=>`<div class="spectrum"><div class="track">${dot?'<span class="dot"></span>':""}</div><div class="ends"><span>${r}</span><span>${l}</span></div></div>`;
+document.head.insertAdjacentHTML("beforeend",'<style>.yn svg{width:16px;height:16px}</style>');
+
+const T=[
+ {id:"t1",icon:"bulb",title:"הרעיון: כלכלת אסימונים",blocks:[
+  {h:"מה ידוע",html:`${def("מושג מפתח",`<mark>כלכלת אסימונים</mark> ${E("Token economy")}: שיטה לעיצוב התנהגות שבה נותנים <b>אסימונים</b> על התנהגות רצויה, ואפשר <b>לפדות</b> אותם בפרסים.`)}<p>מחקרים קודמים הוכיחו את יעילותה במסגרות טיפוליות שונות: בתי חולים לחולי נפש, מוסדות למפגרים (כך במקור), כיתות טיפוליות, מוסדות לעבריינים ובתי ספר רגילים.</p>${rem("הצלחת הטיפול ההתנהגותי תלויה ב<b>מידת ההמשכיות</b> בין התנהגות הפרט לבין תגובת הסביבה. ככל שהמסגרת מאפשרת יותר <b>פיקוח</b> על הסביבה, כך גדל הסיכוי שהשיטה תצליח.")}`,q:"q1"},
+  {h:"הקושי בסביבה \"טבעית\"",html:`<p>בסביבה טבעית, כמו בית ספר, פועלות על התלמיד הרבה מערכות חיזוק, והמטפל שולט רק בחלק קטן מהן. לכן הניסוי התמקד בהתנהגויות שקשורות <b>ישירות לחיי בית הספר</b>.</p>${tiles([["hand","חיזוקים חברתיים","הערכה, אהבה, דחייה, כעס. הם רוב החיזוקים שלנו ביומיום"],["cart","חיזוקים מוחשיים","חפצים ופרסים. בחשיבות משנית בחיים"]])}${def("הבעיה",`חיזוקים חברתיים טבעיים לא תמיד <b>תלויים</b> בהתנהגות, ניתנים <b>במרחק זמן</b>, ומושפעים מרגשות ועמדות של מי שנותן אותם. לכן, כדי ששינוי יחזיק, צריך <b>להתאים בהדרגה</b> את החיזוקים בניסוי לחיזוקים של חיי היום־יום.`)}`,q:"q3"},
+  {h:"מטרות המחקר",html:`${tiles([["target","יעילות","להראות שכלכלת אסימונים מעצבת התנהגות של ילדים עם התנהגות חריגה"],["sprout","ממוחשי לחברתי","להדגיש את המעבר מחיזוקים מוחשיים לחברתיים, כולל מעורבות התלמידים בהתנהגות חבריהם"],["people","צוות לא מומחה","להראות שאפשר להפעיל את השיטה בעזרת צוות שלא הוכשר בטיפול התנהגותי"]])}`,q:"q5"}
+ ]},
+ {id:"t2",icon:"flask",title:"מערך הניסוי",blocks:[
+  {h:"הנבדקים הם הביקורת של עצמם",html:`<p>הדרך האובייקטיבית לבדוק יעילות טיפול היא למדוד את <b>השינוי בהתנהגות</b>: בזמן הטיפול וגם <b>אחרי שמפסיקים</b> אותו (לפי סידמן). כך הנבדקים משמשים <b>קבוצת ניסוי וביקורת כאחת</b>.</p>${fig("phases")}${def("מודל A1 B1 A2 B2",`<b>A1</b>: שכיחות ההתנהגויות לפני הניסוי. <b>B1</b>: בסוף השלב הראשון (חיזוקים מוחשיים). <b>A2</b>: אחרי הפסקת הטיפול, בתחילת השלב השני. <b>B2</b>: בסוף השלב השני (חיזוקים חברתיים).`)}`,q:"q7"},
+  {h:"הנבדקים",html:`<p>בית ספר מיוחד לילדים עם <b>קשיי הסתגלות</b>, שלא תפקדו במסגרות רגילות בגלל הפרעות התנהגות. כיתות קטנות של 6 עד 9 תלמידים עם יחס אישי. רמת הלימודים נמוכה, למרות שרמת המשכל בינונית ומעלה.</p>${tiles([["people","6 תלמידים","בגילאי 9 וחצי עד 11, בכיתה ג'–ד'"],["building","כיתת הקליטה הראשונה","בבית הספר. אחת הכיתות הבעייתיות ביותר"],["copies","3 הצטרפו אחר כך","אבל הדיווח הוא רק על 6 שהשתתפו מההתחלה עד הסוף"]])}`,q:"q9"},
+  {h:"מה קרה בכיתה",html:`<p>בחודשיים הראשונים המורה לא הצליחה לפעמים לסיים שיעור. התלמידים איחרו, קמו ממקומם, הסתובבו, היכו זה את זה ודיברו בלי להצביע. לא היה אפשר לקיים שיחה עניינית יותר מכמה דקות.</p>${def("קו הבסיס (A1)",`במשך שבועיים, <b>שלושה סטודנטים</b> צפו בכיתה 4 שעות ביום ורשמו. הם הודרכו <b>להתעלם</b> מפניות התלמידים, שהתרגלו אליהם מהר. נמצא שההתנהגויות החריגות <b>עולות</b> לאורך היום: בשיעור הראשון התלמידים \"שקטים\" יחסית, ובשיעור הרביעי ההפרעות רבות.`)}${yn(["איחורים (בתחילת היום ואחרי ההפסקות)","הסתובבות בכיתה בזמן השיעור","דיבור בלי הצבעה"],[])}`,q:"q11"}
+ ]},
+ {id:"t3",icon:"cart",title:"שלב א': פרסים מוחשיים",blocks:[
+  {h:"איך הוצגה השיטה (B1)",html:`<p>ביום הראשון המורה הציגה את השיטה <b>כמשחק</b>: אילו התנהגויות מזכות באסימונים, מה ה\"מחיר\" של כל התנהגות, ומה צריך כדי לקבל פרס בסוף היום או השבוע.</p>${tiles([["check","בחירת פרסים","כל תלמיד דירג אילו פרסים הוא מעדיף: ראשון, שני ושלישי"],["cart","פרס יומי","קרמבו, פל מצופה, סוכריות, עיפרון, מחברת"],["chart","פרס שבועי","עט, קופסת צבעים, בקבוק קוקה קולה"]])}${rem("המורה התבקשה <b>לא להשתמש בעונשים</b> ולא להשתמש באסימונים כעונש.")}`,q:"q13"},
+  {h:"איך זה עבד בפועל",html:`${tiles([["link","קשר ברור ועקבי","בין התנהגות רצויה (להגיע בזמן, לשבת במקום, להצביע) לבין קבלת אסימון"],["cart","\"שוק\" בסוף היום","התלמידים המירו אסימונים בפרסים"],["cycle","החלפת פרסים","כל שבועיים, כדי שלא יגיעו ל<b>רוויה</b>"],["hand","גמול מילולי","המורה ליוותה כל פרס במילה טובה"]])}${def("לוח הישגים ופרס שבועי",`המורה רשמה את האסימונים על לוח קיר, ובסוף השבוע 2 עד 3 הילדים עם הכי הרבה נקודות קיבלו פרס מיוחד. בשלב הזה ניתן אסימון אחד <b>גם לילדים שלא הגיעו</b> לכך, כדי לעודד ולהגביר את מעורבותם. השלב נמשך <b>5 שבועות</b>.`)}`,q:"q15"},
+  {h:"ההפסקה (A2)",html:`<p>כדי לבדוק מה קורה כשמפסיקים, החיזוקים הופסקו ל<b>יומיים</b>. ההסבר לתלמידים: חסר תקציב לפרסים.</p>${tiles([["x","הכל הוסר","אסימונים, פרסים ולוח ההישגים, כדי שלא ייראה שהשיטה חוזרת"],["doc","רק תזכורת","המורה המשיכה להזכיר מה ההתנהגויות הרצויות"]])}${rem("זה ההיגיון של <b>מערך היפוך</b>: אם ההתנהגות חוזרת כשמפסיקים, זה סימן שהטיפול הוא שגרם לשינוי.")}`,q:"q17"}
+ ]},
+ {id:"t4",icon:"people",title:"שלב ב': פרסים חברתיים",blocks:[
+  {h:"צעד ראשון: בחירה ודחייה (שבועות 9 עד 12)",html:`${tiles([["copies","בחירה","התלמידים בחרו בין פרס מוחשי (קרמבו) לבין <b>מעמד מכובד</b>, כמו אחראי על כדורי הספורט או על פינת החי"],["clock","יותר זמן","הוגדל הזמן בין ההתנהגות לבין הפרס: צוברים אסימונים ומקבלים חיזוק כל יומיים"]])}`,q:"q19"},
+  {h:"צעד שני: פרסים חברתיים מופשטים (שבועות 13 עד 16)",html:`<p>מתן האסימונים <b>הופסק</b>. במקומו, בסוף כל יום המורה ציינה את הערכתה לכל תלמיד, מ\"מעט טוב\" עד \"טוב מאוד\", על לוח מיוחד. הסיכום בסוף השבוע קבע את הפרס השבועי, <b>הפרס היחיד</b> בשלב הזה:</p>${tiles([["doc","מכתב להורים","מכתב שבח על ההתנהגות, בחתימת מנהל בית הספר ומחנכת הכיתה"],["people","ישיבת הצוות","השתתפות בפגישה השבועית של הנהלת בית הספר וצוות המחקר על הכיתה"]])}${ex("בכל ישיבה השתתפו 2 עד 3 תלמידים מצטיינים. בשבוע ה-16, האחרון, השתתפו <b>כל</b> תלמידי הכיתה.")}`,q:"q21"},
+  {h:"שלושה שינויים שמקרבים לחיים",html:`${tiles([["question","הערכה סובייקטיבית","המורה העריכה בסוף היום, בלי קשר ישיר להתנהגויות ספציפיות בכל שיעור"],["clock","פער זמן","פרס אחד בשבוע. דורש הבנת הקשר ונכונות <b>לדחות סיפוק</b>"],["hand","מהות הפרס","והכי חשוב: מעמד חברתי והערכה חיובית, דרך ההשתתפות בישיבות"]])}`,q:"q23"}
+ ]},
+ {id:"t5",icon:"chart",title:"התוצאות",blocks:[
+  {h:"מה קרה להתנהגויות",html:`${fig("table","ממוצע ההתנהגויות החריגות לשיעור, לכל הכיתה, בסוף כל שלב")}${tiles([["check","A1 ← B1","הירידה <b>הברורה ביותר</b>, מובהקת בכל שלוש ההתנהגויות"],["x","בהפסקה (A2)","עלייה, מובהקת בהסתובבות ובדיבור בלי הצבעה. אבל <b>לא חזרה</b> לרמה שלפני הניסוי"],["chart","בשלב החברתי (B2)","ירידה <b>מתונה אך מובהקת</b> בשלושתן. הכי מתונה בדיבור בלי הצבעה"]])}`,q:"q25"}
+ ]},
+ {id:"t6",icon:"bulb",title:"דיון",blocks:[
+  {h:"שלושה גורמים נוספים להצלחה",html:`${tiles([["target","תשומת לב לחיובי","ההנהלה, המורה והצוות התמקדו בהיבטים <b>החיוביים</b> של ילדים \"שבעי כישלונות ודחייה\". מכתבי הצטיינות במקום מכתבים על התנהגות רעה, וההורים הגיבו בחיוב רב"],["grad","זמן ללימודים","המורה והתלמידים יכלו להתמקד בלימודים, והתחושה שאפשר להצליח חיזקה את השינוי"],["people","שיתוף בהחלטות","<b>הגורם החשוב ביותר</b>: הזמנה לישיבת הצוות. התלמידים התחילו לשנות את תפיסתם העצמית, קיבלו משימה לעזור לחבר, וזכו למעמד ולהערכה"]])}${rem("ההזמנה לישיבות הייתה אפשרית רק <b>אחרי</b> שחלק מההתנהגויות הבלתי מסתגלות כבר הוכחדו.")}`,q:"q27"},
+  {h:"המחיר של חיזוק \"טבעי\"",html:`<p>כל עוד ניתנו אסימונים ופרסים מוחשיים <b>סמוך</b> להתנהגות, ההתנהגויות החריגות דוכאו. במעבר לחיזוקים טבעיים, שלעתים קרובות לא ישירים ולא מיידיים, היעילות <b>ירדה מעט</b>.</p>${def("למה",`בסביבה טבעית אין אפשרות לתכנן לגמרי את הקשר בין התנהגות לגמול. הקשר בין התנהגות לתוצאה (החיזוק) לא תמיד <b>רציף וישיר</b>, ולכן אי אפשר לצפות להכחדה מוחלטת של ההתנהגויות החריגות.`)}`,q:"q29"},
+  {h:"אבל בטווח הארוך",html:`${ex("חודשיים אחרי סיום התכנית, כשחזרו מחופשת הקיץ, חלק מהתלמידים פנו <b>ביוזמתם</b> להנהלה וביקשו לחדש את התכנית, ובעיקר את ההשתתפות בישיבות הצוות ואת מכתבי ההצטיינות להורים.")}${def("המסקנה",`החיזוקים <b>החברתיים</b> נתפסו בעיני התלמידים כבעלי <b>משמעות רבה יותר</b> מהחיזוקים המוחשיים. כלכלת אסימונים יעילה בבית ספר. למעבר ההדרגתי לחיזוקים טבעיים יש מחיר קטן ביעילות המיידית, אבל הוא קרוב יותר לחיי היום־יום.`)}`,q:"q31"}
+ ]}
+];
+const Q={
+q1:{t:"t1",v:[
+ {q:"מהי כלכלת אסימונים?",a:"שיטה שבה נותנים אסימונים על התנהגות רצויה, ואפשר לפדות אותם בפרסים",w:["שיטה שבה מענישים על כל התנהגות רעה","שיטה ללימוד חשבון בעזרת כסף","טיפול תרופתי לילדים"],e:"זו שיטה של עיצוב התנהגות בעזרת חיזוק."},
+ {q:"במה תלויה הצלחת הטיפול ההתנהגותי, לפי המאמר?",a:"במידת ההמשכיות בין ההתנהגות לבין תגובת הסביבה",w:["בגיל הילדים בלבד","בכמות הממתקים","בגודל הכיתה בלבד"],e:"ככל שיש יותר פיקוח על הסביבה, השיטה מצליחה יותר."}]},
+q2:{t:"t1",v:[
+ {q:"באיזו מסגרת השיטה מצליחה במיוחד?",a:"במסגרות שבהן הסביבה מבוקרת מאוד, כמו בתי חולים",w:["דווקא בבית, בלי פיקוח","ברחוב","באינטרנט"],e:"שם אפשר לשלוט בקשר בין התנהגות לתגובה."},
+ {q:"איפה, לפי המאמר, כבר הוכחה יעילות השיטה?",a:"בבתי חולים, במוסדות, בכיתות טיפוליות ובבתי ספר רגילים",w:["רק במעבדה","רק אצל בעלי חיים","אף פעם לא הוכחה"],e:"המחקר בודק אותה בבית ספר מיוחד."}]},
+q3:{t:"t1",v:[
+ {q:"למה קשה ליישם את השיטה בסביבה \"טבעית\"?",a:"כי פועלות על הילד הרבה מערכות חיזוק, והמטפל שולט רק בחלק קטן מהן",w:["כי ילדים לא אוהבים פרסים","כי אסור לתת פרסים בבית ספר","כי אין בה התנהגויות חריגות"],e:"לכן הניסוי התמקד בהתנהגויות שקשורות לבית הספר."},
+ {q:"איזה סוג חיזוק הוא רוב החיזוקים שלנו בחיי היום־יום?",a:"חיזוקים חברתיים, כמו הערכה, אהבה, דחייה וכעס",w:["חיזוקים מוחשיים","אסימונים","כסף בלבד"],e:"חיזוקים מוחשיים הם בחשיבות משנית."}]},
+q4:{t:"t1",v:[
+ {q:"מה הבעיה בחיזוקים חברתיים טבעיים?",a:"הם לא תמיד תלויים בהתנהגות, ניתנים במרחק זמן ומושפעים מרגשות",w:["הם חזקים מדי","הם תמיד מיידיים","אין בהם בעיה"],e:"לכן צריך לעבור אליהם בהדרגה."},
+ {q:"מה צריך לעשות כדי ששינוי בהתנהגות יחזיק בחיים?",a:"להתאים בהדרגה את החיזוקים בניסוי לחיזוקים של היום־יום",w:["לתת פרסים מוחשיים לתמיד","להפסיק פתאום כל חיזוק","להעניש במקום לחזק"],e:"זה בדיוק מה שנעשה בשלב השני."}]},
+q5:{t:"t1",v:[
+ {q:"איזו מהבאות אינה מטרה של המחקר?",a:"להשוות בין שיטות ענישה שונות",w:["להראות שכלכלת אסימונים מעצבת התנהגות","להדגיש מעבר מחיזוקים מוחשיים לחברתיים","להראות שצוות לא מומחה יכול להפעיל את השיטה"],e:"המורה אף התבקשה לא להעניש."},
+ {q:"מה מראה המחקר לגבי הצוות שמפעיל את השיטה?",a:"שאפשר להפעיל אותה גם עם צוות שלא הוכשר בטיפול התנהגותי",w:["שרק פסיכולוגים יכולים","שאסור למורים להפעיל אותה","שצריך שלושה מורים בכיתה"],e:"זו אחת מהמטרות המוצהרות."}]},
+q6:{t:"t1",v:[
+ {q:"מהו \"חיזוק\"?",a:"תגובה של הסביבה שמגבירה את הסיכוי שההתנהגות תחזור",w:["עונש על התנהגות","התעלמות","בדיקה רפואית"],e:"אסימונים ופרסים הם חיזוקים."},
+ {q:"מה מאפיין התנהגות שהשיטה מנסה לעצב בניסוי?",a:"התנהגויות חריגות שקשורות ישירות לחיי בית הספר",w:["התנהגות בבית בלבד","התנהגות בחופשות","ציונים במבחנים"],e:"כי שם יש לצוות שליטה על החיזוקים."}]},
+q7:{t:"t2",v:[
+ {q:"למה אומרים שהנבדקים הם \"קבוצת ניסוי וביקורת כאחת\"?",a:"כי משווים את אותם תלמידים לפני הטיפול, בזמנו ואחרי הפסקתו",w:["כי חצי מהם קיבלו פרסים וחצי לא","כי היו שתי כיתות","כי לא הייתה מדידה"],e:"זה מודל הניסוי של סידמן."},
+ {q:"מה מציג המדד A1?",a:"את שכיחות ההתנהגויות החריגות לפני תחילת הניסוי",w:["את ההתנהגות בסוף השלב הראשון","את ההתנהגות אחרי ההפסקה","את ההתנהגות בסוף הניסוי"],e:"זה קו הבסיס."}]},
+q8:{t:"t2",v:[
+ {q:"מה מציג המדד A2?",a:"את שכיחות ההתנהגויות אחרי הפסקת הטיפול, בתחילת השלב השני",w:["את קו הבסיס","את סוף השלב הראשון","את סוף הניסוי"],e:"כך בודקים מה קורה כשמפסיקים."},
+ {q:"מה ההבדל בין שלב B1 לשלב B2?",a:"ב-B1 חיזוקים מוחשיים, וב-B2 חיזוקים חברתיים",w:["ב-B1 עונשים, וב-B2 פרסים","אין הבדל","ב-B1 אין חיזוקים בכלל"],e:"זה לב המחקר: המעבר מהמוחשי לחברתי."}]},
+q9:{t:"t2",v:[
+ {q:"איפה נערך הניסוי?",a:"בבית ספר מיוחד לילדים עם קשיי הסתגלות",w:["בבית ספר רגיל","בבית חולים","בגן ילדים"],e:"ילדים שלא תפקדו במסגרות רגילות בגלל הפרעות התנהגות."},
+ {q:"על כמה תלמידים מדווחות התוצאות?",a:"על 6 תלמידים שהשתתפו מההתחלה עד הסוף",w:["על 9 תלמידים","על 30 תלמידים","על תלמיד אחד"],e:"3 הצטרפו בהמשך השנה, אבל לא נכללו."}]},
+q10:{t:"t2",v:[
+ {q:"מה נכון לגבי רמת הלימודים והמשכל של התלמידים?",a:"רמת הלימודים נמוכה, למרות שהמשכל בינוני ומעלה",w:["רמת לימודים גבוהה ומשכל נמוך","שניהם נמוכים מאוד","שניהם גבוהים"],e:"הבעיה הייתה התנהגותית."},
+ {q:"מה גודל הכיתות בבית הספר?",a:"6 עד 9 תלמידים, עם יחס אישי",w:["30 עד 40","15 עד 20","תלמיד אחד בכיתה"],e:"כיתות קטנות."}]},
+q11:{t:"t2",v:[
+ {q:"מי ערך את התצפיות בשלב קו הבסיס?",a:"שלושה סטודנטים, 4 שעות ביום, במשך שבועיים",w:["המורה בעצמה","ההורים","המנהל, פעם בחודש"],e:"הם הודרכו להתעלם מפניות התלמידים."},
+ {q:"למה הצופים הודרכו להתעלם מפניות התלמידים?",a:"כדי שהתלמידים יתרגלו מהר ושנוכחותם לא תשפיע על ההתנהגות",w:["כדי להעניש את התלמידים","כי לא הורשו לדבר עברית","כי לא היה להם זמן"],e:"כך הנתונים שיקפו את הפעילות הרגילה של הכיתה."}]},
+q12:{t:"t2",v:[
+ {q:"אילו שלוש התנהגויות נבחרו לעיצוב?",a:"איחורים, הסתובבות בכיתה ודיבור בלי הצבעה",w:["אלימות, גניבה ושקרים","ציונים, שיעורי בית ונוכחות","אכילה, שינה וקריאה"],e:"שלוש ההתנהגויות שהכי הפריעו למורה."},
+ {q:"מה נמצא לגבי ההתנהגויות לאורך יום הלימודים?",a:"השכיחות עלתה במהלך היום: בשיעור הראשון שקט יחסית, ברביעי הרבה הפרעות",w:["ירדה במהלך היום","הייתה זהה כל היום","הופיעה רק בהפסקות"],e:"ממצא מקו הבסיס."}]},
+q13:{t:"t3",v:[
+ {q:"איך הוצגה השיטה לתלמידים ביום הראשון?",a:"כמשחק, עם הסבר אילו התנהגויות מזכות באסימונים ומה אפשר לקבל",w:["כעונש","כמבחן","בלי שום הסבר"],e:"גם ה\"מחיר\" של כל התנהגות הוסבר."},
+ {q:"איך נבחרו הפרסים?",a:"כל תלמיד דירג אילו פרסים הוא מעדיף",w:["המורה בחרה לבד","ההורים בחרו","הוגרלו"],e:"כך הפרסים היו חיזוקים אמיתיים עבורם."}]},
+q14:{t:"t3",v:[
+ {q:"מה התבקשה המורה לא לעשות?",a:"להעניש, ולהשתמש באסימונים כעונש",w:["לתת פרסים","לדבר עם התלמידים","להסביר את השיטה"],e:"השיטה מבוססת על חיזוק חיובי."},
+ {q:"איזה מהבאים היה פרס שבועי?",a:"קופסת צבעים",w:["קרמבו","סוכרייה","עיפרון"],e:"הפרסים השבועיים: עט, קופסת צבעים, בקבוק קוקה קולה."}]},
+q15:{t:"t3",v:[
+ {q:"למה הוחלפו הפרסים כל שבועיים?",a:"כדי שהתלמידים לא יגיעו לרוויה",w:["כי נגמר התקציב","כי ההורים ביקשו","כי המורה התעייפה"],e:"רוויה: הפרס מאבד את כוחו כחיזוק."},
+ {q:"למה ניתן אסימון גם לילדים שלא הגיעו לכך?",a:"כדי לעודד ולהגביר את מעורבותם בתכנית",w:["בטעות","כעונש","כי כולם הגיעו"],e:"כדי שאף ילד לא ירגיש מחוץ למשחק."}]},
+q16:{t:"t3",v:[
+ {q:"כמה זמן נמשך שלב החיזוקים המוחשיים?",a:"5 שבועות",w:["יומיים","שנה","שבוע אחד"],e:"אחריו באה ההפסקה."},
+ {q:"מה עשתה המורה בכל פעם שנתנה פרס?",a:"ליוותה אותו בגמול מילולי על ההתנהגות החיובית",w:["נתנה גם עונש","שתקה","שלחה מכתב תלונה"],e:"זה התחלת הקישור לחיזוק חברתי."}]},
+q17:{t:"t3",v:[
+ {q:"כמה זמן נמשכה הפסקת החיזוקים?",a:"יומיים",w:["חודש","שבועיים","שנה"],e:"ההסבר לתלמידים היה חוסר תקציב לפרסים."},
+ {q:"למה הוסרו מהכיתה האסימונים, הפרסים ולוח ההישגים בזמן ההפסקה?",a:"כדי שלא ייווצר רושם שהשיטה חוזרת",w:["כדי לנקות את הכיתה","כי הם נשברו","כי ההורים ביקשו"],e:"כך בודקים באמת את השפעת ההפסקה."}]},
+q18:{t:"t3",v:[
+ {q:"מה ההיגיון של הפסקת הטיפול באמצע הניסוי?",a:"אם ההתנהגות חוזרת כשמפסיקים, זה סימן שהטיפול גרם לשינוי",w:["כדי לתת לילדים חופש","כי השיטה נכשלה","כדי לחסוך כסף"],e:"זה ההיגיון של מערך היפוך."},
+ {q:"מה המורה כן המשיכה לעשות בזמן ההפסקה?",a:"להזכיר לתלמידים מה ההתנהגויות הרצויות",w:["לתת פרסים בסתר","להעניש","לא לדבר בכלל"],e:"רק החיזוקים הופסקו."}]},
+q19:{t:"t4",v:[
+ {q:"מה היה הצעד הראשון במעבר לחיזוקים חברתיים?",a:"בחירה בין פרס מוחשי לבין מעמד מכובד, כמו אחריות על כדורי הספורט",w:["הפסקת כל הפרסים","ענישה","מתן כסף"],e:"וגם הוגדל הזמן עד לפרס."},
+ {q:"מה השתנה בזמן קבלת הפרס בשבועות 9 עד 12?",a:"הפרס ניתן כל יומיים במקום כל יום",w:["הפרס ניתן כל שעה","הפרס ניתן רק בסוף השנה","אין שינוי"],e:"הגדלת הזמן מקרבת לחיים."}]},
+q20:{t:"t4",v:[
+ {q:"\"אחראי על פינת החי\" הוא דוגמה לחיזוק:",a:"חברתי, שמקנה מעמד",w:["מוחשי","שלילי","עונש"],e:"מעמד מכובד בקרב התלמידים."},
+ {q:"מה ההבדל בין קרמבו לבין אחריות על כדורי הספורט כחיזוק?",a:"קרמבו הוא חיזוק מוחשי, אחריות היא חיזוק חברתי של מעמד",w:["אין הבדל","שניהם חברתיים","שניהם עונשים"],e:"זה לב המעבר בשלב השני."}]},
+q21:{t:"t4",v:[
+ {q:"מה החליף את האסימונים מהשבוע ה-13?",a:"הערכה יומית של המורה, מ\"מעט טוב\" עד \"טוב מאוד\"",w:["כסף","ציונים במבחן","שום דבר"],e:"והסיכום השבועי קבע את הפרס."},
+ {q:"מה היו שני הפרסים השבועיים בשלב החברתי?",a:"מכתב שבח להורים, והשתתפות בישיבת הצוות",w:["ממתקים וצעצועים","יום חופש וטיול","ציון ומדליה"],e:"שניהם חיזוקים חברתיים."}]},
+q22:{t:"t4",v:[
+ {q:"מי השתתף בישיבת הצוות בשבוע ה-16?",a:"כל תלמידי הכיתה",w:["רק המורה","אף תלמיד","רק תלמיד אחד"],e:"בשבועות הקודמים: 2 עד 3 מצטיינים בכל פעם."},
+ {q:"מי חתם על מכתב השבח להורים?",a:"מנהל בית הספר ומחנכת הכיתה",w:["התלמיד עצמו","השכנים","צוות המחקר בלבד"],e:"מכתב רשמי שמביע הערכה."}]},
+q23:{t:"t4",v:[
+ {q:"מה נחשב לשינוי החשוב ביותר בשבועות 13 עד 16?",a:"מהות הפרס: השתתפות בישיבות, שמקנה מעמד והערכה",w:["ההערכה הסובייקטיבית","מספר הממתקים","שעת הפרס"],e:"כאן היו מעורבים גורמים חברתיים נוספים."},
+ {q:"מה דורש פרס שניתן רק פעם בשבוע?",a:"הבנה של הקשר בין ההתנהגות לפרס, ונכונות לדחות סיפוק",w:["כסף רב","הורים בכיתה","צוות גדול"],e:"הקשר הופך עקיף ומופשט."}]},
+q24:{t:"t4",v:[
+ {q:"למה ההערכה בשלב החברתי נקראת \"סובייקטיבית\"?",a:"כי המורה העריכה בסוף היום, בלי קשר ישיר להתנהגויות ספציפיות בכל שיעור",w:["כי התלמידים העריכו את עצמם","כי לא הייתה הערכה","כי היא נעשתה במחשב"],e:"זה מקרב לאופן שבו מעריכים אותנו בחיים."},
+ {q:"מה המטרה של שלושת השינויים בשלב האחרון?",a:"לקרב את החיזוקים לאלה של חיי היום־יום",w:["להקשות על התלמידים","לחסוך בפרסים בלבד","להעניש את התלמידים"],e:"הערכה סובייקטיבית, פער זמן ופרס חברתי."}]},
+q25:{t:"t5",v:[
+ {q:"בין אילו שלבים נמצאה הירידה הברורה ביותר בהתנהגויות החריגות?",a:"בין קו הבסיס (A1) לסוף השלב הראשון (B1)",w:["בין B1 ל-A2","בין A2 ל-B2","לא הייתה ירידה"],e:"מובהקת בכל שלוש ההתנהגויות."},
+ {q:"מה קרה בזמן ההפסקה (A2)?",a:"ההתנהגויות עלו, אבל לא חזרו לרמה שלפני הניסוי",w:["ההתנהגויות נעלמו","ההתנהגויות חזרו בדיוק לרמת הבסיס","לא היה שינוי"],e:"ההבדל בין A1 ל-A2 היה מובהק."}]},
+q26:{t:"t5",v:[
+ {q:"מה קרה בשלב החיזוקים החברתיים (B2)?",a:"ירידה מתונה אך מובהקת בשלוש ההתנהגויות",w:["עלייה חדה","ירידה לאפס בכולן","אין שינוי"],e:"הכי מתונה בדיבור בלי הצבעה."},
+ {q:"איזו התנהגות ירדה הכי פחות בשלב החברתי?",a:"דיבור בלי הצבעה",w:["איחורים","הסתובבות","כולן ירדו באותה מידה"],e:"איחורים ירדו לאפס גם בשלב הזה."}]},
+q27:{t:"t6",v:[
+ {q:"מה היה \"הגורם החשוב ביותר\" להצלחה, לפי הכותבים?",a:"שיתוף התלמידים בתכנון ובהחלטות, דרך ההזמנה לישיבות הצוות",w:["הממתקים","גודל הכיתה","הצופים בכיתה"],e:"זה שינה את התפיסה העצמית של התלמידים."},
+ {q:"מה עשו התלמידים בישיבות הצוות?",a:"שוחחו על דרכים לשפר את התנהגות הכיתה, וקיבלו משימה לעזור לחבר",w:["קיבלו עונש","כתבו מבחן","שיחקו במחשב"],e:"הם קיבלו מעמד והערכה חברתית."}]},
+q28:{t:"t6",v:[
+ {q:"איך הגיבו ההורים למכתבי ההצטיינות?",a:"בחיוב רב, והמכתבים פתחו בפניהם תקווה לשיפור",w:["הם התעלמו","הם כעסו","הם לא קיבלו אותם"],e:"בעבר נהגו לשלוח מכתבים רק על התנהגות רעה."},
+ {q:"מתי הייתה אפשרית ההזמנה לישיבות הצוות?",a:"רק אחרי שחלק מההתנהגויות הבלתי מסתגלות כבר הוכחדו",w:["כבר ביום הראשון","אף פעם","רק בחופשה"],e:"לכן השלב המוחשי היה הכרחי קודם."}]},
+q29:{t:"t6",v:[
+ {q:"מה קרה ליעילות התכנית במעבר לחיזוקים טבעיים?",a:"היא ירדה מעט",w:["היא עלתה מאוד","היא ירדה לאפס","לא היה שינוי"],e:"כי החיזוקים הטבעיים לא תמיד ישירים ומיידיים."},
+ {q:"למה אי אפשר לצפות להכחדה מוחלטת של התנהגויות חריגות בסביבה טבעית?",a:"כי הקשר בין התנהגות לחיזוק לא תמיד רציף וישיר",w:["כי ילדים לא משתנים","כי השיטה לא עובדת","כי המורה לא ניסתה"],e:"אין אפשרות לתכנן את כל הסביבה."}]},
+q30:{t:"t6",v:[
+ {q:"מה הייתה התרומה של הזמן שהתפנה ללימודים?",a:"התחושה שגם המורה וגם התלמידים מסוגלים להצליח בלימודים חיזקה את השינוי",w:["הוא לא תרם","הוא הגביר הפרעות","הוא החליף את הפרסים"],e:"זה הגורם השני מתוך שלושה."},
+ {q:"מה מאפיין את התלמידים בכיתה, לפי הכותבים?",a:"ילדים \"שבעי כישלונות ודחייה\"",w:["ילדים מצטיינים","ילדים בלי קשיים","ילדים צעירים מאוד"],e:"לכן מעמד והערכה היו משמעותיים במיוחד עבורם."}]},
+q31:{t:"t6",v:[
+ {q:"מה קרה חודשיים אחרי סיום התכנית?",a:"חלק מהתלמידים ביקשו ביוזמתם לחדש אותה, בעיקר את הישיבות ואת מכתבי ההצטיינות",w:["כולם שכחו ממנה","ההורים התלוננו","התלמידים ביקשו ממתקים"],e:"זה מראה שהחיזוקים החברתיים היו משמעותיים."},
+ {q:"מה מלמדת הבקשה של התלמידים לחדש את התכנית?",a:"שהחיזוקים החברתיים נתפסו בעיניהם כמשמעותיים יותר מהמוחשיים",w:["שהם רצו עוד ממתקים","שהם לא אהבו את התכנית","שהמורה ביקשה מהם"],e:"הם ביקשו את הישיבות ואת המכתבים, לא את הפרסים."}]},
+q32:{t:"t6",v:[
+ {q:"מה המסקנה הכללית של המאמר?",a:"כלכלת אסימונים יעילה בבית ספר, והמעבר לחיזוקים חברתיים עולה במעט יעילות אבל משמעותי יותר",w:["השיטה נכשלה","רק עונשים עובדים","חיזוקים מוחשיים עדיפים תמיד"],e:"שילוב של יעילות מיידית ומשמעות לטווח ארוך."},
+ {q:"לפי המאמר, איך כדאי לעבור מחיזוקים מוחשיים לחברתיים?",a:"בהדרגה: קודם בחירה, אחר כך יותר זמן, ואז פרסים חברתיים מופשטים",w:["בבת אחת","בלי הסבר","רק אם ההורים מסכימים"],e:"כך נבנה המעבר בשלב השני."}]}
+};
+for(const t of T) t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id);
+const KEY=CONFIG.key;
+let S={q:{},read:{}};
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.q) S=s;}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const st=id=>S.q[id]||(S.q[id]={n:0,c:0,w:0,t:0,lv:-1});
+const mastered=id=>(S.q[id]?.c||0)>=2;
+const topicPct=t=>Math.round(100*t.qids.filter(mastered).length/t.qids.length);
+const topicStarted=t=>S.read[t.id]||t.qids.some(id=>S.q[id]&&S.q[id].n);
+const allIds=Object.keys(Q);
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+const pickVariant=id=>{const s=st(id),n=Q[id].v.length;return n>1?(s.lv+1)%n:0};
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const color=t=>`var(--${t.id})`;
+const app=document.getElementById("app");
+const LET=["א","ב","ג","ד"];
+
+function qCard(id,onDone,label){
+  const vi=pickVariant(id),v=Q[id].v[vi],opts=shuffle([v.a,...v.w]);
+  const box=document.createElement("div");box.className="q fade";
+  box.innerHTML=(label?`<span class="eyebrow">${label}</span>`:"")+`<div class="qtext">${esc(v.q)}</div><div class="opts"></div>`;
+  const wrap=box.querySelector(".opts");
+  opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt";b.dataset.a=o===v.a?"1":"";
+    b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+    b.onclick=()=>{const ok=o===v.a,s=st(id);s.n++;s.t=Date.now();s.lv=vi;ok?s.c++:(s.c=0,s.w++);save();
+      wrap.querySelectorAll("button").forEach(x=>{x.disabled=true;if(x.dataset.a)x.classList.add("right")});
+      if(!ok)b.classList.add("wrong");
+      const fb=document.createElement("div");fb.className="fb fade "+(ok?"ok":"no");
+      fb.innerHTML=`${ic(ok?"check":"x")}<div><strong>${ok?"נכון!":"לא בדיוק"}</strong>${esc(v.e)}</div>`;box.appendChild(fb);
+      const nx=document.createElement("button");nx.className="primary";nx.textContent="המשך";nx.style.alignSelf="flex-start";
+      nx.onclick=()=>onDone(ok);box.appendChild(nx);nx.focus({preventScroll:true});nx.scrollIntoView({block:"nearest",behavior:"smooth"});
+    };wrap.appendChild(b)});
+  return box;
+}
+
+function home(){
+  document.body.style.removeProperty("--c");
+  const started=T.filter(topicStarted);
+  const total=Math.round(100*allIds.filter(mastered).length/allIds.length);
+  const weak=allIds.filter(id=>S.q[id]&&S.q[id].n&&!mastered(id)).length;
+  app.innerHTML=`<div class="stack fade">
+   <section class="cover" style="--c:var(--accent)">
+    <div class="cover-art">${FIG[CONFIG.cover]()}</div>
+    <div class="cover-body">
+     <span class="eyebrow">${CONFIG.eyebrow}</span>
+     ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
+     <p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר עם שאלות גם מנושאים קודמים.</p>
+     <div class="stats">
+      <div class="ring" style="--p:${total}"><span>${total}%</span></div>
+      <div class="stat-text"><b>${total===0?"עוד לא התחלת":total>=80?"אתה שולט בחומר":"בדרך"}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
+      <button class="primary review-btn" id="rev" ${started.length?"":"disabled"}>${ic("cycle")}<span>${started.length?"חזרה מהירה":"חזרה מהירה (אחרי נושא ראשון)"}</span></button>
+     </div>
+    </div>
+   </section>
+   <div class="grid" id="list"></div>
+   <div class="foot"><a href="../#intro" style="color:var(--accent);font-weight:700;text-decoration:none">→ לקורס</a><span>${CONFIG.note}</span><button class="ghost" id="reset">איפוס התקדמות</button></div>
+  </div>`;
+  document.querySelector("#rev svg").style.cssText="width:20px;height:20px";
+  const list=app.querySelector("#list");
+  T.forEach((t,i)=>{const p=topicPct(t),b=document.createElement("button");b.className="tcard";b.style.setProperty("--c",color(t));
+    const status=!topicStarted(t)?"לא התחלת":p>=80?"שולט":"בתהליך";
+    b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
+    b.onclick=()=>topic(i,0);list.appendChild(b)});
+  app.querySelector("#rev").onclick=review;
+  const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
+  scrollTo(0,0);
+}
+
+function bar(title,n,i,label){
+  return `<div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">${label}</span></div><div class="steps">${Array.from({length:n},(_,k)=>`<i class="${k<=i?"on":""}"></i>`).join("")}</div></div><span class="eyebrow">${title}</span>`;
+}
+
+function topic(ti,bi){
+  const t=T[ti],blk=t.blocks[bi];document.body.style.setProperty("--c",color(t));
+  app.innerHTML=`<div class="stack">${bar(`נושא ${ti+1} · ${t.title}`,t.blocks.length+1,bi,`קטע ${bi+1} מתוך ${t.blocks.length}`)}
+   <article class="card fade"><h3>${blk.h}</h3>${blk.html}</article><div id="slot"></div></div>`;
+  app.querySelector("#back").onclick=home;
+  const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;save();quiz(ti)}};
+  const slot=app.querySelector("#slot");
+  if(blk.q)slot.appendChild(qCard(blk.q,next,"בדיקה קצרה"));
+  else{const b=document.createElement("button");b.className="primary";b.textContent="המשך";b.onclick=next;slot.appendChild(b)}
+  scrollTo(0,0);
+}
+
+function runSet(title,ids,c,onEnd){
+  let i=0,right=0;document.body.style.setProperty("--c",c);
+  const step=()=>{
+    if(i>=ids.length)return onEnd(right,ids.length);
+    const id=ids[i],from=T.find(t=>t.id===Q[id].t);
+    app.innerHTML=`<div class="stack">${bar(title,ids.length,i,`שאלה ${i+1} מתוך ${ids.length}`)}<div id="slot"></div></div>`;
+    app.querySelector("#back").onclick=home;
+    const card=qCard(id,ok=>{if(ok)right++;i++;step()},from.title);card.style.setProperty("--c",color(from));
+    app.querySelector("#slot").appendChild(card);scrollTo(0,0);
+  };step();
+}
+
+function quiz(ti){
+  const t=T[ti];
+  const prev=T.slice(0,ti).filter(topicStarted).flatMap(x=>x.qids);
+  const extra=shuffle(prev).sort((a,b)=>st(a).c-st(b).c).slice(0,2);
+  runSet(`מבחן סיום · ${t.title}`,shuffle(t.qids).concat(extra),color(t),(r,n)=>done(r,n,ti));
+}
+
+function review(){
+  const pool=T.filter(topicStarted).flatMap(t=>t.qids),now=Date.now();
+  const score=id=>{const s=S.q[id]||{n:0,c:0,w:0,t:0};return (s.n?0:2)+s.w*2+(s.c<2?3:0)+Math.min(3,(now-s.t)/864e5)+Math.random()*2};
+  const ids=pool.map(id=>[id,score(id)]).sort((a,b)=>b[1]-a[1]).slice(0,12).map(x=>x[0]);
+  runSet("חזרה מהירה",shuffle(ids),"var(--accent)",(r,n)=>done(r,n,null));
+}
+
+function done(r,n,ti){
+  const nextT=ti!=null&&ti+1<T.length?ti+1:null,pct=Math.round(100*r/n);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">${ti!=null?`סיום נושא ${ti+1} · ${T[ti].title}`:"סיום חזרה מהירה"}</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct};--accent:var(--c)"><span>${pct}%</span></div><div class="big">${r}/${n}</div></div>
+    <p>${r===n?"מצוין, הכל נכון.":r>=n*0.7?"טוב מאוד. מה שטעית בו יחזור בחזרה המהירה, בניסוח אחר.":"כדאי לעבור שוב על הנושא. השאלות שטעית בהן יחזרו בחזרה המהירה."}</p>
+    <div class="row">${nextT!=null?`<button class="primary" id="nx" style="--c:${color(T[nextT])}">לנושא הבא: ${T[nextT].title}</button>`:""}<button id="hm">לכל הנושאים</button></div>
+   </article></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;
+  const nx=app.querySelector("#nx");if(nx)nx.onclick=()=>topic(nextT,0);
+  scrollTo(0,0);
+}
+home();
+</script>
+</body>
+</html>

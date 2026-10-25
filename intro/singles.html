@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>לומדת חובת קריאה: רווקים ורווקות באי־החלטיות מתמשכת</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Rubik:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: a study notebook. Home = illustrated cover + topic cards; topic = one reading card at a time, with a highlighter for key terms and drawn figures */
+:root{
+  --bg:#eef2f4; --surface:#ffffff; --raised:#f7f9fa; --ink:#15222a; --muted:#4c5b66; --line:#dbe2e6;
+  --accent:#2457a6; --mark:#ffe27a; --good:#23855a; --good-soft:#e2f4ea; --bad:#c2452d; --bad-soft:#fbe6e1;
+  --t1:#d35d36; --t2:#3667cf; --t3:#0e8a7c; --t4:#8448c9; --t5:#b9800c; --t6:#2a7fa6;
+  --display:"Suez One","Frank Ruhl Libre","David",serif;
+  --body:"Rubik","Arial Hebrew","Segoe UI",Arial,sans-serif;
+  --shadow:0 1px 2px rgba(21,34,42,.06),0 8px 24px rgba(21,34,42,.07);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;font-weight:500;line-height:1.75;direction:rtl}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
+p{margin:0}
+.stack{display:flex;flex-direction:column;gap:16px}
+.muted{color:var(--muted)}
+mark{background:linear-gradient(transparent 38%,var(--mark) 38%,var(--mark) 92%,transparent 92%);color:inherit;padding:0 2px;font-weight:600}
+button{font:inherit;cursor:pointer;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:11px 18px}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button[disabled]{opacity:.55;cursor:default}
+.primary{background:var(--c,var(--accent));border-color:var(--c,var(--accent));color:var(--surface);font-weight:600}
+.ghost{background:transparent;border:none;color:var(--muted);padding:6px 2px}
+.ghost:hover{color:var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.badge{display:inline-block;align-self:flex-start;font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:99px;background:var(--accent);color:var(--surface);margin-bottom:6px}.entitle{display:inline;unicode-bidi:isolate;font-family:Rubik,system-ui,sans-serif;font-weight:800}.hetitle{margin:4px 0 0;font-weight:700;font-size:1.05rem}.cite{text-align:right;margin:4px 0 0;font-size:.85rem;color:var(--muted)}.cite a{color:var(--accent)}
+.eyebrow{font-size:.8rem;letter-spacing:.05em;font-weight:600;color:var(--c,var(--muted))}
+
+/* home */
+.cover{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.cover-art{background:var(--raised);border-bottom:1px solid var(--line);padding:8px 8px 0}
+.cover-art svg{display:block;width:100%;height:auto;max-height:230px}
+.cover-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px}
+.cover h1{font-size:clamp(2rem,6vw,2.6rem);font-weight:900}
+.stats{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.ring{--p:0;width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center;flex:none}
+.ring span{width:50px;height:50px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.9rem;font-variant-numeric:tabular-nums}
+.stat-text{display:flex;flex-direction:column;line-height:1.35;flex:1;min-width:160px}
+.stat-text b{font-size:1.05rem}
+.review-btn{display:flex;align-items:center;gap:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.tcard{--c:var(--accent);text-align:right;padding:0;overflow:hidden;border:none;border-radius:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s}
+.tcard:hover{transform:translateY(-2px)}
+.tcard .band{background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.tcard .band svg{width:44px;height:44px}
+.tcard .n{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;opacity:.85}
+.tcard .body{padding:12px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tcard .t{font-weight:700;font-size:1.05rem;line-height:1.35}
+.bar{height:7px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--c);border-radius:4px}
+.meta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip{font-size:.75rem;padding:3px 10px;border-radius:99px;font-weight:600;background:color-mix(in srgb,var(--c,var(--accent)) 14%,transparent);color:var(--c,var(--accent));white-space:nowrap}
+.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+
+/* topic */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;display:flex;flex-direction:column;gap:8px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.steps{display:flex;gap:5px}
+.steps i{flex:1;height:5px;border-radius:3px;background:var(--line)}
+.steps i.on{background:var(--c)}
+.prog{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tt{font-size:1.6rem;font-weight:900}
+.card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px}
+.card h3{font-size:1.25rem;color:var(--c)}
+.fig{background:var(--raised);border-radius:14px;padding:10px;margin-inline:-4px}
+.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{font-size:.8rem;color:var(--muted);text-align:center;margin-top:4px}
+figure{margin:0}
+.def{border:1.5px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 6%,var(--surface));border-radius:14px;padding:14px 16px}
+.lbl{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:var(--c);margin-bottom:4px}
+.who{display:flex;gap:12px;align-items:flex-start}
+.who .av{flex:none;width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.15rem}
+.who .yr{font-size:.8rem;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.tile{background:var(--raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile svg{width:32px;height:32px;color:var(--c)}
+.tile b{font-size:.98rem}
+.tile span{font-size:.88rem;color:var(--muted);line-height:1.45}
+.ex{background:var(--raised);border-radius:12px;padding:12px 14px;font-size:.95rem}
+.ex .lbl{color:var(--muted)}
+.yesno{display:flex;flex-wrap:wrap;gap:8px}
+.yn{padding:5px 12px;border-radius:99px;font-size:.88rem;font-weight:500;display:inline-flex;gap:6px;align-items:center}
+.yn.y{background:var(--good-soft);color:var(--good)} .yn.n{background:var(--bad-soft);color:var(--bad)}
+.spectrum{display:flex;flex-direction:column;gap:6px}
+.spectrum .track{height:12px;border-radius:6px;background:linear-gradient(90deg,var(--bad),var(--line) 50%,var(--good));position:relative}
+.spectrum .dot{position:absolute;top:50%;left:50%;width:20px;height:20px;border-radius:50%;background:var(--surface);border:3px solid var(--ink);transform:translate(-50%,-50%)}
+.spectrum .ends{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);gap:10px}
+.remember{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;border-top:1px dashed var(--line);padding-top:12px}
+.remember svg{flex:none;width:22px;height:22px;color:var(--c)}
+
+/* question */
+.q{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:12px}
+.qtext{font-weight:600;font-size:1.08rem;line-height:1.55}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{text-align:right;line-height:1.45;display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--raised);border:1.5px solid transparent}
+.opt:hover:not([disabled]){border-color:var(--c)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:8px;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.85rem;color:var(--c)}
+.opt.right{background:var(--good-soft);border-color:var(--good);opacity:1}
+.opt.right .k{background:var(--good);color:var(--surface)}
+.opt.wrong{background:var(--bad-soft);border-color:var(--bad);opacity:1}
+.opt.wrong .k{background:var(--bad);color:var(--surface)}
+.fb{padding:12px 14px;border-radius:12px;font-size:.95rem;display:flex;gap:10px;align-items:flex-start}
+.fb svg{flex:none;width:22px;height:22px;margin-top:2px}
+.fb.ok{background:var(--good-soft)} .fb.ok svg{color:var(--good)}
+.fb.no{background:var(--bad-soft)} .fb.no svg{color:var(--bad)}
+.fb strong{display:block}
+.big{font-family:var(--display);font-size:3.4rem;font-weight:900;color:var(--c);font-variant-numeric:tabular-nums;line-height:1}
+@media (prefers-reduced-motion:no-preference){.fade{animation:f .3s ease-out}@keyframes f{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+
+/* svg figure classes */
+.s-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.s-c{stroke:var(--c);stroke-width:2;fill:none}
+.f-c{fill:var(--c)}
+.f-soft{fill:color-mix(in srgb,var(--c) 16%,var(--surface))}
+.f-surf{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.f-ink{fill:var(--ink)}
+.f-mut{fill:var(--muted)}
+.f-inv{fill:var(--surface)}
+svg text{font-family:var(--body)}
+h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
+.card p,.def p,.tile span,.ex p{font-weight:500}
+.qtext{font-weight:700}
+.tile b,.who b{font-weight:700}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:.95rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.tbl th,.tbl td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl th{background:color-mix(in srgb,var(--c) 10%,var(--surface));color:var(--c);font-weight:700;font-size:.85rem}
+.tbl .in{color:var(--c);font-weight:700}.tbl .out{color:var(--muted);font-weight:700}
+.tblwrap{overflow-x:auto}
+.en{font-size:.82em;color:var(--muted);font-weight:500;direction:ltr;unicode-bidi:isolate}
+</style>
+<style>:root{--accent:#6a46c2}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent:#ad90f2}}:root[data-theme="dark"]{--accent:#ad90f2}</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const CONFIG={key:"lomda-intro-singles",cover:"cover12",eyebrow:"מבוא לפסיכולוגיה · מאמר בעברית",title:"רווקים ורווקות באי־החלטיות מתמשכת",cite:`אסיף, שפירא ורומי (2016). רווקים ורווקות באי־החלטיות מתמשכת: היבטים תפיסתיים ורגשיים בתהליך ביסוס הזוגיות. <i>מגמות, נ</i>(3), 148–179.`,note:"מבוסס על המאמר במגמות (2016). המונחים באנגלית מופיעים בסוגריים."};
+const I={
+ building:'<path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h2M14 8h2M8 12h2M14 12h2M10 21v-4h4v4"/>',
+ people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
+ cycle:'<path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/>',
+ pyramid:'<path d="M12 3L2.5 20h19z"/><path d="M8.2 10.5h7.6M5.5 15.2h13"/>',
+ chart:'<path d="M4 20V10M9.5 20V4M15 20v-7M20.5 20V8M2 20h20"/>',
+ gear:'<circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="7.5" stroke-dasharray="3.2 2.7" stroke-width="3.2"/>',
+ sprout:'<path d="M12 21v-9"/><path d="M12 14C7 14 4.5 11 4.5 6.5 9 6.5 12 9 12 14z"/><path d="M12 12c0-4.5 3-7 7.5-7 0 4.5-3 7-7.5 7z"/>',
+ scales:'<path d="M12 3v17M7 20h10M4 7h16"/><path d="M4 7l-2.5 6h5zM20 7l-2.5 6h5z"/>',
+ factory:'<path d="M3 21V10l5 3v-3l5 3V5h4v16zM1.5 21h21M17 9h4v12"/>',
+ question:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 1 1 3.6 2.4c-.8.4-1.1.9-1.1 1.8"/><path d="M12 17h.01"/>',
+ data:'<ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6M4.5 11.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6"/>',
+ doc:'<path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/>',
+ split:'<circle cx="12" cy="4.5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="12" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/><path d="M12 6.7v10M12 11l-6 6M12 11l6 6"/>',
+ grad:'<path d="M1.5 9L12 4l10.5 5L12 14z"/><path d="M6 11.2V16c3.3 2.4 8.7 2.4 12 0v-4.8M21 10v5"/>',
+ copies:'<rect x="3" y="7" width="12" height="14" rx="2"/><path d="M7 4h11a2 2 0 0 1 2 2v12"/>',
+ link:'<rect x="2" y="8" width="11" height="8" rx="4"/><rect x="11" y="8" width="11" height="8" rx="4"/>',
+ hand:'<circle cx="8" cy="7" r="3"/><circle cx="16" cy="7" r="3"/><path d="M2.5 20c0-3.3 2.5-6 5.5-6 1.6 0 3 .7 4 1.9 1-1.2 2.4-1.9 4-1.9 3 0 5.5 2.7 5.5 6"/>',
+ target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',
+ id:'<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><circle cx="8.5" cy="11" r="2.3"/><path d="M5 16c.6-1.6 2-2.4 3.5-2.4S11.4 14.4 12 16M14.5 10h4M14.5 13.5h3"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>',
+ pie:'<path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/>',
+ cart:'<path d="M2 3h3l2.5 12h11l2-8H6.5"/><circle cx="9" cy="19.5" r="1.6"/><circle cx="17" cy="19.5" r="1.6"/>',
+ bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/>',
+ check:'<circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/>',
+ x:'<circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/>',
+ lock:'<rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>',
+ moon:'<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>',
+ brain:'<path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a2 2 0 0 0-3-1z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/>',
+ phone:'<rect x="6.5" y="2" width="11" height="20" rx="2.5"/><path d="M10.5 18.5h3"/>',
+ flask:'<path d="M9 2.5h6M10 2.5v6L4.5 19a2 2 0 0 0 1.8 2.9h11.4a2 2 0 0 0 1.8-2.9L14 8.5v-6"/><path d="M7 15h10"/>',
+ leaf:'<path d="M5 19C5 10 11 4 20 4c0 9-6 15-15 15z"/><path d="M5 19l8-8"/>'
+};
+const ic=(k,cls="")=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="${cls}" aria-hidden="true">${I[k]}</svg>`;
+
+const arrowDef=id=>`<defs><marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="f-c"/></marker></defs>`;
+
+const FIG={
+ cover12:()=>`<svg viewBox="0 0 400 228" role="img" aria-label="שני שבילים מתפצלים וסימן שאלה">
+  <circle cx="200" cy="112" r="90" class="f-soft"/>
+  <path d="M200 210 V140 Q200 110 150 80 M200 140 Q200 110 250 80" class="s-c" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <circle cx="146" cy="70" r="18" class="f-surf"/><circle cx="254" cy="70" r="18" class="f-surf"/>
+  <path d="M140 66a6 6 0 0 1 12 0c0 6-12 8-12 14M254 62v12" class="s-line" stroke-width="3" fill="none"/>
+  <circle cx="146" cy="84" r="2" class="f-ink"/><circle cx="254" cy="79" r="2" class="f-ink"/>
+  <text x="200" y="128" text-anchor="middle" font-size="28" font-weight="800" class="f-c">?</text></svg>`,
+ rusbult:()=>{const C=[[298,58,"הבעה","Voice","שיחה, הצעת פתרונות",true],[102,58,"עזיבה","Exit","פרידה, ניתוק",false],[298,148,"נאמנות","Loyalty","מחכים שישתפר",false],[102,148,"הזנחה","Neglect","התעלמות, התרחקות",false]];
+  return `<svg viewBox="0 0 400 216" role="img" aria-label="ארבע תגובות לחוסר שביעות רצון לפי רוזבולט">
+  <text x="300" y="14" text-anchor="middle" font-size="12" font-weight="700" class="f-mut">בונה</text><text x="100" y="14" text-anchor="middle" font-size="12" font-weight="700" class="f-mut">הרסני</text>
+  ${C.map(([x,y,h,e,d,m])=>`<rect x="${x-72}" y="${y-36}" width="144" height="80" rx="12" class="${m?"f-c":"f-soft"}"/><text x="${x}" y="${y-8}" text-anchor="middle" font-size="15" font-weight="800" class="${m?"f-inv":"f-ink"}">${h}</text><text x="${x}" y="${y+10}" text-anchor="middle" font-size="10.5" class="${m?"f-inv":"f-mut"}">${e}</text><text x="${x}" y="${y+28}" text-anchor="middle" font-size="11" class="${m?"f-inv":"f-mut"}">${d}</text>`).join("")}
+  <text x="200" y="64" text-anchor="middle" font-size="10" font-weight="700" class="f-mut">אקטיבי</text><text x="200" y="154" text-anchor="middle" font-size="10" font-weight="700" class="f-mut">פסיבי</text>
+  <text x="200" y="210" text-anchor="middle" font-size="11" class="f-mut">רק \"הבעה\" בונה וגם אקטיבית: התגובה המקדמת ביותר</text></svg>`},
+ path:()=>`<svg viewBox="0 0 400 236" role="img" aria-label="מודל הנתיבים: תפיסה עצמית מובילה לפסימיות ולחרדה">${arrowDef("pa")}
+  <rect x="270" y="20" width="118" height="54" rx="12" class="f-c"/><text x="329" y="44" text-anchor="middle" font-size="12.5" font-weight="800" class="f-inv">תפיסה עצמית</text><text x="329" y="62" text-anchor="middle" font-size="12.5" font-weight="800" class="f-inv">וזהות</text>
+  <rect x="141" y="20" width="118" height="54" rx="12" class="f-soft"/><text x="200" y="52" text-anchor="middle" font-size="12.5" font-weight="800" class="f-ink">תפיסות פסימיות</text>
+  <rect x="12" y="20" width="118" height="54" rx="12" class="f-soft"/><text x="71" y="52" text-anchor="middle" font-size="12.5" font-weight="800" class="f-ink">חרדה</text>
+  <line x1="268" y1="47" x2="262" y2="47" class="s-c" marker-end="url(#pa)"/><line x1="139" y1="47" x2="133" y2="47" class="s-c" marker-end="url(#pa)"/>
+  <path d="M329 76 Q200 116 76 78" fill="none" class="s-c" marker-end="url(#pa)"/>
+  <text x="265" y="38" font-size="10" text-anchor="middle" class="f-mut">\u2066.57\u2069</text><text x="136" y="38" font-size="10" text-anchor="middle" class="f-mut">\u2066.52\u2069</text><text x="200" y="110" font-size="10" text-anchor="middle" class="f-mut">\u2066.48\u2069</text>
+  <rect x="12" y="140" width="376" height="86" rx="12" class="f-surf"/>
+  <text x="200" y="164" text-anchor="middle" font-size="12" font-weight="700" class="f-ink">תפיסה עצמית וזהות נמוכות ← יותר עזיבה והזנחה, פחות הבעה</text>
+  <text x="200" y="186" text-anchor="middle" font-size="12" font-weight="700" class="f-ink">תפיסות פסימיות ← יותר הזנחה, פחות הבעה</text>
+  <text x="200" y="208" text-anchor="middle" font-size="12" font-weight="700" class="f-ink">חרדה ← דווקא יותר הבעה</text></svg>`
+};
+const clustersTable=`<div class="tblwrap"><table class="tbl"><thead><tr><th>אשכול</th><th>הקטגוריות</th></tr></thead><tbody>
+<tr><td><b>תפיסות פסימיות</b><br><span class="muted" style="font-size:.85rem">הטיות קוגניטיביות שליליות</span></td><td>פסימיות לגבי <b>תהליך</b> ההחלטה · לגבי <b>התחום</b> (\"הגברים היום לא בשלים להתחייבות\") · לגבי <b>השליטה</b> (\"זה עניין של מזל\")</td></tr>
+<tr><td><b>חרדה</b><br><span class="muted" style="font-size:.85rem">תגובות רגשיות</span></td><td>חרדת <b>תהליך</b> (פרפקציוניזם) · חרדת <b>אי־ודאות</b> · חרדת <b>אחריות</b> (כאב ההחמצה) · חרדת <b>תוצאה</b> (חשש להיתקע)</td></tr>
+<tr><td><b>תפיסה עצמית וזהות</b><br><span class="muted" style="font-size:.85rem">היבטים התפתחותיים ואישיותיים</span></td><td><b>יציבות</b> הזהות · <b>הערכה עצמית</b> · קונפליקט <b>היקשרות והיפרדות</b> · חרדת תפיסה עצמית כללית</td></tr></tbody></table></div>`;
+const E=t=>`<span class="en">(${t})</span>`;
+const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</figcaption>`:""}</figure>`;
+const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
+const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;
+const tiles=a=>`<div class="tiles">${a.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`;
+const ex=h=>`<div class="ex"><span class="lbl">דוגמה</span><p>${h}</p></div>`;
+const rem=h=>`<div class="remember">${ic("bulb")}<p>${h}</p></div>`;
+const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")}${t}</span>`).join("")}${n.map(t=>`<span class="yn n">${ic("x")}${t}</span>`).join("")}</div>`;
+const spectrum=(r,l,dot)=>`<div class="spectrum"><div class="track">${dot?'<span class="dot"></span>':""}</div><div class="ends"><span>${r}</span><span>${l}</span></div></div>`;
+document.head.insertAdjacentHTML("beforeend",'<style>.yn svg{width:16px;height:16px}</style>');
+
+const T=[
+ {id:"t1",icon:"question",title:"למה לחקור רווקות כהחלטה",blocks:[
+  {h:"השאלה של המחקר",html:`<p>המחקר בודק <b>קשיים מתמשכים בקבלת החלטה</b> על התחייבות לזוגיות ארוכת טווח. מחקרים קודמים התמקדו במשתני רקע (תרבות, מעמד, מוצא) או בקווי אישיות (כמו דפוסי היקשרות), אבל לא ב<b>תהליך קבלת ההחלטה</b> עצמו.</p>${rem("בשלב הרווקות ההחלטה חוזרת שוב ושוב: האם להמשיך את הקשר, אולי לפני כל פגישה. זה תהליך מתמשך ורב־שלבי, עם ממדים קוגניטיביים, רגשיים ואישיותיים.")}${ex("מתחילת שנות ה-2000 מצטברים דיווחים על התארכות הרווקות, בגלל דחייה וביטול חוזרים של ההחלטה להתחייב. וזה למרות שהרווקים עצמם מצהירים על רצון עז, ואפילו דחוף, להינשא.")}`,q:"q1"},
+  {h:"רווקות בתרבות ובחברה הדתית",html:`<p>לפי להד ושושנה (2012), בתרבות הפופולרית רווקות מוצגת כ<b>בעיה וחוסר</b> (\"לא נשוי\"), ונישואין כקטגוריה עם זכויות יתר מובנות מאליהן.</p>${tiles([["people","מוטיבציה גבוהה","באוכלוסייה הדתית המוטיבציה להתחתן בולטת, עם משמעויות אישיות וחברתיות כבדות"],["x","הסברים חילוניים לא עובדים","מגורים משותפים לפני נישואין, למשל, לא מסבירים רווקות מאוחרת בחברה הדתית"],["target","לכן המדגם","דתיים: שם הפער בין הרצון להינשא לבין העיכוב חד במיוחד"]])}`,q:"q3"},
+  {h:"ההקבלה לבחירת מקצוע",html:`<p>בחירת מקצוע נחקרה לעומק, בניגוד לבחירת זוגיות. שילה ושנהב־שפר (2004) הראו נקודות דמיון רבות בין שני התחומים:</p>${tiles([["target","חשיבות","החלטה משמעותית מאוד"],["copies","הרבה אפשרויות","מורכבת, עם הרבה אפשרויות היפותטיות"],["chart","רב־ממדית","ומעסיקה ומטרידה צעירים רבים"],["id","זהות","שתיהן נדבך מרכזי בגיבוש הזהות ובסיפוק בחיים הבוגרים"]])}`,q:"q5"}
+ ]},
+ {id:"t2",icon:"brain",title:"מודל קר\"ב: מקורות אי־ההחלטיות",blocks:[
+  {h:"מקוגניציה לרגש",html:`<p>גטי, קראוז ואוסיפו (1996) פיתחו טקסונומיה מבוססת של קשיי החלטה בבחירת מקצוע, אבל היא מתמקדת בעיקר בקשיים <b>קוגניטיביים</b> (איסוף ועיבוד מידע).</p><p>מחקרים עדכניים מראים שגם גורמים <b>רגשיים ואישיותיים</b> מעורבים: הערכה עצמית נמוכה, חוללות עצמית נמוכה, מיקוד שליטה חיצוני, חרדה, זהות לא מגובשת וקושי בהיפרדות מאחרים משמעותיים.</p>${def("מושג מפתח",`<mark>מודל קר\"ב</mark>, קשיים רגשיים בהחלטה (סקה, 2005): 11 קטגוריות של <mark>אי־החלטיות מתמשכת</mark> ${E("Indecisiveness")}, שמתקבצות ל<b>שלושה אשכולות</b>.`)}`,q:"q7"},
+  {h:"שלושת האשכולות",html:`${clustersTable}${rem("החוקרים בחרו במודל קר\"ב ולא במודל של גטי, כי בחירת בן זוג מערבת הרבה גורמים <b>רגשיים</b>, ומודל גטי חסר אותם.")}`,q:"q9"}
+ ]},
+ {id:"t3",icon:"scales",title:"איך מגיבים לחוסר שביעות רצון",blocks:[
+  {h:"שלושה שלבים בדרך לנישואין",html:`${tiles([["target","1. זיהוי","זיהוי ראשוני של בני זוג שעשויים להתאים"],["link","2. פגישה","החלטה לצאת לפגישת היכרות"],["cycle","3. להמשיך?","רצף חוזר של החלטות: להמשיך או לסיים"]])}<p>בשלב השלישי, תסכול וחוסר שביעות רצון יכולים \"להציף\" מאפיינים תפיסתיים, רגשיים ואישיותיים שישפיעו על ההחלטה.</p>`,q:"q11"},
+  {h:"המודל של רוזבולט",html:`${fig("rusbult")}<p>רוזבולט ועמיתיה מיינו תגובות לחוסר שביעות רצון לפי שני צירים: <b>בנייה מול הרס</b> ו<b>אקטיביות מול פסיביות</b>. הרעיון: החלטות מתקבלות כדי להגדיל רווח נפשי ולהקטין הפסדים.</p>${def("מה נחשב לא מקדם",`תגובות <b>פסיביות או הרסניות</b> הן תגובות של אי־החלטיות. הן פוגעות פעמיים: גם בקשר וגם בשביעות הרצון של האדם, ומוסיפות לתסכול.`)}`,q:"q13"},
+  {h:"ההשערות",html:`<p><b>המשתנה הבלתי תלוי:</b> מידת אי־ההחלטיות (ושלושת האשכולות). <b>המשתנה התלוי:</b> דפוס התגובה לחוסר שביעות רצון.</p>${tiles([["chart","השערה 1","יותר אי־החלטיות ← יותר תגובות הרסניות ופסיביות, פחות הבעה"],["x","השערה 2","יותר תפיסות פסימיות ← יותר תגובות הרסניות"],["clock","השערה 3","יותר חרדה ← יותר תגובות פסיביות"],["id","השערה 4","יותר קושי בתפיסה עצמית וזהות ← יותר תגובות פסיביות"]])}`,q:"q15"}
+ ]},
+ {id:"t4",icon:"flask",title:"השיטה",blocks:[
+  {h:"המשתתפים",html:`${tiles([["people","213 משתתפים","49 גברים ו-164 נשים, גילאי 19 עד 48 (ממוצע 26)"],["id","רווקים דתיים","בתהליך היכרויות לנישואין כבר כמה שנים (ממוצע כ-4.75)"],["clock","התחילו בגיל 21","בממוצע. גברים מעט מאוחר יותר מנשים"]])}<p>גויסו בשיטת \"חבר מביא חבר\" ובמודעות באתרי היכרויות לציבור הדתי. מילאו את השאלונים <b>באינטרנט, באופן אנונימי</b>.</p>`,q:"q17"},
+  {h:"הכלים",html:`${def("שאלון קשיים רגשיים בבחירת בן זוג",`הותאם משאלון בחירת <b>קריירה</b> (53 פריטים). למשל: \"רוב האנשים אינם מרוצים מחייהם המקצועיים\" הפך ל\"רוב האנשים אינם מרוצים מחיי הנישואין שלהם\". סולם 1 עד 9.`)}${tiles([["check","מהימנות גבוהה","במחקר מקדים עם 41 רווקים: α = .95 למדד הכולל"],["chart","ניתוח גורמים מאשש","(CFA) אישש את שלושת האשכולות, כמו בבחירת מקצוע"],["doc","שאלון רוזבולט","28 פריטים על ארבע התגובות. תורגם לעברית"]])}${rem("מהתגובות חושבו מדדים: <b>מידת הקידום</b> (הבעה פחות הזנחה), ושני צירים: <b>אקטיביות־פסיביות</b> ו<b>בנייה־הרס</b>.")}`,q:"q19"},
+  {h:"תמונת מצב",html:`${tiles([["x","כ-80%","לא היו בקשר בזמן המילוי"],["chart","7.89 מתוך 9","הרצון להינשא בשנה הנוכחית: גבוה מאוד"],["check","בעיקר הבעה","רוב המשתתפים דיווחו על תגובות אקטיביות ובונות"]])}${ex("גברים דיווחו על תגובות <b>אקטיביות יותר</b> מנשים (הבדל מובהק).")}`,q:"q21"}
+ ]},
+ {id:"t5",icon:"chart",title:"הממצאים",blocks:[
+  {h:"השערות 1 ו-2: אוששו",html:`${def("השערה 1",`חלוקה לארבע קבוצות לפי רמת אי־ההחלטיות הראתה השפעה מובהקת: ככל שאי־ההחלטיות גבוהה יותר, התגובות <b>פחות מקדמות</b>. <b>אוששה.</b>`)}${def("השערה 2",`ככל שהתפיסות הפסימיות חזקות יותר, הנטייה להגיב <b>באופן הרסני</b> חזקה יותר. גם קושי שנחווה במציאת בן זוג ניבא תגובות הרסניות. <b>אוששה.</b>`)}`,q:"q23"},
+  {h:"השערות 3 ו-4: לא, וחלקית",html:`${def("השערה 3",`<b>לא אוששה.</b> לא נמצא קשר בין חרדה לבין פסיביות. מה שכן נמצא: ככל שה<b>רצון להינשא השנה</b> גבוה יותר, הנטייה לפסיביות <b>נמוכה</b> יותר.`)}${def("השערה 4",`<b>אוששה חלקית.</b> הקשר בין קושי בתפיסה עצמית וזהות לבין פסיביות נמצא <b>רק אצל מי שבתהליך היכרויות יותר מ-4 שנים</b>.`)}`,q:"q25"},
+  {h:"ניתוח הנתיבים",html:`${fig("path")}${rem("<b>הסדר:</b> התפיסה העצמית \"ממקמת\" את האדם עוד לפני שהוא מגיע להחלטה. ממנה נגזרות התפיסות הפסימיות, והחרדה מתעוררת כשצריך להחליט. תגובת <b>הנאמנות</b> הוצאה מהמודל, כי לא היה לה קשר מובהק לאף אשכול.")}`,q:"q27"}
+ ]},
+ {id:"t6",icon:"bulb",title:"דיון והשלכות",blocks:[
+  {h:"למה הרס \"קל\" יותר",html:`<p>הממצא המרכזי מאפשר לראות בבחירת בן זוג <b>תהליך קלאסי של קבלת החלטות</b>.</p>${tiles([["scales","מודל ההשקעה","תפיסה פסימית מורידה את הרווח הצפוי מהקשר, ולכן שימורו נראה יקר יותר מסיומו"],["x","הקלה מהירה","סיום הקשר הוא הדרך הקצרה להפסיק תחושות לא נעימות, ונראה כפתח להיכרויות חדשות"],["hand","תגובה בונה דורשת כוח","גיוס כוחות נפש ומיומנויות. לבעלי קשיים רגשיים קשה יותר"]])}`,q:"q29"},
+  {h:"הסברים לממצאים המפתיעים",html:`${tiles([["clock","חרדה תכונתית מול מצבית","עם השנים גדלה החרדה המצבית (\"אני מפסיד זמן\") ודוחפת דווקא לאקטיביות"],["link","היקשרות על שני צירים","חרדה והימנעות. סוגים שונים של היקשרות לא בטוחה מגיבים בצורה שונה, ולכן אין קשר אחיד"],["id","הערכה עצמית בתחום","מתגבשת עם הניסיון. אחרי 4 שנים היא כבר ברורה, ולכן הקשר מופיע רק שם"]])}${rem("ייתכן שהרצון הגבוה להינשא מושפע מ<b>רצייה חברתית</b>, בגלל הביקורת על רווקים. ייתכן גם שרווקים נוטים לייחס את הקושי לגורמים <b>חיצוניים</b>, כדי להגן על הדימוי העצמי מפני תחושת כישלון.")}`,q:"q31"},
+  {h:"השלכות ומגבלות",html:`<p>ככל שהשנים עוברות, הנטייה להגיב באופן הרסני גוברת. לכן מציעים <b>התערבות מוקדמת</b>: תכנית העשרה בבית הספר, מותאמת לאוכלוסיית היעד, בשני מישורים:</p>${tiles([["brain","מישור תפיסתי","מודעות עצמית, התבוננות פנימית, וזיהוי תפיסות לא יעילות (\"הכל מזל\")"],["hand","מישור התנהגותי","תרגול תגובות כמו הבעה, במקום פסיביות והרס"]])}${def("מגבלות",`כ-80% לא היו בקשר, ולכן ענו <b>מזיכרון</b>. כדאי לבדוק מגזרים נוספים (חילוני, חרדי) ולערוך <b>מחקר אורך</b> שישווה בין מי שהתחתנו למי שנשארו רווקים.`)}`,q:"q33"}
+ ]}
+];
+const Q={
+q1:{t:"t1",v:[
+ {q:"מה בודק המחקר?",a:"קשיים מתמשכים בקבלת החלטה על התחייבות לזוגיות ארוכת טווח",w:["ההבדלים בין נשואים לרווקים בהכנסה","את השפעת אתרי ההיכרויות על אושר","כמה פגישות צריך עד נישואין"],e:"הוא מסתכל על הרווקות דרך תהליכי קבלת החלטה."},
+ {q:"מה חסר במחקרים קודמים על רווקות מאוחרת, לפי הכותבים?",a:"בחינה של תהליכי קבלת ההחלטה להינשא",w:["משתני רקע כמו מוצא ומעמד","קווי אישיות כמו היקשרות","מחקרים על חילונים"],e:"מחקרים קודמים התמקדו ברקע או באישיות."}]},
+q2:{t:"t1",v:[
+ {q:"למה הרווקות המאוחרת מעוררת תהייה במיוחד?",a:"כי הרווקים עצמם מצהירים על רצון עז ואף דחוף להינשא",w:["כי רווקים לא רוצים להתחתן","כי זו תופעה חדשה לגמרי","כי היא קיימת רק בישראל"],e:"הפער בין הרצון לבין העיכוב הוא לב השאלה."},
+ {q:"איך מתוארת ההחלטה בשלב הרווקות?",a:"החלטה שחוזרת שוב ושוב, אולי לפני כל פגישה",w:["החלטה אחת שמתקבלת פעם אחת","החלטה שמתקבלת רק על ידי ההורים","החלטה שאין בה רגש"],e:"תהליך מתמשך ורב־שלבי."}]},
+q3:{t:"t1",v:[
+ {q:"איך מוצגת רווקות בתרבות הפופולרית, לפי להד ושושנה?",a:"כבעיה וחוסר, כמי שמוגדרת לפי מה שחסר בה",w:["כבחירה נחשבת ומוערכת","כשלב קצר ולא חשוב","כמצב עדיף על נישואין"],e:"ונישואין מוצגים כקטגוריה עם זכויות יתר."},
+ {q:"למה בחרו החוקרים במדגם של רווקים דתיים?",a:"כי שם המוטיבציה להינשא גבוהה במיוחד, והפער מול העיכוב חד יותר",w:["כי קל יותר לגייס אותם","כי אין בקרבם רווקות מאוחרת","כי הם לא משתמשים באינטרנט"],e:"הסברים חילוניים כמו מגורים משותפים לא מתאימים שם."}]},
+q4:{t:"t1",v:[
+ {q:"איזה הסבר לרווקות מאוחרת בחברה החילונית לא מתאים לחברה הדתית?",a:"מגורים משותפים לפני נישואין",w:["מוטיבציה נמוכה","חוסר עניין בזוגיות","גיל צעיר"],e:"בחברה הדתית לא נהוגים מגורים משותפים לפני נישואין."},
+ {q:"מהו \"sense of entitlement\" בהקשר של המאמר?",a:"תחושת הראויות שזהויות נורמטיביות, כמו נישואין, זוכות לה",w:["תחושת כישלון של רווקים","רצון להישאר לבד","תחושת חרדה לפני פגישה"],e:"רווקות לא נחשבת \"טבעית\" ולא זוכה לתחושה הזו."}]},
+q5:{t:"t1",v:[
+ {q:"לאיזה תחום המחקר מקביל את בחירת בן הזוג?",a:"בחירת מקצוע",w:["בחירת דירה","בחירת תחביב","בחירת מפלגה"],e:"בחירת מקצוע נחקרה לעומק, ולכן אפשר להשתמש בכלים שלה."},
+ {q:"מה לא נמנה כנקודת דמיון בין בחירת מקצוע לבחירת בן זוג?",a:"בשתיהן ההחלטה קלה ומהירה",w:["שתיהן חשובות ומורכבות","בשתיהן יש הרבה אפשרויות","שתיהן נדבך מרכזי בגיבוש הזהות"],e:"ההפך: שתיהן מורכבות ומטרידות צעירים רבים."}]},
+q6:{t:"t1",v:[
+ {q:"מי הראו לראשונה שאפשר להשתמש במודל בחירת מקצוע להבנת זוגיות?",a:"שילה ושנהב־שפר (2004)",w:["רוזבולט (1982)","סקה (2005)","להד ושושנה (2012)"],e:"הם התאימו את מודל גטי לתחום הזוגיות."},
+ {q:"למה בחירת מקצוע ובחירת בן זוג נחשבות קריטיות?",a:"כי הן משפיעות על תחושות סיפוק ומימוש עצמי בחיים הבוגרים",w:["כי הן קובעות את ההכנסה בלבד","כי הן חובה חוקית","כי הן קורות רק פעם אחת"],e:"שתיהן חלק מרכזי בזהות."}]},
+q7:{t:"t2",v:[
+ {q:"מה החיסרון של הטקסונומיה של גטי ועמיתיו?",a:"היא מתמקדת בעיקר בקשיים קוגניטיביים וחסרים בה היבטים רגשיים ואישיותיים",w:["היא לא נבדקה אמפירית","היא מיועדת רק לילדים","היא עוסקת רק ברגשות"],e:"לכן הכותבים העדיפו את מודל קר\"ב."},
+ {q:"מהו מודל קר\"ב?",a:"מודל של קשיים רגשיים בהחלטה, עם 11 קטגוריות בשלושה אשכולות",w:["מודל של קשיי למידה","מודל של שלבי התפתחות","מודל של תגובות לכעס"],e:"פותח על ידי סקה (2005) לבחירת מקצוע."}]},
+q8:{t:"t2",v:[
+ {q:"איזה מהבאים הוא גורם רגשי־אישיותי שקשור לקשיי החלטה?",a:"מיקוד שליטה חיצוני",w:["גובה","מספר האחים","מקום מגורים"],e:"גם הערכה עצמית נמוכה, חרדה וזהות לא מגובשת."},
+ {q:"מהי חוללות עצמית?",a:"ציפייה להצליח במשימות מוגדרות",w:["רצון להינשא","פחד מהתחייבות","הערכה של אחרים כלפינו"],e:"חוללות עצמית נמוכה קשורה לאי־החלטיות מתמשכת."}]},
+q9:{t:"t2",v:[
+ {q:"\"הגברים בימינו לא בשלים לקשר של התחייבות\". לאיזה אשכול שייכת המחשבה?",a:"תפיסות פסימיות (לגבי התחום)",w:["חרדה","תפיסה עצמית וזהות","היקשרות בטוחה"],e:"פסימיות לגבי התחום שבו נדרשת ההחלטה."},
+ {q:"\"אני חושש להתחייב, כי אולי זו לא הזוגיות הכי מתאימה לי\". לאיזה אשכול זה שייך?",a:"חרדה",w:["תפיסות פסימיות","תפיסה עצמית וזהות","אף אחד מהם"],e:"זו חרדת אחריות: רתיעה מכאב ההחמצה."}]},
+q10:{t:"t2",v:[
+ {q:"איזו קטגוריה שייכת לאשכול התפיסה העצמית והזהות?",a:"קונפליקט היקשרות והיפרדות",w:["חרדת אי־ודאות","פסימיות לגבי השליטה","חרדת תוצאה"],e:"מתייחס לתמיכה או לגינוי הצפויים מאחרים משמעותיים."},
+ {q:"\"זה הרבה יותר עניין של מזל מאשר של מאמץ\". איזו קטגוריה?",a:"פסימיות לגבי השליטה בהחלטה",w:["חרדת תהליך","יציבות הזהות","חרדת תוצאה"],e:"קשור למיקוד שליטה חיצוני."}]},
+q11:{t:"t3",v:[
+ {q:"מהם שלושת השלבים בדרך להחלטה להינשא?",a:"זיהוי בני זוג מתאימים, החלטה לצאת לפגישה, והחלטה אם להמשיך",w:["אירוסין, חתונה, ירח דבש","היכרות, מגורים משותפים, נישואין","פגישה, פרידה, חזרה"],e:"השלב השלישי עצמו הוא רצף של החלטות."},
+ {q:"באיזה שלב תסכול וחוסר שביעות רצון משפיעים במיוחד?",a:"בשלב ההחלטה אם להמשיך להיפגש",w:["בשלב הזיהוי","לפני הפגישה הראשונה","אחרי החתונה בלבד"],e:"שם \"מוצפים\" המאפיינים הרגשיים והתפיסתיים."}]},
+q12:{t:"t3",v:[
+ {q:"מהו הרעיון המוביל במודל של רוזבולט?",a:"החלטות מתקבלות כדי להגדיל רווח נפשי ולהקטין הפסדים",w:["החלטות מתקבלות באקראי","רק רגשות קובעים החלטות","ההורים מחליטים"],e:"אי־החלטיות = לא מצליחים לקבל החלטה מיטבית."},
+ {q:"אילו שני צירים מגדירים את ארבע התגובות?",a:"בנייה מול הרס, ואקטיביות מול פסיביות",w:["רגש מול שכל","גברים מול נשים","טווח קצר מול טווח ארוך"],e:"כך נוצרת מטריצה של ארבע תגובות."}]},
+q13:{t:"t3",v:[
+ {q:"איזו תגובה בונה וגם אקטיבית?",a:"הבעה",w:["עזיבה","נאמנות","הזנחה"],e:"למשל שיחה משותפת על הקשיים. זו התגובה המקדמת ביותר."},
+ {q:"מישהו לא אומר כלום ומחכה ש\"הזמן יעשה את שלו\". איזו תגובה?",a:"נאמנות",w:["הבעה","עזיבה","הזנחה"],e:"נאמנות = בונה אבל פסיבית."}]},
+q14:{t:"t3",v:[
+ {q:"מישהי מתעלמת מבן הזוג ומצמצמת את הזמן המשותף. איזו תגובה?",a:"הזנחה",w:["נאמנות","הבעה","עזיבה"],e:"הזנחה = הרסנית ופסיבית."},
+ {q:"איזו תגובה היא הרס אקטיבי של הקשר?",a:"עזיבה",w:["הזנחה","נאמנות","הבעה"],e:"למשל פרידה או ניתוק."}]},
+q15:{t:"t3",v:[
+ {q:"למה תגובות פסיביות או הרסניות נחשבות \"לא מקדמות\"?",a:"כי הן פוגעות גם בקשר וגם בשביעות הרצון של האדם",w:["כי הן לא חוקיות","כי הן תמיד מובילות לחתונה","כי הן מהירות מדי"],e:"הפגיעה כפולה, והן מוסיפות לתסכול."},
+ {q:"מהו המשתנה התלוי במחקר?",a:"דפוס התגובה לחוסר שביעות רצון בקשר",w:["מידת אי־ההחלטיות","גיל המשתתפים","הרמה הדתית"],e:"אי־ההחלטיות היא המשתנה הבלתי תלוי."}]},
+q16:{t:"t3",v:[
+ {q:"מה הייתה השערה 3?",a:"ככל שהחרדה גבוהה יותר, יותר תגובות פסיביות",w:["ככל שהחרדה גבוהה יותר, יותר הבעה","אין קשר בין חרדה לתגובות","חרדה גורמת לעזיבה בלבד"],e:"היא נשענה על מחקר שקשר חרדה להתמודדות פסיבית."},
+ {q:"מה הייתה השערה 2?",a:"ככל שהתפיסות הפסימיות חזקות יותר, יותר תגובות הרסניות",w:["פסימיות מובילה להבעה","פסימיות מובילה לנאמנות בלבד","אין קשר"],e:"הנחה שמבוססת על מחקרים קודמים על מיקוד שליטה חיצוני."}]},
+q17:{t:"t4",v:[
+ {q:"מי השתתפו במחקר?",a:"213 רווקים ורווקות דתיים, גילאי 19 עד 48",w:["213 זוגות נשואים","50 סטודנטים חילונים","1,000 בני נוער"],e:"49 גברים ו-164 נשים."},
+ {q:"איך גויסו המשתתפים?",a:"\"חבר מביא חבר\" ומודעות באתרי היכרויות לציבור הדתי",w:["דרך בתי ספר","דרך מרפאות","דרך הצבא"],e:"והשאלונים מולאו באינטרנט באופן אנונימי."}]},
+q18:{t:"t4",v:[
+ {q:"כמה זמן, בממוצע, היו המשתתפים בתהליך היכרויות?",a:"כ-4.75 שנים",w:["כחצי שנה","כ-15 שנים","שבועיים"],e:"והתחילו להיפגש בגיל 21 בממוצע."},
+ {q:"מתי התחילו המשתתפים, בממוצע, להיפגש למטרת נישואין?",a:"בתחילת שנות ה-20",w:["בגיל 16","בגיל 30","בגיל 40"],e:"גברים מעט מאוחר יותר מנשים."}]},
+q19:{t:"t4",v:[
+ {q:"איך נבנה שאלון הקשיים הרגשיים בבחירת בן זוג?",a:"הותאם משאלון בחירת קריירה, כך שכל היגד הפך להיגד על זוגיות",w:["נכתב מאפס","תורגם משאלון על שינה","נלקח משאלון דיכאון"],e:"53 פריטים, סולם 1 עד 9."},
+ {q:"מה הראה ניתוח הגורמים המאשש (CFA)?",a:"שהשאלון המותאם בנוי משלושת האשכולות, כמו בבחירת מקצוע",w:["שיש רק אשכול אחד","שהשאלון לא מהימן","שיש עשרה אשכולות"],e:"זה תומך בתוקף המבנה של השאלון."}]},
+q20:{t:"t4",v:[
+ {q:"איך חושב \"מדד הקידום\" של התגובות?",a:"הנטייה להבעה פחות הנטייה להזנחה",w:["עזיבה ועוד נאמנות","ממוצע כל התגובות","מספר הפגישות"],e:"הבעה היא המקדמת ביותר והזנחה הכי פחות מקדמת."},
+ {q:"מה המהימנות של המדד הכולל אחרי ההתאמה (במחקר המקדים)?",a:"גבוהה, α = .95",w:["נמוכה, α = .30","בינונית, α = .50","לא נבדקה"],e:"המחקר המקדים כלל 41 רווקים."}]},
+q21:{t:"t4",v:[
+ {q:"כמה מהמשתתפים לא היו בקשר בזמן מילוי השאלון?",a:"כ-80%",w:["כ-10%","כ-50%","אף אחד"],e:"זה גם אחת המגבלות של המחקר."},
+ {q:"מה היה הרצון הממוצע להינשא בשנה הנוכחית?",a:"גבוה מאוד, כ-7.9 מתוך 9",w:["נמוך, כ-2 מתוך 9","בינוני, כ-5 מתוך 9","לא נמדד"],e:"ממצא בולט שהכותבים דנים בו."}]},
+q22:{t:"t4",v:[
+ {q:"מה נמצא לגבי הבדלים בין גברים לנשים?",a:"גברים דיווחו על תגובות אקטיביות יותר מנשים",w:["נשים אקטיביות יותר","אין שום הבדל","גברים הרסניים יותר"],e:"ההבדל היה מובהק."},
+ {q:"מה הייתה התגובה העיקרית שדיווחו עליה רוב המשתתפים?",a:"הבעה (אקטיבית ובונה)",w:["הזנחה","עזיבה","נאמנות"],e:"אבל עם הבדלים לפי רמת אי־ההחלטיות."}]},
+q23:{t:"t5",v:[
+ {q:"מה נמצא לגבי השערה 1?",a:"אוששה: יותר אי־החלטיות קשורה לתגובות פחות מקדמות",w:["לא אוששה","אוששה רק אצל גברים","נמצא הקשר ההפוך"],e:"השפעה מובהקת בניתוח שונות של ארבע קבוצות."},
+ {q:"איך נבדקה השערה 1?",a:"המשתתפים חולקו לארבע קבוצות לפי רמת אי־ההחלטיות והושוו במדד הקידום",w:["בראיונות עומק","בניסוי מעבדה","בתצפית על פגישות"],e:"ניתוח שונות חד־כיווני."}]},
+q24:{t:"t5",v:[
+ {q:"מה נמצא לגבי תפיסות פסימיות?",a:"ככל שהן חזקות יותר, הנטייה להגיב באופן הרסני חזקה יותר",w:["הן קשורות לפסיביות בלבד","אין להן קשר לתגובות","הן קשורות להבעה"],e:"השערה 2 אוששה."},
+ {q:"איזה משתנה רקע ניבא גם הוא תגובות הרסניות?",a:"הקושי שנחווה במציאת בן זוג",w:["גובה","ארץ לידה","מספר אחים"],e:"ככל שהקושי גבוה יותר, יותר תגובות הרסניות."}]},
+q25:{t:"t5",v:[
+ {q:"מה נמצא לגבי חרדה ופסיביות?",a:"לא נמצא קשר, ולכן השערה 3 לא אוששה",w:["חרדה גבוהה ניבאה פסיביות","חרדה ניבאה עזיבה","חרדה ניבאה נאמנות בלבד"],e:"מה שכן ניבא פחות פסיביות: רצון גבוה להינשא השנה."},
+ {q:"מה ניבא פחות פסיביות?",a:"רצון גבוה להינשא בשנה הנוכחית",w:["חרדה גבוהה","גיל צעיר","השכלה נמוכה"],e:"קשר שלילי בין הרצון להינשא לבין פסיביות."}]},
+q26:{t:"t5",v:[
+ {q:"אצל מי נמצא הקשר בין קושי בתפיסה עצמית לבין פסיביות?",a:"רק אצל מי שבתהליך היכרויות יותר מ-4 שנים",w:["אצל כולם","רק אצל מי שבתהליך פחות משנה","רק אצל גברים"],e:"לכן השערה 4 אוששה חלקית."},
+ {q:"למה אומרים שהשערה 4 אוששה \"חלקית\"?",a:"כי הקשר נמצא רק בקבוצה של מי שבתהליך מעל 4 שנים",w:["כי חצי מהמשתתפים לא ענו","כי הקשר היה הפוך","כי לא נבדקה"],e:"בקבוצה של 4 שנים או פחות לא נמצא קשר."}]},
+q27:{t:"t5",v:[
+ {q:"מה הסדר שמצא ניתוח הנתיבים בין האשכולות?",a:"תפיסה עצמית וזהות ← תפיסות פסימיות ← חרדה",w:["חרדה ← פסימיות ← תפיסה עצמית","פסימיות ← תפיסה עצמית ← חרדה","אין סדר"],e:"התפיסה העצמית ממקמת את האדם עוד לפני ההחלטה."},
+ {q:"איזו תגובה הוצאה מהמודל, ולמה?",a:"נאמנות, כי לא היה לה קשר מובהק לאף אשכול",w:["הבעה, כי היא נדירה","עזיבה, כי היא קיצונית","הזנחה, כי לא נמדדה"],e:"אחרי ההוצאה המודל התאים היטב לנתונים."}]},
+q28:{t:"t5",v:[
+ {q:"לפי ניתוח הנתיבים, מה קשור לתפיסה עצמית וזהות נמוכות?",a:"יותר עזיבה והזנחה, ופחות הבעה",w:["יותר הבעה","יותר נאמנות","שום תגובה"],e:"כלומר יותר תגובות הרסניות."},
+ {q:"איזה ממצא בניתוח הנתיבים מפתיע לגבי חרדה?",a:"חרדה קשורה דווקא ליותר הבעה",w:["חרדה קשורה ליותר הזנחה","חרדה קשורה ליותר עזיבה","לחרדה אין קשר לשום דבר"],e:"החוקרים מסבירים זאת בחרדה המצבית שגוברת עם השנים."}]},
+q29:{t:"t6",v:[
+ {q:"מה מאפשר הממצא המרכזי של המחקר?",a:"לראות בבחירת בן זוג תהליך קלאסי של קבלת החלטות",w:["להוכיח שרווקים לא רוצים להתחתן","לקבוע מי יתחתן","לבטל את מודל קר\"ב"],e:"וזה מאפשר לעזור בצורה ממוקדת."},
+ {q:"איך מודל ההשקעה של רוזבולט מסביר את הקשר בין פסימיות להרס?",a:"פסימיות מורידה את הרווח הצפוי מהקשר, ולכן שימורו נראה יקר מסיומו",w:["פסימיות מגדילה את הרווח","פסימיות לא קשורה לרווח","הוא לא מסביר"],e:"החלטה מבוססת על רווח מול הפסד."}]},
+q30:{t:"t6",v:[
+ {q:"למה תגובות הרסניות שכיחות יותר אצל בעלי קשיים רגשיים?",a:"כי תגובה בונה דורשת כוחות נפש ומיומנויות, והרס דורש פחות",w:["כי הם לא רוצים זוגיות","כי הם צעירים מדי","כי ההרס תמיד עדיף"],e:"סיום הקשר נותן הקלה מהירה."},
+ {q:"למה סיום קשר קצר עשוי להיראות אטרקטיבי?",a:"הוא מסיים תחושות לא נעימות ופותח אפשרות להיכרויות חדשות",w:["כי הוא תמיד הבחירה הנכונה","כי ההורים מעודדים","כי אין לו מחיר"],e:"אבל לרוב לא לוקחים בחשבון בדידות ועצב."}]},
+q31:{t:"t6",v:[
+ {q:"איך החוקרים מסבירים שחרדה לא ניבאה פסיביות?",a:"עם השנים גדלה חרדה מצבית (\"אני מפסיד זמן\") שדוחפת דווקא לאקטיביות",w:["החרדה לא נמדדה","כל המשתתפים היו רגועים","חרדה תמיד מובילה לעזיבה"],e:"החרדה המצבית היא משקל נגד לחרדה התכונתית."},
+ {q:"למה הקשר בין תפיסה עצמית לפסיביות הופיע רק אחרי 4 שנים?",a:"הערכה עצמית בתחום ההיכרויות מתגבשת עם הניסיון, ואחרי 4 שנים היא כבר ברורה",w:["כי אחרי 4 שנים כולם מתייאשים","כי זה מקרי","כי רק הם ענו בכנות"],e:"בתחילת הדרך עוד לא התגבשה הערכה עצמית בתחום."}]},
+q32:{t:"t6",v:[
+ {q:"מה עשוי להסביר את הרצון הגבוה מאוד להינשא שדווח?",a:"רצייה חברתית, בגלל הביקורת על רווקים",w:["טעות בשאלון","שכולם התחתנו מיד","שהמדגם היה של נשואים"],e:"ייתכן שדיווחו על רצון גבוה ממה שהם מרגישים."},
+ {q:"למה רווקים עשויים לייחס את הקושי לגורמים חיצוניים?",a:"כדי להגן על הדימוי העצמי מפני תחושת כישלון",w:["כי הם תמיד צודקים","כי זו דרישה של השאלון","כי אין להם קשיים"],e:"תחושת \"תקיעות\" יוצרת פגיעה נרקיסיסטית."}]},
+q33:{t:"t6",v:[
+ {q:"מה ההמלצה המעשית העיקרית של המאמר?",a:"תכנית העשרה מוקדמת בבית הספר, במישור התפיסתי וההתנהגותי",w:["לחייב טיפול לכל רווק","לאסור אתרי היכרויות","לא להתערב"],e:"כי עם השנים הנטייה להרס גוברת."},
+ {q:"מה כולל המישור ההתנהגותי בתכנית ההעשרה?",a:"תרגול תגובות כמו הבעה, במקום פסיביות והרס",w:["לימוד מתמטיקה","תרגול ספורט","מבחני אישיות"],e:"והמישור התפיסתי: מודעות עצמית וזיהוי תפיסות לא יעילות."}]},
+q34:{t:"t6",v:[
+ {q:"מהי המגבלה העיקרית של המחקר?",a:"כ-80% לא היו בקשר, ולכן ענו על סמך זיכרונות",w:["המדגם היה של נשואים","לא היה שאלון","המדגם כלל רק גברים"],e:"עדיף לגייס משתתפים שנמצאים בקשר."},
+ {q:"איזה מחקר המשך מציעים הכותבים?",a:"מחקר אורך שישווה בין מי שהתחתנו למי שנשארו רווקים, וגם מגזרים נוספים",w:["מחקר על ילדים","מחקר על בעלי חיים","לא מציעים"],e:"כולל המגזר החילוני והחרדי."}]}
+};
+for(const t of T) t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id);
+const KEY=CONFIG.key;
+let S={q:{},read:{}};
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.q) S=s;}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const st=id=>S.q[id]||(S.q[id]={n:0,c:0,w:0,t:0,lv:-1});
+const mastered=id=>(S.q[id]?.c||0)>=2;
+const topicPct=t=>Math.round(100*t.qids.filter(mastered).length/t.qids.length);
+const topicStarted=t=>S.read[t.id]||t.qids.some(id=>S.q[id]&&S.q[id].n);
+const allIds=Object.keys(Q);
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+const pickVariant=id=>{const s=st(id),n=Q[id].v.length;return n>1?(s.lv+1)%n:0};
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const color=t=>`var(--${t.id})`;
+const app=document.getElementById("app");
+const LET=["א","ב","ג","ד"];
+
+function qCard(id,onDone,label){
+  const vi=pickVariant(id),v=Q[id].v[vi],opts=shuffle([v.a,...v.w]);
+  const box=document.createElement("div");box.className="q fade";
+  box.innerHTML=(label?`<span class="eyebrow">${label}</span>`:"")+`<div class="qtext">${esc(v.q)}</div><div class="opts"></div>`;
+  const wrap=box.querySelector(".opts");
+  opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt";b.dataset.a=o===v.a?"1":"";
+    b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+    b.onclick=()=>{const ok=o===v.a,s=st(id);s.n++;s.t=Date.now();s.lv=vi;ok?s.c++:(s.c=0,s.w++);save();
+      wrap.querySelectorAll("button").forEach(x=>{x.disabled=true;if(x.dataset.a)x.classList.add("right")});
+      if(!ok)b.classList.add("wrong");
+      const fb=document.createElement("div");fb.className="fb fade "+(ok?"ok":"no");
+      fb.innerHTML=`${ic(ok?"check":"x")}<div><strong>${ok?"נכון!":"לא בדיוק"}</strong>${esc(v.e)}</div>`;box.appendChild(fb);
+      const nx=document.createElement("button");nx.className="primary";nx.textContent="המשך";nx.style.alignSelf="flex-start";
+      nx.onclick=()=>onDone(ok);box.appendChild(nx);nx.focus({preventScroll:true});nx.scrollIntoView({block:"nearest",behavior:"smooth"});
+    };wrap.appendChild(b)});
+  return box;
+}
+
+function home(){
+  document.body.style.removeProperty("--c");
+  const started=T.filter(topicStarted);
+  const total=Math.round(100*allIds.filter(mastered).length/allIds.length);
+  const weak=allIds.filter(id=>S.q[id]&&S.q[id].n&&!mastered(id)).length;
+  app.innerHTML=`<div class="stack fade">
+   <section class="cover" style="--c:var(--accent)">
+    <div class="cover-art">${FIG[CONFIG.cover]()}</div>
+    <div class="cover-body">
+     <span class="eyebrow">${CONFIG.eyebrow}</span>
+     ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
+     <p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר עם שאלות גם מנושאים קודמים.</p>
+     <div class="stats">
+      <div class="ring" style="--p:${total}"><span>${total}%</span></div>
+      <div class="stat-text"><b>${total===0?"עוד לא התחלת":total>=80?"אתה שולט בחומר":"בדרך"}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
+      <button class="primary review-btn" id="rev" ${started.length?"":"disabled"}>${ic("cycle")}<span>${started.length?"חזרה מהירה":"חזרה מהירה (אחרי נושא ראשון)"}</span></button>
+     </div>
+    </div>
+   </section>
+   <div class="grid" id="list"></div>
+   <div class="foot"><a href="../#intro" style="color:var(--accent);font-weight:700;text-decoration:none">→ לקורס</a><span>${CONFIG.note}</span><button class="ghost" id="reset">איפוס התקדמות</button></div>
+  </div>`;
+  document.querySelector("#rev svg").style.cssText="width:20px;height:20px";
+  const list=app.querySelector("#list");
+  T.forEach((t,i)=>{const p=topicPct(t),b=document.createElement("button");b.className="tcard";b.style.setProperty("--c",color(t));
+    const status=!topicStarted(t)?"לא התחלת":p>=80?"שולט":"בתהליך";
+    b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
+    b.onclick=()=>topic(i,0);list.appendChild(b)});
+  app.querySelector("#rev").onclick=review;
+  const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
+  scrollTo(0,0);
+}
+
+function bar(title,n,i,label){
+  return `<div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">${label}</span></div><div class="steps">${Array.from({length:n},(_,k)=>`<i class="${k<=i?"on":""}"></i>`).join("")}</div></div><span class="eyebrow">${title}</span>`;
+}
+
+function topic(ti,bi){
+  const t=T[ti],blk=t.blocks[bi];document.body.style.setProperty("--c",color(t));
+  app.innerHTML=`<div class="stack">${bar(`נושא ${ti+1} · ${t.title}`,t.blocks.length+1,bi,`קטע ${bi+1} מתוך ${t.blocks.length}`)}
+   <article class="card fade"><h3>${blk.h}</h3>${blk.html}</article><div id="slot"></div></div>`;
+  app.querySelector("#back").onclick=home;
+  const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;save();quiz(ti)}};
+  const slot=app.querySelector("#slot");
+  if(blk.q)slot.appendChild(qCard(blk.q,next,"בדיקה קצרה"));
+  else{const b=document.createElement("button");b.className="primary";b.textContent="המשך";b.onclick=next;slot.appendChild(b)}
+  scrollTo(0,0);
+}
+
+function runSet(title,ids,c,onEnd){
+  let i=0,right=0;document.body.style.setProperty("--c",c);
+  const step=()=>{
+    if(i>=ids.length)return onEnd(right,ids.length);
+    const id=ids[i],from=T.find(t=>t.id===Q[id].t);
+    app.innerHTML=`<div class="stack">${bar(title,ids.length,i,`שאלה ${i+1} מתוך ${ids.length}`)}<div id="slot"></div></div>`;
+    app.querySelector("#back").onclick=home;
+    const card=qCard(id,ok=>{if(ok)right++;i++;step()},from.title);card.style.setProperty("--c",color(from));
+    app.querySelector("#slot").appendChild(card);scrollTo(0,0);
+  };step();
+}
+
+function quiz(ti){
+  const t=T[ti];
+  const prev=T.slice(0,ti).filter(topicStarted).flatMap(x=>x.qids);
+  const extra=shuffle(prev).sort((a,b)=>st(a).c-st(b).c).slice(0,2);
+  runSet(`מבחן סיום · ${t.title}`,shuffle(t.qids).concat(extra),color(t),(r,n)=>done(r,n,ti));
+}
+
+function review(){
+  const pool=T.filter(topicStarted).flatMap(t=>t.qids),now=Date.now();
+  const score=id=>{const s=S.q[id]||{n:0,c:0,w:0,t:0};return (s.n?0:2)+s.w*2+(s.c<2?3:0)+Math.min(3,(now-s.t)/864e5)+Math.random()*2};
+  const ids=pool.map(id=>[id,score(id)]).sort((a,b)=>b[1]-a[1]).slice(0,12).map(x=>x[0]);
+  runSet("חזרה מהירה",shuffle(ids),"var(--accent)",(r,n)=>done(r,n,null));
+}
+
+function done(r,n,ti){
+  const nextT=ti!=null&&ti+1<T.length?ti+1:null,pct=Math.round(100*r/n);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">${ti!=null?`סיום נושא ${ti+1} · ${T[ti].title}`:"סיום חזרה מהירה"}</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct};--accent:var(--c)"><span>${pct}%</span></div><div class="big">${r}/${n}</div></div>
+    <p>${r===n?"מצוין, הכל נכון.":r>=n*0.7?"טוב מאוד. מה שטעית בו יחזור בחזרה המהירה, בניסוח אחר.":"כדאי לעבור שוב על הנושא. השאלות שטעית בהן יחזרו בחזרה המהירה."}</p>
+    <div class="row">${nextT!=null?`<button class="primary" id="nx" style="--c:${color(T[nextT])}">לנושא הבא: ${T[nextT].title}</button>`:""}<button id="hm">לכל הנושאים</button></div>
+   </article></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;
+  const nx=app.querySelector("#nx");if(nx)nx.onclick=()=>topic(nextT,0);
+  scrollTo(0,0);
+}
+home();
+</script>
+</body>
+</html>

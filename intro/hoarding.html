@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>לומדת חובת קריאה: אגרנות כפייתית - אפשר לטפל בהסכמה</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Rubik:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: a study notebook. Home = illustrated cover + topic cards; topic = one reading card at a time, with a highlighter for key terms and drawn figures */
+:root{
+  --bg:#eef2f4; --surface:#ffffff; --raised:#f7f9fa; --ink:#15222a; --muted:#4c5b66; --line:#dbe2e6;
+  --accent:#2457a6; --mark:#ffe27a; --good:#23855a; --good-soft:#e2f4ea; --bad:#c2452d; --bad-soft:#fbe6e1;
+  --t1:#d35d36; --t2:#3667cf; --t3:#0e8a7c; --t4:#8448c9; --t5:#b9800c; --t6:#2a7fa6;
+  --display:"Suez One","Frank Ruhl Libre","David",serif;
+  --body:"Rubik","Arial Hebrew","Segoe UI",Arial,sans-serif;
+  --shadow:0 1px 2px rgba(21,34,42,.06),0 8px 24px rgba(21,34,42,.07);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;font-weight:500;line-height:1.75;direction:rtl}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
+p{margin:0}
+.stack{display:flex;flex-direction:column;gap:16px}
+.muted{color:var(--muted)}
+mark{background:linear-gradient(transparent 38%,var(--mark) 38%,var(--mark) 92%,transparent 92%);color:inherit;padding:0 2px;font-weight:600}
+button{font:inherit;cursor:pointer;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:11px 18px}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button[disabled]{opacity:.55;cursor:default}
+.primary{background:var(--c,var(--accent));border-color:var(--c,var(--accent));color:var(--surface);font-weight:600}
+.ghost{background:transparent;border:none;color:var(--muted);padding:6px 2px}
+.ghost:hover{color:var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.badge{display:inline-block;align-self:flex-start;font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:99px;background:var(--accent);color:var(--surface);margin-bottom:6px}.entitle{display:inline;unicode-bidi:isolate;font-family:Rubik,system-ui,sans-serif;font-weight:800}.hetitle{margin:4px 0 0;font-weight:700;font-size:1.05rem}.cite{text-align:right;margin:4px 0 0;font-size:.85rem;color:var(--muted)}.cite a{color:var(--accent)}
+.eyebrow{font-size:.8rem;letter-spacing:.05em;font-weight:600;color:var(--c,var(--muted))}
+
+/* home */
+.cover{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.cover-art{background:var(--raised);border-bottom:1px solid var(--line);padding:8px 8px 0}
+.cover-art svg{display:block;width:100%;height:auto;max-height:230px}
+.cover-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px}
+.cover h1{font-size:clamp(2rem,6vw,2.6rem);font-weight:900}
+.stats{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.ring{--p:0;width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center;flex:none}
+.ring span{width:50px;height:50px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.9rem;font-variant-numeric:tabular-nums}
+.stat-text{display:flex;flex-direction:column;line-height:1.35;flex:1;min-width:160px}
+.stat-text b{font-size:1.05rem}
+.review-btn{display:flex;align-items:center;gap:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.tcard{--c:var(--accent);text-align:right;padding:0;overflow:hidden;border:none;border-radius:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s}
+.tcard:hover{transform:translateY(-2px)}
+.tcard .band{background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.tcard .band svg{width:44px;height:44px}
+.tcard .n{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;opacity:.85}
+.tcard .body{padding:12px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tcard .t{font-weight:700;font-size:1.05rem;line-height:1.35}
+.bar{height:7px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--c);border-radius:4px}
+.meta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip{font-size:.75rem;padding:3px 10px;border-radius:99px;font-weight:600;background:color-mix(in srgb,var(--c,var(--accent)) 14%,transparent);color:var(--c,var(--accent));white-space:nowrap}
+.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+
+/* topic */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;display:flex;flex-direction:column;gap:8px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.steps{display:flex;gap:5px}
+.steps i{flex:1;height:5px;border-radius:3px;background:var(--line)}
+.steps i.on{background:var(--c)}
+.prog{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tt{font-size:1.6rem;font-weight:900}
+.card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px}
+.card h3{font-size:1.25rem;color:var(--c)}
+.fig{background:var(--raised);border-radius:14px;padding:10px;margin-inline:-4px}
+.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{font-size:.8rem;color:var(--muted);text-align:center;margin-top:4px}
+figure{margin:0}
+.def{border:1.5px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 6%,var(--surface));border-radius:14px;padding:14px 16px}
+.lbl{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:var(--c);margin-bottom:4px}
+.who{display:flex;gap:12px;align-items:flex-start}
+.who .av{flex:none;width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.15rem}
+.who .yr{font-size:.8rem;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.tile{background:var(--raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile svg{width:32px;height:32px;color:var(--c)}
+.tile b{font-size:.98rem}
+.tile span{font-size:.88rem;color:var(--muted);line-height:1.45}
+.ex{background:var(--raised);border-radius:12px;padding:12px 14px;font-size:.95rem}
+.ex .lbl{color:var(--muted)}
+.yesno{display:flex;flex-wrap:wrap;gap:8px}
+.yn{padding:5px 12px;border-radius:99px;font-size:.88rem;font-weight:500;display:inline-flex;gap:6px;align-items:center}
+.yn.y{background:var(--good-soft);color:var(--good)} .yn.n{background:var(--bad-soft);color:var(--bad)}
+.spectrum{display:flex;flex-direction:column;gap:6px}
+.spectrum .track{height:12px;border-radius:6px;background:linear-gradient(90deg,var(--bad),var(--line) 50%,var(--good));position:relative}
+.spectrum .dot{position:absolute;top:50%;left:50%;width:20px;height:20px;border-radius:50%;background:var(--surface);border:3px solid var(--ink);transform:translate(-50%,-50%)}
+.spectrum .ends{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);gap:10px}
+.remember{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;border-top:1px dashed var(--line);padding-top:12px}
+.remember svg{flex:none;width:22px;height:22px;color:var(--c)}
+
+/* question */
+.q{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:12px}
+.qtext{font-weight:600;font-size:1.08rem;line-height:1.55}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{text-align:right;line-height:1.45;display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--raised);border:1.5px solid transparent}
+.opt:hover:not([disabled]){border-color:var(--c)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:8px;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.85rem;color:var(--c)}
+.opt.right{background:var(--good-soft);border-color:var(--good);opacity:1}
+.opt.right .k{background:var(--good);color:var(--surface)}
+.opt.wrong{background:var(--bad-soft);border-color:var(--bad);opacity:1}
+.opt.wrong .k{background:var(--bad);color:var(--surface)}
+.fb{padding:12px 14px;border-radius:12px;font-size:.95rem;display:flex;gap:10px;align-items:flex-start}
+.fb svg{flex:none;width:22px;height:22px;margin-top:2px}
+.fb.ok{background:var(--good-soft)} .fb.ok svg{color:var(--good)}
+.fb.no{background:var(--bad-soft)} .fb.no svg{color:var(--bad)}
+.fb strong{display:block}
+.big{font-family:var(--display);font-size:3.4rem;font-weight:900;color:var(--c);font-variant-numeric:tabular-nums;line-height:1}
+@media (prefers-reduced-motion:no-preference){.fade{animation:f .3s ease-out}@keyframes f{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+
+/* svg figure classes */
+.s-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.s-c{stroke:var(--c);stroke-width:2;fill:none}
+.f-c{fill:var(--c)}
+.f-soft{fill:color-mix(in srgb,var(--c) 16%,var(--surface))}
+.f-surf{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.f-ink{fill:var(--ink)}
+.f-mut{fill:var(--muted)}
+.f-inv{fill:var(--surface)}
+svg text{font-family:var(--body)}
+h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
+.card p,.def p,.tile span,.ex p{font-weight:500}
+.qtext{font-weight:700}
+.tile b,.who b{font-weight:700}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:.95rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.tbl th,.tbl td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl th{background:color-mix(in srgb,var(--c) 10%,var(--surface));color:var(--c);font-weight:700;font-size:.85rem}
+.tbl .in{color:var(--c);font-weight:700}.tbl .out{color:var(--muted);font-weight:700}
+.tblwrap{overflow-x:auto}
+.en{font-size:.82em;color:var(--muted);font-weight:500;direction:ltr;unicode-bidi:isolate}
+</style>
+<style>:root{--accent:#6a46c2}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent:#ad90f2}}:root[data-theme="dark"]{--accent:#ad90f2}</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const CONFIG={key:"lomda-intro-hoarding",cover:"cover11",eyebrow:"מבוא לפסיכולוגיה · מאמר בעברית",title:"אגרנות כפייתית - אפשר לטפל בהסכמה",cite:`דוברומיסלין, לוין וסיני (2019). <i>גרונטולוגיה וגריאטריה, מו</i>(3), 37–55.`,note:"מבוסס על המאמר \"אגרנות כפייתית - אפשר לטפל בהסכמה: תיאור מקרה\". השם של המטופל בדוי, כמו במאמר."};
+const I={
+ building:'<path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h2M14 8h2M8 12h2M14 12h2M10 21v-4h4v4"/>',
+ people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
+ cycle:'<path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/>',
+ pyramid:'<path d="M12 3L2.5 20h19z"/><path d="M8.2 10.5h7.6M5.5 15.2h13"/>',
+ chart:'<path d="M4 20V10M9.5 20V4M15 20v-7M20.5 20V8M2 20h20"/>',
+ gear:'<circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="7.5" stroke-dasharray="3.2 2.7" stroke-width="3.2"/>',
+ sprout:'<path d="M12 21v-9"/><path d="M12 14C7 14 4.5 11 4.5 6.5 9 6.5 12 9 12 14z"/><path d="M12 12c0-4.5 3-7 7.5-7 0 4.5-3 7-7.5 7z"/>',
+ scales:'<path d="M12 3v17M7 20h10M4 7h16"/><path d="M4 7l-2.5 6h5zM20 7l-2.5 6h5z"/>',
+ factory:'<path d="M3 21V10l5 3v-3l5 3V5h4v16zM1.5 21h21M17 9h4v12"/>',
+ question:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 1 1 3.6 2.4c-.8.4-1.1.9-1.1 1.8"/><path d="M12 17h.01"/>',
+ data:'<ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6M4.5 11.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6"/>',
+ doc:'<path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/>',
+ split:'<circle cx="12" cy="4.5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="12" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/><path d="M12 6.7v10M12 11l-6 6M12 11l6 6"/>',
+ grad:'<path d="M1.5 9L12 4l10.5 5L12 14z"/><path d="M6 11.2V16c3.3 2.4 8.7 2.4 12 0v-4.8M21 10v5"/>',
+ copies:'<rect x="3" y="7" width="12" height="14" rx="2"/><path d="M7 4h11a2 2 0 0 1 2 2v12"/>',
+ link:'<rect x="2" y="8" width="11" height="8" rx="4"/><rect x="11" y="8" width="11" height="8" rx="4"/>',
+ hand:'<circle cx="8" cy="7" r="3"/><circle cx="16" cy="7" r="3"/><path d="M2.5 20c0-3.3 2.5-6 5.5-6 1.6 0 3 .7 4 1.9 1-1.2 2.4-1.9 4-1.9 3 0 5.5 2.7 5.5 6"/>',
+ target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',
+ id:'<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><circle cx="8.5" cy="11" r="2.3"/><path d="M5 16c.6-1.6 2-2.4 3.5-2.4S11.4 14.4 12 16M14.5 10h4M14.5 13.5h3"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>',
+ pie:'<path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/>',
+ cart:'<path d="M2 3h3l2.5 12h11l2-8H6.5"/><circle cx="9" cy="19.5" r="1.6"/><circle cx="17" cy="19.5" r="1.6"/>',
+ bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/>',
+ check:'<circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/>',
+ x:'<circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/>',
+ lock:'<rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>',
+ moon:'<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>',
+ brain:'<path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a2 2 0 0 0-3-1z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/>',
+ phone:'<rect x="6.5" y="2" width="11" height="20" rx="2.5"/><path d="M10.5 18.5h3"/>',
+ flask:'<path d="M9 2.5h6M10 2.5v6L4.5 19a2 2 0 0 0 1.8 2.9h11.4a2 2 0 0 0 1.8-2.9L14 8.5v-6"/><path d="M7 15h10"/>',
+ leaf:'<path d="M5 19C5 10 11 4 20 4c0 9-6 15-15 15z"/><path d="M5 19l8-8"/>'
+};
+const ic=(k,cls="")=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="${cls}" aria-hidden="true">${I[k]}</svg>`;
+
+const arrowDef=id=>`<defs><marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="f-c"/></marker></defs>`;
+
+const FIG={
+ cover11:()=>`<svg viewBox="0 0 400 228" role="img" aria-label="בית מלא בקופסאות, ויד מושטת">
+  <circle cx="200" cy="114" r="90" class="f-soft"/>
+  <path d="M120 112 L200 50 L280 112 V196 H120z" class="f-surf"/>
+  ${[[134,160,40,34],[176,160,34,34],[212,150,52,44],[140,128,30,30],[174,132,44,26],[222,124,28,24],[186,108,26,22]].map(([x,y,w,h],i)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="3" class="${i%2?"f-c":"f-mut"}" opacity="${i%2?.75:.45}"/>`).join("")}
+  <path d="M300 150c14-6 30-6 44 2" class="s-c" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <circle cx="296" cy="150" r="9" class="f-c"/></svg>`,
+ stages:()=>{const S=[["1","מסודר","הכל נגיש ותקין"],["2","סימני עומס","אין כביסה, הדחה או הדברה. עוד יש סדר"],["3","נקודת מפנה","חדר מלא, זבל ומזיקים. צריך אנשי מקצוע"],["4","מחוץ לבית","אין מקום לישון או לבשל"],["5","סכנה","אין חשמל, מים וביוב. התערבות אינטנסיבית"]];
+  return `<svg viewBox="0 0 400 250" role="img" aria-label="חמשת שלבי ההתפתחות של הפרעת האגרנות">
+  ${S.map(([n,h,d],i)=>{const y=12+i*46,w=360;return `<rect x="${380-w}" y="${y}" width="${w}" height="38" rx="10" class="${i==2?"f-c":"f-soft"}" ${i>2?'opacity="1"':""}/><circle cx="362" cy="${y+19}" r="12" class="${i==2?"f-surf":"f-c"}"/><text x="362" y="${y+24}" text-anchor="middle" font-size="13" font-weight="800" class="${i==2?"f-ink":"f-inv"}">${n}</text><text x="340" y="${y+17}" text-anchor="start" font-size="12.5" font-weight="700" class="${i==2?"f-inv":"f-ink"}">${h}</text><text x="340" y="${y+32}" text-anchor="start" font-size="10" class="${i==2?"f-inv":"f-mut"}">${d}</text>`}).join("")}</svg>`},
+ dilemma:()=>`<svg viewBox="0 0 400 190" role="img" aria-label="הדילמה: חופש הפרט מול חובה להגן">
+  <path d="M200 30V150M150 160H250" class="s-c" stroke-width="3"/>
+  <path d="M70 62 L330 48" class="s-line" stroke-width="3"/>
+  <circle cx="200" cy="55" r="7" class="f-c"/>
+  <path d="M300 50 L270 100 H330z" class="f-soft"/><path d="M100 64 L70 112 H130z" class="f-soft"/>
+  <text x="300" y="128" text-anchor="middle" font-size="13" font-weight="700" class="f-ink">חופש הפרט</text>
+  <text x="300" y="146" text-anchor="middle" font-size="11" class="f-mut">אוטונומיה, פרטיות</text>
+  <text x="100" y="136" text-anchor="middle" font-size="13" font-weight="700" class="f-ink">חובה להגן ולטפל</text>
+  <text x="100" y="154" text-anchor="middle" font-size="11" class="f-mut">בריאות, בטיחות, שכנים</text>
+  <text x="200" y="184" text-anchor="middle" font-size="11.5" class="f-mut">ומעליהן: טובת האגרן מול טובת הסביבה</text></svg>`
+};
+const waysTable=`<div class="tblwrap"><table class="tbl"><thead><tr><th>הדרך</th><th>מה השיגה</th><th>מה המחיר</th></tr></thead><tbody>
+<tr><td><b>מעקב תקופתי</b></td><td>יצחק חי כרצונו</td><td class="out">אין שום שיפור במצבו</td></tr>
+<tr><td><b>התערבות \"בחסות החוק\"</b></td><td>שיפור משמעותי בתנאים הפיזיים</td><td class="out">פגיעה באוטונומיה ובפרטיות, וערעור חזק של מצבו הנפשי</td></tr>
+<tr><td><b>התערבות \"בהסכמה\"</b></td><td class="in">פינוי, חיבור תשתיות, בדיקות, אשפוז ומעבר לבית אבות</td><td>הרבה זמן, סבלנות והשקעה רגשית</td></tr></tbody></table></div>`;
+const E=t=>`<span class="en">(${t})</span>`;
+const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</figcaption>`:""}</figure>`;
+const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
+const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;
+const tiles=a=>`<div class="tiles">${a.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`;
+const ex=h=>`<div class="ex"><span class="lbl">דוגמה</span><p>${h}</p></div>`;
+const rem=h=>`<div class="remember">${ic("bulb")}<p>${h}</p></div>`;
+const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")}${t}</span>`).join("")}${n.map(t=>`<span class="yn n">${ic("x")}${t}</span>`).join("")}</div>`;
+const spectrum=(r,l,dot)=>`<div class="spectrum"><div class="track">${dot?'<span class="dot"></span>':""}</div><div class="ends"><span>${r}</span><span>${l}</span></div></div>`;
+document.head.insertAdjacentHTML("beforeend",'<style>.yn svg{width:16px;height:16px}</style>');
+
+const T=[
+ {id:"t1",icon:"building",title:"מהי אגרנות כפייתית",blocks:[
+  {h:"הגדרה ושכיחות",html:`${def("מושג מפתח",`<mark>אגרנות</mark> ${E("Hoarding Disorder")}: הפרעה שמאופיינת ב<b>איסוף בלתי נשלט</b> של חפצים, תוך ייחוס משמעות לחפצים ובלי הבחנה בערכם האמיתי, ו<b>אי־יכולת להיפרד</b> מהם. האגירה מצמצמת את מרחב המחיה כמעט עד אפס, פוגעת באיכות החיים ולרוב מביאה להזנחה עצמית וסביבתית.`)}${tiles([["doc","DSM-5, 2013","רק אז הוכרה כהפרעה נפשית נפרדת"],["people","2% עד 6%","מהאוכלוסייה. חוצה מגדרים ומעמדות"],["clock","שנות ה-30","הסימנים הראשונים. ביטוי קיצוני בגיל הזיקנה"]])}${ex("אחד האזכורים הראשונים: ברומן \"הנפשות המתות\" של גוגול (1842) יש זקן עשיר מאוד שחי בזוהמה, בבית עמוס חפצים ישנים ושבורים.")}`,q:"q1"},
+  {h:"טעויות נפוצות בהערכה",html:`<p>כ-50% מהאגרנים חיים בלי גישה לכיריים ולמקרר, וכ-10% בלי גישה לשירותים. אבל רק <b>כ-6%</b> מדווחים שהם בסכנה רפואית ממשית.</p>${yn([],["כל מי שחי בהזנחה קשה נמצא בסכנה","אגרנות תמיד באה עם הזנחה (יש אגרנים שמקפידים מאוד על סדר וניקיון)","אגרנים חוו בעבר מחסור קשה (מי שגדל בעוני לא הופך לאגרן יותר ממי שגדל בשפע)"])}${rem("הערכה מוטעית שכל אגרן בסכנה עלולה להוביל לתכנית התערבות <b>לא מותאמת</b>, ואף כזו שפוגעת בזכויות האגרן.")}`,q:"q3"},
+  {h:"הקריטריונים ב-DSM-5",html:`<p>לכולנו יש חפצים שקשה לנו לזרוק. ה-DSM מבחין בין זה לבין אגרנות כפייתית, שנמשכת <b>לפחות חצי שנה</b> וכוללת:</p>${tiles([["x","קושי עקבי להיפרד","מחפצים, בלי קשר לערכם האמיתי"],["lock","צורך לשמור","הקושי נובע מצורך לשמור, גם כשהחפצים לא שמישים"],["building","עומס על אזורי מחיה","שפוגע בייעוד שלהם. אם יש סדר, זה רק בזכות צד שלישי"],["question","מצוקה או פגיעה","חברתית, תעסוקתית, או בשמירה על סביבה בטוחה"],["brain","לא בגלל מצב רפואי","כמו פגיעה מוחית"],["copies","לא מוסבר בהפרעה אחרת","כמו OCD, דיכאון, סכיזופרניה או דמנציה"]])}${def("רמות תובנה",`<b>טובה:</b> מבין שההתנהגות בעייתית. <b>ירודה:</b> משוכנע ברוב המקרים שאין בעיה. <b>אין תובנה (מחשבות שווא):</b> משוכנע לחלוטין שאין בעיה, למרות המציאות.`)}`,q:"q5"}
+ ]},
+ {id:"t2",icon:"brain",title:"איך ההפרעה מתפתחת",blocks:[
+  {h:"עולמו של האגרן",html:`<p>לאגרן יש צורך סובייקטיבי \"להציל\" את החפצים, ומצוקה כשצריך להשליך אותם. הוא ממשיך לאגור לאורך כל חייו: קנייה, חיטוט בפחי זבל ואיסוף חפצים שאין בהם צורך.</p>${tiles([["clock","\"אצטרך את זה\"","בהתחלה: הסבר של שימוש עתידי, שלו או של אחרים"],["copies","\"קודם אמיין\"","אחר כך: אי אפשר לזרוק עד שימיין. המיון כמובן לא קורה"],["hand","חלק מהגוף","ערך סנטימנטלי. ויתור על חפץ מרגיש כמו ויתור על חלק מגופו"]])}${rem("ההפרעה פוגעת גם בתפקוד בבית (מקלחת, מטבח, שירותים), יוצרת סיכון בטיחותי, ופוגעת פיזית, חברתית וכלכלית גם <b>בבני הבית והשכנים</b>.")}`,q:"q7"},
+  {h:"חמשת השלבים",html:`${fig("stages","לפי סולם ICD Clutter-Hoarding Scale")}${rem("<b>שלב 3 הוא נקודת המפנה</b>: מכאן צריך התערבות של אנשי מקצוע שונים. בשלב 5 צריך התערבות <b>אינטנסיבית ורב־מקצועית</b>.")}`,q:"q9"},
+  {h:"אבחון וטיפול",html:`<p>בעבר אגרנות נחשבה לחלק מ<mark>הפרעת אישיות טורדנית־כפייתית</mark> ${E("OCPD")}. אבל האגרן <b>נהנה</b> מהאיסוף, מתמכר לתהליך ומרגיש שלחפצים יש ערך רגשי, מה שלא קיים ב-OCPD. רק 5% עד 10% מבעלי OCPD סובלים גם מאגרנות.</p>${tiles([["brain","בסיס נוירו־ביולוגי","פעילות יתר באזור הקדמי של המוח, שפועל בקבלת החלטות"],["copies","תחלואה כפולה","דיכאון, פוביות, חרדות, פוסט־טראומה, סכיזופרניה. כ-30% עם הפרעת קשב"],["building","פגיעה אורגנית","דמנציה, גידול או טראומה מוחית יכולים להוביל לאגירה"]])}${rem("<b>קשה לטיפול.</b> תרופות (כמו SSRI) עוזרות בעיקר להפרעות הנלוות ולא לאגרנות עצמה. טיפול נוסף: CBT, טיפול קוגניטיבי־התנהגותי.")}`,q:"q11"}
+ ]},
+ {id:"t3",icon:"scales",title:"הדילמה האתית",blocks:[
+  {h:"חופש הפרט מול חובה להגן",html:`${fig("dilemma")}<p>רוב האגרנים <b>צלולים</b>, מסוגלים להביע את רצונם, מודעים למצבם ולא רואים פגם באורח חייהם. מכאן הדילמה המרכזית של העובד הסוציאלי:</p>${tiles([["id","לכבד","לכבד את רצונו ולאפשר לו לחיות לפי ראות עיניו, גם בהזנחה קיצונית"],["hand","להגן","למלא את המחויבות המקצועית: תנאי מחיה סבירים ומניעת סכנות, גם בעזרת פנייה לחוק"],["people","הסביבה","ריחות, מזיקים וחפצים שגולשים לחללים משותפים פוגעים בשכנים"]])}`,q:"q13"},
+  {h:"החוק והאתיקה",html:`${tiles([["scales","חוק יסוד: כבוד האדם וחירותו (1992)","אין פוגעים בחייו, בגופו, בכבודו או בקניינו של אדם. לכל אדם זכות לפרטיות"],["doc","חוק העובדים הסוציאליים (1996)","קידום רווחת הפרט והחברה, תוך שמירה על כבוד האדם ושוויון"],["check","קוד האתיקה (1995)","הערך הראשון: <b>עצמאות ואחריות</b> האדם לנהל את חייו ולבחור את תנאי קיומו"]])}${def("הקושי בפועל",`מצד אחד, העובד רואה אדם במצב ירוד ונדרש לעזור <b>מיד</b>. מצד שני, נדרש להימנע מהתערבות <b>בלי שיתוף והסכמה</b>. ובנוסף, יש לחץ מהקהילה, מבני משפחה ומארגונים, שמפנים \"אצבע מאשימה\" כלפי העובד הסוציאלי.`)}`,q:"q15"}
+ ]},
+ {id:"t4",icon:"id",title:"המקרה של יצחק",blocks:[
+  {h:"ההיכרות והמעקב",html:`<p><b>יצחק</b> (שם בדוי), בן 84, ערירי, אגרן כפייתי \"קלאסי\". ההיכרות התחילה כעשור קודם: פנייה בגלל הזנחה, ובמשרד הופיע אדם צלול ומתפקד שסירב לכל עזרה.</p><p>שנים אחר כך הגיעה פנייה על \"חסר בית שמקבץ נדבות\". זה היה יצחק: גר בדירתו, מקבץ נדבות כל יום ומחזיק עגלה מלאה שקיות.</p>${def("דרך 1: מעקב תקופתי",`במשך שנתיים, אחת לכמה חודשים, עובד סוציאלי הציע עזרה. יצחק סירב שוב ושוב, ותגובותיו נעשו קיצוניות יותר. העובד הרגיש שהביקורים <b>פוגעים באוטונומיה</b> שלו ואף מטרידים אותו.`)}${rem("<b>דילמה:</b> גם הקשיש וגם הקהילה (שהתלוננה) הם \"לקוחות\" של המחלקה, והאינטרסים שלהם מנוגדים. הצוות החליט להתמקד בצורכי הקשיש.")}`,q:"q17"},
+  {h:"הביקור בבית ו\"בחסות החוק\"",html:`<p>בביקור: הדלת נפתחה רק 30 עד 40 ס\"מ, חפצים עד התקרה, ויצחק ישן מקופל בישיבה על שתי מרצפות. הדירה מנותקת ממים, חשמל וגז. הוא אמר: \"אני לא צריך כלום\". הבקשה היחידה שלו: <b>לסלק את העכברושים</b>.</p><p>אבחון פסיכוגריאטרי (ברחוב, כי סירב להגיע): דמנציה סנילית, המלצה על אפוטרופוס וסידור מוסדי. הוא סירב.</p>${def("דרך 2: התערבות \"בחסות החוק\"",`בית המשפט מינה אפוטרופוס זמני <b>לפינוי ולחיבור לחשמל ומים בלבד</b>. ביום הפינוי הגיעו כעשרה אנשים, ואחרי כמה שעות הפינוי הופסק בגלל הצעקות והכעס של יצחק. הפינוי גרם לו <b>נזק רגשי רב</b>, והוא טען שנעלמו חפצים יקרים ושנפגעה פרטיותו.`)}`,q:"q19"},
+  {h:"דרך 3: התערבות \"בהסכמה\"",html:`<p>הוחלט על פינוי <b>איטי</b> בגיבוי בית המשפט, עם <mark>מלווה אישי</mark>: איש מקצוע־עזר שמכיר את הקהילה, רגיש, סבלני ובלי רתיעה מההזנחה.</p>${tiles([["hand","קשר","המלווה הגיע כל יום, דאג לאוכל, שתייה ובגדים, ונוצר קשר משמעותי"],["copies","יצחק ממיין","יצחק מיין בעצמו, והמלווה זרק. איטי מאוד, עם עליות ומורדות"],["check","הבקשה נענתה","המלווה פיזר רעל וסילק את העכברושים"]])}${rem("אחרי כשנה: הכניסה, המטבח, המקלחת והשירותים פונו. יצחק <b>הסכים</b> לחבר חשמל ומים, הלך עם המלווה לבנק לשלם חובות, ואף ביקש בעצמו דלת, תאורה ובדיקות ראייה.")}`,q:"q21"},
+  {h:"ההחמרה והמעבר",html:`<p>כעבור זמן מצבו הגופני הידרדר והוא תלוי לגמרי במלווה. הצוות שוב התלבט: האם עכשיו לפעול נגד רצונו?</p><p>הוא הסכים לבדיקה רפואית ואחר כך <b>לאשפוז</b>, אחרי שיחות רבות ועם הבטחה לביקורים. בבדיקה השנייה נשללה סכיזופרניה וצוינה <b>הפרעת אישיות</b>. יצחק התנגד לסידור מוסדי, אבל <b>המלווה</b> שכנע אותו לעבור לבית אבות זמנית.</p>${ex("אחרי שבוע ביקש להישאר: \"טוב לי כאן, בבית אין לי תנאים כמו שיש פה\". בסוף הדרך מצבו טוב ויציב, עלה במשקל, מצב רוחו רגוע והוא מביע שביעות רצון.")}`,q:"q23"}
+ ]},
+ {id:"t5",icon:"bulb",title:"הדיון: לטפל בהסכמה",blocks:[
+  {h:"שלוש דרכים, שלוש תוצאות",html:`${waysTable}<p>לפי סולם השלבים, יצחק היה ב<b>שלב החמישי</b>. החוקרים מציינים שרוב המחקרים מתמקדים ב-CBT, ושיש מחסור בידע על עבודה סוציאלית עם אגרנים. לכן הטיפול התנהל ב<b>ניסוי וטעייה</b>.</p>${rem("האבחנות השונות ואף הסותרות שיצחק קיבל מוסברות בכך שההפרעה מלווה במחלות נוספות ושהמקור שלה יכול להיות שונה.")}`,q:"q25"},
+  {h:"המרכיבים של \"התערבות בהסכמה\"",html:`${tiles([["hand","דאגה, אמפתיה וקבלה","וסיפוק צרכים בסיסיים (מזון, הגנה, חברה) כדי לבנות קשר"],["link","קשר כבסיס לשיח","שיח משותף על ההחלטות, בתדירות גבוהה ככל האפשר"],["people","מלווה מתאים","רגיש, עדין, סבלני, מוכן לעזור ובלי רתיעה מההזנחה"],["id","עובד סוציאלי מטפל","קשר ישיר ואינטנסיבי, הדרכת המלווה וזיהוי נקודות סכנה"],["copies","צוות רב־מקצועי","עו\"ס, עו\"ס לחוק, רופא, עורך דין, אפוטרופוס, משפחה ועוד"],["clock","קצב מתאים","פגישות קבועות, והזמנת האגרן לישיבות כדי שישמיע את רצונו"]])}`,q:"q27"},
+  {h:"מחירים ומגבלות",html:`${def("המסקנה",`\"התערבות בהסכמה\" היא הדרך <b>המיטבית</b>: התוצאות הטובות ביותר <b>בלי פגיעה במצבו הנפשי</b>. היא פותרת את הדילמה האתית כי היא מאפשרת שיפור <b>איטי אך בטוח</b>, בהסכמת המטופל ובלי לפגוע באוטונומיה שלו.`)}${tiles([["clock","המחיר","הרבה זמן, השקעה רגשית, התמדה, ואורך רוח. גיוס והכשרה של מלווים ואנשי מקצוע נוספים"],["question","לא בטוח","אין ודאות שבלי ההתערבות \"בחסות החוק\" היו מגיעים לאותן תוצאות"],["x","לא לכל מקרה","פחות מתאים כשהאגרן לא עצמאי וצריך טיפול רפואי דחוף"],["doc","מקרה אחד","צריך לבחון את השיטה במקרים נוספים ובמחקר שדה"]])}`,q:"q29"}
+ ]}
+];
+const Q={
+q1:{t:"t1",v:[
+ {q:"איך מוגדרת אגרנות במאמר?",a:"איסוף בלתי נשלט של חפצים, ייחוס משמעות להם בלי קשר לערכם, ואי־יכולת להיפרד מהם",w:["אוסף מסודר של חפצים בעלי ערך","קנייה מופרזת בלבד","זריקה כפייתית של חפצים"],e:"זה גורם לצמצום מרחב המחיה ולרוב להזנחה."},
+ {q:"מתי הוכרה אגרנות כהפרעה נפשית נפרדת?",a:"ב-DSM-5, בשנת 2013",w:["ב-1842","ב-DSM-4, בשנת 1994","היא עוד לא הוכרה"],e:"עד אז נחשבה לחלק מהפרעת אישיות טורדנית־כפייתית."}]},
+q2:{t:"t1",v:[
+ {q:"מה שכיחות האגרנות באוכלוסייה, לפי ה-DSM?",a:"2% עד 6%",w:["פחות מ-0.1%","20% עד 30%","כ-50%"],e:"והיא חוצה מגדרים ומעמדות."},
+ {q:"מתי מופיעים הסימנים הראשונים, ומתי הביטוי הקיצוני?",a:"בשנות ה-30, וביטוי קיצוני בזיקנה",w:["בילדות, וקיצוני בגיל ההתבגרות","בגיל 60, וקיצוני בגיל 90","רק בזיקנה"],e:"לכן המאמר עוסק באדם מבוגר."}]},
+q3:{t:"t1",v:[
+ {q:"כמה מהאגרנים מדווחים שהם בסכנה רפואית ממשית?",a:"כ-6% בלבד",w:["כ-50%","כ-90%","כולם"],e:"למרות שכ-50% חיים בלי גישה לכיריים ולמקרר."},
+ {q:"מה הבעיה בהנחה שכל מי שחי בהזנחה קשה נמצא בסכנה?",a:"היא עלולה להוביל לתכנית התערבות לא מותאמת ואף פוגעת בזכויות האגרן",w:["היא תמיד נכונה","היא גורמת לעובדים לעבוד פחות","אין בה בעיה"],e:"זו טעות שהכותבים ראו בפרקטיקה."}]},
+q4:{t:"t1",v:[
+ {q:"מה נכון לגבי עוני בילדות ואגרנות, לפי המחקרים שבמאמר?",a:"מי שגדל בעוני לא הופך לאגרן יותר ממי שגדל בשפע",w:["כל מי שגדל בעוני הופך לאגרן","רק מי שגדל בשפע הופך לאגרן","עוני בילדות הוא הגורם העיקרי"],e:"זו עוד הערכה מוטעית שהמאמר מפריך."},
+ {q:"האם אגרנות תמיד באה עם הזנחה עצמית?",a:"לא, יש אגרנים שמקפידים מאוד על סדר וניקיון",w:["כן, תמיד","כן, אבל רק אצל גברים","זה לא נבדק"],e:"גם הגישה הרפואית לא רואה בהכרח קשר בין השניים."}]},
+q5:{t:"t1",v:[
+ {q:"לפי ה-DSM-5, כמה זמן צריכה להימשך התופעה כדי להיחשב אגרנות?",a:"לפחות חצי שנה",w:["שבוע","חודש","לפחות 5 שנים"],e:"זה מבחין בינה לבין קושי רגיל לזרוק חפצים."},
+ {q:"אגרן שהבית שלו מסודר רק כי בני משפחה מפנים כל הזמן. האם זה עדיין עומד בקריטריון?",a:"כן, ה-DSM מציין שסדר בזכות צד שלישי לא שולל את ההפרעה",w:["לא, כי הבית מסודר","רק אם הוא גר לבד","רק אם יש מזיקים"],e:"הקריטריון: עומס על אזורי המחיה, ואם יש סדר זה רק בגלל צד שלישי."}]},
+q6:{t:"t1",v:[
+ {q:"אגרן שמשוכנע לחלוטין שאין לו בעיה, למרות המציאות. מה רמת התובנה שלו?",a:"אין תובנה (מחשבות שווא)",w:["תובנה טובה","תובנה ירודה","תובנה חלקית"],e:"תובנה ירודה = משוכנע ברוב המקרים. אין תובנה = משוכנע לחלוטין."},
+ {q:"איזה מהבאים הוא אחד מקריטריוני ה-DSM-5 לאגרנות?",a:"האגירה לא מוסברת בהפרעה נפשית אחרת",w:["האדם גר לבד","האדם מעל גיל 60","האגירה היא רק של חפצים יקרים"],e:"וגם לא נובעת ממצב רפואי כמו פגיעה מוחית."}]},
+q7:{t:"t2",v:[
+ {q:"איך משתנה ההסבר של האגרן לאגירה עם הזמן?",a:"בהתחלה \"אצטרך את זה\", ואחר כך \"אי אפשר לזרוק עד שאמיין\"",w:["בהתחלה מודה בבעיה ואחר כך מכחיש","תמיד אומר שהחפצים יקרים","לא נותן הסבר"],e:"והמיון כמובן לא קורה."},
+ {q:"למה קשה כל כך לאגרן לוותר על חפץ, לפי המאמר?",a:"הוא מפתח רגשות כלפי החפצים, וויתור עליהם מרגיש כמו ויתור על חלק מגופו",w:["כי החפצים יקרים מאוד","כי הוא לא יודע לזרוק","כי אסור לו"],e:"לחפצים יש ערך סנטימנטלי."}]},
+q8:{t:"t2",v:[
+ {q:"את מי פוגעת ההפרעה, חוץ מהאגרן עצמו?",a:"גם בני הבית והשכנים, פיזית, חברתית וכלכלית",w:["רק את האגרן","רק את העובד הסוציאלי","אף אחד"],e:"לכן יש גם דילמה של טובת הסביבה."},
+ {q:"איך האגרן מגיב לחוויה של \"בזבוז\"?",a:"הוא מתנגד לה ולא מוכן להיות \"בזבזן\"",w:["הוא לא מתייחס לזה","הוא אוהב לבזבז","הוא מוכר את החפצים"],e:"זה חלק מההסבר לאגירה."}]},
+q9:{t:"t2",v:[
+ {q:"איזה שלב הוא \"נקודת המפנה\" שמצריכה התערבות של אנשי מקצוע?",a:"השלב השלישי",w:["השלב הראשון","השלב השני","השלב החמישי"],e:"חדר מלא לפחות, זבל ומזיקים."},
+ {q:"מה מאפיין את השלב החמישי?",a:"כל המערכות החיוניות לא פועלות, המבנה ניזוק ויש סכנה",w:["הבית מסודר","יש רק סימנים של עומס","חדר אחד מלא"],e:"נדרשת התערבות אינטנסיבית ורב־מקצועית."}]},
+q10:{t:"t2",v:[
+ {q:"בית שבו לא מתבצעות כביסה והדחה, אין הדברה, אבל עוד נשמר סדר מסוים. באיזה שלב?",a:"השלב השני",w:["השלב הראשון","השלב השלישי","השלב הרביעי"],e:"בשלב השלישי כבר יש חדר מלא וזבל אורגני."},
+ {q:"בית שבו החפצים יוצאים לחדר המדרגות, ואין מקום לישון או לבשל. באיזה שלב?",a:"השלב הרביעי",w:["השלב השני","השלב השלישי","השלב הראשון"],e:"בשלב החמישי גם התשתיות לא פועלות."}]},
+q11:{t:"t2",v:[
+ {q:"למה אגרנות כבר לא נחשבת לחלק מ-OCPD?",a:"כי האגרן נהנה מהאיסוף ומרגיש שלחפצים ערך רגשי, מה שלא קיים ב-OCPD",w:["כי היא נדירה יותר","כי אין בה כפייתיות בכלל","כי היא מופיעה רק בילדות"],e:"וגם רק 5% עד 10% מבעלי OCPD סובלים מאגרנות."},
+ {q:"מה מצאו מחקרים קליניים אחרונים במוח של אגרנים?",a:"פעילות יתר באזור הקדמי, שפועל בקבלת החלטות",w:["פעילות נמוכה באזורי הראייה","נזק בגזע המוח","שום הבדל"],e:"להפרעה יש כנראה בסיס נוירו־ביולוגי."}]},
+q12:{t:"t2",v:[
+ {q:"מה נכון לגבי טיפול תרופתי באגרנות?",a:"התרופות עוזרות בעיקר להפרעות הנלוות ולא לאגרנות עצמה",w:["תרופות מרפאות אגרנות","אין שום תרופה שעוזרת במשהו","רק אנטיביוטיקה עוזרת"],e:"ויש גם טיפול CBT."},
+ {q:"כמה מהאגרנים סובלים גם מהפרעת קשב, לפי המאמר?",a:"כ-30%",w:["כ-3%","כ-60%","כ-90%"],e:"תחלואה כפולה נפוצה באגרנות."}]},
+q13:{t:"t3",v:[
+ {q:"מהי הדילמה האתית המרכזית בעבודה עם אגרנים?",a:"חופש הפרט מול המחויבות המקצועית להגן ולטפל",w:["כסף מול זמן","משפחה מול עבודה","תרופות מול שיחות"],e:"הפער בין תפיסת האגרן לתפיסת הסביבה יוצר אותה."},
+ {q:"מה הופך את הדילמה לקשה במיוחד?",a:"רוב האגרנים צלולים, מבינים את מצבם ולא רואים פגם באורח חייהם",w:["רוב האגרנים לא מדברים","רוב האגרנים מבקשים עזרה","רוב האגרנים ילדים"],e:"לכן קשה להצדיק התערבות בכפייה."}]},
+q14:{t:"t3",v:[
+ {q:"מהי הדילמה הנוספת שהמאמר מזכיר?",a:"טובת האגרן מול טובת הסביבה, למשל השכנים",w:["טובת העובד מול טובת המנהל","טובת המדינה מול טובת העירייה","אין דילמה נוספת"],e:"ריחות, מזיקים וחפצים בחללים משותפים פוגעים בשכנים."},
+ {q:"השכנים מתלוננים, והאגרן רוצה להמשיך לחיות כך. מה זה מדגים?",a:"דילמה בין צורכי האגרן לצורכי הסביבה",w:["שהאגרן צודק","שהשכנים צודקים","שאין צורך בעובד סוציאלי"],e:"שני הצדדים הם לקוחות של המחלקה."}]},
+q15:{t:"t3",v:[
+ {q:"מהו הערך הראשון בקוד האתיקה של העובדים הסוציאליים?",a:"עצמאות ואחריות האדם לנהל את חייו ולבחור את תנאי קיומו",w:["הגנה על הקהילה מעל הכל","ציות להוראות הרופא","יעילות ומהירות"],e:"כלומר, לכבד את דרך החיים של האדם."},
+ {q:"איזה חוק קובע שאין פוגעים בחייו, בגופו או בכבודו של אדם?",a:"חוק יסוד: כבוד האדם וחירותו",w:["חוק העובדים הסוציאליים","קוד האתיקה","חוק הגנה על חוסים"],e:"משנת 1992. הוא גם קובע זכות לפרטיות."}]},
+q16:{t:"t3",v:[
+ {q:"מה הקושי של העובד הסוציאלי כשהוא פוגש אגרן מוזנח?",a:"מצד אחד צריך לעזור מיד, ומצד שני להימנע מהתערבות בלי הסכמה",w:["אין לו כלים בכלל","הוא לא מורשה להיכנס","האגרן תמיד מסכים"],e:"ובנוסף יש לחץ מהקהילה."},
+ {q:"קוד האתיקה מדגיש מתן עזרה תוך:",a:"שמירה על העצמאות, השיתוף וההסכמה של האדם",w:["החלטה במקום האדם","הסתמכות על השכנים בלבד","הימנעות מכל קשר"],e:"זה הבסיס להתערבות בהסכמה."}]},
+q17:{t:"t4",v:[
+ {q:"מי היה יצחק?",a:"בן 84, ערירי, אגרן כפייתי \"קלאסי\"",w:["צעיר בן 30 עם משפחה גדולה","ילד בן 12","אישה בת 60"],e:"השם בדוי."},
+ {q:"מה עשה יצחק ביומיום?",a:"קיבץ נדבות במקום קבוע עם עגלה מלאה שקיות",w:["עבד במשרד","גר אצל קרובים","שהה בבית חולים"],e:"למרות שהיו לו הכנסות וחסכונות."}]},
+q18:{t:"t4",v:[
+ {q:"מה השיג המעקב התקופתי (הדרך הראשונה)?",a:"שום שיפור. יצחק סירב שוב ושוב, ותגובותיו נעשו קיצוניות יותר",w:["שיפור גדול","יצחק הסכים לעזרה","הוא עבר לבית אבות"],e:"העובד הרגיש שהביקורים פוגעים באוטונומיה ומטרידים."},
+ {q:"מה החליט הצוות כשהאינטרסים של יצחק והקהילה התנגשו?",a:"להתמקד בצורכי הקשיש",w:["להתמקד בדרישות הקהילה","לסגור את התיק","להעביר את הטיפול לשכנים"],e:"במיוחד אחרי דיווח על עכברים ותיקנים."}]},
+q19:{t:"t4",v:[
+ {q:"מה הייתה הבקשה היחידה של יצחק?",a:"לסלק את העכברושים",w:["לחבר חשמל","לעבור לבית אבות","לקבל כסף"],e:"כי הם אכלו את העיתונים והשקיות שלו."},
+ {q:"מה מצאו בביקור בדירה?",a:"חפצים עד התקרה, ויצחק ישן בישיבה על שתי מרצפות, בלי מים, חשמל וגז",w:["דירה מסודרת","דירה ריקה","דירה עם בעיה אחת קטנה"],e:"הדלת נפתחה רק 30 עד 40 ס\"מ."}]},
+q20:{t:"t4",v:[
+ {q:"למה בית המשפט מינה אפוטרופוס זמני ולא שלח את יצחק לבית אבות?",a:"כי לא הייתה סכנה מיידית, ומעבר בניגוד לרצונו היה פוגע בו",w:["כי לא היה מקום בבית אבות","כי יצחק ביקש","כי השכנים רצו"],e:"האפוטרופוס מונה לפינוי ולחיבור חשמל ומים בלבד."},
+ {q:"מה קרה ביום הפינוי \"בחסות החוק\"?",a:"הפינוי הופסק אחרי כמה שעות, ויצחק נפגע רגשית מאוד",w:["הדירה פונתה כולה","יצחק עזר בשמחה","לא הגיע אף אחד"],e:"הוא גם טען שנעלמו חפצים ושנפגעה פרטיותו."}]},
+q21:{t:"t4",v:[
+ {q:"מי היה הדמות המרכזית בהתערבות בהסכמה?",a:"מלווה אישי שהגיע כל יום ובנה קשר",w:["שוטר","השכן","מנהל הבנק"],e:"איש מקצוע־עזר, רגיש וסבלני, בלי רתיעה."},
+ {q:"איך התנהל הפינוי בהתערבות בהסכמה?",a:"יצחק מיין בעצמו, והמלווה זרק. איטי מאוד, עם עליות ומורדות",w:["חברה פינתה הכל ביום אחד","השכנים פינו","לא היה פינוי"],e:"והמלווה גם סילק את העכברושים, כמו שיצחק ביקש."}]},
+q22:{t:"t4",v:[
+ {q:"מה קרה אחרי כשנה של התערבות בהסכמה?",a:"חלקים מהדירה פונו, יצחק הסכים לחבר חשמל ומים ואף ביקש עוד עזרה בעצמו",w:["כלום לא השתנה","יצחק עזב את העיר","הדירה נמכרה"],e:"הוא ביקש דלת, שער, תאורה ובדיקות ראייה."},
+ {q:"מה מראה הבקשה של יצחק לתיקון הדלת ולבדיקות ראייה?",a:"השיפור בתנאי החיים גרם לו לפנות בעצמו לאנשי המקצוע",w:["שהוא שינה את דעתו על השכנים","שהמלווה הכריח אותו","שהוא רצה לעבור דירה"],e:"שינוי משמעותי לעומת הסירוב הקודם."}]},
+q23:{t:"t4",v:[
+ {q:"מי שכנע את יצחק לעבור זמנית לבית אבות?",a:"המלווה",w:["השופט","השכנים","הפסיכיאטר"],e:"בפעם הזאת הייתה דמות משמעותית שהוא בטח בה."},
+ {q:"מה אמר יצחק אחרי שבוע בבית האבות?",a:"\"טוב לי כאן, בבית אין לי תנאים כמו שיש פה\"",w:["\"אני רוצה הביתה\"","\"אני לא מדבר עם אף אחד\"","\"תחזירו לי את החפצים\""],e:"ובסוף מצבו היה טוב ויציב."}]},
+q24:{t:"t4",v:[
+ {q:"מה נקבע בבדיקה הפסיכיאטרית השנייה בבית החולים?",a:"נשללה סכיזופרניה וצוינה הפרעת אישיות",w:["אובחנה סכיזופרניה","נמצא שהוא בריא לגמרי","אובחן אלצהיימר מתקדם"],e:"זה מדגים את האבחנות השונות והסותרות שקיבל."},
+ {q:"למה האשפוז הצליח הפעם, בניגוד לפעמים קודמות?",a:"כי הוא הסכים אחרי שיחות רבות, עם הבטחה שהצוות יבקר",w:["כי נלקח בכוח","כי השכנים לקחו אותו","כי הוא שכח"],e:"שוב: בהסכמה ובלי פעולות כוחניות."}]},
+q25:{t:"t5",v:[
+ {q:"מה היה החיסרון של ההתערבות \"בחסות החוק\"?",a:"פגיעה באוטונומיה ובפרטיות וערעור חזק של מצבו הנפשי",w:["היא לא שיפרה כלום","היא הייתה זולה מדי","היא לקחה רק יום"],e:"אבל היא כן שיפרה משמעותית את התנאים הפיזיים."},
+ {q:"איזו דרך אפשרה ליצחק לחיות כרצונו אבל לא שיפרה את מצבו?",a:"מעקב תקופתי",w:["התערבות בחסות החוק","התערבות בהסכמה","אשפוז"],e:"שלוש הדרכים: מעקב, בחסות החוק, בהסכמה."}]},
+q26:{t:"t5",v:[
+ {q:"באיזה שלב של האגרנות היה יצחק?",a:"השלב החמישי",w:["השלב הראשון","השלב השני","השלב השלישי"],e:"דירה מלאה, בלי תשתיות ועם מזיקים."},
+ {q:"למה הטיפול ביצחק התנהל ב\"ניסוי וטעייה\"?",a:"כי יש מחסור בידע על עבודה סוציאלית עם אגרנים",w:["כי הצוות לא היה מקצועי","כי יצחק ביקש","כי לא היה תקציב"],e:"רוב המחקרים מתמקדים ב-CBT."}]},
+q27:{t:"t5",v:[
+ {q:"מה הבסיס להתערבות בהסכמה?",a:"קשר שנבנה דרך דאגה, אמפתיה, קבלה וסיפוק צרכים בסיסיים",w:["צו בית משפט בלבד","טיפול תרופתי","ביקור פעם בשנה"],e:"הקשר הוא בסיס לשיח משותף על ההחלטות."},
+ {q:"איזו תכונה לא מופיעה בדרישות מהמלווה?",a:"ניסיון בפינוי מהיר",w:["רגישות","סבלנות","מוכנות לעזור בלי רתיעה"],e:"ההפך: הפינוי צריך להיות בקצב שמתאים לאגרן."}]},
+q28:{t:"t5",v:[
+ {q:"למה ממליצים להזמין את האגרן לישיבות הצוות?",a:"כדי שישמיע את רצונו ויגיעו איתו להסכמות",w:["כדי לנזוף בו","כדי שיחתום על מסמכים","כדי לחסוך זמן"],e:"זה ביטוי מעשי של כבוד לאוטונומיה."},
+ {q:"מה תפקיד העובד הסוציאלי המטפל בשיטה?",a:"קשר ישיר ואינטנסיבי עם האגרן, הדרכת המלווה וזיהוי נקודות סכנה",w:["לפנות את הדירה בעצמו","רק לכתוב דוחות","לשכנע את השכנים"],e:"וצוות רב־מקצועי מלווה את התהליך."}]},
+q29:{t:"t5",v:[
+ {q:"מה המחיר של התערבות בהסכמה?",a:"הרבה זמן, השקעה רגשית, התמדה ואורך רוח",w:["פגיעה באוטונומיה","נזק נפשי","אין מחיר"],e:"וגם גיוס והכשרה של מלווים ואנשי מקצוע."},
+ {q:"מתי השיטה פחות מתאימה, לפי הכותבים?",a:"כשהאגרן לא עצמאי וצריך טיפול רפואי דחוף",w:["כשהאגרן צלול","כשהאגרן מבוגר","כשיש שכנים"],e:"אז אולי צריך לפעול מהר יותר."}]},
+q30:{t:"t5",v:[
+ {q:"מה המסקנה של המאמר?",a:"התערבות בהסכמה היא הדרך המיטבית: שיפור איטי אך בטוח בלי פגיעה באוטונומיה",w:["תמיד צריך לפעול בכוח","אין טעם להתערב","רק תרופות עוזרות"],e:"והיא פותרת את הדילמה האתית."},
+ {q:"איזו הסתייגות הכותבים עצמם מציינים?",a:"אין ודאות שבלי ההתערבות בחסות החוק היו מגיעים לאותן תוצאות, וזה מקרה אחד בלבד",w:["שהשיטה נכשלה","שיצחק לא השתפר","שאין מחיר לשיטה"],e:"לכן צריך לבחון אותה במקרים נוספים."}]}
+};
+for(const t of T) t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id);
+const KEY=CONFIG.key;
+let S={q:{},read:{}};
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.q) S=s;}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const st=id=>S.q[id]||(S.q[id]={n:0,c:0,w:0,t:0,lv:-1});
+const mastered=id=>(S.q[id]?.c||0)>=2;
+const topicPct=t=>Math.round(100*t.qids.filter(mastered).length/t.qids.length);
+const topicStarted=t=>S.read[t.id]||t.qids.some(id=>S.q[id]&&S.q[id].n);
+const allIds=Object.keys(Q);
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+const pickVariant=id=>{const s=st(id),n=Q[id].v.length;return n>1?(s.lv+1)%n:0};
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const color=t=>`var(--${t.id})`;
+const app=document.getElementById("app");
+const LET=["א","ב","ג","ד"];
+
+function qCard(id,onDone,label){
+  const vi=pickVariant(id),v=Q[id].v[vi],opts=shuffle([v.a,...v.w]);
+  const box=document.createElement("div");box.className="q fade";
+  box.innerHTML=(label?`<span class="eyebrow">${label}</span>`:"")+`<div class="qtext">${esc(v.q)}</div><div class="opts"></div>`;
+  const wrap=box.querySelector(".opts");
+  opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt";b.dataset.a=o===v.a?"1":"";
+    b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+    b.onclick=()=>{const ok=o===v.a,s=st(id);s.n++;s.t=Date.now();s.lv=vi;ok?s.c++:(s.c=0,s.w++);save();
+      wrap.querySelectorAll("button").forEach(x=>{x.disabled=true;if(x.dataset.a)x.classList.add("right")});
+      if(!ok)b.classList.add("wrong");
+      const fb=document.createElement("div");fb.className="fb fade "+(ok?"ok":"no");
+      fb.innerHTML=`${ic(ok?"check":"x")}<div><strong>${ok?"נכון!":"לא בדיוק"}</strong>${esc(v.e)}</div>`;box.appendChild(fb);
+      const nx=document.createElement("button");nx.className="primary";nx.textContent="המשך";nx.style.alignSelf="flex-start";
+      nx.onclick=()=>onDone(ok);box.appendChild(nx);nx.focus({preventScroll:true});nx.scrollIntoView({block:"nearest",behavior:"smooth"});
+    };wrap.appendChild(b)});
+  return box;
+}
+
+function home(){
+  document.body.style.removeProperty("--c");
+  const started=T.filter(topicStarted);
+  const total=Math.round(100*allIds.filter(mastered).length/allIds.length);
+  const weak=allIds.filter(id=>S.q[id]&&S.q[id].n&&!mastered(id)).length;
+  app.innerHTML=`<div class="stack fade">
+   <section class="cover" style="--c:var(--accent)">
+    <div class="cover-art">${FIG[CONFIG.cover]()}</div>
+    <div class="cover-body">
+     <span class="eyebrow">${CONFIG.eyebrow}</span>
+     ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
+     <p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר עם שאלות גם מנושאים קודמים.</p>
+     <div class="stats">
+      <div class="ring" style="--p:${total}"><span>${total}%</span></div>
+      <div class="stat-text"><b>${total===0?"עוד לא התחלת":total>=80?"אתה שולט בחומר":"בדרך"}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
+      <button class="primary review-btn" id="rev" ${started.length?"":"disabled"}>${ic("cycle")}<span>${started.length?"חזרה מהירה":"חזרה מהירה (אחרי נושא ראשון)"}</span></button>
+     </div>
+    </div>
+   </section>
+   <div class="grid" id="list"></div>
+   <div class="foot"><a href="../#intro" style="color:var(--accent);font-weight:700;text-decoration:none">→ לקורס</a><span>${CONFIG.note}</span><button class="ghost" id="reset">איפוס התקדמות</button></div>
+  </div>`;
+  document.querySelector("#rev svg").style.cssText="width:20px;height:20px";
+  const list=app.querySelector("#list");
+  T.forEach((t,i)=>{const p=topicPct(t),b=document.createElement("button");b.className="tcard";b.style.setProperty("--c",color(t));
+    const status=!topicStarted(t)?"לא התחלת":p>=80?"שולט":"בתהליך";
+    b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
+    b.onclick=()=>topic(i,0);list.appendChild(b)});
+  app.querySelector("#rev").onclick=review;
+  const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
+  scrollTo(0,0);
+}
+
+function bar(title,n,i,label){
+  return `<div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">${label}</span></div><div class="steps">${Array.from({length:n},(_,k)=>`<i class="${k<=i?"on":""}"></i>`).join("")}</div></div><span class="eyebrow">${title}</span>`;
+}
+
+function topic(ti,bi){
+  const t=T[ti],blk=t.blocks[bi];document.body.style.setProperty("--c",color(t));
+  app.innerHTML=`<div class="stack">${bar(`נושא ${ti+1} · ${t.title}`,t.blocks.length+1,bi,`קטע ${bi+1} מתוך ${t.blocks.length}`)}
+   <article class="card fade"><h3>${blk.h}</h3>${blk.html}</article><div id="slot"></div></div>`;
+  app.querySelector("#back").onclick=home;
+  const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;save();quiz(ti)}};
+  const slot=app.querySelector("#slot");
+  if(blk.q)slot.appendChild(qCard(blk.q,next,"בדיקה קצרה"));
+  else{const b=document.createElement("button");b.className="primary";b.textContent="המשך";b.onclick=next;slot.appendChild(b)}
+  scrollTo(0,0);
+}
+
+function runSet(title,ids,c,onEnd){
+  let i=0,right=0;document.body.style.setProperty("--c",c);
+  const step=()=>{
+    if(i>=ids.length)return onEnd(right,ids.length);
+    const id=ids[i],from=T.find(t=>t.id===Q[id].t);
+    app.innerHTML=`<div class="stack">${bar(title,ids.length,i,`שאלה ${i+1} מתוך ${ids.length}`)}<div id="slot"></div></div>`;
+    app.querySelector("#back").onclick=home;
+    const card=qCard(id,ok=>{if(ok)right++;i++;step()},from.title);card.style.setProperty("--c",color(from));
+    app.querySelector("#slot").appendChild(card);scrollTo(0,0);
+  };step();
+}
+
+function quiz(ti){
+  const t=T[ti];
+  const prev=T.slice(0,ti).filter(topicStarted).flatMap(x=>x.qids);
+  const extra=shuffle(prev).sort((a,b)=>st(a).c-st(b).c).slice(0,2);
+  runSet(`מבחן סיום · ${t.title}`,shuffle(t.qids).concat(extra),color(t),(r,n)=>done(r,n,ti));
+}
+
+function review(){
+  const pool=T.filter(topicStarted).flatMap(t=>t.qids),now=Date.now();
+  const score=id=>{const s=S.q[id]||{n:0,c:0,w:0,t:0};return (s.n?0:2)+s.w*2+(s.c<2?3:0)+Math.min(3,(now-s.t)/864e5)+Math.random()*2};
+  const ids=pool.map(id=>[id,score(id)]).sort((a,b)=>b[1]-a[1]).slice(0,12).map(x=>x[0]);
+  runSet("חזרה מהירה",shuffle(ids),"var(--accent)",(r,n)=>done(r,n,null));
+}
+
+function done(r,n,ti){
+  const nextT=ti!=null&&ti+1<T.length?ti+1:null,pct=Math.round(100*r/n);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">${ti!=null?`סיום נושא ${ti+1} · ${T[ti].title}`:"סיום חזרה מהירה"}</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct};--accent:var(--c)"><span>${pct}%</span></div><div class="big">${r}/${n}</div></div>
+    <p>${r===n?"מצוין, הכל נכון.":r>=n*0.7?"טוב מאוד. מה שטעית בו יחזור בחזרה המהירה, בניסוח אחר.":"כדאי לעבור שוב על הנושא. השאלות שטעית בהן יחזרו בחזרה המהירה."}</p>
+    <div class="row">${nextT!=null?`<button class="primary" id="nx" style="--c:${color(T[nextT])}">לנושא הבא: ${T[nextT].title}</button>`:""}<button id="hm">לכל הנושאים</button></div>
+   </article></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;
+  const nx=app.querySelector("#nx");if(nx)nx.onclick=()=>topic(nextT,0);
+  scrollTo(0,0);
+}
+home();
+</script>
+</body>
+</html>
