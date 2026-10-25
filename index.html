@@ -72,6 +72,29 @@ main .in{padding-block:34px 56px;display:flex;flex-direction:column;gap:22px}
 .bar i{display:block;height:100%;background:var(--c);border-radius:3px}
 .empty{margin:6px 12px 10px;padding:16px;border:1.5px dashed var(--line);border-radius:12px;color:var(--muted);font-size:.92rem;display:flex;gap:10px;align-items:center}
 .empty svg{width:20px;height:20px;flex:none;color:var(--c)}
+
+/* course grid (closed) */
+button.course{font:inherit;color:inherit;border:none;padding:0;text-align:right;cursor:pointer;transition:transform .15s}
+button.course:hover{transform:translateY(-3px)}
+.cbody{padding:16px 20px 20px;display:flex;flex-direction:column;gap:10px}
+.cmeta{display:flex;justify-content:space-between;font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.copen{font-weight:700;color:var(--c)}
+/* course view */
+.cview{display:flex;flex-direction:column;gap:18px}
+.back{align-self:flex-start;font:inherit;font-weight:600;background:none;border:none;color:var(--muted);cursor:pointer;padding:4px 0}
+.back:hover{color:var(--ink)}
+.vhead{--c:var(--mgmt);background:color-mix(in srgb,var(--c) 12%,var(--surface));border-radius:20px;padding:22px;display:flex;gap:16px;align-items:center;box-shadow:var(--shadow)}
+.vhead .cicon{width:64px;height:64px;border-radius:18px}
+.vhead .cicon svg{width:36px;height:36px}
+.vhead h2{font-size:clamp(1.5rem,5vw,2rem)}
+.vhead small{color:var(--c);font-weight:700;font-size:.85rem}
+.mlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.mcard{--c:var(--mgmt);background:var(--surface);border-radius:16px;box-shadow:var(--shadow);padding:18px;display:flex;flex-direction:column;gap:10px;text-decoration:none;border-top:4px solid var(--c);transition:transform .15s}
+.mcard:hover{transform:translateY(-2px)}
+.mcard .type{font-size:.78rem;font-weight:700;color:var(--c);letter-spacing:.03em}
+.mcard .name{font-family:var(--display);font-size:1.3rem;line-height:1.25}
+.mcard .bar,.cbody .bar{flex:none}
+.mcard .sub{font-size:.85rem;color:var(--muted)}
 footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 @media (prefers-reduced-motion:no-preference){.course{animation:up .45s ease-out both}.course:nth-child(2){animation-delay:.05s}.course:nth-child(3){animation-delay:.1s}.course:nth-child(4){animation-delay:.15s}.course:nth-child(5){animation-delay:.2s}@keyframes up{from{transform:translateY(8px)}to{transform:none}}}
 </style>
@@ -91,11 +114,7 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
  </div>
 </header>
 <main>
- <div class="in">
-  <div class="sechead"><h2>הקורסים</h2><span id="count"></span></div>
-  <div class="courses" id="courses"></div>
-  <footer><span>ההתקדמות נשמרת במכשיר שלכם בלבד.</span><span>חומר חדש עולה במהלך הסמסטר.</span></footer>
- </div>
+ <div class="in" id="view"></div>
 </main>
 <script>
 const ICON={
@@ -109,25 +128,37 @@ const ICON={
 const ic=k=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[k]}</svg>`;
 const COURSES=[
  {id:"mgmt",name:"מבוא לניהול ומבנה ארגוני",tag:"מנהל עסקים",items:[
-   {type:"לומדת חובת קריאה",title:"התופעה הארגונית",href:"org/ch1.html",key:"lomda-org-1",total:34},
-   {type:"לומדת חובת קריאה",title:"תפיסה וקבלת החלטות",href:"mgmt/ch6.html",key:"lomda-mgmt-ch6",total:31}
+   {title:"התופעה הארגונית",sub:"ארגונים · פרק 1",href:"org/ch1.html",key:"lomda-org-1",total:34},
+   {title:"תפיסה וקבלת החלטות",sub:"פרק 6",href:"mgmt/ch6.html",key:"lomda-mgmt-ch6",total:31}
  ]},
  {id:"intro",name:"מבוא לפסיכולוגיה",tag:"פסיכולוגיה",items:[]},
  {id:"social",name:"פסיכולוגיה חברתית א'",tag:"פסיכולוגיה",items:[]},
  {id:"dev",name:"פסיכולוגיה התפתחותית א'",tag:"פסיכולוגיה",items:[]},
  {id:"phys",name:"יסודות פיזיולוגיים של התנהגות",tag:"פסיכולוגיה",items:[]}
 ];
-function pct(key,total){try{const s=JSON.parse(localStorage.getItem(key)||"null");if(!s||!s.q)return null;
-  const v=Object.values(s.q);if(!v.some(x=>x.n))return null;return Math.round(100*v.filter(x=>x.c>=2).length/total)}catch(e){return null}}
-const n=COURSES.reduce((a,c)=>a+c.items.length,0);
-document.getElementById("count").textContent=`${COURSES.length} קורסים · ${n} ${n===1?"לומדה":"לומדות"}`;
-document.getElementById("courses").innerHTML=COURSES.map(c=>`
- <section class="course" style="--c:var(--${c.id})">
-  <div class="chead"><span class="cicon">${ic(c.id)}</span><div class="ctitle"><small>${c.tag}</small><h3>${c.name}</h3></div></div>
-  <div class="mods">${c.items.length?c.items.map(it=>{const p=pct(it.key,it.total);
-   return `<a class="mod" href="${it.href}"><span class="type">${it.type}</span><span class="name">${it.title}</span><span class="prog"><span class="bar"><i style="width:${p||0}%"></i></span>${p==null?"לא התחלת":p+"%"}</span><span class="go" aria-hidden="true">←</span></a>`}).join("")
-   :`<div class="empty">${ic("clock")}<span>הלומדה הראשונה תעלה בקרוב</span></div>`}</div>
- </section>`).join("");
+function stats(key){try{const s=JSON.parse(localStorage.getItem(key)||"null");if(!s||!s.q)return null;const v=Object.values(s.q);if(!v.some(x=>x.n))return null;return v.filter(x=>x.c>=2).length}catch(e){return null}}
+const pct=it=>{const m=stats(it.key);return m==null?null:Math.round(100*m/it.total)};
+const coursePct=c=>{const tot=c.items.reduce((a,i)=>a+i.total,0);if(!tot)return 0;return Math.round(100*c.items.reduce((a,i)=>a+(stats(i.key)||0),0)/tot)};
+const view=document.getElementById("view");
+const word=n=>n===0?"אין עדיין לומדות":n===1?"לומדה אחת":`${n} לומדות`;
+function home(){
+  const n=COURSES.reduce((a,c)=>a+c.items.length,0);
+  view.innerHTML=`<div class="sechead"><h2>הקורסים</h2><span>${COURSES.length} קורסים · ${word(n)}</span></div>
+  <div class="courses">${COURSES.map(c=>{const p=coursePct(c);return `<button class="course" style="--c:var(--${c.id})" data-id="${c.id}">
+    <div class="chead"><span class="cicon">${ic(c.id)}</span><div class="ctitle"><small>${c.tag}</small><h3>${c.name}</h3></div></div>
+    <div class="cbody"><div class="bar"><i style="width:${p}%"></i></div><div class="cmeta"><span>${word(c.items.length)}</span><span class="copen">${c.items.length?"פתח ←":"בקרוב"}</span></div></div></button>`}).join("")}</div>
+  <footer><span>ההתקדמות נשמרת במכשיר שלכם בלבד.</span><span>חומר חדש עולה במהלך הסמסטר.</span></footer>`;
+  view.querySelectorAll("button.course").forEach(b=>b.onclick=()=>{location.hash=b.dataset.id});
+}
+function course(c){
+  view.innerHTML=`<div class="cview"><button class="back" id="back">→ כל הקורסים</button>
+   <div class="vhead" style="--c:var(--${c.id})"><span class="cicon" style="background:var(--c);color:var(--surface);display:grid;place-items:center">${ic(c.id)}</span><div class="ctitle"><small>${c.tag} · ${word(c.items.length)}</small><h2>${c.name}</h2></div></div>
+   ${c.items.length?`<div class="mlist">${c.items.map(it=>{const p=pct(it);return `<a class="mcard" style="--c:var(--${c.id})" href="${it.href}"><span class="type">לומדת חובת קריאה</span><span class="name">${it.title}</span><span class="sub">${it.sub}</span><div class="bar"><i style="width:${p||0}%"></i></div><div class="cmeta"><span>${p==null?"לא התחלת":p>=80?"שולט":"בתהליך"}</span><span>${p||0}%</span></div></a>`}).join("")}</div>`
+   :`<div class="empty" style="--c:var(--${c.id})">${ic("clock")}<span>הלומדה הראשונה בקורס הזה תעלה בקרוב</span></div>`}</div>`;
+  document.getElementById("back").onclick=()=>{location.hash=""};
+}
+function route(){const id=location.hash.slice(1),c=COURSES.find(x=>x.id===id);c?course(c):home();window.scrollTo(0,c?document.querySelector("main").offsetTop:0)}
+addEventListener("hashchange",route);route();
 </script>
 </body>
 </html>
