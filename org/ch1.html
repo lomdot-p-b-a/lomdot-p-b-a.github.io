@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>לומדת התופעה הארגונית</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@700;900&family=Rubik:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a study notebook. Home = illustrated cover + topic cards; topic = one reading card at a time, with a highlighter for key terms and drawn figures */
+:root{
+  --bg:#eef2f4; --surface:#ffffff; --raised:#f7f9fa; --ink:#15222a; --muted:#5a6b75; --line:#dbe2e6;
+  --accent:#0d6c74; --mark:#ffe27a; --good:#23855a; --good-soft:#e2f4ea; --bad:#c2452d; --bad-soft:#fbe6e1;
+  --t1:#d35d36; --t2:#3667cf; --t3:#0e8a7c; --t4:#8448c9; --t5:#b9800c;
+  --display:"Frank Ruhl Libre","David","Times New Roman",serif;
+  --body:"Rubik","Arial Hebrew","Segoe UI",Arial,sans-serif;
+  --shadow:0 1px 2px rgba(21,34,42,.06),0 8px 24px rgba(21,34,42,.07);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#5cc6c9; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#5cc6c9; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.7;direction:rtl}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
+p{margin:0}
+.stack{display:flex;flex-direction:column;gap:16px}
+.muted{color:var(--muted)}
+mark{background:linear-gradient(transparent 38%,var(--mark) 38%,var(--mark) 92%,transparent 92%);color:inherit;padding:0 2px;font-weight:600}
+button{font:inherit;cursor:pointer;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:11px 18px}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button[disabled]{opacity:.55;cursor:default}
+.primary{background:var(--c,var(--accent));border-color:var(--c,var(--accent));color:var(--surface);font-weight:600}
+.ghost{background:transparent;border:none;color:var(--muted);padding:6px 2px}
+.ghost:hover{color:var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.eyebrow{font-size:.8rem;letter-spacing:.05em;font-weight:600;color:var(--c,var(--muted))}
+
+/* home */
+.cover{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.cover-art{background:var(--raised);border-bottom:1px solid var(--line);padding:8px 8px 0}
+.cover-art svg{display:block;width:100%;height:auto;max-height:230px}
+.cover-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px}
+.cover h1{font-size:clamp(2rem,6vw,2.6rem);font-weight:900}
+.stats{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.ring{--p:0;width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center;flex:none}
+.ring span{width:50px;height:50px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.9rem;font-variant-numeric:tabular-nums}
+.stat-text{display:flex;flex-direction:column;line-height:1.35;flex:1;min-width:160px}
+.stat-text b{font-size:1.05rem}
+.review-btn{display:flex;align-items:center;gap:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.tcard{--c:var(--accent);text-align:right;padding:0;overflow:hidden;border:none;border-radius:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s}
+.tcard:hover{transform:translateY(-2px)}
+.tcard .band{background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.tcard .band svg{width:44px;height:44px}
+.tcard .n{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;opacity:.85}
+.tcard .body{padding:12px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tcard .t{font-weight:700;font-size:1.05rem;line-height:1.35}
+.bar{height:7px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--c);border-radius:4px}
+.meta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip{font-size:.75rem;padding:3px 10px;border-radius:99px;font-weight:600;background:color-mix(in srgb,var(--c,var(--accent)) 14%,transparent);color:var(--c,var(--accent));white-space:nowrap}
+.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+
+/* topic */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;display:flex;flex-direction:column;gap:8px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.steps{display:flex;gap:5px}
+.steps i{flex:1;height:5px;border-radius:3px;background:var(--line)}
+.steps i.on{background:var(--c)}
+.prog{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tt{font-size:1.6rem;font-weight:900}
+.card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px}
+.card h3{font-size:1.25rem;color:var(--c)}
+.fig{background:var(--raised);border-radius:14px;padding:10px;margin-inline:-4px}
+.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{font-size:.8rem;color:var(--muted);text-align:center;margin-top:4px}
+figure{margin:0}
+.def{border:1.5px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 6%,var(--surface));border-radius:14px;padding:14px 16px}
+.lbl{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:var(--c);margin-bottom:4px}
+.who{display:flex;gap:12px;align-items:flex-start}
+.who .av{flex:none;width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.15rem}
+.who .yr{font-size:.8rem;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.tile{background:var(--raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile svg{width:32px;height:32px;color:var(--c)}
+.tile b{font-size:.98rem}
+.tile span{font-size:.88rem;color:var(--muted);line-height:1.45}
+.ex{background:var(--raised);border-radius:12px;padding:12px 14px;font-size:.95rem}
+.ex .lbl{color:var(--muted)}
+.yesno{display:flex;flex-wrap:wrap;gap:8px}
+.yn{padding:5px 12px;border-radius:99px;font-size:.88rem;font-weight:500;display:inline-flex;gap:6px;align-items:center}
+.yn.y{background:var(--good-soft);color:var(--good)} .yn.n{background:var(--bad-soft);color:var(--bad)}
+.spectrum{display:flex;flex-direction:column;gap:6px}
+.spectrum .track{height:12px;border-radius:6px;background:linear-gradient(90deg,var(--bad),var(--line) 50%,var(--good));position:relative}
+.spectrum .dot{position:absolute;top:50%;left:50%;width:20px;height:20px;border-radius:50%;background:var(--surface);border:3px solid var(--ink);transform:translate(-50%,-50%)}
+.spectrum .ends{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);gap:10px}
+.remember{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;border-top:1px dashed var(--line);padding-top:12px}
+.remember svg{flex:none;width:22px;height:22px;color:var(--c)}
+
+/* question */
+.q{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:12px}
+.qtext{font-weight:600;font-size:1.08rem;line-height:1.55}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{text-align:right;line-height:1.45;display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--raised);border:1.5px solid transparent}
+.opt:hover:not([disabled]){border-color:var(--c)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:8px;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.85rem;color:var(--c)}
+.opt.right{background:var(--good-soft);border-color:var(--good);opacity:1}
+.opt.right .k{background:var(--good);color:var(--surface)}
+.opt.wrong{background:var(--bad-soft);border-color:var(--bad);opacity:1}
+.opt.wrong .k{background:var(--bad);color:var(--surface)}
+.fb{padding:12px 14px;border-radius:12px;font-size:.95rem;display:flex;gap:10px;align-items:flex-start}
+.fb svg{flex:none;width:22px;height:22px;margin-top:2px}
+.fb.ok{background:var(--good-soft)} .fb.ok svg{color:var(--good)}
+.fb.no{background:var(--bad-soft)} .fb.no svg{color:var(--bad)}
+.fb strong{display:block}
+.big{font-family:var(--display);font-size:3.4rem;font-weight:900;color:var(--c);font-variant-numeric:tabular-nums;line-height:1}
+@media (prefers-reduced-motion:no-preference){.fade{animation:f .3s ease-out}@keyframes f{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+
+/* svg figure classes */
+.s-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.s-c{stroke:var(--c);stroke-width:2;fill:none}
+.f-c{fill:var(--c)}
+.f-soft{fill:color-mix(in srgb,var(--c) 16%,var(--surface))}
+.f-surf{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.f-ink{fill:var(--ink)}
+.f-mut{fill:var(--muted)}
+.f-inv{fill:var(--surface)}
+svg text{font-family:var(--body)}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const I={
+ building:'<path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h2M14 8h2M8 12h2M14 12h2M10 21v-4h4v4"/>',
+ people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
+ cycle:'<path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/>',
+ pyramid:'<path d="M12 3L2.5 20h19z"/><path d="M8.2 10.5h7.6M5.5 15.2h13"/>',
+ chart:'<path d="M4 20V10M9.5 20V4M15 20v-7M20.5 20V8M2 20h20"/>',
+ gear:'<circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="7.5" stroke-dasharray="3.2 2.7" stroke-width="3.2"/>',
+ sprout:'<path d="M12 21v-9"/><path d="M12 14C7 14 4.5 11 4.5 6.5 9 6.5 12 9 12 14z"/><path d="M12 12c0-4.5 3-7 7.5-7 0 4.5-3 7-7.5 7z"/>',
+ scales:'<path d="M12 3v17M7 20h10M4 7h16"/><path d="M4 7l-2.5 6h5zM20 7l-2.5 6h5z"/>',
+ factory:'<path d="M3 21V10l5 3v-3l5 3V5h4v16zM1.5 21h21M17 9h4v12"/>',
+ question:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 1 1 3.6 2.4c-.8.4-1.1.9-1.1 1.8"/><path d="M12 17h.01"/>',
+ data:'<ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6M4.5 11.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6"/>',
+ doc:'<path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/>',
+ split:'<circle cx="12" cy="4.5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="12" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/><path d="M12 6.7v10M12 11l-6 6M12 11l6 6"/>',
+ grad:'<path d="M1.5 9L12 4l10.5 5L12 14z"/><path d="M6 11.2V16c3.3 2.4 8.7 2.4 12 0v-4.8M21 10v5"/>',
+ copies:'<rect x="3" y="7" width="12" height="14" rx="2"/><path d="M7 4h11a2 2 0 0 1 2 2v12"/>',
+ link:'<rect x="2" y="8" width="11" height="8" rx="4"/><rect x="11" y="8" width="11" height="8" rx="4"/>',
+ hand:'<circle cx="8" cy="7" r="3"/><circle cx="16" cy="7" r="3"/><path d="M2.5 20c0-3.3 2.5-6 5.5-6 1.6 0 3 .7 4 1.9 1-1.2 2.4-1.9 4-1.9 3 0 5.5 2.7 5.5 6"/>',
+ target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',
+ id:'<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><circle cx="8.5" cy="11" r="2.3"/><path d="M5 16c.6-1.6 2-2.4 3.5-2.4S11.4 14.4 12 16M14.5 10h4M14.5 13.5h3"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>',
+ pie:'<path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/>',
+ cart:'<path d="M2 3h3l2.5 12h11l2-8H6.5"/><circle cx="9" cy="19.5" r="1.6"/><circle cx="17" cy="19.5" r="1.6"/>',
+ bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/>',
+ check:'<circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/>',
+ x:'<circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/>',
+ lock:'<rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>'
+};
+const ic=(k,cls="")=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="${cls}" aria-hidden="true">${I[k]}</svg>`;
+
+const arrowDef=id=>`<defs><marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="f-c"/></marker></defs>`;
+
+const FIG={
+ society:()=>{const n=[["בית ספר",88,46],["צבא",200,26],["בנק",312,46],["קופת חולים",332,148],["מקום עבודה",200,206],["רשות המסים",68,148]];
+  return `<svg viewBox="0 0 400 228" role="img" aria-label="אדם במרכז, מחובר לשישה ארגונים">${n.map(([t,x,y])=>`<line x1="200" y1="118" x2="${x}" y2="${y}" class="s-line" stroke-dasharray="4 4"/>`).join("")}
+  <circle cx="200" cy="118" r="44" class="f-soft"/><circle cx="200" cy="118" r="32" class="f-c"/>
+  <circle cx="200" cy="108" r="8" class="f-inv"/><path d="M184 136c2-9 9-13 16-13s14 4 16 13z" class="f-inv"/>
+  ${n.map(([t,x,y])=>`<rect x="${x-50}" y="${y-15}" width="100" height="30" rx="15" class="f-surf"/><text x="${x}" y="${y+5}" text-anchor="middle" font-size="13" font-weight="500" class="f-ink">${t}</text>`).join("")}</svg>`},
+ timeline:()=>{const p=[[330,"העת העתיקה","מסים, צבא, פירמידות",1],[240,"ימי הביניים","הכנסייה הקתולית",0],[150,"העת החדשה","חברות סחר, אוניברסיטאות",1],[62,"היום","חברה ארגונית",0]];
+  return `<svg viewBox="0 0 400 130" role="img" aria-label="ציר זמן של ארגונים">${arrowDef("ta")}<line x1="380" y1="64" x2="22" y2="64" class="s-c" marker-end="url(#ta)"/>
+  ${p.map(([x,t,s,b],i)=>{const ty=b?92:26,sy=b?110:44;return `<circle cx="${x}" cy="64" r="${i==3?10:7}" class="f-c"/><text x="${x}" y="${ty}" text-anchor="middle" font-size="13" font-weight="700" class="f-ink">${t}</text><text x="${x}" y="${sy}" text-anchor="middle" font-size="11" class="f-mut">${s}</text>`}).join("")}</svg>`},
+ openclosed:()=>`<svg viewBox="0 0 400 180" role="img" aria-label="מערכת סגורה מול מערכת פתוחה">${arrowDef("oa")}
+  <rect x="215" y="14" width="172" height="128" rx="16" class="s-line" stroke-dasharray="5 5"/>
+  <text x="372" y="34" text-anchor="end" font-size="11" class="f-mut">סביבה</text>
+  <rect x="258" y="48" width="86" height="64" rx="12" class="f-soft"/><rect x="258" y="48" width="86" height="64" rx="12" class="s-c"/>
+  <text x="301" y="85" text-anchor="middle" font-size="13" font-weight="700" class="f-ink">ארגון</text>
+  <line x1="385" y1="66" x2="350" y2="66" class="s-c" marker-end="url(#oa)"/><text x="368" y="58" text-anchor="middle" font-size="11" class="f-mut">קלט</text>
+  <line x1="254" y1="96" x2="219" y2="96" class="s-c" marker-end="url(#oa)"/><text x="236" y="88" text-anchor="middle" font-size="11" class="f-mut">פלט</text>
+  <text x="301" y="168" text-anchor="middle" font-size="13" font-weight="700" class="f-ink">מערכת פתוחה</text>
+  <rect x="50" y="40" width="110" height="80" rx="12" class="f-soft"/><rect x="50" y="40" width="110" height="80" rx="12" class="s-line" stroke-width="3"/>
+  <g transform="translate(93 60) scale(1.1)" class="s-line" stroke-width="1.8" stroke-linecap="round">${I.lock}</g>
+  <text x="105" y="168" text-anchor="middle" font-size="13" font-weight="700" class="f-ink">מערכת סגורה</text></svg>`,
+ ipo:()=>{const b=[[330,"קלט",["אנשים, כסף","חומרים, ידע"]],[200,"המרה",["עבודה, ייצור,","טיפול, הוראה"]],[70,"פלט",["מוצרים","ושירותים"]]];
+  return `<svg viewBox="0 0 400 190" role="img" aria-label="מחזור קלט, המרה, פלט עם משוב">${arrowDef("ia")}
+  ${b.map(([x,t,s],i)=>`<rect x="${x-55}" y="22" width="110" height="88" rx="14" class="${i==1?"f-c":"f-soft"}"/><text x="${x}" y="54" text-anchor="middle" font-size="16" font-weight="700" class="${i==1?"f-inv":"f-ink"}">${t}</text>${s.map((l,j)=>`<text x="${x}" y="${76+j*15}" text-anchor="middle" font-size="11" class="${i==1?"f-inv":"f-mut"}">${l}</text>`).join("")}`).join("")}
+  <line x1="273" y1="66" x2="259" y2="66" class="s-c" marker-end="url(#ia)"/><line x1="143" y1="66" x2="129" y2="66" class="s-c" marker-end="url(#ia)"/>
+  <path d="M70 112V150H330V116" class="s-c" stroke-dasharray="5 4" marker-end="url(#ia)"/>
+  <text x="200" y="172" text-anchor="middle" font-size="12" font-weight="600" class="f-c">משוב: הסביבה מגיבה, והארגון מתאים את עצמו</text></svg>`},
+ subsystems:()=>{const s=[[200,42,"הפקה","פס ייצור"],[322,130,"חליפין","רכש, שיווק"],[200,218,"אחזקה","משאבי אנוש"],[78,130,"הסתגלות","מחקר ופיתוח"]];
+  return `<svg viewBox="0 0 400 262" role="img" aria-label="חמש תת-המערכות של כץ וקאהן">
+  <ellipse cx="200" cy="130" rx="188" ry="124" class="s-line" stroke-dasharray="5 6"/><text x="352" y="28" font-size="11" text-anchor="middle" class="f-mut">סביבה</text>
+  ${s.map(([x,y])=>`<line x1="200" y1="130" x2="${x}" y2="${y}" class="s-line"/>`).join("")}
+  ${s.map(([x,y,t,e])=>`<circle cx="${x}" cy="${y}" r="38" class="f-surf"/><circle cx="${x}" cy="${y}" r="38" class="s-c"/><text x="${x}" y="${y}" text-anchor="middle" font-size="14" font-weight="700" class="f-ink">${t}</text><text x="${x}" y="${y+16}" text-anchor="middle" font-size="10" class="f-mut">${e}</text>`).join("")}
+  <circle cx="200" cy="130" r="40" class="f-c"/><text x="200" y="128" text-anchor="middle" font-size="15" font-weight="700" class="f-inv">ניהול</text><text x="200" y="145" text-anchor="middle" font-size="10" class="f-inv">מתאם את כולן</text></svg>`},
+ payroll:()=>{const p=[[200,30,"סיכום שעות"],[322,100,"חישוב וניכויים"],[200,170,"העברה לבנק"],[78,100,"רישום בספרים"]];
+  return `<svg viewBox="0 0 400 200" role="img" aria-label="מחזור תשלום משכורות">${arrowDef("pa")}
+  <path d="M262 40A140 72 0 0 1 330 78" class="s-c" marker-end="url(#pa)"/><path d="M330 122A140 72 0 0 1 262 160" class="s-c" marker-end="url(#pa)"/>
+  <path d="M138 160A140 72 0 0 1 70 122" class="s-c" marker-end="url(#pa)"/><path d="M70 78A140 72 0 0 1 138 40" class="s-c" marker-end="url(#pa)"/>
+  ${p.map(([x,y,t])=>`<rect x="${x-58}" y="${y-16}" width="116" height="32" rx="16" class="f-soft"/><text x="${x}" y="${y+5}" text-anchor="middle" font-size="12.5" font-weight="600" class="f-ink">${t}</text>`).join("")}
+  <text x="200" y="98" text-anchor="middle" font-size="13" font-weight="700" class="f-c">חוזר</text><text x="200" y="115" text-anchor="middle" font-size="13" font-weight="700" class="f-c">כל חודש</text></svg>`},
+ pyramid:()=>`<svg viewBox="0 0 400 200" role="img" aria-label="מדרג סמכות בצורת פירמידה">
+  <polygon points="150,14 186,70 114,70" class="f-c"/><polygon points="114,74 186,74 222,126 78,126" class="f-soft"/><polygon points="76,130 224,130 262,186 38,186" class="f-soft" opacity=".6"/>
+  <line x1="190" y1="44" x2="262" y2="44" class="s-line" stroke-dasharray="3 3"/><line x1="208" y1="100" x2="262" y2="100" class="s-line" stroke-dasharray="3 3"/><line x1="246" y1="158" x2="262" y2="158" class="s-line" stroke-dasharray="3 3"/>
+  <text x="330" y="40" text-anchor="middle" font-size="13" font-weight="700" class="f-ink">מעט אנשים</text><text x="330" y="56" text-anchor="middle" font-size="11" class="f-mut">סמכות רחבה</text>
+  <text x="330" y="97" text-anchor="middle" font-size="13" font-weight="700" class="f-ink">דרגי ביניים</text><text x="330" y="113" text-anchor="middle" font-size="11" class="f-mut">מנהלי מחלקות</text>
+  <text x="330" y="155" text-anchor="middle" font-size="13" font-weight="700" class="f-ink">רבים</text><text x="330" y="171" text-anchor="middle" font-size="11" class="f-mut">סמכות מוגבלת</text></svg>`
+};
+
+const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</figcaption>`:""}</figure>`;
+const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
+const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;
+const tiles=a=>`<div class="tiles">${a.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`;
+const ex=h=>`<div class="ex"><span class="lbl">דוגמה</span><p>${h}</p></div>`;
+const rem=h=>`<div class="remember">${ic("bulb")}<p>${h}</p></div>`;
+const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")}${t}</span>`).join("")}${n.map(t=>`<span class="yn n">${ic("x")}${t}</span>`).join("")}</div>`;
+const spectrum=(r,l,dot)=>`<div class="spectrum"><div class="track">${dot?'<span class="dot"></span>':""}</div><div class="ends"><span>${r}</span><span>${l}</span></div></div>`;
+document.head.insertAdjacentHTML("beforeend",'<style>.yn svg{width:16px;height:16px}</style>');
+
+const T=[
+ {id:"t1",icon:"building",title:"ארגונים בחברה המודרנית",blocks:[
+  {h:"ארגונים הם לא המצאה חדשה",html:`<p>כבר בתרבויות העתיקות, במצרים, ביוון, ברומא ובסין, פעלו ארגונים ממלכתיים: גבו מסים, אכפו חוקים, ניהלו מלחמות ובנו בהיקף ענק, כמו הפירמידות. מאוחר יותר צמחו חברות סחר, פרלמנטים, אוניברסיטאות ומפלגות.</p>${fig("timeline")}<p>אבל בחברה המודרנית יש ארגונים <mark>בהיקף שלא היה כמותו</mark>. ריבוי הארגונים הוא אחד המאפיינים הבולטים שלה.</p>${rem("הארגון הוותיק שהפרק מזכיר: הכנסייה הקתולית, שפועלת ברחבי העולם יותר מאלף שנה.")}`,q:"q2"},
+  {h:"החברה הארגונית",html:`<p>ארבעה גורמים הובילו להתפשטות הארגונים:</p>${tiles([["building","עיור","אנשים עברו לערים גדולות"],["grad","השכלה","גידול עצום ביודעי קרוא וכתוב"],["gear","מדע וטכנולוגיה","המהפכה המדעית"],["pie","כלכלת כסף","מסחר במקום ייצור עצמי"]])}<p>היום כמעט כל הייצור, החינוך, הבריאות והפוליטיקה מתנהלים בתוך ארגונים, וכל אחד מאיתנו מחובר לכמה ארגונים במקביל.</p>${fig("society","אדם אחד, הרבה ארגונים בו-זמנית")}${def("מושג מפתח","<mark>חברה ארגונית</mark>: חברה שבה רוב הפעילות הכלכלית, החברתית והפוליטית מתבצעת בתוך ארגונים.")}`,q:"q1"},
+  {h:"שני הפנים של ארגונים",html:`<div class="tiles"><div class="tile" style="--c:var(--good)">${ic("check")}<b>התועלת</b><span>בלי ארגונים אין סופרמרקט, בית חולים, בית ספר, חשמל או תחבורה.</span></div><div class="tile" style="--c:var(--bad)">${ic("x")}<b>הביקורת</b><span>ניכור, עריצות וביורוקרטיה. ארגונים הופכים לשליטים לא-אנושיים.</span></div></div>${def("דימוי מהפרק","<mark>הגולם קם על יוצרו</mark>: הארגונים שבני אדם יצרו כדי לשרת אותם, קובעים את גורלם ואת איכות חייהם.")}${rem("הפרק משווה למדע ולטכנולוגיה: גם הם משפרים את רמת החיים, ובמקביל מואשמים בזיהום ובאבטלה.")}`,q:"q3"}
+ ]},
+ {id:"t2",icon:"people",title:"מה הם ארגונים",blocks:[
+  {h:"איך מגדירים ארגון?",html:`<p>אין הגדרה אחת מוסכמת. שתי הגדרות קלאסיות:</p>${who("ב","ברנרד","1938","מערכת של <mark>פעילויות מתואמות במודע</mark> של שני אנשים או יותר.")}${who("א","אציוני","1964","יחידות חברתיות שנבנו במכוון כדי <mark>להשיג מטרות מסוימות</mark>.")}<p>ההגדרות שונות כי הן נשענות על גישות תיאורטיות שונות:</p>${tiles([["gear","הגישה המכנית","ארגון הוא כלי שתוכנן להשגת מטרות מוגדרות"],["sprout","הגישה האורגנית","התאגדות שלחבריה אינטרס משותף בהישרדותה"],["scales","הגישה הפוליטית","קואליציה של בעלי עניין שמנהלים משא ומתן על המטרות"]])}`,q:"q5"},
+  {h:"ההגדרה של הספר",html:`${def("ההגדרה שהספר מאמץ","ארגון הוא <mark>מערכת חברתית העוסקת בהפקה מתמשכת של מוצרים ושירותים</mark>, באמצעות מחזורי פעילות תכליתית, תוך <mark>חליפין עם הסביבה</mark>.")}<p>שימו לב מה ההגדרה <b>לא</b> מניחה: היא לא מייחסת לארגון מטרות, ולא מזהה את הארגון עם האנשים שבו. מה שהיא כן כוללת: פעילות יצרנית, המשכיות, תוצרים ופתיחות לסביבה.</p><p><b>אז מה נחשב ארגון?</b></p>${yn(["בנק","בית חולים","צבא","מפלגה","אגודת ספורט","בית סוהר"],["משפחה","מעמד חברתי","קבוצה אתנית"])}`,q:"q6"},
+  {h:"מה מייחד ארגונים (חלק א)",html:`${tiles([["gear","מערכות מלאכותיות","נוצרו בתכנון מכוון, לא בתהליך טבעי כמו קהילות. קיימים רק כל עוד מישהו מפעיל אותם."],["people","פעולות, לא אנשים","מה שמגדיר ארגון הוא מערך התפקידים. לא משנה מי מאייש אותם."],["id","זהות נפרדת","שם, סמלים, מעמד משפטי, חשבונאות, וגבול ברור בין מי שבפנים למי שבחוץ."]])}${ex("מנהל בנק פורש, מישהו אחר נכנס לתפקיד, והבנק ממשיך כרגיל. הארגון הוא התפקידים, לא האנשים.")}`,q:"q9"},
+  {h:"מה מייחד ארגונים (חלק ב)",html:`${tiles([["clock","המשכיות","בניגוד להתקהלות חולפת, ארגון ממשיך אחרי שמשימה הסתיימה ואחרי שהמייסדים עזבו."],["pie","מעורבות חלקית","כל אחד שייך לארגונים רבים, ולכן משקיע בכל אחד רק חלק מעצמו (segmental)."],["factory","יחידות יצרניות","ארגון קיים כל עוד יש ביקוש לתוצרים שלו. בלי ביקוש, הבסיס לקיומו נשמט."]])}${ex("בית ספר עזוב או קניון נטוש: ארגונים שהביקוש לתוצרים שלהם נעלם.")}${rem("מידת המעורבות תלויה בתפקיד ובחשיבותו: מנהל סניף מעורב בעסקי הבנק יותר מפקיד.")}`,q:"q10"}
+ ]},
+ {id:"t3",icon:"cycle",title:"ארגונים כמערכות",blocks:[
+  {h:"מה זו מערכת?",html:`${def("מושג מפתח","<mark>מערכת</mark> היא מכלול של חלקים שקשורים זה לזה ופועלים יחד כשלם. שעון הוא מערכת, ולא ערימה של קפיצים בקופסה.")}<p>תורת המערכות של <b>ברטלנפי</b> מבחינה בין שני סוגים:</p>${fig("openclosed")}<p>ארגונים הם <mark>מערכות פתוחות</mark>: הם מתקיימים רק בזכות חליפין מתמשכים עם הסביבה.</p>`,q:"q13"},
+  {h:"קלט, המרה, פלט",html:`<p>כל ארגון קולט משאבים מהסביבה, ממיר אותם, ומחזיר לסביבה מוצרים ושירותים.</p>${fig("ipo")}${who("כ","כץ וקאהן","1966","המרת <mark>תשומות לתפוקות</mark> היא המאפיין המשותף לכל הארגונים.")}${def("מושג מפתח","<mark>מנגנוני בקרה ומשוב</mark> מזהים שינויים או תקלות ומייצבים את המערכת לפני שתתפרק. כמו תרמוסטט, גלאי עשן או בקרת איכות.")}`,q:"q14"},
+  {h:"חמש תת-המערכות",html:`<p>לפי כץ וקאהן, בכל ארגון פועלות חמש תת-מערכות:</p>${fig("subsystems")}${tiles([["factory","הפקה","המרת התשומות לתוצרים העיקריים"],["hand","אחזקה","שמירה על העובדים, הציוד והמבנים"],["cart","חליפין","הקשר עם הסביבה: רכש ושיווק"],["bulb","הסתגלות","התאמה לשינויים: מחקר ופיתוח, תכנון"],["target","ניהול","קביעת מטרות, הקצאת משאבים, תיאום"]])}`,q:"q16"},
+  {h:"מחזורי פעילות",html:`<p>כל תת-מערכת בנויה מ<mark>מחזורי פעילות</mark>: סדרות של פעולות שחוזרות על עצמן. הדוגמה מהפרק היא תשלום משכורות:</p>${fig("payroll")}<p>הפעולות האלה מתבצעות בתוך תפקידים מוגדרים, ביחידות ארגוניות.</p>`,q:"q20"}
+ ]},
+ {id:"t4",icon:"pyramid",title:"תכונות הארגון והביורוקרטיה",blocks:[
+  {h:"הדגם האידיאלי של ובר",html:`${who("ו","מקס ובר","סוציולוג","ניסח <mark>דגם אידיאלי</mark> של ארגון מורכב וכינה אותו <mark>ביורוקרטיה</mark>.")}${def("שימו לב","\"אידיאלי\" כאן פירושו <b>טהור ומופשט</b>, לא רצוי. הדגם לא מתאר ארגון אמיתי, ואין ארגון שבו כל התכונות מתקיימות במלואן.")}<p>למילה ביורוקרטיה יש שתי משמעויות סותרות, ורוב הארגונים נמצאים איפשהו באמצע:</p>${spectrum("במדע: התארגנות תכליתית ויעילה","ביום-יום: מסורבל ומסואב",1)}`,q:"q21"},
+  {h:"רשמיות, חלוקת עבודה ומדרג",html:`${tiles([["doc","רשמיות","זכויות, חובות ופעולות כתובים ומחייבים: נהלים, טפסים, הגדרות תפקיד"],["split","חלוקת עבודה","פירוק העבודה למשימות, שיוצר התמחות"]])}${rem("רשמיות גבוהה יותר בארגונים <b>גדולים, ציבוריים וותיקים</b>.")}<p><b>מדרג סמכות</b> נראה כמו פירמידה:</p>${fig("pyramid")}`,q:"q23"},
+  {h:"ריכוזיות, מקצועיות ותקנון",html:`<p><b>ריכוזיות:</b> כמה מזכות קבלת ההחלטות נשארת בראש הארגון.</p>${spectrum("ריכוזי: ההחלטות למעלה","מבוזר: ההחלטות מואצלות למנהלים",0)}${tiles([["grad","מקצועיות","ידע מיוחד מהכשרה, כולל אתיקה מקצועית. גבוהה במכוני מחקר ובתי חולים."],["copies","תקנון","אחידות בתהליכים. גבוה בייצור המוני ובבנקים, נמוך בתיאטרון."]])}`,q:"q26"},
+  {h:"תיאום ושיתוף פעולה",html:`${tiles([["link","תיאום","כל יחידה עושה רק חלק, וצריך לחבר את החלקים לשלם. קשה במיוחד בארגונים מבוזרים ורב-לאומיים."],["hand","שיתוף פעולה","מבוסס בעיקר על <b>ציות לכללים ולמרות הממונים</b>. לא תמיד רצוני: בבתי כלא הוא נכפה."]])}<p><b>סיכום: שמונה התכונות</b></p>${tiles([["doc","רשמיות",""],["split","חלוקת עבודה",""],["pyramid","מדרג סמכות",""],["target","ריכוזיות",""],["grad","מקצועיות",""],["copies","תקנון",""],["link","תיאום",""],["hand","שיתוף פעולה",""]])}`,q:"q29"}
+ ]},
+ {id:"t5",icon:"chart",title:"ארגונים לעומת יחידים",blocks:[
+  {h:"למה צריך ארגונים?",html:`<p>הפרק מציין שלוש בעיות שארגונים פותרים טוב יותר מיחידים, משפחות או קהילות:</p>${tiles([["factory","ייצור המוני","חלוקת עבודה, טכנולוגיה ומומחיות מוזילות ייצור"],["question","אי-ודאות","עסקאות מורכבות שהשוק לא מצליח לווסת"],["data","עיבוד מידע","יותר מידע ממה שאדם אחד יכול לעבד"]])}${ex("יצרן יחיד מפיק כמויות קטנות במחיר גבוה. מפעל עם פס ייצור מספק ביקוש של מיליונים.")}`,q:"q31"},
+  {h:"אי-ודאות ומידע",html:`${def("עסקאות מותנות","בעסקאות מורכבות, כמו רכישות עתידיות, חוזים ארוכים או אשראי גדול, <mark>מנגנון המחירים מאבד את כושר הוויסות</mark>. ארגונים מפזרים סיכונים ונהנים מיתרונות לגודל.")}${who("א","ארו, ויליאמסון","1974, 1975","הסבירו למה ארגונים עדיפים על השוק בתנאי אי-ודאות.")}${who("ס","סיימון","1957","יכולתו של אדם לאסוף ולעבד מידע <mark>מוגבלת</mark>. ארגון מאגם מידע ממקורות רבים ומנצל מומחים.")}`,q:"q33"},
+  {h:"סיכום הפרק",html:`<p>ארגונים צמחו יחד עם התיעוש, העיור וכלכלת השוק. הם <mark>מערכות חברתיות תכליתיות</mark> שמפיקות מוצרים ושירותים בחליפין עם הסביבה.</p>${def("אבל","ארגונים <b>אינם מושלמים</b>: יש בהם חיכוכים, מאבקי כוח, אבטלה סמויה וניצול לרעה של סמכויות. דווקא זה מבדיל אותם ממכונות.")}${rem("למה זה חשוב לכם: הבנת ארגונים שימושית בניהול, שיווק, מינהל ציבורי ופעילות פוליטית.")}`,q:"q34"}
+ ]}
+];
+const Q={
+q1:{t:"t1",v:[
+ {q:"מה הכוונה בכך שהחברה המודרנית היא \"חברה ארגונית\"?",a:"רוב הפעילות הכלכלית, החברתית והפוליטית מתבצעת בתוך ארגונים, ואנשים משתתפים בכמה ארגונים במקביל",w:["רוב האנשים עובדים בארגון אחד לאורך כל חייהם","ארגונים החליפו לגמרי את המשפחה והקהילה","ארגונים קיימים רק מאז המהפכה התעשייתית"],e:"ארגונים חדרו לכל תחומי החיים, ואדם נמצא במגע עם ארגונים רבים בו-זמנית."},
+ {q:"סטודנטית עובדת בבנק, משלמת מסים, מטופלת בקופת חולים ומשרתת במילואים. מה זה ממחיש?",a:"שאדם בחברה המודרנית מעורב בכמה ארגונים בו-זמנית",w:["שהיא מעורבת באופן מלא בכל ארגון","שהמשפחה הפסיקה למלא תפקיד בחייה","שהבנק הוא הארגון החשוב ביותר בחייה"],e:"זו בדיוק התמונה של \"חברה ארגונית\": כל אחד שייך במקביל לארגונים רבים."}]},
+q2:{t:"t1",v:[
+ {q:"איזה מהבאים אינו גורם להתפשטות הארגונים לפי הפרק?",a:"ירידה במספר היודעים קרוא וכתוב",w:["עיור","המהפכה המדעית והטכנולוגית","כלכלת הכסף"],e:"ההפך: גידול עצום ביודעי קרוא וכתוב הוא אחד הגורמים."},
+ {q:"איזה צירוף מתאר נכון את הגורמים להתפשטות הארגונים?",a:"עיור, השכלה רחבה, מהפכה מדעית-טכנולוגית וכלכלת כסף",w:["מלחמות, מגפות ורעב","ירידת הדת והתחזקות המשפחה","חזרה לחקלאות וכלכלה מקומית"],e:"אלה ארבעת הגורמים שהפרק מונה."}]},
+q3:{t:"t1",v:[
+ {q:"מה פירוש הדימוי \"הגולם קם על יוצרו\" בהקשר של ארגונים?",a:"ארגונים שנוצרו לשרת את האדם הופכים לשליטים לא-אנושיים שקובעים את גורלו",w:["ארגונים מתפרקים כשהמייסד עוזב","עובדים מתמרדים נגד המנהלים","ארגונים מפסיקים לייצר כשאין ביקוש"],e:"זה הצד הביקורתי: הכלי שבני האדם יצרו שולט בהם."},
+ {q:"מה העמדה הכללית של הפרק כלפי ארגונים?",a:"יש להם תרומה עצומה לרווחת החברה, אבל גם השפעה מעיקה וביקורת מוצדקת",w:["הם בעיקר מזיקים, ויש לצמצם אותם","הם כלים מושלמים ויעילים","אין להם השפעה ממשית על חיי הפרט"],e:"הפרק מציג את שני הפנים: אי אפשר בלעדיהם, ובכל זאת הם מעוררים תסכול."}]},
+q4:{t:"t2",v:[
+ {q:"לפי ברנרד (1938), ארגון הוא:",a:"מערכת של פעילויות מתואמות במודע של שני אנשים או יותר",w:["קבוצת אנשים בעלי מוצא משותף","יחידה חברתית שנוצרה באופן טבעי לאורך דורות","כל התקהלות של אנשים סביב אירוע"],e:"המילים החשובות: פעילויות, תיאום מודע, שני אנשים או יותר."},
+ {q:"מה המרכיב המרכזי בהגדרה של ברנרד?",a:"תיאום מכוון של פעילויות",w:["קיומם של חוקים כתובים","בעלות על רכוש","מספר גדול של חברים"],e:"ברנרד מדגיש פעילויות מתואמות במודע, לא אנשים או רכוש."}]},
+q5:{t:"t2",v:[
+ {q:"לפי הגישה המכנית (הרציונלית), ארגונים הם בעיקר:",a:"כלים שתוכננו להשגת מטרות מוגדרות",w:["קואליציות משתנות של בעלי עניין","התאגדויות שמטרתן העיקרית הישרדות","מערכות טבעיות שצומחות מעצמן"],e:"הגישה המכנית רואה בארגון מכשיר להשגת מטרות."},
+ {q:"לפי הגישה הפוליטית, ארגון הוא:",a:"קואליציה משתנה של בעלי עניין שמנהלים משא ומתן על המטרות",w:["כלי שתוכנן להשגת מטרה אחת","התאגדות שלחבריה אינטרס משותף בהישרדות","מכונה שכל חלקיה מתואמים"],e:"הדגש הפוליטי: ניגודי אינטרסים ומשא ומתן."},
+ {q:"איזו גישה רואה בארגון התאגדות שלחבריה אינטרס משותף בהישרדותה?",a:"הגישה האורגנית",w:["הגישה המכנית","הגישה הפוליטית","הגישה הביורוקרטית"],e:"האורגנית מדגישה הישרדות ותועלת משותפת, כמו אורגניזם חי."}]},
+q6:{t:"t2",v:[
+ {q:"מהי ההגדרה שהספר מאמץ לארגון?",a:"מערכת חברתית העוסקת בהפקה מתמשכת של מוצרים ושירותים, בחליפין עם הסביבה",w:["קבוצת אנשים שחולקים מטרה משותפת","כלי בידי בעליו להשגת רווח","מבנה היררכי של תפקידים וסמכויות"],e:"המרכיבים: מערכת חברתית, הפקה מתמשכת, מחזורי פעילות, חליפין עם הסביבה."},
+ {q:"מה הגדרת הספר אינה מניחה, בניגוד להגדרות אחרות?",a:"שלארגון יש מטרות ארגוניות",w:["שיש לו פעילות יצרנית","שהוא פתוח לסביבה","שהוא מתקיים לאורך זמן"],e:"ההגדרה לא מייחסת לארגון מטרות, ולא מזהה אותו עם האנשים שבו."}]},
+q7:{t:"t2",v:[
+ {q:"מה מהבאים אינו ארגון לפי הגדרת הספר?",a:"משפחה",w:["בית חולים","מפלגה","אגודת ספורט"],e:"משפחות, מעמדות וקבוצות אתניות אינם ארגונים לפי ההגדרה."},
+ {q:"למה קבוצה אתנית אינה נחשבת ארגון?",a:"כי היא לא מערכת שנוצרה במכוון להפקה מתמשכת של מוצרים או שירותים",w:["כי אין בה מספיק אנשים","כי אין לה מנהיג","כי היא לא רשומה ברשם התאגידים"],e:"ההגדרה דורשת פעילות יצרנית מתמשכת ומחזורי פעילות תכליתית."}]},
+q8:{t:"t2",v:[
+ {q:"מה הכוונה ש\"ארגונים הם מערכות מלאכותיות\"?",a:"הם נוצרו בכוונה תחילה בידי בני אדם, ומתקיימים רק כל עוד מישהו מעוניין להפעיל אותם",w:["הם משתמשים בעיקר בטכנולוגיה","העובדים בהם לא מתנהגים באופן טבעי","הם קיימים רק על הנייר"],e:"בניגוד לקהילות שצומחות בתהליך טבעי, ארגונים הם פרי תכנון מחושב."},
+ {q:"מה מבדיל ארגונים מחברות וקהילות, לפי הפרק?",a:"ארגונים הם פרי תכנון מכוון, ולא תוצאה של התפתחות טבעית לאורך דורות",w:["בארגונים יש יותר אנשים","בקהילות אין חוקים","ארגונים תמיד מבוססים על רווח"],e:"זה מאפיין המלאכותיות (contrived systems)."}]},
+q9:{t:"t2",v:[
+ {q:"לפי הפרק, ממה מורכב ארגון בראש ובראשונה?",a:"ממכלול של פעולות ותפקידים, ולא מקבוצת אנשים",w:["מקבוצת אנשים עם מנהיג","מהמבנים והציוד שלו","מההון של בעליו"],e:"מבחינה ארגונית לא משנה מי מאייש את התפקיד, אלא מה התפקיד מחייב."},
+ {q:"מנהל בכיר בבנק פורש, אדם אחר נכנס במקומו, והבנק ממשיך לפעול כרגיל. מה זה ממחיש?",a:"שארגון מוגדר על ידי התפקידים, והוא נמשך מעבר לאנשים שמאיישים אותם",w:["שהמנהל לא היה חשוב","שלבנק יש ריכוזיות נמוכה","שהבנק הוא מערכת סגורה"],e:"שני מאפיינים יחד: פעולות ולא אנשים, והמשכיות מעבר למייסדים ולמנהלים."}]},
+q10:{t:"t2",v:[
+ {q:"מה פירוש \"מעורבות חלקית\" (segmental) של אדם בארגון?",a:"אדם משקיע בכל ארגון רק חלק מזמנו ומהמחויבות שלו, כי הוא שייך לארגונים רבים",w:["אדם עובד במשרה חלקית","רק חלק מהעובדים משתתפים בהחלטות","אדם מכיר רק חלק מהעובדים"],e:"מכיוון שכל אחד שייך לארגונים רבים, המעורבות בכל אחד מוגבלת."},
+ {q:"לפי הפרק, מידת המעורבות של אדם בארגון תלויה בעיקר:",a:"בתפקיד שהוא ממלא ובחשיבותו לארגון",w:["בגיל שלו","בשכר שלו","במספר השנים שהוא בארגון"],e:"למשל, מנהל סניף מעורב יותר מפקיד בעסקי הבנק."}]},
+q11:{t:"t2",v:[
+ {q:"מה קורה לארגון שלתוצרים שלו כבר אין ביקוש?",a:"הבסיס לקיומו נשמט, והוא חדל להתקיים, אלא אם יפיק תוצרים חדשים",w:["הוא ממשיך לפעול כי הוא מערכת יציבה","המדינה חייבת לממן אותו","הוא הופך לארגון ללא מטרות רווח"],e:"ארגונים הם יחידות יצרניות: קיומם תלוי בביקוש לתוצרים."},
+ {q:"לפי הפרק, מה המבחן לתועלת של תוצרי ארגון?",a:"הביקוש להם בסביבה",w:["המטרות שהגדירו המייסדים","מספר העובדים","הרווח של הבעלים"],e:"לא משנה מה המטרות המוצהרות; מה שקובע זה אם מישהו רוצה את התוצרים."}]},
+q12:{t:"t2",v:[
+ {q:"איזה מהבאים אינו מסמן את הזהות הנפרדת של ארגון?",a:"מספר העובדים שלו",w:["שם ייחודי וסמלים","מעמד משפטי כישות האחראית לפני החוק","הבחנה בין מי שנכלל בארגון למי שלא"],e:"זהות נפרדת: שם, סמלים, מעמד משפטי, חשבונאות וגבולות חברות."},
+ {q:"מה מבדיל ארגון מהתקהלות חולפת, כמו עצרת או טקס?",a:"ארגון ממשיך להתקיים ולפעול גם אחרי שמשימה מסוימת הסתיימה",w:["בהתקהלות אין אנשים","בארגון כולם מכירים זה את זה","התקהלות תמיד אלימה"],e:"זה מאפיין ההמשכיות."}]},
+q13:{t:"t3",v:[
+ {q:"מה ההבדל בין מערכת סגורה למערכת פתוחה?",a:"מערכת פתוחה מתקיימת רק בזכות חליפין מתמשכים עם הסביבה; מערכת סגורה פועלת בבידוד יחסי",w:["מערכת פתוחה פתוחה לציבור; סגורה רק לחברים","מערכת סגורה גדולה יותר","מערכת פתוחה אין לה גבולות בכלל"],e:"ארגונים הם מערכות פתוחות: קולטים משאבים ומחזירים תוצרים."},
+ {q:"למה ארגונים נחשבים מערכות פתוחות?",a:"כי הם קולטים משאבים מהסביבה ומספקים לה תוצרים",w:["כי כל אחד יכול להצטרף אליהם","כי אין להם היררכיה","כי הם משתפים מידע עם המתחרים"],e:"הקיום שלהם תלוי בחליפין עם הסביבה."}]},
+q14:{t:"t3",v:[
+ {q:"בבית חולים, מה מהבאים הוא שלב ה\"המרה\" במחזור קלט-המרה-פלט?",a:"הטיפול הרפואי שהצוות נותן למטופלים",w:["קבלת תרופות מספק","שחרור מטופל שהבריא","תשלום מקופת החולים"],e:"תרופות ותשלום הם קלט, החלמת המטופל היא פלט, והטיפול עצמו הוא ההמרה."},
+ {q:"מה, לפי כץ וקאהן, המאפיין המשותף לכל הארגונים?",a:"המרה של תשומות (אנשים, כסף, חומרים, ידע) לתפוקות (מוצרים ושירותים)",w:["מבנה היררכי של פירמידה","שאיפה לרווח","מספר קבוע של מחלקות"],e:"מחזור קלט-המרה-פלט."}]},
+q15:{t:"t3",v:[
+ {q:"מה תפקידם של מנגנוני בקרה ומשוב במערכת?",a:"לזהות שינויים או תקלות ולייצב את המערכת לפני שתתפרק",w:["להגדיל את הרווחים","להחליף עובדים","לבודד את המערכת מהסביבה"],e:"דוגמאות: תרמוסטט, גלאי עשן, בקרת איכות. המטרה היא מצב יציב."},
+ {q:"תרמוסטט במזגן ובקרת איכות במפעל הם דוגמאות ל:",a:"מנגנוני בקרה ומשוב ששומרים על מצב יציב",w:["תת-מערכת חליפין","חלוקת עבודה","מחזור קלט-פלט"],e:"שניהם מזהים חריגה ומתקנים אותה."}]},
+q16:{t:"t3",v:[
+ {q:"מחלקת משאבי אנוש שמגייסת ומכשירה עובדים שייכת לתת-מערכת:",a:"אחזקה",w:["הפקה","חליפין","הסתגלות"],e:"אחזקה שומרת על כוח האדם, הציוד והמבנים."},
+ {q:"תת-מערכת האחזקה עוסקת ב:",a:"שמירה על כוח האדם, הציוד והמבנים של הארגון",w:["פיתוח מוצרים חדשים","שיווק ומכירות","קביעת מטרות"],e:"משאבי אנוש, תחזוקה ורווחת עובדים."}]},
+q17:{t:"t3",v:[
+ {q:"מחלקת הרכש ומחלקת השיווק שייכות לתת-מערכת:",a:"חליפין",w:["אחזקה","הסתגלות","ניהול"],e:"חליפין = הקשר עם הסביבה: רכישת תשומות ומכירת תוצרים."},
+ {q:"מה עושה תת-מערכת החליפין?",a:"מקיימת את הקשר עם הסביבה: רכישת תשומות ושיווק תוצרים",w:["מחליפה עובדים ותיקים","ממירה חומרי גלם למוצרים","מתאימה את הארגון לשינויים"],e:"רכש, מכירות, פרסום, דוברות."}]},
+q18:{t:"t3",v:[
+ {q:"יחידת מחקר ופיתוח שמפתחת מוצרים חדשים שייכת לתת-מערכת:",a:"הסתגלות",w:["הפקה","חליפין","אחזקה"],e:"הסתגלות = התאמה לשינויים בסביבה."},
+ {q:"למה ארגון צריך תת-מערכת הסתגלות?",a:"כדי להתאים את עצמו לשינויים בסביבה החיצונית",w:["כדי לקלוט עובדים חדשים","כדי לשמור על הציוד","כדי לשווק מוצרים"],e:"מחקר ופיתוח, תכנון וניתוח שוק."}]},
+q19:{t:"t3",v:[
+ {q:"בבית חולים, המחלקות שמטפלות בחולים הן תת-מערכת:",a:"הפקה",w:["אחזקה","חליפין","ניהול"],e:"הפקה = הפעילות שמייצרת את התוצר העיקרי של הארגון."},
+ {q:"דירקטוריון שקובע מטרות ומקצה משאבים שייך לתת-מערכת:",a:"ניהול",w:["הפקה","הסתגלות","חליפין"],e:"ניהול מכוון, מבקר ומתאם את כל שאר תת-המערכות."}]},
+q20:{t:"t3",v:[
+ {q:"תשלום משכורות (סיכום שעות, חישוב ניכויים, העברה לבנק) שחוזר כל חודש הוא דוגמה ל:",a:"מחזור פעילות",w:["תת-מערכת הסתגלות","מנגנון משוב","מעורבות חלקית"],e:"מחזור פעילות = סדרת פעולות שחוזרת על עצמה."},
+ {q:"ממה בנויות תת-המערכות בארגון, לפי הפרק?",a:"ממחזורי פעילות: סדרות של פעולות שחוזרות על עצמן",w:["מעובדים בודדים","ממבנים פיזיים","ממטרות כתובות"],e:"דוגמת המשכורות ממחישה מחזור כזה."}]},
+q21:{t:"t4",v:[
+ {q:"מה הוא \"הדגם האידיאלי\" של ובר?",a:"תיאור מופשט של מכלול התכונות של ארגון ביורוקרטי, שלא נועד לתאר ארגון מציאותי",w:["תיאור של הארגון הטוב ביותר שיש לשאוף אליו","רשימת חוקים שכל ארגון חייב לקיים","מודל של ארגון ללא היררכיה"],e:"\"אידיאלי\" כאן הוא במובן של טהור ומופשט, לא של רצוי."},
+ {q:"האם קיים ארגון שכל התכונות הביורוקרטיות מתקיימות בו במלואן?",a:"לא; בכל ארגון חלק מהתכונות קיימות במידה זו או אחרת",w:["כן, כל ארגון ממשלתי","כן, הצבא","כן, כל ארגון גדול מספיק"],e:"הדגם הוא כלי השוואה, לא תיאור של מציאות."}]},
+q22:{t:"t4",v:[
+ {q:"מהן שתי המשמעויות של המושג \"ביורוקרטיה\"?",a:"במדע: התארגנות תכליתית ויעילה; ביום-יום: מנגנון מסורבל ומסואב",w:["ארגון ציבורי וארגון פרטי","ניהול ריכוזי וניהול מבוזר","רשמיות ותקנון"],e:"הפרק מדגיש שרוב הארגונים לא נמצאים באף אחד מהקטבים."}]},
+q23:{t:"t4",v:[
+ {q:"מהי רשמיות (פורמליזציה)?",a:"קביעה כתובה ומחייבת של זכויות, חובות ופעולות של בעלי התפקידים",w:["לבוש רשמי בעבודה","מספר הדרגים בארגון","אחידות של המוצרים"],e:"נהלים, הגדרות תפקיד, טפסים וכללים כתובים."},
+ {q:"באיזה ארגון צפויה רשמיות גבוהה יותר?",a:"משרד ממשלתי גדול וותיק",w:["סטארט-אפ פרטי קטן שהוקם השנה","להקת תיאטרון קטנה","עסק משפחתי חדש"],e:"רשמיות גבוהה יותר בארגונים גדולים, ציבוריים וותיקים."}]},
+q24:{t:"t4",v:[
+ {q:"פירוק העבודה למשימות שמוטלות על תפקידים שונים, ויצירת התמחות, נקרא:",a:"חלוקת עבודה",w:["ריכוזיות","תקנון","מדרג סמכות"],e:"חלוקת עבודה היא תנאי לביצוע משימות מורכבות."},
+ {q:"בפס ייצור כל עובד מבצע שלב אחד בלבד בהרכבה. איזו תכונה זו?",a:"חלוקת עבודה",w:["ריכוזיות","שיתוף פעולה","מקצועיות"],e:"כל אחד אחראי לחלק מוגדר, וכך נוצרת התמחות."}]},
+q25:{t:"t4",v:[
+ {q:"מה מתאר מדרג סמכות?",a:"מבנה דמוי פירמידה: מעט בעלי סמכות רחבה בראש, ורבים עם סמכות מוגבלת בבסיס",w:["חלוקת העבודה בין מחלקות","הכשרה מקצועית של עובדים","אחידות בתהליכי העבודה"],e:"מספר הרבדים משתנה לפי גודל הארגון, תחומו ופיזורו."},
+ {q:"מה ההבדל בין מדרג סמכות לריכוזיות?",a:"מדרג מתאר את רבדי הסמכות במבנה; ריכוזיות מתארת כמה מזכות ההחלטה נשארת בראש",w:["אין הבדל, אלה שמות לאותה תכונה","מדרג קיים רק בצבא","ריכוזיות קיימת רק בארגונים קטנים"],e:"אפשר שיהיו הרבה רבדים, ובכל זאת סמכות ההחלטה תואצל למטה."}]},
+q26:{t:"t4",v:[
+ {q:"בארגון שבו מנהלי מחלקות וסניפים מקבלים חלק גדול מההחלטות בעצמם, הריכוזיות היא:",a:"נמוכה (ביזור)",w:["גבוהה","לא רלוונטית","שווה לתקנון"],e:"ריכוזיות נמוכה = סמכויות ההחלטה מואצלות לדרגים נמוכים."},
+ {q:"מה מתארת ריכוזיות?",a:"כמה מזכות קבלת ההחלטות נשארת בידי הדרג הבכיר",w:["כמה עובדים יש במטה","כמה הארגון אחיד","כמה חוקים כתובים יש"],e:"ריכוזיות משתנה לפי השקפת המנהלים, מסורת ניהולית וגודל הארגון."}]},
+q27:{t:"t4",v:[
+ {q:"מה מאפיין מקצועיות (מומחיות) בארגון?",a:"ידע מיוחד שנרכש בהכשרה, כולל הפנמת ערכים כמו אתיקה מקצועית",w:["ותק של שנים רבות בארגון","מיקום גבוה בהיררכיה","ציות מלא לנהלים"],e:"ההכשרה כוללת גם ערכים, נורמות התנהגות ונאמנות למקצוע."},
+ {q:"באיזה ארגון צפוי שיעור מומחים גבוה יותר?",a:"מכון מחקר",w:["מפעל ביגוד","בית מלון","רשת שיווק"],e:"עתירות ידע גבוהה במכוני מחקר, בתי ספר ובתי חולים."}]},
+q28:{t:"t4",v:[
+ {q:"אחידות בתהליכי עבודה, הפקה ושירות נקראת:",a:"תקנון (סטנדרטיזציה)",w:["רשמיות","תיאום","ריכוזיות"],e:"תקנון מקל על פיקוח, מצמצם חריגות וחוסך עלויות."},
+ {q:"היכן צפוי תקנון נמוך?",a:"בתיאטרון",w:["במפעל לייצור המוני","במשרד ממשלתי","בבנק גדול"],e:"בארגונים עתירי ידע ובאמנות יש מקום רב לגיוון."}]},
+q29:{t:"t4",v:[
+ {q:"למה חלוקת עבודה יוצרת צורך בתיאום?",a:"כי כל יחידה מבצעת רק חלק, וצריך לשלב את החלקים לתמונה שלמה",w:["כי עובדים לא אוהבים לעבוד לבד","כי החוק מחייב תיאום","כי היא מגדילה את הריכוזיות"],e:"ארגון מצליח רק אם החלקים מותאמים זה לזה."},
+ {q:"באילו ארגונים התיאום מאתגר במיוחד?",a:"בארגונים מבוזרים ורב-לאומיים",w:["בעסקים קטנים","בארגונים עם תקנון גבוה","בארגונים ריכוזיים"],e:"כשהיחידות עצמאיות ומפוזרות, קשה יותר לשלב ביניהן."}]},
+q30:{t:"t4",v:[
+ {q:"על מה מבוסס שיתוף פעולה בארגון, בראש ובראשונה?",a:"על נכונות בעלי התפקידים לציית לכללים ולנהלים ולקבל את מרות הממונים",w:["על חברות אישית בין העובדים","על שכר גבוה","על שיתוף כל העובדים בהחלטות"],e:"זה הבסיס, גם אם ארגונים רבים מוסיפים שיתוף עובדים בהחלטות."},
+ {q:"האם שיתוף פעולה בארגון תמיד מבוסס על רצון חופשי?",a:"לא; בארגונים כמו בתי כלא ההשתתפות נכפית",w:["כן, אחרת אין ארגון","כן, בכל ארגון מודרני","לא, הוא תמיד נכפה"],e:"הפרק מביא בתי כלא ומחנות שבויים כדוגמה."}]},
+q31:{t:"t5",v:[
+ {q:"איזה יתרון של ארגונים מוסבר בכך שיצרן יחיד מפיק רק כמויות קטנות במחיר גבוה?",a:"ייצור המוני",w:["עיבוד מידע","עסקאות בתנאי אי-ודאות","שיתוף פעולה"],e:"חלוקת עבודה, טכנולוגיה ומומחיות מוזילות את הייצור."},
+ {q:"איך ארגונים מוזילים ייצור ביחס ליצרן יחיד?",a:"באמצעות חלוקת עבודה, טכנולוגיה ושימוש במומחיות",w:["באמצעות שכר נמוך בלבד","באמצעות ויתור על איכות","באמצעות הימנעות מחליפין עם הסביבה"],e:"זה בסיס יתרון הייצור ההמוני."}]},
+q32:{t:"t5",v:[
+ {q:"למה ארגונים עדיפים על השוק בעסקאות מותנות בתנאי אי-ודאות?",a:"כי מנגנון המחירים מאבד את כושר הוויסות, וארגון מפזר סיכונים ונהנה מיתרונות לגודל",w:["כי בארגון אין צורך בחוזים","כי ארגונים לא משלמים מסים","כי השוק אינו קיים בחברה מודרנית"],e:"על פי ארו וויליאמסון."},
+ {q:"חוזה ארוך טווח לאספקה עתידית, בתנאים לא ודאיים, מתאים יותר ל:",a:"ארגון, ולא לעסקה פשוטה בשוק",w:["עסקה מזדמנת בין שני אנשים","החלפת סחורות במקום","קנייה במחיר קבוע מראש בשוק"],e:"זו עסקה מותנית בתנאי אי-ודאות, שבה השוק מתקשה."}]},
+q33:{t:"t5",v:[
+ {q:"מה היתרון של ארגונים בעיבוד מידע לעומת יחיד?",a:"הם אוספים ומעבדים מידע ממקורות רבים ומנצלים ידע של מומחים, מעבר ליכולת של אדם אחד",w:["הם תמיד צודקים בהחלטות","הם לא צריכים מידע כדי להחליט","הם מעבדים מידע לאט יותר אבל בזול"],e:"וגם: הם פחות מושפעים מהטיות אישיות."},
+ {q:"הרעיון שיכולת האדם לאסוף ולעבד מידע מוגבלת מיוחס ל:",a:"סיימון",w:["ובר","ברנרד","ברטלנפי"],e:"סיימון (1957), הרציונליות המוגבלת."}]},
+q34:{t:"t5",v:[
+ {q:"מה אומר הפרק בסיכום על חסרונות ארגונים?",a:"ארגונים אינם מושלמים: יש בהם מאבקי כוח, חיכוכים וניצול לרעה של סמכויות",w:["ארגונים יעילים לחלוטין","החסרונות קיימים רק בארגונים ציבוריים","אין לארגונים חסרונות של ממש"],e:"ודווקא זה מבדיל אותם ממכונות."}]}
+};
+for(const t of T) t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id);
+const KEY="lomda-org-1";
+let S={q:{},read:{}};
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.q) S=s;}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const st=id=>S.q[id]||(S.q[id]={n:0,c:0,w:0,t:0,lv:-1});
+const mastered=id=>(S.q[id]?.c||0)>=2;
+const topicPct=t=>Math.round(100*t.qids.filter(mastered).length/t.qids.length);
+const topicStarted=t=>S.read[t.id]||t.qids.some(id=>S.q[id]&&S.q[id].n);
+const allIds=Object.keys(Q);
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+const pickVariant=id=>{const s=st(id),n=Q[id].v.length;return n>1?(s.lv+1)%n:0};
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const color=t=>`var(--${t.id})`;
+const app=document.getElementById("app");
+const LET=["א","ב","ג","ד"];
+
+function qCard(id,onDone,label){
+  const vi=pickVariant(id),v=Q[id].v[vi],opts=shuffle([v.a,...v.w]);
+  const box=document.createElement("div");box.className="q fade";
+  box.innerHTML=(label?`<span class="eyebrow">${label}</span>`:"")+`<div class="qtext">${esc(v.q)}</div><div class="opts"></div>`;
+  const wrap=box.querySelector(".opts");
+  opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt";b.dataset.a=o===v.a?"1":"";
+    b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+    b.onclick=()=>{const ok=o===v.a,s=st(id);s.n++;s.t=Date.now();s.lv=vi;ok?s.c++:(s.c=0,s.w++);save();
+      wrap.querySelectorAll("button").forEach(x=>{x.disabled=true;if(x.dataset.a)x.classList.add("right")});
+      if(!ok)b.classList.add("wrong");
+      const fb=document.createElement("div");fb.className="fb fade "+(ok?"ok":"no");
+      fb.innerHTML=`${ic(ok?"check":"x")}<div><strong>${ok?"נכון!":"לא בדיוק"}</strong>${esc(v.e)}</div>`;box.appendChild(fb);
+      const nx=document.createElement("button");nx.className="primary";nx.textContent="המשך";nx.style.alignSelf="flex-start";
+      nx.onclick=()=>onDone(ok);box.appendChild(nx);nx.focus({preventScroll:true});nx.scrollIntoView({block:"nearest",behavior:"smooth"});
+    };wrap.appendChild(b)});
+  return box;
+}
+
+function home(){
+  document.body.style.removeProperty("--c");
+  const started=T.filter(topicStarted);
+  const total=Math.round(100*allIds.filter(mastered).length/allIds.length);
+  const weak=allIds.filter(id=>S.q[id]&&S.q[id].n&&!mastered(id)).length;
+  app.innerHTML=`<div class="stack fade">
+   <section class="cover" style="--c:var(--accent)">
+    <div class="cover-art">${FIG.society()}</div>
+    <div class="cover-body">
+     <span class="eyebrow">קריאת חובה · פרק 1</span>
+     <h1>התופעה הארגונית</h1>
+     <p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר עם שאלות גם מנושאים קודמים.</p>
+     <div class="stats">
+      <div class="ring" style="--p:${total}"><span>${total}%</span></div>
+      <div class="stat-text"><b>${total===0?"עוד לא התחלת":total>=80?"אתה שולט בחומר":"בדרך"}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
+      <button class="primary review-btn" id="rev" ${started.length?"":"disabled"}>${ic("cycle")}<span>${started.length?"חזרה מהירה":"חזרה מהירה (אחרי נושא ראשון)"}</span></button>
+     </div>
+    </div>
+   </section>
+   <div class="grid" id="list"></div>
+   <div class="foot"><a href="../" style="color:var(--accent);font-weight:600;text-decoration:none">→ כל הקורסים</a><span>מבוסס על הפרק הסרוק. ההתקדמות נשמרת בדפדפן הזה.</span><button class="ghost" id="reset">איפוס התקדמות</button></div>
+  </div>`;
+  document.querySelector("#rev svg").style.cssText="width:20px;height:20px";
+  const list=app.querySelector("#list");
+  T.forEach((t,i)=>{const p=topicPct(t),b=document.createElement("button");b.className="tcard";b.style.setProperty("--c",color(t));
+    const status=!topicStarted(t)?"לא התחלת":p>=80?"שולט":"בתהליך";
+    b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
+    b.onclick=()=>topic(i,0);list.appendChild(b)});
+  app.querySelector("#rev").onclick=review;
+  const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
+  scrollTo(0,0);
+}
+
+function bar(title,n,i,label){
+  return `<div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">${label}</span></div><div class="steps">${Array.from({length:n},(_,k)=>`<i class="${k<=i?"on":""}"></i>`).join("")}</div></div><span class="eyebrow">${title}</span>`;
+}
+
+function topic(ti,bi){
+  const t=T[ti],blk=t.blocks[bi];document.body.style.setProperty("--c",color(t));
+  app.innerHTML=`<div class="stack">${bar(`נושא ${ti+1} · ${t.title}`,t.blocks.length+1,bi,`קטע ${bi+1} מתוך ${t.blocks.length}`)}
+   <article class="card fade"><h3>${blk.h}</h3>${blk.html}</article><div id="slot"></div></div>`;
+  app.querySelector("#back").onclick=home;
+  const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;save();quiz(ti)}};
+  const slot=app.querySelector("#slot");
+  if(blk.q)slot.appendChild(qCard(blk.q,next,"בדיקה קצרה"));
+  else{const b=document.createElement("button");b.className="primary";b.textContent="המשך";b.onclick=next;slot.appendChild(b)}
+  scrollTo(0,0);
+}
+
+function runSet(title,ids,c,onEnd){
+  let i=0,right=0;document.body.style.setProperty("--c",c);
+  const step=()=>{
+    if(i>=ids.length)return onEnd(right,ids.length);
+    const id=ids[i],from=T.find(t=>t.id===Q[id].t);
+    app.innerHTML=`<div class="stack">${bar(title,ids.length,i,`שאלה ${i+1} מתוך ${ids.length}`)}<div id="slot"></div></div>`;
+    app.querySelector("#back").onclick=home;
+    const card=qCard(id,ok=>{if(ok)right++;i++;step()},from.title);card.style.setProperty("--c",color(from));
+    app.querySelector("#slot").appendChild(card);scrollTo(0,0);
+  };step();
+}
+
+function quiz(ti){
+  const t=T[ti];
+  const prev=T.slice(0,ti).filter(topicStarted).flatMap(x=>x.qids);
+  const extra=shuffle(prev).sort((a,b)=>st(a).c-st(b).c).slice(0,2);
+  runSet(`מבחן סיום · ${t.title}`,shuffle(t.qids).concat(extra),color(t),(r,n)=>done(r,n,ti));
+}
+
+function review(){
+  const pool=T.filter(topicStarted).flatMap(t=>t.qids),now=Date.now();
+  const score=id=>{const s=S.q[id]||{n:0,c:0,w:0,t:0};return (s.n?0:2)+s.w*2+(s.c<2?3:0)+Math.min(3,(now-s.t)/864e5)+Math.random()*2};
+  const ids=pool.map(id=>[id,score(id)]).sort((a,b)=>b[1]-a[1]).slice(0,12).map(x=>x[0]);
+  runSet("חזרה מהירה",shuffle(ids),"var(--accent)",(r,n)=>done(r,n,null));
+}
+
+function done(r,n,ti){
+  const nextT=ti!=null&&ti+1<T.length?ti+1:null,pct=Math.round(100*r/n);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">${ti!=null?`סיום נושא ${ti+1} · ${T[ti].title}`:"סיום חזרה מהירה"}</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct};--accent:var(--c)"><span>${pct}%</span></div><div class="big">${r}/${n}</div></div>
+    <p>${r===n?"מצוין, הכל נכון.":r>=n*0.7?"טוב מאוד. מה שטעית בו יחזור בחזרה המהירה, בניסוח אחר.":"כדאי לעבור שוב על הנושא. השאלות שטעית בהן יחזרו בחזרה המהירה."}</p>
+    <div class="row">${nextT!=null?`<button class="primary" id="nx" style="--c:${color(T[nextT])}">לנושא הבא: ${T[nextT].title}</button>`:""}<button id="hm">לכל הנושאים</button></div>
+   </article></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;
+  const nx=app.querySelector("#nx");if(nx)nx.onclick=()=>topic(nextT,0);
+  scrollTo(0,0);
+}
+home();
+</script>
+
+</body>
+</html>
