@@ -4,63 +4,129 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<title>לומדות פסיכולוגיה ומנהל</title>
+<title>לומדות פסיכולוגיה ומנהל עסקים</title>
+<meta name="description" content="לומדות אינטראקטיביות לקורסים בפסיכולוגיה ומנהל עסקים">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@700;900&family=Rubik:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Rubik:wght@400;500;600;700;800&display=swap">
 <style>
-/* Layout: a shelf of courses; each course lists its study modules as cards with a progress meter */
+/* Layout: a course shelf. Ink hero with the five course colors as a spectrum; below, one colored panel per course listing its modules */
 :root{
-  --bg:#eef2f4; --surface:#ffffff; --raised:#f7f9fa; --ink:#15222a; --muted:#5a6b75; --line:#dbe2e6; --accent:#0d6c74;
-  --display:"Frank Ruhl Libre","David","Times New Roman",serif; --body:"Rubik","Arial Hebrew","Segoe UI",Arial,sans-serif;
-  --shadow:0 1px 2px rgba(21,34,42,.06),0 8px 24px rgba(21,34,42,.07);
+  --bg:#f1f3f6; --surface:#ffffff; --raised:#f6f8fa; --ink:#141c26; --muted:#4c5866; --line:#dde2e8;
+  --hero:#141c26; --hero-ink:#f3f5f8; --hero-muted:#a9b4c2;
+  --mgmt:#2457a6; --intro:#6a46c2; --social:#d0532c; --dev:#2b8546; --phys:#b5305a;
+  --display:"Suez One","Frank Ruhl Libre","David",serif;
+  --body:"Rubik","Arial Hebrew","Segoe UI",Arial,sans-serif;
+  --shadow:0 1px 2px rgba(20,28,38,.06),0 10px 30px rgba(20,28,38,.08);
   padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
 }
-@media (prefers-color-scheme: dark){:root{--bg:#10181d;--surface:#18232a;--raised:#1e2b33;--ink:#e8eef1;--muted:#9db0ba;--line:#2b3a43;--accent:#5cc6c9;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);color-scheme:dark}}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
-.wrap{max-width:760px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px;display:flex;flex-direction:column;gap:28px}
-h1,h2{font-family:var(--display);margin:0;line-height:1.2;text-wrap:balance}
-h1{font-size:clamp(2rem,6vw,2.7rem);font-weight:900}
-h2{font-size:1.35rem}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0f141b; --surface:#171f29; --raised:#1d2733; --ink:#e9edf2; --muted:#a3afbd; --line:#2a3542;
+  --hero:#1b2531; --hero-ink:#f3f5f8; --hero-muted:#a9b4c2;
+  --mgmt:#7fa6ec; --intro:#ad90f2; --social:#f28a64; --dev:#6dcf8e; --phys:#f07a9e;
+  --shadow:0 1px 2px rgba(0,0,0,.35),0 10px 30px rgba(0,0,0,.3); color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;font-weight:500;line-height:1.6}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;line-height:1.15;text-wrap:balance}
 p{margin:0}
-.muted{color:var(--muted)}
-.eyebrow{font-size:.8rem;letter-spacing:.05em;font-weight:600;color:var(--accent)}
-header{display:flex;flex-direction:column;gap:8px}
-section{display:flex;flex-direction:column;gap:12px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
-.card{display:flex;flex-direction:column;gap:10px;background:var(--surface);border-radius:16px;box-shadow:var(--shadow);padding:18px;color:inherit;text-decoration:none;transition:transform .15s}
-.card:hover{transform:translateY(-2px)}
-.card:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-.card .t{font-family:var(--display);font-weight:700;font-size:1.2rem}
-.bar{height:7px;background:var(--line);border-radius:4px;overflow:hidden}
-.bar i{display:block;height:100%;background:var(--accent)}
-.meta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
-.chip{align-self:flex-start;font-size:.75rem;padding:3px 10px;border-radius:99px;font-weight:600;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent)}
-.soon{background:transparent;border:1.5px dashed var(--line);box-shadow:none;color:var(--muted)}
-footer{font-size:.8rem;color:var(--muted)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--mgmt);outline-offset:3px;border-radius:8px}
+.in{max-width:1040px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+
+/* hero */
+.hero{background:var(--hero);color:var(--hero-ink);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1.2px);background-size:18px 18px;pointer-events:none}
+.hero .in{position:relative;padding-block:44px 40px;display:flex;flex-direction:column;gap:16px}
+.kicker{font-size:.85rem;font-weight:600;letter-spacing:.06em;color:var(--hero-muted)}
+.hero h1{font-size:clamp(2.2rem,7vw,3.8rem);max-width:16ch}
+.hero h1 span{display:block;color:transparent;background:linear-gradient(90deg,#ef7a9c,#f4936c,#86d39c,#9fb9f0,#b99cf5);-webkit-background-clip:text;background-clip:text}
+.hero p{color:var(--hero-muted);max-width:56ch;font-weight:400}
+.spectrum{display:flex;height:6px;border-radius:3px;overflow:hidden;max-width:320px;margin-top:6px}
+.spectrum i{flex:1}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:10px;max-width:760px}
+.step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start;min-width:0}
+.step b{font-family:var(--display);font-weight:400;font-size:1.4rem;line-height:1;color:var(--hero-ink);opacity:.9}
+.step span{font-size:.92rem;line-height:1.4}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* courses */
+main .in{padding-block:34px 56px;display:flex;flex-direction:column;gap:22px}
+.sechead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.sechead h2{font-size:1.6rem}
+.sechead span{color:var(--muted);font-size:.9rem;font-variant-numeric:tabular-nums}
+.courses{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.course{--c:var(--mgmt);background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.chead{background:color-mix(in srgb,var(--c) 12%,var(--surface));padding:18px 20px;display:flex;gap:14px;align-items:center;border-bottom:1px solid color-mix(in srgb,var(--c) 20%,transparent)}
+.cicon{flex:none;width:52px;height:52px;border-radius:14px;background:var(--c);color:var(--surface);display:grid;place-items:center}
+.cicon svg{width:30px;height:30px}
+.ctitle{display:flex;flex-direction:column;min-width:0}
+.ctitle h3{font-size:1.3rem;color:var(--ink)}
+.ctitle small{color:var(--c);font-weight:700;font-size:.82rem;letter-spacing:.03em}
+.mods{display:flex;flex-direction:column;padding:8px 10px 12px}
+.mod{display:grid;grid-template-columns:1fr auto;gap:6px 12px;padding:12px;border-radius:12px;text-decoration:none;align-items:center}
+.mod:hover{background:var(--raised)}
+.mod .type{font-size:.75rem;font-weight:700;color:var(--c);letter-spacing:.03em}
+.mod .name{font-weight:700;font-size:1.05rem;line-height:1.35}
+.mod .go{grid-row:1 / span 3;grid-column:2;width:36px;height:36px;border-radius:50%;background:color-mix(in srgb,var(--c) 14%,transparent);color:var(--c);display:grid;place-items:center;font-size:1.1rem}
+.mod .prog{display:flex;align-items:center;gap:10px;font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.bar{flex:1;height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--c);border-radius:3px}
+.empty{margin:6px 12px 10px;padding:16px;border:1.5px dashed var(--line);border-radius:12px;color:var(--muted);font-size:.92rem;display:flex;gap:10px;align-items:center}
+.empty svg{width:20px;height:20px;flex:none;color:var(--c)}
+footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (prefers-reduced-motion:no-preference){.course{animation:up .45s ease-out both}.course:nth-child(2){animation-delay:.05s}.course:nth-child(3){animation-delay:.1s}.course:nth-child(4){animation-delay:.15s}.course:nth-child(5){animation-delay:.2s}@keyframes up{from{transform:translateY(8px)}to{transform:none}}}
 </style>
 </head>
 <body>
-<div class="wrap">
- <header>
-  <span class="eyebrow">פסיכולוגיה ומנהל עסקים · רופין</span>
-  <h1>לומדות פסיכולוגיה ומנהל</h1>
-  <p class="muted">לומדות קצרות לכל נושא: קוראים, עונים, ממשיכים. השאלות שטועים בהן חוזרות בניסוח אחר. ההתקדמות נשמרת במכשיר שלך.</p>
- </header>
- <div id="courses"></div>
- <footer>חומר חדש מתווסף במהלך הסמסטר.</footer>
-</div>
+<header class="hero">
+ <div class="in">
+  <span class="kicker">רופין · שנה א'</span>
+  <h1>לומדות פסיכולוגיה <span>ומנהל עסקים</span></h1>
+  <p>חומר הקורסים בלומדות קצרות: קוראים קטע, עונים על שאלה, וממשיכים. מה שטועים בו חוזר בניסוח אחר עד שהוא נקלט.</p>
+  <div class="spectrum" aria-hidden="true"><i style="background:var(--mgmt)"></i><i style="background:var(--intro)"></i><i style="background:var(--social)"></i><i style="background:var(--dev)"></i><i style="background:var(--phys)"></i></div>
+  <div class="steps">
+   <div class="step"><b>1</b><span>קוראים קטע קצר עם איורים ומושגי מפתח</span></div>
+   <div class="step"><b>2</b><span>עונים על שאלה ומקבלים הסבר מיד</span></div>
+   <div class="step"><b>3</b><span>מבחן קצר בסוף, וחזרה על מה שטעיתם</span></div>
+  </div>
+ </div>
+</header>
+<main>
+ <div class="in">
+  <div class="sechead"><h2>הקורסים</h2><span id="count"></span></div>
+  <div class="courses" id="courses"></div>
+  <footer><span>ההתקדמות נשמרת במכשיר שלכם בלבד.</span><span>חומר חדש עולה במהלך הסמסטר.</span></footer>
+ </div>
+</main>
 <script>
+const ICON={
+ mgmt:'<rect x="9" y="2.5" width="6" height="4.5" rx="1"/><rect x="2.5" y="16.5" width="5.5" height="4.5" rx="1"/><rect x="9.25" y="16.5" width="5.5" height="4.5" rx="1"/><rect x="16" y="16.5" width="5.5" height="4.5" rx="1"/><path d="M12 7v5M5.25 16.5V12h13.5v4.5M12 12v4.5"/>',
+ intro:'<path d="M12 3v18M5.5 5c0 5.5 2.6 8.5 6.5 8.5s6.5-3 6.5-8.5M8.5 21h7"/>',
+ social:'<circle cx="12" cy="5.5" r="2.5"/><circle cx="5" cy="17" r="2.5"/><circle cx="19" cy="17" r="2.5"/><path d="M10.7 7.7L6.3 14.8M13.3 7.7l4.4 7.1M7.5 17h9"/>',
+ dev:'<circle cx="5" cy="15" r="1.6"/><path d="M5 16.6V21"/><circle cx="12" cy="11" r="2"/><path d="M12 13v8"/><circle cx="19" cy="6" r="2.4"/><path d="M19 8.4V21M2 21h20"/>',
+ phys:'<circle cx="12" cy="12" r="3.2"/><path d="M12 8.8V3M9.2 10.4L4 7M14.8 10.4L20 7M10 14.6L6 20M14 14.6l4 5.4M12 3l-2 1.5M12 3l2 1.5M4 7l.5 2.4M20 7l-.5 2.4"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>'
+};
+const ic=k=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[k]}</svg>`;
 const COURSES=[
- {name:"קריאות חובה",items:[
-   {title:"התופעה הארגונית",sub:"פרק 1",href:"org/ch1.html",key:"lomda-org-1",total:34}
- ]}
+ {id:"mgmt",name:"מבוא לניהול ומבנה ארגוני",tag:"מנהל עסקים",items:[
+   {type:"קטע קריאה",title:"התופעה הארגונית",href:"org/ch1.html",key:"lomda-org-1",total:34}
+ ]},
+ {id:"intro",name:"מבוא לפסיכולוגיה",tag:"פסיכולוגיה",items:[]},
+ {id:"social",name:"פסיכולוגיה חברתית א'",tag:"פסיכולוגיה",items:[]},
+ {id:"dev",name:"פסיכולוגיה התפתחותית א'",tag:"פסיכולוגיה",items:[]},
+ {id:"phys",name:"יסודות פיזיולוגיים של התנהגות",tag:"פסיכולוגיה",items:[]}
 ];
 function pct(key,total){try{const s=JSON.parse(localStorage.getItem(key)||"null");if(!s||!s.q)return null;
-  const m=Object.values(s.q).filter(x=>x.c>=2).length;const started=Object.values(s.q).some(x=>x.n);return started?Math.round(100*m/total):null}catch(e){return null}}
-const root=document.getElementById("courses");
-root.innerHTML=COURSES.map(c=>`<section><h2>${c.name}</h2><div class="grid">${c.items.map(it=>{const p=pct(it.key,it.total);
- return `<a class="card" href="${it.href}"><span class="chip">${it.sub}</span><span class="t">${it.title}</span><div class="bar"><i style="width:${p||0}%"></i></div><div class="meta"><span>${p==null?"לא התחלת":p>=80?"שולט":"בתהליך"}</span><span>${p||0}%</span></div></a>`}).join("")}
- <div class="card soon"><span class="t">בקרוב</span><span>לומדות נוספות יעלו כאן</span></div></div></section>`).join("");
+  const v=Object.values(s.q);if(!v.some(x=>x.n))return null;return Math.round(100*v.filter(x=>x.c>=2).length/total)}catch(e){return null}}
+const n=COURSES.reduce((a,c)=>a+c.items.length,0);
+document.getElementById("count").textContent=`${COURSES.length} קורסים · ${n} ${n===1?"לומדה":"לומדות"}`;
+document.getElementById("courses").innerHTML=COURSES.map(c=>`
+ <section class="course" style="--c:var(--${c.id})">
+  <div class="chead"><span class="cicon">${ic(c.id)}</span><div class="ctitle"><small>${c.tag}</small><h3>${c.name}</h3></div></div>
+  <div class="mods">${c.items.length?c.items.map(it=>{const p=pct(it.key,it.total);
+   return `<a class="mod" href="${it.href}"><span class="type">${it.type}</span><span class="name">${it.title}</span><span class="prog"><span class="bar"><i style="width:${p||0}%"></i></span>${p==null?"לא התחלת":p+"%"}</span><span class="go" aria-hidden="true">←</span></a>`}).join("")
+   :`<div class="empty">${ic("clock")}<span>הלומדה הראשונה תעלה בקרוב</span></div>`}</div>
+ </section>`).join("");
 </script>
 </body>
 </html>
