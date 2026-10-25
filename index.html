@@ -136,7 +136,11 @@ const COURSES=[
    {title:"מבנים ארגוניים",sub:"פרק 15",href:"mgmt/ch15.html",key:"lomda-mgmt-ch15",total:23},
    {title:"תרבות ארגונית",sub:"פרק 16",href:"mgmt/ch16.html",key:"lomda-mgmt-ch16",total:25}
  ]},
- {id:"intro",name:"מבוא לפסיכולוגיה",tag:"פסיכולוגיה",items:[]},
+ {id:"intro",name:"מבוא לפסיכולוגיה",tag:"פסיכולוגיה",items:[
+  {type:"מאמר חובת קריאה 1/4 · תרגיל 3",en:true,title:"Beneficial effects of a daytime nap on verbal memory in adolescents",sub:"תנומת צהריים וזיכרון מילולי אצל מתבגרים",href:"intro/ex3-1.html",key:"lomda-intro-ex3-1",total:26},
+  {type:"מאמר חובת קריאה 2/4 · תרגיל 3",en:true,title:"Effects of smartphone-based memory training for older adults with subjective memory complaints: a randomized controlled trial",sub:"אימון זיכרון בסמארטפון למבוגרים עם תלונות זיכרון",href:"intro/ex3-2.html",key:"lomda-intro-ex3-2",total:28},
+  {type:"מאמר חובת קריאה 3/4 · תרגיל 3",en:true,title:"One Month of Cannabis Abstinence in Adolescents and Young Adults is Associated with Improved Memory",sub:"חודש בלי קנאביס ושיפור בזיכרון",href:"intro/ex3-3.html",key:"lomda-intro-ex3-3",total:26}
+ ]},
  {id:"social",name:"פסיכולוגיה חברתית א'",tag:"פסיכולוגיה",items:[]},
  {id:"dev",name:"פסיכולוגיה התפתחותית א'",tag:"פסיכולוגיה",items:[]},
  {id:"phys",name:"יסודות פיזיולוגיים של התנהגות",tag:"פסיכולוגיה",items:[]}
@@ -158,7 +162,7 @@ function home(){
 function course(c){
   view.innerHTML=`<div class="cview"><button class="back" id="back">→ כל הקורסים</button>
    <div class="vhead" style="--c:var(--${c.id})"><span class="cicon" style="background:var(--c);color:var(--surface);display:grid;place-items:center">${ic(c.id)}</span><div class="ctitle"><small>${c.tag} · ${word(c.items.length)}</small><h2>${c.name}</h2></div></div>
-   ${c.items.length?`<div class="mlist">${c.items.map(it=>{const p=pct(it);return `<a class="mcard" style="--c:var(--${c.id})" href="${it.href}"><span class="type">לומדת חובת קריאה</span><span class="name">${it.title}</span><span class="sub">${it.sub}</span><div class="bar"><i style="width:${p||0}%"></i></div><div class="cmeta"><span>${p==null?"לא התחלת":p>=80?"שולט":"בתהליך"}</span><span>${p||0}%</span></div></a>`}).join("")}</div>`
+   ${c.items.length?`<div class="mlist">${c.items.map(it=>{const p=pct(it);return `<a class="mcard" style="--c:var(--${c.id})" href="${it.href}"><span class="type">${it.type||"לומדת חובת קריאה"}</span><span class="name"${it.en?' dir="ltr" lang="en" style="text-align:right;font-family:Rubik,system-ui,sans-serif;font-weight:700"':""}>${it.title}</span><span class="sub">${it.sub}</span><div class="bar"><i style="width:${p||0}%"></i></div><div class="cmeta"><span>${p==null?"לא התחלת":p>=80?"שולט":"בתהליך"}</span><span>${p||0}%</span></div></a>`}).join("")}</div>`
    :`<div class="empty" style="--c:var(--${c.id})">${ic("clock")}<span>הלומדה הראשונה בקורס הזה תעלה בקרוב</span></div>`}</div>`;
   document.getElementById("back").onclick=()=>{location.hash=""};
 }
