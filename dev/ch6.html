@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>לומדת חובת קריאה: פרק 6 - פיאז'ה בינקות ומבחני משכל מוקדמים</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Rubik:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: a study notebook. Home = illustrated cover + topic cards; topic = one reading card at a time, with a highlighter for key terms and drawn figures */
+:root{
+  --bg:#eef2f4; --surface:#ffffff; --raised:#f7f9fa; --ink:#15222a; --muted:#4c5b66; --line:#dbe2e6;
+  --accent:#2457a6; --mark:#ffe27a; --good:#23855a; --good-soft:#e2f4ea; --bad:#c2452d; --bad-soft:#fbe6e1;
+  --t1:#d35d36; --t2:#3667cf; --t3:#0e8a7c; --t4:#8448c9; --t5:#b9800c; --t6:#2a7fa6; --t7:#b4436c; --t8:#5a6b2e;
+  --display:"Suez One","Frank Ruhl Libre","David",serif;
+  --body:"Rubik","Arial Hebrew","Segoe UI",Arial,sans-serif;
+  --shadow:0 1px 2px rgba(21,34,42,.06),0 8px 24px rgba(21,34,42,.07);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;font-weight:500;line-height:1.75;direction:rtl}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
+p{margin:0}
+.stack{display:flex;flex-direction:column;gap:16px}
+.muted{color:var(--muted)}
+mark{background:linear-gradient(transparent 38%,var(--mark) 38%,var(--mark) 92%,transparent 92%);color:inherit;padding:0 2px;font-weight:600}
+button{font:inherit;cursor:pointer;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:11px 18px}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button[disabled]{opacity:.55;cursor:default}
+.primary{background:var(--c,var(--accent));border-color:var(--c,var(--accent));color:var(--surface);font-weight:600}
+.ghost{background:transparent;border:none;color:var(--muted);padding:6px 2px}
+.ghost:hover{color:var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.badge{display:inline-block;align-self:flex-start;font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:99px;background:var(--accent);color:var(--surface);margin-bottom:6px}.entitle{display:inline;unicode-bidi:isolate;font-family:Rubik,system-ui,sans-serif;font-weight:800}.hetitle{margin:4px 0 0;font-weight:700;font-size:1.05rem}.cite{text-align:right;margin:4px 0 0;font-size:.85rem;color:var(--muted)}.cite a{color:var(--accent)}
+.eyebrow{font-size:.8rem;letter-spacing:.05em;font-weight:600;color:var(--c,var(--muted))}
+
+/* home */
+.cover{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.cover-art{background:var(--raised);border-bottom:1px solid var(--line);padding:8px 8px 0}
+.cover-art svg{display:block;width:100%;height:auto;max-height:230px}
+.cover-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px}
+.cover h1{font-size:clamp(2rem,6vw,2.6rem);font-weight:900}
+.stats{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.ring{--p:0;width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center;flex:none}
+.ring span{width:50px;height:50px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.9rem;font-variant-numeric:tabular-nums}
+.stat-text{display:flex;flex-direction:column;line-height:1.35;flex:1;min-width:160px}
+.stat-text b{font-size:1.05rem}
+.review-btn{display:flex;align-items:center;gap:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.tcard{--c:var(--accent);text-align:right;padding:0;overflow:hidden;border:none;border-radius:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s}
+.tcard:hover{transform:translateY(-2px)}
+.tcard .band{background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.tcard .band svg{width:44px;height:44px}
+.tcard .n{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;opacity:.85}
+.tcard .body{padding:12px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tcard .t{font-weight:700;font-size:1.05rem;line-height:1.35}
+.bar{height:7px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--c);border-radius:4px}
+.meta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip{font-size:.75rem;padding:3px 10px;border-radius:99px;font-weight:600;background:color-mix(in srgb,var(--c,var(--accent)) 14%,transparent);color:var(--c,var(--accent));white-space:nowrap}
+.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+
+/* topic */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;display:flex;flex-direction:column;gap:8px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.steps{display:flex;gap:5px}
+.steps i{flex:1;height:5px;border-radius:3px;background:var(--line)}
+.steps i.on{background:var(--c)}
+.prog{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tt{font-size:1.6rem;font-weight:900}
+.card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px}
+.card h3{font-size:1.25rem;color:var(--c)}
+.fig{background:var(--raised);border-radius:14px;padding:10px;margin-inline:-4px}
+.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{font-size:.8rem;color:var(--muted);text-align:center;margin-top:4px}
+figure{margin:0}
+.def{border:1.5px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 6%,var(--surface));border-radius:14px;padding:14px 16px}
+.lbl{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:var(--c);margin-bottom:4px}
+.who{display:flex;gap:12px;align-items:flex-start}
+.who .av{flex:none;width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.15rem}
+.who .yr{font-size:.8rem;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.tile{background:var(--raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile svg{width:32px;height:32px;color:var(--c)}
+.tile b{font-size:.98rem}
+.tile span{font-size:.88rem;color:var(--muted);line-height:1.45}
+.ex{background:var(--raised);border-radius:12px;padding:12px 14px;font-size:.95rem}
+.ex .lbl{color:var(--muted)}
+.yesno{display:flex;flex-wrap:wrap;gap:8px}
+.yn{padding:5px 12px;border-radius:99px;font-size:.88rem;font-weight:500;display:inline-flex;gap:6px;align-items:center}
+.yn.y{background:var(--good-soft);color:var(--good)} .yn.n{background:var(--bad-soft);color:var(--bad)}
+.spectrum{display:flex;flex-direction:column;gap:6px}
+.spectrum .track{height:12px;border-radius:6px;background:linear-gradient(90deg,var(--bad),var(--line) 50%,var(--good));position:relative}
+.spectrum .dot{position:absolute;top:50%;left:50%;width:20px;height:20px;border-radius:50%;background:var(--surface);border:3px solid var(--ink);transform:translate(-50%,-50%)}
+.spectrum .ends{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);gap:10px}
+.remember{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;border-top:1px dashed var(--line);padding-top:12px}
+.remember svg{flex:none;width:22px;height:22px;color:var(--c)}
+
+/* question */
+.q{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:12px}
+.qtext{font-weight:600;font-size:1.08rem;line-height:1.55}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{text-align:right;line-height:1.45;display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--raised);border:1.5px solid transparent}
+.opt:hover:not([disabled]){border-color:var(--c)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:8px;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.85rem;color:var(--c)}
+.opt.right{background:var(--good-soft);border-color:var(--good);opacity:1}
+.opt.right .k{background:var(--good);color:var(--surface)}
+.opt.wrong{background:var(--bad-soft);border-color:var(--bad);opacity:1}
+.opt.wrong .k{background:var(--bad);color:var(--surface)}
+.fb{padding:12px 14px;border-radius:12px;font-size:.95rem;display:flex;gap:10px;align-items:flex-start}
+.fb svg{flex:none;width:22px;height:22px;margin-top:2px}
+.fb.ok{background:var(--good-soft)} .fb.ok svg{color:var(--good)}
+.fb.no{background:var(--bad-soft)} .fb.no svg{color:var(--bad)}
+.fb strong{display:block}
+.big{font-family:var(--display);font-size:3.4rem;font-weight:900;color:var(--c);font-variant-numeric:tabular-nums;line-height:1}
+@media (prefers-reduced-motion:no-preference){.fade{animation:f .3s ease-out}@keyframes f{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+
+/* svg figure classes */
+.s-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.s-c{stroke:var(--c);stroke-width:2;fill:none}
+.f-c{fill:var(--c)}
+.f-soft{fill:color-mix(in srgb,var(--c) 16%,var(--surface))}
+.f-surf{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.f-ink{fill:var(--ink)}
+.f-mut{fill:var(--muted)}
+.f-inv{fill:var(--surface)}
+svg text{font-family:var(--body)}
+h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
+.card p,.def p,.tile span,.ex p{font-weight:500}
+.qtext{font-weight:700}
+.tile b,.who b{font-weight:700}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:.95rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.tbl th,.tbl td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl th{background:color-mix(in srgb,var(--c) 10%,var(--surface));color:var(--c);font-weight:700;font-size:.85rem}
+.tbl .in{color:var(--c);font-weight:700}.tbl .out{color:var(--muted);font-weight:700}
+.tblwrap{overflow-x:auto}
+.en{font-size:.82em;color:var(--muted);font-weight:500;direction:ltr;unicode-bidi:isolate}
+</style>
+<style>:root{--accent:#2b8546}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent:#6dcf8e}}:root[data-theme="dark"]{--accent:#6dcf8e}</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const CONFIG={key:"lomda-dev-ch6",cover:"cover20",eyebrow:"פסיכולוגיה התפתחותית א' · פרק 6",title:"פרק 6 - פיאז'ה בינקות ומבחני משכל מוקדמים",cite:`ברק, מאיירס ובייט־מרום (עורכות), <i>פסיכולוגיה התפתחותית: ינקות, ילדות והתבגרות</i>, כרך א, האוניברסיטה הפתוחה, 2022. פרק 6: ההתפתחות הקוגניטיבית בינקות ובגיל הרך, עמ' 279–297, 311–319.`,note:"מבוסס על העמודים שבחובת הקריאה. המונחים באנגלית מופיעים בסוגריים."};
+const I={
+ building:'<path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h2M14 8h2M8 12h2M14 12h2M10 21v-4h4v4"/>',
+ people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
+ cycle:'<path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/>',
+ pyramid:'<path d="M12 3L2.5 20h19z"/><path d="M8.2 10.5h7.6M5.5 15.2h13"/>',
+ chart:'<path d="M4 20V10M9.5 20V4M15 20v-7M20.5 20V8M2 20h20"/>',
+ gear:'<circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="7.5" stroke-dasharray="3.2 2.7" stroke-width="3.2"/>',
+ sprout:'<path d="M12 21v-9"/><path d="M12 14C7 14 4.5 11 4.5 6.5 9 6.5 12 9 12 14z"/><path d="M12 12c0-4.5 3-7 7.5-7 0 4.5-3 7-7.5 7z"/>',
+ scales:'<path d="M12 3v17M7 20h10M4 7h16"/><path d="M4 7l-2.5 6h5zM20 7l-2.5 6h5z"/>',
+ factory:'<path d="M3 21V10l5 3v-3l5 3V5h4v16zM1.5 21h21M17 9h4v12"/>',
+ question:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 1 1 3.6 2.4c-.8.4-1.1.9-1.1 1.8"/><path d="M12 17h.01"/>',
+ data:'<ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6M4.5 11.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6"/>',
+ doc:'<path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/>',
+ split:'<circle cx="12" cy="4.5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="12" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/><path d="M12 6.7v10M12 11l-6 6M12 11l6 6"/>',
+ grad:'<path d="M1.5 9L12 4l10.5 5L12 14z"/><path d="M6 11.2V16c3.3 2.4 8.7 2.4 12 0v-4.8M21 10v5"/>',
+ copies:'<rect x="3" y="7" width="12" height="14" rx="2"/><path d="M7 4h11a2 2 0 0 1 2 2v12"/>',
+ link:'<rect x="2" y="8" width="11" height="8" rx="4"/><rect x="11" y="8" width="11" height="8" rx="4"/>',
+ hand:'<circle cx="8" cy="7" r="3"/><circle cx="16" cy="7" r="3"/><path d="M2.5 20c0-3.3 2.5-6 5.5-6 1.6 0 3 .7 4 1.9 1-1.2 2.4-1.9 4-1.9 3 0 5.5 2.7 5.5 6"/>',
+ target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',
+ id:'<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><circle cx="8.5" cy="11" r="2.3"/><path d="M5 16c.6-1.6 2-2.4 3.5-2.4S11.4 14.4 12 16M14.5 10h4M14.5 13.5h3"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>',
+ pie:'<path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/>',
+ cart:'<path d="M2 3h3l2.5 12h11l2-8H6.5"/><circle cx="9" cy="19.5" r="1.6"/><circle cx="17" cy="19.5" r="1.6"/>',
+ bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/>',
+ check:'<circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/>',
+ x:'<circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/>',
+ lock:'<rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>',
+ moon:'<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>',
+ brain:'<path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a2 2 0 0 0-3-1z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/>',
+ phone:'<rect x="6.5" y="2" width="11" height="20" rx="2.5"/><path d="M10.5 18.5h3"/>',
+ flask:'<path d="M9 2.5h6M10 2.5v6L4.5 19a2 2 0 0 0 1.8 2.9h11.4a2 2 0 0 0 1.8-2.9L14 8.5v-6"/><path d="M7 15h10"/>',
+ leaf:'<path d="M5 19C5 10 11 4 20 4c0 9-6 15-15 15z"/><path d="M5 19l8-8"/>'
+};
+const ic=(k,cls="")=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="${cls}" aria-hidden="true">${I[k]}</svg>`;
+
+const arrowDef=id=>`<defs><marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="f-c"/></marker></defs>`;
+
+const FIG={
+ cover20:()=>`<svg viewBox="0 0 400 228" role="img" aria-label="פעוט ומגדל קוביות">
+  <circle cx="200" cy="114" r="96" class="f-soft"/>
+  <rect x="150" y="150" width="44" height="40" rx="6" class="f-c"/><rect x="200" y="150" width="44" height="40" rx="6" class="f-surf"/>
+  <rect x="175" y="106" width="44" height="40" rx="6" class="f-surf"/><rect x="186" y="62" width="44" height="40" rx="6" class="f-c" transform="rotate(8 208 82)"/>
+  <circle cx="290" cy="96" r="7" class="f-c"/><circle cx="310" cy="72" r="5" class="f-c" opacity=".7"/><circle cx="324" cy="50" r="3.5" class="f-c" opacity=".45"/></svg>`,
+ voe:()=>{const P=(x,lab,tall,sub)=>{const h=tall?70:38;const top=136-h;return `<g>
+   <path d="M${x-40} 136 V56 H${x-14} V84 H${x+14} V56 H${x+40} V136 Z" class="f-soft"/>
+   <rect x="${x-14}" y="56" width="28" height="28" fill="none" class="s-line" stroke-dasharray="3 3"/>
+   <rect x="${x-74}" y="${top}" width="16" height="${h}" rx="8" class="f-c"/><rect x="${x+58}" y="${top}" width="16" height="${h}" rx="8" class="f-c"/>
+   ${tall?`<text x="${x}" y="76" text-anchor="middle" font-size="16" font-weight="800" class="f-ink">?</text>`:""}
+   <line x1="${x-82}" y1="136" x2="${x+82}" y2="136" class="s-line"/>
+   <text x="${x}" y="156" text-anchor="middle" font-size="11.5" font-weight="800" class="f-ink">${lab}</text>
+   <text x="${x}" y="172" text-anchor="middle" font-size="10" class="f-mut">${sub}</text></g>`};
+  return `<svg viewBox="0 0 400 210" role="img" aria-label="ניסוי הגזרים של באיירז'ון">
+  <text x="200" y="22" text-anchor="middle" font-size="10.5" class="f-mut">גזר נע מצד לצד מאחורי וילון, ובחלק העליון של הווילון יש חלון</text>
+  <text x="200" y="38" text-anchor="middle" font-size="10.5" class="f-mut">(מימין ומשמאל לווילון: הגזר לפני ואחרי המעבר)</text>
+  ${P(296,"אירוע צפוי",false,"גזר קצר: נמוך מהחלון, לא נראה")}${P(104,"אירוע בלתי צפוי",true,"גזר ארוך: היה צריך להיראות בחלון")}
+  <text x="200" y="200" text-anchor="middle" font-size="10.5" font-weight="700" class="f-ink">בני 2.5 עד 3.5 חודשים הביטו יותר באירוע הבלתי צפוי</text></svg>`},
+ wynn:()=>{const S=[["1","חיה אחת"],["2","מסך עולה"],["3","מוסיפים חיה"],["4","יד יוצאת ריקה"]];
+  return `<svg viewBox="0 0 400 200" role="img" aria-label="ניסוי החיבור של וין">${arrowDef("wy")}
+  ${S.map(([n,t],i)=>{const x=352-i*96;return `<rect x="${x-40}" y="16" width="80" height="54" rx="10" class="f-soft"/><text x="${x}" y="40" text-anchor="middle" font-size="14" font-weight="800" class="f-ink">${n}</text><text x="${x}" y="58" text-anchor="middle" font-size="10" class="f-mut">${t}</text>${i<3?`<line x1="${x-42}" y1="43" x2="${x-52}" y2="43" class="s-line" marker-end="url(#wy)"/>`:""}`}).join("")}
+  <rect x="216" y="96" width="150" height="56" rx="12" class="f-soft"/><text x="291" y="120" text-anchor="middle" font-size="11.5" font-weight="800" class="f-ink">צפוי: שתי חיות</text><text x="291" y="139" text-anchor="middle" font-size="10" class="f-mut">מבט קצר יותר</text>
+  <rect x="34" y="96" width="150" height="56" rx="12" class="f-c"/><text x="109" y="120" text-anchor="middle" font-size="11.5" font-weight="800" class="f-inv">בלתי צפוי: חיה אחת</text><text x="109" y="139" text-anchor="middle" font-size="10" class="f-inv">מבט ארוך יותר</text>
+  <text x="200" y="182" text-anchor="middle" font-size="10.5" class="f-mut">מסקנת החוקרים: בני 5 חודשים יודעים שאחת ועוד אחת הן שתיים</text></svg>`},
+ bell:()=>{const xs=[40,93,147,200,253,307,360];const L=["55","70","85","100","115","130","145"];const P=["2%","14%","34%","34%","14%","2%"];
+  return `<svg viewBox="0 0 400 190" role="img" aria-label="התפלגות נורמלית של ציוני מנת משכל">
+  <path d="M20 150 C70 150 100 145 130 110 C160 60 180 30 200 30 C220 30 240 60 270 110 C300 145 330 150 380 150 Z" class="f-soft"/>
+  <path d="M147 75 C165 40 185 30 200 30 C215 30 235 40 253 75 L253 150 L147 150 Z" class="f-c" opacity=".55"/>
+  ${xs.slice(1,6).map(x=>`<line x1="${x}" y1="40" x2="${x}" y2="150" class="s-line" stroke-dasharray="3 4"/>`).join("")}
+  <line x1="20" y1="150" x2="380" y2="150" class="s-line"/>
+  ${xs.map((x,i)=>`<text x="${x}" y="168" text-anchor="middle" font-size="11" font-weight="700" class="f-ink">${L[i]}</text>`).join("")}
+  ${P.map((p,i)=>`<text x="${(xs[i]+xs[i+1])/2}" y="${i==2||i==3?125:i==1||i==4?140:146}" text-anchor="middle" font-size="10.5" font-weight="700" class="f-ink">⁦${p}⁩</text>`).join("")}
+  <text x="200" y="186" text-anchor="middle" font-size="10.5" class="f-mut">ציוני מנת המשכל (הממוצע 100)</text></svg>`},
+ abc:()=>`<svg viewBox="0 0 400 190" role="img" aria-label="פרויקט קרוליינה, תרשים סכמטי">
+  <line x1="40" y1="150" x2="384" y2="150" class="s-line"/><line x1="384" y1="20" x2="384" y2="150" class="s-line"/>
+  <path d="M376 70 C330 74 300 80 260 86 C200 94 120 100 48 104" class="s-c" fill="none" stroke-width="4"/>
+  <path d="M376 70 C340 90 300 106 260 112 C200 120 120 126 48 130" class="s-line" fill="none" stroke-width="3" stroke-dasharray="6 5"/>
+  <line x1="330" y1="40" x2="330" y2="150" class="s-line" stroke-dasharray="2 4"/><text x="330" y="34" text-anchor="middle" font-size="10" class="f-mut">שנה</text>
+  <text x="380" y="168" text-anchor="start" font-size="10.5" class="f-mut">ינקות</text><text x="48" y="168" text-anchor="end" font-size="10.5" class="f-mut">גיל 21</text>
+  <text x="150" y="92" text-anchor="middle" font-size="11" font-weight="800" class="f-ink">קבוצת טיפול</text>
+  <text x="150" y="146" text-anchor="middle" font-size="11" font-weight="700" class="f-mut">קבוצת ביקורת</text>
+  <text x="200" y="186" text-anchor="middle" font-size="10.5" class="f-mut">סכמטי: מנת המשכל, מתפצלת מגיל שנה, היתרון נשמר, ושתיהן יורדות בהדרגה</text></svg>`
+};
+const stageTable=`<div class="tblwrap"><table class="tbl"><thead><tr><th>תת־שלב</th><th>גיל</th><th>מה מאפיין</th></tr></thead><tbody>
+<tr><td><b>1. סכמות רפלקסיביות</b></td><td>לידה עד חודש</td><td>רפלקסים של יילוד</td></tr>
+<tr><td><b>2. תגובות מעגליות ראשוניות</b></td><td>חודש עד 4 חודשים</td><td>הרגלים מוטוריים פשוטים סביב הגוף, ציפייה מוגבלת לאירועים</td></tr>
+<tr><td><b>3. תגובות מעגליות שניוניות</b></td><td>4 עד 8 חודשים</td><td>חזרה על תוצאות מעניינות בסביבה, חיקוי התנהגויות מוכרות</td></tr>
+<tr><td><b>4. תיאום התגובות השניוניות</b></td><td>8 עד 12 חודשים</td><td>התנהגות רצונית, מציאת חפץ במקום הראשון (קביעות האובייקט), חיקוי שונה מעט</td></tr>
+<tr><td><b>5. תגובות מעגליות שלישוניות</b></td><td>12 עד 18 חודשים</td><td>חקירה בדרכים חדשות, חיקוי התנהגויות חדשות, חיפוש בכמה מקומות</td></tr>
+<tr><td><b>6. ייצוג מנטלי</b></td><td>18 חודשים עד שנתיים</td><td>פתרון פתאומי, העתקה סמויה, חיקוי מושהה, משחקי כאילו</td></tr></tbody></table></div>`;
+const homeTable=`<div class="tblwrap"><table class="tbl"><thead><tr><th>תת־סולם HOME</th><th>פריט לדוגמה</th></tr></thead><tbody>
+<tr><td><b>ארגון הסביבה הפיזית</b></td><td>סביבת המשחק נראית בטוחה</td></tr>
+<tr><td><b>חומרי משחק ראויים</b></td><td>ההורה מספק צעצועים או פעילויות מעניינות</td></tr>
+<tr><td><b>תגובתיות רגשית ומילולית</b></td><td>מלטף או מנשק לפחות פעם אחת. מדבר לילד באופן ספונטני (לא נזיפות)</td></tr>
+<tr><td><b>קבלת הילד</b></td><td>לא מגביל את תנועותיו יותר משלוש פעמים</td></tr>
+<tr><td><b>מעורבות ההורה</b></td><td>משאיר את הילד בשדה הראייה ומסתכל עליו לעתים קרובות</td></tr>
+<tr><td><b>גיוון בגרייה</b></td><td>ארוחה ביום עם הורה. יציאות מהבית, כמו קניות</td></tr></tbody></table></div>`;
+const E=t=>`<span class="en">(${t})</span>`;
+const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</figcaption>`:""}</figure>`;
+const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
+const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;
+const tiles=a=>`<div class="tiles">${a.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`;
+const ex=h=>`<div class="ex"><span class="lbl">דוגמה</span><p>${h}</p></div>`;
+const rem=h=>`<div class="remember">${ic("bulb")}<p>${h}</p></div>`;
+const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")}${t}</span>`).join("")}${n.map(t=>`<span class="yn n">${ic("x")}${t}</span>`).join("")}</div>`;
+const spectrum=(r,l,dot)=>`<div class="spectrum"><div class="track">${dot?'<span class="dot"></span>':""}</div><div class="ends"><span>${r}</span><span>${l}</span></div></div>`;
+document.head.insertAdjacentHTML("beforeend",'<style>.yn svg{width:16px;height:16px}</style>');
+
+const T=[
+ {id:"t1",icon:"brain",title:"פיאז'ה: איך סכמות משתנות",blocks:[
+  {h:"השלב הסנסורי־מוטורי וסכמות",html:`<p>במשפחתון של ג׳ינט, שלושה בני 18 חודשים ״חוקרים״: גרייס מכניסה צורות לקופסה ומנערת, טימי משליך חפצים מהמדרגות, קייטלין מקישה קעריות. כאילו שואלים ״איך דברים פועלים?״. הפרק עוסק בשלוש השקפות: פיאז׳ה, עיבוד מידע וויגוצקי, וגם במבחני משכל ובשפה.</p>${def("השלב הסנסורי־מוטורי",`<mark>השלב הסנסורי־מוטורי</mark> ${E("Sensorimotor stage")}: השנתיים הראשונות. תינוקות ״חושבים״ בעזרת העיניים, האוזניים והידיים, ובסוף התקופה פותרים בעיות מעשיות ומבטאים התנסויות בדיבור, בתנועה ובמשחק.`)}${def("סכמה",`<mark>סכמה</mark> ${E("Scheme")}: דרך מאורגנת להבין התנסות. בהתחלה אלה דפוסי פעולה סנסוריים־מוטוריים.`)}${ex("בגיל 6 חודשים טימי הפיל חפצים פשוט בשחרור האחיזה. בגיל 18 חודשים ״סכמת ההפלה״ שלו נעשתה רצונית ויצירתית: זרק, הקפיץ על הקיר, שחרר בעדינות או בכוח. בקרוב הוא יחשוב <b>לפני</b> שיפעל, וזה המעבר לחשיבה קדם־אופרציונלית.")}`,q:"q1"},
+  {h:"הסתגלות וארגון",html:`${def("הסתגלות",`<mark>הסתגלות</mark> ${E("Adaptation")}: בניית סכמות דרך אינטראקציה ישירה עם הסביבה. שני תהליכים משלימים: <mark>הטמעה</mark> ${E("Assimilation")}, שימוש בסכמות קיימות כדי לפרש את העולם (טימי מטמיע חפצים בסכמת ההשלכה), ו<mark>התאמה</mark> ${E("Accommodation")}, יצירה או שינוי של סכמות כשהקיימות לא מספיקות (טימי משנה את ההשלכה לפי תכונות החפץ).`)}${tiles([["scales","איזון","Equilibrium: כשאין הרבה שינוי, מטמיעים יותר ממתאימים. מצב יציב ונוח"],["cycle","חוסר איזון","Disequilibrium: מידע חדש לא מתאים, אי־נוחות, עוברים להתאמה ואז חוזרים להטמעה"]])}${def("ארגון",`<mark>ארגון</mark> ${E("Organization")}: תהליך <b>פנימי</b>, בלי מגע ישיר עם הסביבה: הילד מקשר סכמות לרשת אחת (טימי יקשר ״הפלה״ ל״השלכה״ ול״קרוב״ ו״רחוק״).`)}${rem("ההתאמות הגדולות ביותר מוקדמות, ולכן לפי פיאז׳ה השלב הסנסורי־מוטורי הוא <b>התקופה המורכבת ביותר</b> בהתפתחות.")}`,q:"q3"}
+ ]},
+ {id:"t2",icon:"pyramid",title:"ששת תת־השלבים",blocks:[
+  {h:"תגובות מעגליות",html:`<p>פיאז׳ה ביסס את הרצף על מדגם קטן מאוד: <b>שלושת ילדיו</b>, בתצפית ובבעיות כמו חפץ מוסתר.</p>${def("תגובה מעגלית",`<mark>תגובה מעגלית</mark> ${E("Circular reaction")}: התינוק נתקל במקרה בתוצאה חדשה מפעולה שלו ומנסה לחזור עליה שוב ושוב, עד שהיא נעשית סכמה. קייטלין בגיל חודשיים השמיעה במקרה מצמוץ שפתיים, ואחרי כמה ימים הייתה ״מומחית״. אולי הבסיס הוא קושי לרסן התנהגויות מעניינות, וזה דווקא מסתגל: מיומנויות לא נזנחות לפני שהתחזקו.`)}${stageTable}${tiles([["sprout","תת־שלב 1","הרפלקסים הם אבני הבניין. מוצצים, אוחזים ומסתכלים באותה צורה בכל מצב"],["hand","תת־שלב 2","תגובה מעגלית ראשונית סביב הגוף (מציצת אגודל). פתיחת פה שונה לפטמה ולכפית, וציפייה: טימי מפסיק לבכות כשאמא נכנסת"],["target","תת־שלב 3","תגובה מעגלית שניונית: חוזרים על אירוע מעניין בסביבה (קייטלין חובטת בצעצוע תלוי). עוד לא מחקים התנהגות חדשה כמו ״מחי מחי כפיים״"]])}`,q:"q5"},
+  {h:"תת־שלב 4: התנהגות רצונית",html:`${def("התנהגות רצונית",`<mark>התנהגות רצונית או מכוונת־מטרה</mark> ${E("Intentional, goal-directed behavior")}: בני 8 עד 12 חודשים מצרפים סכמות בכוונה כדי לפתור בעיות. במשימת החפץ המוסתר: ״דחיפה״ של המכשול ו״לפיתת״ הצעצוע. פיאז׳ה ראה ב<b>רצפי אמצעים ומטרות</b> את היסוד לכל פתרון בעיות.`)}${def("קביעות האובייקט",`<mark>קביעות האובייקט</mark> ${E("Object permanence")}: ההבנה שאובייקט ממשיך להתקיים כשלא רואים אותו. בתת־שלב 4 היא עדיין חלקית: <mark>טעות החיפוש אחר A ולא B</mark> ${E("A-not-B search error")}. אחרי שמצא כמה פעמים במקום A וראה שהחפץ עבר ל־B, התינוק ממשיך לחפש ב־A.`)}${rem("בתת־שלב 4 גם מנסים <b>לשנות</b> אירועים צפויים (טימי מייבב כשאמא לובשת מעיל), ומחקים התנהגויות <b>שונות מעט</b> משלהם: לערבב בכפית, לדחוף מכונית.")}`,q:"q7"},
+  {h:"תת־שלבים 5 ו־6: חקירה וייצוג",html:`${def("תגובה מעגלית שלישונית",`<mark>תגובה מעגלית שלישונית</mark> ${E("Tertiary circular reaction")}: בני 12 עד 18 חודשים חוזרים על התנהגות <b>בווריאציות</b> (טימי מנסה דרכים שונות להשליך). כך פותרים בעיות טוב יותר (גרייס מסובבת צורה עד שעוברת, משתמשת במקל), מחפשים בכמה מקומות ומחקים התנהגויות חדשות.`)}${def("ייצוג מנטלי",`<mark>ייצוג מנטלי</mark> ${E("Mental representation")}: תיאורים פנימיים שהתודעה יכולה לתפעל: <b>דימויים</b> ${E("Images")}, תמונות מנטליות, ו<b>מושגים</b> ${E("Concepts")}, קטגוריות של דברים דומים. בגיל 18 עד 24 חודשים פותרים בעיות <b>בפתאומיות</b>, בלי ניסוי וטעייה (גרייס עוצרת ״לחשוב״ ומסובבת את המכונית).`)}${tiles([["copies","העתקה סמויה","Invisible displacement: מציאת צעצוע שהוזז בלי שהילד ראה"],["clock","חיקוי מושהה","Deferred imitation: זכירה והעתקה של התנהגות של מודל שאינו נוכח"],["moon","משחק כאילו","Make-believe play: משחק פעילויות יום־יומיות ודמיוניות"]])}`,q:"q9"}
+ ]},
+ {id:"t3",icon:"question",title:"קביעות האובייקט במחקרי המשך",blocks:[
+  {h:"שיטת הפרת הציפייה",html:`<p>מחקרים רבים מראים הבנות <b>מוקדמות</b> ממה שחשב פיאז׳ה. כבר יילודים מוצצים כדי לקבל מראות וקולות מעניינים, כמו תגובה מעגלית שניונית.</p>${def("מושג מפתח",`<mark>שיטת הפרת הציפייה</mark> ${E("Violation-of-expectation method")}: מרגילים לאירוע, ואז מראים <b>אירוע צפוי</b> (תואם את המציאות) ו<b>אירוע בלתי צפוי</b> (מפר אותה). אם התינוק מביט יותר בבלתי צפוי, הוא ״מופתע״, ומכאן שהוא מודע לחוק הפיזיקלי.`)}${fig("voe","באיירז׳ון: הגזר הארוך היה צריך להיראות בחלון (תרשים 6.1)")}${tiles([["x","המבקרים","אולי זו מודעות חלקית ולא מודעת, לא ההבנה המלאה שפיאז׳ה בדק בחיפוש. ואולי רק העדפה תפיסתית לחדש. חלק מהחוקרים לא שחזרו"],["check","תמיכה נוספת","בני 4 עד 5 חודשים מביטים מראש למקום שבו כדור יופיע מאחורי מחסום, ובני 5 עד 9 עוקבים יותר כשהוא נעלם בהדרגה מאשר כשהוא מתכווץ"]])}`,q:"q11"},
+  {h:"חיפוש וטעות A ולא B",html:`<p>אז למה תינוקות לא <b>מחפשים</b> חפץ מוסתר לפני 8 חודשים? כי חיפוש דורש הבנה עמוקה יותר: לגלות <b>איפה</b> החפץ. בני 8 עד 10 חודשים מסירים כיסוי חלקי לפני כיסוי מלא. בני 10 חודשים מוצאים חפץ מכוסה במפית לפני חפץ ש<b>יד</b> הניחה מתחת למפית, ורק בגיל 14 חודשים מסיקים שהיד השאירה אותו שם. בגיל זה גם זוכרים חפץ בארון עד למחרת, ולא מחפשים בארון דומה בחדר אחר.</p>${def("למה A ולא B",`הסברים: קושי <b>לדכא</b> תגובה מוטורית שתוגמלה; לא שמים לב להסתרה ב־B. ההסבר המקיף: <b>מערכת דינמית</b> של גורמים: הרגל להושיט ל־A, המשך מבט ב־A, דמיון בין B ל־A ותנוחת גוף קבועה. שיבוש של אחד מהם משפר חיפוש ב־B. וכשמיומנויות ההושטה עוד מאתגרות, לא נשאר קשב לעכב את ההרגל.`)}${rem("קביעות האובייקט נרכשת <b>בהדרגה</b>: צריך לשלב מאפיינים ותנועה, להבחין בין חפץ למחסום, לעקוב אחרי המיקום ולהשתמש בזה. ההצלחה מקבילה להתפתחות מהירה של <b>אונות המצח</b>.")}`,q:"q13"}
+ ]},
+ {id:"t4",icon:"copies",title:"ייצוג מנטלי מוקדם",blocks:[
+  {h:"חיקוי מושהה ומוסק",html:`<p>לפי פיאז׳ה אין ייצוג לפני 18 חודשים, אבל בני 8 עד 10 חודשים זוכרים מיקום מוסתר יותר מדקה, ובני 14 חודשים יותר מיום.</p>${ex("חיקוי מושהה כבר ב<b>6 שבועות</b>: חיקו הבעת פנים של מבוגר זר למחרת. בני 6 ו־9 חודשים חיקו למחרת פעולות חדשות עם בובה (הורדת כפפה, נענוע פעמון). הם אף העבירו את הפעולות לבובה אחרת שהוצמדה לראשונה, ואפילו בשרשרת A, B, C שלא ראו יחד.")}<p>בגיל 12 עד 18 חודשים שומרים התנהגויות של מודל כמה חודשים ומחקים בהקשר אחר (מהמשפחתון לבית). הזכירה לפי <b>סדר</b> מופיעה ב־6 חודשים ומתחזקת.</p>${def("חיקוי מוסק",`פעוטות <b>מסיקים כוונות</b>: מחקים יותר פעולות רצוניות ממקריות. בני 12 חודשים מחקים הכנסת כלב דרך הארובה כשהמבוגר עשה זאת לשעשוע, אבל משתמשים ב<b>דלת</b> כשראו שהמבוגר נאלץ (הדלת הייתה נעולה). בני 14 עד 18 חודשים מחקים פעולה ש<b>ניסה</b> לעשות ולא הצליח (גרייס הכניסה את הצימוקים לשקית).`)}`,q:"q15"},
+  {h:"פתרון בעיות",html:`<p>כמו שחשב פיאז׳ה, בערך מגיל 8 חודשים יש רצפי פעולה מכוונים (משיכת מפית כדי להגיע לצעצוע), ומהם צומח <b>שימוש בכלים</b>.</p>${ex("בני 12 חודשים קיבלו כפית שהידית שלה כוונה פעם ליד המועדפת ופעם לאחרת. הם התאימו את האחיזה והצליחו להביא אוכל לפה, ועם הגיל התאימו <b>מראש</b>, כלומר תכננו.")}${def("פתרון באמצעות אנלוגיה",`<mark>פתרון בעיות באמצעות אנלוגיה</mark> ${E("Problem solving by analogy")}: החלת אסטרטגיה מבעיה אחת על בעיות דומות. בני 10 עד 12 חודשים קיבלו שלוש בעיות (מחסום, שרוך, צעצוע) שנבדלו בפרטים שוליים. ההורים הדגימו בראשונה, ובכל בעיה נוספת הם הצליחו <b>בקלות רבה יותר</b>.`)}${rem("בסוף השנה הראשונה יש ייצוג <b>גמיש</b> של שימוש בכלים: מעבר לניסוי וטעייה, ייצוג הפתרון והעברתו להקשר אחר.")}`,q:"q17"},
+  {h:"הבנת סמלים",html:`${def("העברת ייחוס",`<mark>העברת ייחוס</mark> ${E("Displaced reference")}: ההבנה שמילים מרמזות על דברים שאינם נוכחים, בסביבות גיל שנה. בני 12 חודשים מביטים למקום הרגיל של צעצוע כששומעים את שמו, ובני 13 חודשים פונים לדלת כשמזכירים הורה שיצא.`)}${ex("<b>לוסי הצפרדע:</b> לפעוטות סיפרו, כשהבובה לא נראתה, ש״לוסי רטובה כולה״. רק בני <b>22</b> חודשים (ולא 19) בחרו את הצפרדע הרטובה. וכשמידע מילולי סותר את מה שראו, בני 23 חודשים הולכים למקום המקורי, ורק בני 30 חודשים מצליחים.")}<p><b>תמונות:</b> בני 9 חודשים נוגעים ומשפשפים תמונה אבל כמעט לא מנסים לאחוז בה, וזה פוחת עד 18 חודשים. אז מתייחסים לתמונות מציאותיות <b>כסמלים</b>: בני 15 עד 24 חודשים שלמדו שם מתמונה בוחרים את החפץ האמיתי, לא את התמונה לבדה.</p>${rem("הבנת תמונות תלויה בסביבה: בעיירה בטנזניה שבה אין תמונות לפני בית הספר, רק בני <b>3</b> הצליחו במטלה שתינוקות אמריקנים בני 15 חודשים מצליחים בה.")}`,q:"q19"}
+ ]},
+ {id:"t5",icon:"scales",title:"וידאו, הערכה וידע ליבתי",blocks:[
+  {h:"אפקט כשל הווידאו",html:`<p>כ־40% מבני 3 חודשים בארה״ב צופים בטלוויזיה בקביעות, ובגיל שנתיים כ־90%, מפחות משעה לשעה וחצי ביום. בני 6 חודשים מחקים מבוגר בטלוויזיה, ובני 9 חודשים מנסים לאחוז צעצועים במסך.</p>${def("מושג מפתח",`<mark>אפקט כשל הווידאו</mark> ${E("Video deficit effect")}: ביצוע פחות טוב אחרי וידאו מאשר אחרי הצגה חיה. בני שנתיים שראו דרך חלון איפה הוסתר חפץ מצאו אותו בקלות, ואלה שראו בווידאו התקשו. כך גם בחיקוי, מילים ופתרון בעיות.`)}${ex("הסבר: הדמות בווידאו לא מביטה לילד ולא מדברת אליו. כשמבוגר דיבר עם בני שנתיים בווידאו <b>אינטראקטיבי</b> (קרא בשם, שאל, חיכה לתשובה), הם השתמשו ברמז שלו הרבה יותר טוב.")}${rem("האפקט פוחת בגיל <b>שנתיים וחצי</b>. האקדמיה האמריקנית לרפואת ילדים ממליצה לא לחשוף למדיה לפני כן. צפייה רבה קשורה להתקדמות שפתית איטית (8 עד 18 חודשים) ולבעיות קשב, זיכרון וקריאה. אם צופים, עדיף תוכן עשיר ברמזים חברתיים: דמות מוכרת שמביטה למצלמה ושואלת.")}`,q:"q21"},
+  {h:"הערכת השלב וגישת הידע הליבתי",html:`<p>חלק מההישגים מופיעים בגילים של פיאז׳ה (חיפוש, משחק כאילו), אבל רבים <b>מוקדם יותר</b>: תגובות מעגליות שניוניות, סימנים ראשונים לקביעות, חיקוי מושהה, אנלוגיה והעברת ייחוס. כלומר אין התקדמות מסודרת צעד אחר צעד. ותינוקות מבינים הרבה <b>לפני</b> שהם מסוגלים לפעולות המוטוריות שפיאז׳ה חשב שמובילות להבנה.</p>${tiles([["gear","נקודת התחלה מוגבלת","הטיות קשב מולדות ותהליכי למידה כלליים (ניתוח תפיסתי חזק) שמהם בונים סכמות"],["sprout","גישת הידע הליבתי","Core knowledge: תינוקות נולדים עם תחומי ידע מולדים, ״מכוננים״ באבולוציה"]])}${def("תחומי הידע הליבתי",`<b>ידע פיזיקלי</b>: קביעות, מוצקות (חפץ לא עובר דרך חפץ) וכוח משיכה. <b>ידע לשוני</b> שמאפשר רכישת שפה מהירה. <b>ידע פסיכולוגי</b>: כוונות, רגשות, רצונות ואמונות. ו<b>ידע מספרי</b> בסיסי.`)}`,q:"q23"},
+  {h:"ידע מספרי, ביקורת ומורשת",html:`${fig("wynn","ניסוי החיבור של וין, 1992 (תרשים 6.3)")}<p>לפי המחקרים תינוקות מבחינים בכמויות <b>עד שלוש</b> ומבצעים חיבור וחיסור פשוטים, ודפוס ה־ERP שלהם דומה למבוגרים שמזהים טעות. בני 6 חודשים מבחינים בין 8 ל־16 נקודות אבל לא בין 8 ל־12, ובני 9 חודשים בין 8 ל־12 אבל לא בין 8 ל־10.</p>${tiles([["x","הספקנים","אולי מאפיינים אחרים של התצוגה גרמו לתוצאות. פעוטות מתקשים בהשוואות ״יותר מ״ עד גיל 12 עד 14 חודשים, ורק בגן מחברים ומחסרים נכון. ומבט אולי מעיד רק על העדפה תפיסתית. ידע מולד אמיתי צריך להופיע סמוך ללידה"],["check","לזכות הגישה","היא מכירה בצורך בהתנסות, אם כי עוד לא פירטה איזו. והיא מיקדה את התחום בנקודת ההתחלה של הקוגניציה"]])}${rem("מה מוסכם היום: השינויים בינקות <b>הדרגתיים ומתמשכים</b> ולא דמויי שלבים, והיבטים שונים <b>לא מתפתחים יחד</b>. זה הבסיס לגישת <b>עיבוד המידע</b>, שמתמקדת בקשב, זיכרון וקטגוריזציה במקום תיאוריה אחת מאוחדת. ולפיאז׳ה תרומה עצומה: מורים ומטפלים עדיין משתמשים בשלב הסנסורי־מוטורי כמורה דרך.")}`,q:"q25"}
+ ]},
+ {id:"t6",icon:"chart",title:"מבחני משכל לתינוקות",blocks:[
+  {h:"סולמות ביילי וחישוב הציון",html:`<p>מבחנים מנטליים לא מסבירים <b>תהליך</b> אלא מודדים <b>תוצרים</b>, כדי לנבא ביצוע עתידי (כמו המבחן של בינה). לתינוקות קשה: אי אפשר לשאול אותם שאלות, ולכן רוב המבחנים מדגישים תפיסה ומוטוריקה.</p>${def("סולמות ביילי",`<mark>סולמות ביילי להתפתחות תינוקות ופעוטות</mark> ${E("Bayley Scales")}: מגיל חודש עד 3.5. בביילי־III שלושה תת־מבחנים עיקריים: <b>קוגניטיבי</b> (קשב לאובייקטים, חיפוש חפץ שנפל, משחק כאילו), <b>שפה</b> (הבנה וביטוי) ו<b>מוטורי</b>. ועוד שניים לפי דיווח הורים: <b>חברתי־רגשי</b> ו<b>התנהגות הסתגלותית</b>.`)}${def("מנת משכל",`<mark>מנת המשכל</mark> ${E("IQ")}: כמה הציון הגולמי סוטה מהביצוע הטיפוסי של בני אותו גיל. לשם כך עושים <mark>תקנון</mark> ${E("Standardization")}: נותנים את המבחן למדגם גדול ומייצג. הביצועים יוצרים <mark>התפלגות נורמלית</mark> ${E("Normal distribution")}, דמוית פעמון, והממוצע נקבע ל־<b>100</b>.`)}${fig("bell","ילד עם מנת משכל 115 הצליח יותר מ־84% מבני גילו (תרשים 6.9)")}${rem("100 = טוב יותר מ־50% מבני הגיל. 85 = מ־16% בלבד. 130 = מ־98%.")}`,q:"q27"},
+  {h:"ניבוי לעתיד",html:`<p>רוב המבחנים לתינוקות, כולל גרסאות ישנות של ביילי, <b>לא מנבאים טוב</b> אינטליגנציה עתידית: תינוקות מוסחים, מתעייפים ומשתעממים, והפריטים התפיסתיים־מוטוריים שונים מהמטלות המילוליות של ילדים גדולים. סולמות הקוגניציה והשפה של ביילי־III מנבאים טוב יותר את הביצוע בגיל הגן.</p>${def("מנת הרמה ההתפתחותית",`כי ציוני תינוקות לא מודדים את אותם ממדים, מקובל לקרוא להם <mark>מנת הרמה ההתפתחותית</mark> ${E("DQ, Developmental quotient")} ולא מנת משכל. הם מנבאים טוב יותר רק בציונים <b>נמוכים מאוד</b>, ולכן משמשים בעיקר ל<mark>סריקה</mark> ${E("Screening")}: איתור תינוקות בסיכון למעקב והתערבות.`)}${rem("חלופה: מדדי עיבוד מידע. <b>מהירות ההתרגלות וההחלמה</b> לגירויים חזותיים חדשים היא מהמנבאים הטובים ביותר למנת משכל בהמשך, עם מתאמים של <b>0.30 עד 0.60</b>. הן בודקות זיכרון, מהירות וגמישות חשיבה. לכן ביילי־III הוסיף פריטים של התרגלות, קביעות אובייקט וקטגוריזציה.")}`,q:"q29"}
+ ]},
+ {id:"t7",icon:"building",title:"הסביבה המוקדמת והתערבות",blocks:[
+  {h:"סביבת הבית: HOME",html:`${def("מושג מפתח",`<mark>תצפית בבית למדידת הסביבה</mark> ${E("HOME")}: רשימת תיוג לאיכות חיי הילד בבית, דרך תצפית וריאיון ההורים. המדד הנפוץ ביותר לשלוש השנים הראשונות.`)}${homeTable}<p>לכל תת־סולם קשר חיובי לביצוע במבחן. <b>בלי קשר</b> למעמד ולמוצא: סביבה מסודרת ומאתגרת, חיבה, מעורבות ועידוד מנבאים ציוני שפה ומשכל טובים יותר. חשוב במיוחד <b>כמה ההורים מדברים</b> עם הילד.</p>${def("זהירות במתאמים",`ההורים מעבירים גם <b>גנים</b>. הורים חכמים יותר אולי גם מספקים יותר וגם מולידים ילדים שמעוררים יותר גרייה: <b>התאמה גנטית־סביבתית</b>. אבל ציוני HOME ותנאי המחיה מנבאים מנת משכל גם <b>מעבר</b> למשכל ולהשכלה של ההורים.`)}${ex("טימי, בן 22 חודשים, קיבל ציון מעט מתחת לממוצע. אמו, ונסה, אם יחידנית עייפה ולחוצה, נטתה ללחוץ ולהוציא הוראות (״מספיק כדור, עכשיו קוביות״). הפסיכולוג הסביר שלחץ כזה מוביל להסחה, משחק פחות בשל וציונים נמוכים, הדריך אותה לאינטראקציה רגישה, והרגיע: הורות <b>חמה ומגיבה</b> מנבאת טוב יותר ממבחן מוקדם.")}`,q:"q31"},
+  {h:"מסגרות יום",html:`<p>בארה״ב יותר מ־60% מהאימהות לתינוקות מתחת לגיל שנתיים עובדות. השפעת איכות המסגרת קטנה מזו של ההורות, אבל קיימת: <b>שעות ארוכות</b> של טיפול <b>בינוני עד גרוע</b> קשורות לציונים נמוכים בקוגניציה, שפה והישגים, בכל המעמדות. טיפול <b>טוב</b> ממתן את השפעת משפחה לחוצה ודלה.</p>${ex("במחקר אורך ארצי של יותר מ־1,300 ילדים, הציון השפתי בגיל 5 היה הגבוה ביותר אצל מי שקיבל טיפול איכותי <b>גם</b> בינקות <b>וגם</b> בילדות המוקדמת, בינוני כשרק באחת, והנמוך ביותר כשבשתיהן גרוע (תרשים 6.10).")}${def("המצב בארה״ב",`בניגוד לרוב אירופה, אוסטרליה וניו זילנד, אין פיקוח ארצי. רק <b>20% עד 25%</b> מהמסגרות מספקות מספיק התנסויות חיוביות. העלות גבוהה: 7% עד 19% מהכנסת זוג, ו־40% אצל אם יחידנית. דווקא משפחות <b>מהמעמד הבינוני</b> מקבלות לרוב את הגרוע ביותר, במרכזים למטרות רווח.`)}${tiles([["people","יחס מטפלים","עד 1 ל־3 תינוקות או 1 ל־6 פעוטות. קבוצה עד 6 תינוקות או 12 פעוטות עם שני מטפלים"],["hand","אינטראקציה","תגובה מיידית למצוקה, דיבור, שירה וקריאה, וכבוד לסבילות של כל ילד לגרייה"],["grad","הכשרה וקשר","הכשרה בהתפתחות ועזרה ראשונה, הורים מוזמנים בכל זמן, רישוי והסמכה"]])}${rem("אלה <b>פרקטיקות עבודה תואמות־התפתחות</b> (developmentally appropriate practices). בישראל: הגיל 0 עד 3 באחריות משרד העבודה והרווחה, וחוק הפיקוח (2018) מגדיר בעיקר קריטריונים בטיחותיים ופיזיים.")}`,q:"q33"},
+  {h:"התערבות מוקדמת",html:`<p>עוני מתמשך מוביל לירידה במשכל ולהישגים דלים, בעיקר דרך בית לחוץ. יש התערבויות <b>במרכזי יום</b> (חינוך, תזונה, בריאות ותמיכה להורים) ו<b>בבית</b> (מבוגר מיומן מלמד הורים לגרות). ברובן הילדים מקבלים בגיל שנתיים ציונים גבוהים יותר. ככל שההתערבות <b>מוקדמת, ארוכה ואינטנסיבית</b> יותר, התוצאות טובות יותר.</p>${def("פרויקט קרוליינה",`<mark>The Carolina Abecedarian Project</mark>: בשנות ה־70 יותר ממאה תינוקות עניים בני 3 שבועות עד 3 חודשים חולקו <b>באקראי</b>. קבוצת הטיפול קיבלה מעון מלא כל השנה עד בית הספר, עם דגש על תקשורת מילולית תגובתית. לשתי הקבוצות תזונה ובריאות.`)}${fig("abc","פרויקט קרוליינה (לפי תרשים 6.11)")}${rem("מגיל שנה הקבוצות נפרדות והיתרון נשמר עד גיל <b>21</b>: ציונים גבוהים בקריאה ובחשבון, פחות חינוך מיוחד, יותר השכלה ומכללה, עבודה מקצועית, ופחות סמים והורות בגיל ההתבגרות.")}${def("Early Head Start",`מ־1995, כ־1,000 מקומות וכ־150,000 ילדים: טיפול, הדרכת הורים, תמיכה ובריאות, במרכז, בבית או משולב. בגיל 3: הורות חמה יותר, פחות משמעת קשוחה, התקדמות קוגניטיבית ושפתית ופחות תוקפנות. השילוב של מרכז וביקורי בית הכי טוב. אבל מגיל 5 היתרונות <b>דעכו</b>, ובכיתה ה לא נמצאו. אולי צריך יותר למידה מכוונת בגיל הגן.`)}`,q:"q35"}
+ ]}
+];
+const Q={
+q1:{t:"t1",v:[
+ {q:"מהי סכמה לפי פיאז'ה?",a:"דרך מאורגנת להבין התנסות, שבהתחלה היא דפוס פעולה סנסורי־מוטורי",w:["רפלקס מולד שלא משתנה","מילה ראשונה","זיכרון של אירוע"],e:"הסכמות משתנות עם הגיל."},
+ {q:"מה מאפיין את השלב הסנסורי־מוטורי?",a:"תינוקות ״חושבים״ בעזרת החושים והפעולות, בשנתיים הראשונות",w:["חשיבה מופשטת","שימוש בלוגיקה פורמלית","חשיבה בעיקר במילים"],e:"בסוף השלב הם פותרים בעיות מעשיות ומתחילים לייצג."}]},
+q2:{t:"t1",v:[
+ {q:"מה מסמן לפי פיאז'ה שטימי ״חושב לפני שהוא פועל״?",a:"את המעבר מהשלב הסנסורי־מוטורי לחשיבה קדם־אופרציונלית",w:["את תחילת השלב הסנסורי־מוטורי","נסיגה בהתפתחות","את סוף ההתבגרות"],e:"סכמת ההפלה שלו נעשתה רצונית ויצירתית בגיל 18 חודשים."},
+ {q:"מה מכוונת שאלת הפרק ״כיצד פועלים דברים?״ בתיאור הפעוטות במשפחתון?",a:"שהפעוטות חוקרים את העולם בפעולה ישירה עליו",w:["שהם משועממים","שהם לא מבינים כלום","שהם מחקים רק מבוגרים"],e:"פיאז'ה ראה בילדים חוקרים פעילים."}]},
+q3:{t:"t1",v:[
+ {q:"מה ההבדל בין הטמעה להתאמה?",a:"בהטמעה מפרשים לפי סכמה קיימת, בהתאמה יוצרים או משנים סכמה",w:["אין הבדל","הטמעה היא שינוי סכמה, התאמה היא שימוש בה","שתיהן תהליכים פנימיים בלי סביבה"],e:"שתיהן חלק מההסתגלות."},
+ {q:"מה קורה במצב של חוסר איזון קוגניטיבי?",a:"מידע חדש לא מתאים לסכמות, והילד עובר מהטמעה להתאמה",w:["הילד מפסיק ללמוד","הילד מטמיע יותר","שום דבר"],e:"אחרי השינוי הוא חוזר להטמעה ומתרגל את המבנים החדשים."}]},
+q4:{t:"t1",v:[
+ {q:"מהו ארגון לפי פיאז'ה?",a:"תהליך פנימי שמקשר סכמות לרשת אחת",w:["סידור הצעצועים בחדר","הסתגלות ישירה לסביבה","חיקוי של מבוגר"],e:"למשל קישור בין ״הפלה״ ל״השלכה״."},
+ {q:"למה לפי פיאז'ה השלב הסנסורי־מוטורי הוא המורכב ביותר?",a:"כי בו מתרחשות ההתאמות הגדולות ביותר",w:["כי הוא הארוך ביותר","כי אין בו שינויים","כי הוא מתחיל בהתבגרות"],e:"התנועה בין איזון לחוסר איזון יוצרת סכמות יעילות יותר."}]},
+q5:{t:"t2",v:[
+ {q:"מהי תגובה מעגלית?",a:"חזרה שוב ושוב על תוצאה חדשה שהתגלתה במקרה, עד שנעשית סכמה",w:["רפלקס של יילוד","פחד מזרים","חיפוש חפץ מוסתר"],e:"קייטלין והמצמוץ בשפתיים."},
+ {q:"על איזה מדגם ביסס פיאז'ה את תת־השלבים?",a:"על שלושת ילדיו",w:["על אלפי ילדים בשווייץ","על ילדי בית יתומים","על קופים"],e:"הוא צפה בהם והציג להם בעיות כמו חפץ מוסתר."}]},
+q6:{t:"t2",v:[
+ {q:"במה שונה תגובה מעגלית ראשונית משניונית?",a:"ראשונית ממוקדת בגוף התינוק, שניונית בתוצאות מעניינות בסביבה",w:["ראשונית מופיעה אחרי שנה","שניונית ממוקדת בגוף","אין הבדל"],e:"מציצת אגודל לעומת חבטה בצעצוע תלוי."},
+ {q:"מה עדיין לא יכולים בני 4 עד 8 חודשים לפי פיאז'ה?",a:"לחקות התנהגות חדשה, כמו ״מחי מחי כפיים״",w:["לחזור על תוצאה מעניינת","לשבת","להושיט יד"],e:"הם נהנים לצפות, אבל עוד לא משתתפים."}]},
+q7:{t:"t2",v:[
+ {q:"מהי טעות החיפוש אחר A ולא B?",a:"אחרי שמצא כמה פעמים ב־A, התינוק ממשיך לחפש שם גם כשראה שהחפץ עבר ל־B",w:["התינוק לא מחפש בכלל","התינוק מחפש רק ב־B","התינוק מחפש במקום אקראי"],e:"לכן פיאז'ה חשב שקביעות האובייקט עדיין חלקית."},
+ {q:"מה ראה פיאז'ה ברצפי אמצעים ומטרות?",a:"את היסוד לכל פתרון בעיות",w:["סימן לאיחור","רפלקס","חיקוי"],e:"למשל לדחוף מכשול ולתפוס את הצעצוע."}]},
+q8:{t:"t2",v:[
+ {q:"באיזה תת־שלב מתחיל התינוק למצוא חפץ מוסתר?",a:"תת־שלב 4, בגיל 8 עד 12 חודשים",w:["תת־שלב 1","תת־שלב 2","תת־שלב 6 בלבד"],e:"אבל עם טעות A ולא B."},
+ {q:"מה עשה טימי בגיל 10 חודשים כשאמו לבשה מעיל, ומה זה מראה?",a:"זחל אחריה וייבב: הוא צופה אירוע ומנסה לשנות אותו",w:["נרדם: אין לו ציפיות","צחק: הוא שמח","התעלם: אין לו קביעות"],e:"התנהגות רצונית בתת־שלב 4."}]},
+q9:{t:"t2",v:[
+ {q:"מהי תגובה מעגלית שלישונית?",a:"חזרה על התנהגות בווריאציות כדי לחקור, בגיל 12 עד 18 חודשים",w:["רפלקס של יילוד","חזרה זהה על אותה פעולה","בכי בפרידה"],e:"טימי משליך חפצים בדרכים שונות."},
+ {q:"מהי העתקה סמויה?",a:"מציאת צעצוע שהוזז ממקומו בלי שהילד ראה את ההזזה",w:["חיקוי של מבוגר","הסתרת חפץ בעיני הילד","ציור של חפץ"],e:"היא דורשת ייצוג מנטלי, בתת־שלב 6."}]},
+q10:{t:"t2",v:[
+ {q:"מה מעיד על ייצוג מנטלי בגיל 18 עד 24 חודשים לפי פיאז'ה?",a:"פתרון בעיות פתאומי, בלי ניסוי וטעייה",w:["חזרה על רפלקסים","בכי","זחילה"],e:"גרייס עוצרת ״לחשוב״ ומסובבת את המכונית."},
+ {q:"מהם שני סוגי הייצוגים המנטליים החזקים?",a:"דימויים ומושגים",w:["רפלקסים והרגלים","הטמעה והתאמה","תחושות ורגשות"],e:"דימויים הם תמונות מנטליות, מושגים הם קטגוריות."}]},
+q11:{t:"t3",v:[
+ {q:"איך פועלת שיטת הפרת הציפייה?",a:"משווים כמה זמן התינוק מביט באירוע צפוי לעומת אירוע שמפר את חוקי המציאות",w:["שואלים את התינוק","מודדים כמה הוא בוכה","בודקים אם הוא זוחל"],e:"מבט ארוך יותר בבלתי צפוי מתפרש כ״הפתעה״."},
+ {q:"מה הראה ניסוי הגזרים של באיירז'ון?",a:"שבני 2.5 עד 3.5 חודשים הביטו יותר כשהגזר הארוך לא הופיע בחלון",w:["שהתינוקות לא שמו לב לגזרים","שרק בני שנה הבינו","שתינוקות מעדיפים גזר קצר"],e:"מכאן הסיקו הבנה כלשהי של קביעות האובייקט."}]},
+q12:{t:"t3",v:[
+ {q:"מה טוענים המבקרים של שיטת הפרת הציפייה?",a:"שאולי היא מראה רק העדפה תפיסתית לחדש או מודעות חלקית, לא הבנה מלאה",w:["שהיא מוכיחה ידע מלא","שהיא מתאימה רק למבוגרים","שאין בה שימוש במבט"],e:"חלק מהחוקרים גם לא שחזרו את הממצאים."},
+ {q:"איזו ראיה נוספת לקביעות אובייקט מוקדמת מגיעה ממעקב עיניים?",a:"בני 4 עד 5 חודשים מביטים מראש למקום שבו הכדור יופיע מאחורי המחסום",w:["הם עוצמים עיניים","הם לא עוקבים אחרי תנועה","הם מביטים רק בהורה"],e:"זו התנהגות מתבוננת מסוג אחר."}]},
+q13:{t:"t3",v:[
+ {q:"למה תינוקות לא מחפשים חפץ מוסתר לפני 8 חודשים, למרות סימנים לקביעות?",a:"כי חיפוש דורש הבנה עמוקה יותר: לגלות איפה החפץ נמצא",w:["כי הם לא יכולים להזיז ידיים","כי החפצים לא מעניינים","כי הם לא רואים"],e:"לכן מטלות חיפוש שונות נפתרות בגילים שונים."},
+ {q:"מתי מבינים רוב הפעוטות שיד שנעלמה מתחת למפית השאירה שם את החפץ?",a:"בגיל 14 חודשים",w:["בגיל 4 חודשים","בגיל 8 חודשים","בגיל 3 שנים"],e:"בני 10 חודשים מחפשים קודם חפץ שמכוסה במפית על השולחן."}]},
+q14:{t:"t3",v:[
+ {q:"מה ההסבר המקיף לטעות A ולא B?",a:"מערכת דינמית של גורמים: הרגל להושיט ל־A, מבט ב־A, דמיון בין המקומות ותנוחה קבועה",w:["חוסר עניין בצעצוע","ראייה חלשה בלבד","שכחה מוחלטת של החפץ"],e:"שיבוש של אחד הגורמים משפר את החיפוש ב־B."},
+ {q:"איזו התפתחות מוחית מקבילה להצלחה במטלות חיפוש?",a:"התפתחות מהירה של אונות המצח",w:["גדילת המוח הקטן בלבד","הבשלת העין","התפתחות חוש הריח"],e:"וגם התנסות בתפיסה, הפעלה וזכירה של אובייקטים."}]},
+q15:{t:"t4",v:[
+ {q:"מתי נמצא חיקוי מושהה ראשון במעבדה?",a:"בגיל 6 שבועות: חיקוי הבעת פנים של מבוגר למחרת",w:["רק בגיל 18 חודשים","בגיל 3 שנים","בגיל שנה"],e:"פיאז'ה חשב שזה מופיע רק בתת־שלב 6."},
+ {q:"מה מראה הניסוי שבו פעוטות העבירו פעולות בשרשרת בובות A, B, C?",a:"שתינוקות יוצרים ייצוגים גמישים עם שרשרות של קשרים",w:["שהם לא זוכרים כלום","שהם מחקים רק פעולה אחת","שהם מעדיפים בובות חדשות"],e:"הם ביצעו העברה למרות שלא ראו את A ו־C יחד."}]},
+q16:{t:"t4",v:[
+ {q:"בן 12 חודשים ראה מבוגר מכניס כלב דרך הארובה כי הדלת הייתה נעולה. מה הוא יחקה?",a:"הכנסה דרך הדלת, כי הוא מסיק שהמבוגר נאלץ",w:["הכנסה דרך הארובה תמיד","לא יחקה כלום","יזרוק את הכלב"],e:"כשהמבוגר עשה זאת לשעשוע, הם חיקו את הארובה."},
+ {q:"מה הראתה גרייס כשהכניסה את הצימוקים לשקית?",a:"שהיא הסיקה את מטרת המבוגרת מפעולה שלא הצליחה",w:["שהיא רעבה","שהיא לא מבינה כוונות","שהיא מחקה רק פעולות מוצלחות"],e:"בני 14 עד 18 חודשים מחקים פעולות שמבוגר ניסה לעשות."}]},
+q17:{t:"t4",v:[
+ {q:"מהו פתרון בעיות באמצעות אנלוגיה?",a:"החלת אסטרטגיה מבעיה אחת על בעיות דומות",w:["ניסוי וטעייה אקראי","חיקוי מיידי בלבד","חיפוש חפץ מוסתר"],e:"בני 10 עד 12 חודשים פתרו כל בעיה בקלות רבה יותר."},
+ {q:"מה הראה ניסוי הכפית עם בני 12 חודשים?",a:"שהם התאימו את האחיזה, ועם הגיל התאימו מראש, כלומר תכננו",w:["שהם לא יכולים להשתמש בכלים","שהם תמיד אוחזים באותה יד","שהם משליכים את הכפית"],e:"שימוש בכלים צומח מרצפי פעולה מכוונים."}]},
+q18:{t:"t4",v:[
+ {q:"במה נבדלו שלוש הבעיות בניסוי האנלוגיה?",a:"בפרטים שוליים כמו צבע השרוך, המחסום והצעצוע",w:["בפתרון עצמו","ברמת הקושי בלבד","לא היו הבדלים"],e:"עיקרון הפתרון היה זהה: מחסום, שרוך, צעצוע."},
+ {q:"מה מסקנת הפרק לגבי פתרון בעיות בסוף השנה הראשונה?",a:"יש ייצוג גמיש של פתרונות שאפשר להעביר להקשרים אחרים",w:["אין שום פתרון בעיות","רק ניסוי וטעייה","רק חיקוי"],e:"זה מעבר לניסוי וטעייה."}]},
+q19:{t:"t4",v:[
+ {q:"מהי העברת ייחוס?",a:"ההבנה שמילים יכולות לרמז על דברים שאינם נוכחים",w:["הזזת חפץ ממקום למקום","חיקוי מושהה","טעות A ולא B"],e:"מופיעה בסביבות גיל שנה."},
+ {q:"בניסוי ״לוסי רטובה כולה״, מי בחרו את הצפרדע הרטובה?",a:"רק בני 22 חודשים",w:["גם בני 19 חודשים","אף אחד","רק בני 12 חודשים"],e:"להשתמש במילים כדי לעדכן ייצוג זה קשה בהתחלה."}]},
+q20:{t:"t4",v:[
+ {q:"איך מתייחסים בני 9 חודשים לתצלום של חפץ?",a:"נוגעים ומשפשפים, אבל כמעט לא מנסים לאחוז בו",w:["מנסים לאכול אותו","מתייחסים אליו כסמל מלא","מתעלמים לגמרי"],e:"הם לא מתבלבלים לגמרי, אבל עוד לא מבינים אותו כסמל."},
+ {q:"מה נמצא בעיירה בטנזניה שבה ילדים לא נחשפים לתמונות?",a:"רק בני 3 הצליחו במטלה שאמריקנים בני 15 חודשים מצליחים בה",w:["כל הילדים הצליחו מוקדם","אף ילד לא הצליח","לא היה הבדל"],e:"הבנת התפקיד הסמלי של תמונות תלויה בסביבה."}]},
+q21:{t:"t5",v:[
+ {q:"מהו אפקט כשל הווידאו?",a:"ביצוע פחות טוב אחרי צפייה בווידאו מאשר אחרי הצגה חיה",w:["ביצוע טוב יותר אחרי וידאו","פחד מהמסך","התמכרות לטלוויזיה"],e:"נמצא אצל בני שנתיים בחיפוש, חיקוי, מילים ופתרון בעיות."},
+ {q:"מה עזר לבני שנתיים ללמוד מווידאו?",a:"וידאו אינטראקטיבי שבו המבוגר קרא בשמם, שאל וחיכה לתשובה",w:["וידאו ארוך יותר","צבעים חזקים יותר","וידאו בלי קול"],e:"הדמות הרגילה בווידאו לא פונה ישירות לילד."}]},
+q22:{t:"t5",v:[
+ {q:"מה ממליצה האקדמיה האמריקנית לרפואת ילדים?",a:"לא לחשוף תינוקות למדיה לפני גיל שנתיים וחצי בערך",w:["שעה של וידאו ביום","וידאו לימודי מגיל 3 חודשים","אין המלצה"],e:"תינוקות צריכים חילופי דברים ומשחק בסביבה הפיזית."},
+ {q:"איזה תוכן וידאו עדיף אם פעוטות כבר צופים?",a:"תוכן עשיר ברמזים חברתיים: דמות מוכרת שמביטה למצלמה ושואלת",w:["תוכן מהיר ורועש","תוכן בלי דמויות","תוכן למבוגרים"],e:"צפייה כבדה קשורה לבעיות קשב, זיכרון וקריאה."}]},
+q23:{t:"t5",v:[
+ {q:"מה המסקנה הכללית מהשוואת הממצאים לטבלת פיאז'ה?",a:"רבים מההישגים מופיעים מוקדם יותר, וההתקדמות לא מסודרת צעד אחר צעד",w:["פיאז'ה צדק לגמרי בכל הגילים","כל ההישגים מופיעים מאוחר יותר","אין שום התפתחות בינקות"],e:"למשל חיקוי מושהה, אנלוגיה והעברת ייחוס."},
+ {q:"מה טוענת גישת הידע הליבתי?",a:"תינוקות נולדים עם תחומי ידע מולדים שמאפשרים התפתחות מהירה",w:["תינוקות נולדים בלי שום ידע","כל הידע נבנה מפעולה מוטורית","שפה נלמדת רק מחיקוי"],e:"ידע פיזיקלי, לשוני, פסיכולוגי ומספרי."}]},
+q24:{t:"t5",v:[
+ {q:"מה כולל הידע הפיזיקלי לפי גישת הידע הליבתי?",a:"קביעות אובייקט, מוצקות וכוח משיכה",w:["כוונות ורגשות","מילים ודקדוק","כמויות ומספרים"],e:"כוונות ורגשות הם ידע פסיכולוגי."},
+ {q:"במה חולקים רוב החוקרים היום על פיאז'ה?",a:"הם סבורים שלתינוקות יש בסיס קוגניטיבי מולד, ולא שכל הייצוג נבנה מפעולה",w:["שתינוקות פעילים","שיש התפתחות קוגניטיבית","שזחילה עוזרת לתפיסה"],e:"אבל הם חלוקים לגבי כמה רחב הבסיס הזה."}]},
+q25:{t:"t5",v:[
+ {q:"מה הראה הניסוי של וין (1992) עם בני 5 חודשים?",a:"הם הביטו יותר כשהופיעה חיה אחת אחרי שהוסיפו חיה לחיה",w:["הם לא הבחינו בהבדל","הם הביטו יותר בשתי חיות","הם בכו"],e:"החוקרים הסיקו ש־1+1=2 ברמה בסיסית."},
+ {q:"בין אילו כמויות נקודות מבחינים בני 6 חודשים?",a:"בין 8 ל־16, אבל לא בין 8 ל־12",w:["בין 8 ל־10","בין 8 ל־9","בשום כמות"],e:"בני 9 חודשים מבחינים בין 8 ל־12, אבל לא בין 8 ל־10."}]},
+q26:{t:"t5",v:[
+ {q:"על מה יש היום הסכמה רחבה בעקבות מחקרי ההמשך על פיאז'ה?",a:"השינויים בינקות הדרגתיים, והיבטים שונים לא מתפתחים יחד",w:["השינויים פתאומיים ודמויי שלבים","כל ההיבטים מתפתחים יחד","אין שינויים בינקות"],e:"זה הבסיס לגישת עיבוד המידע."},
+ {q:"מה אחת הביקורות על ידע מספרי מולד?",a:"פעוטות מתקשים בהשוואות ״יותר מ״ עד 12 עד 14 חודשים, ורק בגן מחברים ומחסרים נכון",w:["תינוקות סופרים עד מאה","אין מחקרים בנושא","הממצאים תמיד חד־משמעיים"],e:"ייתכן שמאפיינים אחרים של התצוגה גרמו לתוצאות."}]},
+q27:{t:"t6",v:[
+ {q:"מה עושים בתקנון של מבחן?",a:"נותנים את המבחן למדגם גדול ומייצג ומשתמשים בתוצאות כתקן להשוואה",w:["מתקנים טעויות בשאלות","נותנים את המבחן לילד אחד","מחליפים את השאלות כל שנה"],e:"כך אפשר לחשב כמה ילד סוטה מהממוצע לגילו."},
+ {q:"ילד קיבל מנת משכל 85. על כמה מבני גילו הוא עלה?",a:"על כ־16%",w:["על כ־50%","על כ־84%","על כ־98%"],e:"100 = 50%, 115 = 84%, 130 = 98%."}]},
+q28:{t:"t6",v:[
+ {q:"מהם שלושת תת־המבחנים העיקריים בביילי־III?",a:"קוגניטיבי, שפה ומוטורי",w:["מתמטיקה, קריאה וכתיבה","רגשי, חברתי ומוסרי","ראייה, שמיעה וריח"],e:"ועוד שניים לפי דיווח הורים: חברתי־רגשי והתנהגות הסתגלותית."},
+ {q:"מה הממוצע של מנת המשכל בהתפלגות המתוקננת?",a:"100",w:["50","0","130"],e:"ההתפלגות נורמלית, דמוית פעמון."}]},
+q29:{t:"t6",v:[
+ {q:"למה מבחני תינוקות לא מנבאים טוב אינטליגנציה עתידית?",a:"תינוקות מוסחים ומתעייפים, והפריטים התפיסתיים־מוטוריים שונים ממטלות מאוחרות",w:["כי הם קצרים מדי","כי הם נעשים בבית","כי הם מודדים רק שפה"],e:"לכן קוראים לציון מנת הרמה ההתפתחותית (DQ)."},
+ {q:"למה משמשים היום בעיקר מבחנים לתינוקות?",a:"לסריקה: איתור תינוקות בסיכון לבעיות התפתחות",w:["לקבלה לגן יוקרתי","לקביעת מנת משכל סופית","לבחירת מקצוע"],e:"הם מנבאים טוב יותר רק בציונים נמוכים מאוד."}]},
+q30:{t:"t6",v:[
+ {q:"מהו אחד המנבאים הטובים ביותר בינקות למנת משכל מאוחרת?",a:"מהירות ההתרגלות וההחלמה לגירויים חזותיים",w:["גיל ההליכה","משקל הלידה","מספר השיניים"],e:"מתאמים של 0.30 עד 0.60."},
+ {q:"למה התרגלות והחלמה מנבאות אינטליגנציה?",a:"כי הן בודקות זיכרון, מהירות וגמישות חשיבה",w:["כי הן מודדות כוח שרירים","כי הן תלויות בשפה","כי הן מודדות גובה"],e:"לכן ביילי־III הוסיף פריטים כאלה."}]},
+q31:{t:"t7",v:[
+ {q:"מה מודדת רשימת HOME?",a:"את איכות סביבת הבית של הילד, בתצפית ובריאיון הורים",w:["את מנת המשכל של ההורים","את גודל הדירה","את הבריאות הגופנית"],e:"המדד הנפוץ לשלוש השנים הראשונות."},
+ {q:"למה צריך זהירות בפרשנות הקשר בין HOME למנת משכל?",a:"כי ההורים מעבירים גם גנים, וזו התאמה גנטית־סביבתית",w:["כי HOME לא מדויק בכלל","כי אין קשר","כי ההורים משקרים"],e:"אבל HOME מנבא גם מעבר למשכל ולהשכלת ההורים."}]},
+q32:{t:"t7",v:[
+ {q:"מה הסביר הפסיכולוג לוונסה על טימי?",a:"שלחץ והוראות פוגעים במשחק ובציונים, ושהורות רגישה מנבאת טוב יותר ממבחן מוקדם",w:["שטימי מפגר וזה לא ישתנה","שצריך יותר הוראות","שאין קשר בין הורות לציון"],e:"הציון שלו היה רק מעט מתחת לממוצע."},
+ {q:"איזה היבט של ההורות חשוב במיוחד להתפתחות מנטלית מוקדמת?",a:"כמה ההורים מדברים עם הילד",w:["כמה צעצועים קנו","גובה ההכנסה בלבד","כמה שעות הילד ישן"],e:"הדיבור תורם לשפה, שמנבאת אינטליגנציה והישגים."}]},
+q33:{t:"t7",v:[
+ {q:"מה הראה מחקר האורך על איכות הטיפול והשפה בגיל 5?",a:"הציון הגבוה ביותר אצל מי שקיבל טיפול איכותי גם בינקות וגם בילדות המוקדמת",w:["אין קשר לאיכות","רק טיפול בינקות חשוב","רק טיפול בגן חשוב"],e:"הנמוך ביותר: טיפול גרוע בשתי התקופות."},
+ {q:"איזה חלק מהמסגרות בארה״ב מספקות מספיק התנסויות חיוביות?",a:"רק 20% עד 25%",w:["כ־90%","כ־60%","כולן"],e:"אין פיקוח ארצי, והסטנדרטים שונים בין המדינות."}]},
+q34:{t:"t7",v:[
+ {q:"מה היחס המומלץ בין מטפלים לתינוקות במעון איכותי?",a:"לא יותר מ־1 ל־3 תינוקות",w:["1 ל־10","1 ל־20","אין המלצה"],e:"ולפעוטות עד 1 ל־6."},
+ {q:"אילו משפחות מקבלות לרוב את הטיפול הגרוע ביותר בארה״ב?",a:"משפחות מהמעמד הבינוני, במרכזים למטרות רווח",w:["משפחות עשירות מאוד","משפחות עניות במעונות מסובסדים","אין הבדל"],e:"מעונות מסובסדים לעניים לרוב טובים יותר, אך עדיין לא תמיד בתקן."}]},
+q35:{t:"t7",v:[
+ {q:"מה מאפיין התערבות מוקדמת יעילה?",a:"מתחילה מוקדם, נמשכת זמן רב ואינטנסיבית",w:["מתחילה בגיל ההתבגרות","קצרה וחד־פעמית","רק לחץ על ההורים"],e:"כמו מעון איכותי כל השנה עם תמיכה להורים."},
+ {q:"מה היו התוצאות של פרויקט קרוליינה?",a:"יתרון במנת המשכל עד גיל 21, הישגים טובים יותר ופחות חינוך מיוחד",w:["היתרון נעלם בגיל 3","לא היה הבדל","קבוצת הביקורת הצליחה יותר"],e:"וגם יותר השכלה ותעסוקה, ופחות סמים והורות בגיל ההתבגרות."}]},
+q36:{t:"t7",v:[
+ {q:"מה קרה ליתרונות של Early Head Start בהמשך?",a:"מגיל 5 הם דעכו, ובכיתה ה לא נמצאו",w:["הם גדלו עם השנים","הם נמשכו עד גיל 21","לא היו יתרונות מעולם"],e:"אולי צריך יותר למידה מכוונת בגיל הגן."},
+ {q:"איזה סוג של Early Head Start הניב את התוצאות הטובות ביותר?",a:"שילוב של מרכזי טיפול וביקורי בית",w:["רק ביקורי בית","רק מרכזים","רק חוברות להורים"],e:"בגיל 3 נמצאו הורות חמה יותר והתקדמות קוגניטיבית ושפתית."}]}
+};
+for(const t of T) t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id);
+const KEY=CONFIG.key;
+let S={q:{},read:{}};
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.q) S=s;}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const st=id=>S.q[id]||(S.q[id]={n:0,c:0,w:0,t:0,lv:-1});
+const mastered=id=>(S.q[id]?.c||0)>=2;
+const topicPct=t=>Math.round(100*t.qids.filter(mastered).length/t.qids.length);
+const topicStarted=t=>S.read[t.id]||t.qids.some(id=>S.q[id]&&S.q[id].n);
+const allIds=Object.keys(Q);
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+const pickVariant=id=>{const s=st(id),n=Q[id].v.length;return n>1?(s.lv+1)%n:0};
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const color=t=>`var(--${t.id})`;
+const app=document.getElementById("app");
+const LET=["א","ב","ג","ד"];
+
+function qCard(id,onDone,label){
+  const vi=pickVariant(id),v=Q[id].v[vi],opts=shuffle([v.a,...v.w]);
+  const box=document.createElement("div");box.className="q fade";
+  box.innerHTML=(label?`<span class="eyebrow">${label}</span>`:"")+`<div class="qtext">${esc(v.q)}</div><div class="opts"></div>`;
+  const wrap=box.querySelector(".opts");
+  opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt";b.dataset.a=o===v.a?"1":"";
+    b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+    b.onclick=()=>{const ok=o===v.a,s=st(id);s.n++;s.t=Date.now();s.lv=vi;ok?s.c++:(s.c=0,s.w++);save();
+      wrap.querySelectorAll("button").forEach(x=>{x.disabled=true;if(x.dataset.a)x.classList.add("right")});
+      if(!ok)b.classList.add("wrong");
+      const fb=document.createElement("div");fb.className="fb fade "+(ok?"ok":"no");
+      fb.innerHTML=`${ic(ok?"check":"x")}<div><strong>${ok?"נכון!":"לא בדיוק"}</strong>${esc(v.e)}</div>`;box.appendChild(fb);
+      const nx=document.createElement("button");nx.className="primary";nx.textContent="המשך";nx.style.alignSelf="flex-start";
+      nx.onclick=()=>onDone(ok);box.appendChild(nx);nx.focus({preventScroll:true});nx.scrollIntoView({block:"nearest",behavior:"smooth"});
+    };wrap.appendChild(b)});
+  return box;
+}
+
+function home(){
+  document.body.style.removeProperty("--c");
+  const started=T.filter(topicStarted);
+  const total=Math.round(100*allIds.filter(mastered).length/allIds.length);
+  const weak=allIds.filter(id=>S.q[id]&&S.q[id].n&&!mastered(id)).length;
+  app.innerHTML=`<div class="stack fade">
+   <section class="cover" style="--c:var(--accent)">
+    <div class="cover-art">${FIG[CONFIG.cover]()}</div>
+    <div class="cover-body">
+     <span class="eyebrow">${CONFIG.eyebrow}</span>
+     ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
+     <p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר עם שאלות גם מנושאים קודמים.</p>
+     <div class="stats">
+      <div class="ring" style="--p:${total}"><span>${total}%</span></div>
+      <div class="stat-text"><b>${total===0?"עוד לא התחלת":total>=80?"אתה שולט בחומר":"בדרך"}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
+      <button class="primary review-btn" id="rev" ${started.length?"":"disabled"}>${ic("cycle")}<span>${started.length?"חזרה מהירה":"חזרה מהירה (אחרי נושא ראשון)"}</span></button>
+     </div>
+    </div>
+   </section>
+   <div class="grid" id="list"></div>
+   <div class="foot"><a href="../#dev" style="color:var(--accent);font-weight:700;text-decoration:none">→ לקורס</a><span>${CONFIG.note}</span><button class="ghost" id="reset">איפוס התקדמות</button></div>
+  </div>`;
+  document.querySelector("#rev svg").style.cssText="width:20px;height:20px";
+  const list=app.querySelector("#list");
+  T.forEach((t,i)=>{const p=topicPct(t),b=document.createElement("button");b.className="tcard";b.style.setProperty("--c",color(t));
+    const status=!topicStarted(t)?"לא התחלת":p>=80?"שולט":"בתהליך";
+    b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
+    b.onclick=()=>topic(i,0);list.appendChild(b)});
+  app.querySelector("#rev").onclick=review;
+  const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
+  scrollTo(0,0);
+}
+
+function bar(title,n,i,label){
+  return `<div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">${label}</span></div><div class="steps">${Array.from({length:n},(_,k)=>`<i class="${k<=i?"on":""}"></i>`).join("")}</div></div><span class="eyebrow">${title}</span>`;
+}
+
+function topic(ti,bi){
+  const t=T[ti],blk=t.blocks[bi];document.body.style.setProperty("--c",color(t));
+  app.innerHTML=`<div class="stack">${bar(`נושא ${ti+1} · ${t.title}`,t.blocks.length+1,bi,`קטע ${bi+1} מתוך ${t.blocks.length}`)}
+   <article class="card fade"><h3>${blk.h}</h3>${blk.html}</article><div id="slot"></div></div>`;
+  app.querySelector("#back").onclick=home;
+  const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;save();quiz(ti)}};
+  const slot=app.querySelector("#slot");
+  if(blk.q)slot.appendChild(qCard(blk.q,next,"בדיקה קצרה"));
+  else{const b=document.createElement("button");b.className="primary";b.textContent="המשך";b.onclick=next;slot.appendChild(b)}
+  scrollTo(0,0);
+}
+
+function runSet(title,ids,c,onEnd){
+  let i=0,right=0;document.body.style.setProperty("--c",c);
+  const step=()=>{
+    if(i>=ids.length)return onEnd(right,ids.length);
+    const id=ids[i],from=T.find(t=>t.id===Q[id].t);
+    app.innerHTML=`<div class="stack">${bar(title,ids.length,i,`שאלה ${i+1} מתוך ${ids.length}`)}<div id="slot"></div></div>`;
+    app.querySelector("#back").onclick=home;
+    const card=qCard(id,ok=>{if(ok)right++;i++;step()},from.title);card.style.setProperty("--c",color(from));
+    app.querySelector("#slot").appendChild(card);scrollTo(0,0);
+  };step();
+}
+
+function quiz(ti){
+  const t=T[ti];
+  const prev=T.slice(0,ti).filter(topicStarted).flatMap(x=>x.qids);
+  const extra=shuffle(prev).sort((a,b)=>st(a).c-st(b).c).slice(0,2);
+  runSet(`מבחן סיום · ${t.title}`,shuffle(t.qids).concat(extra),color(t),(r,n)=>done(r,n,ti));
+}
+
+function review(){
+  const pool=T.filter(topicStarted).flatMap(t=>t.qids),now=Date.now();
+  const score=id=>{const s=S.q[id]||{n:0,c:0,w:0,t:0};return (s.n?0:2)+s.w*2+(s.c<2?3:0)+Math.min(3,(now-s.t)/864e5)+Math.random()*2};
+  const ids=pool.map(id=>[id,score(id)]).sort((a,b)=>b[1]-a[1]).slice(0,12).map(x=>x[0]);
+  runSet("חזרה מהירה",shuffle(ids),"var(--accent)",(r,n)=>done(r,n,null));
+}
+
+function done(r,n,ti){
+  const nextT=ti!=null&&ti+1<T.length?ti+1:null,pct=Math.round(100*r/n);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">${ti!=null?`סיום נושא ${ti+1} · ${T[ti].title}`:"סיום חזרה מהירה"}</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct};--accent:var(--c)"><span>${pct}%</span></div><div class="big">${r}/${n}</div></div>
+    <p>${r===n?"מצוין, הכל נכון.":r>=n*0.7?"טוב מאוד. מה שטעית בו יחזור בחזרה המהירה, בניסוח אחר.":"כדאי לעבור שוב על הנושא. השאלות שטעית בהן יחזרו בחזרה המהירה."}</p>
+    <div class="row">${nextT!=null?`<button class="primary" id="nx" style="--c:${color(T[nextT])}">לנושא הבא: ${T[nextT].title}</button>`:""}<button id="hm">לכל הנושאים</button></div>
+   </article></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;
+  const nx=app.querySelector("#nx");if(nx)nx.onclick=()=>topic(nextT,0);
+  scrollTo(0,0);
+}
+home();
+</script>
+</body>
+</html>
