@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>לומדת חובת קריאה: פרק 7 - רגשות, מזג והיקשרות בינקות</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Rubik:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: a study notebook. Home = illustrated cover + topic cards; topic = one reading card at a time, with a highlighter for key terms and drawn figures */
+:root{
+  --bg:#eef2f4; --surface:#ffffff; --raised:#f7f9fa; --ink:#15222a; --muted:#4c5b66; --line:#dbe2e6;
+  --accent:#2457a6; --mark:#ffe27a; --good:#23855a; --good-soft:#e2f4ea; --bad:#c2452d; --bad-soft:#fbe6e1;
+  --t1:#d35d36; --t2:#3667cf; --t3:#0e8a7c; --t4:#8448c9; --t5:#b9800c; --t6:#2a7fa6; --t7:#b4436c; --t8:#5a6b2e;
+  --display:"Suez One","Frank Ruhl Libre","David",serif;
+  --body:"Rubik","Arial Hebrew","Segoe UI",Arial,sans-serif;
+  --shadow:0 1px 2px rgba(21,34,42,.06),0 8px 24px rgba(21,34,42,.07);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;font-weight:500;line-height:1.75;direction:rtl}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
+p{margin:0}
+.stack{display:flex;flex-direction:column;gap:16px}
+.muted{color:var(--muted)}
+mark{background:linear-gradient(transparent 38%,var(--mark) 38%,var(--mark) 92%,transparent 92%);color:inherit;padding:0 2px;font-weight:600}
+button{font:inherit;cursor:pointer;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:11px 18px}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button[disabled]{opacity:.55;cursor:default}
+.primary{background:var(--c,var(--accent));border-color:var(--c,var(--accent));color:var(--surface);font-weight:600}
+.ghost{background:transparent;border:none;color:var(--muted);padding:6px 2px}
+.ghost:hover{color:var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.badge{display:inline-block;align-self:flex-start;font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:99px;background:var(--accent);color:var(--surface);margin-bottom:6px}.entitle{display:inline;unicode-bidi:isolate;font-family:Rubik,system-ui,sans-serif;font-weight:800}.hetitle{margin:4px 0 0;font-weight:700;font-size:1.05rem}.cite{text-align:right;margin:4px 0 0;font-size:.85rem;color:var(--muted)}.cite a{color:var(--accent)}
+.eyebrow{font-size:.8rem;letter-spacing:.05em;font-weight:600;color:var(--c,var(--muted))}
+
+/* home */
+.cover{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.cover-art{background:var(--raised);border-bottom:1px solid var(--line);padding:8px 8px 0}
+.cover-art svg{display:block;width:100%;height:auto;max-height:230px}
+.cover-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px}
+.cover h1{font-size:clamp(2rem,6vw,2.6rem);font-weight:900}
+.stats{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.ring{--p:0;width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center;flex:none}
+.ring span{width:50px;height:50px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.9rem;font-variant-numeric:tabular-nums}
+.stat-text{display:flex;flex-direction:column;line-height:1.35;flex:1;min-width:160px}
+.stat-text b{font-size:1.05rem}
+.review-btn{display:flex;align-items:center;gap:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.tcard{--c:var(--accent);text-align:right;padding:0;overflow:hidden;border:none;border-radius:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s}
+.tcard:hover{transform:translateY(-2px)}
+.tcard .band{background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.tcard .band svg{width:44px;height:44px}
+.tcard .n{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;opacity:.85}
+.tcard .body{padding:12px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tcard .t{font-weight:700;font-size:1.05rem;line-height:1.35}
+.bar{height:7px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--c);border-radius:4px}
+.meta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip{font-size:.75rem;padding:3px 10px;border-radius:99px;font-weight:600;background:color-mix(in srgb,var(--c,var(--accent)) 14%,transparent);color:var(--c,var(--accent));white-space:nowrap}
+.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+
+/* topic */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;display:flex;flex-direction:column;gap:8px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.steps{display:flex;gap:5px}
+.steps i{flex:1;height:5px;border-radius:3px;background:var(--line)}
+.steps i.on{background:var(--c)}
+.prog{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tt{font-size:1.6rem;font-weight:900}
+.card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px}
+.card h3{font-size:1.25rem;color:var(--c)}
+.fig{background:var(--raised);border-radius:14px;padding:10px;margin-inline:-4px}
+.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{font-size:.8rem;color:var(--muted);text-align:center;margin-top:4px}
+figure{margin:0}
+.def{border:1.5px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 6%,var(--surface));border-radius:14px;padding:14px 16px}
+.lbl{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:var(--c);margin-bottom:4px}
+.who{display:flex;gap:12px;align-items:flex-start}
+.who .av{flex:none;width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.15rem}
+.who .yr{font-size:.8rem;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.tile{background:var(--raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile svg{width:32px;height:32px;color:var(--c)}
+.tile b{font-size:.98rem}
+.tile span{font-size:.88rem;color:var(--muted);line-height:1.45}
+.ex{background:var(--raised);border-radius:12px;padding:12px 14px;font-size:.95rem}
+.ex .lbl{color:var(--muted)}
+.yesno{display:flex;flex-wrap:wrap;gap:8px}
+.yn{padding:5px 12px;border-radius:99px;font-size:.88rem;font-weight:500;display:inline-flex;gap:6px;align-items:center}
+.yn.y{background:var(--good-soft);color:var(--good)} .yn.n{background:var(--bad-soft);color:var(--bad)}
+.spectrum{display:flex;flex-direction:column;gap:6px}
+.spectrum .track{height:12px;border-radius:6px;background:linear-gradient(90deg,var(--bad),var(--line) 50%,var(--good));position:relative}
+.spectrum .dot{position:absolute;top:50%;left:50%;width:20px;height:20px;border-radius:50%;background:var(--surface);border:3px solid var(--ink);transform:translate(-50%,-50%)}
+.spectrum .ends{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);gap:10px}
+.remember{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;border-top:1px dashed var(--line);padding-top:12px}
+.remember svg{flex:none;width:22px;height:22px;color:var(--c)}
+
+/* question */
+.q{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:12px}
+.qtext{font-weight:600;font-size:1.08rem;line-height:1.55}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{text-align:right;line-height:1.45;display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--raised);border:1.5px solid transparent}
+.opt:hover:not([disabled]){border-color:var(--c)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:8px;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.85rem;color:var(--c)}
+.opt.right{background:var(--good-soft);border-color:var(--good);opacity:1}
+.opt.right .k{background:var(--good);color:var(--surface)}
+.opt.wrong{background:var(--bad-soft);border-color:var(--bad);opacity:1}
+.opt.wrong .k{background:var(--bad);color:var(--surface)}
+.fb{padding:12px 14px;border-radius:12px;font-size:.95rem;display:flex;gap:10px;align-items:flex-start}
+.fb svg{flex:none;width:22px;height:22px;margin-top:2px}
+.fb.ok{background:var(--good-soft)} .fb.ok svg{color:var(--good)}
+.fb.no{background:var(--bad-soft)} .fb.no svg{color:var(--bad)}
+.fb strong{display:block}
+.big{font-family:var(--display);font-size:3.4rem;font-weight:900;color:var(--c);font-variant-numeric:tabular-nums;line-height:1}
+@media (prefers-reduced-motion:no-preference){.fade{animation:f .3s ease-out}@keyframes f{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+
+/* svg figure classes */
+.s-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.s-c{stroke:var(--c);stroke-width:2;fill:none}
+.f-c{fill:var(--c)}
+.f-soft{fill:color-mix(in srgb,var(--c) 16%,var(--surface))}
+.f-surf{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.f-ink{fill:var(--ink)}
+.f-mut{fill:var(--muted)}
+.f-inv{fill:var(--surface)}
+svg text{font-family:var(--body)}
+h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
+.card p,.def p,.tile span,.ex p{font-weight:500}
+.qtext{font-weight:700}
+.tile b,.who b{font-weight:700}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:.95rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.tbl th,.tbl td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl th{background:color-mix(in srgb,var(--c) 10%,var(--surface));color:var(--c);font-weight:700;font-size:.85rem}
+.tbl .in{color:var(--c);font-weight:700}.tbl .out{color:var(--muted);font-weight:700}
+.tblwrap{overflow-x:auto}
+.en{font-size:.82em;color:var(--muted);font-weight:500;direction:ltr;unicode-bidi:isolate}
+</style>
+<style>:root{--accent:#2b8546}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent:#6dcf8e}}:root[data-theme="dark"]{--accent:#6dcf8e}</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const CONFIG={key:"lomda-dev-ch7",cover:"cover21",eyebrow:"פסיכולוגיה התפתחותית א' · פרק 7",title:"פרק 7 - רגשות, מזג והיקשרות בינקות",cite:`ברק, מאיירס ובייט־מרום (עורכות), <i>פסיכולוגיה התפתחותית: ינקות, ילדות והתבגרות</i>, כרך א, האוניברסיטה הפתוחה, 2022. פרק 7: ההתפתחות הרגשית והחברתית בינקות ובגיל הרך, עמ' ⁦341–381⁩.`,note:"מבוסס על העמודים שבחובת הקריאה. המונחים באנגלית מופיעים בסוגריים."};
+const I={
+ building:'<path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h2M14 8h2M8 12h2M14 12h2M10 21v-4h4v4"/>',
+ people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
+ cycle:'<path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/>',
+ pyramid:'<path d="M12 3L2.5 20h19z"/><path d="M8.2 10.5h7.6M5.5 15.2h13"/>',
+ chart:'<path d="M4 20V10M9.5 20V4M15 20v-7M20.5 20V8M2 20h20"/>',
+ gear:'<circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="7.5" stroke-dasharray="3.2 2.7" stroke-width="3.2"/>',
+ sprout:'<path d="M12 21v-9"/><path d="M12 14C7 14 4.5 11 4.5 6.5 9 6.5 12 9 12 14z"/><path d="M12 12c0-4.5 3-7 7.5-7 0 4.5-3 7-7.5 7z"/>',
+ scales:'<path d="M12 3v17M7 20h10M4 7h16"/><path d="M4 7l-2.5 6h5zM20 7l-2.5 6h5z"/>',
+ factory:'<path d="M3 21V10l5 3v-3l5 3V5h4v16zM1.5 21h21M17 9h4v12"/>',
+ question:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 1 1 3.6 2.4c-.8.4-1.1.9-1.1 1.8"/><path d="M12 17h.01"/>',
+ data:'<ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6M4.5 11.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6"/>',
+ doc:'<path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/>',
+ split:'<circle cx="12" cy="4.5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="12" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/><path d="M12 6.7v10M12 11l-6 6M12 11l6 6"/>',
+ grad:'<path d="M1.5 9L12 4l10.5 5L12 14z"/><path d="M6 11.2V16c3.3 2.4 8.7 2.4 12 0v-4.8M21 10v5"/>',
+ copies:'<rect x="3" y="7" width="12" height="14" rx="2"/><path d="M7 4h11a2 2 0 0 1 2 2v12"/>',
+ link:'<rect x="2" y="8" width="11" height="8" rx="4"/><rect x="11" y="8" width="11" height="8" rx="4"/>',
+ hand:'<circle cx="8" cy="7" r="3"/><circle cx="16" cy="7" r="3"/><path d="M2.5 20c0-3.3 2.5-6 5.5-6 1.6 0 3 .7 4 1.9 1-1.2 2.4-1.9 4-1.9 3 0 5.5 2.7 5.5 6"/>',
+ target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',
+ id:'<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><circle cx="8.5" cy="11" r="2.3"/><path d="M5 16c.6-1.6 2-2.4 3.5-2.4S11.4 14.4 12 16M14.5 10h4M14.5 13.5h3"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>',
+ pie:'<path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/>',
+ cart:'<path d="M2 3h3l2.5 12h11l2-8H6.5"/><circle cx="9" cy="19.5" r="1.6"/><circle cx="17" cy="19.5" r="1.6"/>',
+ bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/>',
+ check:'<circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/>',
+ x:'<circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/>',
+ lock:'<rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>',
+ moon:'<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>',
+ brain:'<path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a2 2 0 0 0-3-1z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/>',
+ phone:'<rect x="6.5" y="2" width="11" height="20" rx="2.5"/><path d="M10.5 18.5h3"/>',
+ flask:'<path d="M9 2.5h6M10 2.5v6L4.5 19a2 2 0 0 0 1.8 2.9h11.4a2 2 0 0 0 1.8-2.9L14 8.5v-6"/><path d="M7 15h10"/>',
+ leaf:'<path d="M5 19C5 10 11 4 20 4c0 9-6 15-15 15z"/><path d="M5 19l8-8"/>'
+};
+const ic=(k,cls="")=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="${cls}" aria-hidden="true">${I[k]}</svg>`;
+
+const arrowDef=id=>`<defs><marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="f-c"/></marker></defs>`;
+
+const FIG={
+ cover21:()=>`<svg viewBox="0 0 400 228" role="img" aria-label="הורה ותינוק">
+  <circle cx="200" cy="114" r="96" class="f-soft"/>
+  <circle cx="176" cy="74" r="26" class="f-c"/><path d="M128 190 C128 130 150 108 176 108 C206 108 226 128 230 150" class="f-c"/>
+  <circle cx="236" cy="132" r="17" class="f-surf"/><ellipse cx="226" cy="168" rx="30" ry="20" class="f-surf"/>
+  <path d="M196 150 C214 186 248 186 262 160" fill="none" class="s-c" stroke-width="10" stroke-linecap="round"/>
+  <path d="M290 70 c-6 -10 -22 -6 -18 6 c3 8 18 16 18 16 c0 0 15 -8 18 -16 c4 -12 -12 -16 -18 -6z" class="f-c" opacity=".7"/></svg>`,
+ nso:()=>`<svg viewBox="0 0 400 190" role="img" aria-label="חיוך חברתי אצל תינוקות גרמנים ובני הנאסו, סכמטי">
+  <line x1="30" y1="150" x2="380" y2="150" class="s-line"/>
+  <rect x="300" y="128" width="32" height="22" rx="4" class="f-c"/><rect x="260" y="132" width="32" height="18" rx="4" class="f-soft"/>
+  <rect x="120" y="40" width="32" height="110" rx="4" class="f-c"/><rect x="80" y="122" width="32" height="28" rx="4" class="f-soft"/>
+  <text x="296" y="170" text-anchor="middle" font-size="11" font-weight="700" class="f-ink">גיל 6 שבועות</text>
+  <text x="116" y="170" text-anchor="middle" font-size="11" font-weight="700" class="f-ink">גיל 12 שבועות</text>
+  <rect x="356" y="12" width="12" height="12" rx="3" class="f-c"/><text x="350" y="22" text-anchor="start" font-size="10.5" class="f-mut">גרמנים</text>
+  <rect x="356" y="30" width="12" height="12" rx="3" class="f-soft"/><text x="350" y="40" text-anchor="start" font-size="10.5" class="f-mut">נאסו (קמרון)</text>
+  <text x="200" y="186" text-anchor="middle" font-size="10" class="f-mut">סכמטי, לפי תרשים 7.1: אחוז התינוקות שחייכו חיוך חברתי</text></svg>`,
+ types:()=>{const T=[["ילד נוח",40,"f-c"],["ילד קשה",10,"f-c"],["מתחמם לאט",15,"f-c"],["לא סווג",35,"f-soft"]];
+  return `<svg viewBox="0 0 400 170" role="img" aria-label="טיפוסי המזג במחקר ניו יורק">
+  ${T.map(([h,p,c],i)=>{const y=14+i*36,w=p*6.4;return `<text x="392" y="${y+20}" text-anchor="start" font-size="11.5" font-weight="700" class="f-ink">${h}</text><rect x="${300-w}" y="${y+4}" width="${w}" height="24" rx="6" class="${c}"/><text x="${294-w}" y="${y+21}" text-anchor="start" font-size="11" font-weight="800" class="f-ink">⁦${p}%⁩</text>`}).join("")}
+  <text x="200" y="164" text-anchor="middle" font-size="10" class="f-mut">תומס וצ'ס: 141 ילדים מינקות לבגרות</text></svg>`},
+ bowlby:()=>{const P=[["טרום־היקשרות",["לידה עד 6 שבועות"],["אותות מולדים","אין התנגדות לזר"]],["היקשרות|בהתהוות",["6 שבועות עד","6 עד 8 חודשים"],["מעדיף את המוכר","תחושת אמון"]],["היקשרות|חד־משמעית",["6 עד 8 חודשים עד","18 עד 24 חודשים"],["חרדת פרידה","בסיס בטוח"]],["יחסים|הדדיים",["18 חודשים עד שנתיים","ואילך"],["ייצוג ושפה","משא ומתן"]]];
+  return `<svg viewBox="0 0 400 200" role="img" aria-label="ארבעת שלבי ההיקשרות לפי בולבי">${arrowDef("bw")}
+  <line x1="392" y1="40" x2="8" y2="40" class="s-line" marker-end="url(#bw)"/>
+  ${P.map(([h,A,D],i)=>{const x=350-i*100;return `<circle cx="${x}" cy="40" r="13" class="f-c"/><text x="${x}" y="45" text-anchor="middle" font-size="12" font-weight="800" class="f-inv">${i+1}</text>${h.split("|").map((t,k)=>`<text x="${x}" y="${72+k*14}" text-anchor="middle" font-size="11" font-weight="800" class="f-ink">${t}</text>`).join("")}${A.map((t,k)=>`<text x="${x}" y="${104+k*12}" text-anchor="middle" font-size="9" class="f-mut">${t}</text>`).join("")}${D.map((t,k)=>`<text x="${x}" y="${140+k*14}" text-anchor="middle" font-size="9.5" class="f-ink">${t}</text>`).join("")}`}).join("")}
+  <text x="200" y="192" text-anchor="middle" font-size="10" class="f-mut">התוצאה: מודל עבודה פנימי של הקשר</text></svg>`},
+ ssp:()=>{const T=[["בטוחה",60,"f-c"],["נמנעת",15,"f-soft"],["מתנגדת",10,"f-soft"],["חסרת ארגון וכיוון",15,"f-soft"]];
+  return `<svg viewBox="0 0 400 170" role="img" aria-label="שכיחות דפוסי ההיקשרות">
+  ${T.map(([h,p,c],i)=>{const y=14+i*36,w=p*3.6;return `<text x="392" y="${y+20}" text-anchor="start" font-size="11.5" font-weight="700" class="f-ink">${h}</text><rect x="${250-w}" y="${y+4}" width="${w}" height="24" rx="6" class="${c}"/><text x="${244-w}" y="${y+21}" text-anchor="start" font-size="11" font-weight="800" class="f-ink">⁦${p}%⁩</text>`}).join("")}
+  <text x="200" y="164" text-anchor="middle" font-size="10" class="f-mut">בקירוב, במשפחות ממעמד בינוני בצפון אמריקה</text></svg>`}
+};
+const rothTable=`<div class="tblwrap"><table class="tbl"><thead><tr><th>ממד</th><th>תיאור</th></tr></thead><tbody>
+<tr><td colspan="2"><b>תגובתיות</b></td></tr>
+<tr><td><b>רמת פעילות</b></td><td>פעילות של מוטוריקה גסה</td></tr>
+<tr><td><b>טווח קשב-התמדה</b></td><td>משך ההתכוונות או העניין</td></tr>
+<tr><td><b>מצוקה מפחד</b></td><td>זהירות ומצוקה מגירוי עז או חדש, זמן הסתגלות</td></tr>
+<tr><td><b>מצוקה מרוגז</b></td><td>רגזנות, בכי ומצוקה כשרצונות לא נענים</td></tr>
+<tr><td><b>רגש חיובי</b></td><td>תכיפות של שמחה והנאה</td></tr>
+<tr><td colspan="2"><b>ויסות עצמי</b></td></tr>
+<tr><td><b>בקרה שדורשת מאמץ</b></td><td>דיכוי רצוני של תגובה דומיננטית כדי לתכנן ולבצע תגובה מסתגלת. בשנתיים הראשונות נקראת התכוונות: הרגעה עצמית, הסטת קשב ושמירת עניין</td></tr></tbody></table></div>`;
+const ssTable=`<div class="tblwrap"><table class="tbl"><thead><tr><th>#</th><th>מה קורה</th><th>מה בודקים</th></tr></thead><tbody>
+<tr><td>1</td><td>החוקרת מכניסה הורה ותינוק לחדר משחקים ויוצאת</td><td></td></tr>
+<tr><td>2</td><td>ההורה יושב, התינוק משחק</td><td>הורה כבסיס בטוח</td></tr>
+<tr><td>3</td><td>זר נכנס, יושב ומדבר עם ההורה</td><td>תגובה למבוגר לא מוכר</td></tr>
+<tr><td>4</td><td>ההורה יוצא, הזר מגיב לתינוק</td><td>חרדת פרידה</td></tr>
+<tr><td>5</td><td>ההורה חוזר ומרגיע, הזר יוצא</td><td>תגובה לאיחוד</td></tr>
+<tr><td>6</td><td>ההורה יוצא</td><td>חרדת פרידה</td></tr>
+<tr><td>7</td><td>הזר נכנס ומרגיע</td><td>האם הזר יכול להרגיע</td></tr>
+<tr><td>8</td><td>ההורה חוזר, מרגיע ומעניין בצעצועים</td><td>תגובה לאיחוד</td></tr></tbody></table></div>`;
+const E=t=>`<span class="en">(${t})</span>`;
+const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</figcaption>`:""}</figure>`;
+const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
+const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;
+const tiles=a=>`<div class="tiles">${a.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`;
+const ex=h=>`<div class="ex"><span class="lbl">דוגמה</span><p>${h}</p></div>`;
+const rem=h=>`<div class="remember">${ic("bulb")}<p>${h}</p></div>`;
+const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")}${t}</span>`).join("")}${n.map(t=>`<span class="yn n">${ic("x")}${t}</span>`).join("")}</div>`;
+const spectrum=(r,l,dot)=>`<div class="spectrum"><div class="track">${dot?'<span class="dot"></span>':""}</div><div class="ends"><span>${r}</span><span>${l}</span></div></div>`;
+document.head.insertAdjacentHTML("beforeend",'<style>.yn svg{width:16px;height:16px}</style>');
+
+const T=[
+ {id:"t1",icon:"sprout",title:"רגשות בסיסיים",blocks:[
+  {h:"אוטונומיה וקריאת רגשות של תינוקות",html:`${def("סוף הדיון באריקסון",`בשנה השנייה, <b>אוטונומיה</b> מתפתחת כשההורים נותנים הדרכה ובחירות הגיוניות, לא מבקרים כשהפעוט נכשל (שירותים, כפית, סידור) ומגיבים בסבלנות לעמידתו על שלו (״עוד חמש דקות משחק״). שליטת יתר או חוסר שליטה מובילים ל<b>בושה וספק</b>. הורות חמה וציפיות סבירות בונות <b>אמון בסיסי ואוטונומיה</b>, ובלעדיהן נזרעים זרעים לקשיים בהמשך.`)}<p>רגשות מארגנים יחסים חברתיים, חקירה וגילוי העצמי. לפי <b>גישת המערכות הדינמיות</b> הם חלק מהמערכת המתפתחת: מפיחים בה אנרגיה ונעשים מורכבים יותר.</p><p>תינוקות לא מתארים רגשות, ולכן הרמז המהימן ביותר הוא <b>הבעות הפנים</b> (בכל התרבויות מקשרים הבעות לרגשות באותה דרך). אבל צריך זהירות:</p>${tiles([["x","לא תמיד יש הבעה","על הצוק החזותי ילדים נמנעים בלי להראות פחד בפנים"],["hand","ערוצים אחרים","תינוקות עיוורים מביעים רגש בתנועות אצבעות, וכשמראים זאת להורים הם מגיבים ביותר הדדיות"],["question","תגובה אחת, הרבה רגשות","חיוך יכול לבטא שמחה, מבוכה, בוז או ברכה"]])}${rem("לכן חוקרים מסתכלים על <b>כמה רמזים יחד</b>, קול, פנים ומחוות, ואיך הם משתנים במצבים שונים.")}`,q:"q1"},
+  {h:"רגשות בסיסיים ושמחה",html:`${def("רגשות בסיסיים",`<mark>רגשות בסיסיים</mark> ${E("Basic emotions")}: אושר, עניין, הפתעה, פחד, כעס, עצב וגועל. אוניברסליים ובעלי היסטוריה אבולוציונית. בהתחלה יש רק שני מצבים כלליים: <b>משיכה</b> לגירוי נעים ו<b>התרחקות</b> מגירוי לא נעים. בהדרגה הם הופכים לאותות מאורגנים (קמרס צילמה את בתה: הבעות כעס ועצב הופיעו קודם סביב בכי, ורק עם הגיל התחברו למחסום ולכישלון).`)}${def("חיוך חברתי",`בשבועות הראשונים יילודים מחייכים כשהם שבעים, בשנת REM ולמגע וקול עדינים. בסוף החודש הראשון למראות דינמיים. בין <b>6 ל־10 שבועות</b> (כך במקור האנגלי ובתרשים 7.1; בנוסח העברי נכתב ״חודשים״) מופיע <mark>חיוך חברתי</mark> ${E("Social smile")}: חיוך רחב לתקשורת של ההורה. <b>צחוק</b> מופיע בגיל 3 עד 4 חודשים ומשקף עיבוד מהיר יותר.`)}${fig("nso","אצל הנאסו בקמרון, שמעריכים רוגע ולא מעודדים הבעת רגשות, החיוך החברתי מתעכב")}${rem("בסוף השנה הראשונה החיוך הוא <b>אות חברתי מכוון</b>: חיוך רחב להורה, מאופק לזר, פתוח במשחק. בני 8 עד 10 חודשים עוצרים משחק כדי לשתף מבוגר בהנאה.")}`,q:"q3"},
+  {h:"כעס ועצב",html:`${def("כעס",`מגיל 4 עד 6 חודשים ועד השנה השנייה הכעס גובר בתדירות ובעוצמה, ובמצבים רבים יותר: לוקחים חפץ, מגבילים ידיים, ההורה יוצא, משכיבים לישון. <b>למה?</b> ההתנהגות נעשית מכוונת (רוצים לשלוט בתוצאות), מזהים טוב יותר מי גרם, וההורים מציבים יותר גבולות כשהתינוק זוחל.`)}${rem("הכעס <b>מסתגל</b>: מאפשר להגן על עצמך או להתגבר על מכשול, ומניע את המטפל להקל ולא לעזוב שוב מהר.")}${def("עצב",`פחות שכיח מכעס. מופיע בעיקר כשהתינוק מאבד מטפל מוכר ואוהב (גרייס אחרי האימוץ) או כשהאינטראקציה עם ההורה משתבשת קשות.`)}${ex("ניסויי <b>פנים קפואות</b>: הורים לבני 2 עד 7 חודשים עברו פתאום להבעה חסרת תגובה. התינוקות ניסו פנים, תנועות וקולות כדי להחזיר את ההורה, וכשלא הצליחו הסיטו מבט, קימטו מצח ובכו. אותה תגובה אצל אמריקנים, קנדים וסינים: נראה שזו תגובה מולדת. כך מגיבים גם תינוקות להורים בדיכאון, ואם זה נמשך ההתפתחות כולה נפגעת.")}`,q:"q5"},
+  {h:"פחד וחרדת זרים",html:`${def("חרדת זרים",`הפחד מופיע במחצית השנייה של השנה הראשונה. ההבעה השכיחה: <mark>חרדת זרים</mark> ${E("Stranger anxiety")}. היא <b>לא תמיד</b> מופיעה, ותלויה במזג, בניסיון עם זרים ובמצב: זר שמרים תינוק במקום חדש מעורר פחד, וזר שיושב בשקט כשההורה קרוב מעורר סקרנות. חום, צעצוע, משחק מוכר והתקרבות איטית מפחיתים אותה.`)}${tiles([["people","אפה (קונגו)","תמותת אימהות גבוהה, תינוקות עוברים בין מבוגרים מהלידה: כמעט אין חרדת זרים"],["lock","קיבוצים בישראל","קהילות מבודדות שפגיעות לטרור: חשדנות כלפי זרים, וחרדת זרים גבוהה בהרבה מבעיר"]])}${def("בסיס בטוח",`הפחד מרסן את החקירה של תינוק שרק התחיל לנוע. התינוק משתמש במטפל כ<mark>בסיס בטוח</mark> ${E("Secure base")}: יוצא לחקור וחוזר לתמיכה. ההתנהגות מול זר היא <b>איזון</b> בין התקרבות להימנעות.`)}${rem("חרדת הזרים פוחתת כשהקוגניציה מאפשרת להבחין בין מאיים ללא מאיים, וכשיש יותר אסטרטגיות התמודדות.")}`,q:"q7"}
+ ]},
+ {id:"t2",icon:"people",title:"הבנת רגשות וויסות",blocks:[
+  {h:"הבנת רגשות הזולת",html:`<p>בהתחלה תינוקות מתאימים את הרגש שלהם לזה של המטפל: אולי <b>הדבקה רגשית</b> ${E("Emotional contagion")} אוטומטית, ואולי התניה אופרנטית (חיוך מביא תגובה). בגיל <b>3 חודשים</b> הם רגישים למבנה ולתזמון של אינטראקציה פנים אל פנים ומצפים לתגובה. לפי חלק מהחוקרים, מכאן מתחילים לראות אחרים <b>״כמוני״</b>.</p><p>ב־4 עד 5 חודשים מבחינים בין רגש חיובי לשלילי בקול ואחר כך בפנים, ובאמצע השנה מתאימים פנים לקול (מביטים יותר בפנים שמחות עם קול שמח). מגיל 7 חודשים גלי המוח (ERP) דומים למבוגרים.</p>${def("הירמזות חברתית",`<mark>הירמזות חברתית</mark> ${E("Social referencing")}: מגיל 8 עד 10 חודשים, חיפוש פעיל של מידע רגשי מאדם מהימן במצב לא ברור. הבעות ההורה משפיעות על הזהירות מזר, משחק בצעצוע חדש וחציית הצוק החזותי. <b>הקול</b> משפיע יותר מהפנים לבד: הוא מעביר רגש ומילים, והתינוק לא צריך להסתובב.`)}${ex("<b>ברוקולי וקרקרים:</b> אישה הראתה הנאה מאוכל אחד וגועל מהשני. בני <b>14</b> חודשים נתנו לה את מה שהם אוהבים (בדרך כלל קרקרים). בני <b>18</b> חודשים נתנו את מה שהיא אהבה, גם אם הם לא. הם מבינים שלאחר יש העדפות שונות.")}`,q:"q9"},
+  {h:"רגשות של מודעות עצמית",html:`${def("מושג מפתח",`<mark>רגשות של מודעות עצמית</mark> ${E("Self-conscious emotions")}: אשמה, בושה, מבוכה, קנאה וגאווה. כל אחד כרוך בפגיעה או בחיזוק של תחושת העצמי. אשמה: פגעתי ורוצה לתקן. בושה ומבוכה: רוצה ״להיעלם״. גאווה: מספר לאחרים ולוקח אתגרים.`)}<p>הם מופיעים ב<b>אמצע השנה השנייה</b> (18 עד 24 חודשים), כשהמודעות לעצמי כנפרד מתגבשת: השפלת עיניים, הרכנת ראש, הסתרת פנים. קייטלין בת 22 חודשים החזירה לגרייס צעצוע שחטפה וטפחה על גבה. גאווה וקנאה מופיעות בערך בגיל שנתיים.</p>${rem("מלבד מודעות עצמית צריך <b>הדרכה של מבוגר</b> (״בוא נראה כמה רחוק תזרוק!״, ״תתבייש!״). והמצבים משתנים בין תרבויות: במערב גאווה על הישג אישי, ובסין וביפן תשומת לב להצלחה אישית מעוררת מבוכה, ואי־דאגה לזולת מעוררת בושה גדולה.")}`,q:"q11"},
+  {h:"ויסות עצמי רגשי",html:`${def("מושג מפתח",`<mark>ויסות עצמי רגשי</mark> ${E("Emotional self-regulation")}: אסטרטגיות להתאמת המצב הרגשי לעוצמה נוחה שמאפשרת להשיג מטרות. הוא דורש <b>בקרה שדורשת מאמץ</b>, שמשתפרת בזכות התפתחות הקורטקס הקדם־מצחי ותמיכת מטפלים.`)}${tiles([["moon","חודשים ראשונים","מוצפים בקלות, תלויים בהרגעה של המטפל: הרמה, נענוע, ליטוף, דיבור רך"],["clock","2 עד 6 חודשים","סיבולת לגרייה גדלה. ב־4 עד 6 חודשים מסיטים קשב מאירוע לא נעים ומרגיעים את עצמם"],["hand","המחצית השנייה","מאותתים למטפל שצריך עזרה. זחילה והליכה מאפשרות להתקרב או להתרחק"],["phone","השנה השנייה","מילים לרגשות. אבל התפרצויות זעם עדיין שכיחות, בעיקר בעייפות ורעב"]])}${rem("הורים ש״קוראים״ את התינוק ומגיבים באהדה: תינוקות פחות נרגנים, יותר מרוצים וקל להרגיע. הורים חסרי סבלנות שמתערבים רק כשהתינוק כבר נסער מחזקים מעבר מהיר למצוקה, ומבני מוח שבולמים עקה עלולים לא להתפתח כראוי.")}${def("תרבות ומגדר",`הורים מעודדים מוקדם דיכוי רגשות שליליים, ו<b>בנים</b> מקבלים יותר תרגול כזה (הם מתקשים יותר). מבוגרים סינים ויפנים מעודדים פחות הבעה עזה, ובסוף השנה תינוקותיהם מחייכים, צוחקים ובוכים פחות. פעוטות שהוריהם אוהדים אבל <b>מציבים גבולות</b> ומציעים חלופות לומדים לווסת כעס טוב יותר.`)}`,q:"q13"}
+ ]},
+ {id:"t3",icon:"pie",title:"מזג: מבנה ומדידה",blocks:[
+  {h:"מהו מזג: מחקר ניו יורק",html:`${def("מושג מפתח",`<mark>מזג</mark> ${E("Temperament")}: הבדלים בין־אישיים יציבים ומוקדמים ב<b>תגובתיות</b> (מהירות ועוצמת העוררות הרגשית, הקשב והפעילות) וב<b>ויסות עצמי</b>. הוא אבן הפינה של האישיות.`)}<p>ב־1956 התחילו <b>תומס וצ׳ס</b> את מחקר האורך של ניו יורק (141 ילדים מינקות לבגרות). המזג יכול להגדיל סיכון לקשיים או להגן מפני בית לחוץ, וההורות יכולה לשנות אותו. מתשעה ממדים עלו שלושה טיפוסים:</p>${fig("types")}${tiles([["check","ילד נוח","Easy child: שגרה סדירה מהר, עליז, מסתגל בקלות"],["x","ילד קשה","Difficult child: לא סדיר, איטי לקבל חדש, תגובות שליליות ועזות"],["clock","מתחמם לאט","Slow-to-warm-up: לא פעיל, תגובות מתונות, מצב רוח שלילי, מסתגל לאט"]])}${rem("הילד ה<b>קשה</b> בסיכון גבוה לבעיות הסתגלות, גם הסתגרות חרדתית וגם תוקפנות. המתחמם לאט מראה פחות בעיות בהתחלה, אבל בגן ובבית הספר עלול להיות מפוחד ומכונס כשמצפים לתגובות מהירות.")}`,q:"q15"},
+  {h:"המודל של רוטבארט ובקרה שדורשת מאמץ",html:`<p>המודל המשפיע ביותר היום. שישה ממדים, עם הבחנה בין <b>מצוקה מפחד</b> ל<b>מצוקה מרוגז</b> (תסכול), ובלי ממדים רחבים מדי כמו סדירות או עוצמה. שלושה רכיבים: <b>רגש</b>, <b>קשב</b> ו<b>פעולה</b>, ועוד ממד ויסות.</p>${rothTable}${def("בקרה שדורשת מאמץ",`<mark>בקרה שדורשת מאמץ</mark> ${E("Effortful control")}: היכולת לדכא באופן רצוני תגובה דומיננטית כדי לתכנן ולבצע תגובה מסתגלת יותר. גם בסין וגם בארה״ב היא מנבאת התמדה, הישגים, בשלות מוסרית (דאגה והתנצלות) ושיתוף פעולה, חלוקה ועזרה.`)}${tiles([["doc","דיווחי הורים","קל, מבוסס על היכרות עמוקה, תואם במידה מסוימת לתצפיות, וחשוב להבנת איך ההורים רואים את הילד. אבל עלול להיות מוטה"],["target","תצפיות","פחות סובייקטיביות ומאפשרות מדדים ביולוגיים. אבל קשה ללכוד אירועים נדירים בבית, ובמעבדה ילד מפוחד עלול לא לסיים"]])}`,q:"q17"},
+  {h:"ביישנות וחברותיות",html:`${def("שני קצוות",`<mark>ילד מאופק או ביישן</mark> ${E("Inhibited, shy child")}: מגיב שלילית לחדש ומתרחק. <mark>ילד פתוח או חברותי</mark> ${E("Uninhibited, sociable child")}: מגיב בחיוב ומתקרב.`)}${ex("<b>לארי ומיטש</b> אצל קגן: בגיל 4 חודשים לארי כיווץ שרירים ובכה מול מובייל, ומיטש חייך. כפעוטות לארי ייבב והתכנס מול רובוטים וזרים, ומיטש צחק וניגש. בגיל 4.5 לארי שמר מרחק מילדים זרים, ומיטש התיידד מהר.")}<p>קגן מצא שכ־<b>20%</b> מבני 4 חודשים מוטרדים בקלות מחידושים, ו־<b>40%</b> נהנים מהם. רק <b>20% עד 25%</b> מהקצוות שמרו על הסגנון עם ההתבגרות: עם הזמן הקיצוניות פחתה.</p>${tiles([["brain","אמיגדלה","אצל ביישנים חידוש מעורר אותה ואת המערכת הסימפתטית. מבוגרים שהיו מאופקים מראים יותר פעילות בה מול פנים זרות"],["chart","גוף","קצב לב גבוה, יותר קורטיזול, אישונים מורחבים, לחץ דם ואצבעות קרות"],["copies","קורטקס","יותר פעילות EEG באונה המצחית הימנית (רגש שלילי) אצל ביישנים, ההפך אצל חברותיים"]])}${rem("לפי קגן רוב הקיצוניים יורשים נטייה, אבל תרומת הגנים <b>מוגבלת</b>. חום ותמיכה מפחיתים תגובתיות, הורות קרה או <b>מגוננת יתר</b> מעצימה חרדה, ודרישה מתונה לגשת לחדש עוזרת. ביישנות מתמשכת מגבירה סיכון לחרדה, דיכאון ופוביה חברתית.")}`,q:"q19"}
+ ]},
+ {id:"t4",icon:"scales",title:"יציבות, תורשה וטיב התאמה",blocks:[
+  {h:"יציבות המזג",html:`<p>ילדים עם ציונים קיצוניים נוטים להגיב דומה גם שנים אחר כך, לפעמים עד הבגרות. אבל באופן כללי היציבות <b>נמוכה</b> בינקות ובגיל הרך, ו<b>מתונה</b> מגיל הגן. יש ילדים שלא משתנים, ורבים שכן.</p>${def("למה לא יציב יותר",`המזג עצמו <b>מתפתח</b>. רוב התינוקות בוכים הרבה בחודשים הראשונים ונרגעים עם הוויסות. ומשמעות הפעילות מתהפכת: בהתחלה תינוק פעיל ומתפתל הוא לא נינוח, ותינוק שקט קשוב. כשמתחילים לזחול, הפעיל הוא החוקר הסקרן, והלא פעיל אולי מפוחד.`)}${rem("לכן ניבוי טוב יותר <b>אחרי גיל 3</b>. בין 2.5 ל־3 יש קפיצה בבקרה שדורשת מאמץ (המתנה לפרס, לחישה, ״המלך אמר״), כנראה בזכות התפתחות הקורטקס הקדם־מצחי. פעוטות חששנים מקבלים אחר כך ציונים מעט גבוהים בבקרה, ונרגנים נמוכים יותר. ילדים שליליים עם הורים <b>סבלניים ותומכים</b> מרוויחים הכי הרבה.")}`,q:"q21"},
+  {h:"השפעות גנטיות וסביבתיות",html:`<p>תאומים זהים דומים יותר בתכונות מזג ואישיות. בערך <b>מחצית</b> מההבדלים מיוחסים לגנים: השפעה מתונה. גם הסביבה חזקה: תת־תזונה ובתי יתומים דלים משאירים ילדים מוסחים, מפוחדים וחלשים בוויסות.</p>${def("הבדלים אתניים",`תינוקות סינים ויפנים פחות פעילים, נרגנים וקולניים, נרגעים בקלות, אבל גם חשדניים יותר מול זרים. אולי יש שורש גנטי, אבל גם <b>מתאם בין גנים לסביבה</b>: אימהות יפניות רואות בתינוק יצור עצמאי שצריך ללמוד לסמוך עליהן דרך מגע קרוב, ואמריקניות רוצות לגמול מתלות. אסיאתיות עדינות ומנחמות, אמריקניות פעילות ומילוליות.`)}${def("הבדלי מגדר",`בנים פעילים, נועזים ונרגזים יותר בתסכול, ומעט אימפולסיביים (יותר פציעות). בנות דאגניות וביישניות יותר, עם יתרון ב<b>בקרה שדורשת מאמץ</b> (שיתוף פעולה, הצלחה בבית הספר). וההורים מחזקים: בנים לפעילות, בנות לפנייה לעזרה וקרבה.`)}`,q:"q23"},
+  {h:"גנים, רגישות ואחאים",html:`<p><b>גן 5-HTTLPR קצר</b> (כרומוזום 17) פוגע בתפקוד הסרוטונין ומגדיל סיכון למצב רוח רע, פחד וקשיי ויסות. אבל:</p>${tiles([["x","הורות גרועה","פעוטות עם הגן נעשו נרגנים יותר ככל שחרדת האם גברה, ותגובתיים יותר לחוסר רגישות, עד תוקפנות והתנגדות בבית הספר"],["check","הורות טובה","עם חום ותמיכה, הוויסות שלהם השתווה לבעלי סיכון נמוך, והם התקדמו יותר בלמידה ובחברה"]])}${def("גמישות",`הם בעלי <b>גמישות</b> ${E("Plasticity")} מוקדמת גבוהה: רגישים להורות טובה וגם לגרועה. לכן הם מגיבים טוב במיוחד להתערבות. ילדים בלי הגן כמעט לא הושפעו מאיכות ההורות.`)}${rem("<b>אחאים:</b> הורים רואים יותר הבדלים בין ילדיהם ממה שצופים רואים. תאומים לא זהים, שחוקרים דירגו דומים במידה מתונה, ההורים תיארו כהפוכים (ביישן וחברותי). ההדגשה הזו משפיעה על ההורות, וכל ילד מעורר תגובות שמתאימות לה.")}`,q:"q25"},
+  {h:"מודל טיב ההתאמה",html:`${def("מושג מפתח",`<mark>מודל טיב ההתאמה</mark> ${E("Goodness-of-fit model")} של תומס וצ׳ס: יצירת סביבת גידול שמכירה במזג של הילד ובה בעת מעודדת תפקוד מסתגל יותר.`)}${ex("ילד <b>קשה</b> מקבל פחות טיפול רגיש, אחר כך משמעת כועסת ומענישה, הוא מתנגד, ההורים לחוצים יותר, כופים ולא עקביים, לפעמים נכנעים ומתגמלים אי־ציות. כך הסגנון הנרגן <b>מתחזק</b>. הורות חיובית ורגישה, עם ציפיות ברורות וגבולות, מפחיתה את הקשיים עד גיל 2 עד 3.")}<p>הורות טובה לילד קשה תלויה גם ב<b>תנאי חיים</b>: בריאות נפשית, נישואים טובים ומצב כלכלי. תינוקות רוסים בזמן משבר כלכלי הראו יותר רגשות שליליים.</p>${def("גם התרבות קובעת",`בסין בעבר ביישנות נחשבה חיובית, ובשנחאי ב־1990 היא נקשרה ליכולת, קבלה ומנהיגות. עם כלכלת השוק המתאמים נחלשו (1998) ו<b>התהפכו</b> (2002), כמו במערב. בכפר עדיין מעריכים ביישנות.`)}${rem("עדיף להתאים מוקדם. אולי חוסר ההתאמה בין ההתערבות של ונסה לבין המזג הפעיל של טימי תרם לקפיצות שלו מפעילות לפעילות. הורים לא אחראים לכל תכונה, אבל יכולים להפוך סביבה שמעצימה בעיות לסביבה שבנויה על <b>נקודות החוזק</b>.")}`,q:"q27"}
+ ]},
+ {id:"t5",icon:"link",title:"היקשרות: תיאוריות",blocks:[
+  {h:"האכלה? הניסוי של הארלו",html:`${def("היקשרות",`<mark>היקשרות</mark> ${E("Attachment")}: הקשר החם והחזק לאנשים מיוחדים, שבו אנו נהנים מהאינטראקציה ומתנחמים בקרבתם בעת עקה. במחצית השנייה של השנה הראשונה תינוקות נקשרים למי שנענה לצרכיהם.`)}<p>פרויד טען ראשון שהקשר לאם הוא יסוד לכל היחסים. <b>הגישה הפסיכואנליטית</b> והביהביוריסטית ראו בהאכלה את ההקשר העיקרי (ביהביוריזם: החיוך והליטוף מתקשרים לסיפוק הרעב).</p>${ex("<b>הארלו</b> (שנות ה־50): קופי רזוס עם ״אימהות חלופיות״ התרפקו על אם מבד מגבת, אף שאם מחוטי תיל החזיקה את הבקבוק. גם תינוקות נקשרים לאב, אחאים וסבים שכמעט לא מאכילים, ולשמיכות ודובים.")}${rem("שתי הגישות גם נותנות מעט תשומת לב ל<b>מאפייני התינוק</b>. לכן היום מקובלת התיאוריה האתולוגית.")}`,q:"q29"},
+  {h:"התיאוריה האתולוגית של בולבי",html:`${def("מושג מפתח",`<mark>התיאוריה האתולוגית של ההיקשרות</mark> ${E("Ethological theory of attachment")}: הקשר הוא תגובה מתפתחת שמקדמת <b>הישרדות</b>. בולבי, בהשראת ההטבעה של לורנץ, טען שיש מערכת מולדת שמשאירה את ההורה קרוב להגנה ולתמיכה בחקירה. ההאכלה אינה הבסיס.`)}${fig("bowlby")}${tiles([["sprout","1. טרום־היקשרות","לפיתה, חיוך, בכי ומבט. מזהים ריח, קול ופנים של האם, אבל לא מתנגדים להישאר עם זר"],["hand","2. בהתהוות","מגיבים אחרת למוכר (טימי צחק ונרגע מהר יותר עם אמו). תחושת אמון, אבל עוד לא מוחים בפרידה"],["lock","3. חד־משמעית","Separation anxiety: מוחים כשהמטפל יוצא, עולה בין 6 ל־15 חודשים, תלוי במזג ובמצב. עוקבים, מטפסים, בסיס בטוח"],["people","4. יחסים הדדיים","מבינים מה משפיע על יציאה וחזרה, המחאה פוחתת, משא ומתן (קייטלין: ״תקריאו לי סיפור קודם״)"]])}`,q:"q31"},
+  {h:"מודל עבודה פנימי",html:`${def("מושג מפתח",`<mark>מודל עבודה פנימי</mark> ${E("Internal working model")}: מתוך ארבעת השלבים בונים קשר מתמשך שמשמש בסיס בטוח גם כשההורים לא כאן. זו מערכת ציפיות: האם דמות ההיקשרות זמינה, האם תתמוך במצוקה, ואיך העצמי מתנהל מולה. הוא נעשה חלק מהאישיות ומדריך את כל היחסים העתידיים.`)}${ex("בני 12 עד 16 חודשים ראו סרטון: צורה גדולה (״מטפל״) מטפסת במדרון וצורה קטנה (״ילד״) ״בוכה״. בעלי <b>היקשרות בטוחה</b> הביטו יותר כשהמטפל המשיך לטפס ולא חזר, כי זה הפר את הציפייה שלהם. בעלי היקשרות <b>לא בטוחה</b> לא הבחינו בין האירועים (תרשים 7.3).")}${rem("המודל ממשיך להתעדכן עם הגיל, דרך יחסים עם ההורים, מבוגרים אחרים, אחאים וחברים.")}`,q:"q33"}
+ ]},
+ {id:"t6",icon:"data",title:"מדידת ההיקשרות",blocks:[
+  {h:"המצב הזר וארבעת הדפוסים",html:`${def("מושג מפתח",`<mark>המצב הזר</mark> ${E("Strange Situation")} של <b>איינסוורת׳</b>: הטכניקה הרווחת בגיל שנה עד שנתיים. שמונה אפיזודות קצרות של פרידה ואיחוד בחדר לא מוכר עם זר. התגובה ל<b>איחוד</b> מגדירה במידה רבה את איכות ההיקשרות.`)}${ssTable}${tiles([["check","בטוחה","Secure: ההורה בסיס בטוח. אולי בוכים בפרידה (כי מעדיפים את ההורה), שמחים בבירור בשובו והבכי פוחת מיד"],["x","לא בטוחה־נמנעת","Avoidant: לא מגיבים להורה, לא מוטרדים ביציאה, מגיבים לזר כמו להורה, נמנעים ממנו באיחוד ולא מתרפקים"],["cycle","לא בטוחה־מתנגדת","Resistant: מחפשים קרבה ולא חוקרים, מצוקה ביציאה, ובאיחוד היצמדות עם כעס והתנגדות, לא נרגעים"],["question","חסרת ארגון וכיוון","Disorganized/disoriented: הכי לא בטוחה. התנהגות סותרת ומבולבלת: מסיטים מבט כשמוחזקים, קופאים, צועקים פתאום"]])}${fig("ssp","שכיחות הדפוסים במשפחות ממעמד בינוני בצפון אמריקה. במעמד נמוך פחות בטוחים")}`,q:"q35"},
+  {h:"Q-Sort, יציבות ותרבות",html:`${def("שאלון Q-Sort",`<mark>שאלון היקשרות מסוג Q-Sort</mark>: לגילים 1 עד 5, מבוסס על תצפית בבית. ממיינים 90 התנהגויות לתשע קטגוריות ומחשבים רמת ביטחון. מכסה יותר התנהגויות ואולי משקף טוב יותר את היום־יום. אבל דורש זמן רב, מיון של צופה מומחה (מיוני הורים לא תואמים למצב הזר), ולא מבחין בין סוגי חוסר הביטחון.`)}<p><b>יציבות:</b> הממצאים מגוונים. ההיקשרות נשארת בטוחה ויציבה במעמד בינוני עם תנאים נאותים. ילדים עוברים לביטחון כשהאם מסתגלת היטב ויש תמיכה. במשפחות עניות לחוצות היא לרוב מתרחקת מביטחון. בטוחים יציבים יותר, וחסרת ארגון היא יוצאת דופן: יציבה מאוד או מנבאת חוסר ביטחון אחר בהמשך.</p>${tiles([["people","גרמניה","יותר נמנעים: ההורים מעריכים עצמאות ומעודדים לא להיצמד"],["hand","הדוגון (מאלי)","אף תינוק לא נמנע: האם תמיד זמינה ומניקה בתגובה למצוקה"],["lock","יפן וקיבוצים","יותר מתנגדים, אבל אולי לא חוסר ביטחון אמיתי: ביפן כמעט לא משאירים תינוק עם אחרים, ובקיבוץ זרים מפחידים"]])}${rem("למרות ההבדלים, ההיקשרות ה<b>בטוחה</b> היא הדפוס השכיח ביותר בכל החברות שנחקרו.")}`,q:"q37"}
+ ]},
+ {id:"t7",icon:"gear",title:"מה משפיע על היקשרות בטוחה",blocks:[
+  {h:"זמינות של מטפל קבוע",html:`<p>ארבעה גורמים נחקרו: <b>זמינות מוקדמת</b> של מטפל קבוע, <b>איכות הטיפול</b>, <b>מאפייני התינוק</b> וה<b>הקשר המשפחתי</b>.</p>${ex("במוסד עם יחס צוות טוב וצעצועים רבים, אבל תחלופה עצומה: עד גיל 4.5 ילד טופל בידי כ־<b>50</b> מטפלים. רבים אומצו אחרי גיל 4 ורובם נקשרו להורים המאמצים, אבל היו יותר קשיים: רצון מופרז לתשומת לב, ״ידידותיות יתר״ עם זרים, אי־חזרה להורה בחרדה ומעט חברים.")}${def("בתי יתומים דלים",`ילדים מבתי יתומים במזרח אירופה נקשרים להורים המאמצים, אבל עם שיעורים גבוהים של חוסר ביטחון, חברותיות לא מבחינה או עצב והסתגרות, ובעיות מתמשכות (קשב, דיכאון, תוקפנות). כבר ב־7 חודשים יש ירידה ב־ERP להבעות רגש, ו<b>אמיגדלה</b> גדולה מהרגיל קשורה להבנת רגשות וויסות גרועים.`)}${rem("התפתחות רגשית תקינה מלאה תלויה בקשר הדוק עם מטפל <b>מוקדם</b> בחיים.")}`,q:"q39"},
+  {h:"איכות הטיפול",html:`${def("טיפול רגיש",`<mark>טיפול רגיש</mark> ${E("Sensitive caregiving")}: תגובה מהירה, עקבית ומותאמת, והחזקה עדינה. קשור במידה מסוימת להיקשרות בטוחה, באימהות ביולוגיות ומאמצות ובתרבויות שונות. אימהות לבטוחים מתייחסות לתינוק <b>כבעל מחשבות ורגשות</b> (״אתה באמת אוהב את הנדנדה!״).`)}${def("סנכרון אינטראקטיבי",`<mark>סנכרון אינטראקטיבי (מהדהד)</mark> ${E("Interactional synchrony")}: ״ריקוד רגשי״ שבו המטפל מגיב מיד, בקצב ובהתאמה, ושניהם מתאימים מצבים רגשיים, בעיקר חיוביים. תיאום <b>מתון</b> מנבא ביטחון טוב יותר מתיאום ״הדוק״: מטפל רגוע מקבל אי־התאמות ומתקן אותן.`)}${tiles([["leaf","הגוסי (קניה)","מעט חיבוקים ומשחק, אבל מענה לצרכים, ורוב התינוקות בטוחים: הביטחון תלוי בטיפול קשוב, לא באינטראקציה רציפה"],["hand","פוארטו ריקו","כיוון פיזי והגבלה קשורים לביטחון שם, אבל במערב נחשבים מתערבים ומנבאים חוסר ביטחון"]])}${rem("<b>נמנעים</b>: טיפול חודרני ועודף גרייה, וההימנעות היא בריחה. <b>מתנגדים</b>: טיפול לא עקבי, לא נענה, אבל מתערב כשהתינוק חוקר. <b>חסרי ארגון</b>: התעללות והזנחה, דיכאון, טראומה ואובדן אצל ההורה, והתנהגות מאיימת או מפחידה: ההורה גם מנחם וגם מפחיד.")}`,q:"q41"},
+  {h:"מאפייני התינוק",html:`<p>היקשרות היא יחסי גומלין, ולכן גם התינוק משפיע. פגות, סיבוכי לידה ומחלה דורשים הרבה, ובמשפחות לחוצות קשורים לחוסר ביטחון. במחקר אחד, פגות <b>יחד עם</b> סיכון כלכלי או נפשי של האם (ולא פגות לבדה) הפחיתה רגישות וניבאה חוסר ביטחון בגיל שנה. תינוקות בסיכון עם הורים פנויים וסבלניים מתפתחים בביטחון.</p>${def("מזג וגנים",`תינוקות תגובתיים רגשית בסיכון גבוה יותר, ותינוקות לא מאורגנים ב־NBAS בסיכון לחוסר ארגון. אבל שוב <b>גן־סביבה</b>: גן 5-HTTLPR קצר מגדיל סיכון לחוסר ארגון רק עם אם לא מגיבה, ו־<b>DRD4 7-repeat</b> קשור לחוסר ארגון רק כשהאם חוותה אובדן לא פתור או טראומה.`)}${rem("בתאומים, להיקשרות <b>אין תורשתיות</b>. ושני שלישים מהאחאים מפתחים אותו דפוס אף שהמזג שונה: רוב ההורים מתאימים את הטיפול לכל ילד. התערבויות שמלמדות רגישות ומשמעת יעילה הפחיתו קורטיזול והתנהגות הרסנית בפעוטות עם DRD4.")}`,q:"q43"},
+  {h:"הקשר משפחתי ומסגרות יום",html:`${ex("טימי: הוריו התגרשו אחרי לידתו, ונסה חרדה עבדה 50 שעות בשבוע ושמרטפית לקחה אותו לרוב. ביום הולדתו הראשון הוא <b>התעלם</b> ממנה כשבאה. גירושים, קשיים כלכליים ובעיות נפשיות פוגעים ברגישות ובאקלים המשפחתי, ותמיכה חברתית מגינה. בזכות ג׳ינט ועצות הפסיכולוג, בגיל שנתיים היחסים השתפרו.")}${def("מודלי העבודה של ההורים",`כששואלים הורים על ילדותם: מי שמדבר באופן <b>אובייקטיבי ומאוזן</b>, בלי קשר אם החוויות היו טובות, נוטה לילד בטוח ולהורות רגישה. מי שמבטל את חשיבות היחסים או מתאר אותם בכעס ובלבול נוטה לילד לא בטוח. אבל אלה <b>זיכרונות משוחזרים</b>: מה שקובע הוא היכולת לקבל חוויות שליליות ולהביט בהורים בהבנה ובסליחה, יותר מההיסטוריה עצמה.`)}${def("מסגרות יום",`טיפול לא הורי <b>כשלעצמו</b> לא פוגע בהיקשרות (NICHD, יותר מ־1,300 תינוקות). איכות ההורות משפיעה יותר. חוסר ביטחון עולה בשילוב סיכונים: טיפול לא רגיש בבית ובמעון, שעות רבות או כמה מסגרות. מעל <b>30 שעות</b> בשבוע קשורות ליותר בעיות מוחצנות בגיל 4.5 עד 5, אבל טיפול איכותי מגן, ובאוסטרליה ובנורווגיה אין קשר כזה. הפתרון: מסגרות איכותיות, חופשת לידה ומשרה חלקית.`)}${rem("אפשר להבין היקשרות במלואה רק מנקודת מבט של <b>מערכות אקולוגיות</b>.")}`,q:"q45"}
+ ]},
+ {id:"t8",icon:"people",title:"היקשרויות מרובות והמשך",blocks:[
+  {h:"אבות",html:`<p>בולבי האמין שיש העדפה לדמות אחת, אבל התיאוריה שלו מתארת <b>היקשרויות מרובות</b>. בני שנה במצוקה בוחרים בדרך כלל באם, וההעדפה פוחתת בשנה השנייה. טיפול רגיש של האב מנבא היקשרות בטוחה אליו.</p>${tiles([["hand","אימהות","יותר טיפול פיזי והבעת אהבה. משחק עדין: צעצועים, דיבור, ״קוקו״"],["target","אבות","יותר משחק, פיזי וממריץ עם פרצי התלהבות, בעיקר עם בנים. כשהוא רגיש, עוזר לווסת רגשות ומכין לסביבות חדשות"]])}${def("שינוי בזמן",`בסקר בארה״ב, אבות מתחת לגיל 29 מקדישים <b>85%</b> מהזמן שאימהות מקדישות (מעט יותר מ־4 שעות ביום עבודה), כמעט פי שניים מלפני 30 שנה. כשליש מהנשים העובדות אומרות שבן הזוג שותף שווה. אבות היספנים מקדישים יותר זמן.`)}${def("חום אבהי",`בתרבויות רבות, מעורבות אוהבת של האב מנבאת כישורים קוגניטיביים, רגשיים וחברתיים <b>כמו</b> חום האם, ולפעמים יותר. אצל <b>האקה</b> במרכז אפריקה אבות נמצאים במרחק יד מהתינוק יותר ממחצית היום, כי הזוגות משתפים פעולה באופן יוצא דופן. גם במערב, נישואים מאושרים קשורים למעורבות אבהית רבה יותר.`)}`,q:"q47"},
+  {h:"סבים ואחאים",html:`${def("סבים כמטפלים עיקריים",`כ־2.4 מיליון ילדים בארה״ב (4% עד 5%) גרים עם סבים בלי ההורים: <mark>משפחות שדילגו על דור</mark> ${E("Skipped-generation families")}. בדרך כלל בגלל בעיות של ההורים (חומרים, התעללות, מחלת נפש, הורות בהתבגרות). הילדים מגיעים עם קשיים, ההורים לפעמים מפריעים, יש עומס כלכלי ורגשי. ובכל זאת נוצרת <b>היקשרות משמעותית</b> שמגינה על הילדים, והסבים זקוקים לתמיכה.`)}<p><b>אחאים:</b> 80% מהילדים גדלים עם אח לפחות. תינוק חדש קשה לילד בגיל הגן: תובענות, היצמדות, פחות היקשרות בטוחה (בעיקר מעל גיל שנתיים או כשהאם לחוצה). אבל גם אהבה ודאגה, ובסוף השנה התינוק נרגע ליד האח ובהמשך פונה אליו לנחמה.</p>${tiles([["clock","זמן מיוחד","בילוי עם הילד הגדול, בעזרת בן הזוג"],["bulb","סבלנות","תגובה סבלנית להתנהגות לא הולמת, והזדמנויות לגאווה בעזרה"],["phone","להסביר","לדבר על רצונות התינוק: ״הוא מנסה להגיע לרעשן״"],["link","זוגיות","תמיכה הדדית ופתרון בעיות יחד מסייעים להתמודד עם קנאה"]])}${rem("גם מזג משפיע (יותר קונפליקט אם אח לחוץ או פעיל מאוד), וחום אימהי לשני הילדים קשור לאינטראקציה חיובית ביניהם, וקשיחות לטינה.")}`,q:"q49"},
+  {h:"מקבוצת השווים להתפתחות מאוחרת",html:`<p><b>חברות מוקדמת:</b> בגיל 6 חודשים מביטים, מחייכים ומושיטים יד לבני גילם. בסוף השנה יש לפעמים פעולה הדדית. בין שנה לשנתיים מבינים שלאחר כוונות ורגשות משלו, ויש יותר אינטראקציה מתואמת: חיקוי, רדיפה, השלכה משותפת. בגיל שנתיים משתמשים במילים (״בואי נשחק תופסת״). קשר חם עם ההורים ומסגרת איכותית בקבוצה קטנה מקדמים זאת.</p>${def("היקשרות והתפתחות מאוחרת",`במחקר אורך, ילדים בטוחים בינקות היו בגן גבוהים יותר בהערכה עצמית, מיומנויות חברתיות ואמפתיה, בגיל 11 עם חברויות טובות יותר, ובבגרות עם יותר תמיכה, קשרים רומנטיים יציבים והשכלה. אבל במחקרים אחרים <b>לא תמיד</b>.`)}${rem(`ההסבר: <b>המשכיות הטיפול</b> ${E("Continuity of caregiving")}. בטוחים עם הורות רגישה בהמשך קיבלו את הציונים הגבוהים, לא בטוחים עם הורות לא רגישה הנמוכים, והאחרים באמצע. לא בטוחים שאימותיהם השתפרו הראו <b>הבראה</b>, כמו בחוסן. ההיקשרות הבטוחה מתחילה ״ברגל ימין״, אבל השפעתה <b>מותנית</b> ביחסים העתידיים.`)}`,q:"q51"}
+ ]}
+];
+const Q={
+q1:{t:"t1",v:[
+ {q:"מה מקדם אוטונומיה בשנה השנייה, לפי אריקסון?",a:"הדרכה ובחירות הגיוניות, וסבלנות כשהפעוט נכשל או עומד על שלו",w:["ביקורת על כל כישלון","שליטת יתר","חוסר גבולות מוחלט"],e:"שליטת יתר או חוסר שליטה מובילים לבושה וספק."},
+ {q:"מהו הרמז המהימן ביותר לרגשות של תינוקות?",a:"הבעות הפנים",w:["הדיווח של התינוק","גובה הבכי בלבד","קצב הנשימה בלבד"],e:"אבל צריך לשלב כמה רמזים: קול, פנים ומחוות."}]},
+q2:{t:"t1",v:[
+ {q:"למה ההנחה של קשר קבוע בין הבעה לרגש עלולה להטעות?",a:"כי אותו רגש מובע בדרכים שונות, ואותה הבעה יכולה לבטא רגשות שונים",w:["כי תינוקות לא מרגישים","כי הבעות פנים לא קיימות בינקות","כי כל חיוך הוא שמחה"],e:"חיוך יכול לבטא שמחה, מבוכה, בוז או ברכה."},
+ {q:"איך מביעים תינוקות עיוורים רגשות?",a:"באמצעות תנועות אצבעות, וכשמראים זאת להורים הם מגיבים ביותר הדדיות",w:["רק בבכי","בקשר עין","הם לא מביעים רגשות"],e:"ההבעה שלהם שקטה ועלולה לדחוק בהורים לסגת."}]},
+q3:{t:"t1",v:[
+ {q:"מהו חיוך חברתי?",a:"חיוך רחב בתגובה לתקשורת של ההורה, שמופיע בערך בגיל 6 עד 10 שבועות",w:["חיוך בשנת REM","חיוך לאובייקט קופץ","חיוך מאופק לזר בגיל שנה"],e:"בשבועות הראשונים החיוכים קשורים לשובע, שינה ומגע עדין."},
+ {q:"למה החיוך החברתי של תינוקות הנאסו בקמרון מתעכב?",a:"כי אימהות שם מעריכות רוגע ומשחקות פחות משחקי פנים אל פנים",w:["כי יש להם בעיה ביולוגית","כי הם לא רואים טוב","כי הם חולים יותר"],e:"בגיל 12 שבועות רוב הגרמנים חייכו, והנאסו רק מעט יותר מבגיל 6 שבועות."}]},
+q4:{t:"t1",v:[
+ {q:"מתי מופיע צחוק, ומה הוא משקף?",a:"בגיל 3 עד 4 חודשים, ומשקף עיבוד מידע מהיר יותר מחיוך",w:["מהלידה, ומשקף רפלקס","בגיל שנתיים, ומשקף שפה","בגיל 6 שבועות, ומשקף רעב"],e:"בהמשך צוחקים לאירועים מתוחכמים יותר כמו ״קוקו״."},
+ {q:"מהם שני המצבים הכלליים שקיימים ביילודים לפני שהרגשות מתבהרים?",a:"משיכה לגירוי נעים והתרחקות מגירוי לא נעים",w:["שמחה ועצב","כעס ופחד","הפתעה וגועל"],e:"בהדרגה נעשים הרגשות לאותות מאורגנים."}]},
+q5:{t:"t1",v:[
+ {q:"למה הכעס גובר מגיל 4 עד 6 חודשים?",a:"ההתנהגות נעשית מכוונת, מזהים מי גרם לבעיה, וההורים מציבים יותר גבולות",w:["כי התינוקות חולים","כי הם רעבים יותר","כי הם מאבדים את ההורים"],e:"והכעס גם מסתגל: מאפשר להתגבר על מכשולים ומניע את המטפל."},
+ {q:"מה עשו תינוקות בניסוי הפנים הקפואות כשלא הצליחו להחזיר את ההורה?",a:"הסיטו מבט, קימטו מצח ובכו",w:["צחקו","נרדמו מיד","המשיכו לשחק כרגיל"],e:"אותה תגובה בתרבויות שונות: תגובה מולדת להיעדר תקשורת."}]},
+q6:{t:"t1",v:[
+ {q:"מתי עצב מופיע לעתים קרובות אצל תינוקות?",a:"כשמאבדים מטפל מוכר ואוהב או כשהאינטראקציה עם ההורה משתבשת קשות",w:["כשמקבלים צעצוע חדש","בזמן משחק","אחרי האכלה"],e:"כמו הדכדוך של גרייס אחרי האימוץ."},
+ {q:"למה הכעס נחשב רגש מסתגל אצל תינוקות גדולים?",a:"כי הוא עוזר להגן על עצמם, להתגבר על מכשולים ולהניע את המטפל להקל",w:["כי הוא מרחיק את ההורים","כי הוא מונע למידה","הוא לא מסתגל"],e:"ובפרידה הוא עשוי להניא את ההורה מלעזוב שוב מהר."}]},
+q7:{t:"t1",v:[
+ {q:"ממה תלויה חרדת זרים?",a:"ממזג, מניסיון קודם עם זרים ומהמצב הנוכחי",w:["רק מהגיל","רק מגובה הזר","היא תמיד מופיעה באותה עוצמה"],e:"זר שמתקרב לאט, בחום ועם צעצוע מעורר פחות פחד."},
+ {q:"למה בקרב שבט האפה כמעט אין חרדת זרים?",a:"כי התינוקות עוברים בין מבוגרים רבים כבר מהלידה",w:["כי אין שם זרים","כי התינוקות לא רואים טוב","כי הם גדלים לבד"],e:"זו מערכת טיפול קולקטיבית שנולדה מתמותת אימהות גבוהה."}]},
+q8:{t:"t1",v:[
+ {q:"מהו בסיס בטוח?",a:"מטפל מוכר שממנו התינוק יוצא לחקור ואליו חוזר לתמיכה",w:["חדר נעול","צעצוע אהוב","מקום שבו אין זרים"],e:"ההתנהגות מול זר היא איזון בין התקרבות להימנעות."},
+ {q:"מה נמצא אצל תינוקות בקיבוצים בישראל לגבי חרדת זרים?",a:"חרדת זרים גבוהה בהרבה מבעיר",w:["אין להם חרדת זרים","חרדה זהה לתינוקות בעיר","הם מעדיפים זרים"],e:"הם גרים בקהילות מבודדות שפגיעות למתקפות טרור."}]},
+q9:{t:"t2",v:[
+ {q:"מהי הירמזות חברתית?",a:"חיפוש פעיל של מידע רגשי מאדם מהימן במצב לא ברור",w:["חיקוי כל פעולה של מבוגר","פחד מזרים","התעלמות מרגשות של אחרים"],e:"מופיעה מגיל 8 עד 10 חודשים."},
+ {q:"מה השפיע יותר בהירמזות חברתית: קול או פנים?",a:"קול, לבד או עם פנים, יותר מפנים לבד",w:["פנים לבד","אין הבדל","אף אחד מהם"],e:"הקול מעביר רגש ומילים, והתינוק לא צריך להסתובב."}]},
+q10:{t:"t2",v:[
+ {q:"מה עשו בני 18 חודשים בניסוי הברוקולי והקרקרים?",a:"נתנו לאישה את המאכל שהיא הראתה שהיא אוהבת",w:["נתנו את מה שהם אהבו","לא נתנו כלום","נתנו את שניהם תמיד"],e:"בני 14 חודשים נתנו את מה שהם עצמם העדיפו."},
+ {q:"מה מתחילים תינוקות בני 3 חודשים לצפות באינטראקציה פנים אל פנים?",a:"שהשותף יגיב בהתאם למבטים, לחיוכים ולקולות שלהם",w:["שהמבוגר יתעלם","שיקבלו אוכל","שום דבר"],e:"זה בסיס לראיית אחרים ״כמוני״."}]},
+q11:{t:"t2",v:[
+ {q:"אילו רגשות נחשבים רגשות של מודעות עצמית?",a:"אשמה, בושה, מבוכה, קנאה וגאווה",w:["שמחה, עצב וכעס","פחד והפתעה","עניין וגועל"],e:"כל אחד מהם פוגע בתחושת העצמי או מחזק אותה."},
+ {q:"מתי מופיעים רגשות של מודעות עצמית?",a:"באמצע השנה השנייה, כשהמודעות לעצמי מתגבשת",w:["מהלידה","בגיל 3 חודשים","רק בגיל בית הספר"],e:"גאווה וקנאה מופיעות בערך בגיל שנתיים."}]},
+q12:{t:"t2",v:[
+ {q:"מה עוד נדרש לרגשות של מודעות עצמית מלבד מודעות לעצמי?",a:"הדרכה של מבוגר מתי להרגיש גאווה, בושה או אשמה",w:["שפה מלאה","גיל 5","ציונים בבית הספר"],e:"״בוא נראה כמה רחוק תזרוק!״ או ״תתבייש!״."},
+ {q:"איך שונה הגאווה בין המערב לסין ויפן?",a:"במערב גאווה על הישג אישי, ובסין ויפן הדגשת הצלחה אישית מעוררת מבוכה",w:["אין הבדל","בסין גאווה רק על הישגים אישיים","במערב גאווה אסורה"],e:"ואי־דאגה לזולת מעוררת שם בושה גדולה."}]},
+q13:{t:"t2",v:[
+ {q:"מהו ויסות עצמי רגשי?",a:"אסטרטגיות להתאמת המצב הרגשי לעוצמה נוחה שמאפשרת להשיג מטרות",w:["דיכוי כל רגש","בכי כדי לקבל עזרה","חיקוי רגשות של אחרים"],e:"הוא דורש בקרה שדורשת מאמץ."},
+ {q:"איך מווסתים תינוקות בחודשים הראשונים?",a:"בעיקר דרך הרגעה של המטפל: הרמה, נענוע, ליטוף ודיבור רך",w:["לבד לגמרי","במילים","בהסטת קשב מתוחכמת"],e:"ב־4 עד 6 חודשים הם כבר מסיטים קשב ומרגיעים את עצמם."}]},
+q14:{t:"t2",v:[
+ {q:"מה קורה כשהורים מתערבים רק כשהתינוק כבר נסער מאוד?",a:"הם מחזקים מעבר מהיר למצוקה, וקשה יותר להרגיע",w:["התינוק לומד להירגע לבד","התינוק נעשה רגוע יותר","אין השפעה"],e:"ומבני מוח שבולמים עקה עלולים לא להתפתח כראוי."},
+ {q:"למה בנים מקבלים יותר עידוד לדכא רגשות שליליים?",a:"כי הם מתקשים יותר בוויסות רגשות שליליים",w:["כי הם בוכים פחות","כי הם מבוגרים יותר","כי כך מסורת בלבד"],e:"כך מטופח ההבדל המוכר בין המינים בהבעת רגשות."}]},
+q15:{t:"t3",v:[
+ {q:"מהו מזג?",a:"הבדלים בין־אישיים יציבים ומוקדמים בתגובתיות ובוויסות עצמי",w:["מצב רוח רגעי","רמת האינטליגנציה","סגנון הלבוש"],e:"הוא אבן הפינה של האישיות."},
+ {q:"מה אחוז ה״ילדים הנוחים״ במחקר ניו יורק?",a:"40%",w:["10%","15%","80%"],e:"קשים 10%, מתחממים לאט 15%, ו־35% לא סווגו."}]},
+q16:{t:"t3",v:[
+ {q:"מה מאפיין ילד קשה לפי תומס וצ'ס?",a:"שגרה לא סדירה, קבלה איטית של חדש ותגובות שליליות ועזות",w:["עליז ומסתגל","לא פעיל ותגובות מתונות","שקט ורגוע תמיד"],e:"הוא בסיכון גבוה לבעיות הסתגלות."},
+ {q:"מתי מתחילים ילדים מתחממים לאט להראות קשיים?",a:"בגן ובבית הספר, כשמצפים מהם לתגובות מהירות ופעילות",w:["מהלידה","אף פעם","רק בבגרות"],e:"בהתחלה הם מראים פחות בעיות מילדים קשים."}]},
+q17:{t:"t3",v:[
+ {q:"מה ייחודי במודל של רוטבארט?",a:"הוא מבחין בין מצוקה מפחד למצוקה מרוגז",w:["יש בו רק ממד אחד","הוא כולל סדירות תפקודי הגוף","הוא לא כולל ויסות"],e:"והוא משמיט ממדים רחבים מדי כמו סדירות ועוצמה."},
+ {q:"מהי בקרה שדורשת מאמץ?",a:"היכולת לדכא באופן רצוני תגובה דומיננטית כדי לבצע תגובה מסתגלת יותר",w:["רמת פעילות גבוהה","פחד מזרים","שמחה תכופה"],e:"היא מנבאת התמדה, הישגים, מוסריות ושיתוף פעולה."}]},
+q18:{t:"t3",v:[
+ {q:"מה היתרון של דיווחי הורים על המזג?",a:"הם קלים ומבוססים על היכרות עמוקה עם הילד במצבים רבים",w:["הם אובייקטיביים לגמרי","הם כוללים מדדי מוח","הם לא מוטים כלל"],e:"החיסרון: הם עלולים להיות מוטים."},
+ {q:"מה החיסרון של תצפית מעבדה במזג?",a:"ילד מפוחד עלול להיות מוטרד מדי במקום הזר ולא לסיים את המפגש",w:["אין שליטה בתנאים","אי אפשר למדוד מדדים ביולוגיים","היא סובייקטיבית מאוד"],e:"מצד שני, היא מאפשרת שליטה ומדידות נוירוביולוגיות."}]},
+q19:{t:"t3",v:[
+ {q:"איזה חלק מבני 4 חודשים מצא קגן שמוטרדים בקלות מחידושים?",a:"כ־20%",w:["כ־80%","כ־5%","כ־50%"],e:"40% נהנו מחידושים, ורק 20% עד 25% מהקצוות שמרו על הסגנון."},
+ {q:"איזה מבנה מוח קשור לתגובה של ילדים ביישנים לחדש?",a:"האמיגדלה",w:["המוח הקטן","האונה העורפית","חוט השדרה"],e:"היא מעוררת את המערכת הסימפתטית ומכינה לאיום."}]},
+q20:{t:"t3",v:[
+ {q:"אילו מדדים גופניים מבדילים ילדים ביישנים מחברותיים?",a:"קצב לב גבוה יותר, יותר קורטיזול, אישונים מורחבים ואצבעות קרות",w:["חום גוף גבוה","קצב לב נמוך","פחות קורטיזול"],e:"וגם יותר פעילות EEG באונה המצחית הימנית."},
+ {q:"איזו הורות מעצימה ביישנות?",a:"הורות קרה, מענישה או מגוננת יתר על המידה",w:["דרישה מתונה לגשת לחדש","חום ותמיכה","עידוד סבלני"],e:"דרישה מתונה לגשת להתנסויות חדשות עוזרת."}]},
+q21:{t:"t4",v:[
+ {q:"מה רמת היציבות של המזג בינקות ובגיל הרך?",a:"נמוכה, ומתונה מגיל הגן ואילך",w:["גבוהה מאוד","מושלמת","אפסית בכל גיל"],e:"יש ילדים שלא משתנים, ורבים שכן."},
+ {q:"איך משתנה משמעות רמת הפעילות לאחר שהתינוק מתחיל לזחול?",a:"הפעיל נעשה החוקר הסקרן, והלא פעיל עשוי להיות מפוחד",w:["אין שינוי","הפעיל תמיד לא נינוח","הלא פעיל תמיד קשוב"],e:"בהתחלה תינוק פעיל ומתפתל הוא דווקא לא נינוח."}]},
+q22:{t:"t4",v:[
+ {q:"למה ניבוי המזג טוב יותר אחרי גיל 3?",a:"כי סגנונות התגובה כבר מגובשים, ויש קפיצה בבקרה שדורשת מאמץ",w:["כי המוח מפסיק להתפתח","כי ההורים מפסיקים להשפיע","כי אז הילדים מדברים"],e:"בין 2.5 ל־3 משתפרות משימות כמו המתנה ולחישה."},
+ {q:"מי מרוויחים הכי הרבה מהורים סבלניים ותומכים?",a:"ילדים עם מזג חששן, נרגן או שלילי",w:["ילדים נוחים בלבד","אף אחד","ילדים בלי רגשות"],e:"עם הורים לא רגישים, אותם ילדים בסיכון לבעיות."}]},
+q23:{t:"t4",v:[
+ {q:"איזה חלק מההבדלים במזג ובאישיות מיוחס לגנים?",a:"בערך מחצית",w:["כמעט הכול","כמעט כלום","רבע בלבד"],e:"תפקיד מתון, לפי מחקרי תאומים."},
+ {q:"איך מוסבר הרוגע של תינוקות סינים ויפנים?",a:"אולי גנים, אבל גם מתאם עם אמונות ופרקטיקות תרבותיות של מגע עדין וריסון רגשות",w:["רק גנים","רק תזונה","רק מזג האוויר"],e:"אימהות יפניות מדגישות קרבה פיזית, ואמריקניות גמילה מתלות."}]},
+q24:{t:"t4",v:[
+ {q:"באיזה תחום יש לבנות יתרון במזג?",a:"בבקרה שדורשת מאמץ",w:["ברמת הפעילות","בנועזות","באימפולסיביות"],e:"זה תורם לשיתוף פעולה ולהצלחה בבית הספר."},
+ {q:"איך הורים מחזקים הבדלי מגדר במזג?",a:"מעודדים בנים לפעילות ובנות לפנייה לעזרה וקרבה",w:["הם לא מחזקים","מעודדים בנות לנועזות","מעודדים בנים לביישנות"],e:"ומגיבים חיובית יותר לתכונות שמתאימות לסטריאוטיפ."}]},
+q25:{t:"t4",v:[
+ {q:"מה מיוחד בילדים עם גן 5-HTTLPR קצר?",a:"הם רגישים במיוחד גם להורות טובה וגם להורות גרועה",w:["הם לא מושפעים מההורות","הם תמיד תוקפניים","הם תמיד רגועים"],e:"עם הורות חמה הוויסות שלהם השתווה לבעלי סיכון נמוך."},
+ {q:"מה הורים עושים לעתים קרובות כשהם משווים בין אחאים?",a:"רואים יותר הבדלים ממה שצופים חיצוניים רואים",w:["רואים אותם זהים","לא שמים לב למזג","מדרגים בדיוק כמו החוקרים"],e:"תאומים לא זהים תוארו בידי ההורים כהפוכים."}]},
+q26:{t:"t4",v:[
+ {q:"מה המשמעות של ״גמישות״ בהקשר של הגן 5-HTTLPR?",a:"רגישות גבוהה להשפעות הסביבה, לטוב ולרע",w:["חוסר תגובה לסביבה","יכולת גופנית","מזג נוח"],e:"לכן ילדים כאלה מגיבים טוב במיוחד להתערבות."},
+ {q:"מה קרה לבני שנה ממשפחות עניות עם גנוטיפ בסיכון גבוה והורות לא רגישה?",a:"נעשו תגובתיים יותר בכעס, ובהמשך היו יותר תוקפנות והתנגדות",w:["לא השתנו","נעשו רגועים יותר","שיפרו את הוויסות"],e:"לילדים עם סיכון נמוך היה מעט שינוי."}]},
+q27:{t:"t4",v:[
+ {q:"מהו מודל טיב ההתאמה?",a:"סביבת גידול שמכירה במזג של הילד ובה בעת מעודדת תפקוד מסתגל יותר",w:["התאמת הילד לחלוטין להורים","בחירת בגדים מתאימים","התעלמות מהמזג"],e:"הציעו אותו תומס וצ'ס."},
+ {q:"איך ילד קשה והורים עלולים להיכנס למעגל שלילי?",a:"משמעת כועסת, התנגדות של הילד, יותר לחץ וכפייה וחוסר עקביות",w:["הם תמיד מסתדרים","ההורים נעשים רגישים יותר","הילד נרגע מעצמו"],e:"כך הסגנון הנרגן מתחזק."}]},
+q28:{t:"t4",v:[
+ {q:"מה קרה לקשר בין ביישנות להסתגלות בשנחאי בין 1990 ל־2002?",a:"מקשר חיובי הוא נחלש ואז התהפך, כמו במערב",w:["נשאר חיובי","תמיד היה שלילי","לא השתנה"],e:"בגלל כלכלת השוק שדורשת אסרטיביות. בכפר עדיין מעריכים ביישנות."},
+ {q:"באילו תנאים קשה יותר להעניק הורות טובה לילד קשה?",a:"בעיות נפשיות של ההורים, נישואים לא טובים ומצוקה כלכלית",w:["כשיש להורים זמן","בשגרה רגועה","כשיש תמיכה"],e:"תינוקות רוסים בשפל הכלכלי הראו יותר רגשות שליליים."}]},
+q29:{t:"t5",v:[
+ {q:"מה הראה הניסוי של הארלו עם קופי רזוס?",a:"הקופים התרפקו על אם מבד מגבת, אף שאם מחוטי תיל החזיקה את הבקבוק",w:["הקופים העדיפו את מי שהאכילה","הקופים לא נקשרו בכלל","הקופים נקשרו לחוקר"],e:"זה סותר את ההסבר שההיקשרות נשענת על האכלה."},
+ {q:"מה הבעיה בהסברים הפסיכואנליטי והביהביוריסטי להיקשרות?",a:"הם מתמקדים בהאכלה ובמטפל, ומתעלמים כמעט ממאפייני התינוק",w:["הם מתמקדים רק בתינוק","הם מבוססים על הארלו","אין בהם בעיה"],e:"תינוקות נקשרים גם לאב, לאחאים ולשמיכות."}]},
+q30:{t:"t5",v:[
+ {q:"מהי היקשרות?",a:"קשר חם וחזק לאנשים מיוחדים, שבו מתנחמים בקרבתם בעת עקה",w:["כל קשר עם זר","תלות באוכל","פחד מפרידה בלבד"],e:"במחצית השנייה של השנה הראשונה תינוקות נקשרים למי שנענה להם."},
+ {q:"למי עוד נקשרים תינוקות, מלבד מי שמאכיל אותם?",a:"לאב, לאחאים, לסבים ולחפצים רכים כמו שמיכות",w:["רק לאם","רק למי שמאכיל","לאף אחד"],e:"ההיקשרות אינה נשענת על סיפוק רעב."}]},
+q31:{t:"t5",v:[
+ {q:"לפי בולבי, מה הבסיס להיקשרות?",a:"מערכת מולדת שמשאירה את ההורה קרוב לשם הישרדות, הגנה ותמיכה בחקירה",w:["האכלה","חיקוי","עונש"],e:"הוא הושפע מההטבעה של לורנץ."},
+ {q:"מה מאפיין את שלב ״ההיקשרות החד־משמעית״?",a:"חרדת פרידה ושימוש במטפל כבסיס בטוח",w:["אין העדפה למוכר","משא ומתן מילולי","רק אותות מולדים"],e:"בין 6 עד 8 חודשים ל־18 עד 24 חודשים."}]},
+q32:{t:"t5",v:[
+ {q:"מה קורה בשלב טרום־ההיקשרות?",a:"אותות מולדים מקרבים מבוגרים, אבל אין התנגדות להישאר עם זר",w:["חרדת פרידה חזקה","משא ומתן עם ההורה","פחד מזרים"],e:"מהלידה עד 6 שבועות."},
+ {q:"למה המחאה על פרידה פוחתת בשלב היחסים ההדדיים?",a:"ייצוג ושפה מאפשרים להבין לאן ההורה הולך ומתי יחזור",w:["כי הפעוט מפסיק לאהוב","כי ההורים לא יוצאים","כי הפעוט עייף"],e:"קייטלין ביקשה סיפור לפני שההורים יצאו."}]},
+q33:{t:"t5",v:[
+ {q:"מהו מודל עבודה פנימי?",a:"מערכת ציפיות לגבי זמינות ותמיכה של דמויות ההיקשרות, שמדריכה יחסים עתידיים",w:["תוכנית עבודה של ההורים","מבחן אינטליגנציה","רפלקס מולד"],e:"הוא נעשה חלק חיוני מהאישיות."},
+ {q:"מי הביטו יותר בסרטון שבו ״המטפל״ לא חזר אל ״הילד הבוכה״?",a:"פעוטות עם היקשרות בטוחה",w:["פעוטות עם היקשרות לא בטוחה","כולם באותה מידה","אף אחד"],e:"זה הפר את הציפייה שלהם. הלא בטוחים לא הבחינו."}]},
+q34:{t:"t5",v:[
+ {q:"האם מודל העבודה הפנימי נקבע סופית בינקות?",a:"לא, הוא ממשיך להתעדכן עם יחסים עם הורים, אחאים וחברים",w:["כן, הוא קבוע","הוא נעלם בגיל שנתיים","הוא נקבע רק בהתבגרות"],e:"הוא מתרחב עם הכישורים הקוגניטיביים, הרגשיים והחברתיים."},
+ {q:"מאיזו השראה בא בולבי לתיאוריה שלו?",a:"מחקרי ההטבעה של לורנץ באפרוחי ברווזים",w:["הניסויים של פיאז'ה","מבחני המשכל","התניה אופרנטית"],e:"והוא הסכים עם פרויד על חשיבות איכות הקשר."}]},
+q35:{t:"t6",v:[
+ {q:"מה מגדיר במידה רבה את איכות ההיקשרות במצב הזר?",a:"התגובה לאיחוד עם ההורה",w:["כמות הבכי בפרידה","התגובה לצעצועים","התגובה לזר בלבד"],e:"חרדת הפרידה משתנה בין קבוצות."},
+ {q:"איך מתנהג תינוק עם היקשרות לא בטוחה־נמנעת באיחוד?",a:"נמנע מלברך את ההורה ולא מתרפק כשמרימים אותו",w:["שמח מאוד ונרגע מיד","נצמד וכועס","קופא בתנוחה מוזרה"],e:"הוא גם לא מוטרד כשההורה יוצא."}]},
+q36:{t:"t6",v:[
+ {q:"מהי היקשרות חסרת ארגון וכיוון?",a:"הדפוס הכי לא בטוח, עם התנהגות סותרת ומבולבלת באיחוד",w:["היקשרות בטוחה מאוד","היקשרות נמנעת קלה","אין התנהגות היקשרות"],e:"למשל הסטת מבט כשמוחזקים או קפיאה."},
+ {q:"כמה מהתינוקות במשפחות ממעמד בינוני בצפון אמריקה בעלי היקשרות בטוחה?",a:"כ־60%",w:["כ־15%","כ־10%","כ־95%"],e:"במשפחות ממעמד נמוך פחות."}]},
+q37:{t:"t6",v:[
+ {q:"מה חסרונות שאלון ה־Q-Sort?",a:"דורש זמן רב, צופה מומחה, ולא מבחין בין סוגי חוסר הביטחון",w:["מכסה מעט התנהגויות","מתאים רק לגיל שנה","מבוסס על חדר מעבדה"],e:"היתרון: מכסה יותר התנהגויות מחיי היום־יום."},
+ {q:"למה תינוקות יפנים מראים יותר היקשרות מתנגדת במצב הזר?",a:"כי כמעט לא משאירים אותם עם אחרים, אז המצב הזר מלחיץ במיוחד",w:["כי הם לא בטוחים באמת","כי האימהות קרות","כי הם לא מכירים צעצועים"],e:"והורים יפנים רואים בחיפוש תשומת לב דבר נורמלי."}]},
+q38:{t:"t6",v:[
+ {q:"מה נמצא לגבי היקשרות נמנעת אצל תינוקות גרמנים?",a:"היא שכיחה יותר, אולי בגלל שהורים מעודדים עצמאות ולא להיצמד",w:["היא לא קיימת","היא נדירה במיוחד","היא זהה לארה״ב"],e:"אצל הדוגון במאלי, שם האם תמיד זמינה, אין היקשרות נמנעת."},
+ {q:"איפה ההיקשרות נשארת בדרך כלל יציבה ובטוחה?",a:"במשפחות ממעמד בינוני עם תנאי חיים נאותים",w:["במשפחות עניות לחוצות","אצל ילדים חסרי ארגון","בשום מקום"],e:"במשפחות עניות לחוצות היא לרוב מתרחקת מביטחון."}]},
+q39:{t:"t7",v:[
+ {q:"מה קרה לילדים שטופלו במוסד בידי כ־50 מטפלים ואומצו אחרי גיל 4?",a:"רובם נקשרו להורים המאמצים, אבל עם יותר קשיים כמו ״ידידותיות יתר״ עם זרים",w:["אף אחד לא נקשר","לא היו שום קשיים","כולם חזרו למוסד"],e:"זה מראה שהיקשרות ראשונה יכולה להיווצר גם בגיל 4 עד 6."},
+ {q:"מה נמצא במוחם של ילדים מאומצים אחרי שהייה ממושכת במוסד?",a:"אמיגדלה גדולה מהרגיל, שקשורה להבנת רגשות וויסות גרועים",w:["מוח קטן מהרגיל","אין הבדל","קורטקס גדול יותר"],e:"כבר ב־7 חודשים יש ירידה ב־ERP להבעות רגש."}]},
+q40:{t:"t7",v:[
+ {q:"מהם ארבעת הגורמים שנחקרו כמשפיעים על היקשרות בטוחה?",a:"זמינות מטפל קבוע, איכות הטיפול, מאפייני התינוק וההקשר המשפחתי",w:["גיל, גובה, משקל ומין","רק גנים","רק כסף"],e:"כולם משפיעים יחד."},
+ {q:"מה המסקנה ממחקרי בתי היתומים?",a:"התפתחות רגשית תקינה תלויה בקשר הדוק עם מטפל מוקדם בחיים",w:["אין חשיבות לגיל האימוץ","צעצועים מחליפים מטפל","מוסדות טובים כמו משפחה"],e:"גם במוסד עם צעצועים רבים, תחלופת מטפלים פגעה."}]},
+q41:{t:"t7",v:[
+ {q:"מהו טיפול רגיש?",a:"תגובה מהירה, עקבית ומותאמת לתינוק, והחזקה עדינה",w:["תגובה רק לבכי חזק","גרייה מקסימלית","הגבלת התינוק"],e:"קשור להיקשרות בטוחה בתרבויות שונות."},
+ {q:"איזה תיאום בין מבוגר לתינוק מנבא הכי טוב היקשרות בטוחה?",a:"תיאום מתון, שבו המבוגר מקבל אי־התאמות ומתקן אותן",w:["תיאום הדוק מאוד","שום תיאום","תיאום רק בהאכלה"],e:"סנכרון אינטראקטיבי הוא ״ריקוד רגשי״ מכוונן."}]},
+q42:{t:"t7",v:[
+ {q:"מה מלמד המקרה של שבט הגוסי?",a:"שביטחון תלוי בטיפול קשוב לצרכים, לא בהכרח באינטראקציה רציפה",w:["שאין שם היקשרות","שחיבוק הוא תנאי הכרחי","שכל התינוקות לא בטוחים"],e:"האימהות כמעט לא מחבקות, אבל רוב התינוקות בטוחים."},
+ {q:"איזה טיפול מאפיין תינוקות עם היקשרות נמנעת?",a:"עודף גרייה וחודרנות",w:["טיפול לא עקבי","טיפול רגיש מאוד","התעללות קשה"],e:"ההימנעות היא בריחה מאינטראקציה משתלטת."}]},
+q43:{t:"t7",v:[
+ {q:"מה ניבא חוסר ביטחון אצל פגים במחקר שתואר?",a:"פגות יחד עם סיכון כלכלי או נפשי של האם, ולא פגות לבדה",w:["פגות לבדה","רק משקל לידה","רק מין התינוק"],e:"השילוב הפחית רגישות אימהית."},
+ {q:"מה נמצא בתאומים לגבי תורשתיות ההיקשרות?",a:"אין להיקשרות תורשתיות",w:["תורשתיות גבוהה","כמחצית תורשתית","תורשתיות מלאה"],e:"ושני שלישים מהאחאים מפתחים אותו דפוס למרות מזג שונה."}]},
+q44:{t:"t7",v:[
+ {q:"מתי הגן DRD4 7-repeat קשור להיקשרות חסרת ארגון?",a:"רק כשהאם חוותה אובדן לא פתור או טראומה",w:["תמיד","אף פעם","רק כשהאם רגישה"],e:"זו דוגמה לאינטראקציה בין גן לסביבה."},
+ {q:"איזה טיפול קשור להיקשרות חסרת ארגון וכיוון?",a:"התעללות, דיכאון או טראומה של ההורה, והתנהגות מאיימת או מפחידה",w:["טיפול רגיש מאוד","גרייה מתונה","טיפול עקבי וחם"],e:"ההורה גם מנחם וגם מפחיד, והתינוק מגיב בסתירה."}]},
+q45:{t:"t7",v:[
+ {q:"איך דיברו על ילדותם הורים לילדים בטוחים?",a:"באופן אובייקטיבי ומאוזן, בלי קשר לאיכות החוויות",w:["רק על חוויות טובות","בכעס ובלבול","בביטול חשיבות היחסים"],e:"מה שקובע הוא הדרך שבה רואים את הילדות, לא ההיסטוריה עצמה."},
+ {q:"מה הראה מחקר NICHD על מסגרות יום והיקשרות?",a:"טיפול לא הורי כשלעצמו לא פוגע, אבל שילוב סיכונים בבית ובמסגרת מגדיל חוסר ביטחון",w:["כל מסגרת פוגעת בהיקשרות","מסגרות תמיד משפרות היקשרות","אין קשר לאיכות"],e:"איכות ההורות משפיעה יותר מהחשיפה למסגרת."}]},
+q46:{t:"t7",v:[
+ {q:"מה קרה לטימי בגיל שנה, ולמה?",a:"התעלם מאמו כשבאה לקחת אותו, בגלל גירושים, לחץ ומעט זמן משותף",w:["רץ אליה בשמחה","בכה בלי הפסקה","נרדם"],e:"עם תמיכה ועצות, בגיל שנתיים היחסים השתפרו."},
+ {q:"מה קשור ליותר בעיות מוחצנות בגיל 4.5 עד 5 לפי NICHD?",a:"שהייה של מעל 30 שעות בשבוע במסגרת חיצונית",w:["שהייה בבית בלבד","טיפול אצל סבים","מסגרת איכותית קצרה"],e:"טיפול איכותי מגן, ובאוסטרליה ונורווגיה אין קשר כזה."}]},
+q47:{t:"t8",v:[
+ {q:"במה שונה המשחק של אבות מזה של אימהות?",a:"אבות נוטים למשחק פיזי וממריץ, אימהות למשחק עדין עם צעצועים ודיבור",w:["אין הבדל","אימהות משחקות יותר פיזית","אבות לא משחקים"],e:"משחק אבהי רגיש עוזר לוויסות ומכין לסביבות חדשות."},
+ {q:"מה מיוחד באבות משבט האקה?",a:"הם נמצאים במרחק יד מהתינוק יותר ממחצית היום",w:["הם כמעט לא רואים את התינוק","הם רק מאכילים","הם עובדים רחוק"],e:"זה קשור לשיתוף פעולה ואינטימיות יוצאי דופן בין בני הזוג."}]},
+q48:{t:"t8",v:[
+ {q:"מה מנבא חום אבהי לפי מחקרים בתרבויות שונות?",a:"כישורים קוגניטיביים, רגשיים וחברתיים, כמו חום אימהי ולפעמים יותר",w:["שום דבר","רק כישורים גופניים","פחות מחום אימהי תמיד"],e:"במערב גם פחות בעיות רגשיות ועבריינות."},
+ {q:"מה קשור למעורבות אבהית רבה יותר במערב?",a:"נישואים מאושרים ושיתוף פעולה עם בת הזוג",w:["שעות עבודה ארוכות","גירושים","הכנסה גבוהה בלבד"],e:"אי־שביעות רצון בנישואים קשורה לטיפול אבהי לא רגיש."}]},
+q49:{t:"t8",v:[
+ {q:"מהן משפחות שדילגו על דור?",a:"משפחות שבהן ילדים גדלים אצל סבים בלי ההורים",w:["משפחות בלי סבים","משפחות עם ילד יחיד","משפחות מאמצות"],e:"בארה״ב כ־2.4 מיליון ילדים, בדרך כלל בגלל בעיות של ההורים."},
+ {q:"איך מגיבים ילדים בגיל הגן להולדת אח?",a:"לעתים תובענות והיצמדות, אבל גם אהבה ודאגה לתינוק",w:["רק בשמחה","רק בתוקפנות","הם לא מגיבים"],e:"ההיקשרות הבטוחה עלולה לפחות, בעיקר מעל גיל שנתיים."}]},
+q50:{t:"t8",v:[
+ {q:"מה עוזר לילד הגדול להסתגל לאח החדש?",a:"זמן מיוחד איתו, סבלנות, הסבר על צורכי התינוק וזוגיות תומכת",w:["להתעלם ממנו","להעניש על קנאה","להפריד בין הילדים לגמרי"],e:"וחום אימהי כלפי שני הילדים."},
+ {q:"מה מקשה על סבים שמגדלים נכדים?",a:"קשיי הילדים, הפרעה של ההורים, עומס כלכלי ופחות זמן פנוי",w:["שום דבר","רק בעיות בריאות","רק משעמם להם"],e:"ובכל זאת הם יוצרים היקשרות משמעותית שמגינה על הילדים."}]},
+q51:{t:"t8",v:[
+ {q:"מה מסביר את חוסר העקביות בין היקשרות בינקות להתפתחות מאוחרת?",a:"המשכיות הטיפול: האם ההורות הרגישה נמשכת גם אחר כך",w:["הגנים בלבד","מזל","גובה הילד"],e:"השפעת ההיקשרות המוקדמת מותנית ביחסים העתידיים."},
+ {q:"מה קרה לילדים לא בטוחים שאימותיהם נעשו תומכות יותר?",a:"הם הראו סימנים להבראה התפתחותית",w:["הם נשארו בסיכון זהה","הם החמירו","אין מידע"],e:"זה מזכיר את הדיון בחוסן בפרק 1."}]},
+q52:{t:"t8",v:[
+ {q:"מתי מתחילה אינטראקציה מתואמת יותר עם בני גיל?",a:"בין שנה לשנתיים, כשמבינים שלאחר כוונות ורגשות משלו",w:["מהלידה","רק בגיל 5","רק בבית הספר"],e:"חיקוי הדדי, רדיפה והשלכת צעצועים יחד."},
+ {q:"מה מקדם חברות מוקדמת עם בני גיל?",a:"קשר חם עם ההורים ומסגרת איכותית בקבוצה קטנה",w:["בידוד מילדים","מסגרת עם הרבה ילדים ומעט מטפלים","טלוויזיה"],e:"בגן הילדים האלה חברותיים יותר."}]}
+};
+for(const t of T) t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id);
+const KEY=CONFIG.key;
+let S={q:{},read:{}};
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.q) S=s;}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const st=id=>S.q[id]||(S.q[id]={n:0,c:0,w:0,t:0,lv:-1});
+const mastered=id=>(S.q[id]?.c||0)>=2;
+const topicPct=t=>Math.round(100*t.qids.filter(mastered).length/t.qids.length);
+const topicStarted=t=>S.read[t.id]||t.qids.some(id=>S.q[id]&&S.q[id].n);
+const allIds=Object.keys(Q);
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+const pickVariant=id=>{const s=st(id),n=Q[id].v.length;return n>1?(s.lv+1)%n:0};
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const color=t=>`var(--${t.id})`;
+const app=document.getElementById("app");
+const LET=["א","ב","ג","ד"];
+
+function qCard(id,onDone,label){
+  const vi=pickVariant(id),v=Q[id].v[vi],opts=shuffle([v.a,...v.w]);
+  const box=document.createElement("div");box.className="q fade";
+  box.innerHTML=(label?`<span class="eyebrow">${label}</span>`:"")+`<div class="qtext">${esc(v.q)}</div><div class="opts"></div>`;
+  const wrap=box.querySelector(".opts");
+  opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt";b.dataset.a=o===v.a?"1":"";
+    b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+    b.onclick=()=>{const ok=o===v.a,s=st(id);s.n++;s.t=Date.now();s.lv=vi;ok?s.c++:(s.c=0,s.w++);save();
+      wrap.querySelectorAll("button").forEach(x=>{x.disabled=true;if(x.dataset.a)x.classList.add("right")});
+      if(!ok)b.classList.add("wrong");
+      const fb=document.createElement("div");fb.className="fb fade "+(ok?"ok":"no");
+      fb.innerHTML=`${ic(ok?"check":"x")}<div><strong>${ok?"נכון!":"לא בדיוק"}</strong>${esc(v.e)}</div>`;box.appendChild(fb);
+      const nx=document.createElement("button");nx.className="primary";nx.textContent="המשך";nx.style.alignSelf="flex-start";
+      nx.onclick=()=>onDone(ok);box.appendChild(nx);nx.focus({preventScroll:true});nx.scrollIntoView({block:"nearest",behavior:"smooth"});
+    };wrap.appendChild(b)});
+  return box;
+}
+
+function home(){
+  document.body.style.removeProperty("--c");
+  const started=T.filter(topicStarted);
+  const total=Math.round(100*allIds.filter(mastered).length/allIds.length);
+  const weak=allIds.filter(id=>S.q[id]&&S.q[id].n&&!mastered(id)).length;
+  app.innerHTML=`<div class="stack fade">
+   <section class="cover" style="--c:var(--accent)">
+    <div class="cover-art">${FIG[CONFIG.cover]()}</div>
+    <div class="cover-body">
+     <span class="eyebrow">${CONFIG.eyebrow}</span>
+     ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
+     <p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר עם שאלות גם מנושאים קודמים.</p>
+     <div class="stats">
+      <div class="ring" style="--p:${total}"><span>${total}%</span></div>
+      <div class="stat-text"><b>${total===0?"עוד לא התחלת":total>=80?"אתה שולט בחומר":"בדרך"}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
+      <button class="primary review-btn" id="rev" ${started.length?"":"disabled"}>${ic("cycle")}<span>${started.length?"חזרה מהירה":"חזרה מהירה (אחרי נושא ראשון)"}</span></button>
+     </div>
+    </div>
+   </section>
+   <div class="grid" id="list"></div>
+   <div class="foot"><a href="../#dev" style="color:var(--accent);font-weight:700;text-decoration:none">→ לקורס</a><span>${CONFIG.note}</span><button class="ghost" id="reset">איפוס התקדמות</button></div>
+  </div>`;
+  document.querySelector("#rev svg").style.cssText="width:20px;height:20px";
+  const list=app.querySelector("#list");
+  T.forEach((t,i)=>{const p=topicPct(t),b=document.createElement("button");b.className="tcard";b.style.setProperty("--c",color(t));
+    const status=!topicStarted(t)?"לא התחלת":p>=80?"שולט":"בתהליך";
+    b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
+    b.onclick=()=>topic(i,0);list.appendChild(b)});
+  app.querySelector("#rev").onclick=review;
+  const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
+  scrollTo(0,0);
+}
+
+function bar(title,n,i,label){
+  return `<div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">${label}</span></div><div class="steps">${Array.from({length:n},(_,k)=>`<i class="${k<=i?"on":""}"></i>`).join("")}</div></div><span class="eyebrow">${title}</span>`;
+}
+
+function topic(ti,bi){
+  const t=T[ti],blk=t.blocks[bi];document.body.style.setProperty("--c",color(t));
+  app.innerHTML=`<div class="stack">${bar(`נושא ${ti+1} · ${t.title}`,t.blocks.length+1,bi,`קטע ${bi+1} מתוך ${t.blocks.length}`)}
+   <article class="card fade"><h3>${blk.h}</h3>${blk.html}</article><div id="slot"></div></div>`;
+  app.querySelector("#back").onclick=home;
+  const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;save();quiz(ti)}};
+  const slot=app.querySelector("#slot");
+  if(blk.q)slot.appendChild(qCard(blk.q,next,"בדיקה קצרה"));
+  else{const b=document.createElement("button");b.className="primary";b.textContent="המשך";b.onclick=next;slot.appendChild(b)}
+  scrollTo(0,0);
+}
+
+function runSet(title,ids,c,onEnd){
+  let i=0,right=0;document.body.style.setProperty("--c",c);
+  const step=()=>{
+    if(i>=ids.length)return onEnd(right,ids.length);
+    const id=ids[i],from=T.find(t=>t.id===Q[id].t);
+    app.innerHTML=`<div class="stack">${bar(title,ids.length,i,`שאלה ${i+1} מתוך ${ids.length}`)}<div id="slot"></div></div>`;
+    app.querySelector("#back").onclick=home;
+    const card=qCard(id,ok=>{if(ok)right++;i++;step()},from.title);card.style.setProperty("--c",color(from));
+    app.querySelector("#slot").appendChild(card);scrollTo(0,0);
+  };step();
+}
+
+function quiz(ti){
+  const t=T[ti];
+  const prev=T.slice(0,ti).filter(topicStarted).flatMap(x=>x.qids);
+  const extra=shuffle(prev).sort((a,b)=>st(a).c-st(b).c).slice(0,2);
+  runSet(`מבחן סיום · ${t.title}`,shuffle(t.qids).concat(extra),color(t),(r,n)=>done(r,n,ti));
+}
+
+function review(){
+  const pool=T.filter(topicStarted).flatMap(t=>t.qids),now=Date.now();
+  const score=id=>{const s=S.q[id]||{n:0,c:0,w:0,t:0};return (s.n?0:2)+s.w*2+(s.c<2?3:0)+Math.min(3,(now-s.t)/864e5)+Math.random()*2};
+  const ids=pool.map(id=>[id,score(id)]).sort((a,b)=>b[1]-a[1]).slice(0,12).map(x=>x[0]);
+  runSet("חזרה מהירה",shuffle(ids),"var(--accent)",(r,n)=>done(r,n,null));
+}
+
+function done(r,n,ti){
+  const nextT=ti!=null&&ti+1<T.length?ti+1:null,pct=Math.round(100*r/n);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">${ti!=null?`סיום נושא ${ti+1} · ${T[ti].title}`:"סיום חזרה מהירה"}</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct};--accent:var(--c)"><span>${pct}%</span></div><div class="big">${r}/${n}</div></div>
+    <p>${r===n?"מצוין, הכל נכון.":r>=n*0.7?"טוב מאוד. מה שטעית בו יחזור בחזרה המהירה, בניסוח אחר.":"כדאי לעבור שוב על הנושא. השאלות שטעית בהן יחזרו בחזרה המהירה."}</p>
+    <div class="row">${nextT!=null?`<button class="primary" id="nx" style="--c:${color(T[nextT])}">לנושא הבא: ${T[nextT].title}</button>`:""}<button id="hm">לכל הנושאים</button></div>
+   </article></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;
+  const nx=app.querySelector("#nx");if(nx)nx.onclick=()=>topic(nextT,0);
+  scrollTo(0,0);
+}
+home();
+</script>
+</body>
+</html>

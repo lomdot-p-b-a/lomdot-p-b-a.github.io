@@ -27,3 +27,9 @@
 ## עוד פתוח
 - מאמר 4/4 לתרגיל 3 במבוא לפסיכולוגיה (עוד לא הועלה).
 - "ארגונים - מבנים ארגוניים" עמ' 77–115 (סריקה) לקורס הניהול. מחכה ל-PDF מהמשתמש.
+
+## Notes added (dev chapters 2, 5, 6, 7)
+- Modules m18–m21 = dev/ch2, ch5, ch6, ch7 (keys lomda-dev-ch2/5/6/7).
+- Do NOT run fixq.py on a T file whose html fields are already backtick strings that contain Hebrew quote marks (״ / האו"ם). It mis-pairs quotes. Write html as backticks from the start and use ״ for Hebrew abbreviations inside double-quoted helper args.
+- Page ranges with en dash (92–111) render reversed in RTL. Wrap each range in ⁦…⁩ (hub `sub` and CONFIG `cite`), or write "X עד Y" in body text.
+- In SVG legends/labels (RTL), text-anchor="start" puts the text to the LEFT of x; "end" to the right.
