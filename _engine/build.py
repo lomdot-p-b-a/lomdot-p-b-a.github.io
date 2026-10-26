@@ -1,6 +1,6 @@
 import sys,subprocess,os
 d=os.path.dirname(os.path.abspath(__file__))
-COURSE={'mgmt':None,'intro':('#6a46c2','#ad90f2')}
+COURSE={'mgmt':None,'intro':('#6a46c2','#ad90f2'),'dev':('#2b8546','#6dcf8e')}
 def build(m,title,out,site=True,course='mgmt'):
     r=lambda f:open(os.path.join(d,f)).read()
     js=r(f'{m}_cfg.js')+r('icons.js')+r(f'{m}_fig.js')+r('helpers.js')+r(f'{m}_T.js')+r(f'{m}_Q.js')+r('app.js')

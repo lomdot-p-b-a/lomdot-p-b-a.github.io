@@ -148,7 +148,9 @@ const COURSES=[
   {title:"טיפול בילדה שחוותה התעללות מינית במשפחה - במסגרת קבוצת פסיכודרמה לילדים",sub:"תיאור מקרה · פסיכודרמה",href:"intro/psychodrama.html",key:"lomda-intro-psychodrama",total:34}
  ]},
  {id:"social",name:"פסיכולוגיה חברתית א'",tag:"פסיכולוגיה",items:[]},
- {id:"dev",name:"פסיכולוגיה התפתחותית א'",tag:"פסיכולוגיה",items:[]},
+ {id:"dev",name:"פסיכולוגיה התפתחותית א'",tag:"פסיכולוגיה",items:[
+  {title:"פרק 1 - היסטוריה, תיאוריה ואסטרטגיות מחקר",sub:"עמ' 3–13, 34–40, 42–64",href:"dev/ch1.html",key:"lomda-dev-ch1",total:52}
+ ]},
  {id:"phys",name:"יסודות פיזיולוגיים של התנהגות",tag:"פסיכולוגיה",items:[]}
 ];
 function stats(key){try{const s=JSON.parse(localStorage.getItem(key)||"null");if(!s||!s.q)return null;const v=Object.values(s.q);if(!v.some(x=>x.n))return null;return v.filter(x=>x.c>=2).length}catch(e){return null}}
