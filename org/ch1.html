@@ -14,7 +14,7 @@
 :root{
   --bg:#eef2f4; --surface:#ffffff; --raised:#f7f9fa; --ink:#15222a; --muted:#4c5b66; --line:#dbe2e6;
   --accent:#2457a6; --mark:#ffe27a; --good:#23855a; --good-soft:#e2f4ea; --bad:#c2452d; --bad-soft:#fbe6e1;
-  --t1:#d35d36; --t2:#3667cf; --t3:#0e8a7c; --t4:#8448c9; --t5:#b9800c; --t6:#2a7fa6;
+  --t1:#d35d36; --t2:#3667cf; --t3:#0e8a7c; --t4:#8448c9; --t5:#b9800c; --t6:#2a7fa6; --t7:#b4436c; --t8:#5a6b2e;
   --display:"Suez One","Frank Ruhl Libre","David",serif;
   --body:"Rubik","Arial Hebrew","Segoe UI",Arial,sans-serif;
   --shadow:0 1px 2px rgba(21,34,42,.06),0 8px 24px rgba(21,34,42,.07);
@@ -22,11 +22,11 @@
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
   --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
-  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
   --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
-  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;font-weight:500;line-height:1.75;direction:rtl}
 .wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 56px}
 h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
@@ -41,6 +41,7 @@ button[disabled]{opacity:.55;cursor:default}
 .ghost{background:transparent;border:none;color:var(--muted);padding:6px 2px}
 .ghost:hover{color:var(--ink)}
 .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.badge{display:inline-block;align-self:flex-start;font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:99px;background:var(--accent);color:var(--surface);margin-bottom:6px}.entitle{display:inline;unicode-bidi:isolate;font-family:Rubik,system-ui,sans-serif;font-weight:800}.hetitle{margin:4px 0 0;font-weight:700;font-size:1.05rem}.cite{text-align:right;margin:4px 0 0;font-size:.85rem;color:var(--muted)}.cite a{color:var(--accent)}
 .eyebrow{font-size:.8rem;letter-spacing:.05em;font-weight:600;color:var(--c,var(--muted))}
 
 /* home */
@@ -178,7 +179,12 @@ const I={
  bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/>',
  check:'<circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/>',
  x:'<circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/>',
- lock:'<rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>'
+ lock:'<rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>',
+ moon:'<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>',
+ brain:'<path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a2 2 0 0 0-3-1z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/>',
+ phone:'<rect x="6.5" y="2" width="11" height="20" rx="2.5"/><path d="M10.5 18.5h3"/>',
+ flask:'<path d="M9 2.5h6M10 2.5v6L4.5 19a2 2 0 0 0 1.8 2.9h11.4a2 2 0 0 0 1.8-2.9L14 8.5v-6"/><path d="M7 15h10"/>',
+ leaf:'<path d="M5 19C5 10 11 4 20 4c0 9-6 15-15 15z"/><path d="M5 19l8-8"/>'
 };
 const ic=(k,cls="")=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="${cls}" aria-hidden="true">${I[k]}</svg>`;
 
@@ -230,6 +236,7 @@ const FIG={
   <text x="330" y="155" text-anchor="middle" font-size="13" font-weight="700" class="f-ink">רבים</text><text x="330" y="171" text-anchor="middle" font-size="11" class="f-mut">סמכות מוגבלת</text></svg>`
 };
 
+const E=t=>`<span class="en">(${t})</span>`;
 const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</figcaption>`:""}</figure>`;
 const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
 const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;
@@ -268,6 +275,9 @@ const T=[
   {h:"למה צריך ארגונים?",html:`<p>הפרק מציין שלוש בעיות שארגונים פותרים טוב יותר מיחידים, משפחות או קהילות:</p>${tiles([["factory","ייצור המוני","חלוקת עבודה, טכנולוגיה ומומחיות מוזילות ייצור"],["question","אי-ודאות","עסקאות מורכבות שהשוק לא מצליח לווסת"],["data","עיבוד מידע","יותר מידע ממה שאדם אחד יכול לעבד"]])}${ex("יצרן יחיד מפיק כמויות קטנות במחיר גבוה. מפעל עם פס ייצור מספק ביקוש של מיליונים.")}`,q:"q31"},
   {h:"אי-ודאות ומידע",html:`${def("עסקאות מותנות","בעסקאות מורכבות, כמו רכישות עתידיות, חוזים ארוכים או אשראי גדול, <mark>מנגנון המחירים מאבד את כושר הוויסות</mark>. ארגונים מפזרים סיכונים ונהנים מיתרונות לגודל.")}${who("א","ארו, ויליאמסון","1974, 1975","הסבירו למה ארגונים עדיפים על השוק בתנאי אי-ודאות.")}${who("ס","סיימון","1957","יכולתו של אדם לאסוף ולעבד מידע <mark>מוגבלת</mark>. ארגון מאגם מידע ממקורות רבים ומנצל מומחים.")}`,q:"q33"},
   {h:"סיכום הפרק",html:`<p>ארגונים צמחו יחד עם התיעוש, העיור וכלכלת השוק. הם <mark>מערכות חברתיות תכליתיות</mark> שמפיקות מוצרים ושירותים בחליפין עם הסביבה.</p>${def("אבל","ארגונים <b>אינם מושלמים</b>: יש בהם חיכוכים, מאבקי כוח, אבטלה סמויה וניצול לרעה של סמכויות. דווקא זה מבדיל אותם ממכונות.")}${rem("למה זה חשוב לכם: הבנת ארגונים שימושית בניהול, שיווק, מינהל ציבורי ופעילות פוליטית.")}`,q:"q34"}
+ ]},
+ {id:"t6",icon:"check",title:"תרגול בסגנון המבחן",blocks:[
+  {h:"מושגים מהמבחן לדוגמה",html:`<p>שני מושגים מההרצאות שמופיעים במבחן לדוגמה:</p>${tiles([["target","מטרות תפעוליות","ספציפיות וניתנות למדידה, למשל יעד מספרי עם תאריך"],["pyramid","חוק הברזל של האוליגרכיה","מיכלס: בכל ארגון הכוח מתרכז בידי מעטים בראשו"]])}${rem("כדאי להכיר גם את המסיחים: <b>חוק פרקינסון</b> (העבודה מתרחבת לפי הזמן שהוקצב), <b>עקרון פיטר</b> (מתקדמים עד לדרגת חוסר היכולת) ו<b>היפוך מטרות</b> (הכלל הופך למטרה).")}<p>השאלה הראשונה בכל זוג לקוחה מקובץ <b>השאלות לדוגמה למבחן</b> של הקורס (עם התשובה לפי המפתח), והשנייה היא שאלה מקבילה בסגנון דומה.</p>`,q:"eo1"}
  ]}
 ];
 const Q={
@@ -371,7 +381,13 @@ q33:{t:"t5",v:[
  {q:"מה היתרון של ארגונים בעיבוד מידע לעומת יחיד?",a:"הם אוספים ומעבדים מידע ממקורות רבים ומנצלים ידע של מומחים, מעבר ליכולת של אדם אחד",w:["הם תמיד צודקים בהחלטות","הם לא צריכים מידע כדי להחליט","הם מעבדים מידע לאט יותר אבל בזול"],e:"וגם: הם פחות מושפעים מהטיות אישיות."},
  {q:"הרעיון שיכולת האדם לאסוף ולעבד מידע מוגבלת מיוחס ל:",a:"סיימון",w:["ובר","ברנרד","ברטלנפי"],e:"סיימון (1957), הרציונליות המוגבלת."}]},
 q34:{t:"t5",v:[
- {q:"מה אומר הפרק בסיכום על חסרונות ארגונים?",a:"ארגונים אינם מושלמים: יש בהם מאבקי כוח, חיכוכים וניצול לרעה של סמכויות",w:["ארגונים יעילים לחלוטין","החסרונות קיימים רק בארגונים ציבוריים","אין לארגונים חסרונות של ממש"],e:"ודווקא זה מבדיל אותם ממכונות."}]}
+ {q:"מה אומר הפרק בסיכום על חסרונות ארגונים?",a:"ארגונים אינם מושלמים: יש בהם מאבקי כוח, חיכוכים וניצול לרעה של סמכויות",w:["ארגונים יעילים לחלוטין","החסרונות קיימים רק בארגונים ציבוריים","אין לארגונים חסרונות של ממש"],e:"ודווקא זה מבדיל אותם ממכונות."}]},
+eo1:{t:"t6",v:[
+ {q:"על מטרות תפעוליות להיות:",a:"ספציפיות וניתנות למדידה",w:["מוסכמות על כלל העובדים","כתובות","כל התשובות נכונות"],e:"מטרה תפעולית מתורגמת לפעולה, ולכן צריך לדעת בדיוק מה היא ואיך בודקים אם הושגה."},
+ {q:"איזו מהבאות היא מטרה תפעולית?",a:"להגדיל את המכירות ב־10% עד סוף הרבעון",w:["להיות החברה הטובה בעולם","לשרת את הקהילה","לקדם מצוינות"],e:"יש בה יעד מספרי וזמן, ואפשר למדוד אותה."}]},
+eo2:{t:"t6",v:[
+ {q:"על פי חוק הברזל של האוליגרכיה (של מיכלס):",a:"ריכוז הכוח הוא בידי מעטים הנמצאים בראש הארגון",w:["העבודה מתרחבת לפי הזמן שהוקצב להשלמתה","עובדים שוכחים שההקפדה על פרטים היא אמצעי ולא מטרה","כל אדם נוטה להתקדם עד לדרגה בה מוכח חוסר היכולת שלו"],e:"המסיחים: חוק פרקינסון, היפוך מטרות ועקרון פיטר."},
+ {q:"איזה \"חוק\" מתאר שכל אדם נוטה להתקדם עד לדרגה שבה מוכח חוסר היכולת שלו?",a:"עקרון פיטר",w:["חוק הברזל של האוליגרכיה","חוק פרקינסון","הדגם האידיאלי של ובר"],e:"חוק פרקינסון: העבודה מתרחבת לפי הזמן שהוקצב."}]}
 };
 for(const t of T) t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id);
 const KEY=CONFIG.key;
@@ -418,7 +434,7 @@ function home(){
     <div class="cover-art">${FIG[CONFIG.cover]()}</div>
     <div class="cover-body">
      <span class="eyebrow">${CONFIG.eyebrow}</span>
-     <h1>לומדת חובת קריאה: ${CONFIG.title}</h1>
+     ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
      <p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר עם שאלות גם מנושאים קודמים.</p>
      <div class="stats">
       <div class="ring" style="--p:${total}"><span>${total}%</span></div>

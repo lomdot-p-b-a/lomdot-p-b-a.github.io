@@ -14,7 +14,7 @@
 :root{
   --bg:#eef2f4; --surface:#ffffff; --raised:#f7f9fa; --ink:#15222a; --muted:#4c5b66; --line:#dbe2e6;
   --accent:#2457a6; --mark:#ffe27a; --good:#23855a; --good-soft:#e2f4ea; --bad:#c2452d; --bad-soft:#fbe6e1;
-  --t1:#d35d36; --t2:#3667cf; --t3:#0e8a7c; --t4:#8448c9; --t5:#b9800c; --t6:#2a7fa6;
+  --t1:#d35d36; --t2:#3667cf; --t3:#0e8a7c; --t4:#8448c9; --t5:#b9800c; --t6:#2a7fa6; --t7:#b4436c; --t8:#5a6b2e;
   --display:"Suez One","Frank Ruhl Libre","David",serif;
   --body:"Rubik","Arial Hebrew","Segoe UI",Arial,sans-serif;
   --shadow:0 1px 2px rgba(21,34,42,.06),0 8px 24px rgba(21,34,42,.07);
@@ -22,11 +22,11 @@
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
   --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
-  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
   --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
-  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;font-weight:500;line-height:1.75;direction:rtl}
 .wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 56px}
 h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
@@ -41,6 +41,7 @@ button[disabled]{opacity:.55;cursor:default}
 .ghost{background:transparent;border:none;color:var(--muted);padding:6px 2px}
 .ghost:hover{color:var(--ink)}
 .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.badge{display:inline-block;align-self:flex-start;font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:99px;background:var(--accent);color:var(--surface);margin-bottom:6px}.entitle{display:inline;unicode-bidi:isolate;font-family:Rubik,system-ui,sans-serif;font-weight:800}.hetitle{margin:4px 0 0;font-weight:700;font-size:1.05rem}.cite{text-align:right;margin:4px 0 0;font-size:.85rem;color:var(--muted)}.cite a{color:var(--accent)}
 .eyebrow{font-size:.8rem;letter-spacing:.05em;font-weight:600;color:var(--c,var(--muted))}
 
 /* home */
@@ -178,7 +179,12 @@ const I={
  bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/>',
  check:'<circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/>',
  x:'<circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/>',
- lock:'<rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>'
+ lock:'<rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>',
+ moon:'<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>',
+ brain:'<path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a2 2 0 0 0-3-1z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/>',
+ phone:'<rect x="6.5" y="2" width="11" height="20" rx="2.5"/><path d="M10.5 18.5h3"/>',
+ flask:'<path d="M9 2.5h6M10 2.5v6L4.5 19a2 2 0 0 0 1.8 2.9h11.4a2 2 0 0 0 1.8-2.9L14 8.5v-6"/><path d="M7 15h10"/>',
+ leaf:'<path d="M5 19C5 10 11 4 20 4c0 9-6 15-15 15z"/><path d="M5 19l8-8"/>'
 };
 const ic=(k,cls="")=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="${cls}" aria-hidden="true">${I[k]}</svg>`;
 
@@ -248,6 +254,9 @@ const T=[
   {h:"תורת ההוגנות",html:`${def("מושג מפתח",`<mark>תורת ההוגנות</mark> ${E("Equity theory")}: אנשים משווים את היחס בין <b>התשומות</b> שלהם (מאמץ, ניסיון, השכלה) ל<b>תוצאות</b> (שכר, קידום, הכרה) לאותו יחס אצל אחרים, ופועלים לתקן חוסר הוגנות.`)}<p><b>ארבעה סוגי השוואה:</b> עצמי-בפנים (תפקיד אחר שלי בארגון), עצמי-בחוץ (עבודה קודמת שלי), אחר-בפנים (עמית בארגון), אחר-בחוץ (מישהו בארגון אחר).</p><p><b>שש תגובות לחוסר הוגנות:</b> לשנות את התשומות, לשנות את התוצאות, לעוות את התפיסה של עצמי, לעוות את התפיסה של אחרים, לבחור מישהו אחר להשוות אליו, או לעזוב.</p>${rem("תשלום יתר כמעט לא משנה התנהגות: אנשים סובלניים הרבה יותר לחוסר הוגנות לטובתם.")}`,q:"m21"},
   {h:"צדק ארגוני",html:`<p>הצדק הארגוני מרחיב את תורת ההוגנות לתמונה רחבה יותר:</p>${tiles([["pie","צדק חלוקתי","האם <b>הכמות</b> והחלוקה של התגמולים הוגנות"],["doc","צדק פרוצדורלי","האם <b>התהליך</b> שבו הוחלט הוגן. כולל שליטה בתהליך (להשמיע את עמדתך) והסברים"],["hand","צדק בין-אישי (אינטראקטיבי)","האם מתייחסים אליי <b>בכבוד, באכפתיות ובהתחשבות</b>"]])}${rem("צדק פרוצדורלי הופך חשוב במיוחד כשהצדק החלוקתי חסר: כשלא קיבלנו מה שרצינו, אנחנו מתמקדים בשאלה למה.")}`,q:"m24"},
   {h:"תורת הציפיות של ורום",html:`<p>אחת התיאוריות המקובלות ביותר: עובד יתאמץ אם הוא מאמין שהמאמץ יוביל להערכה טובה, שההערכה תוביל לתגמול, ושהתגמול יספק את המטרות האישיות שלו.</p>${fig("expect")}${ex("סטודנט שבטוח שגם אם ילמד קשה לא יקבל ציון גבוה (קשר 1 חלש), או שהציון לא ישנה לו כלום (קשר 3 חלש), לא יתאמץ.")}`,q:"m26"}
+ ]},
+ {id:"t6",icon:"check",title:"תרגול בסגנון המבחן",blocks:[
+  {h:"מושגים מהמבחן לדוגמה",html:`<p>במבחן לדוגמה יש שאלת יישום על <b>הרצברג</b>: צריך למיין כל פרט בתרחיש לשתי קבוצות.</p>${tiles([["bulb","מניעים (אינטרינזיים)","הכרה, אחריות, קידום, הישגים, העבודה עצמה"],["scales","היגיינה (אקסטרינזיים)","שכר, קביעות, תנאים פיזיים, יחסים עם עמיתים, מדיניות החברה"]])}<p>השאלה הראשונה בכל זוג לקוחה מקובץ <b>השאלות לדוגמה למבחן</b> של הקורס (עם התשובה לפי המפתח), והשנייה היא שאלה מקבילה בסגנון דומה.</p>`,q:"em1"}
  ]}
 ];
 const Q={
@@ -321,7 +330,10 @@ m26:{t:"t5",v:[
  {q:"מהם שלושת הקשרים בתורת הציפיות של ורום?",a:"מאמץ-ביצועים, ביצועים-תגמול, תגמול-מטרות אישיות",w:["צורך-דחף-תגמול","תשומות-תוצאות-השוואה","מטרה-משוב-ביצועים"],e:"אם אחד מהקשרים חלש, המוטיבציה נפגעת."},
  {q:"עובדת בטוחה שגם אם תעבוד קשה, הבונוס יחולק לפי קשרים ולא לפי ביצועים. איזה קשר חלש אצלה?",a:"ביצועים-תגמול",w:["מאמץ-ביצועים","תגמול-מטרות אישיות","כולם חזקים"],e:"היא לא מאמינה שביצועים טובים יובילו לתגמול."}]},
 m27:{t:"t5",v:[
- {q:"עובד מקבל בונוס כספי, אבל מה שבאמת חשוב לו זה זמן עם המשפחה. איזה קשר חלש בתורת הציפיות?",a:"תגמול-מטרות אישיות",w:["מאמץ-ביצועים","ביצועים-תגמול","אף אחד"],e:"התגמול לא מספק את המטרות האישיות שלו, ולכן לא מניע."}]}
+ {q:"עובד מקבל בונוס כספי, אבל מה שבאמת חשוב לו זה זמן עם המשפחה. איזה קשר חלש בתורת הציפיות?",a:"תגמול-מטרות אישיות",w:["מאמץ-ביצועים","ביצועים-תגמול","אף אחד"],e:"התגמול לא מספק את המטרות האישיות שלו, ולכן לא מניע."}]},
+em1:{t:"t6",v:[
+ {q:"אליעזר מקבל מהבוס את ההכרה שהוא מייחל לה, ומרגיש שניתנת לו אחריות רבה ושיש לו אפשרויות קידום. אבל השכר לא גבוה, אין קביעות, התנאים הפיזיים לא נוחים והיחסים עם העמיתים לא טובים. לפי תיאוריית שני הגורמים של הרצברג, אליעזר:",a:"חש אדישות, כי מקבל את הצרכים האינטרינזיים אך לא את האקסטרינזיים",w:["חש אדישות, כי מקבל את הצרכים האקסטרינזיים אך לא את האינטרינזיים","חש שביעות רצון בתפקיד","חש אי־שביעות רצון בתפקיד"],e:"זו התשובה לפי מפתח המבחן לדוגמה. הגורמים המניעים (הכרה, אחריות, קידום) קיימים, וגורמי ההיגיינה (שכר, קביעות, תנאים, יחסים) חסרים."},
+ {q:"לפי הרצברג, איזה מהבאים הוא גורם היגיינה (אקסטרינזי)?",a:"שכר ותנאי עבודה",w:["הכרה","אחריות","אפשרויות קידום"],e:"גורמי היגיינה מונעים חוסר שביעות רצון, אבל לא יוצרים מוטיבציה."}]}
 };
 for(const t of T) t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id);
 const KEY=CONFIG.key;
@@ -368,7 +380,7 @@ function home(){
     <div class="cover-art">${FIG[CONFIG.cover]()}</div>
     <div class="cover-body">
      <span class="eyebrow">${CONFIG.eyebrow}</span>
-     <h1>לומדת חובת קריאה: ${CONFIG.title}</h1>
+     ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
      <p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר עם שאלות גם מנושאים קודמים.</p>
      <div class="stats">
       <div class="ring" style="--p:${total}"><span>${total}%</span></div>
