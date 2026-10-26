@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>לומדת חובת קריאה: Evidence for Infants' Internal Working Models of Attachment</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Rubik:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: a study notebook. Home = illustrated cover + topic cards; topic = one reading card at a time, with a highlighter for key terms and drawn figures */
+:root{
+  --bg:#eef2f4; --surface:#ffffff; --raised:#f7f9fa; --ink:#15222a; --muted:#4c5b66; --line:#dbe2e6;
+  --accent:#2457a6; --mark:#ffe27a; --good:#23855a; --good-soft:#e2f4ea; --bad:#c2452d; --bad-soft:#fbe6e1;
+  --t1:#d35d36; --t2:#3667cf; --t3:#0e8a7c; --t4:#8448c9; --t5:#b9800c; --t6:#2a7fa6; --t7:#b4436c; --t8:#5a6b2e;
+  --display:"Suez One","Frank Ruhl Libre","David",serif;
+  --body:"Rubik","Arial Hebrew","Segoe UI",Arial,sans-serif;
+  --shadow:0 1px 2px rgba(21,34,42,.06),0 8px 24px rgba(21,34,42,.07);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;font-weight:500;line-height:1.75;direction:rtl}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
+p{margin:0}
+.stack{display:flex;flex-direction:column;gap:16px}
+.muted{color:var(--muted)}
+mark{background:linear-gradient(transparent 38%,var(--mark) 38%,var(--mark) 92%,transparent 92%);color:inherit;padding:0 2px;font-weight:600}
+button{font:inherit;cursor:pointer;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:11px 18px}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button[disabled]{opacity:.55;cursor:default}
+.primary{background:var(--c,var(--accent));border-color:var(--c,var(--accent));color:var(--surface);font-weight:600}
+.ghost{background:transparent;border:none;color:var(--muted);padding:6px 2px}
+.ghost:hover{color:var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.badge{display:inline-block;align-self:flex-start;font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:99px;background:var(--accent);color:var(--surface);margin-bottom:6px}.entitle{display:inline;unicode-bidi:isolate;font-family:Rubik,system-ui,sans-serif;font-weight:800}.hetitle{margin:4px 0 0;font-weight:700;font-size:1.05rem}.cite{text-align:right;margin:4px 0 0;font-size:.85rem;color:var(--muted)}.cite a{color:var(--accent)}
+.eyebrow{font-size:.8rem;letter-spacing:.05em;font-weight:600;color:var(--c,var(--muted))}
+
+/* home */
+.cover{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.cover-art{background:var(--raised);border-bottom:1px solid var(--line);padding:8px 8px 0}
+.cover-art svg{display:block;width:100%;height:auto;max-height:230px}
+.cover-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px}
+.cover h1{font-size:clamp(2rem,6vw,2.6rem);font-weight:900}
+.stats{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.ring{--p:0;width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center;flex:none}
+.ring span{width:50px;height:50px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.9rem;font-variant-numeric:tabular-nums}
+.stat-text{display:flex;flex-direction:column;line-height:1.35;flex:1;min-width:160px}
+.stat-text b{font-size:1.05rem}
+.review-btn{display:flex;align-items:center;gap:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.tcard{--c:var(--accent);text-align:right;padding:0;overflow:hidden;border:none;border-radius:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s}
+.tcard:hover{transform:translateY(-2px)}
+.tcard .band{background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.tcard .band svg{width:44px;height:44px}
+.tcard .n{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;opacity:.85}
+.tcard .body{padding:12px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tcard .t{font-weight:700;font-size:1.05rem;line-height:1.35}
+.bar{height:7px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--c);border-radius:4px}
+.meta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip{font-size:.75rem;padding:3px 10px;border-radius:99px;font-weight:600;background:color-mix(in srgb,var(--c,var(--accent)) 14%,transparent);color:var(--c,var(--accent));white-space:nowrap}
+.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+
+/* topic */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;display:flex;flex-direction:column;gap:8px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.steps{display:flex;gap:5px}
+.steps i{flex:1;height:5px;border-radius:3px;background:var(--line)}
+.steps i.on{background:var(--c)}
+.prog{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tt{font-size:1.6rem;font-weight:900}
+.card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px}
+.card h3{font-size:1.25rem;color:var(--c)}
+.fig{background:var(--raised);border-radius:14px;padding:10px;margin-inline:-4px}
+.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{font-size:.8rem;color:var(--muted);text-align:center;margin-top:4px}
+figure{margin:0}
+.def{border:1.5px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 6%,var(--surface));border-radius:14px;padding:14px 16px}
+.lbl{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:var(--c);margin-bottom:4px}
+.who{display:flex;gap:12px;align-items:flex-start}
+.who .av{flex:none;width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.15rem}
+.who .yr{font-size:.8rem;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.tile{background:var(--raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile svg{width:32px;height:32px;color:var(--c)}
+.tile b{font-size:.98rem}
+.tile span{font-size:.88rem;color:var(--muted);line-height:1.45}
+.ex{background:var(--raised);border-radius:12px;padding:12px 14px;font-size:.95rem}
+.ex .lbl{color:var(--muted)}
+.yesno{display:flex;flex-wrap:wrap;gap:8px}
+.yn{padding:5px 12px;border-radius:99px;font-size:.88rem;font-weight:500;display:inline-flex;gap:6px;align-items:center}
+.yn.y{background:var(--good-soft);color:var(--good)} .yn.n{background:var(--bad-soft);color:var(--bad)}
+.spectrum{display:flex;flex-direction:column;gap:6px}
+.spectrum .track{height:12px;border-radius:6px;background:linear-gradient(90deg,var(--bad),var(--line) 50%,var(--good));position:relative}
+.spectrum .dot{position:absolute;top:50%;left:50%;width:20px;height:20px;border-radius:50%;background:var(--surface);border:3px solid var(--ink);transform:translate(-50%,-50%)}
+.spectrum .ends{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);gap:10px}
+.remember{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;border-top:1px dashed var(--line);padding-top:12px}
+.remember svg{flex:none;width:22px;height:22px;color:var(--c)}
+
+/* question */
+.q{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:12px}
+.qtext{font-weight:600;font-size:1.08rem;line-height:1.55}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{text-align:right;line-height:1.45;display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--raised);border:1.5px solid transparent}
+.opt:hover:not([disabled]){border-color:var(--c)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:8px;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.85rem;color:var(--c)}
+.opt.right{background:var(--good-soft);border-color:var(--good);opacity:1}
+.opt.right .k{background:var(--good);color:var(--surface)}
+.opt.wrong{background:var(--bad-soft);border-color:var(--bad);opacity:1}
+.opt.wrong .k{background:var(--bad);color:var(--surface)}
+.fb{padding:12px 14px;border-radius:12px;font-size:.95rem;display:flex;gap:10px;align-items:flex-start}
+.fb svg{flex:none;width:22px;height:22px;margin-top:2px}
+.fb.ok{background:var(--good-soft)} .fb.ok svg{color:var(--good)}
+.fb.no{background:var(--bad-soft)} .fb.no svg{color:var(--bad)}
+.fb strong{display:block}
+.big{font-family:var(--display);font-size:3.4rem;font-weight:900;color:var(--c);font-variant-numeric:tabular-nums;line-height:1}
+@media (prefers-reduced-motion:no-preference){.fade{animation:f .3s ease-out}@keyframes f{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+
+/* svg figure classes */
+.s-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.s-c{stroke:var(--c);stroke-width:2;fill:none}
+.f-c{fill:var(--c)}
+.f-soft{fill:color-mix(in srgb,var(--c) 16%,var(--surface))}
+.f-surf{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.f-ink{fill:var(--ink)}
+.f-mut{fill:var(--muted)}
+.f-inv{fill:var(--surface)}
+svg text{font-family:var(--body)}
+h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
+.card p,.def p,.tile span,.ex p{font-weight:500}
+.qtext{font-weight:700}
+.tile b,.who b{font-weight:700}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:.95rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.tbl th,.tbl td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl th{background:color-mix(in srgb,var(--c) 10%,var(--surface));color:var(--c);font-weight:700;font-size:.85rem}
+.tbl .in{color:var(--c);font-weight:700}.tbl .out{color:var(--muted);font-weight:700}
+.tblwrap{overflow-x:auto}
+.en{font-size:.82em;color:var(--muted);font-weight:500;direction:ltr;unicode-bidi:isolate}
+</style>
+<style>:root{--accent:#2b8546}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent:#6dcf8e}}:root[data-theme="dark"]{--accent:#6dcf8e}</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const CONFIG={key:"lomda-dev-iwm",cover:"cover23",en:true,badge:"מאמר · קריאת חובה",eyebrow:"פסיכולוגיה התפתחותית א'",title:"Evidence for Infants' Internal Working Models of Attachment",he:"עדות למודלים פנימיים עובדים של היקשרות אצל תינוקות",cite:`Johnson, Dweck &amp; Chen (2007). <i>Psychological Science, 18</i>(6), ⁦501–502⁩. <a href="https://doi.org/10.1111/j.1467-9280.2007.01929.x" target="_blank" rel="noopener">doi:10.1111/j.1467-9280.2007.01929.x</a>`,note:"המאמר המקורי באנגלית (דיווח קצר). כאן הוא מתורגם לעברית במלואו, והמונחים באנגלית מופיעים בסוגריים."};
+const I={
+ building:'<path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h2M14 8h2M8 12h2M14 12h2M10 21v-4h4v4"/>',
+ people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
+ cycle:'<path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/>',
+ pyramid:'<path d="M12 3L2.5 20h19z"/><path d="M8.2 10.5h7.6M5.5 15.2h13"/>',
+ chart:'<path d="M4 20V10M9.5 20V4M15 20v-7M20.5 20V8M2 20h20"/>',
+ gear:'<circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="7.5" stroke-dasharray="3.2 2.7" stroke-width="3.2"/>',
+ sprout:'<path d="M12 21v-9"/><path d="M12 14C7 14 4.5 11 4.5 6.5 9 6.5 12 9 12 14z"/><path d="M12 12c0-4.5 3-7 7.5-7 0 4.5-3 7-7.5 7z"/>',
+ scales:'<path d="M12 3v17M7 20h10M4 7h16"/><path d="M4 7l-2.5 6h5zM20 7l-2.5 6h5z"/>',
+ factory:'<path d="M3 21V10l5 3v-3l5 3V5h4v16zM1.5 21h21M17 9h4v12"/>',
+ question:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 1 1 3.6 2.4c-.8.4-1.1.9-1.1 1.8"/><path d="M12 17h.01"/>',
+ data:'<ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6M4.5 11.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6"/>',
+ doc:'<path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/>',
+ split:'<circle cx="12" cy="4.5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="12" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/><path d="M12 6.7v10M12 11l-6 6M12 11l6 6"/>',
+ grad:'<path d="M1.5 9L12 4l10.5 5L12 14z"/><path d="M6 11.2V16c3.3 2.4 8.7 2.4 12 0v-4.8M21 10v5"/>',
+ copies:'<rect x="3" y="7" width="12" height="14" rx="2"/><path d="M7 4h11a2 2 0 0 1 2 2v12"/>',
+ link:'<rect x="2" y="8" width="11" height="8" rx="4"/><rect x="11" y="8" width="11" height="8" rx="4"/>',
+ hand:'<circle cx="8" cy="7" r="3"/><circle cx="16" cy="7" r="3"/><path d="M2.5 20c0-3.3 2.5-6 5.5-6 1.6 0 3 .7 4 1.9 1-1.2 2.4-1.9 4-1.9 3 0 5.5 2.7 5.5 6"/>',
+ target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',
+ id:'<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><circle cx="8.5" cy="11" r="2.3"/><path d="M5 16c.6-1.6 2-2.4 3.5-2.4S11.4 14.4 12 16M14.5 10h4M14.5 13.5h3"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>',
+ pie:'<path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/>',
+ cart:'<path d="M2 3h3l2.5 12h11l2-8H6.5"/><circle cx="9" cy="19.5" r="1.6"/><circle cx="17" cy="19.5" r="1.6"/>',
+ bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/>',
+ check:'<circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/>',
+ x:'<circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/>',
+ lock:'<rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>',
+ moon:'<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>',
+ brain:'<path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a2 2 0 0 0-3-1z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/>',
+ phone:'<rect x="6.5" y="2" width="11" height="20" rx="2.5"/><path d="M10.5 18.5h3"/>',
+ flask:'<path d="M9 2.5h6M10 2.5v6L4.5 19a2 2 0 0 0 1.8 2.9h11.4a2 2 0 0 0 1.8-2.9L14 8.5v-6"/><path d="M7 15h10"/>',
+ leaf:'<path d="M5 19C5 10 11 4 20 4c0 9-6 15-15 15z"/><path d="M5 19l8-8"/>'
+};
+const ic=(k,cls="")=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="${cls}" aria-hidden="true">${I[k]}</svg>`;
+
+const arrowDef=id=>`<defs><marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="f-c"/></marker></defs>`;
+
+const FIG={
+ cover23:()=>`<svg viewBox="0 0 400 228" role="img" aria-label="אליפסה גדולה ואליפסה קטנה על מדרון">
+  <circle cx="200" cy="114" r="96" class="f-soft"/>
+  <path d="M96 186 L196 186 L300 92 L336 92" class="s-line" stroke-width="3" fill="none"/>
+  <ellipse cx="262" cy="104" rx="26" ry="20" class="f-c"/>
+  <ellipse cx="140" cy="174" rx="13" ry="10" class="f-c" opacity=".7"/>
+  <path d="M120 156 l-8 -8 M140 150 v-11 M160 156 l8 -8" class="s-c" stroke-width="2.5"/>
+  <path d="M236 116 q-34 22 -70 50" class="s-line" stroke-dasharray="4 4" fill="none"/></svg>`,
+ stim:()=>{const pane=(x,t,sub,end)=>`<g transform="translate(${x},0)"><rect x="0" y="24" width="118" height="112" rx="10" class="f-surf" stroke="var(--line)"/>
+  <path d="M10 118 L52 118 L96 64 L110 64" class="s-line" stroke-width="2" fill="none"/>
+  ${end==="mid"?`<ellipse cx="74" cy="84" rx="11" ry="8" class="f-c"/>`:end==="back"?`<ellipse cx="36" cy="110" rx="11" ry="8" class="f-c"/><path d="M66 84 q-12 10 -20 18" class="s-c" stroke-width="1.6" fill="none"/>`:`<ellipse cx="104" cy="56" rx="11" ry="8" class="f-c"/><path d="M80 80 q10 -10 16 -16" class="s-c" stroke-width="1.6" fill="none"/>`}
+  <ellipse cx="22" cy="112" rx="6" ry="4.5" class="f-c" opacity=".7"/><path d="M14 102 l-4 -4 M22 99 v-6 M30 102 l4 -4" class="s-c" stroke-width="1.5"/>
+  <text x="59" y="156" text-anchor="middle" font-size="12" font-weight="800" class="f-ink">${t}</text><text x="59" y="173" text-anchor="middle" font-size="10.5" class="f-mut">${sub}</text></g>`;
+  return `<svg viewBox="0 0 400 186" role="img" aria-label="סרטון ההרגלה ושתי תוצאות המבחן">
+  <text x="200" y="14" text-anchor="middle" font-size="11" class="f-mut">ה"אם" (אליפסה גדולה) וה"ילד" (אליפסה קטנה) שבוכה</text>
+  ${pane(272,"הרגלה","האם עולה לחצי הדרך","mid")}${pane(141,"היענות","האם חוזרת לילד","back")}${pane(10,"חוסר היענות","האם ממשיכה לעלות","up")}</svg>`},
+ looks:()=>{const G=[["בטוחים",[5.9,10.2,7.3]],["לא בטוחים",[5.4,6.6,8.0]]],L=["הרגלה","חוסר היענות","היענות"],s=13,C=["f-mut","f-c","f-soft"];
+  return `<svg viewBox="0 0 400 236" role="img" aria-label="זמני הסתכלות בשניות לפי קבוצה ואירוע">
+  <text x="200" y="14" text-anchor="middle" font-size="11.5" class="f-mut">זמן הסתכלות ממוצע (שניות)</text>
+  <line x1="20" y1="180" x2="380" y2="180" class="s-line"/>
+  ${G.map(([g,v],i)=>{const cx=290-i*180;return v.map((n,k)=>{const x=cx+34-k*34;return `<rect x="${x-14}" y="${180-n*s}" width="28" height="${n*s}" rx="4" class="${C[k]}" ${k==2?'stroke="var(--accent)"':''}/><text x="${x}" y="${174-n*s}" text-anchor="middle" font-size="10.5" font-weight="700" class="f-ink">${n.toFixed(1)}</text>`}).join("")+`<text x="${cx}" y="198" text-anchor="middle" font-size="12.5" font-weight="800" class="f-ink">${g}</text>`}).join("")}
+  ${L.map((l,k)=>{const x=372-k*126;return `<rect x="${x-12}" y="214" width="12" height="10" rx="2" class="${C[k]}" ${k==2?'stroke="var(--accent)"':''}/><text x="${x-18}" y="223" text-anchor="start" font-size="11" class="f-ink">${l}</text>`}).join("")}</svg>`}
+};
+const resTable=`<div class="tblwrap"><table class="tbl"><thead><tr><th>קבוצה</th><th>הרגלה (3 אחרונים)</th><th>חוסר היענות</th><th>היענות</th></tr></thead><tbody>
+<tr><td><b>בטוחים</b> (10)</td><td>5.9 (4.1)</td><td class="in"><b>10.2</b> (8.9)</td><td>7.3 (7.0)</td></tr>
+<tr><td><b>לא בטוחים</b> (11)</td><td>5.4 (2.9)</td><td>6.6 (3.5)</td><td class="in"><b>8.0</b> (5.4)</td></tr></tbody></table></div><p class="muted" style="font-size:.85rem">ממוצעים בשניות, וסטיית תקן בסוגריים.</p>`;
+const E=t=>`<span class="en">(${t})</span>`;
+const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</figcaption>`:""}</figure>`;
+const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
+const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;
+const tiles=a=>`<div class="tiles">${a.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`;
+const ex=h=>`<div class="ex"><span class="lbl">דוגמה</span><p>${h}</p></div>`;
+const rem=h=>`<div class="remember">${ic("bulb")}<p>${h}</p></div>`;
+const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")}${t}</span>`).join("")}${n.map(t=>`<span class="yn n">${ic("x")}${t}</span>`).join("")}</div>`;
+const spectrum=(r,l,dot)=>`<div class="spectrum"><div class="track">${dot?'<span class="dot"></span>':""}</div><div class="ends"><span>${r}</span><span>${l}</span></div></div>`;
+document.head.insertAdjacentHTML("beforeend",'<style>.yn svg{width:16px;height:16px}</style>');
+
+const T=[
+ {id:"t1",icon:"brain",title:"הרקע: מודלים פנימיים עובדים",blocks:[
+  {h:"מה הציע בולבי",html:`<p>לפני כחצי מאה הציע ג'ון בולבי שלבני אדם יש <mark>מערכת התנהגותית אינסטינקטיבית של היקשרות</mark> ${E("Attachment behavioral system")}. לפי בולבי, המערכת הזו מלווה ב<b>מודלים פנימיים עובדים</b> של העולם החברתי, שנבנים מתוך הניסיון של התינוק עם המטפל שלו (Bowlby, 1958, 1969/1982).</p>${def("מושג מפתח",`<mark>מודל פנימי עובד</mark> ${E("Internal working model")}: ייצוג מנטלי של קשרים חברתיים, שנבנה מהחוויה של התינוק עם המטפל. כלומר, מה התינוק "מצפה" שיקרה כשהוא זקוק למטפל.`)}${rem(`לפי ההנחה, המודלים האלה מתווכים, לפחות בחלקם, את השימוש של התינוק במטפל כ<b>חיץ מפני לחץ</b> ${E("Buffer against stress")}, ובהמשך גם את יכולות הוויסות העצמי והכישורים החברתיים.`)}`,q:"q1"},
+  {h:"מה כבר ידענו",html:`<p>מאות מחקרים מצאו שתינוקות שהכי קל להם לחפש תמיכה ולקבל אותה מהמטפל, כלומר תינוקות עם <mark>היקשרות בטוחה</mark> ${E("Secure attachment")}:</p>${tiles([["hand","טיפול רגיש","בסבירות גבוהה יותר קיבלו טיפול רגיש ומגיב"],["sprout","יתרונות לאורך זמן","עם הזמן הם מראים יתרונות רגשיים־חברתיים (Cassidy & Shaver, 1999)"],["people","בגיל מבוגר יותר","אצל ילדים גדולים ומבוגרים, ביטחון בהיקשרות קשור לייצוגים של קשרים חברתיים"]])}${def("הפער שהמאמר בא לסגור",`עד המחקר הזה <b>אף מחקר לא בדק ישירות</b> מודלים פנימיים עובדים <b>בינקות</b>. כלומר, הייתה הנחה תיאורטית, אבל לא עדות ישירה שהמודלים כבר קיימים אצל תינוקות.`)}`,q:"q3"}
+ ]},
+ {id:"t2",icon:"flask",title:"השיטה: איך בודקים מה תינוק מצפה",blocks:[
+  {h:"משתתפים ומדידת ההיקשרות",html:`${tiles([["people","21 תינוקות","10 בטוחים ו-11 לא בטוחים"],["clock","גיל 12 עד 16 חודשים","ממוצע 403 ימים, 13 בנות"],["check","המצב הזר","סוג ההיקשרות נקבע לפי המצב הזר (Ainsworth et al., 1978)"]])}${def("מושג מפתח",`<mark>המצב הזר</mark> ${E("Strange Situation")}: הליך מעבדה שבו התינוק נפרד מהאם ונפגש איתה שוב, ולפי התגובות שלו מסווגים את ההיקשרות כ<b>בטוחה</b> או <b>לא בטוחה</b> (נמנעת או חרדה־אמביוולנטית).`)}`,q:"q5"},
+  {h:"שיטת ההרגלה החזותית",html:`<p>החוקרים השתמשו ב<mark>שיטת ההרגלה החזותית</mark> ${E("Visual habituation technique")}. התינוק צופה שוב ושוב באותו אירוע, עד שהעניין שלו יורד. אחר כך מציגים לו אירועי מבחן ומודדים כמה זמן הוא מסתכל.</p>${rem(`<b>ההיגיון:</b> תינוקות מסתכלים זמן רב יותר על מה ש<b>מפתיע</b> אותם, כלומר על מה שלא תואם את הציפיות שלהם. לכן זמן ההסתכלות מלמד על מה שהתינוק <b>מצפה</b> שיקרה.`)}${def("ההשערה",`תינוקות <b>בטוחים</b> יסתכלו זמן רב יותר על מטפל <b>שלא מגיב</b> (לא צפוי בעיניהם), ביחס למטפל <b>שמגיב</b> (צפוי), וזאת בהשוואה לתינוקות לא בטוחים.`)}`,q:"q7"},
+  {h:"הסרטונים",html:`<p>כדי לבדוק כמה <b>מופשטת וכללית</b> החשיבה של התינוקות על "דמויות", השתמשו ב<b>דמויות גאומטריות מונפשות</b> ולא בבני אדם.</p>${fig("stim","סרטון ההרגלה ושני אירועי המבחן")}<p><b>ההרגלה:</b> שתי אליפסות, "אם" גדולה ו"ילד" קטן, בתחתית מדרון תלול. האם עולה עד מישור בחצי הדרך, ואז הילד מתחיל לבכות (פעימות, קפיצות קטנות וקול בכי אמיתי של תינוק). הסרטון חזר עד שזמן ההסתכלות ירד <b>לחצי</b> מהזמן ההתחלתי.</p><p><b>המבחן:</b> שתי תוצאות, כל אחת פעמיים. <mark>היענות</mark>: האם חוזרת לילד. <mark>חוסר היענות</mark>: האם ממשיכה לעלות ומתרחקת. הסדר אוזן בין התינוקות.</p>`,q:"q9"},
+  {h:"מהימנות הקידוד",html:`${tiles([["check","המצב הזר","קודד על ידי המחברת השלישית בלי לדעת את התוצאות. קודדת שנייה בדקה 10 מפגשים: 90% הסכמה, קאפה .83"],["clock","זמני הסתכלות","נמדדו בזמן אמת על ידי צופה שלא ידע את סוג ההיקשרות ואת האירוע. צופה שני בדק 13 תינוקות: 93% הסכמה, קאפה .82"]])}${rem("הקודדים לא ידעו את סוג ההיקשרות ולא ידעו איזה אירוע מוצג. זה מונע הטיה של הקודד לטובת ההשערה.")}`,q:"q11"}
+ ]},
+ {id:"t3",icon:"chart",title:"התוצאות",blocks:[
+  {h:"זמני ההסתכלות",html:`${fig("looks","הבטוחים הסתכלו יותר על חוסר היענות, והלא בטוחים על היענות")}${resTable}<p>לא נמצאו השפעות של מין או של סדר ההצגה.</p>`,q:"q13"},
+  {h:"הניתוח הסטטיסטי",html:`<p>ניתוח שונות מעורב ${E("Mixed ANOVA")} הראה:</p>${yn(["אינטראקציה כמו שנובא: הבטוחים הסתכלו יחסית יותר על חוסר היענות, F(1,19)=4.76, p=.042"],["אין הבדל כללי בזמן ההסתכלות בין בטוחים ללא בטוחים","אין הבדל כללי בין היענות לחוסר היענות"])}${def("בתוך כל קבוצה",`אצל הבטוחים ההבדל בין שני האירועים מובהק (מבחן חד־זנבי, t(9)=1.99, p<.04). אצל הלא בטוחים הוא לא מובהק.`)}${tiles([["check","7 מתוך 10","תינוקות בטוחים הסתכלו יותר על חוסר היענות"],["x","7 מתוך 11","תינוקות לא בטוחים הראו את הדפוס ההפוך"],["people","תת־סוגים","הנמנעים (6) והחרדים (5) לא נבדלו זה מזה"]])}`,q:"q15"}
+ ]},
+ {id:"t4",icon:"bulb",title:"המשמעות",blocks:[
+  {h:"מה המחקר מראה",html:`${def("המסקנה",`זו <b>עדות חיובית ישירה</b> לכך שחוויות ההיקשרות האישיות של התינוק משתקפות ב<b>ייצוגים מנטליים מופשטים</b> של אינטראקציות חברתיות. כלומר, המודלים הפנימיים העובדים של בולבי קיימים כבר בינקות.`)}<p>התינוקות הבטוחים "ציפו" שהאם תחזור לילד הבוכה, ולכן הופתעו כשהיא המשיכה לעלות. הלא בטוחים לא הראו את הציפייה הזו, ואפילו הסתכלו יותר כשהאם <b>כן</b> חזרה.</p>${rem("הציפייה הופיעה גם כשהדמויות היו <b>אליפסות</b>. זה מראה שהייצוג לא קשור רק לאם הספציפית, אלא הוא כללי ומופשט.")}`,q:"q17"},
+  {h:"חלון חדש",html:`<p>לפי המחברות, השיטה הזו פותחת <b>חלון חדש</b> אל המודלים הפנימיים העובדים. היא מאפשרת לעקוב אחרי המודלים <b>כבר כשהם מתחילים להיווצר</b>, עוד לפני הגיל שבו אפשר להשתמש במדדים ההתנהגותיים הקיימים.</p>${ex("בלשון המאמר: זו דרך \"להציץ אל תוך הנפש שהחוויה הזו השאירה בה את חותמה\".")}${tiles([["target","מה נבדק","ציפיות התינוק לגבי תגובת המטפל"],["chart","איך","זמן הסתכלות על אירוע צפוי מול לא צפוי"],["brain","מה נמצא","ייצוג מופשט שתואם את סוג ההיקשרות"]])}`,q:"q19"}
+ ]}
+];
+const Q={
+q1:{t:"t1",v:[
+ {q:"לפי בולבי, מה מלווה את מערכת ההיקשרות?",a:"מודלים פנימיים עובדים של העולם החברתי, שנבנים מהניסיון עם המטפל",w:["רפלקסים מולדים שלא משתנים עם הניסיון","זיכרונות מילוליים של אירועים מוקדמים","תכונות מזג תורשתיות בלבד"],e:"המודלים נבנים מתוך הניסיון של התינוק עם המטפל."},
+ {q:"\"מודל פנימי עובד\" הוא:",a:"ייצוג מנטלי של קשרים חברתיים, שמבוסס על החוויה עם המטפל",w:["שם אחר להליך המצב הזר","דפוס התנהגות של המטפל","מדד לזמן ההסתכלות של התינוק"],e:"זה ייצוג פנימי, ציפייה של התינוק לגבי העולם החברתי."}]},
+q2:{t:"t1",v:[
+ {q:"לפי ההנחה במאמר, מה המודלים הפנימיים העובדים מתווכים בינקות?",a:"את השימוש במטפל כחיץ מפני לחץ",w:["את קצב ההתפתחות המוטורית","את רכישת השפה","את הגדילה הפיזית"],e:"ובהמשך גם ויסות עצמי וכישורים חברתיים."},
+ {q:"לפי המאמר, מה המודלים הפנימיים העובדים מתווכים בשלב מאוחר יותר?",a:"יכולות ויסות עצמי וכישורים חברתיים",w:["יכולות מתמטיות","זיכרון חזותי","מהירות תגובה"],e:"זו ההשפעה של המודלים לאורך ההתפתחות."}]},
+q3:{t:"t1",v:[
+ {q:"מה מאפיין לפי המחקרים תינוקות שהכי קל להם לחפש ולקבל תמיכה?",a:"בסבירות גבוהה יותר הם קיבלו טיפול רגיש ומגיב",w:["הם נולדו עם מזג נוח יותר","הם פחות קשורים לאם","הם לומדים מהר יותר לבד"],e:"אלה התינוקות המסווגים כבטוחים."},
+ {q:"מה הפער במחקר שהמאמר בא לסגור?",a:"אף מחקר לא בדק ישירות מודלים פנימיים עובדים בינקות",w:["לא היה ידוע שקיימת היקשרות בטוחה","לא היה כלי למדוד היקשרות אצל מבוגרים","לא ידעו שטיפול רגיש קשור להיקשרות"],e:"היו ראיות עקיפות בלבד עד המחקר הזה."}]},
+q4:{t:"t1",v:[
+ {q:"אצל ילדים גדולים ומבוגרים, ביטחון בהיקשרות נמצא קשור ל:",a:"ייצוגים של קשרים חברתיים",w:["מנת המשכל","גובה ומשקל","מספר האחים"],e:"(Bretherton & Munholland, 1999)."},
+ {q:"מה נמצא לגבי תינוקות בטוחים לאורך זמן?",a:"הם מראים יתרונות רגשיים־חברתיים",w:["הם הופכים לתלותיים יותר","אין להם יתרון לאורך זמן","הם מתקשים בקשרים עם בני גילם"],e:"(Cassidy & Shaver, 1999)."}]},
+q5:{t:"t2",v:[
+ {q:"כמה תינוקות השתתפו במחקר ובאיזה גיל?",a:"21 תינוקות, בני 12 עד 16 חודשים",w:["40 תינוקות, בני 6 חודשים","21 תינוקות, בני 3 עד 5 שנים","10 תינוקות, בני שבועיים"],e:"10 בטוחים ו-11 לא בטוחים, גיל ממוצע 403 ימים."},
+ {q:"איך נקבע סוג ההיקשרות של התינוקות במחקר?",a:"בעזרת הליך המצב הזר",w:["לפי שאלון שמילאה האם","לפי זמני ההסתכלות בסרטון","לפי ראיון ההיקשרות למבוגרים"],e:"המצב הזר של איינסוורת' (1978)."}]},
+q6:{t:"t2",v:[
+ {q:"מה החלוקה בין הקבוצות במחקר?",a:"10 תינוקות בטוחים ו-11 לא בטוחים",w:["11 בטוחים ו-10 לא בטוחים","15 בטוחים ו-6 לא בטוחים","כולם היו בטוחים"],e:"בין הלא בטוחים היו 6 נמנעים ו-5 חרדים."},
+ {q:"מה הגיל הממוצע של התינוקות במחקר?",a:"403 ימים",w:["203 ימים","603 ימים","30 חודשים"],e:"כלומר מעט יותר משנה."}]},
+q7:{t:"t2",v:[
+ {q:"על איזה עיקרון מבוססת שיטת ההרגלה החזותית?",a:"תינוקות מסתכלים זמן רב יותר על מה שלא תואם את הציפיות שלהם",w:["תינוקות מסתכלים רק על פנים מוכרות","תינוקות מעדיפים צבעים בהירים","תינוקות זוכרים רק אירועים שחוזרים"],e:"זמן ההסתכלות מלמד על מה שהתינוק מצפה שיקרה."},
+ {q:"מה הייתה ההשערה של החוקרות?",a:"תינוקות בטוחים יסתכלו יותר על מטפל שלא מגיב, ביחס לתינוקות לא בטוחים",w:["כל התינוקות יסתכלו יותר על מטפל שמגיב","תינוקות לא בטוחים יסתכלו יותר על כל אירוע","לא יהיה הבדל בין הקבוצות"],e:"מטפל שלא מגיב לא צפוי בעיני תינוק בטוח."}]},
+q8:{t:"t2",v:[
+ {q:"לפי ההשערה, למה מטפל שלא מגיב אמור להפתיע תינוק בטוח?",a:"כי הניסיון שלו לימד אותו שהמטפל מגיב כשהוא זקוק לו",w:["כי הוא לא מכיר את המטפל","כי הוא לא מבין שהילד בוכה","כי הוא תמיד מופתע מכל אירוע"],e:"הציפייה נובעת מהמודל הפנימי העובד."},
+ {q:"מתי מפסיקים להציג לתינוק את סרטון ההרגלה?",a:"כשזמן ההסתכלות יורד לחצי מהזמן ההתחלתי",w:["אחרי שתי צפיות בדיוק","כשהתינוק מתחיל לבכות","אחרי דקה אחת"],e:"זה הקריטריון להרגלה."}]},
+q9:{t:"t2",v:[
+ {q:"למה השתמשו בדמויות גאומטריות מונפשות?",a:"כדי לבדוק כמה מופשטת וכללית החשיבה של התינוקות על דמויות",w:["כי אסור להראות לתינוקות סרטונים של אנשים","כי זה זול יותר","כי תינוקות לא מזהים פנים"],e:"אם הציפייה מופיעה גם עם אליפסות, היא מופשטת."},
+ {q:"מה קורה בסרטון ההרגלה?",a:"האם עולה לחצי המדרון והילד שנשאר למטה מתחיל לבכות",w:["האם והילד עולים יחד לראש המדרון","הילד עולה והאם בוכה","האם יוצאת מהמסך והילד נרדם"],e:"זה המצב שמעורר את השאלה: האם האם תחזור?"}]},
+q10:{t:"t2",v:[
+ {q:"מה מוצג באירוע ה\"היענות\"?",a:"האם חוזרת אל הילד הבוכה",w:["האם ממשיכה לעלות","הילד עולה אל האם","שתי הדמויות נעלמות"],e:"זו התגובה הצפויה למי שחווה טיפול מגיב."},
+ {q:"מה מוצג באירוע \"חוסר ההיענות\"?",a:"האם ממשיכה לעלות במדרון ומתרחקת מהילד",w:["האם חוזרת לילד","הילד מפסיק לבכות","האם מחבקת את הילד"],e:"זה האירוע שאמור להפתיע תינוק בטוח."}]},
+q11:{t:"t2",v:[
+ {q:"מה הייתה ההסכמה בין הקודדים בסיווג המצב הזר?",a:"90% הסכמה, קאפה .83",w:["70% הסכמה, קאפה .50","100% הסכמה","93% הסכמה, קאפה .82"],e:"93% ו-.82 הם הנתונים של קידוד זמני ההסתכלות."},
+ {q:"למה חשוב שמי שמדד את זמני ההסתכלות לא ידע את סוג ההיקשרות?",a:"כדי שהציפיות שלו לא יטו את המדידה לטובת ההשערה",w:["כדי שהמדידה תהיה מהירה יותר","כי זה דרישה של המצב הזר","כדי שהתינוק לא יראה אותו"],e:"קידוד עיוור מונע הטיית קודד."}]},
+q12:{t:"t2",v:[
+ {q:"איך התמודדו עם השפעה אפשרית של סדר הצגת אירועי המבחן?",a:"הסדר אוזן בין התינוקות",w:["כולם ראו קודם את ההיענות","כל תינוק ראה רק אירוע אחד","הסדר לא נלקח בחשבון"],e:"וגם לא נמצאה השפעה של סדר."},
+ {q:"כמה פעמים הוצגה כל תוצאת מבחן?",a:"פעמיים",w:["פעם אחת","חמש פעמים","עד שהתינוק הפסיק להסתכל"],e:"שתי תוצאות, כל אחת פעמיים."}]},
+q13:{t:"t3",v:[
+ {q:"על איזה אירוע הסתכלו התינוקות הבטוחים הכי הרבה זמן?",a:"חוסר היענות (10.2 שניות)",w:["היענות (7.3 שניות)","הרגלה (5.9 שניות)","לא היה הבדל"],e:"זה תואם את ההשערה."},
+ {q:"על איזה אירוע הסתכלו התינוקות הלא בטוחים הכי הרבה זמן?",a:"היענות (8.0 שניות)",w:["חוסר היענות (6.6 שניות)","הרגלה (5.4 שניות)","לא היה הבדל בכלל"],e:"הדפוס הפוך לזה של הבטוחים."}]},
+q14:{t:"t3",v:[
+ {q:"האם נמצאה השפעה של מין התינוק או של סדר ההצגה?",a:"לא, לא נמצאו השפעות כאלה",w:["כן, בנות הסתכלו יותר","כן, הסדר קבע את התוצאות","לא נבדק"],e:"המאמר מציין שלא היו השפעות של מין או סדר."},
+ {q:"מה היה זמן ההסתכלות של התינוקות הבטוחים בשלושת ניסיונות ההרגלה האחרונים?",a:"5.9 שניות",w:["10.2 שניות","8.0 שניות","2 שניות"],e:"זה הבסיס שאליו משווים את אירועי המבחן."}]},
+q15:{t:"t3",v:[
+ {q:"מה הראה ניתוח השונות המעורב?",a:"אינטראקציה מובהקת בין סוג ההיקשרות לסוג האירוע",w:["הבטוחים הסתכלו יותר בסך הכול","כולם הסתכלו יותר על היענות","אף תוצאה לא הייתה מובהקת"],e:"F(1,19)=4.76, p=.042. האפקטים העיקריים לא היו מובהקים."},
+ {q:"תלמיד טוען: \"התינוקות הבטוחים פשוט מסתכלים יותר על כל דבר\". מה התוצאות אומרות?",a:"הטענה לא נתמכת: לא היה הבדל כללי בזמן ההסתכלות בין הקבוצות",w:["הטענה נכונה, זה ההסבר לתוצאות","הטענה נכונה רק לגבי הרגלה","אי אפשר לדעת מהמאמר"],e:"ההבדל הוא בדפוס (אינטראקציה), לא בכמות הכללית."}]},
+q16:{t:"t3",v:[
+ {q:"כמה מתוך 10 התינוקות הבטוחים הסתכלו יותר על חוסר היענות?",a:"7",w:["10","3","5"],e:"ו-7 מתוך 11 הלא בטוחים הראו את הדפוס ההפוך."},
+ {q:"מה נמצא לגבי תת־הסוגים של היקשרות לא בטוחה?",a:"התינוקות הנמנעים והחרדים לא נבדלו זה מזה",w:["רק הנמנעים הראו את הדפוס ההפוך","החרדים הסתכלו יותר על חוסר היענות","תת־הסוגים לא נמדדו"],e:"6 נמנעים ו-5 חרדים, בלי הבדל ביניהם."}]},
+q17:{t:"t4",v:[
+ {q:"מה המסקנה המרכזית של המחקר?",a:"חוויות ההיקשרות משתקפות כבר בינקות בייצוגים מנטליים מופשטים של אינטראקציות חברתיות",w:["תינוקות לא מסוגלים לייצג קשרים חברתיים","סוג ההיקשרות נקבע לפי המזג","תינוקות בטוחים חכמים יותר"],e:"זו עדות ישירה למודלים הפנימיים העובדים."},
+ {q:"מה תרם המחקר לתיאוריה של בולבי?",a:"עדות חיובית ישירה לקיום מודלים פנימיים עובדים בינקות",w:["הפרכה של רעיון המודלים הפנימיים","הוכחה שהיקשרות נוצרת רק אחרי גיל שנתיים","שיטה חדשה לסיווג המצב הזר"],e:"עד אז היו רק ראיות עקיפות."}]},
+q18:{t:"t4",v:[
+ {q:"למה חשוב שהתוצאה התקבלה עם אליפסות ולא עם בני אדם?",a:"כי זה מראה שהייצוג כללי ומופשט, ולא קשור רק לאם הספציפית",w:["כי תינוקות לא אוהבים פנים","כי כך אין צורך במצב הזר","כי אליפסות מושכות יותר קשב"],e:"התינוקות החילו את הציפייה על דמויות לא אנושיות."},
+ {q:"איך אפשר לפרש את זה שתינוקות לא בטוחים הסתכלו יותר על היענות?",a:"היענות של האם הייתה פחות צפויה בעיניהם",w:["הם לא הבינו את הסרטון","הם התעייפו מהר יותר","הם מעדיפים אליפסות גדולות"],e:"זה תואם מודל פנימי שבו המטפל לא תמיד מגיב."}]},
+q19:{t:"t4",v:[
+ {q:"איזה \"חלון חדש\" פותחת השיטה לפי המחברות?",a:"אפשרות לעקוב אחרי המודלים הפנימיים כבר כשהם נוצרים, לפני שאפשר להשתמש במדדים התנהגותיים",w:["אפשרות לשנות את סוג ההיקשרות","אפשרות למדוד היקשרות אצל מבוגרים בלבד","אפשרות לוותר על המצב הזר"],e:"כך אפשר לחקור את המודלים בשלב מוקדם מאוד."},
+ {q:"מה המשתנה התלוי במחקר?",a:"זמן ההסתכלות של התינוק על אירועי המבחן",w:["סוג ההיקשרות","גיל התינוק","מין התינוק"],e:"סוג ההיקשרות הוא המשתנה הבלתי תלוי (קבוצה)."}]},
+q20:{t:"t4",v:[
+ {q:"איזה מהבאים הוא חלק מהמערך של המחקר?",a:"השוואה בין תינוקות בטוחים ללא בטוחים בתגובה לאירוע צפוי ולא צפוי",w:["שיבוץ אקראי של תינוקות לסוג היקשרות","מעקב של 10 שנים","ראיון עם האמהות על הילדות שלהן"],e:"סוג ההיקשרות לא שובץ אקראית, הוא נמדד."},
+ {q:"מה מבדיל את המחקר הזה ממאות המחקרים הקודמים על היקשרות?",a:"הוא בדק ישירות את הציפיות (הייצוגים) של התינוק עצמו",w:["הוא הראשון שהשתמש במצב הזר","הוא הראשון שבדק מבוגרים","הוא הראשון שמצא קשר בין רגישות האם להיקשרות"],e:"קודם היו רק ראיות עקיפות למודלים בינקות."}]}
+};
+for(const t of T) t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id);
+const KEY=CONFIG.key;
+let S={q:{},read:{}};
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.q) S=s;}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const st=id=>S.q[id]||(S.q[id]={n:0,c:0,w:0,t:0,lv:-1});
+const mastered=id=>(S.q[id]?.c||0)>=2;
+const topicPct=t=>Math.round(100*t.qids.filter(mastered).length/t.qids.length);
+const topicStarted=t=>S.read[t.id]||t.qids.some(id=>S.q[id]&&S.q[id].n);
+const allIds=Object.keys(Q);
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+const pickVariant=id=>{const s=st(id),n=Q[id].v.length;return n>1?(s.lv+1)%n:0};
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const color=t=>`var(--${t.id})`;
+const app=document.getElementById("app");
+const LET=["א","ב","ג","ד"];
+
+function qCard(id,onDone,label){
+  const vi=pickVariant(id),v=Q[id].v[vi],opts=shuffle([v.a,...v.w]);
+  const box=document.createElement("div");box.className="q fade";
+  box.innerHTML=(label?`<span class="eyebrow">${label}</span>`:"")+`<div class="qtext">${esc(v.q)}</div><div class="opts"></div>`;
+  const wrap=box.querySelector(".opts");
+  opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt";b.dataset.a=o===v.a?"1":"";
+    b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+    b.onclick=()=>{const ok=o===v.a,s=st(id);s.n++;s.t=Date.now();s.lv=vi;ok?s.c++:(s.c=0,s.w++);save();
+      wrap.querySelectorAll("button").forEach(x=>{x.disabled=true;if(x.dataset.a)x.classList.add("right")});
+      if(!ok)b.classList.add("wrong");
+      const fb=document.createElement("div");fb.className="fb fade "+(ok?"ok":"no");
+      fb.innerHTML=`${ic(ok?"check":"x")}<div><strong>${ok?"נכון!":"לא בדיוק"}</strong>${esc(v.e)}</div>`;box.appendChild(fb);
+      const nx=document.createElement("button");nx.className="primary";nx.textContent="המשך";nx.style.alignSelf="flex-start";
+      nx.onclick=()=>onDone(ok);box.appendChild(nx);nx.focus({preventScroll:true});nx.scrollIntoView({block:"nearest",behavior:"smooth"});
+    };wrap.appendChild(b)});
+  return box;
+}
+
+function home(){
+  document.body.style.removeProperty("--c");
+  const started=T.filter(topicStarted);
+  const total=Math.round(100*allIds.filter(mastered).length/allIds.length);
+  const weak=allIds.filter(id=>S.q[id]&&S.q[id].n&&!mastered(id)).length;
+  app.innerHTML=`<div class="stack fade">
+   <section class="cover" style="--c:var(--accent)">
+    <div class="cover-art">${FIG[CONFIG.cover]()}</div>
+    <div class="cover-body">
+     <span class="eyebrow">${CONFIG.eyebrow}</span>
+     ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
+     <p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר עם שאלות גם מנושאים קודמים.</p>
+     <div class="stats">
+      <div class="ring" style="--p:${total}"><span>${total}%</span></div>
+      <div class="stat-text"><b>${total===0?"עוד לא התחלת":total>=80?"אתה שולט בחומר":"בדרך"}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
+      <button class="primary review-btn" id="rev" ${started.length?"":"disabled"}>${ic("cycle")}<span>${started.length?"חזרה מהירה":"חזרה מהירה (אחרי נושא ראשון)"}</span></button>
+     </div>
+    </div>
+   </section>
+   <div class="grid" id="list"></div>
+   <div class="foot"><a href="../#dev" style="color:var(--accent);font-weight:700;text-decoration:none">→ לקורס</a><span>${CONFIG.note}</span><button class="ghost" id="reset">איפוס התקדמות</button></div>
+  </div>`;
+  document.querySelector("#rev svg").style.cssText="width:20px;height:20px";
+  const list=app.querySelector("#list");
+  T.forEach((t,i)=>{const p=topicPct(t),b=document.createElement("button");b.className="tcard";b.style.setProperty("--c",color(t));
+    const status=!topicStarted(t)?"לא התחלת":p>=80?"שולט":"בתהליך";
+    b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
+    b.onclick=()=>topic(i,0);list.appendChild(b)});
+  app.querySelector("#rev").onclick=review;
+  const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
+  scrollTo(0,0);
+}
+
+function bar(title,n,i,label){
+  return `<div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">${label}</span></div><div class="steps">${Array.from({length:n},(_,k)=>`<i class="${k<=i?"on":""}"></i>`).join("")}</div></div><span class="eyebrow">${title}</span>`;
+}
+
+function topic(ti,bi){
+  const t=T[ti],blk=t.blocks[bi];document.body.style.setProperty("--c",color(t));
+  app.innerHTML=`<div class="stack">${bar(`נושא ${ti+1} · ${t.title}`,t.blocks.length+1,bi,`קטע ${bi+1} מתוך ${t.blocks.length}`)}
+   <article class="card fade"><h3>${blk.h}</h3>${blk.html}</article><div id="slot"></div></div>`;
+  app.querySelector("#back").onclick=home;
+  const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;save();quiz(ti)}};
+  const slot=app.querySelector("#slot");
+  if(blk.q)slot.appendChild(qCard(blk.q,next,"בדיקה קצרה"));
+  else{const b=document.createElement("button");b.className="primary";b.textContent="המשך";b.onclick=next;slot.appendChild(b)}
+  scrollTo(0,0);
+}
+
+function runSet(title,ids,c,onEnd){
+  let i=0,right=0;document.body.style.setProperty("--c",c);
+  const step=()=>{
+    if(i>=ids.length)return onEnd(right,ids.length);
+    const id=ids[i],from=T.find(t=>t.id===Q[id].t);
+    app.innerHTML=`<div class="stack">${bar(title,ids.length,i,`שאלה ${i+1} מתוך ${ids.length}`)}<div id="slot"></div></div>`;
+    app.querySelector("#back").onclick=home;
+    const card=qCard(id,ok=>{if(ok)right++;i++;step()},from.title);card.style.setProperty("--c",color(from));
+    app.querySelector("#slot").appendChild(card);scrollTo(0,0);
+  };step();
+}
+
+function quiz(ti){
+  const t=T[ti];
+  const prev=T.slice(0,ti).filter(topicStarted).flatMap(x=>x.qids);
+  const extra=shuffle(prev).sort((a,b)=>st(a).c-st(b).c).slice(0,2);
+  runSet(`מבחן סיום · ${t.title}`,shuffle(t.qids).concat(extra),color(t),(r,n)=>done(r,n,ti));
+}
+
+function review(){
+  const pool=T.filter(topicStarted).flatMap(t=>t.qids),now=Date.now();
+  const score=id=>{const s=S.q[id]||{n:0,c:0,w:0,t:0};return (s.n?0:2)+s.w*2+(s.c<2?3:0)+Math.min(3,(now-s.t)/864e5)+Math.random()*2};
+  const ids=pool.map(id=>[id,score(id)]).sort((a,b)=>b[1]-a[1]).slice(0,12).map(x=>x[0]);
+  runSet("חזרה מהירה",shuffle(ids),"var(--accent)",(r,n)=>done(r,n,null));
+}
+
+function done(r,n,ti){
+  const nextT=ti!=null&&ti+1<T.length?ti+1:null,pct=Math.round(100*r/n);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">${ti!=null?`סיום נושא ${ti+1} · ${T[ti].title}`:"סיום חזרה מהירה"}</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct};--accent:var(--c)"><span>${pct}%</span></div><div class="big">${r}/${n}</div></div>
+    <p>${r===n?"מצוין, הכל נכון.":r>=n*0.7?"טוב מאוד. מה שטעית בו יחזור בחזרה המהירה, בניסוח אחר.":"כדאי לעבור שוב על הנושא. השאלות שטעית בהן יחזרו בחזרה המהירה."}</p>
+    <div class="row">${nextT!=null?`<button class="primary" id="nx" style="--c:${color(T[nextT])}">לנושא הבא: ${T[nextT].title}</button>`:""}<button id="hm">לכל הנושאים</button></div>
+   </article></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;
+  const nx=app.querySelector("#nx");if(nx)nx.onclick=()=>topic(nextT,0);
+  scrollTo(0,0);
+}
+home();
+</script>
+</body>
+</html>

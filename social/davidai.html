@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>לומדת קריאה: The headwinds/tailwinds asymmetry</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Rubik:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: a study notebook. Home = illustrated cover + topic cards; topic = one reading card at a time, with a highlighter for key terms and drawn figures */
+:root{
+  --bg:#eef2f4; --surface:#ffffff; --raised:#f7f9fa; --ink:#15222a; --muted:#4c5b66; --line:#dbe2e6;
+  --accent:#2457a6; --mark:#ffe27a; --good:#23855a; --good-soft:#e2f4ea; --bad:#c2452d; --bad-soft:#fbe6e1;
+  --t1:#d35d36; --t2:#3667cf; --t3:#0e8a7c; --t4:#8448c9; --t5:#b9800c; --t6:#2a7fa6; --t7:#b4436c; --t8:#5a6b2e;
+  --display:"Suez One","Frank Ruhl Libre","David",serif;
+  --body:"Rubik","Arial Hebrew","Segoe UI",Arial,sans-serif;
+  --shadow:0 1px 2px rgba(21,34,42,.06),0 8px 24px rgba(21,34,42,.07);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;font-weight:500;line-height:1.75;direction:rtl}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
+p{margin:0}
+.stack{display:flex;flex-direction:column;gap:16px}
+.muted{color:var(--muted)}
+mark{background:linear-gradient(transparent 38%,var(--mark) 38%,var(--mark) 92%,transparent 92%);color:inherit;padding:0 2px;font-weight:600}
+button{font:inherit;cursor:pointer;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:11px 18px}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button[disabled]{opacity:.55;cursor:default}
+.primary{background:var(--c,var(--accent));border-color:var(--c,var(--accent));color:var(--surface);font-weight:600}
+.ghost{background:transparent;border:none;color:var(--muted);padding:6px 2px}
+.ghost:hover{color:var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.badge{display:inline-block;align-self:flex-start;font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:99px;background:var(--accent);color:var(--surface);margin-bottom:6px}.entitle{display:inline;unicode-bidi:isolate;font-family:Rubik,system-ui,sans-serif;font-weight:800}.hetitle{margin:4px 0 0;font-weight:700;font-size:1.05rem}.cite{text-align:right;margin:4px 0 0;font-size:.85rem;color:var(--muted)}.cite a{color:var(--accent)}
+.eyebrow{font-size:.8rem;letter-spacing:.05em;font-weight:600;color:var(--c,var(--muted))}
+
+/* home */
+.cover{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.cover-art{background:var(--raised);border-bottom:1px solid var(--line);padding:8px 8px 0}
+.cover-art svg{display:block;width:100%;height:auto;max-height:230px}
+.cover-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px}
+.cover h1{font-size:clamp(2rem,6vw,2.6rem);font-weight:900}
+.stats{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.ring{--p:0;width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center;flex:none}
+.ring span{width:50px;height:50px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.9rem;font-variant-numeric:tabular-nums}
+.stat-text{display:flex;flex-direction:column;line-height:1.35;flex:1;min-width:160px}
+.stat-text b{font-size:1.05rem}
+.review-btn{display:flex;align-items:center;gap:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.tcard{--c:var(--accent);text-align:right;padding:0;overflow:hidden;border:none;border-radius:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s}
+.tcard:hover{transform:translateY(-2px)}
+.tcard .band{background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.tcard .band svg{width:44px;height:44px}
+.tcard .n{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;opacity:.85}
+.tcard .body{padding:12px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tcard .t{font-weight:700;font-size:1.05rem;line-height:1.35}
+.bar{height:7px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--c);border-radius:4px}
+.meta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip{font-size:.75rem;padding:3px 10px;border-radius:99px;font-weight:600;background:color-mix(in srgb,var(--c,var(--accent)) 14%,transparent);color:var(--c,var(--accent));white-space:nowrap}
+.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+
+/* topic */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;display:flex;flex-direction:column;gap:8px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.steps{display:flex;gap:5px}
+.steps i{flex:1;height:5px;border-radius:3px;background:var(--line)}
+.steps i.on{background:var(--c)}
+.prog{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tt{font-size:1.6rem;font-weight:900}
+.card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px}
+.card h3{font-size:1.25rem;color:var(--c)}
+.fig{background:var(--raised);border-radius:14px;padding:10px;margin-inline:-4px}
+.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{font-size:.8rem;color:var(--muted);text-align:center;margin-top:4px}
+figure{margin:0}
+.def{border:1.5px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 6%,var(--surface));border-radius:14px;padding:14px 16px}
+.lbl{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:var(--c);margin-bottom:4px}
+.who{display:flex;gap:12px;align-items:flex-start}
+.who .av{flex:none;width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.15rem}
+.who .yr{font-size:.8rem;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.tile{background:var(--raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile svg{width:32px;height:32px;color:var(--c)}
+.tile b{font-size:.98rem}
+.tile span{font-size:.88rem;color:var(--muted);line-height:1.45}
+.ex{background:var(--raised);border-radius:12px;padding:12px 14px;font-size:.95rem}
+.ex .lbl{color:var(--muted)}
+.yesno{display:flex;flex-wrap:wrap;gap:8px}
+.yn{padding:5px 12px;border-radius:99px;font-size:.88rem;font-weight:500;display:inline-flex;gap:6px;align-items:center}
+.yn.y{background:var(--good-soft);color:var(--good)} .yn.n{background:var(--bad-soft);color:var(--bad)}
+.spectrum{display:flex;flex-direction:column;gap:6px}
+.spectrum .track{height:12px;border-radius:6px;background:linear-gradient(90deg,var(--bad),var(--line) 50%,var(--good));position:relative}
+.spectrum .dot{position:absolute;top:50%;left:50%;width:20px;height:20px;border-radius:50%;background:var(--surface);border:3px solid var(--ink);transform:translate(-50%,-50%)}
+.spectrum .ends{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);gap:10px}
+.remember{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;border-top:1px dashed var(--line);padding-top:12px}
+.remember svg{flex:none;width:22px;height:22px;color:var(--c)}
+
+/* question */
+.q{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:12px}
+.qtext{font-weight:600;font-size:1.08rem;line-height:1.55}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{text-align:right;line-height:1.45;display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--raised);border:1.5px solid transparent}
+.opt:hover:not([disabled]){border-color:var(--c)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:8px;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.85rem;color:var(--c)}
+.opt.right{background:var(--good-soft);border-color:var(--good);opacity:1}
+.opt.right .k{background:var(--good);color:var(--surface)}
+.opt.wrong{background:var(--bad-soft);border-color:var(--bad);opacity:1}
+.opt.wrong .k{background:var(--bad);color:var(--surface)}
+.fb{padding:12px 14px;border-radius:12px;font-size:.95rem;display:flex;gap:10px;align-items:flex-start}
+.fb svg{flex:none;width:22px;height:22px;margin-top:2px}
+.fb.ok{background:var(--good-soft)} .fb.ok svg{color:var(--good)}
+.fb.no{background:var(--bad-soft)} .fb.no svg{color:var(--bad)}
+.fb strong{display:block}
+.big{font-family:var(--display);font-size:3.4rem;font-weight:900;color:var(--c);font-variant-numeric:tabular-nums;line-height:1}
+@media (prefers-reduced-motion:no-preference){.fade{animation:f .3s ease-out}@keyframes f{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+
+/* svg figure classes */
+.s-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.s-c{stroke:var(--c);stroke-width:2;fill:none}
+.f-c{fill:var(--c)}
+.f-soft{fill:color-mix(in srgb,var(--c) 16%,var(--surface))}
+.f-surf{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.f-ink{fill:var(--ink)}
+.f-mut{fill:var(--muted)}
+.f-inv{fill:var(--surface)}
+svg text{font-family:var(--body)}
+h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
+.card p,.def p,.tile span,.ex p{font-weight:500}
+.qtext{font-weight:700}
+.tile b,.who b{font-weight:700}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:.95rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.tbl th,.tbl td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl th{background:color-mix(in srgb,var(--c) 10%,var(--surface));color:var(--c);font-weight:700;font-size:.85rem}
+.tbl .in{color:var(--c);font-weight:700}.tbl .out{color:var(--muted);font-weight:700}
+.tblwrap{overflow-x:auto}
+.en{font-size:.82em;color:var(--muted);font-weight:500;direction:ltr;unicode-bidi:isolate}
+</style>
+<style>:root{--accent:#d0532c}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent:#f28a64}}:root[data-theme="dark"]{--accent:#f28a64}</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const CONFIG={key:"lomda-social-davidai",cover:"cover28",en:true,badge:"מאמר קריאה",eyebrow:"פסיכולוגיה חברתית א'",title:"The headwinds/tailwinds asymmetry: An availability bias in assessments of barriers and blessings",he:"אי־הסימטריה בין רוח נגדית לרוח גבית: הטיית זמינות בהערכת מכשולים וברכות",cite:`Davidai &amp; Gilovich (2016). <i>Journal of Personality and Social Psychology, 111</i>(6), ⁦835–851⁩. <a href="https://doi.org/10.1037/pspa0000066" target="_blank" rel="noopener">doi:10.1037/pspa0000066</a>`,note:"המאמר המקורי באנגלית. כאן הוא מתורגם לעברית לפי הסדר שלו, והמונחים באנגלית מופיעים בסוגריים."};
+const I={
+ building:'<path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h2M14 8h2M8 12h2M14 12h2M10 21v-4h4v4"/>',
+ people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
+ cycle:'<path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/>',
+ pyramid:'<path d="M12 3L2.5 20h19z"/><path d="M8.2 10.5h7.6M5.5 15.2h13"/>',
+ chart:'<path d="M4 20V10M9.5 20V4M15 20v-7M20.5 20V8M2 20h20"/>',
+ gear:'<circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="7.5" stroke-dasharray="3.2 2.7" stroke-width="3.2"/>',
+ sprout:'<path d="M12 21v-9"/><path d="M12 14C7 14 4.5 11 4.5 6.5 9 6.5 12 9 12 14z"/><path d="M12 12c0-4.5 3-7 7.5-7 0 4.5-3 7-7.5 7z"/>',
+ scales:'<path d="M12 3v17M7 20h10M4 7h16"/><path d="M4 7l-2.5 6h5zM20 7l-2.5 6h5z"/>',
+ factory:'<path d="M3 21V10l5 3v-3l5 3V5h4v16zM1.5 21h21M17 9h4v12"/>',
+ question:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 1 1 3.6 2.4c-.8.4-1.1.9-1.1 1.8"/><path d="M12 17h.01"/>',
+ data:'<ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6M4.5 11.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6"/>',
+ doc:'<path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/>',
+ split:'<circle cx="12" cy="4.5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="12" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/><path d="M12 6.7v10M12 11l-6 6M12 11l6 6"/>',
+ grad:'<path d="M1.5 9L12 4l10.5 5L12 14z"/><path d="M6 11.2V16c3.3 2.4 8.7 2.4 12 0v-4.8M21 10v5"/>',
+ copies:'<rect x="3" y="7" width="12" height="14" rx="2"/><path d="M7 4h11a2 2 0 0 1 2 2v12"/>',
+ link:'<rect x="2" y="8" width="11" height="8" rx="4"/><rect x="11" y="8" width="11" height="8" rx="4"/>',
+ hand:'<circle cx="8" cy="7" r="3"/><circle cx="16" cy="7" r="3"/><path d="M2.5 20c0-3.3 2.5-6 5.5-6 1.6 0 3 .7 4 1.9 1-1.2 2.4-1.9 4-1.9 3 0 5.5 2.7 5.5 6"/>',
+ target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',
+ id:'<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><circle cx="8.5" cy="11" r="2.3"/><path d="M5 16c.6-1.6 2-2.4 3.5-2.4S11.4 14.4 12 16M14.5 10h4M14.5 13.5h3"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>',
+ pie:'<path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/>',
+ cart:'<path d="M2 3h3l2.5 12h11l2-8H6.5"/><circle cx="9" cy="19.5" r="1.6"/><circle cx="17" cy="19.5" r="1.6"/>',
+ bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/>',
+ check:'<circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/>',
+ x:'<circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/>',
+ lock:'<rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>',
+ moon:'<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>',
+ brain:'<path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a2 2 0 0 0-3-1z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/>',
+ phone:'<rect x="6.5" y="2" width="11" height="20" rx="2.5"/><path d="M10.5 18.5h3"/>',
+ flask:'<path d="M9 2.5h6M10 2.5v6L4.5 19a2 2 0 0 0 1.8 2.9h11.4a2 2 0 0 0 1.8-2.9L14 8.5v-6"/><path d="M7 15h10"/>',
+ leaf:'<path d="M5 19C5 10 11 4 20 4c0 9-6 15-15 15z"/><path d="M5 19l8-8"/>'
+};
+const ic=(k,cls="")=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="${cls}" aria-hidden="true">${I[k]}</svg>`;
+
+const arrowDef=id=>`<defs><marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="f-c"/></marker></defs>`;
+
+const FIG={
+ cover28:()=>`<svg viewBox="0 0 400 228" role="img" aria-label="רוכב אופניים מול רוח">${arrowDef("cw")}
+  <circle cx="200" cy="114" r="96" class="f-soft"/>
+  <circle cx="160" cy="160" r="22" class="s-line" stroke-width="4" fill="none"/><circle cx="236" cy="160" r="22" class="s-line" stroke-width="4" fill="none"/>
+  <path d="M160 160 L190 124 L224 124 L236 160 M190 124 L200 160 L224 124" class="s-line" stroke-width="3" fill="none"/>
+  <circle cx="214" cy="92" r="10" class="f-c"/><path d="M210 102 L196 126" class="s-c" stroke-width="5"/>
+  ${[70,96,122].map((y,i)=>`<line x1="${110+i*6}" y1="${y}" x2="${150+i*6}" y2="${y}" class="s-c" stroke-width="3" marker-end="url(#cw)" transform="rotate(180 ${130+i*6} ${y})"/>`).join("")}
+  <path d="M280 96 h34 M286 112 h26" class="s-line" opacity=".45" stroke-width="2"/></svg>`,
+ study1:()=>{const R=[["דמוקרטים",4.75],["רפובליקנים",3.42]],X=v=>40+(v-1)*53.3;
+  return `<svg viewBox="0 0 400 176" role="img" aria-label="מי לדעתם מתמודד עם יותר מכשולים">
+  <line x1="40" y1="96" x2="360" y2="96" class="s-line" stroke-width="2"/>
+  ${[1,2,3,4,5,6,7].map(v=>`<line x1="${X(v)}" y1="91" x2="${X(v)}" y2="101" class="s-line"/><text x="${X(v)}" y="116" text-anchor="middle" font-size="10.5" class="f-mut">${v}</text>`).join("")}
+  <text x="${X(7)}" y="140" text-anchor="middle" font-size="10.5" class="f-ink">קשה יותר</text><text x="${X(7)}" y="154" text-anchor="middle" font-size="10.5" class="f-ink">לדמוקרטים</text>
+  <text x="${X(1)}" y="140" text-anchor="middle" font-size="10.5" class="f-ink">קשה יותר</text><text x="${X(1)}" y="154" text-anchor="middle" font-size="10.5" class="f-ink">לרפובליקנים</text>
+  <text x="${X(4)}" y="140" text-anchor="middle" font-size="10.5" class="f-mut">שווה</text>
+  ${R.map(([n,v],i)=>`<circle cx="${X(v)}" cy="96" r="9" class="f-c" opacity="${i?.6:1}"/><line x1="${X(v)}" y1="${i?60:34}" x2="${X(v)}" y2="86" class="s-c" stroke-dasharray="3 3"/><text x="${X(v)}" y="${i?54:28}" text-anchor="middle" font-size="12" font-weight="800" class="f-ink">${n}: ${v}</text>`).join("")}</svg>`},
+ study5:()=>{const C=[["רוח נגדית: כחול",56.42,"כחול"],["רוח נגדית: ירוק",56.64,"ירוק"]];
+  return `<svg viewBox="0 0 400 192" role="img" aria-label="הערכת אחוז המשפטים בצבע של המשימה הקשה">
+  <text x="200" y="14" text-anchor="middle" font-size="11" class="f-mut">הערכה: כמה מהמשפטים היו בצבע של המשימה הקשה? (בפועל 50%)</text>
+  ${C.map(([t,v,c],i)=>{const x=290-i*180,h=v*1.9;return `<rect x="${x-34}" y="${168-h}" width="68" height="${h}" rx="6" class="f-c"/><line x1="${x-50}" y1="${168-95}" x2="${x+50}" y2="${168-95}" class="s-line" stroke-dasharray="4 3"/><text x="${x}" y="${160-h}" text-anchor="middle" font-size="13" font-weight="800" class="f-ink">${v}%</text><text x="${x}" y="184" text-anchor="middle" font-size="11.5" font-weight="700" class="f-ink">${t}</text>`}).join("")}
+  <text x="200" y="${168-91}" text-anchor="middle" font-size="10" class="f-mut">50% בפועל</text></svg>`},
+ study6:()=>{const D=[["רשימה שלי",[2.17,2.26]],["רשימת היריב",[1.68,1.13]]],s=34;
+  return `<svg viewBox="0 0 400 214" role="img" aria-label="כמה קטגוריות נזכרו מכל סוג">
+  <text x="200" y="14" text-anchor="middle" font-size="11" class="f-mut">מספר קטגוריות שנזכרו (מתוך 5 מכל סוג)</text>
+  <line x1="20" y1="170" x2="380" y2="170" class="s-line"/>
+  ${D.map(([n,v],i)=>{const cx=290-i*180;return v.map((y,k)=>{const x=cx+22-k*44;return `<rect x="${x-18}" y="${170-y*s}" width="36" height="${y*s}" rx="5" class="${k?"f-c":"f-soft"}" stroke="var(--line)"/><text x="${x}" y="${164-y*s}" text-anchor="middle" font-size="11" font-weight="700" class="f-ink">${y}</text>`}).join("")+`<text x="${cx}" y="188" text-anchor="middle" font-size="12" font-weight="800" class="f-ink">${n}</text>`}).join("")}
+  <rect x="262" y="198" width="12" height="10" rx="2" class="f-soft" stroke="var(--line)"/><text x="256" y="207" text-anchor="start" font-size="11" class="f-ink">קלות</text>
+  <rect x="156" y="198" width="12" height="10" rx="2" class="f-c"/><text x="150" y="207" text-anchor="start" font-size="11" class="f-ink">קשות</text></svg>`}
+};
+const sibTable=`<div class="tblwrap"><table class="tbl"><thead><tr><th>מחקר 3: אחים</th><th>הבכורים</th><th>הצעירים</th></tr></thead><tbody>
+<tr><td><b>הורים קשוחים יותר עם הבכור?</b> (ממוצע, 9 = הבכור)</td><td class="in">6.40</td><td>5.57</td></tr>
+<tr><td><b>מסכימים שההורים קשוחים יותר עם הבכור</b></td><td class="in">80%</td><td>47%</td></tr>
+<tr><td><b>הורים מקלים יותר עם הצעיר?</b> (ממוצע, 1 = הצעיר)</td><td class="in">3.78</td><td>4.49</td></tr>
+<tr><td><b>מסכימים שההורים מקלים יותר עם הצעיר</b></td><td class="in">92%</td><td>71%</td></tr></tbody></table></div>`;
+const accTable=`<div class="tblwrap"><table class="tbl"><thead><tr><th>למי קשה יותר? (7 = לניסויים)</th><th>ניסויים (21)</th><th>לא ניסויים (78)</th></tr></thead><tbody>
+<tr><td>פרסום מאמרים</td><td class="in">4.88</td><td>4.08</td></tr>
+<tr><td>קבלה למשרה</td><td>4.50</td><td>4.51</td></tr>
+<tr><td>קביעות</td><td class="in">4.74</td><td>4.16</td></tr>
+<tr><td>מענקי מחקר</td><td class="in">4.43</td><td>3.65</td></tr>
+<tr><td><b>ממוצע</b></td><td class="in"><b>4.64</b></td><td><b>4.10</b></td></tr></tbody></table></div>`;
+const E=t=>`<span class="en">(${t})</span>`;
+const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</figcaption>`:""}</figure>`;
+const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
+const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;
+const tiles=a=>`<div class="tiles">${a.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`;
+const ex=h=>`<div class="ex"><span class="lbl">דוגמה</span><p>${h}</p></div>`;
+const rem=h=>`<div class="remember">${ic("bulb")}<p>${h}</p></div>`;
+const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")}${t}</span>`).join("")}${n.map(t=>`<span class="yn n">${ic("x")}${t}</span>`).join("")}</div>`;
+const spectrum=(r,l,dot)=>`<div class="spectrum"><div class="track">${dot?'<span class="dot"></span>':""}</div><div class="ends"><span>${r}</span><span>${l}</span></div></div>`;
+document.head.insertAdjacentHTML("beforeend",'<style>.yn svg{width:16px;height:16px}</style>');
+
+const T=[
+ {id:"t1",icon:"cycle",title:"רוח נגדית ורוח גבית",blocks:[
+  {h:"תקציר",html:`<p>שבעה מחקרים מראים <mark>הטיית זמינות</mark> ${E("Availability bias")} בהערכה של הברכות שנהנינו מהן ושל המכשולים שעמדו בפנינו. <b>מכשולים</b> מושכים תשומת לב כי צריך להתגבר עליהם. <b>ברכות ומשאבים</b> אפשר פשוט ליהנות מהם ולהתעלם מהם.</p>${tiles([["building","פוליטיקה (1)","דמוקרטים ורפובליקנים טוענים שהמפה הפוליטית נגדם"],["target","ספורט (2)","אוהדי פוטבול שמים לב במיוחד למשחקים הקשים בלוח של הקבוצה"],["people","משפחה (3)","אנשים חושבים שההורים היו קשוחים איתם יותר ממה שהאחים מוכנים להודות"],["grad","אקדמיה (7)","אנשי אקדמיה חושבים שלתחום שלהם קשה יותר מול שופטים, ועדות מענקים וקביעות"]])}${def("מה המחקרים מראים",`האפקט נובע מ<b>זמינות</b> גבוהה יותר של הקשיים (מחקרים 4 ו-5), ולא רק מ<b>ניהול ייחוס</b> לטובת העצמי (6 ו-7). הבלטת הרוחות הנגדיות גורמת לתחושה של יחס <b>לא הוגן</b>, ולנכונות גדולה יותר לקבל התנהגות לא אתית (מחקר 7).`)}`,q:"q1"},
+  {h:"המטפורה",html:`<p>כל רוכב אופניים או רץ יודע: <b>רוח נגדית</b> ${E("Headwind")} מושכת תשומת לב, ממש "בפרצוף", ומעוררת מחשבות מתי היא תיחלש. כשהרוח מאחור, יש הקלה, אבל היא קצרה: מתרגלים מהר ולא שמים לב שיש <b>רוח גבית</b> ${E("Tailwind")} בכלל.</p>${tiles([["chart","עלייה בהר","הקושי של עלייה מזכיר את עצמו כל רגע. ירידה נוחה לא מושכת את אותה תשומת לב"],["copies","סקראבל","שחקן עם אותיות גרועות \"תקוע\" איתן כמה סיבובים ונזכר שוב ושוב במזל הרע. אותיות טובות פשוט משחקים וממשיכים"]])}${rem("בהקשרים תחרותיים <b>הרוח הגבית של אחד היא הרוח הנגדית של השני</b>, וזו \"מכה כפולה\" של תחושה שלילית. גם מחוץ לתחרות, ההצלחה של אחרים מחדדת את הקשיים שלנו.")}`,q:"q3"},
+  {h:"הקבלה לרוס וסיקולי",html:`${def("Ross & Sicoly (1979)",`אנשים <b>מעריכים יתר על המידה</b> את התרומה שלהם למאמץ משותף, כי התרומה שלהם <b>בולטת</b> להם יותר מהתרומה של בן הזוג או העמיתים.`)}<p>התחושה שהתרומה שלי גדולה יותר נראית כמו <b>עובדה</b> ולא כמו דעה, כי מה שעשיתי עולה לראש הרבה יותר בקלות. באותו אופן, הבולטות השונה של רוחות נגדיות וגבית גורמת לתחושה שזו \"עובדה\" שהדברים <b>לא הוגנים</b>, ושעברנו דרך קשה יותר מאחרים.</p>`,q:"q5"}
+ ]},
+ {id:"t2",icon:"brain",title:"למה המכשולים זמינים יותר",blocks:[
+  {h:"שלוש סיבות",html:`<p>רוס וסיקולי הציעו ארבע סיבות לבולטות של התרומה העצמית. לפחות שלוש מהן מתאימות גם כאן:</p>${tiles([["brain","קידוד עמוק","מכשולים דורשים תשומת לב כי צריך להתגבר עליהם, ולכן הם מקודדים ונשמרים עמוק יותר. כותב צריך להתייחס לביקורת בתיקון המאמר, לא לשבחים"],["clock","פער מידע","אותיות טובות נעלמות מהר, רעות נשארות. מטיילים מבלים יותר זמן בעלייה מאשר בירידה, ולכן חושבים שבמסלול יש יותר עליות"],["target","מוטיבציה","ניהול ייחוס לטובת העצמי: רוח נגדית חזקה היא תירוץ לכישלון ומגדילה את ההצלחה"]])}${rem("הסיבה הרביעית של רוס וסיקולי, <b>שליפה דיפרנציאלית</b> (מתחילים לחשוב מ\"מה אני עשיתי\"), כנראה פחות מתאימה, כי לא ברור שאנשים מתחילים מ\"על מה התגברתי\" אם המכשולים לא קודדו עמוק קודם.")}`,q:"q7"},
+  {h:"לא רק מוטיבציה",html:`<p>החוקרים <b>לא</b> טוענים שמניעים של שיפור העצמי לא משחקים תפקיד. אבל טענות אסטרטגיות כאלה יכולות ליצור את אותו דפוס, ולכן הם תכננו מחקרים שמפרידים בין ההסברים.</p>${def("חיזוי הפוך",`גישה מוטיבציונית יכולה לנבא גם <b>את ההפך</b>: אנשים רוצים לראות את הסיכויים שלהם באור חיובי. יש ספרות ענפה על <b>ביטחון יתר</b>, <b>אופטימיות לא מציאותית</b> והערכה עצמית מנופחת. כל אלה פועלים <b>נגד</b> התחזית של החוקרים, ולכן הופעת ההטיה השלילית היא עדות לעוצמה שלה.`)}${rem("ההסבר כאן הוא <b>זמינות</b> שונה, ולא <b>השפעה</b> שונה. כלומר החוקרים הראו שהמכשולים בולטים יותר בזיכרון ובקשב, לא רק שהם משפיעים יותר (כמו ב\"הרע חזק מהטוב\").")}`,q:"q9"},
+  {h:"טינה, קנאה וזכאות",html:`<p>ניטשה כתב שאין דבר שמכלה אדם מהר יותר מ<b>טינה</b>. כשאנשים חושבים (בטעות) שהדרך שלהם הייתה קשה במיוחד, קל להם לחוש טינה כלפי מי שלכאורה היה לו קל.</p>${tiles([["sprout","קנאה מיטיבה","מאמץ להשיג מה שלאחרים יש"],["x","קנאה ממאירה","אם נראה שהאחרים הרוויחו בדרך קלה לא הוגנת: לקחת או להרוס את ההישגים שלהם"],["scales","זכאות","תחושה שמגיע לי יותר, ופיתוי \"לקצר דרך\" או לנהוג באופן לא אתי"]])}${def("הצד השני: הכרת תודה",`הכרת תודה הופכת אנשים <b>מאושרים</b> יותר, <b>בריאים</b> יותר, מעריכים יותר את בני הזוג ו<b>טובים</b> יותר לאחרים. ההטיה עוזרת להסביר למה קשה כל כך להרגיש אותה באופן קבוע, ולמה חסרה לנו חמלה כלפי הקשיים של אחרים.`)}`,q:"q11"}
+ ]},
+ {id:"t3",icon:"building",title:"מחקרים 1 ו-2: פוליטיקה ופוטבול",blocks:[
+  {h:"מחקר 1: לא הוגן ולא מאוזן",html:`<p>100 משתתפים ענו על שלוש שאלות: למי יש יתרון ב<b>מכללת הבוחרים</b>, למי קשה יותר <b>לגייס כסף</b> לקמפיין, ולמי קשה יותר להשיג שיתוף פעולה מה<b>קונגרס</b>. הסולם: 1 = קשה יותר לרפובליקנים, 7 = קשה יותר לדמוקרטים.</p>${fig("study1","כל צד חושב שהמערכת נגדו")}${tiles([["check","דמוקרטים","4.75: המערכת מעדיפה את הרפובליקנים"],["check","רפובליקנים","3.42: המערכת מעדיפה את הדמוקרטים"],["split","מתונים","4.04: שווה לשני הצדדים"]])}`,q:"q13"},
+  {h:"מעורבות פוליטית",html:`${def("תחזית של זמינות",`מי שמתעניין יותר בפוליטיקה נחשף ליותר דוגמאות למכשולים של המפלגה שלו ולברכות של היריבה. לכן אצלו ההטיה אמורה להיות <b>חזקה יותר</b>.`)}${yn(["בעלי ידע גבוה: ליברלים 5.05 מול שמרנים 3.44, הבדל גדול ומובהק"],["בעלי ידע נמוך: ליברלים 4.24 מול שמרנים 3.94, אין הבדל מובהק"])}${rem("ככל שאנשים חשבו שהם יודעים יותר, כך הרוחות הנגדיות של המפלגה שלהם והרוחות הגביות של היריבים היו <b>בולטות</b> יותר.")}`,q:"q15"},
+  {h:"מחקר 2: הם ראו לוח משחקים",html:`<p>במחקר 1 ביקשו מהמשתתפים <b>להשוות</b> במפורש. האם ההטיה מופיעה גם בלי בקשה כזו? אחרי פרסום לוח המשחקים של ליגת הפוטבול (NFL) לעונת 2014, נאספו <b>124 פוסטים</b> של אוהדים בפורום, ושלושה מקודדים שלא ידעו את ההשערה דירגו אותם.</p>${tiles([["x","41%","מהפוסטים התמקדו בעיקר בקשיים שבדרך"],["check","21%","התמקדו בעיקר בדברים המעודדים"]])}${def("לא רק קבוצות חלשות",`אולי רק אוהדי קבוצות חלשות מתלוננים? לא: לא היה קשר למאזן העונה הקודמת. גם אוהדי קבוצות מצליחות (9 ניצחונות ומעלה) וגם של קבוצות לא מצליחות התמקדו יותר בחסרונות.`)}`,q:"q17"}
+ ]},
+ {id:"t4",icon:"people",title:"מחקרים 3 ו-4: אמא תמיד אהבה אותך יותר",blocks:[
+  {h:"מחקר 3",html:`<p>96 משתתפים עם <b>אח אחד בלבד</b> (51 בכורים, 45 צעירים) ענו על שבע שאלות על משפחות עם שני ילדים: את מי ההורים <b>מענישים</b>, <b>מטיפים</b> לו, מחזיקים ב<b>סטנדרט גבוה</b> או <b>מתעלמים</b> ממנו יותר (רוחות נגדיות), ועם מי הם <b>מקלים</b>, ומי מקבל יותר <b>עידוד</b> ו<b>שבחים</b> (רוחות גביות).</p>${sibTable}${rem("כולם הסכימו שההורים קשוחים יותר עם הבכור ומקלים עם הצעיר. אבל <b>הבכורים</b> חשבו שההבדל הרבה יותר גדול ממה שהצעירים מוכנים להודות. (בשאלה מי מקבל יותר התעלמות לא היה הבדל.)")}`,q:"q19"},
+  {h:"מחקר 4: מה עולה לראש",html:`<p>83 משתתפים עם אח אחד התבקשו <b>לכתוב אירועים</b> שבהם ההורים התייחסו אליהם ואל האח באופן שונה, לטובתם או לרעתם. אחר כך ענו על 8 שאלות על <b>המשפחה שלהם</b> (1 = אני, 9 = האח).</p>${tiles([["x","1.36 אירועים","שבהם התייחסו אליהם בחומרה רבה יותר"],["check","0.44 אירועים","שבהם התייחסו אליהם בקלות רבה יותר"],["target","79% מול 21%","האירוע הראשון שנכתב היה על רוח נגדית ב-79% מהמקרים"]])}${def("הקשר לשיפוט",`המשתתפים חשבו שההורים <b>החמירו איתם</b> והקלו עם האח. וככל שהרוחות הנגדיות היו <b>זמינות יותר</b> (יותר אירועים קשים מקלים), כך הם חשבו יותר שההורים היו קשים איתם וקלים עם האח.`)}`,q:"q21"}
+ ]},
+ {id:"t5",icon:"doc",title:"מחקר 5: עבודה קשה זוכרים",blocks:[
+  {h:"השראה: טברסקי וכהנמן",html:`${def("Tversky & Kahneman (1973)",`השמיעו רשימת שמות של גברים ונשים. כשהגברים ברשימה היו <b>מפורסמים יותר</b>, המשתתפים העריכו (בטעות) שהיו בה יותר גברים, ולהפך. השמות המפורסמים נזכרו בקלות, ו<b>הזמינות</b> שלהם עיוותה את ההערכה.`)}<p>באותו היגיון, החוקרים יצרו משימה שבה חלק מהסבבים <b>קשים</b> וחלק <b>קלים</b>, ושאלו כמה סבבים היו מכל סוג.</p>`,q:"q23"},
+  {h:"הניסוי והתוצאה",html:`<p>100 משתתפים שיחקו מתמחים במגזין ועברו על <b>24 משפטים</b>, בכחול או בירוק. בצבע אחד רק לוחצים "המשך" (קל), ובצבע השני <b>סופרים את התנועות</b> במשפט (קשה). מספר המשפטים מכל צבע היה <b>שווה</b>.</p>${fig("study5","הם העריכו שהיו יותר משפטים בצבע של המשימה הקשה")}${rem("המשימה הקשה (הרוח הנגדית) דרשה יותר מאמץ וקשב, ולכן עיוותה את ההערכה. ואין כאן סיבה מוטיבציונית לעוות: הדרך הכי טובה להיראות טוב הייתה פשוט להעריך נכון.")}`,q:"q25"}
+ ]},
+ {id:"t6",icon:"question",title:"מחקר 6: חכם יותר מסטודנט בליגת הקיסוס?",blocks:[
+  {h:"למה עוד מחקר",html:`<p>האם בכורים <b>באמת</b> מאמינים שהיה להם קשה יותר, או שהטענה רק גורמת להם להרגיש טוב? שני ההסברים לא סותרים, אבל חשוב להראות את ההטיה גם במקום שבו <mark>ניהול ייחוס</mark> ${E("Attribution management")} או <b>הכשלה עצמית</b> ${E("Self-handicapping")} כמעט לא רלוונטיים.</p>${rem("גם במחקר 2 זה פחות מתאים: אוהדים מגזימים בחסרונות בדרך כלל לקראת משחק, ולא בפוסטים אנונימיים חודשים לפני העונה. ובמחקר 5 לא היה בכלל \"ביצוע\" שמישהו מדרג.")}`,q:"q27"},
+  {h:"תחרות טריוויה",html:`<p>52 סטודנטים מקורנל הגיעו בזוגות לתחרות טריוויה. כל אחד ראה <b>שתי רשימות</b>: 10 קטגוריות שלו ו-10 של היריב. בכל רשימה 5 <b>קלות</b> (ידוענים, סיטקומים) ו-5 <b>קשות</b> (מוזיקה בארוקית, ספרות רוסית). אחרי מטלה מסיחה נבדק <b>הזיכרון</b>: שליפה חופשית (עם פרס למי שזוכר הכי הרבה) ואז זיהוי.</p>${fig("study6","מהרשימה של היריב נזכרו בעיקר הקטגוריות הקלות")}${def("התוצאה",`מהרשימה <b>שלהם</b> נזכרו בערך באותה מידה קלות וקשות. מהרשימה של <b>היריב</b> נזכרו הרבה יותר <b>קלות</b>. 70% זכרו יותר קטגוריות קשות מהרשימה שלהם מאשר מזו של היריב, לעומת 53% בלבד שזכרו יותר קלות.`)}`,q:"q29"},
+  {h:"טעויות וזיהוי",html:`<p>גם ה<b>טעויות</b> הטו לטובת הרוחות הנגדיות: יותר "לזכור" קטגוריה קשה של היריב כשלי, או קלה שלי כשל היריב (0.43 טעויות), מאשר טעויות לטובתם (0.15). 36% עשו לפחות טעות אחת לרעתם, לעומת 15% שעשו טעות לטובתם.</p>${tiles([["check","זיהוי","גם במבחן הזיהוי: אותו מספר קלות וקשות מהרשימה שלי, ויותר קלות מזו של היריב"],["brain","המסקנה","המשתתפים לא רק <b>טענו</b> שהתחרות לא הוגנת, הם <b>זכרו</b> אותה כקשה יותר ממה שהייתה"]])}${rem("הערה: קטגוריות קלות קל יותר לזכור באופן כללי (נבדק במדגם נפרד). אז העובדה שזכרו את הקשות שלהם באותה מידה כמו הקלות מראה כמה תשומת לב נתנו להן.")}`,q:"q31"}
+ ]},
+ {id:"t7",icon:"scales",title:"מחקר 7: לרואי חשבון יש פרצות",blocks:[
+  {h:"השאלה והמדגם",html:`<p>בחשבונאות יש סגל <b>ניסויי</b> וסגל <b>לא ניסויי</b>. האם כל קבוצה חושבת שלה קשה יותר? והאם ההרגשה הזו מובילה ל<b>קבלה של התנהגות לא אתית</b> כדי "לאזן את המאזניים"?</p>${rem("למה זה חשוב? (1) זה מראה <b>מחיר</b> של ההטיה. (2) הסבר של הכשלה עצמית מנבא מה אנשים <b>יגידו</b> על המכשולים, אבל לא מנבא נכונות לקבל התנהגות לא אתית. כך זה מפריד בין ההסברים.")}<p>נשלח סקר ל-800 אנשי סגל מחמש מדינות בארה"ב. השתתפו <b>101</b>, ונותחו 100: 21 ניסויים ו-79 לא ניסויים.</p>`,q:"q33"},
+  {h:"מי חושב שקשה לו",html:`${accTable}<p>באופן כללי כולם חשבו שלניסויים קשה יותר (תחום צעיר). אבל <b>הניסויים</b> חשבו שקשה להם יותר <b>באופן מובהק</b> (4.64), ו<b>הלא ניסויים</b> חשבו שזה <b>שווה</b> (4.10). ההבדל ביניהם מובהק.</p>`,q:"q35"},
+  {h:"גמישות מוסרית",html:`<p>נמדדה <mark>גמישות מוסרית</mark>: הסכמה עם 9 משפטים על <b>פרקטיקות מחקר מפוקפקות</b>, למשל "מותר לפרסם את אותה עבודה פעמיים אם כתבי העת שונים מספיק" או "אין בעיה בגניבה עצמית כי היא לא מזיקה".</p>${def("התוצאה",`לא היה הבדל כללי בין הקבוצות, וגם לא השפעה ישירה של תחושת הקושי. אבל ה<b>אינטראקציה</b> הייתה מובהקת: אנשים קיבלו פרקטיקות מפוקפקות <b>בדיוק ביחס</b> למידה שבה חשבו שהרוחות הנגדיות שלהם חזקות משל אחרים.`)}${rem("אצל הלא ניסויים: ככל שחשבו שלהם קשה יותר, קיבלו יותר (קרוב למובהקות). אצל הניסויים: אותו כיוון, לא מובהק.")}`,q:"q37"}
+ ]},
+ {id:"t8",icon:"bulb",title:"דיון: מה ההטיה עושה לנו",blocks:[
+  {h:"\"הרע זמין יותר מהטוב\"",html:`<p>ההטיה קשורה ל<b>הטיית השליליות</b> ("הרע חזק מהטוב"), אבל שונה ממנה. סקירות קודמות מצאו עדויות <b>חלשות</b> להטיה שלילית בזיכרון, ואפילו הטיה <b>חיובית</b> בזיכרון.</p>${def("החידוש",`החוקרים מזהים <b>סוג מסוים</b> של מידע שלילי, המכשולים, שבולט במיוחד, נשאר זמין ומשפיע על השיפוט. במקום \"הרע חזק מהטוב\": <mark>"הרע זמין יותר מהטוב"</mark>.`)}<p>הרבה דיונים בהטיית השליליות מבוססים על הסברים <b>אבולוציוניים</b> רחוקים (עם סכנה צריך להתמודד מיד). לפי החוקרים, צריך להשלים אותם בהסברים <b>קרובים</b> שמתארים את התהליכים הנפשיים המדויקים.</p>${rem("ההסבר כאן לא תלוי ב<b>אבחנתיות</b> של המידע (כמה הוא מלמד על משהו). עונש מההורים לא מלמד על הילדות יותר משבח. אבל עונש וקושי הם מכשולים שצריך להתגבר עליהם, ולכן הם בולטים.")}`,q:"q39"},
+  {h:"הכרת תודה וטינה",html:`<p>ההטיה מצטרפת ל"אויבים" מוכרים של הכרת תודה: הסתגלות, חמדנות, יוהרה, והתחושה שהעול של כולם כבד במיוחד עליי.</p>${ex("פיט טאונסנד מלהקת The Who מאמין שהיה מצליח באותה מידה גם בלי הלהקה. אולי, אבל זה מתעלם מהיתרון של מתופף פופולרי, זמר ייחודי ומנהלים שאפתניים.")}${def("הון חברתי",`DiTomaso (2013): כשאנשים סיפרו את סיפור חייהם, רק אחרי שאלות ממוקדות התברר מי עזר להם. גם מי שקיבל עבודה בזכות קשרים חשב שעשה הכול לבד, והזכיר את העבודה הקשה בקולג' ולא את שכר הלימוד ששילמו ההורים.`)}`,q:"q41"},
+  {h:"מדיניות יהירה",html:`<p>גם קובעי מדיניות מתעלמים מהרוחות הגביות של המדינות שלהם, ומנסים \"לייצא\" שיטות למקומות שבהם הן פחות יצליחו.</p>${tiles([["chart","\"טיפול בהלם\" ברוסיה","הפרטה וליברליזציה אחרי פירוק ברית המועצות, בלי המוסדות שמאפשרים לקפיטליזם לעבוד (בתי משפט, רגולציה, חברה אזרחית)"],["building","עיראק 2003","הניסיון ליצור \"דמוקרטיה לדוגמה\" התעלם מהיתרונות של היסטוריה, מנהגים וגאוגרפיה"],["factory","\"We Built It\"","סיסמת רומני ב-2012. הרוחות הגביות של עסקים (ביטחון, תשתיות, כוח עבודה משכיל) קשות לראות, והרוחות הנגדיות (מסים, רגולציה) בולטות"]])}${rem("הטיה זו עלולה גם להחריף את השיח הציבורי על מסים, רגולציה ורשת ביטחון סוציאלית, כי קל להתעלם מהמכשולים הנסתרים של העניים.")}`,q:"q43"},
+  {h:"מתי כן רואים רוח גבית",html:`<p>יש רוחות גביות שכן שמים לב אליהן, ובעיקר <b>אנשים</b>: מנטורים, חברים שעודדו, קרובים שעזרו כלכלית. אנשים מזכירים אנשים כרוח גבית הרבה יותר מאשר כרוח נגדית.</p>${tiles([["people","שומרי חשבון חברתיים","אנשים עוקבים בקפידה אחרי איך מתייחסים אליהם. מי שלא מכיר תודה מסתכן במוניטין של כפוי טובה"],["lock","פער מידע הפוך","מי שמכשיל אחרים מסתיר את עקבותיו, אבל מי שעוזר לא מסתיר. לכן עזרה חברתית בולטת יותר"]])}${def("סוג אחר",`רוחות גביות חברתיות הן בדרך כלל דברים ש<b>הכניסו אותי למסלול</b> ("בלי הקורס שלה לא הייתי בתחום"). רוחות נגדיות הן דברים ש<b>מעכבים התקדמות</b> במסלול ("אם החברה לא הייתה מעדיפה אחרים...").`)}`,q:"q45"},
+  {h:"סיכום",html:`${ex("השחקן רוב לואו התלונן על \"הטיה ודעה קדומה\" נגד אנשים נאים בהוליווד. נראה שהוא לא מעריך עד כמה המראה עזר לקריירה שלו.")}${def("המסקנה",`זה לא יוהרה יוצאת דופן: <b>לכולנו</b> קל להיות עיוורים לברכות ולזכור את העול. ההטיה נובעת מתהליכים קוגניטיביים בסיסיים. ברכות אפשר ליהנות מהן בלי לשים לב. מכשולים צריך לעבור, ולכן הם תמיד, מילולית ובהשאלה, <mark>"בפרצוף שלנו"</mark>.`)}`,q:"q47"}
+ ]}
+];
+const Q={
+q1:{t:"t1",v:[
+ {q:"מהי אי־הסימטריה שהמאמר מתאר?",a:"מכשולים בולטים וזמינים יותר בזיכרון מברכות ויתרונות",w:["ברכות בולטות יותר ממכשולים","אנשים זוכרים הכול באותה מידה","מכשולים נשכחים מהר"],e:"מכשולים צריך לעבור, ברכות אפשר פשוט ליהנות מהן."},
+ {q:"למה מכשולים מושכים יותר תשומת לב לפי המאמר?",a:"כי צריך להתגבר עליהם",w:["כי הם נדירים","כי הם תמיד גדולים","כי אחרים מדברים עליהם"],e:"ברכות ומשאבים אפשר ליהנות מהם ולהתעלם."}]},
+q2:{t:"t1",v:[
+ {q:"מה הראו מחקרים 4 ו-5 לפי התקציר?",a:"שהאפקט נובע מזמינות גבוהה יותר של הקשיים",w:["שהאפקט נובע רק מרצון להיראות טוב","שאין אפקט","שהאפקט קיים רק בפוליטיקה"],e:"ומחקרים 6 ו-7 הראו שזה לא רק ניהול ייחוס."},
+ {q:"איזו השלכה של ההטיה נמצאה במחקר 7?",a:"נכונות גדולה יותר לקבל התנהגות לא אתית",w:["שיפור בהישגים","יותר הכרת תודה","יותר שיתוף פעולה"],e:"דרך התחושה שהיחס לא הוגן."}]},
+q3:{t:"t1",v:[
+ {q:"מה קורה, לפי המאמר, לרוכב כשהרוח עוברת להיות מאחוריו?",a:"יש הקלה קצרה, אבל הוא מתרגל מהר ולא שם לב לרוח הגבית",w:["הוא שם לב לרוח כל הזמן","הוא מאט","הוא מרגיש קושי חדש"],e:"זו המטפורה המרכזית."},
+ {q:"למה שחקן סקראבל עם אותיות גרועות זוכר את המזל הרע?",a:"כי הוא תקוע עם האותיות כמה סיבובים ונזכר בהן שוב ושוב",w:["כי הוא מפסיד מיד","כי השחקנים האחרים מזכירים לו","כי אותיות גרועות שוות יותר נקודות"],e:"אותיות טובות פשוט משחקים וממשיכים."}]},
+q4:{t:"t1",v:[
+ {q:"מה הכוונה ב\"מכה כפולה\" בהקשר תחרותי?",a:"הרוח הגבית של אחד היא הרוח הנגדית של השני",w:["מפסידים פעמיים","יש שני יריבים","שתי רוחות נגדיות באותו זמן"],e:"זה מגביר את התחושה השלילית."},
+ {q:"איזו דוגמה מהמאמר מראה הטיה גם מחוץ לתחרות?",a:"מטיילים שמתאמצים בעלייה ומתעצבנים על מטיילים שיורדים בקלות",w:["שחקני שחמט בתחרות","קבוצות כדורגל","מועמדים לבחירות"],e:"ההצלחה של אחרים מחדדת את הקושי שלנו."}]},
+q5:{t:"t1",v:[
+ {q:"מה מצאו רוס וסיקולי (1979)?",a:"אנשים מעריכים יתר על המידה את התרומה שלהם למאמץ משותף, כי היא בולטת להם יותר",w:["אנשים מעריכים בחסר את התרומה שלהם","אנשים זוכרים בעיקר את התרומה של אחרים","אין הטיה בהערכת תרומה"],e:"הטיית זמינות דומה."},
+ {q:"למה התחושה שהיה לי קשה יותר נראית כמו \"עובדה\"?",a:"כי הקשיים שלי עולים לראש הרבה יותר בקלות",w:["כי זו באמת עובדה תמיד","כי אחרים מסכימים איתי","כי אני זוכר הכול בדיוק"],e:"זו ההקבלה לרוס וסיקולי."}]},
+q7:{t:"t2",v:[
+ {q:"מהי סיבת \"הקידוד העמוק\" לזמינות המכשולים?",a:"מכשולים דורשים תשומת לב כדי להתגבר עליהם, ולכן נשמרים עמוק יותר בזיכרון",w:["מכשולים חוזרים כל יום","מכשולים מצחיקים","אחרים מספרים לנו עליהם"],e:"כמו כותב שחייב להתייחס לביקורת בתיקון."},
+ {q:"מה מדגים המטייל שחושב שבמסלול יש יותר עליות מירידות?",a:"פער מידע: מבלים יותר זמן בעלייה מאשר בירידה",w:["מוטיבציה לשיפור העצמי","הטיית אישור","טעות בחישוב המרחק"],e:"גם אם האורך של העליות והירידות שווה."}]},
+q8:{t:"t2",v:[
+ {q:"איך מוטיבציה יכולה להגביר את ההתמקדות במכשולים?",a:"רוח נגדית חזקה היא תירוץ לכישלון ומגדילה את ההצלחה",w:["היא תמיד מקטינה את ההתמקדות","היא גורמת לשכוח מכשולים","אין קשר"],e:"זה ניהול ייחוס לטובת העצמי."},
+ {q:"איזו מסיבות רוס וסיקולי כנראה פחות מתאימה כאן?",a:"שליפה דיפרנציאלית",w:["קידוד עמוק","פער מידע","מוטיבציה"],e:"לא ברור שאנשים מתחילים מ\"על מה התגברתי\"."}]},
+q9:{t:"t2",v:[
+ {q:"למה נטיות כמו ביטחון יתר ואופטימיות מחזקות דווקא את הממצאים?",a:"כי הן פועלות נגד התחזית, ולכן הופעת ההטיה השלילית מעידה על עוצמתה",w:["כי הן זהות להטיה","כי הן מסבירות את כל הממצאים","כי הן לא קיימות"],e:"גישה מוטיבציונית יכולה לנבא גם את ההפך."},
+ {q:"מה ההבדל בין ההסבר של המאמר להטיית השליליות?",a:"המאמר עוסק בזמינות שונה של מכשולים, ולא רק בהשפעה חזקה יותר שלהם",w:["אין הבדל","המאמר טוען שהטוב חזק מהרע","הטיית השליליות עוסקת רק בזיכרון"],e:"\"הרע זמין יותר מהטוב\"."}]},
+q10:{t:"t2",v:[
+ {q:"האם החוקרים טוענים שמניעים של שיפור העצמי לא משפיעים כלל?",a:"לא, אבל הם תכננו מחקרים שמפרידים בין ההסברים",w:["כן, אין להם שום השפעה","כן, הם הוכיחו זאת","הם לא דנו בזה"],e:"בדומה לרוס וסיקולי."},
+ {q:"איזה מהבאים לא מוזכר כנטייה שפועלת נגד התחזית של החוקרים?",a:"הטיית הזמינות",w:["ביטחון יתר","אופטימיות לא מציאותית","הערכה עצמית מנופחת"],e:"הטיית הזמינות היא ההסבר של החוקרים."}]},
+q11:{t:"t2",v:[
+ {q:"מה ההבדל בין קנאה מיטיבה לקנאה ממאירה?",a:"מיטיבה: לשאוף להשיג; ממאירה: לקחת או להרוס את ההישגים של האחר",w:["אין הבדל","מיטיבה: להרוס; ממאירה: לשאוף","שתיהן מובילות להכרת תודה"],e:"ממאירה סבירה יותר כשנראה שהאחר הרוויח בדרך לא הוגנת."},
+ {q:"מה הקשר בין ההטיה להכרת תודה?",a:"קל לזכור את הקשיים וקשה להעריך את הברכות, ולכן קשה להרגיש תודה באופן קבוע",w:["ההטיה מגבירה הכרת תודה","אין קשר","הכרת תודה גורמת להטיה"],e:"וגם לחסר בחמלה כלפי אחרים."}]},
+q12:{t:"t2",v:[
+ {q:"איזו השפעה של הכרת תודה לא מוזכרת במאמר?",a:"שיפור בזיכרון לטווח קצר",w:["אושר","בריאות","טוב לב כלפי אחרים"],e:"וגם הערכה גדולה יותר של בני הזוג."},
+ {q:"מה עלולה ליצור התחושה שהתמודדתי עם רוחות נגדיות חזקות?",a:"תחושת זכאות ופיתוי לקצר דרך או לנהוג באופן לא אתי",w:["ענווה","שיתוף פעולה","הכרת תודה"],e:"(Tamborski et al., 2012)."}]},
+q13:{t:"t3",v:[
+ {q:"מה מצא מחקר 1 לגבי דמוקרטים ורפובליקנים?",a:"כל צד חשב שהמערכת הפוליטית פועלת נגדו",w:["שניהם חשבו שהמערכת הוגנת","שניהם חשבו שהמערכת נגד הדמוקרטים","רק הדמוקרטים חשבו שזה לא הוגן"],e:"4.75 לדמוקרטים, 3.42 לרפובליקנים."},
+ {q:"מה חשבו המשתתפים המתונים במחקר 1?",a:"שהמערכת שווה לשני הצדדים",w:["שהיא נגד הדמוקרטים","שהיא נגד הרפובליקנים","הם לא נשאלו"],e:"ממוצע 4.04."}]},
+q14:{t:"t3",v:[
+ {q:"על אילו שלושה נושאים נשאלו המשתתפים במחקר 1?",a:"מכללת הבוחרים, גיוס כספים לקמפיין ושיתוף פעולה מהקונגרס",w:["מסים, חינוך ובריאות","מלחמה, שלום וכלכלה","תקשורת, רשתות וסקרים"],e:"בסולם 1 עד 7."},
+ {q:"במחקר 1, מה משמעות ציון 7?",a:"קשה יותר לדמוקרטים",w:["קשה יותר לרפובליקנים","שווה לשניהם","אין דעה"],e:"1 = קשה יותר לרפובליקנים, 4 = שווה."}]},
+q15:{t:"t3",v:[
+ {q:"מה מנבא הסבר של זמינות לגבי מעורבות פוליטית?",a:"מי שמתעניין יותר יראה הטיה חזקה יותר",w:["מי שמתעניין יותר יראה פחות הטיה","אין קשר","רק מי שלא מתעניין מוטה"],e:"כי הוא נחשף ליותר דוגמאות."},
+ {q:"מה נמצא אצל משתתפים עם ידע פוליטי נמוך?",a:"לא היה הבדל מובהק בין ליברלים לשמרנים",w:["הבדל גדול מאוד","כולם חשבו שהמערכת נגדם","הם לא השתתפו"],e:"ההבדל הופיע אצל בעלי ידע גבוה (5.05 מול 3.44)."}]},
+q17:{t:"t3",v:[
+ {q:"למה נערך מחקר 2 על אוהדי פוטבול?",a:"כדי לבדוק אם ההטיה מופיעה גם בלי בקשה מפורשת להשוות",w:["כדי לבדוק אהדה לספורט","כי מחקר 1 נכשל","כדי לבדוק נאמנות לקבוצה"],e:"במחקר 1 ביקשו מפורשות להשוות."},
+ {q:"כמה מהפוסטים של האוהדים התמקדו בעיקר בקשיים, וכמה בדברים המעודדים?",a:"41% בקשיים ו-21% בדברים המעודדים",w:["21% בקשיים ו-41% במעודדים","50% ו-50%","90% בקשיים"],e:"כמעט פי שניים."}]},
+q18:{t:"t3",v:[
+ {q:"האם רק אוהדי קבוצות חלשות התלוננו על הלוח?",a:"לא, גם אוהדי קבוצות מצליחות התמקדו יותר בחסרונות",w:["כן, רק הם","כן, רק אוהדי האלופה","לא נבדק"],e:"לא היה קשר למאזן העונה הקודמת."},
+ {q:"איך נאספו הנתונים במחקר 2?",a:"פוסטים של אוהדים בפורום אחרי פרסום לוח המשחקים, שקודדו על ידי מקודדים שלא ידעו את ההשערה",w:["ניסוי במעבדה","ראיונות עם שחקנים","שאלון לאוהדים באצטדיון"],e:"124 פוסטים מקוריים."}]},
+q19:{t:"t4",v:[
+ {q:"מה מצא מחקר 3 לגבי בכורים וצעירים?",a:"הבכורים חשבו שההורים קשוחים איתם הרבה יותר ממה שהצעירים מוכנים להודות",w:["הצעירים חשבו שקשה להם יותר","אין הבדל בין הקבוצות","כולם חשבו שההורים שוויוניים"],e:"80% מהבכורים לעומת 47% מהצעירים."},
+ {q:"כמה מהבכורים וכמה מהצעירים חשבו שההורים מקלים יותר עם הצעיר?",a:"92% מהבכורים ו-71% מהצעירים",w:["50% ו-50%","71% מהבכורים ו-92% מהצעירים","100% מכולם"],e:"שתי הקבוצות הסכימו, אבל במידה שונה."}]},
+q20:{t:"t4",v:[
+ {q:"באיזו שאלת \"רוח נגדית\" לא נמצא הבדל במחקר 3?",a:"את מי ההורים נוטים להתעלם יותר",w:["את מי מענישים","למי מטיפים","ממי מצפים לסטנדרט גבוה"],e:"בשלוש האחרות נמצא הבדל."},
+ {q:"איזה קריטריון השתתפות היה במחקרים 3 ו-4?",a:"שיש למשתתף אח אחד בלבד",w:["שהוא בן יחיד","שיש לו לפחות שלושה אחים","שהוא הורה"],e:"כדי להשוות בכור וצעיר."}]},
+q21:{t:"t4",v:[
+ {q:"כמה אירועים של יחס מחמיר ושל יחס מקל כתבו המשתתפים בממוצע במחקר 4?",a:"1.36 מחמיר מול 0.44 מקל",w:["0.44 מחמיר מול 1.36 מקל","שווה","3 מכל סוג"],e:"הרוחות הנגדיות זמינות יותר."},
+ {q:"על מה היה האירוע הראשון שהמשתתפים כתבו ב-79% מהמקרים?",a:"על מקרה שבו היה להם קשה יותר מהאח",w:["על מקרה שבו היה להם קל יותר","על מקרה ניטרלי","על ההורים בלבד"],e:"רק 21% כתבו קודם על רוח גבית."}]},
+q22:{t:"t4",v:[
+ {q:"מה הקשר שנמצא במחקר 4 בין זמינות האירועים לשיפוט?",a:"ככל שהרוחות הנגדיות זמינות יותר, כך חשבו יותר שההורים קשים איתם וקלים עם האח",w:["אין קשר","ככל שזמינות יותר, חשבו שההורים שוויוניים","קשר רק אצל בכורים"],e:"זו עדות ישירה להסבר הזמינות."},
+ {q:"מה החידוש של מחקר 4 לעומת מחקר 3?",a:"שאלו על המשפחה של המשתתף עצמו, ובדקו ישירות מה עולה לראש",w:["שאלו על משפחות אחרות","בדקו רק הורים","לא שאלו שאלות"],e:"שתי מטרות: לבדוק זמינות ולשאול על החוויה האישית."}]},
+q23:{t:"t5",v:[
+ {q:"מה מצאו טברסקי וכהנמן (1973) ברשימת השמות?",a:"כשהגברים היו מפורסמים יותר, העריכו שהיו יותר גברים, ולהפך",w:["אנשים זוכרים רק שמות של נשים","אנשים מעריכים נכון תמיד","מפורסמים נשכחים מהר"],e:"הזמינות עיוותה את ההערכה."},
+ {q:"מה הקשר בין מחקר 5 למחקר של טברסקי וכהנמן?",a:"בשניהם מה שזמין יותר בזיכרון מוביל להערכת יתר של השכיחות שלו",w:["שניהם עוסקים בפוליטיקה","שניהם עוסקים באחים","אין קשר"],e:"היוריסטיקת הזמינות."}]},
+q25:{t:"t5",v:[
+ {q:"מה העריכו המשתתפים במחקר 5?",a:"שהיו יותר משפטים בצבע של המשימה הקשה (כ-56%), למרות שבפועל היו 50%",w:["שהיו פחות משפטים בצבע הקשה","הערכה מדויקת של 50%","שכל המשפטים היו בצבע אחד"],e:"בשני התנאים, כחול וירוק."},
+ {q:"למה קשה להסביר את מחקר 5 בניהול ייחוס?",a:"כי לא היה \"ביצוע\" שמדורג, והדרך הכי טובה להיראות טוב הייתה להעריך נכון",w:["כי המשתתפים קיבלו פרס","כי היו רק 10 משתתפים","כי המשימה הייתה קלה מדי"],e:"אין סיבה מוטיבציונית לעוות."}]},
+q26:{t:"t5",v:[
+ {q:"מה הייתה המשימה הקשה במחקר 5?",a:"לספור את התנועות במשפט",w:["לתרגם את המשפט","לזכור את המשפט","לכתוב משפט חדש"],e:"המשימה הקלה: ללחוץ \"המשך\"."},
+ {q:"כמה משפטים היו בכל צבע במחקר 5?",a:"מספר שווה, כלומר 50% מכל צבע",w:["יותר משפטים קשים","יותר משפטים קלים","רק משפטים קשים"],e:"ובכל זאת העריכו יותר משפטים קשים."}]},
+q27:{t:"t6",v:[
+ {q:"מה המטרה של מחקר 6?",a:"להראות את ההטיה במצב שבו ניהול ייחוס או הכשלה עצמית כמעט לא רלוונטיים",w:["לבדוק ידע כללי של סטודנטים","לבדוק אחים","לבדוק פוליטיקה"],e:"להפריד בין ההסברים."},
+ {q:"מהי \"הכשלה עצמית\"?",a:"יצירה או הדגשה של מכשולים שמספקים תירוץ לכישלון ומגדילים הצלחה",w:["כישלון מכוון בכל משימה","הכרת תודה","הערכה עצמית מדויקת"],e:"זה ההסבר החלופי שהחוקרים רצו לשלול."}]},
+q29:{t:"t6",v:[
+ {q:"מה נמצא במחקר 6 לגבי הקטגוריות שנזכרו מהרשימה של היריב?",a:"נזכרו הרבה יותר קטגוריות קלות מקשות",w:["נזכרו יותר קשות","נזכרו באותה מידה","לא נזכר כלום"],e:"1.68 קלות מול 1.13 קשות."},
+ {q:"כמה מהמשתתפים זכרו יותר קטגוריות קשות מהרשימה שלהם מאשר מהרשימה של היריב?",a:"70%",w:["53%","15%","100%"],e:"לעומת 53% בלבד שזכרו יותר קלות משלהם."}]},
+q30:{t:"t6",v:[
+ {q:"איך נבדק הזיכרון במחקר 6?",a:"שליפה חופשית עם פרס למי שזוכר הכי הרבה, ואחר כך מבחן זיהוי",w:["שאלון על התחושות","רק מבחן זיהוי","שאלו את היריב"],e:"התמריץ עודד דיווח מדויק."},
+ {q:"מה מבדיל את מחקר 6 מסתם טענה שהתחרות לא הוגנת?",a:"ההטיה הופיעה בזיכרון עצמו, לא רק במה שאנשים אמרו",w:["המשתתפים לא דיברו","המשתתפים ניצחו","התחרות הייתה הוגנת"],e:"זה קשה להסביר בניהול ייחוס פשוט."}]},
+q31:{t:"t6",v:[
+ {q:"איזו טעות זיכרון עשו המשתתפים יותר?",a:"לייחס לעצמם קטגוריה קשה של היריב, או ליריב קטגוריה קלה שלהם",w:["לייחס לעצמם קטגוריה קלה של היריב","לא היו טעויות","לשכוח את כל הקטגוריות"],e:"0.43 טעויות לרעתם מול 0.15 לטובתם."},
+ {q:"למה העובדה שזכרו את הקטגוריות הקשות שלהם כמו את הקלות משמעותית?",a:"כי קטגוריות קלות בדרך כלל קל יותר לזכור, ולכן זה מראה כמה תשומת לב נתנו לקשות",w:["כי הקשות קלות יותר לזכירה","כי זה מקרי","כי הם בחרו אותן"],e:"נבדק במדגם נפרד."}]},
+q32:{t:"t6",v:[
+ {q:"כמה מהמשתתפים עשו לפחות טעות אחת לרעתם?",a:"36%, לעומת 15% שעשו טעות לטובתם",w:["15%, לעומת 36%","100%","אף אחד"],e:"הטעויות הטו לטובת הרוחות הנגדיות."},
+ {q:"מה מצא מבחן הזיהוי במחקר 6?",a:"אותו מספר קלות וקשות מהרשימה שלי, ויותר קלות מהרשימה של היריב",w:["יותר קשות מהרשימה של היריב","לא היה הבדל בכלל","הזיהוי לא נבדק"],e:"דפוס דומה לשליפה."}]},
+q33:{t:"t7",v:[
+ {q:"למה מחקר 7 עוזר להפריד בין הסבר הזמינות להכשלה עצמית?",a:"כי הכשלה עצמית לא מנבאת נכונות לקבל התנהגות לא אתית",w:["כי הוא נעשה על סטודנטים","כי הוא ניסוי במעבדה","כי אין בו שאלון"],e:"והוא גם מראה מחיר של ההטיה."},
+ {q:"מי השתתפו במחקר 7?",a:"100 אנשי סגל בחשבונאות: 21 ניסויים ו-79 לא ניסויים",w:["סטודנטים לחשבונאות","רואי חשבון בחברות","אוהדי ספורט"],e:"מחמש מדינות בארה\"ב."}]},
+q35:{t:"t7",v:[
+ {q:"מה חשבו החשבונאים הניסויים לעומת הלא ניסויים?",a:"הניסויים חשבו שקשה להם יותר באופן מובהק, והלא ניסויים חשבו שזה שווה",w:["שתי הקבוצות חשבו שקשה ללא ניסויים","אין הבדל בין הקבוצות","הלא ניסויים חשבו שקשה להם יותר"],e:"4.64 מול 4.10."},
+ {q:"באיזה תחום כמעט לא היה הבדל בין הקבוצות במחקר 7?",a:"קבלה למשרה",w:["פרסום מאמרים","קביעות","מענקי מחקר"],e:"4.50 מול 4.51."}]},
+q36:{t:"t7",v:[
+ {q:"למה הגיוני שבאופן כללי חשבו שלניסויים קשה יותר?",a:"כי חשבונאות ניסויית היא תחום צעיר",w:["כי יש בה יותר כסף","כי היא קלה","כי אין בה מחקר"],e:"ובכל זאת הקבוצות נבדלו בעוצמת האמונה."},
+ {q:"באיזה סולם נמדד מי לדעתם קשה לו יותר?",a:"1 עד 7, כש-7 = לניסויים קשה יותר",w:["0 עד 100","1 עד 3","כן או לא"],e:"4 = שווה."}]},
+q37:{t:"t7",v:[
+ {q:"מה מצא מחקר 7 לגבי פרקטיקות מחקר מפוקפקות?",a:"אנשים קיבלו אותן ביחס למידה שבה חשבו שהרוחות הנגדיות שלהם חזקות משל אחרים",w:["כל החשבונאים קיבלו אותן","אף אחד לא קיבל","רק הניסויים קיבלו"],e:"אינטראקציה מובהקת."},
+ {q:"איזו מהבאות היא דוגמה לפרקטיקה מפוקפקת מהמחקר?",a:"לפרסם את אותה עבודה פעמיים אם כתבי העת שונים מספיק",w:["לבקש ביקורת עמיתים","לשתף נתונים","לרשום מראש השערות"],e:"גם \"אין בעיה בגניבה עצמית\"."}]},
+q38:{t:"t7",v:[
+ {q:"האם נמצא הבדל כללי בגמישות המוסרית בין ניסויים ללא ניסויים?",a:"לא, ההשפעה הופיעה רק כאינטראקציה עם תחושת הקושי",w:["כן, הניסויים גמישים יותר","כן, הלא ניסויים גמישים יותר","לא נמדד"],e:"1.93 מול 1.88."},
+ {q:"מה ההיגיון שהחוקרים הציעו לקבלת פרקטיקות מפוקפקות?",a:"\"לאזן את המאזניים\" וליצור מגרש שווה יותר",w:["לחסוך זמן","לעזור לעמיתים","לשפר את המדע"],e:"כך זה נראה בעיני מי שחושב שקשה לו."}]},
+q39:{t:"t8",v:[
+ {q:"איך מסכמים החוקרים את החידוש שלהם ביחס להטיית השליליות?",a:"\"הרע זמין יותר מהטוב\"",w:["\"הרע חזק מהטוב\"","\"הטוב חזק מהרע\"","\"הטוב זמין יותר מהרע\""],e:"סוג מסוים של מידע שלילי: מכשולים."},
+ {q:"מה מצאו סקירות קודמות על הטיה שלילית בזיכרון?",a:"עדויות חלשות, ואפילו הטיה חיובית בזיכרון",w:["עדויות חזקות מאוד","שאין זיכרון לרע","שהזיכרון תמיד שלילי"],e:"(Baumeister et al., 2001; Rozin & Royzman, 2001)."}]},
+q40:{t:"t8",v:[
+ {q:"למה ההסבר של המאמר לא תלוי באבחנתיות של המידע?",a:"כי מכשולים בולטים כי צריך להתגבר עליהם, ולא כי הם מלמדים יותר על משהו",w:["כי מכשולים תמיד אבחנתיים","כי אבחנתיות לא קיימת","כי שבחים מלמדים יותר"],e:"עונש לא מלמד על הילדות יותר משבח."},
+ {q:"איזה סוג של הסבר להטיית השליליות המאמר מציע להשלים?",a:"הסברים אבולוציוניים רחוקים, בעזרת תהליכים נפשיים קרובים ומדויקים",w:["הסברים גנטיים","הסברים כלכליים","הסברים תרבותיים בלבד"],e:"המנגנון כאן: קשב לצורך התגברות."}]},
+q41:{t:"t8",v:[
+ {q:"מה מדגימה הדוגמה של פיט טאונסנד?",a:"התעלמות מהרוחות הגביות, כמו חברי הלהקה והמנהלים, בהערכת ההצלחה",w:["הכרת תודה גבוהה","הערכה מדויקת של הקריירה","קנאה ממאירה"],e:"הוא חושב שהיה מצליח גם בלי הלהקה."},
+ {q:"מה מצאה DiTomaso (2013)?",a:"אנשים מתעלמים מתפקיד הקשרים החברתיים בהצלחה שלהם ומדגישים את המאמץ האישי",w:["אנשים מגזימים בעזרה שקיבלו","אנשים לא זוכרים את העבודה שלהם","אנשים מודים תמיד להורים"],e:"רק אחרי שאלות ממוקדות התגלתה העזרה."}]},
+q42:{t:"t8",v:[
+ {q:"איזה מהבאים לא מוזכר כ\"אויב\" של הכרת תודה?",a:"אמפתיה",w:["הסתגלות","חמדנות","יוהרה"],e:"גם התחושה שהעול כבד במיוחד עליי."},
+ {q:"מה שכחו לפי DiTomaso מי שהלכו לקולג'?",a:"את שכר הלימוד ששילמו ההורים, והזכירו רק את העבודה הקשה",w:["את הציונים","את המרצים","את החברים"],e:"דוגמה לרוח גבית בלתי נראית."}]},
+q43:{t:"t8",v:[
+ {q:"מה הבעיה במדיניות \"יהירה\" לפי המאמר?",a:"היא מתעלמת מהרוחות הגביות של המדינה המצליחה ומנסה לייצא שיטות למקומות שבהם הן פחות יצליחו",w:["היא יקרה מדי","היא תמיד מצליחה","היא מתעלמת מהמכשולים"],e:"למשל \"טיפול בהלם\" ברוסיה ועיראק 2003."},
+ {q:"מה מדגימה סיסמת \"We Built It\" של רומני?",a:"שהרוחות הגביות של עסקים קשות לראות, והרוחות הנגדיות בולטות",w:["שעסקים לא צריכים עזרה","שמסים קטנים","שעסקים תמיד מודים למדינה"],e:"ביטחון, תשתיות וכוח עבודה משכיל מול מסים ורגולציה."}]},
+q44:{t:"t8",v:[
+ {q:"מה חסר לפי המאמר ב\"טיפול בהלם\" ברוסיה?",a:"המוסדות שמאפשרים לקפיטליזם לעבוד: בתי משפט, רגולציה, חברה אזרחית",w:["כסף","אנשים","טכנולוגיה"],e:"רוחות גביות שקל להתעלם מהן."},
+ {q:"איך ההטיה עלולה להשפיע על השיח הציבורי לפי המאמר?",a:"להחריף את השיח על מסים, רגולציה ורשת ביטחון סוציאלית",w:["להפוך אותו לנעים יותר","להעלים אותו","לא להשפיע"],e:"כי קל להתעלם מהמכשולים הנסתרים של העניים."}]},
+q45:{t:"t8",v:[
+ {q:"איזה סוג של רוח גבית כן בולט לאנשים?",a:"אנשים שעזרו: מנטורים, חברים וקרובים",w:["תשתיות","מזג אוויר","כללים"],e:"אנשים מוזכרים כרוח גבית הרבה יותר מאשר כרוח נגדית."},
+ {q:"למה רוחות גביות חברתיות בולטות יותר לפי המאמר?",a:"כי אנשים עוקבים אחרי יחסים חברתיים, ומי שעוזר לא מסתיר את זה",w:["כי הן נדירות","כי הן תמיד גדולות","כי אנשים שוכחים מכשולים"],e:"מי שמכשיל מסתיר את עקבותיו."}]},
+q46:{t:"t8",v:[
+ {q:"מה ההבדל בסוג בין רוחות גביות חברתיות לרוחות נגדיות?",a:"רוחות גביות הכניסו אותי למסלול, ורוחות נגדיות מעכבות התקדמות במסלול",w:["אין הבדל","רוחות גביות מעכבות","רוחות נגדיות הכניסו למסלול"],e:"\"בלי הקורס שלה לא הייתי בתחום\"."},
+ {q:"מה הסיכון של מי שלא מכיר תודה על עזרה לפי המאמר?",a:"מוניטין של אנוכי וכפוי טובה ופגיעה במעמד החברתי",w:["אין סיכון","קבלת עוד עזרה","שיפור במעמד"],e:"לכן אנשים שמים לב לרוחות גביות חברתיות."}]},
+q47:{t:"t8",v:[
+ {q:"מה מדגים רוב לואו לפי המאמר?",a:"עיוורון לברכות: הוא לא מעריך עד כמה המראה עזר לקריירה",w:["יוהרה יוצאת דופן שאין לאחרים","הכרת תודה","הערכה מדויקת"],e:"והחוקרים מדגישים שזה לא ייחודי לו."},
+ {q:"מה המסקנה של המאמר?",a:"לכולנו קל להיות עיוורים לברכות ולזכור את העול, בגלל תהליכים קוגניטיביים בסיסיים",w:["רק אנשים יהירים מוטים","ההטיה קיימת רק בפוליטיקה","אין דרך להבין את ההטיה"],e:"מכשולים תמיד \"בפרצוף שלנו\"."}]}
+};
+for(const t of T) t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id);
+const KEY=CONFIG.key;
+let S={q:{},read:{}};
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.q) S=s;}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const st=id=>S.q[id]||(S.q[id]={n:0,c:0,w:0,t:0,lv:-1});
+const mastered=id=>(S.q[id]?.c||0)>=2;
+const topicPct=t=>Math.round(100*t.qids.filter(mastered).length/t.qids.length);
+const topicStarted=t=>S.read[t.id]||t.qids.some(id=>S.q[id]&&S.q[id].n);
+const allIds=Object.keys(Q);
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+const pickVariant=id=>{const s=st(id),n=Q[id].v.length;return n>1?(s.lv+1)%n:0};
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const color=t=>`var(--${t.id})`;
+const app=document.getElementById("app");
+const LET=["א","ב","ג","ד"];
+
+function qCard(id,onDone,label){
+  const vi=pickVariant(id),v=Q[id].v[vi],opts=shuffle([v.a,...v.w]);
+  const box=document.createElement("div");box.className="q fade";
+  box.innerHTML=(label?`<span class="eyebrow">${label}</span>`:"")+`<div class="qtext">${esc(v.q)}</div><div class="opts"></div>`;
+  const wrap=box.querySelector(".opts");
+  opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt";b.dataset.a=o===v.a?"1":"";
+    b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+    b.onclick=()=>{const ok=o===v.a,s=st(id);s.n++;s.t=Date.now();s.lv=vi;ok?s.c++:(s.c=0,s.w++);save();
+      wrap.querySelectorAll("button").forEach(x=>{x.disabled=true;if(x.dataset.a)x.classList.add("right")});
+      if(!ok)b.classList.add("wrong");
+      const fb=document.createElement("div");fb.className="fb fade "+(ok?"ok":"no");
+      fb.innerHTML=`${ic(ok?"check":"x")}<div><strong>${ok?"נכון!":"לא בדיוק"}</strong>${esc(v.e)}</div>`;box.appendChild(fb);
+      const nx=document.createElement("button");nx.className="primary";nx.textContent="המשך";nx.style.alignSelf="flex-start";
+      nx.onclick=()=>onDone(ok);box.appendChild(nx);nx.focus({preventScroll:true});nx.scrollIntoView({block:"nearest",behavior:"smooth"});
+    };wrap.appendChild(b)});
+  return box;
+}
+
+function home(){
+  document.body.style.removeProperty("--c");
+  const started=T.filter(topicStarted);
+  const total=Math.round(100*allIds.filter(mastered).length/allIds.length);
+  const weak=allIds.filter(id=>S.q[id]&&S.q[id].n&&!mastered(id)).length;
+  app.innerHTML=`<div class="stack fade">
+   <section class="cover" style="--c:var(--accent)">
+    <div class="cover-art">${FIG[CONFIG.cover]()}</div>
+    <div class="cover-body">
+     <span class="eyebrow">${CONFIG.eyebrow}</span>
+     ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
+     <p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר עם שאלות גם מנושאים קודמים.</p>
+     <div class="stats">
+      <div class="ring" style="--p:${total}"><span>${total}%</span></div>
+      <div class="stat-text"><b>${total===0?"עוד לא התחלת":total>=80?"אתה שולט בחומר":"בדרך"}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
+      <button class="primary review-btn" id="rev" ${started.length?"":"disabled"}>${ic("cycle")}<span>${started.length?"חזרה מהירה":"חזרה מהירה (אחרי נושא ראשון)"}</span></button>
+     </div>
+    </div>
+   </section>
+   <div class="grid" id="list"></div>
+   <div class="foot"><a href="../#social" style="color:var(--accent);font-weight:700;text-decoration:none">→ לקורס</a><span>${CONFIG.note}</span><button class="ghost" id="reset">איפוס התקדמות</button></div>
+  </div>`;
+  document.querySelector("#rev svg").style.cssText="width:20px;height:20px";
+  const list=app.querySelector("#list");
+  T.forEach((t,i)=>{const p=topicPct(t),b=document.createElement("button");b.className="tcard";b.style.setProperty("--c",color(t));
+    const status=!topicStarted(t)?"לא התחלת":p>=80?"שולט":"בתהליך";
+    b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
+    b.onclick=()=>topic(i,0);list.appendChild(b)});
+  app.querySelector("#rev").onclick=review;
+  const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
+  scrollTo(0,0);
+}
+
+function bar(title,n,i,label){
+  return `<div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">${label}</span></div><div class="steps">${Array.from({length:n},(_,k)=>`<i class="${k<=i?"on":""}"></i>`).join("")}</div></div><span class="eyebrow">${title}</span>`;
+}
+
+function topic(ti,bi){
+  const t=T[ti],blk=t.blocks[bi];document.body.style.setProperty("--c",color(t));
+  app.innerHTML=`<div class="stack">${bar(`נושא ${ti+1} · ${t.title}`,t.blocks.length+1,bi,`קטע ${bi+1} מתוך ${t.blocks.length}`)}
+   <article class="card fade"><h3>${blk.h}</h3>${blk.html}</article><div id="slot"></div></div>`;
+  app.querySelector("#back").onclick=home;
+  const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;save();quiz(ti)}};
+  const slot=app.querySelector("#slot");
+  if(blk.q)slot.appendChild(qCard(blk.q,next,"בדיקה קצרה"));
+  else{const b=document.createElement("button");b.className="primary";b.textContent="המשך";b.onclick=next;slot.appendChild(b)}
+  scrollTo(0,0);
+}
+
+function runSet(title,ids,c,onEnd){
+  let i=0,right=0;document.body.style.setProperty("--c",c);
+  const step=()=>{
+    if(i>=ids.length)return onEnd(right,ids.length);
+    const id=ids[i],from=T.find(t=>t.id===Q[id].t);
+    app.innerHTML=`<div class="stack">${bar(title,ids.length,i,`שאלה ${i+1} מתוך ${ids.length}`)}<div id="slot"></div></div>`;
+    app.querySelector("#back").onclick=home;
+    const card=qCard(id,ok=>{if(ok)right++;i++;step()},from.title);card.style.setProperty("--c",color(from));
+    app.querySelector("#slot").appendChild(card);scrollTo(0,0);
+  };step();
+}
+
+function quiz(ti){
+  const t=T[ti];
+  const prev=T.slice(0,ti).filter(topicStarted).flatMap(x=>x.qids);
+  const extra=shuffle(prev).sort((a,b)=>st(a).c-st(b).c).slice(0,2);
+  runSet(`מבחן סיום · ${t.title}`,shuffle(t.qids).concat(extra),color(t),(r,n)=>done(r,n,ti));
+}
+
+function review(){
+  const pool=T.filter(topicStarted).flatMap(t=>t.qids),now=Date.now();
+  const score=id=>{const s=S.q[id]||{n:0,c:0,w:0,t:0};return (s.n?0:2)+s.w*2+(s.c<2?3:0)+Math.min(3,(now-s.t)/864e5)+Math.random()*2};
+  const ids=pool.map(id=>[id,score(id)]).sort((a,b)=>b[1]-a[1]).slice(0,12).map(x=>x[0]);
+  runSet("חזרה מהירה",shuffle(ids),"var(--accent)",(r,n)=>done(r,n,null));
+}
+
+function done(r,n,ti){
+  const nextT=ti!=null&&ti+1<T.length?ti+1:null,pct=Math.round(100*r/n);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">${ti!=null?`סיום נושא ${ti+1} · ${T[ti].title}`:"סיום חזרה מהירה"}</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct};--accent:var(--c)"><span>${pct}%</span></div><div class="big">${r}/${n}</div></div>
+    <p>${r===n?"מצוין, הכל נכון.":r>=n*0.7?"טוב מאוד. מה שטעית בו יחזור בחזרה המהירה, בניסוח אחר.":"כדאי לעבור שוב על הנושא. השאלות שטעית בהן יחזרו בחזרה המהירה."}</p>
+    <div class="row">${nextT!=null?`<button class="primary" id="nx" style="--c:${color(T[nextT])}">לנושא הבא: ${T[nextT].title}</button>`:""}<button id="hm">לכל הנושאים</button></div>
+   </article></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;
+  const nx=app.querySelector("#nx");if(nx)nx.onclick=()=>topic(nextT,0);
+  scrollTo(0,0);
+}
+home();
+</script>
+</body>
+</html>
