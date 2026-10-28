@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>לומדת חובת קריאה: האם ריטלין מסייע בדיסלקסיה?</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Rubik:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: a study notebook. Home = illustrated cover + topic cards; topic = one reading card at a time, with a highlighter for key terms and drawn figures */
+:root{
+  --bg:#eef2f4; --surface:#ffffff; --raised:#f7f9fa; --ink:#15222a; --muted:#4c5b66; --line:#dbe2e6;
+  --accent:#2457a6; --mark:#ffe27a; --good:#23855a; --good-soft:#e2f4ea; --bad:#c2452d; --bad-soft:#fbe6e1;
+  --t1:#d35d36; --t2:#3667cf; --t3:#0e8a7c; --t4:#8448c9; --t5:#b9800c; --t6:#2a7fa6; --t7:#b4436c; --t8:#5a6b2e;
+  --display:"Suez One","Frank Ruhl Libre","David",serif;
+  --body:"Rubik","Arial Hebrew","Segoe UI",Arial,sans-serif;
+  --shadow:0 1px 2px rgba(21,34,42,.06),0 8px 24px rgba(21,34,42,.07);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;font-weight:500;line-height:1.75;direction:rtl}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
+p{margin:0}
+.stack{display:flex;flex-direction:column;gap:16px}
+.muted{color:var(--muted)}
+mark{background:linear-gradient(transparent 38%,var(--mark) 38%,var(--mark) 92%,transparent 92%);color:inherit;padding:0 2px;font-weight:600}
+button{font:inherit;cursor:pointer;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:11px 18px}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button[disabled]{opacity:.55;cursor:default}
+.primary{background:var(--c,var(--accent));border-color:var(--c,var(--accent));color:var(--surface);font-weight:600}
+.ghost{background:transparent;border:none;color:var(--muted);padding:6px 2px}
+.ghost:hover{color:var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.badge{display:inline-block;align-self:flex-start;font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:99px;background:var(--accent);color:var(--surface);margin-bottom:6px}.entitle{display:inline;unicode-bidi:isolate;font-family:Rubik,system-ui,sans-serif;font-weight:800}.hetitle{margin:4px 0 0;font-weight:700;font-size:1.05rem}.cite{text-align:right;margin:4px 0 0;font-size:.85rem;color:var(--muted)}.cite a{color:var(--accent)}
+.eyebrow{font-size:.8rem;letter-spacing:.05em;font-weight:600;color:var(--c,var(--muted))}
+
+/* home */
+.cover{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.cover-art{background:var(--raised);border-bottom:1px solid var(--line);padding:8px 8px 0}
+.cover-art svg{display:block;width:100%;height:auto;max-height:230px}
+.cover-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px}
+.cover h1{font-size:clamp(2rem,6vw,2.6rem);font-weight:900}
+.stats{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.ring{--p:0;width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center;flex:none}
+.ring span{width:50px;height:50px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.9rem;font-variant-numeric:tabular-nums}
+.stat-text{display:flex;flex-direction:column;line-height:1.35;flex:1;min-width:160px}
+.stat-text b{font-size:1.05rem}
+.review-btn{display:flex;align-items:center;gap:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.tcard{--c:var(--accent);text-align:right;padding:0;overflow:hidden;border:none;border-radius:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s}
+.tcard:hover{transform:translateY(-2px)}
+.tcard .band{background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.tcard .band svg{width:44px;height:44px}
+.tcard .n{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;opacity:.85}
+.tcard .body{padding:12px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tcard .t{font-weight:700;font-size:1.05rem;line-height:1.35}
+.bar{height:7px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--c);border-radius:4px}
+.meta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip{font-size:.75rem;padding:3px 10px;border-radius:99px;font-weight:600;background:color-mix(in srgb,var(--c,var(--accent)) 14%,transparent);color:var(--c,var(--accent));white-space:nowrap}
+.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+
+/* topic */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;display:flex;flex-direction:column;gap:8px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.steps{display:flex;gap:5px}
+.steps i{flex:1;height:5px;border-radius:3px;background:var(--line)}
+.steps i.on{background:var(--c)}
+.prog{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tt{font-size:1.6rem;font-weight:900}
+.card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px}
+.card h3{font-size:1.25rem;color:var(--c)}
+.fig{background:var(--raised);border-radius:14px;padding:10px;margin-inline:-4px}
+.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{font-size:.8rem;color:var(--muted);text-align:center;margin-top:4px}
+figure{margin:0}
+.def{border:1.5px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 6%,var(--surface));border-radius:14px;padding:14px 16px}
+.lbl{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:var(--c);margin-bottom:4px}
+.who{display:flex;gap:12px;align-items:flex-start}
+.who .av{flex:none;width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.15rem}
+.who .yr{font-size:.8rem;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.tile{background:var(--raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile svg{width:32px;height:32px;color:var(--c)}
+.tile b{font-size:.98rem}
+.tile span{font-size:.88rem;color:var(--muted);line-height:1.45}
+.ex{background:var(--raised);border-radius:12px;padding:12px 14px;font-size:.95rem}
+.ex .lbl{color:var(--muted)}
+.yesno{display:flex;flex-wrap:wrap;gap:8px}
+.yn{padding:5px 12px;border-radius:99px;font-size:.88rem;font-weight:500;display:inline-flex;gap:6px;align-items:center}
+.yn.y{background:var(--good-soft);color:var(--good)} .yn.n{background:var(--bad-soft);color:var(--bad)}
+.spectrum{display:flex;flex-direction:column;gap:6px}
+.spectrum .track{height:12px;border-radius:6px;background:linear-gradient(90deg,var(--bad),var(--line) 50%,var(--good));position:relative}
+.spectrum .dot{position:absolute;top:50%;left:50%;width:20px;height:20px;border-radius:50%;background:var(--surface);border:3px solid var(--ink);transform:translate(-50%,-50%)}
+.spectrum .ends{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);gap:10px}
+.remember{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;border-top:1px dashed var(--line);padding-top:12px}
+.remember svg{flex:none;width:22px;height:22px;color:var(--c)}
+
+/* question */
+.q{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:12px}
+.qtext{font-weight:600;font-size:1.08rem;line-height:1.55}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{text-align:right;line-height:1.45;display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--raised);border:1.5px solid transparent}
+.opt:hover:not([disabled]){border-color:var(--c)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:8px;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.85rem;color:var(--c)}
+.opt.right{background:var(--good-soft);border-color:var(--good);opacity:1}
+.opt.right .k{background:var(--good);color:var(--surface)}
+.opt.wrong{background:var(--bad-soft);border-color:var(--bad);opacity:1}
+.opt.wrong .k{background:var(--bad);color:var(--surface)}
+.fb{padding:12px 14px;border-radius:12px;font-size:.95rem;display:flex;gap:10px;align-items:flex-start}
+.fb svg{flex:none;width:22px;height:22px;margin-top:2px}
+.fb.ok{background:var(--good-soft)} .fb.ok svg{color:var(--good)}
+.fb.no{background:var(--bad-soft)} .fb.no svg{color:var(--bad)}
+.fb strong{display:block}
+.big{font-family:var(--display);font-size:3.4rem;font-weight:900;color:var(--c);font-variant-numeric:tabular-nums;line-height:1}
+@media (prefers-reduced-motion:no-preference){.fade{animation:f .3s ease-out}@keyframes f{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+
+/* svg figure classes */
+.s-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.s-c{stroke:var(--c);stroke-width:2;fill:none}
+.f-c{fill:var(--c)}
+.f-soft{fill:color-mix(in srgb,var(--c) 16%,var(--surface))}
+.f-surf{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.f-ink{fill:var(--ink)}
+.f-mut{fill:var(--muted)}
+.f-inv{fill:var(--surface)}
+svg text{font-family:var(--body)}
+h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
+.card p,.def p,.tile span,.ex p{font-weight:500}
+.qtext{font-weight:700}
+.tile b,.who b{font-weight:700}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:.95rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.tbl th,.tbl td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl th{background:color-mix(in srgb,var(--c) 10%,var(--surface));color:var(--c);font-weight:700;font-size:.85rem}
+.tbl .in{color:var(--c);font-weight:700}.tbl .out{color:var(--muted);font-weight:700}
+.tblwrap{overflow-x:auto}
+.en{font-size:.82em;color:var(--muted);font-weight:500;direction:ltr;unicode-bidi:isolate}
+</style>
+<style>:root{--accent:#6a46c2}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent:#ad90f2}}:root[data-theme="dark"]{--accent:#ad90f2}</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const CONFIG={key:"lomda-intro-ritalin",cover:"cover29",eyebrow:"מבוא לפסיכולוגיה · מאמר בעברית",title:"האם מתילפנידאט (ריטלין) מסייע לבעלי דיסלקסיית שיכול אותיות ודיסלקסיה קשבית?",cite:`קידר ופרידמן (2011). האם מתילפנידאט (ריטלין) מסייע לבעלי דיסלקסיית שיכול אותיות ודיסלקסיה קשבית? <i>שפה ומוח, 10</i>, ⁦195–214⁩.`,note:"קריאת חובה לתרגול 3: התקציר, המבוא והשיטה. הלומדה מתמקדת בחלקים האלה, ובסוף מסכמת בקצרה את הממצאים כפי שהם מופיעים בתקציר."};
+const I={
+ building:'<path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h2M14 8h2M8 12h2M14 12h2M10 21v-4h4v4"/>',
+ people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
+ cycle:'<path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/>',
+ pyramid:'<path d="M12 3L2.5 20h19z"/><path d="M8.2 10.5h7.6M5.5 15.2h13"/>',
+ chart:'<path d="M4 20V10M9.5 20V4M15 20v-7M20.5 20V8M2 20h20"/>',
+ gear:'<circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="7.5" stroke-dasharray="3.2 2.7" stroke-width="3.2"/>',
+ sprout:'<path d="M12 21v-9"/><path d="M12 14C7 14 4.5 11 4.5 6.5 9 6.5 12 9 12 14z"/><path d="M12 12c0-4.5 3-7 7.5-7 0 4.5-3 7-7.5 7z"/>',
+ scales:'<path d="M12 3v17M7 20h10M4 7h16"/><path d="M4 7l-2.5 6h5zM20 7l-2.5 6h5z"/>',
+ factory:'<path d="M3 21V10l5 3v-3l5 3V5h4v16zM1.5 21h21M17 9h4v12"/>',
+ question:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 1 1 3.6 2.4c-.8.4-1.1.9-1.1 1.8"/><path d="M12 17h.01"/>',
+ data:'<ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6M4.5 11.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6"/>',
+ doc:'<path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/>',
+ split:'<circle cx="12" cy="4.5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="12" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/><path d="M12 6.7v10M12 11l-6 6M12 11l6 6"/>',
+ grad:'<path d="M1.5 9L12 4l10.5 5L12 14z"/><path d="M6 11.2V16c3.3 2.4 8.7 2.4 12 0v-4.8M21 10v5"/>',
+ copies:'<rect x="3" y="7" width="12" height="14" rx="2"/><path d="M7 4h11a2 2 0 0 1 2 2v12"/>',
+ link:'<rect x="2" y="8" width="11" height="8" rx="4"/><rect x="11" y="8" width="11" height="8" rx="4"/>',
+ hand:'<circle cx="8" cy="7" r="3"/><circle cx="16" cy="7" r="3"/><path d="M2.5 20c0-3.3 2.5-6 5.5-6 1.6 0 3 .7 4 1.9 1-1.2 2.4-1.9 4-1.9 3 0 5.5 2.7 5.5 6"/>',
+ target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',
+ id:'<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><circle cx="8.5" cy="11" r="2.3"/><path d="M5 16c.6-1.6 2-2.4 3.5-2.4S11.4 14.4 12 16M14.5 10h4M14.5 13.5h3"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>',
+ pie:'<path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/>',
+ cart:'<path d="M2 3h3l2.5 12h11l2-8H6.5"/><circle cx="9" cy="19.5" r="1.6"/><circle cx="17" cy="19.5" r="1.6"/>',
+ bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/>',
+ check:'<circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/>',
+ x:'<circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/>',
+ lock:'<rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>',
+ moon:'<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>',
+ brain:'<path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a2 2 0 0 0-3-1z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/>',
+ phone:'<rect x="6.5" y="2" width="11" height="20" rx="2.5"/><path d="M10.5 18.5h3"/>',
+ flask:'<path d="M9 2.5h6M10 2.5v6L4.5 19a2 2 0 0 0 1.8 2.9h11.4a2 2 0 0 0 1.8-2.9L14 8.5v-6"/><path d="M7 15h10"/>',
+ leaf:'<path d="M5 19C5 10 11 4 20 4c0 9-6 15-15 15z"/><path d="M5 19l8-8"/>'
+};
+const ic=(k,cls="")=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="${cls}" aria-hidden="true">${I[k]}</svg>`;
+
+const arrowDef=id=>`<defs><marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="f-c"/></marker></defs>`;
+
+const FIG={
+ cover29:()=>`<svg viewBox="0 0 400 228" role="img" aria-label="מילה שהאותיות שלה מתחלפות, וכמוסה">
+  <circle cx="200" cy="114" r="96" class="f-soft"/>
+  ${[["ת",250],["ר",214],["י",178],["ס",142]].map(([l,x],i)=>`<rect x="${x-16}" y="70" width="32" height="40" rx="7" class="${i==1||i==2?"f-c":"f-surf"}" stroke="var(--line)"/><text x="${x}" y="98" text-anchor="middle" font-size="22" font-weight="800" class="${i==1||i==2?"f-inv":"f-ink"}">${l}</text>`).join("")}
+  <path d="M214 120 q-18 18 -36 0" class="s-c" stroke-width="2.5" fill="none"/><path d="M178 60 q18 -18 36 0" class="s-c" stroke-width="2.5" fill="none"/>
+  <rect x="160" y="146" width="80" height="30" rx="15" class="f-surf" stroke="var(--line)"/><path d="M200 146 v30" class="s-line"/><rect x="160" y="146" width="40" height="30" rx="15" class="f-c" opacity=".55"/></svg>`,
+ dys:()=>{const D=[["זיהוי האות","מה האות?","דיסלקסיה ויזואלית",false],["קידוד מיקום","איפה האות במילה?","דיסלקסיית מיקום אותיות (LPD)",true],["שיוך למילה","לאיזו מילה האות שייכת?","דיסלקסיה קשבית",true]];
+  return `<svg viewBox="0 0 400 230" role="img" aria-label="שלוש פונקציות של הנתח הוויזואלי־אורתוגרפי">${arrowDef("dy")}
+  <rect x="40" y="8" width="320" height="34" rx="10" class="f-c"/><text x="200" y="30" text-anchor="middle" font-size="12.5" font-weight="800" class="f-inv">הנתח הוויזואלי־אורתוגרפי</text>
+  ${D.map(([h,q,d,k],i)=>{const x=330-i*130;return `<line x1="${x}" y1="42" x2="${x}" y2="60" class="s-line" marker-end="url(#dy)"/><rect x="${x-60}" y="62" width="120" height="62" rx="10" class="f-surf" stroke="var(--line)"/><text x="${x}" y="86" text-anchor="middle" font-size="12" font-weight="800" class="f-ink">${h}</text><text x="${x}" y="106" text-anchor="middle" font-size="10.5" class="f-mut">${q}</text><line x1="${x}" y1="124" x2="${x}" y2="140" class="s-line" marker-end="url(#dy)"/><rect x="${x-60}" y="142" width="120" height="50" rx="10" class="${k?"f-soft":"f-surf"}" stroke="${k?"var(--accent)":"var(--line)"}"/><text x="${x}" y="164" text-anchor="middle" font-size="10" font-weight="700" class="f-ink">פגיעה ↓</text><text x="${x}" y="181" text-anchor="middle" font-size="10" class="f-ink">${d}</text>`}).join("")}
+  <text x="200" y="218" text-anchor="middle" font-size="10.5" class="f-mut">המסגרות המודגשות: שתי הדיסלקסיות שנבדקו במחקר</text></svg>`},
+ design:()=>`<svg viewBox="0 0 400 190" role="img" aria-label="מערך המחקר: כל נבדק נבדק פעמיים">${arrowDef("ds")}
+  <text x="200" y="16" text-anchor="middle" font-size="11.5" class="f-mut">כל נבדק הוא הביקורת של עצמו (תוך־נבדקי)</text>
+  ${[[300,"מפגש 1","כשעה וחצי"],[100,"מפגש 2","אותם מבדקים"]].map(([x,t,s])=>`<rect x="${x-70}" y="30" width="140" height="56" rx="12" class="f-surf" stroke="var(--line)"/><text x="${x}" y="54" text-anchor="middle" font-size="13" font-weight="800" class="f-ink">${t}</text><text x="${x}" y="73" text-anchor="middle" font-size="10.5" class="f-mut">${s}</text>`).join("")}
+  <line x1="228" y1="58" x2="172" y2="58" class="s-c" stroke-width="2" marker-end="url(#ds)"/><text x="200" y="50" text-anchor="middle" font-size="10" class="f-ink">שבוע לפחות</text>
+  <rect x="30" y="104" width="340" height="34" rx="10" class="f-soft"/><text x="200" y="126" text-anchor="middle" font-size="11.5" font-weight="700" class="f-ink">13 נבדקים: קודם בלי ריטלין, אחר כך עם ריטלין</text>
+  <rect x="30" y="146" width="340" height="34" rx="10" class="f-soft"/><text x="200" y="168" text-anchor="middle" font-size="11.5" font-weight="700" class="f-ink">7 נבדקים: קודם עם ריטלין, אחר כך בלי</text></svg>`
+};
+const testsTable=`<div class="tblwrap"><table class="tbl"><thead><tr><th>מבדק</th><th>מה עושים</th></tr></thead><tbody>
+<tr><td><b>מילים נדידיות בקול</b></td><td>232 מילים ששיכול האותיות האמצעיות יוצר מילה אחרת (תריס–תירס)</td></tr>
+<tr><td><b>זהה–שונה</b></td><td>80 צמדי מילים, כל צמד שתי שניות: האם המילים זהות? (חמוץ–חומץ, חמוץ–חרוץ)</td></tr>
+<tr><td><b>הכרעה לקסיקלית</b></td><td>60 רצפים: 30 מילים ו-30 מילות תפל נדידיות (עבכר). האם זו מילה?</td></tr>
+<tr><td><b>מילה–תמונה</b></td><td>29 מילים נדידיות, ואז שתי תמונות (שוטפת / שופטת). מצביעים על המתאימה</td></tr>
+<tr><td><b>"מה קשור?"</b></td><td>52 שלשות: משענת קשורה לכיסא או לסיגריה?</td></tr>
+<tr><td><b>זוגות מילים (קשבית)</b></td><td>120 זוגות שבהם נדידת אות בין המילים יוצרת מילה קיימת (מרעיש–ארגיל)</td></tr></tbody></table></div>`;
+const E=t=>`<span class="en">(${t})</span>`;
+const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</figcaption>`:""}</figure>`;
+const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
+const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;
+const tiles=a=>`<div class="tiles">${a.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`;
+const ex=h=>`<div class="ex"><span class="lbl">דוגמה</span><p>${h}</p></div>`;
+const rem=h=>`<div class="remember">${ic("bulb")}<p>${h}</p></div>`;
+const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")}${t}</span>`).join("")}${n.map(t=>`<span class="yn n">${ic("x")}${t}</span>`).join("")}</div>`;
+const spectrum=(r,l,dot)=>`<div class="spectrum"><div class="track">${dot?'<span class="dot"></span>':""}</div><div class="ends"><span>${r}</span><span>${l}</span></div></div>`;
+document.head.insertAdjacentHTML("beforeend",'<style>.yn svg{width:16px;height:16px}</style>');
+
+const T=[
+ {id:"t1",icon:"question",title:"התקציר והשאלה",blocks:[
+  {h:"התקציר",html:`<p><mark>מתילפנידאט</mark> ${E("Methylphenidate")}, הידוע בשם המסחרי <b>ריטלין</b>, הוא אחת משיטות הטיפול העיקריות בהפרעת קשב. רבים מבעלי הפרעת קשב סובלים גם מ<b>דיסלקסיה</b>, אבל רק מחקרים מעטים בדקו את השפעת התרופה על קריאה, ואף אחד לא בדק את השפעתה על <b>סוגי דיסלקסיה</b> שונים ועל <b>סוגי טעויות</b> שונים.</p>${tiles([["people","20 נבדקים","ילדים, בני נוער ומבוגרים עם הפרעת קשב ועם דיסלקסיה על בסיס קשבי־אורתוגרפי"],["split","פעמיים","הקריאה נבדקה פעם עם ריטלין ופעם בלי"],["chart","מה נמדד","שיעור הטעויות מכל סוג, קצב הקריאה, וביצוע במטלות קריאה שונות"]])}${def("בשורה התחתונה",`ריטלין שיפר תפקוד ב<b>מטלות קשב כלליות</b>, אבל <b>לא הפחית</b> טעויות קריאה בדיסלקסיית שיכול אותיות ובדיסלקסיה קשבית. לכן, מלבד המשמעות לטיפול, הממצא מלמד שהליקויים האלה <b>נפרדים</b> מקשב כללי.`)}`,q:"q1"},
+  {h:"שגמ, והשאלה",html:`${ex("\"יש לי זיכרון מעולה לצורות... אני מזהה את האותיות, אני זוכרת אותן, אבל לא את המיקום שלהן\". כך תיארה שגמ, אישה עם דיסלקסיית שיכול אותיות, דיסלקסיה קשבית והפרעת קשב.")}<p>ריטלין הוא התרופה הנפוצה ביותר כיום לטיפול בהפרעות קשב, אבל השפעתו על סוגים שונים של דיסלקסיה עוד לא נבדקה. <b>מטרת המחקר:</b> לבדוק את השפעת הריטלין על דיסלקסיות שמקורן קשבי, ועל סוגי טעויות שונים בקריאה.</p>${tiles([["check","אם יש קשר לקשב כללי","ריטלין משפר קשב, ולכן <b>ישפר גם את הקריאה</b>"],["x","אם הליקוי ספציפי לאותיות","גם אם הקשב הכללי ישתפר, הקריאה <b>לא בהכרח</b> תשתפר"]])}${rem("זה ההיגיון של המחקר: התשובה לשאלה הטיפולית (האם ריטלין עוזר?) עונה גם על שאלה תיאורטית (האם הליקוי בקריאה הוא חלק מהקשב הכללי?).")}`,q:"q3"}
+ ]},
+ {id:"t2",icon:"doc",title:"דיסלקסיה ושלוש הדיסלקסיות הקשביות",blocks:[
+  {h:"מהי דיסלקסיה",html:`${def("מושג מפתח",`<mark>דיסלקסיה</mark> ${E("Dyslexia")}: שם כללי למגוון הפרעות קריאה, <b>מולדות או נרכשות</b>, שנגרמות מליקויים ב<b>שלבים שונים</b> של תהליך הקריאה.`)}<p>השלב הראשון בקריאה הוא <mark>הנתח הוויזואלי־אורתוגרפי</mark>. יש לו כמה פונקציות שיכולות להיפגע בנפרד, וכל פגיעה יוצרת סוג אחר של דיסלקסיה עם דפוס טעויות משלו:</p>${fig("dys")}`,q:"q5"},
+  {h:"שלוש דיסלקסיות על בסיס קשבי",html:`<p>לגבי שלוש דיסלקסיות הוצע שהבסיס שלהן <b>קשבי־אורתוגרפי</b>: קושי עם מאפיינים קשביים שחל על מילים כתובות.</p>${tiles([["target","נגלקסיה (נגלקט)","קושי להפנות קשב לאחד מצדי המילה, לרוב השמאלי: השמטה, החלפה או הוספה של אותיות בצד המוזנח"],["copies","דיסלקסיית מיקום אותיות (LPD)",`${E("Letter position dyslexia")} שיכול של אותיות <b>אמצעיות</b>, בעיקר במילים נדידיות. גם השמטה של אות שמופיעה פעמיים`],["link","דיסלקסיה קשבית",`${E("Attentional dyslexia")} אותיות <b>נודדות בין מילים</b>, והמיקום היחסי שלהן נשמר. בעיקר במילים ארוכות ובאות האחרונה`]])}${def("מילים נדידיות",`מילים ששיכול האותיות האמצעיות בהן יוצר <b>מילה קיימת</b> אחרת, כמו תריס–תירס או מעשנת–משענת.`)}`,q:"q7"},
+  {h:"איך הקשב \"נכשל\"",html:`${tiles([["copies","ב-LPD: זרקור הקשב","הקורא מפנה קשב קודם לאות הראשונה והאחרונה וממקם אותן. אחר כך הקשב מופנה לכל האותיות האמצעיות <b>יחד</b>, וקשה לו להפנות קשב לכל אחת בנפרד ולקשר אותה למיקום שלה"],["link","בדיסלקסיה קשבית: חלון הקשב","מנגנון \"חלון הקשב\" בקריאה פגוע, ולכן יחידות <b>מחוץ לחלון</b> נקלטות ומפריעות לעיבוד מילת המטרה"]])}${rem("בדיסלקסיה קשבית יש נדידות <b>אופקיות</b> (ממילה מימין או משמאל) וגם <b>אנכיות</b> (ממילה מעל או מתחת). יש גם השמטת אות כפולה שמופיעה באותו מיקום בשתי מילים, ודחיסה או דחיקה של אות ממילה למילה.")}`,q:"q9"}
+ ]},
+ {id:"t3",icon:"brain",title:"קשב כללי או קשב אורתוגרפי?",blocks:[
+  {h:"מילים מול מספרים",html:`<p>מהו הקשר בין הליקוי הקשבי־אורתוגרפי ליכולת הקשב הכללית? כיוון ראשון לתשובה מגיע מהשוואה של <b>קריאת מילים</b> ל<b>קריאת מספרים</b>.</p>${def("דיסוציאציה",`מחקרים מצאו נבדקים שמתקשים בקריאת מילים אבל קוראים <b>מספרים</b> כרגיל: בנגלקסיה התפתחותית, בדיסלקסיה ויזואלית ובדיסלקסיית שיכול אותיות. זו עדות לכך שהנתח הוויזואלי־אורתוגרפי <b>ספציפי למילים</b>, ושהקושי <b>אינו קשבי כללי</b> אלא קשבי־אורתוגרפי.`)}`,q:"q11"},
+  {h:"כיוון שני: לשנות את הקשב",html:`<p>כיוון נוסף: <b>לשנות</b> את יכולת הקשב הכללית ולבדוק מה קורה לקריאה. ריטלין מאפשר לעשות את זה.</p>${tiles([["check","9 מתוך 20 (45%)","השתפרו בדיוק במבחני קשב ממוחשבים עם ריטלין"],["clock","14 מתוך 20 (70%)","השתפרו בזמני התגובה: היו מהירים יותר"]])}${rem("זה ממצא ממחקר קודם של החוקרות על אותם נבדקים (קידר, פרידמן ושלו־מבורך, 2011), במבחנים של ארבע מערכות קשב: קשב מתמשך, סלקטיבי, הפניית קשב ובקרת קשב. כלומר הריטלין <b>אכן שיפר קשב</b>. השאלה כאן: האם הוא ישפר גם את הקריאה?")}`,q:"q13"}
+ ]},
+ {id:"t4",icon:"flask",title:"מתילפנידאט: איך הוא פועל",blocks:[
+  {h:"המנגנון",html:`<p>הפרעת קשב נחשבת קשורה לחוסר איזון של <b>מוליכים עצביים</b>, בעיקר <mark>דופאמין</mark> ו<mark>נוראפינפרין</mark>. תרופות <b>מעוררות</b> (סטימולנטים), ובמיוחד מתילפנידאט, הן אחת הגישות העיקריות לטיפול.</p>${tiles([["brain","איפה","דופאמין מרוכז בקורטקס הפרונטלי ובגרעיני הבסיס: אזורים חשובים לקשב, ארגון, תכנון, מוטיבציה ושליטה מוטורית"],["flask","מה הוא עושה","מעלה את רמת הדופאמין והנוראפינפרין, כנראה על ידי <b>חסימת הספיגה החוזרת</b> של דופאמין, בעיקר בסטריאטום"],["question","מה לא ידוע","למרות השימוש הנפוץ, מנגנון הפעולה עוד לא הובן עד הסוף"]])}${def("סוגים",`ריטלין רגיל הוא <b>קצר טווח</b>. יש גם סוגים <b>ארוכי טווח</b>: קונצרטה, ריטלין LA ${E("Long-acting")}, ריטלין SR ${E("Slow release")}. במאמר "ריטלין" הוא שם כולל לכל התרופות האלה.`)}`,q:"q15"}
+ ]},
+ {id:"t5",icon:"doc",title:"מה ידוע על ריטלין וקריאה",blocks:[
+  {h:"מחקרים קודמים",html:`<p>מעט מחקרים בדקו את השפעת הריטלין על קריאה, ואף אחד לא הסתכל בנפרד על דיסלקסיות שונות ועל סוגי טעויות.</p>${tiles([["chart","Keulers et al. (2007)","ילדים דוברי הולנדית: עם ריטלין קראו נכון יותר מילים ומילות תפל <b>בדקה</b>. אבל הקריאה נשארה מתחת לממוצע. אולי הריטלין שיפר רק את היכולת להתמודד עם משימה מוגבלת בזמן"],["doc","Bental & Tirosh (2008)","25 בנים בעברית: הדיוק השתפר, אבל לא ברור אילו מילים ואילו דיסלקסיות. והתוצאות לא שורדות תיקון בונפרוני להשוואות מרובות"],["people","Wright et al. (2011)","2 נבדקים: טיפול בקריאה עם ריטלין עבד טוב יותר. אבל זה כנראה כי הילד יכול לשבת בסבלנות וללמוד, לא שיפור ישיר בדיוק"]])}${rem("בכל המחקרים האלה אפשר לייחס את השיפור ל<b>תנאים שמגבילים קריאה ולמידה</b> (סבלנות, עמידה בזמן), ולא לשיפור בליקוי הקריאה עצמו.")}`,q:"q17"},
+  {h:"מחקר ראשוני: לוקוב ופרידמן",html:`${def("לוקוב ופרידמן (2007)",`בדקו <b>חמישה</b> בעלי דיסלקסיית שיכול אותיות: אצל שניים הטעויות ירדו, ואצל שלושה לא היה הבדל. נבדקת אחת שלא השתפרה בקריאה בקול, <b>כן</b> השתפרה במטלת זהה–שונה שדורשת קשב מתמשך.`)}${rem("לסיכום המבוא: אין מחקרים שבדקו את השפעת הריטלין על <b>סוגי</b> דיסלקסיה ו<b>סוגי</b> טעויות. יש סימנים שהיכולת לבצע משימות לאורך זמן משתפרת, וזה יכול לשפר קריאה <b>בעקיפין</b>.")}`,q:"q19"}
+ ]},
+ {id:"t6",icon:"people",title:"השיטה",blocks:[
+  {h:"הנבדקים",html:`${tiles([["people","20 נבדקים","ממרכז הארץ, עם דיסלקסיה התפתחותית ממקור קשבי והפרעת קשב, שנוטלים ריטלין"],["grad","14 תלמידים","כיתות ד' עד ט': 13 בכיתה רגילה ואחד בכיתת לקויי למידה"],["id","6 מבוגרים","4 סטודנטים, אחת עם תואר ראשון ואחת עם תואר שני"]])}<p>כולם אובחנו בעבר עם ADD או ADHD ונוטלים מתילפנידאט בסוגים ובמינונים שונים, לפי המלצת נוירולוג או פסיכיאטר. רוב הילדים נוטלים כל יום, וחלק מהמבוגרים רק כשצריך להתרכז במיוחד, למשל במבחן.</p>${def("קבוצת ביקורת",`34 ילדים בכיתות ד' עד ז', ו-359 מבוגרים מעל גיל 18, <b>בלי</b> הפרעות נוירולוגיות, קשב, שפה, קריאה או כתיבה.`)}`,q:"q21"},
+  {h:"אבחון הדיסלקסיות",html:`<p>כל נבדק עבר <mark>מבדק סינון</mark> בקריאה בקול: <b>תלתן</b> (פרידמן וגביעון, 2003). הוא כולל 136 מילים, 30 צמדי מילים ו-30 מילות תפל, שנבחרו כך שיהיו רגישים לסוגי דיסלקסיה שונים. מי שלא היו לו דיסלקסיה או הפרעת קשב <b>לא נכלל</b>.</p>${tiles([["copies","LPD","שיכולי אותיות אמצעיות, בעיקר במילים נדידיות"],["link","קשבית","נדידות אותיות בין מילים, אופקית או אנכית"],["doc","שטח","קריאה \"לפי הכללים\" של מילים לא רגולריות"],["question","קבאק","קושי באמות קריאה: טעויות באותיות תנועה"]])}${rem("נבדק נחשב לקוי כשהיו לו <b>במובהק יותר טעויות</b> מהסוג הרלוונטי מבני גילו בקבוצת הביקורת. לכל הנבדקים הייתה <b>LPD</b>, ולרובם גם דיסלקסיה קשבית (18 מתוך 20).")}`,q:"q23"},
+  {h:"מבדקי ההמשך",html:`${testsTable}${rem("חלק מהמבדקים דורשים קריאה <b>בקול</b>, וחלק <b>לא</b> (זהה–שונה, הכרעה, תמונה, \"מה קשור\"). המבדקים בלי פלט קולי חדגוניים ונמשכים זמן, ולכן אולי יושפעו יותר מקשב כללי.")}`,q:"q25"},
+  {h:"ההליך והניתוח",html:`${fig("design","מערך המחקר")}<p>המבדקים הועברו בחדר שקט. הסדר הוחלף בין נבדקים כדי למנוע <b>אפקט למידה</b> של המבחנים. הנבדקים התבקשו לקרוא מהר ומדויק, וידעו שהזמן נמדד. ארבעה מבוגרים קראו מילים בחשיפה קצרה על מסך (300 מילישניות למילה, 800 לזוג). התשובות הוקלטו, ו<b>התגובה הראשונה</b> היא שנספרה, בלי תיקונים עצמיים.</p>${def("הניתוח הסטטיסטי",`${E("χ²")} להשוואת נבדק עם ובלי ריטלין. מבחן t של Crawford & Howell להשוואת נבדק לקבוצת הביקורת. ${E("Wilcoxon")} להשוואת הקבוצה בשני התנאים. ותיקון ${E("FDR")} להשוואות מרובות.`)}`,q:"q27"}
+ ]},
+ {id:"t7",icon:"check",title:"מה נמצא (לפי התקציר והדיון)",blocks:[
+  {h:"הממצאים",html:`${yn(["ריטלין שיפר ביצוע במטלות קשב כלליות"],["לא הפחית שיכולי אותיות (LPD)","לא הפחית נדידות בין מילים (קשבית)","לא הפחית טעויות אחרות: קריאה דרך הממיר (שטח) וטעויות תנועה (קבאק)"])}${def("קצב",`בזמני הקריאה היו <b>הבדלים בין אנשים</b>: אצל חלק הריטלין קיצר את הזמן ואצל חלק האריך. המסקנה: ריטלין יכול לעזור לקרוא <b>מהר יותר</b> ביחס לעצמו, אבל לא בהכרח <b>מדויק יותר</b>.`)}${rem("<b>המשמעות התיאורטית:</b> הקשב השתפר והקריאה לא. לכן הליקוי הקשבי־אורתוגרפי בקריאה <b>נפרד</b> מהקשב הכללי.")}`,q:"q29"}
+ ]}
+];
+const Q={
+q1:{t:"t1",v:[
+ {q:"מה השם המסחרי הנפוץ של מתילפנידאט?",a:"ריטלין",w:["פרוזק","קונצרטה בלבד","דופאמין"],e:"קונצרטה הוא סוג ארוך טווח, וריטלין הוא השם הנפוץ."},
+ {q:"מה חסר במחקר הקודם לפי התקציר?",a:"אף מחקר לא בדק את השפעת הריטלין על סוגי דיסלקסיה ועל סוגי טעויות שונים",w:["לא ידוע אם ריטלין משפר קשב","לא היו מחקרים על דיסלקסיה","לא ידוע שיש קשר בין הפרעת קשב לדיסלקסיה"],e:"רק מחקרים מעטים בדקו בכלל קריאה."}]},
+q2:{t:"t1",v:[
+ {q:"מה מצא המחקר לפי התקציר?",a:"ריטלין שיפר קשב כללי, אבל לא הפחית טעויות קריאה בדיסלקסיות הקשביות",w:["ריטלין שיפר מאוד את הקריאה","ריטלין פגע בקשב","ריטלין שיפר רק את הקריאה ולא את הקשב"],e:"ולכן הליקויים נפרדים."},
+ {q:"מה המשמעות התיאורטית של הממצאים?",a:"הליקוי הקשבי־אורתוגרפי בקריאה נפרד מהקשב הכללי",w:["דיסלקסיה היא סוג של הפרעת קשב","קשב וקריאה הם אותו מנגנון","ריטלין פועל רק על קריאה"],e:"הקשב השתפר, הקריאה לא."}]},
+q3:{t:"t1",v:[
+ {q:"מה מתארת שגמ בציטוט שבפתיחת המאמר?",a:"שהיא מזהה וזוכרת את האותיות, אבל לא את המיקום שלהן",w:["שהיא לא מזהה אותיות","שהיא לא זוכרת צורות","שהיא קוראת רק מספרים"],e:"זה תיאור של דיסלקסיית מיקום אותיות."},
+ {q:"מה החוקרות צפו אם יש קשר בין קשב כללי לדיסלקסיות הקשביות?",a:"שריטלין, שמשפר קשב, ישפר גם את הקריאה",w:["שריטלין יפגע בקריאה","שלא יהיה שום שינוי בקשב","שהקריאה תשתפר רק בלי ריטלין"],e:"ואם הליקוי ספציפי לאותיות, הקריאה לא בהכרח תשתפר."}]},
+q4:{t:"t1",v:[
+ {q:"כמה נבדקים השתתפו ומה היה המערך הבסיסי?",a:"20 נבדקים, שנבדקו פעם עם ריטלין ופעם בלי",w:["200 נבדקים בשתי קבוצות נפרדות","20 נבדקים שנבדקו פעם אחת","5 נבדקים שנבדקו כל יום"],e:"ילדים, בני נוער ומבוגרים."},
+ {q:"מה נמדד במחקר לפי התקציר?",a:"שיעור הטעויות מכל סוג, קצב הקריאה וביצוע במטלות קריאה שונות",w:["רק IQ","רק זמני תגובה במבחני קשב","רק הבנת הנקרא"],e:"כך אפשר לראות על מה ריטלין משפיע."}]},
+q5:{t:"t2",v:[
+ {q:"איך מוגדרת דיסלקסיה במאמר?",a:"שם כללי למגוון הפרעות קריאה, מולדות או נרכשות, שנגרמות מליקויים בשלבים שונים של הקריאה",w:["הפרעה אחת שבה הופכים אותיות","ליקוי בשמיעה","קושי בכתיבה בלבד"],e:"יש הרבה סוגי דיסלקסיה."},
+ {q:"מהו השלב הראשון בתהליך הקריאה לפי המאמר?",a:"הנתח הוויזואלי־אורתוגרפי",w:["הבנת המשמעות","הפקת דיבור","הממיר הגרפמי־פונמי"],e:"יש לו כמה פונקציות שיכולות להיפגע בנפרד."}]},
+q6:{t:"t2",v:[
+ {q:"איזו מהבאות אינה פונקציה של הנתח הוויזואלי־אורתוגרפי?",a:"הבנת משמעות המשפט",w:["זיהוי הזהות של האות","קידוד מיקום האותיות במילה","שיוך אותיות למילה"],e:"הבנת המשפט היא שלב מאוחר הרבה יותר."},
+ {q:"פגיעה בשיוך האותיות למילה גורמת ל:",a:"דיסלקסיה קשבית",w:["דיסלקסיית מיקום אותיות","נגלקסיה","דיסלקסיית שטח"],e:"אותיות נודדות בין מילים."}]},
+q7:{t:"t2",v:[
+ {q:"מה מאפיין את דיסלקסיית מיקום האותיות (LPD)?",a:"שיכול של אותיות אמצעיות, בעיקר במילים נדידיות",w:["נדידת אותיות בין מילים","הזנחה של צד שמאל של המילה","קושי באותיות תנועה"],e:"למשל לקרוא תריס כתירס."},
+ {q:"מהי מילה נדידית?",a:"מילה ששיכול האותיות האמצעיות בה יוצר מילה קיימת אחרת",w:["מילה שאין לה משמעות","מילה ארוכה במיוחד","מילה שנכתבת אחרת בכל פעם"],e:"תריס–תירס, מעשנת–משענת."}]},
+q8:{t:"t2",v:[
+ {q:"מה מאפיין נגלקסיה ברמת מילה?",a:"השמטה, החלפה או הוספה של אותיות בצד המוזנח של המילה, לרוב השמאלי",w:["נדידת אותיות בין מילים","שיכול אותיות אמצעיות","קריאה לפי כללים"],e:"קושי להפנות קשב לצד אחד של המילה."},
+ {q:"מה מאפיין את הדיסלקסיה הקשבית?",a:"אותיות נודדות בין מילים, והמיקום היחסי שלהן במילה נשמר",w:["אותיות מתחלפות בתוך המילה","הצד השמאלי מוזנח","טעויות רק באותיות תנועה"],e:"בעיקר במילים ארוכות ובאות האחרונה."}]},
+q9:{t:"t2",v:[
+ {q:"לפי ההסבר המוצע, מה קורה בדיסלקסיית מיקום אותיות?",a:"הקשב מופנה לכל האותיות האמצעיות יחד, וקשה לקשר כל אחת למיקום שלה",w:["הקורא לא רואה את האות הראשונה","הקורא לא מזהה אותיות","הקורא לא שם לב למילה שמתחת"],e:"זרקור הקשב לקוי."},
+ {q:"מה ההסבר הקשבי לדיסלקסיה קשבית?",a:"חלון הקשב בקריאה פגוע, ויחידות מחוץ לחלון נקלטות ומפריעות",w:["הקורא לא מזהה אותיות","הקורא מזניח צד אחד","הקורא קורא לפי כללי הגייה"],e:"(קרבל, שוימר ופרידמן, 2007)."}]},
+q10:{t:"t2",v:[
+ {q:"מהי נדידה \"אנכית\" בדיסלקסיה קשבית?",a:"אות שנודדת ממילה שנמצאת מעל או מתחת למילת המטרה",w:["אות שנודדת ממילה מימין","שיכול אותיות בתוך מילה","השמטת הצד השמאלי"],e:"נדידה אופקית היא ממילה מימין או משמאל."},
+ {q:"איזו טעות נוספת מופיעה בדיסלקסיית מיקום אותיות?",a:"השמטה של אות שמופיעה פעמיים במילה",w:["השמטה של אות כפולה בשתי מילים","נדידה אנכית","קריאה לפי כללים"],e:"השמטת אות כפולה בשתי מילים שייכת לדיסלקסיה הקשבית."}]},
+q11:{t:"t3",v:[
+ {q:"מה מראה הדיסוציאציה בין קריאת מילים לקריאת מספרים?",a:"שהנתח הוויזואלי־אורתוגרפי ספציפי למילים, והקושי קשבי־אורתוגרפי ולא קשבי כללי",w:["שהקושי הוא בקשב הכללי","שמספרים קשים יותר ממילים","שאין קשר בין קריאה לקשב"],e:"קושי במילים לצד קריאת מספרים תקינה."},
+ {q:"באילו דיסלקסיות דווחה דיסוציאציה בין מילים למספרים?",a:"נגלקסיה התפתחותית, דיסלקסיה ויזואלית ודיסלקסיית שיכול אותיות",w:["רק דיסלקסיית שטח","רק דיסלקסיית קבאק","באף דיסלקסיה"],e:"כל אלה דיסלקסיות עם מרכיב קשבי."}]},
+q13:{t:"t3",v:[
+ {q:"מה מצא המחקר הקודם של החוקרות על השפעת ריטלין במבחני קשב?",a:"שיפור בדיוק אצל 9 מתוך 20 ובזמני התגובה אצל 14 מתוך 20",w:["אין שיפור אצל אף נבדק","שיפור בדיוק אצל כולם","החמרה בזמני התגובה"],e:"כלומר ריטלין אכן שיפר קשב."},
+ {q:"מהו \"הכיוון השני\" שבו החוקרות בודקות את הקשר בין קשב לקריאה?",a:"לשנות את יכולת הקשב הכללית בעזרת ריטלין ולבדוק מה קורה לקריאה",w:["להשוות מילים למספרים","לאמן את הנבדקים בקריאה","לבדוק נבדקים בלי הפרעת קשב"],e:"זה הבסיס למחקר הנוכחי."}]},
+q14:{t:"t3",v:[
+ {q:"אילו מערכות קשב נבדקו במחקר הקודם?",a:"קשב מתמשך, קשב סלקטיבי, הפניית קשב ובקרת קשב",w:["רק קשב חזותי","זיכרון עבודה וזיכרון ארוך טווח","קשב שמיעתי בלבד"],e:"לפי Tsal, Shalev ו-Mevorach (2005)."},
+ {q:"למה חשוב שריטלין שיפר קשב אצל הנבדקים?",a:"כי כך אפשר לבדוק אם השיפור בקשב מוביל גם לשיפור בקריאה",w:["כי זה מוכיח שהם לא דיסלקטים","כי זה מראה שהקריאה השתפרה","כי זה מבטל את הצורך במחקר"],e:"אם הקשב השתפר והקריאה לא, הליקויים נפרדים."}]},
+q15:{t:"t4",v:[
+ {q:"באילו מוליכים עצביים קשורה הפרעת קשב לפי המאמר?",a:"דופאמין ונוראפינפרין",w:["סרוטונין ומלטונין","אדרנלין וקורטיזול","GABA בלבד"],e:"ומתילפנידאט מעלה את רמתם."},
+ {q:"איך מתילפנידאט כנראה פועל?",a:"חוסם את הספיגה החוזרת של דופאמין ומעלה את רמתו, בעיקר בסטריאטום",w:["מוריד את רמת הדופאמין","פועל רק על שרירים","מגביר הפרשת סרוטונין"],e:"אבל המנגנון עוד לא הובן עד הסוף."}]},
+q16:{t:"t4",v:[
+ {q:"איפה מרוכז הדופאמין לפי המאמר?",a:"בקורטקס הפרונטלי ובגרעיני הבסיס",w:["בקורטקס החזותי","בצרבלום בלבד","בחוט השדרה"],e:"אזורים לקשב, תכנון, מוטיבציה ושליטה מוטורית."},
+ {q:"איזה מהבאים הוא סוג ארוך טווח של מתילפנידאט?",a:"קונצרטה",w:["ריטלין רגיל","פרוזק","דופאמין"],e:"גם ריטלין LA וריטלין SR ארוכי טווח."}]},
+q17:{t:"t5",v:[
+ {q:"מה הבעיה בפרשנות של Keulers et al. (2007)?",a:"ייתכן שהריטלין שיפר רק את ההתמודדות עם משימה מוגבלת בזמן, ולא את הקושי בקריאה",w:["הם לא השתמשו בריטלין","הם בדקו רק מבוגרים","הם מצאו החמרה"],e:"הקריאה נשארה מתחת לממוצע."},
+ {q:"מה הבעיה בתוצאות של Bental & Tirosh (2008)?",a:"לא ברור אילו מילים ודיסלקסיות נבדקו, והתוצאות לא שורדות תיקון להשוואות מרובות",w:["הם בדקו רק בנות","הם לא בדקו דיוק","הם מצאו שהקריאה החמירה"],e:"25 בנים עם הפרעת קשב ולקות קריאה."}]},
+q18:{t:"t5",v:[
+ {q:"איך מפרשים את השיפור במחקר של Wright et al. (2011)?",a:"הריטלין עזר לילד לשבת בסבלנות וללמוד, ולא שיפר ישירות את הדיוק",w:["הריטלין ריפא את הדיסלקסיה","הריטלין פגע בטיפול","לא היה שיפור"],e:"שיפור בתנאים שמגבילים למידה."},
+ {q:"מה המשותף למחקרים הקודמים לפי המאמר?",a:"השיפור שנמצא אפשר לייחס לתנאים שמגבילים קריאה ולמידה ולא לליקוי עצמו",w:["כולם בדקו סוגי דיסלקסיה שונים","כולם מצאו החמרה","כולם נעשו בעברית"],e:"אף אחד לא בדק סוגי טעויות."}]},
+q19:{t:"t5",v:[
+ {q:"מה מצאו לוקוב ופרידמן (2007) אצל חמישה בעלי דיסלקסיית שיכול אותיות?",a:"אצל שניים הטעויות ירדו, ואצל שלושה לא היה הבדל",w:["כולם השתפרו","אף אחד לא השתפר בשום מטלה","כולם החמירו"],e:"מחקר ראשוני."},
+ {q:"מה הראתה נבדקת אחת אצל לוקוב ופרידמן?",a:"לא השתפרה בקריאה בקול, אבל השתפרה במטלת זהה–שונה שדורשת קשב מתמשך",w:["השתפרה רק בקריאה בקול","החמירה בכל המטלות","לא השתתפה"],e:"סימן להשפעה עקיפה דרך קשב מתמשך."}]},
+q21:{t:"t6",v:[
+ {q:"מי היו הנבדקים במחקר?",a:"20 בעלי הפרעת קשב ודיסלקסיה ממקור קשבי שנוטלים ריטלין: 14 תלמידים ו-6 מבוגרים",w:["20 ילדים בלי הפרעת קשב","14 מבוגרים ו-6 ילדים","20 סטודנטים בלבד"],e:"תלמידים בכיתות ד' עד ט'."},
+ {q:"ממי הורכבה קבוצת הביקורת?",a:"34 ילדים ו-359 מבוגרים בלי הפרעות קשב, שפה, קריאה או כתיבה",w:["20 ילדים עם דיסלקסיה","הנבדקים עצמם בלי ריטלין בלבד","לא הייתה קבוצת ביקורת"],e:"משמשת להשוואה לבני הגיל."}]},
+q22:{t:"t6",v:[
+ {q:"איך הנבדקים נוטלים את התרופה?",a:"רוב הילדים כל יום, וחלק מהמבוגרים רק כשצריך להתרכז במיוחד",w:["כולם פעם בשבוע","אף אחד לא נטל ריטלין לפני המחקר","כולם באותו מינון"],e:"הסוגים והמינונים שונים, לפי רופא."},
+ {q:"מה היה המצב של כל הנבדקים לפני המחקר?",a:"כולם אובחנו עם ADD או ADHD ונוטלים מתילפנידאט",w:["אף אחד לא אובחן","כולם קיבלו ריטלין לראשונה במחקר","כולם בלי דיסלקסיה"],e:"זה תנאי להשתתפות."}]},
+q23:{t:"t6",v:[
+ {q:"מהו מבדק \"תלתן\"?",a:"מבדק סינון בקריאה בקול לזיהוי סוגים שונים של דיסלקסיה",w:["מבחן קשב ממוחשב","שאלון להורים","מבחן אינטליגנציה"],e:"136 מילים, 30 צמדים ו-30 מילות תפל."},
+ {q:"מתי נחשב נבדק לקוי בסוג מסוים של דיסלקסיה?",a:"כשהיו לו במובהק יותר טעויות מהסוג הזה מבני גילו בקבוצת הביקורת",w:["כשעשה טעות אחת","כשההורים דיווחו על קושי","כשקרא לאט"],e:"השוואה במבחן של Crawford & Howell."}]},
+q24:{t:"t6",v:[
+ {q:"איזו דיסלקסיה הייתה לכל הנבדקים?",a:"דיסלקסיית מיקום אותיות (LPD)",w:["דיסלקסיית קבאק","נגלקסיה","דיסלקסיית שטח"],e:"ולרובם (18) גם דיסלקסיה קשבית."},
+ {q:"מה מאפיין דיסלקסיית שטח לפי קריטריוני המחקר?",a:"קריאה \"לפי כללים\" של מילים לא רגולריות",w:["טעויות באותיות תנועה","נדידות בין מילים","הזנחת צד שמאל"],e:"טעויות \"ממיר\"."}]},
+q25:{t:"t6",v:[
+ {q:"מה בודקת מטלת \"מה קשור?\"?",a:"האם הנבדק מבין נכון מילה נדידית, לפי בחירת מילה קשורה במשמעות",w:["כמה מהר הנבדק קורא","האם הנבדק זוכר רשימה","האם הנבדק שומע הבדלים"],e:"למשל: משענת קשורה לכיסא או לסיגריה?"},
+ {q:"איך נבדקה הדיסלקסיה הקשבית במבדקי ההמשך?",a:"קריאה בקול של 120 זוגות מילים שבהם נדידת אות יוצרת מילה קיימת",w:["מטלת מילה–תמונה","הכרעה לקסיקלית","קריאת מספרים"],e:"למשל מרעיש–ארגיל."}]},
+q26:{t:"t6",v:[
+ {q:"למה נבדקו גם מטלות בלי פלט קולי?",a:"כי הן חדגוניות וארוכות, ולכן אולי יושפעו יותר מקשב כללי",w:["כי קריאה בקול אסורה","כי הן מהירות יותר","כי הנבדקים לא יכלו לדבר"],e:"כך אפשר לבדוק השפעה עקיפה."},
+ {q:"כמה מילים נדידיות הוצגו במבדק הקריאה בקול?",a:"232",w:["29","52","1,000"],e:"ל-173 מהן גם פוטנציאל לנדידת אות חיצונית."}]},
+q27:{t:"t6",v:[
+ {q:"למה שינו את סדר התנאים בין הנבדקים?",a:"כדי למנוע אפקט למידה של המבחנים",w:["כדי לחסוך זמן","כי הנבדקים ביקשו","כדי שכולם יתחילו עם ריטלין"],e:"13 התחילו בלי ריטלין ו-7 עם."},
+ {q:"מה נספר כטעות בקריאה?",a:"התגובה הראשונה, בלי להתחשב בתיקונים עצמיים",w:["רק התגובה האחרונה","רק טעויות שהנבדק לא תיקן","רק טעויות במילים ארוכות"],e:"התגובות הוקלטו ותועתקו."}]},
+q28:{t:"t6",v:[
+ {q:"כמה זמן עבר בין שני המפגשים?",a:"שבוע לפחות",w:["יום אחד","חצי שעה","שנה"],e:"כל מפגש נמשך כשעה וחצי."},
+ {q:"איזה מבחן שימש להשוואת נבדק לבין עצמו עם ובלי ריטלין?",a:"χ²",w:["מבחן t של Crawford & Howell","מבחן FDR","מבחן IQ"],e:"Crawford & Howell שימש להשוואה לקבוצת הביקורת."}]},
+q29:{t:"t7",v:[
+ {q:"על אילו טעויות לא השפיע הריטלין?",a:"שיכולי אותיות, נדידות בין מילים, וגם טעויות ממיר וטעויות תנועה",w:["רק על שיכולי אותיות","רק על טעויות תנועה","הוא הפחית את כולן"],e:"אף סוג טעות לא ירד."},
+ {q:"מה המסקנה לגבי קצב הקריאה?",a:"ריטלין יכול לעזור לקרוא מהר יותר ביחס לעצמו, אבל לא בהכרח מדויק יותר",w:["ריטלין האט את כולם","ריטלין שיפר דיוק ולא קצב","לא היה שום שינוי בקצב אצל אף אחד"],e:"היו הבדלים בין אנשים."}]}
+};
+for(const t of T) t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id);
+const KEY=CONFIG.key;
+let S={q:{},read:{}};
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.q) S=s;}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const st=id=>S.q[id]||(S.q[id]={n:0,c:0,w:0,t:0,lv:-1});
+const mastered=id=>(S.q[id]?.c||0)>=2;
+const topicPct=t=>Math.round(100*t.qids.filter(mastered).length/t.qids.length);
+const topicStarted=t=>S.read[t.id]||t.qids.some(id=>S.q[id]&&S.q[id].n);
+const allIds=Object.keys(Q);
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+const pickVariant=id=>{const s=st(id),n=Q[id].v.length;return n>1?(s.lv+1)%n:0};
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const color=t=>`var(--${t.id})`;
+const app=document.getElementById("app");
+const LET=["א","ב","ג","ד"];
+
+function qCard(id,onDone,label){
+  const vi=pickVariant(id),v=Q[id].v[vi],opts=shuffle([v.a,...v.w]);
+  const box=document.createElement("div");box.className="q fade";
+  box.innerHTML=(label?`<span class="eyebrow">${label}</span>`:"")+`<div class="qtext">${esc(v.q)}</div><div class="opts"></div>`;
+  const wrap=box.querySelector(".opts");
+  opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt";b.dataset.a=o===v.a?"1":"";
+    b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+    b.onclick=()=>{const ok=o===v.a,s=st(id);s.n++;s.t=Date.now();s.lv=vi;ok?s.c++:(s.c=0,s.w++);save();
+      wrap.querySelectorAll("button").forEach(x=>{x.disabled=true;if(x.dataset.a)x.classList.add("right")});
+      if(!ok)b.classList.add("wrong");
+      const fb=document.createElement("div");fb.className="fb fade "+(ok?"ok":"no");
+      fb.innerHTML=`${ic(ok?"check":"x")}<div><strong>${ok?"נכון!":"לא בדיוק"}</strong>${esc(v.e)}</div>`;box.appendChild(fb);
+      const nx=document.createElement("button");nx.className="primary";nx.textContent="המשך";nx.style.alignSelf="flex-start";
+      nx.onclick=()=>onDone(ok);box.appendChild(nx);nx.focus({preventScroll:true});nx.scrollIntoView({block:"nearest",behavior:"smooth"});
+    };wrap.appendChild(b)});
+  return box;
+}
+
+function home(){
+  document.body.style.removeProperty("--c");
+  const started=T.filter(topicStarted);
+  const total=Math.round(100*allIds.filter(mastered).length/allIds.length);
+  const weak=allIds.filter(id=>S.q[id]&&S.q[id].n&&!mastered(id)).length;
+  app.innerHTML=`<div class="stack fade">
+   <section class="cover" style="--c:var(--accent)">
+    <div class="cover-art">${FIG[CONFIG.cover]()}</div>
+    <div class="cover-body">
+     <span class="eyebrow">${CONFIG.eyebrow}</span>
+     ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
+     <p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר עם שאלות גם מנושאים קודמים.</p>
+     <div class="stats">
+      <div class="ring" style="--p:${total}"><span>${total}%</span></div>
+      <div class="stat-text"><b>${total===0?"עוד לא התחלת":total>=80?"אתה שולט בחומר":"בדרך"}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
+      <button class="primary review-btn" id="rev" ${started.length?"":"disabled"}>${ic("cycle")}<span>${started.length?"חזרה מהירה":"חזרה מהירה (אחרי נושא ראשון)"}</span></button>
+     </div>
+    </div>
+   </section>
+   <div class="grid" id="list"></div>
+   <div class="foot"><a href="../#intro" style="color:var(--accent);font-weight:700;text-decoration:none">→ לקורס</a><span>${CONFIG.note}</span><button class="ghost" id="reset">איפוס התקדמות</button></div>
+  </div>`;
+  document.querySelector("#rev svg").style.cssText="width:20px;height:20px";
+  const list=app.querySelector("#list");
+  T.forEach((t,i)=>{const p=topicPct(t),b=document.createElement("button");b.className="tcard";b.style.setProperty("--c",color(t));
+    const status=!topicStarted(t)?"לא התחלת":p>=80?"שולט":"בתהליך";
+    b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
+    b.onclick=()=>topic(i,0);list.appendChild(b)});
+  app.querySelector("#rev").onclick=review;
+  const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
+  scrollTo(0,0);
+}
+
+function bar(title,n,i,label){
+  return `<div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">${label}</span></div><div class="steps">${Array.from({length:n},(_,k)=>`<i class="${k<=i?"on":""}"></i>`).join("")}</div></div><span class="eyebrow">${title}</span>`;
+}
+
+function topic(ti,bi){
+  const t=T[ti],blk=t.blocks[bi];document.body.style.setProperty("--c",color(t));
+  app.innerHTML=`<div class="stack">${bar(`נושא ${ti+1} · ${t.title}`,t.blocks.length+1,bi,`קטע ${bi+1} מתוך ${t.blocks.length}`)}
+   <article class="card fade"><h3>${blk.h}</h3>${blk.html}</article><div id="slot"></div></div>`;
+  app.querySelector("#back").onclick=home;
+  const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;save();quiz(ti)}};
+  const slot=app.querySelector("#slot");
+  if(blk.q)slot.appendChild(qCard(blk.q,next,"בדיקה קצרה"));
+  else{const b=document.createElement("button");b.className="primary";b.textContent="המשך";b.onclick=next;slot.appendChild(b)}
+  scrollTo(0,0);
+}
+
+function runSet(title,ids,c,onEnd){
+  let i=0,right=0;document.body.style.setProperty("--c",c);
+  const step=()=>{
+    if(i>=ids.length)return onEnd(right,ids.length);
+    const id=ids[i],from=T.find(t=>t.id===Q[id].t);
+    app.innerHTML=`<div class="stack">${bar(title,ids.length,i,`שאלה ${i+1} מתוך ${ids.length}`)}<div id="slot"></div></div>`;
+    app.querySelector("#back").onclick=home;
+    const card=qCard(id,ok=>{if(ok)right++;i++;step()},from.title);card.style.setProperty("--c",color(from));
+    app.querySelector("#slot").appendChild(card);scrollTo(0,0);
+  };step();
+}
+
+function quiz(ti){
+  const t=T[ti];
+  const prev=T.slice(0,ti).filter(topicStarted).flatMap(x=>x.qids);
+  const extra=shuffle(prev).sort((a,b)=>st(a).c-st(b).c).slice(0,2);
+  runSet(`מבחן סיום · ${t.title}`,shuffle(t.qids).concat(extra),color(t),(r,n)=>done(r,n,ti));
+}
+
+function review(){
+  const pool=T.filter(topicStarted).flatMap(t=>t.qids),now=Date.now();
+  const score=id=>{const s=S.q[id]||{n:0,c:0,w:0,t:0};return (s.n?0:2)+s.w*2+(s.c<2?3:0)+Math.min(3,(now-s.t)/864e5)+Math.random()*2};
+  const ids=pool.map(id=>[id,score(id)]).sort((a,b)=>b[1]-a[1]).slice(0,12).map(x=>x[0]);
+  runSet("חזרה מהירה",shuffle(ids),"var(--accent)",(r,n)=>done(r,n,null));
+}
+
+function done(r,n,ti){
+  const nextT=ti!=null&&ti+1<T.length?ti+1:null,pct=Math.round(100*r/n);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">${ti!=null?`סיום נושא ${ti+1} · ${T[ti].title}`:"סיום חזרה מהירה"}</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct};--accent:var(--c)"><span>${pct}%</span></div><div class="big">${r}/${n}</div></div>
+    <p>${r===n?"מצוין, הכל נכון.":r>=n*0.7?"טוב מאוד. מה שטעית בו יחזור בחזרה המהירה, בניסוח אחר.":"כדאי לעבור שוב על הנושא. השאלות שטעית בהן יחזרו בחזרה המהירה."}</p>
+    <div class="row">${nextT!=null?`<button class="primary" id="nx" style="--c:${color(T[nextT])}">לנושא הבא: ${T[nextT].title}</button>`:""}<button id="hm">לכל הנושאים</button></div>
+   </article></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;
+  const nx=app.querySelector("#nx");if(nx)nx.onclick=()=>topic(nextT,0);
+  scrollTo(0,0);
+}
+home();
+</script>
+</body>
+</html>
