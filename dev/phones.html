@@ -479,8 +479,7 @@ function topic(ti,bi){
   app.querySelector("#back").onclick=home;
   const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;save();quiz(ti)}};
   const slot=app.querySelector("#slot");
-  if(blk.q)slot.appendChild(qCard(blk.q,next,"בדיקה קצרה"));
-  else{const b=document.createElement("button");b.className="primary";b.textContent="המשך";b.onclick=next;slot.appendChild(b)}
+  {const b=document.createElement("button");b.className="primary";b.textContent=bi+1<t.blocks.length?"המשך":`למבחן הנושא (${t.qids.length} שאלות)`;b.onclick=next;slot.appendChild(b)}
   scrollTo(0,0);
 }
 
