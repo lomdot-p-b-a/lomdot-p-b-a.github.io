@@ -160,6 +160,23 @@ h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
 .tbl .in{color:var(--c);font-weight:700}.tbl .out{color:var(--muted);font-weight:700}
 .tblwrap{overflow-x:auto}
 .en{font-size:.82em;color:var(--muted);font-weight:500;direction:ltr;unicode-bidi:isolate}
+.ak{white-space:nowrap}
+.acr{font-size:.82em;color:var(--muted);font-weight:500}
+.acrnote{font-size:.85rem;color:var(--muted);background:color-mix(in srgb,var(--c,var(--accent)) 7%,var(--surface));border-radius:10px;padding:8px 12px;line-height:1.6}
+.tcard.done .band{background:color-mix(in srgb,var(--good) 16%,var(--surface))}
+.tcard.done .meta span:first-child{color:var(--good);font-weight:700}
+.card.sum{gap:6px;align-items:stretch}
+.card.sum h2{font-family:var(--display);font-size:1.5rem;margin:6px 0 2px;color:var(--accent)}
+.card.sum h3{margin:18px 0 4px;color:var(--accent);border-bottom:2px solid color-mix(in srgb,var(--accent) 25%,transparent);padding-bottom:4px}
+.card.sum h4{margin:10px 0 2px}
+.card.sum p,.card.sum li{line-height:1.75}
+.card.sum ul,.card.sum ol{margin:4px 0;padding-inline-start:22px}
+.card.sum .key{background:color-mix(in srgb,var(--accent) 9%,var(--surface));border-inline-start:4px solid var(--accent);border-radius:10px;padding:10px 14px;margin:8px 0}
+.card.sum .trap{background:color-mix(in srgb,var(--bad) 9%,var(--surface));border-inline-start:4px solid var(--bad);border-radius:10px;padding:10px 14px;margin:8px 0}
+.card.sum table{border-collapse:collapse;width:100%;font-size:.92rem;margin:6px 0}
+.card.sum th,.card.sum td{border:1px solid var(--line);padding:6px 8px;text-align:right;vertical-align:top}
+.card.sum th{background:color-mix(in srgb,var(--accent) 10%,var(--surface))}
+.card.sum .tw{overflow-x:auto}
 </style>
 <style>:root{--accent:#6a46c2}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent:#ad90f2}}:root[data-theme="dark"]{--accent:#ad90f2}</style>
 </head>
@@ -245,6 +262,161 @@ const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")
 const spectrum=(r,l,dot)=>`<div class="spectrum"><div class="track">${dot?'<span class="dot"></span>':""}</div><div class="ends"><span>${r}</span><span>${l}</span></div></div>`;
 document.head.insertAdjacentHTML("beforeend",'<style>.yn svg{width:16px;height:16px}</style>');
 
+const ACR={
+"AAI":["Adult Attachment Interview","ריאיון ההיקשרות למבוגרים"],
+"ABA":["","תבנית הברות שבה הראשונה והאחרונה זהות (גה טי גה)"],
+"ABB":["","תבנית הברות שבה השתיים האחרונות זהות (וו פי פי)"],
+"ACh":["Acetylcholine","אצטילכולין"],
+"AChE":["Acetylcholinesterase","אצטילכולין־אסטראז, האנזים שמפרק אצטילכולין"],
+"ADD":["Attention Deficit Disorder","הפרעת קשב"],
+"ADHD":["Attention Deficit Hyperactivity Disorder","הפרעת קשב וריכוז עם היפראקטיביות"],
+"AI":["Artificial Intelligence","בינה מלאכותית"],
+"AMPA":["","סוג של קולטן גלוטמט יונוטרופי, הנפוץ ביותר"],
+"ANOVA":["Analysis of Variance","ניתוח שונות, מבחן סטטיסטי להשוואת כמה ממוצעים"],
+"AP5":["","חומר שחוסם את אתר הגלוטמט בקולטן NMDA"],
+"AST":["Attention Switching Task","משימת מעבר קשב בין כללים"],
+"ATP":["Adenosine Triphosphate","אדנוזין טריפוספט, מולקולת האנרגיה של התא"],
+"AVG":["","ארגון שערך את הסקר על ילדים והטלפונים של הוריהם"],
+"BCTI":["Belief in Conspiracy Theories Inventory","שאלון האמונה בתיאוריות קונספירציה"],
+"BEIP":["Bucharest Early Intervention Project","מחקר ההתערבות המוקדמת בבוקרשט"],
+"BRAIN":["Brain Research through Advancing Innovative Neurotechnologies","מיזם חקר המוח האמריקני"],
+"CANTAB":["Cambridge Neuropsychological Test Automated Battery","סוללת מבחנים נוירופסיכולוגיים ממוחשבת"],
+"CASQ":["Cleveland Adolescent Sleepiness Questionnaire","שאלון ישנוניות כללית"],
+"CB1":["Cannabinoid receptor 1","קולטן קנבינואידים מסוג 1, במוח"],
+"CBT":["Cognitive Behavioral Therapy","טיפול קוגניטיבי־התנהגותי"],
+"CCT":["Computerized Cognitive Training","אימון קוגניטיבי ממוחשב"],
+"CES-D":["Center for Epidemiologic Studies Depression scale","שאלון לדיכאון"],
+"CFA":["Confirmatory Factor Analysis","ניתוח גורמים מאשש"],
+"ChAT":["Choline Acetyltransferase","האנזים שבונה אצטילכולין"],
+"ChR2":["Channelrhodopsin-2","תעלה רגישה לאור כחול שמעוררת נוירון"],
+"CNS":["Central Nervous System","מערכת העצבים המרכזית: המוח ומוח השדרה"],
+"CR":["Conditioned Response","תגובה מותנית"],
+"CS":["Conditioned Stimulus","גירוי מותנה"],
+"CSF":["Cerebrospinal Fluid","נוזל המוח והשדרה"],
+"CT":["Computed Tomography","טומוגרפיה ממוחשבת, צילום רנטגן בפרוסות"],
+"DBS":["Deep Brain Stimulation","גרייה מוחית עמוקה"],
+"DMS":["Delayed Matching to Sample","משימת התאמה לדוגמה אחרי השהיה (זיכרון חזותי)"],
+"DNA":["Deoxyribonucleic Acid","החומר התורשתי, שנמצא בכרומוזומים"],
+"DQ":["Developmental Quotient","מנת הרמה ההתפתחותית"],
+"DRD4":["Dopamine Receptor D4","גן של קולטן דופמין מסוג D4"],
+"DSM-5":["DSM, 5th edition","המהדורה החמישית של המדריך האמריקני לאבחון הפרעות נפשיות"],
+"DSM-IV":["DSM, 4th edition","המהדורה הרביעית של המדריך לאבחון הפרעות נפשיות"],
+"DSM-III":["DSM, 3rd edition","המהדורה השלישית של המדריך לאבחון הפרעות נפשיות"],
+"5-HT1A":["","קולטן סרוטונין מסוג 1A"],
+"5-HT3":["","קולטן סרוטונין מסוג 3, יונוטרופי"],
+"MAO-A":["Monoamine Oxidase A","מונואמין אוקסידאז מסוג A"],
+"MAO-B":["Monoamine Oxidase B","מונואמין אוקסידאז מסוג B"],
+"GPT-4":["Generative Pre-trained Transformer 4","מודל שפה של OpenAI"],
+"DSM":["Diagnostic and Statistical Manual of Mental Disorders","המדריך האמריקני לאבחון הפרעות נפשיות"],
+"DTI":["Diffusion Tensor Imaging","הדמיה של מסילות אקסונים לפי תנועת המים"],
+"EEG":["Electroencephalogram","רישום הפעילות החשמלית של המוח מהקרקפת"],
+"EPSP":["Excitatory Postsynaptic Potential","פוטנציאל פוסט־סינפטי מעורר"],
+"ERA":["English and Romanian Adoptees study","מחקר המאומצים מרומניה לאנגליה"],
+"ERP":["Event-Related Potential","פוטנציאל מעורר: תגובה חשמלית במוח לאירוע מסוים"],
+"FDG":["Fluorodeoxyglucose","גלוקוז רדיואקטיבי שמשמש בסריקת PET"],
+"FDR":["False Discovery Rate","תיקון סטטיסטי להשוואות מרובות"],
+"fMRI":["functional MRI","MRI תפקודי, מודד פעילות לפי רמת החמצן בדם"],
+"GABA":["Gamma-Aminobutyric Acid","גאבא, הנוירוטרנסמיטר המעכב העיקרי"],
+"GABAA":["","קולטן גאבא מסוג A, תעלת כלוריד"],
+"GAD":["Glutamic Acid Decarboxylase","האנזים שבונה גאבא מגלוטמט"],
+"GE":["General Electric","חברת ג'נרל אלקטריק"],
+"GLOBE":["Global Leadership and Organizational Behavior Effectiveness","מחקר בין־לאומי על מנהיגות ותרבות"],
+"GPS":["Global Positioning System","מערכת ניווט לווייני"],
+"HOME":["Home Observation for Measurement of the Environment","תצפית בבית למדידת הסביבה"],
+"IACUC":["Institutional Animal Care and Use Committee","ועדה מוסדית לפיקוח על מחקר בבעלי חיים"],
+"ICD":["International Classification of Diseases","הסיווג הבין־לאומי של מחלות"],
+"ICV":["Intracerebroventricular","מתן לתוך חדרי המוח"],
+"IM":["Intramuscular","הזרקה לתוך שריר"],
+"IP":["Intraperitoneal","הזרקה לחלל הבטן"],
+"IPSP":["Inhibitory Postsynaptic Potential","פוטנציאל פוסט־סינפטי מעכב"],
+"IQ":["Intelligence Quotient","מנת משכל"],
+"IRB":["Institutional Review Board","ועדת אתיקה מוסדית למחקר בבני אדם"],
+"IV":["Intravenous","הזרקה לווריד"],
+"LA":["Long-acting","שחרור ממושך"],
+"LLMs":["Large Language Models","מודלי שפה גדולים"],
+"LMX":["Leader-Member Exchange","תיאוריית חילופי מנהיג־עובד"],
+"LPC":["Least Preferred Coworker","שאלון העמית הפחות מועדף"],
+"LPD":["Letter Position Dyslexia","דיסלקסיית מיקום אותיות"],
+"MAO":["Monoamine Oxidase","מונואמין אוקסידאז, האנזים שמפרק מונואמינים"],
+"MBO":["Management by Objectives","ניהול לפי יעדים"],
+"MDMA":["","אקסטזי"],
+"MDS":["","סוללה ממוחשבת שנותנת מנות לקשב, זיכרון, זיכרון עבודה ותפקוד ניהולי"],
+"AQ":["Attention Quotient","מנת קשב"],
+"EFQ":["Executive Function Quotient","מנת התפקוד הניהולי"],
+"MEG":["Magnetoencephalography","מגנטו־אנצפלוגרפיה, מדידת השדות המגנטיים של המוח"],
+"MMQ":["Multifactorial Memory Questionnaire","שאלון זיכרון רב־גורמי"],
+"MMQ-C":["Multifactorial Memory Questionnaire - Contentment","שביעות רצון מהזיכרון"],
+"MMQ-S":["Multifactorial Memory Questionnaire - Strategy","שימוש באסטרטגיות זיכרון"],
+"MPTP":["","רעלן שהורס נוירונים דופמינרגיים"],
+"MQ":["Memory Quotient","מנת זיכרון כללית"],
+"MRI":["Magnetic Resonance Imaging","הדמיית תהודה מגנטית"],
+"mRNA":["messenger RNA","RNA שליח, העתק של גן שמשמש לבניית חלבון"],
+"NBAS":["Neonatal Behavioral Assessment Scale","סולם ברזלטון להערכת התנהגות יילודים"],
+"NCCP":["National Center for Children in Poverty","המרכז הלאומי לילדים בעוני"],
+"NE":["Norepinephrine","נוראפינפרין"],
+"NICHD":["National Institute of Child Health and Human Development","המכון הלאומי האמריקני לבריאות הילד"],
+"NMDA":["N-methyl-D-aspartate","סוג של קולטן גלוטמט שמעביר סידן"],
+"NpHR":["Halorhodopsin","נשא רגיש לאור צהוב שמעכב נוירון"],
+"OCD":["Obsessive-Compulsive Disorder","הפרעה טורדנית־כפייתית"],
+"OCPD":["Obsessive-Compulsive Personality Disorder","הפרעת אישיות טורדנית־כפייתית"],
+"OECD":["Organisation for Economic Co-operation and Development","הארגון לשיתוף פעולה ולפיתוח כלכלי"],
+"PAG":["Periaqueductal Gray","החומר האפור המרכזי"],
+"PBS":["Public Broadcasting Service","רשת השידור הציבורית האמריקנית"],
+"PCP":["Phencyclidine","פנציקלידין, ״אבק מלאכים״"],
+"PET":["Positron Emission Tomography","טומוגרפיה בפליטת פוזיטרונים"],
+"PHA-L":["Phaseolus vulgaris leucoagglutinin","חומר לסימון קדומני של אקסונים"],
+"PNS":["Peripheral Nervous System","מערכת העצבים ההיקפית"],
+"PSD":["Parental Screen Distraction","הסחת מסך הורית"],
+"RAVLT":["Rey Auditory Verbal Learning Test","מבחן הלמידה המילולית של ריי"],
+"REM":["Rapid Eye Movement","שנת חלומות, שבה העיניים זזות מהר"],
+"RNA":["Ribonucleic Acid","חומצה ריבונוקלאית"],
+"RQ1":["Research Question 1","שאלת המחקר הראשונה"],
+"RQ2":["Research Question 2","שאלת המחקר השנייה"],
+"RQ3":["Research Question 3","שאלת המחקר השלישית"],
+"RQ4":["Research Question 4","שאלת המחקר הרביעית"],
+"RVP":["Rapid Visual Information Processing","משימת קשב מתמשך"],
+"SAT":["Separation Anxiety Test","מבחן חרדת הפרידה"],
+"SC":["Subcutaneous","הזרקה מתחת לעור"],
+"SES":["Socioeconomic Status","מעמד סוציו־אקונומי"],
+"SfN":["Society for Neuroscience","העמותה למדע העצב"],
+"SLT":["Situational Leadership Theory","תיאוריית המנהיגות המצבית"],
+"SMC":["Subjective Memory Complaints","תלונות זיכרון סובייקטיביות"],
+"SQUID":["Superconducting Quantum Interference Device","גלאי רגיש במיוחד לשדות מגנטיים"],
+"SR":["Slow Release","שחרור איטי"],
+"SSP":["Spatial Span","משימת טווח זיכרון מרחבי"],
+"SSRI":["Selective Serotonin Reuptake Inhibitor","מעכב סלקטיבי של קליטה חוזרת של סרוטונין"],
+"SSS":["Stanford Sleepiness Scale","סולם הישנוניות של סטנפורד, ישנוניות ברגע"],
+"STAI-S":["State-Trait Anxiety Inventory - State","שאלון חרדת מצב"],
+"SVZ":["Subventricular Zone","האזור התת־חדרי"],
+"THC":["Tetrahydrocannabinol","החומר הפעיל בקנאביס"],
+"THCCOOH":["","תוצר הפירוק של THC שנמדד בבדיקה"],
+"TMN":["Tuberomammillary Nucleus","גרעין הפקעת הדדי"],
+"TMS":["Transcranial Magnetic Stimulation","גרייה מגנטית חוצת גולגולת"],
+"UCR":["Unconditioned Response","תגובה לא מותנית"],
+"UCS":["Unconditioned Stimulus","גירוי לא מותנה"],
+"VMH":["Ventromedial Hypothalamus","ההיפותלמוס הגחוני־מדיאלי"],
+"VRM":["Verbal Recognition Memory","זיכרון זיהוי מילולי"],
+"VTA":["Ventral Tegmental Area","אזור הטגמנטום הגחוני"],
+"VZ":["Ventricular Zone","האזור החדרי"],
+"WMQ":["Working Memory Quotient","מנת זיכרון העבודה"],
+"5-HT":["5-hydroxytryptamine","סרוטונין"],
+"2-DG":["2-deoxyglucose","גלוקוז מסומן שנקלט ולא מתפרק"],
+"L-DOPA":["","מולקולת־הקדם של דופמין"],
+"6-OHDA":["6-hydroxydopamine","רעלן שהורס נוירונים דופמינרגיים ונוראדרנרגיים"]
+};
+const ACR_RE=new RegExp("(?<![A-Za-z0-9])(?<![A-Za-z0-9]-)("+Object.keys(ACR).sort((a,b)=>b.length-a.length).map(k=>k.replace(/[-]/g,"\\-")).join("|")+")(?![A-Za-z0-9])(?!-[A-Za-z0-9])","g");
+const acrText=k=>{const [en,he]=ACR[k];return en?`${he}; <bdi dir="ltr">${en}</bdi>`:he};
+function acrExpand(html){
+  const plain=html.replace(/<[^>]+>/g," ");const seen=new Set();
+  for(const k of Object.keys(ACR)){const [en,he]=ACR[k];if((he&&plain.includes(he))||(en&&plain.toLowerCase().includes(en.toLowerCase())))seen.add(k)}
+  let inSvg=0;
+  return html.split(/(<svg[\s\S]*?<\/svg>|<[^>]+>)/).map(p=>{if(p.startsWith("<"))return p;
+    return p.replace(ACR_RE,(m,k,off,str)=>{if(seen.has(k))return m;seen.add(k);
+      const before=str.slice(0,off),inP=before.lastIndexOf("(")>before.lastIndexOf(")");
+      return inP?`<bdi class="ak">${m}</bdi>: ${acrText(k)}`:`<bdi class="ak">${m}</bdi> <span class="acr">(${acrText(k)})</span>`})}).join("");
+}
+function acrNote(...texts){const s=texts.join(" "),f=new Set();let m;ACR_RE.lastIndex=0;while((m=ACR_RE.exec(s)))f.add(m[1]);
+  return f.size?`<div class="acrnote"><b>ראשי תיבות:</b> ${[...f].map(k=>`<bdi class="ak">${k}</bdi> = ${acrText(k)}`).join(" · ")}</div>`:""}
 const T=[
  {id:"t1",icon:"question",title:"למה לחקור רווקות כהחלטה",blocks:[
   {h:"השאלה של המחקר",html:`${def("על מה הנושא",`למה מחקר על רווקות מתייחס אליה כאל <b>החלטה</b>, ולא רק כאל מצב? הנושא מציג את השאלה ואת ההקשר: החברה הדתית, והדמיון לבחירת מקצוע.<br><b>מה נלמד כאן:</b> שאלת המחקר · רווקות בחברה הדתית · ההקבלה לבחירת קריירה`)}<p>המחקר בודק <b>קשיים מתמשכים בקבלת החלטה</b> על התחייבות לזוגיות ארוכת טווח. מחקרים קודמים התמקדו במשתני רקע (תרבות, מעמד, מוצא) או בקווי אישיות (כמו דפוסי היקשרות), אבל לא ב<b>תהליך קבלת ההחלטה</b> עצמו.</p>${rem("בשלב הרווקות ההחלטה חוזרת שוב ושוב: האם להמשיך את הקשר, אולי לפני כל פגישה. זה תהליך מתמשך ורב־שלבי, עם ממדים קוגניטיביים, רגשיים ואישיותיים.")}${ex("מתחילת שנות ה-2000 מצטברים דיווחים על התארכות הרווקות, בגלל דחייה וביטול חוזרים של ההחלטה להתחייב. וזה למרות שהרווקים עצמם מצהירים על רצון עז, ואפילו דחוף, להינשא.")}`,q:"q1"},
@@ -314,11 +486,12 @@ for(const t of T) t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id);
 const KEY=CONFIG.key;
 let S={q:{},read:{}};
 try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.q) S=s;}catch(e){}
+S.pos=S.pos||{};S.done=S.done||{};
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
 const st=id=>S.q[id]||(S.q[id]={n:0,c:0,w:0,t:0,lv:-1});
 const mastered=id=>(S.q[id]?.c||0)>=2;
 const topicPct=t=>Math.round(100*t.qids.filter(mastered).length/t.qids.length);
-const topicStarted=t=>S.read[t.id]||t.qids.some(id=>S.q[id]&&S.q[id].n);
+const topicStarted=t=>S.read[t.id]||S.pos[t.id]!=null||t.qids.some(id=>S.q[id]&&S.q[id].n);
 const allIds=Object.keys(Q);
 function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 const pickVariant=id=>{const s=st(id),n=Q[id].v.length;return n>1?(s.lv+1)%n:0};
@@ -330,7 +503,7 @@ const LET=["א","ב","ג","ד"];
 function qCard(id,onDone,label){
   const vi=pickVariant(id),v=Q[id].v[vi],opts=shuffle([v.a,...v.w]);
   const box=document.createElement("div");box.className="q fade";
-  box.innerHTML=(label?`<span class="eyebrow">${label}</span>`:"")+`<div class="qtext">${esc(v.q)}</div><div class="opts"></div>`;
+  box.innerHTML=(label?`<span class="eyebrow">${label}</span>`:"")+`<div class="qtext">${esc(v.q)}</div>${acrNote(v.q,v.a,...v.w)}<div class="opts"></div>`;
   const wrap=box.querySelector(".opts");
   opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt";b.dataset.a=o===v.a?"1":"";
     b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
@@ -346,9 +519,9 @@ function qCard(id,onDone,label){
 }
 
 function home(){
-  document.body.style.removeProperty("--c");
+  document.body.style.removeProperty("--c");if(S.at){delete S.at;save()}
   const started=T.filter(topicStarted);
-  const total=Math.round(100*allIds.filter(mastered).length/allIds.length);
+  const total=Math.round(T.reduce((a,t)=>a+strength(t)*t.qids.length,0)/allIds.length);
   const weak=allIds.filter(id=>S.q[id]&&S.q[id].n&&!mastered(id)).length;
   app.innerHTML=`<div class="stack fade">
    <section class="cover" style="--c:var(--accent)">
@@ -359,12 +532,13 @@ function home(){
      <p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר, ובסוף הלומדה מבחן מסכם עם ציון.</p>
      <div class="stats">
       <div class="ring" style="--p:${total}"><span>${total}%</span></div>
-      <div class="stat-text"><b>${total===0?"עוד לא התחלת":total>=80?"אתה שולט בחומר":"בדרך"}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
+      <div class="stat-text"><b>${total===0&&!started.length?"עוד לא התחלת":total>=80?"אתה שולט בחומר":`התקדמת ב־${total}% מהשאלות`}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
      </div>
      <div class="actions">
       <button class="primary review-btn" id="rev" ${started.length?"":"disabled"}>${ic("cycle")}<span>${started.length?"חזרה מהירה":"חזרה מהירה (אחרי נושא ראשון)"}</span></button>
       <button class="review-btn" id="exm">${ic("grad")}<span>מבחן מסכם${S.exam?` · ציון אחרון ${S.exam.pct}`:""}</span></button>
       <button class="review-btn" id="wk" ${started.length?"":"disabled"}>${ic("target")}<span>נושאים לחיזוק</span></button>
+      ${typeof SUM!=="undefined"?`<button class="review-btn" id="sum">${ic("doc")}<span>סיכום הקריאה</span></button>`:""}
      </div>
     </div>
    </section>
@@ -373,12 +547,13 @@ function home(){
   </div>`;
   app.querySelectorAll(".actions svg").forEach(x=>x.style.cssText="width:20px;height:20px");
   const list=app.querySelector("#list");
-  T.forEach((t,i)=>{const p=topicPct(t),b=document.createElement("button");b.className="tcard";b.style.setProperty("--c",color(t));
-    const status=!topicStarted(t)?"לא התחלת":p>=80?"שולט":"בתהליך";
-    b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
-    b.onclick=()=>topic(i,0);list.appendChild(b)});
-  app.querySelector("#rev").onclick=review;app.querySelector("#exm").onclick=exam;app.querySelector("#wk").onclick=weakTopics;
-  const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
+  T.forEach((t,i)=>{const p=strength(t),pos=S.pos[t.id],dn=S.done[t.id],b=document.createElement("button");b.className="tcard";b.style.setProperty("--c",color(t));
+    const status=dn?`✓ הושלם · מבחן ${dn.r}/${dn.n}`:pos!=null?`באמצע · קטע ${pos+1} מתוך ${t.blocks.length}`:S.read[t.id]?"✓ נקרא":topicStarted(t)?"בתהליך":"לא התחלת";
+    b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(dn?"check":t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${dn&&!p?100*dn.r/dn.n:p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
+    if(dn)b.classList.add("done");
+    b.onclick=()=>topic(i,pos!=null?pos:0);list.appendChild(b)});
+  app.querySelector("#rev").onclick=review;{const sb=app.querySelector("#sum");if(sb)sb.onclick=summary}app.querySelector("#exm").onclick=exam;app.querySelector("#wk").onclick=weakTopics;
+  const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{},pos:{},done:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
   scrollTo(0,0);
 }
 
@@ -389,9 +564,11 @@ function bar(title,n,i,label){
 function topic(ti,bi){
   const t=T[ti],blk=t.blocks[bi];document.body.style.setProperty("--c",color(t));
   app.innerHTML=`<div class="stack">${bar(`נושא ${ti+1} · ${t.title}`,t.blocks.length+1,bi,`קטע ${bi+1} מתוך ${t.blocks.length}`)}
-   <article class="card fade"><h3>${blk.h}</h3>${blk.html}</article><div id="slot"></div></div>`;
+   <article class="card fade"><h3>${blk.h}</h3>${acrExpand(blk.html)}</article><div id="slot"></div></div>`;
+  S.pos[t.id]=bi;S.at={ti,bi};save();
   app.querySelector("#back").onclick=home;
-  const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;save();quiz(ti)}};
+  const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;delete S.pos[t.id];S.at={ti,quiz:1};save();quiz(ti)}};
+  if(bi>0){const pb=document.createElement("button");pb.className="ghost";pb.textContent="→ הקטע הקודם";pb.style.marginTop="6px";pb.onclick=()=>topic(ti,bi-1);setTimeout(()=>slot.appendChild(pb))}
   const slot=app.querySelector("#slot");
   {const b=document.createElement("button");b.className="primary";b.textContent=bi+1<t.blocks.length?"המשך":`למבחן הנושא (${t.qids.length} שאלות)`;b.onclick=next;slot.appendChild(b)}
   scrollTo(0,0);
@@ -438,7 +615,7 @@ function exam(){
   const step=()=>{
     const it=items[i],from=T.find(t=>t.id===Q[it.id].t),last=i===items.length-1;
     app.innerHTML=`<div class="stack">${bar("מבחן מסכם",items.length,i,`שאלה ${i+1} מתוך ${items.length}`)}
-     <div class="q fade"><span class="eyebrow">${esc(from.title)}</span><div class="qtext">${esc(it.v.q)}</div><div class="opts"></div>
+     <div class="q fade"><span class="eyebrow">${esc(from.title)}</span><div class="qtext">${esc(it.v.q)}</div>${acrNote(it.v.q,it.v.a,...it.v.w)}<div class="opts"></div>
      <div class="row"><button class="primary" id="nx" ${it.pick==null?"disabled":""}>${last?"הגשה ובדיקה":"הבא"}</button>${i?`<button class="ghost" id="pv">הקודם</button>`:""}</div></div></div>`;
     {const bk=app.querySelector("#back");bk.onclick=()=>{if(bk.dataset.sure)home();else{bk.dataset.sure=1;bk.textContent="לחץ שוב כדי לצאת (התשובות לא יישמרו)"}}}
     const wrap=app.querySelector(".opts"),nx=app.querySelector("#nx");
@@ -472,7 +649,7 @@ function grade(items){
    <div class="stack" id="wl"></div></div>`;
   const wl=app.querySelector("#wl");
   wrong.forEach(it=>{const ti=T.findIndex(t=>t.id===Q[it.id].t),t=T[ti],c=document.createElement("article");c.className="card rev";c.style.setProperty("--c",color(t));
-    c.innerHTML=`<span class="eyebrow">${esc(t.title)}</span><div class="qtext">${esc(it.v.q)}</div>
+    c.innerHTML=`<span class="eyebrow">${esc(t.title)}</span><div class="qtext">${esc(it.v.q)}</div>${acrNote(it.v.q,it.v.a,it.pick,it.v.e)}
      <div class="opt wrong" aria-disabled="true"><span class="k">${ic("x")}</span><span><b>התשובה שלך:</b> ${esc(it.pick)}</span></div>
      <div class="opt right" aria-disabled="true"><span class="k">${ic("check")}</span><span><b>התשובה הנכונה:</b> ${esc(it.v.a)}</span></div>
      <div class="fb no">${ic("bulb")}<div><strong>למה?</strong>${esc(it.v.e)}</div></div>
@@ -499,6 +676,7 @@ function weakTopics(){
 }
 
 function done(r,n,ti){
+  if(ti!=null){S.done[T[ti].id]={r,n};}if(S.at){delete S.at}save();
   const nextT=ti!=null&&ti+1<T.length?ti+1:null,pct=Math.round(100*r/n);
   app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
    <article class="card" style="align-items:flex-start">
@@ -511,7 +689,14 @@ function done(r,n,ti){
   const nx=app.querySelector("#nx");if(nx)nx.onclick=()=>topic(nextT,0);
   scrollTo(0,0);
 }
-home();
+function summary(){
+  document.body.style.setProperty("--c","var(--accent)");
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">סיכום הקריאה</span></div></div>
+   <article class="card sum">${acrExpand(SUM)}</article>
+   <div class="row"><button class="primary" id="hm">חזרה לכל הנושאים</button></div></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;scrollTo(0,0);
+}
+if(S.at&&T[S.at.ti]){const a=S.at;if(a.quiz)quiz(a.ti);else topic(a.ti,Math.min(a.bi||0,T[a.ti].blocks.length-1))}else home();
 </script>
 </body>
 </html>

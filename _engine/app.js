@@ -2,11 +2,12 @@ for(const t of T) t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id);
 const KEY=CONFIG.key;
 let S={q:{},read:{}};
 try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.q) S=s;}catch(e){}
+S.pos=S.pos||{};S.done=S.done||{};
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
 const st=id=>S.q[id]||(S.q[id]={n:0,c:0,w:0,t:0,lv:-1});
 const mastered=id=>(S.q[id]?.c||0)>=2;
 const topicPct=t=>Math.round(100*t.qids.filter(mastered).length/t.qids.length);
-const topicStarted=t=>S.read[t.id]||t.qids.some(id=>S.q[id]&&S.q[id].n);
+const topicStarted=t=>S.read[t.id]||S.pos[t.id]!=null||t.qids.some(id=>S.q[id]&&S.q[id].n);
 const allIds=Object.keys(Q);
 function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 const pickVariant=id=>{const s=st(id),n=Q[id].v.length;return n>1?(s.lv+1)%n:0};
@@ -18,7 +19,7 @@ const LET=["א","ב","ג","ד"];
 function qCard(id,onDone,label){
   const vi=pickVariant(id),v=Q[id].v[vi],opts=shuffle([v.a,...v.w]);
   const box=document.createElement("div");box.className="q fade";
-  box.innerHTML=(label?`<span class="eyebrow">${label}</span>`:"")+`<div class="qtext">${esc(v.q)}</div><div class="opts"></div>`;
+  box.innerHTML=(label?`<span class="eyebrow">${label}</span>`:"")+`<div class="qtext">${esc(v.q)}</div>${acrNote(v.q,v.a,...v.w)}<div class="opts"></div>`;
   const wrap=box.querySelector(".opts");
   opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt";b.dataset.a=o===v.a?"1":"";
     b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
@@ -34,9 +35,9 @@ function qCard(id,onDone,label){
 }
 
 function home(){
-  document.body.style.removeProperty("--c");
+  document.body.style.removeProperty("--c");if(S.at){delete S.at;save()}
   const started=T.filter(topicStarted);
-  const total=Math.round(100*allIds.filter(mastered).length/allIds.length);
+  const total=Math.round(T.reduce((a,t)=>a+strength(t)*t.qids.length,0)/allIds.length);
   const weak=allIds.filter(id=>S.q[id]&&S.q[id].n&&!mastered(id)).length;
   app.innerHTML=`<div class="stack fade">
    <section class="cover" style="--c:var(--accent)">
@@ -47,12 +48,13 @@ function home(){
      <p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר, ובסוף הלומדה מבחן מסכם עם ציון.</p>
      <div class="stats">
       <div class="ring" style="--p:${total}"><span>${total}%</span></div>
-      <div class="stat-text"><b>${total===0?"עוד לא התחלת":total>=80?"אתה שולט בחומר":"בדרך"}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
+      <div class="stat-text"><b>${total===0&&!started.length?"עוד לא התחלת":total>=80?"אתה שולט בחומר":`התקדמת ב־${total}% מהשאלות`}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
      </div>
      <div class="actions">
       <button class="primary review-btn" id="rev" ${started.length?"":"disabled"}>${ic("cycle")}<span>${started.length?"חזרה מהירה":"חזרה מהירה (אחרי נושא ראשון)"}</span></button>
       <button class="review-btn" id="exm">${ic("grad")}<span>מבחן מסכם${S.exam?` · ציון אחרון ${S.exam.pct}`:""}</span></button>
       <button class="review-btn" id="wk" ${started.length?"":"disabled"}>${ic("target")}<span>נושאים לחיזוק</span></button>
+      ${typeof SUM!=="undefined"?`<button class="review-btn" id="sum">${ic("doc")}<span>סיכום הקריאה</span></button>`:""}
      </div>
     </div>
    </section>
@@ -61,12 +63,13 @@ function home(){
   </div>`;
   app.querySelectorAll(".actions svg").forEach(x=>x.style.cssText="width:20px;height:20px");
   const list=app.querySelector("#list");
-  T.forEach((t,i)=>{const p=topicPct(t),b=document.createElement("button");b.className="tcard";b.style.setProperty("--c",color(t));
-    const status=!topicStarted(t)?"לא התחלת":p>=80?"שולט":"בתהליך";
-    b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
-    b.onclick=()=>topic(i,0);list.appendChild(b)});
-  app.querySelector("#rev").onclick=review;app.querySelector("#exm").onclick=exam;app.querySelector("#wk").onclick=weakTopics;
-  const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
+  T.forEach((t,i)=>{const p=strength(t),pos=S.pos[t.id],dn=S.done[t.id],b=document.createElement("button");b.className="tcard";b.style.setProperty("--c",color(t));
+    const status=dn?`✓ הושלם · מבחן ${dn.r}/${dn.n}`:pos!=null?`באמצע · קטע ${pos+1} מתוך ${t.blocks.length}`:S.read[t.id]?"✓ נקרא":topicStarted(t)?"בתהליך":"לא התחלת";
+    b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(dn?"check":t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${dn&&!p?100*dn.r/dn.n:p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
+    if(dn)b.classList.add("done");
+    b.onclick=()=>topic(i,pos!=null?pos:0);list.appendChild(b)});
+  app.querySelector("#rev").onclick=review;{const sb=app.querySelector("#sum");if(sb)sb.onclick=summary}app.querySelector("#exm").onclick=exam;app.querySelector("#wk").onclick=weakTopics;
+  const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{},pos:{},done:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
   scrollTo(0,0);
 }
 
@@ -77,9 +80,11 @@ function bar(title,n,i,label){
 function topic(ti,bi){
   const t=T[ti],blk=t.blocks[bi];document.body.style.setProperty("--c",color(t));
   app.innerHTML=`<div class="stack">${bar(`נושא ${ti+1} · ${t.title}`,t.blocks.length+1,bi,`קטע ${bi+1} מתוך ${t.blocks.length}`)}
-   <article class="card fade"><h3>${blk.h}</h3>${blk.html}</article><div id="slot"></div></div>`;
+   <article class="card fade"><h3>${blk.h}</h3>${acrExpand(blk.html)}</article><div id="slot"></div></div>`;
+  S.pos[t.id]=bi;S.at={ti,bi};save();
   app.querySelector("#back").onclick=home;
-  const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;save();quiz(ti)}};
+  const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;delete S.pos[t.id];S.at={ti,quiz:1};save();quiz(ti)}};
+  if(bi>0){const pb=document.createElement("button");pb.className="ghost";pb.textContent="→ הקטע הקודם";pb.style.marginTop="6px";pb.onclick=()=>topic(ti,bi-1);setTimeout(()=>slot.appendChild(pb))}
   const slot=app.querySelector("#slot");
   {const b=document.createElement("button");b.className="primary";b.textContent=bi+1<t.blocks.length?"המשך":`למבחן הנושא (${t.qids.length} שאלות)`;b.onclick=next;slot.appendChild(b)}
   scrollTo(0,0);
@@ -126,7 +131,7 @@ function exam(){
   const step=()=>{
     const it=items[i],from=T.find(t=>t.id===Q[it.id].t),last=i===items.length-1;
     app.innerHTML=`<div class="stack">${bar("מבחן מסכם",items.length,i,`שאלה ${i+1} מתוך ${items.length}`)}
-     <div class="q fade"><span class="eyebrow">${esc(from.title)}</span><div class="qtext">${esc(it.v.q)}</div><div class="opts"></div>
+     <div class="q fade"><span class="eyebrow">${esc(from.title)}</span><div class="qtext">${esc(it.v.q)}</div>${acrNote(it.v.q,it.v.a,...it.v.w)}<div class="opts"></div>
      <div class="row"><button class="primary" id="nx" ${it.pick==null?"disabled":""}>${last?"הגשה ובדיקה":"הבא"}</button>${i?`<button class="ghost" id="pv">הקודם</button>`:""}</div></div></div>`;
     {const bk=app.querySelector("#back");bk.onclick=()=>{if(bk.dataset.sure)home();else{bk.dataset.sure=1;bk.textContent="לחץ שוב כדי לצאת (התשובות לא יישמרו)"}}}
     const wrap=app.querySelector(".opts"),nx=app.querySelector("#nx");
@@ -160,7 +165,7 @@ function grade(items){
    <div class="stack" id="wl"></div></div>`;
   const wl=app.querySelector("#wl");
   wrong.forEach(it=>{const ti=T.findIndex(t=>t.id===Q[it.id].t),t=T[ti],c=document.createElement("article");c.className="card rev";c.style.setProperty("--c",color(t));
-    c.innerHTML=`<span class="eyebrow">${esc(t.title)}</span><div class="qtext">${esc(it.v.q)}</div>
+    c.innerHTML=`<span class="eyebrow">${esc(t.title)}</span><div class="qtext">${esc(it.v.q)}</div>${acrNote(it.v.q,it.v.a,it.pick,it.v.e)}
      <div class="opt wrong" aria-disabled="true"><span class="k">${ic("x")}</span><span><b>התשובה שלך:</b> ${esc(it.pick)}</span></div>
      <div class="opt right" aria-disabled="true"><span class="k">${ic("check")}</span><span><b>התשובה הנכונה:</b> ${esc(it.v.a)}</span></div>
      <div class="fb no">${ic("bulb")}<div><strong>למה?</strong>${esc(it.v.e)}</div></div>
@@ -187,6 +192,7 @@ function weakTopics(){
 }
 
 function done(r,n,ti){
+  if(ti!=null){S.done[T[ti].id]={r,n};}if(S.at){delete S.at}save();
   const nextT=ti!=null&&ti+1<T.length?ti+1:null,pct=Math.round(100*r/n);
   app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
    <article class="card" style="align-items:flex-start">
@@ -199,4 +205,11 @@ function done(r,n,ti){
   const nx=app.querySelector("#nx");if(nx)nx.onclick=()=>topic(nextT,0);
   scrollTo(0,0);
 }
-home();
+function summary(){
+  document.body.style.setProperty("--c","var(--accent)");
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">סיכום הקריאה</span></div></div>
+   <article class="card sum">${acrExpand(SUM)}</article>
+   <div class="row"><button class="primary" id="hm">חזרה לכל הנושאים</button></div></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;scrollTo(0,0);
+}
+if(S.at&&T[S.at.ti]){const a=S.at;if(a.quiz)quiz(a.ti);else topic(a.ti,Math.min(a.bi||0,T[a.ti].blocks.length-1))}else home();
