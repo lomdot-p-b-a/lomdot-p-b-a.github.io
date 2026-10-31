@@ -33,3 +33,8 @@
 - Do NOT run fixq.py on a T file whose html fields are already backtick strings that contain Hebrew quote marks (״ / האו"ם). It mis-pairs quotes. Write html as backticks from the start and use ״ for Hebrew abbreviations inside double-quoted helper args.
 - Page ranges with en dash (92–111) render reversed in RTL. Wrap each range in ⁦…⁩ (hub `sub` and CONFIG `cite`), or write "X עד Y" in body text.
 - In SVG legends/labels (RTL), text-anchor="start" puts the text to the LEFT of x; "end" to the right.
+
+## Physiology course (phys/)
+- Modules m30–m34 = phys/ch1–ch5 (keys lomda-phys-ch1..5): Carlson & Birkett, הפיזיולוגיה של ההתנהגות כרך א (מהד' 12, האו"פ), chapters 1–5 (book pp. 17–226). Book is on lamda (psik) book_id 6293, via Moodle course 2731 reading list (mod/lti/view.php?id=151791).
+- build.py COURSE has 'phys' (#b5305a / #f07a9e). Build: python3 build.py mN "<title>" <repo>/phys/chN.html site phys
+- Text extraction: pdf.js in the viewer iframe (PDFViewerApplication.pdfDocument), split columns by x; JS results are capped ~50KB, so return arrays of 800-char chunks.

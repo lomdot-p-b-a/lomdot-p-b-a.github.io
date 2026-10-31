@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>לומדת חובת קריאה: פרק 5 - שיטות וגישות במחקר</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Rubik:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: a study notebook. Home = illustrated cover + topic cards; topic = one reading card at a time, with a highlighter for key terms and drawn figures */
+:root{
+  --bg:#eef2f4; --surface:#ffffff; --raised:#f7f9fa; --ink:#15222a; --muted:#4c5b66; --line:#dbe2e6;
+  --accent:#2457a6; --mark:#ffe27a; --good:#23855a; --good-soft:#e2f4ea; --bad:#c2452d; --bad-soft:#fbe6e1;
+  --t1:#d35d36; --t2:#3667cf; --t3:#0e8a7c; --t4:#8448c9; --t5:#b9800c; --t6:#2a7fa6; --t7:#b4436c; --t8:#5a6b2e;
+  --display:"Suez One","Frank Ruhl Libre","David",serif;
+  --body:"Rubik","Arial Hebrew","Segoe UI",Arial,sans-serif;
+  --shadow:0 1px 2px rgba(21,34,42,.06),0 8px 24px rgba(21,34,42,.07);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;font-weight:500;line-height:1.75;direction:rtl}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
+p{margin:0}
+.stack{display:flex;flex-direction:column;gap:16px}
+.muted{color:var(--muted)}
+mark{background:linear-gradient(transparent 38%,var(--mark) 38%,var(--mark) 92%,transparent 92%);color:inherit;padding:0 2px;font-weight:600}
+button{font:inherit;cursor:pointer;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:11px 18px}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button[disabled]{opacity:.55;cursor:default}
+.primary{background:var(--c,var(--accent));border-color:var(--c,var(--accent));color:var(--surface);font-weight:600}
+.ghost{background:transparent;border:none;color:var(--muted);padding:6px 2px}
+.ghost:hover{color:var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.badge{display:inline-block;align-self:flex-start;font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:99px;background:var(--accent);color:var(--surface);margin-bottom:6px}.entitle{display:inline;unicode-bidi:isolate;font-family:Rubik,system-ui,sans-serif;font-weight:800}.hetitle{margin:4px 0 0;font-weight:700;font-size:1.05rem}.cite{text-align:right;margin:4px 0 0;font-size:.85rem;color:var(--muted)}.cite a{color:var(--accent)}
+.eyebrow{font-size:.8rem;letter-spacing:.05em;font-weight:600;color:var(--c,var(--muted))}
+
+/* home */
+.cover{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.cover-art{background:var(--raised);border-bottom:1px solid var(--line);padding:8px 8px 0}
+.cover-art svg{display:block;width:100%;height:auto;max-height:230px}
+.cover-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px}
+.cover h1{font-size:clamp(2rem,6vw,2.6rem);font-weight:900}
+.stats{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.ring{--p:0;width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center;flex:none}
+.ring span{width:50px;height:50px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.9rem;font-variant-numeric:tabular-nums}
+.stat-text{display:flex;flex-direction:column;line-height:1.35;flex:1;min-width:160px}
+.stat-text b{font-size:1.05rem}
+.review-btn{display:flex;align-items:center;gap:8px}
+.actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.actions button{justify-content:center}
+.opt.sel{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--raised))}
+.opt[aria-disabled]{cursor:default}
+.opt .k svg{width:16px;height:16px}
+.trows{display:flex;flex-direction:column;gap:10px;width:100%}
+.trow{display:grid;grid-template-columns:minmax(0,1fr) minmax(70px,30%) auto;gap:10px;align-items:center;width:100%}
+.trow .tt{font-family:inherit;font-size:1rem;font-weight:600;line-height:1.35}
+.trow .bar i{background:var(--c)}
+.trow .sc{font-variant-numeric:tabular-nums;font-weight:700;min-width:3ch;text-align:left}
+.card.rev{align-items:stretch}
+.tag{align-self:flex-start;font-size:.82rem;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--raised)}
+.tag.good{background:var(--good-soft);color:var(--good)} .tag.low{background:var(--bad-soft);color:var(--bad)} .tag.mid{background:color-mix(in srgb,var(--mark) 45%,var(--raised))}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.tcard{--c:var(--accent);text-align:right;padding:0;overflow:hidden;border:none;border-radius:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s}
+.tcard:hover{transform:translateY(-2px)}
+.tcard .band{background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.tcard .band svg{width:44px;height:44px}
+.tcard .n{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;opacity:.85}
+.tcard .body{padding:12px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tcard .t{font-weight:700;font-size:1.05rem;line-height:1.35}
+.bar{height:7px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--c);border-radius:4px}
+.meta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip{font-size:.75rem;padding:3px 10px;border-radius:99px;font-weight:600;background:color-mix(in srgb,var(--c,var(--accent)) 14%,transparent);color:var(--c,var(--accent));white-space:nowrap}
+.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+
+/* topic */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;display:flex;flex-direction:column;gap:8px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.steps{display:flex;gap:5px}
+.steps i{flex:1;height:5px;border-radius:3px;background:var(--line)}
+.steps i.on{background:var(--c)}
+.prog{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tt{font-size:1.6rem;font-weight:900}
+.card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px}
+.card h3{font-size:1.25rem;color:var(--c)}
+.fig{background:var(--raised);border-radius:14px;padding:10px;margin-inline:-4px}
+.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{font-size:.8rem;color:var(--muted);text-align:center;margin-top:4px}
+figure{margin:0}
+.def{border:1.5px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 6%,var(--surface));border-radius:14px;padding:14px 16px}
+.lbl{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:var(--c);margin-bottom:4px}
+.who{display:flex;gap:12px;align-items:flex-start}
+.who .av{flex:none;width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.15rem}
+.who .yr{font-size:.8rem;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.tile{background:var(--raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile svg{width:32px;height:32px;color:var(--c)}
+.tile b{font-size:.98rem}
+.tile span{font-size:.88rem;color:var(--muted);line-height:1.45}
+.ex{background:var(--raised);border-radius:12px;padding:12px 14px;font-size:.95rem}
+.ex .lbl{color:var(--muted)}
+.yesno{display:flex;flex-wrap:wrap;gap:8px}
+.yn{padding:5px 12px;border-radius:99px;font-size:.88rem;font-weight:500;display:inline-flex;gap:6px;align-items:center}
+.yn.y{background:var(--good-soft);color:var(--good)} .yn.n{background:var(--bad-soft);color:var(--bad)}
+.spectrum{display:flex;flex-direction:column;gap:6px}
+.spectrum .track{height:12px;border-radius:6px;background:linear-gradient(90deg,var(--bad),var(--line) 50%,var(--good));position:relative}
+.spectrum .dot{position:absolute;top:50%;left:50%;width:20px;height:20px;border-radius:50%;background:var(--surface);border:3px solid var(--ink);transform:translate(-50%,-50%)}
+.spectrum .ends{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);gap:10px}
+.remember{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;border-top:1px dashed var(--line);padding-top:12px}
+.remember svg{flex:none;width:22px;height:22px;color:var(--c)}
+
+/* question */
+.q{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:12px}
+.qtext{font-weight:600;font-size:1.08rem;line-height:1.55}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{text-align:right;line-height:1.45;display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--raised);border:1.5px solid transparent}
+.opt:hover:not([disabled]){border-color:var(--c)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:8px;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.85rem;color:var(--c)}
+.opt.right{background:var(--good-soft);border-color:var(--good);opacity:1}
+.opt.right .k{background:var(--good);color:var(--surface)}
+.opt.wrong{background:var(--bad-soft);border-color:var(--bad);opacity:1}
+.opt.wrong .k{background:var(--bad);color:var(--surface)}
+.fb{padding:12px 14px;border-radius:12px;font-size:.95rem;display:flex;gap:10px;align-items:flex-start}
+.fb svg{flex:none;width:22px;height:22px;margin-top:2px}
+.fb.ok{background:var(--good-soft)} .fb.ok svg{color:var(--good)}
+.fb.no{background:var(--bad-soft)} .fb.no svg{color:var(--bad)}
+.fb strong{display:block}
+.big{font-family:var(--display);font-size:3.4rem;font-weight:900;color:var(--c);font-variant-numeric:tabular-nums;line-height:1}
+@media (prefers-reduced-motion:no-preference){.fade{animation:f .3s ease-out}@keyframes f{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+
+/* svg figure classes */
+.s-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.s-c{stroke:var(--c);stroke-width:2;fill:none}
+.f-c{fill:var(--c)}
+.f-soft{fill:color-mix(in srgb,var(--c) 16%,var(--surface))}
+.f-surf{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.f-ink{fill:var(--ink)}
+.f-mut{fill:var(--muted)}
+.f-inv{fill:var(--surface)}
+svg text{font-family:var(--body)}
+h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
+.card p,.def p,.tile span,.ex p{font-weight:500}
+.qtext{font-weight:700}
+.tile b,.who b{font-weight:700}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:.95rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.tbl th,.tbl td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl th{background:color-mix(in srgb,var(--c) 10%,var(--surface));color:var(--c);font-weight:700;font-size:.85rem}
+.tbl .in{color:var(--c);font-weight:700}.tbl .out{color:var(--muted);font-weight:700}
+.tblwrap{overflow-x:auto}
+.en{font-size:.82em;color:var(--muted);font-weight:500;direction:ltr;unicode-bidi:isolate}
+</style>
+<style>:root{--accent:#b5305a}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent:#f07a9e}}:root[data-theme="dark"]{--accent:#f07a9e}</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const CONFIG={key:"lomda-phys-ch5",cover:"cover34",eyebrow:"יסודות פיזיולוגיים של התנהגות · פרק 5",title:"פרק 5 - שיטות וגישות במחקר",cite:`קרלסון ובירקט, <i>הפיזיולוגיה של ההתנהגות</i>, כרך א, מהדורה 12, האוניברסיטה הפתוחה. פרק 5, עמ' ⁦185–226⁩.`,note:"מבוסס על הפרק שבחובת הקריאה. המונחים באנגלית מופיעים בסוגריים."};
+const I={
+ building:'<path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h2M14 8h2M8 12h2M14 12h2M10 21v-4h4v4"/>',
+ people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
+ cycle:'<path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/>',
+ pyramid:'<path d="M12 3L2.5 20h19z"/><path d="M8.2 10.5h7.6M5.5 15.2h13"/>',
+ chart:'<path d="M4 20V10M9.5 20V4M15 20v-7M20.5 20V8M2 20h20"/>',
+ gear:'<circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="7.5" stroke-dasharray="3.2 2.7" stroke-width="3.2"/>',
+ sprout:'<path d="M12 21v-9"/><path d="M12 14C7 14 4.5 11 4.5 6.5 9 6.5 12 9 12 14z"/><path d="M12 12c0-4.5 3-7 7.5-7 0 4.5-3 7-7.5 7z"/>',
+ scales:'<path d="M12 3v17M7 20h10M4 7h16"/><path d="M4 7l-2.5 6h5zM20 7l-2.5 6h5z"/>',
+ factory:'<path d="M3 21V10l5 3v-3l5 3V5h4v16zM1.5 21h21M17 9h4v12"/>',
+ question:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 1 1 3.6 2.4c-.8.4-1.1.9-1.1 1.8"/><path d="M12 17h.01"/>',
+ data:'<ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6M4.5 11.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6"/>',
+ doc:'<path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/>',
+ split:'<circle cx="12" cy="4.5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="12" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/><path d="M12 6.7v10M12 11l-6 6M12 11l6 6"/>',
+ grad:'<path d="M1.5 9L12 4l10.5 5L12 14z"/><path d="M6 11.2V16c3.3 2.4 8.7 2.4 12 0v-4.8M21 10v5"/>',
+ copies:'<rect x="3" y="7" width="12" height="14" rx="2"/><path d="M7 4h11a2 2 0 0 1 2 2v12"/>',
+ link:'<rect x="2" y="8" width="11" height="8" rx="4"/><rect x="11" y="8" width="11" height="8" rx="4"/>',
+ hand:'<circle cx="8" cy="7" r="3"/><circle cx="16" cy="7" r="3"/><path d="M2.5 20c0-3.3 2.5-6 5.5-6 1.6 0 3 .7 4 1.9 1-1.2 2.4-1.9 4-1.9 3 0 5.5 2.7 5.5 6"/>',
+ target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',
+ id:'<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><circle cx="8.5" cy="11" r="2.3"/><path d="M5 16c.6-1.6 2-2.4 3.5-2.4S11.4 14.4 12 16M14.5 10h4M14.5 13.5h3"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>',
+ pie:'<path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/>',
+ cart:'<path d="M2 3h3l2.5 12h11l2-8H6.5"/><circle cx="9" cy="19.5" r="1.6"/><circle cx="17" cy="19.5" r="1.6"/>',
+ bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/>',
+ check:'<circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/>',
+ x:'<circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/>',
+ lock:'<rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>',
+ moon:'<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>',
+ brain:'<path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a2 2 0 0 0-3-1z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/>',
+ phone:'<rect x="6.5" y="2" width="11" height="20" rx="2.5"/><path d="M10.5 18.5h3"/>',
+ flask:'<path d="M9 2.5h6M10 2.5v6L4.5 19a2 2 0 0 0 1.8 2.9h11.4a2 2 0 0 0 1.8-2.9L14 8.5v-6"/><path d="M7 15h10"/>',
+ leaf:'<path d="M5 19C5 10 11 4 20 4c0 9-6 15-15 15z"/><path d="M5 19l8-8"/>'
+};
+const ic=(k,cls="")=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="${cls}" aria-hidden="true">${I[k]}</svg>`;
+
+const arrowDef=id=>`<defs><marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="f-c"/></marker></defs>`;
+
+const FIG={
+ cover34:()=>`<svg viewBox="0 0 400 228" role="img" aria-label="מיקרוסקופ וגל פעילות מוחית">
+  <circle cx="200" cy="114" r="96" class="f-soft"/>
+  <rect x="150" y="176" width="90" height="12" rx="5" class="f-c"/>
+  <rect x="188" y="70" width="18" height="70" rx="6" class="f-c" transform="rotate(-18 197 105)"/>
+  <rect x="170" y="140" width="56" height="10" rx="4" class="f-surf"/>
+  <path d="M214 176 C236 150 236 110 214 84" fill="none" class="s-c" stroke-width="10" stroke-linecap="round"/>
+  <path d="M120 70 l14 0 l8 -16 l10 32 l10 -24 l8 8 l18 0" fill="none" class="s-c" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M250 60 l14 0 l8 -12 l10 24 l10 -18 l8 6 l18 0" fill="none" class="s-line" stroke-width="3" stroke-linejoin="round"/></svg>`,
+ trace:()=>`<svg viewBox="0 0 400 170" role="img" aria-label="סימון קדומני וסימון אחורני">${arrowDef("tr")}
+  <circle cx="330" cy="60" r="20" class="f-c"/><circle cx="70" cy="60" r="20" class="f-surf"/>
+  <line x1="308" y1="60" x2="96" y2="60" class="s-c" stroke-width="3" marker-end="url(#tr)"/>
+  <circle cx="330" cy="130" r="20" class="f-surf"/><circle cx="70" cy="130" r="20" class="f-c"/>
+  <line x1="96" y1="130" x2="308" y2="130" class="s-c" stroke-width="3" marker-end="url(#tr)"/>
+  <text x="330" y="64" text-anchor="middle" font-size="10" font-weight="700" class="f-inv">הזרקה</text>
+  <text x="70" y="134" text-anchor="middle" font-size="10" font-weight="700" class="f-inv">הזרקה</text>
+  <text x="200" y="48" text-anchor="middle" font-size="11" font-weight="700" class="f-ink">קדומני (PHA-L): מגוף התא אל הכפתורים</text>
+  <text x="200" y="118" text-anchor="middle" font-size="11" font-weight="700" class="f-ink">אחורני (פלואורוגולד): מהכפתורים אל גוף התא</text>
+  <text x="200" y="82" text-anchor="middle" font-size="10" class="f-mut">מגלה לאן האזור שולח (אקסונים מוציאים)</text>
+  <text x="200" y="152" text-anchor="middle" font-size="10" class="f-mut">מגלה מאין האזור מקבל (אקסונים מביאים)</text></svg>`,
+ img:()=>{const R=[["CT","קרני רנטגן","מבנה; חתכים אופקיים בלבד"],["MRI","שדה מגנטי ותדרי רדיו","מבנה; פירוט טוב יותר, כל המישורים"],["DTI","סורק MRI","אלומות אקסונים עם מיילין"],["PET","חומר רדיואקטיבי (FDG)","פעילות מטבולית או חומר מסומן"],["fMRI","סורק MRI (רמת חמצן בדם)","פעילות אזורית במוח ער"],["MEG","גלאי SQUID","שדות מגנטיים מפעילות עצבית"]];
+  return `<div class="tblwrap"><table class="tbl"><tr><th>שיטה</th><th>במה משתמשת</th><th>מה מראה</th></tr>${R.map(r=>`<tr><td><b>${r[0]}</b></td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join("")}</table></div>`}
+};
+const E=t=>`<span class="en">(${t})</span>`;
+const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</figcaption>`:""}</figure>`;
+const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
+const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;
+const tiles=a=>`<div class="tiles">${a.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`;
+const ex=h=>`<div class="ex"><span class="lbl">דוגמה</span><p>${h}</p></div>`;
+const rem=h=>`<div class="remember">${ic("bulb")}<p>${h}</p></div>`;
+const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")}${t}</span>`).join("")}${n.map(t=>`<span class="yn n">${ic("x")}${t}</span>`).join("")}</div>`;
+const spectrum=(r,l,dot)=>`<div class="spectrum"><div class="track">${dot?'<span class="dot"></span>':""}</div><div class="ends"><span>${r}</span><span>${l}</span></div></div>`;
+document.head.insertAdjacentHTML("beforeend",'<style>.yn svg{width:16px;height:16px}</style>');
+
+const T=[
+ {id:"t1",icon:"flask",title:"מקרה ה־MPTP וגישת המחקר",blocks:[
+  {h:"צעירים עם פרקינסון",html:`${def("על מה הנושא",`הפרק מציג את כלי העבודה של חוקרי המוח. מתחילים במקרה שבו כמה שיטות שימשו יחד.<br><b>מה נלמד כאן:</b> מקרה ה־MPTP · למה צריך כמה שיטות`)}${def("תיאור מקרה",`בקיץ 1982 הגיעו למרפאות בצפון קליפורניה צעירים בשנות ה־20 וה־30 עם תסמינים קשים של <b>פרקינסון</b>: כמעט משותקים, ריור ומבט מקובע. פרקינסון מתפתח לאט ונדיר לפני גיל העמידה המאוחר. המשותף להם: הזרקה של <b>אופיאט סינתטי</b> שהיה מזוהם ב־<b>MPTP</b>, רעלן שהורס <b>נוירונים דופמינרגיים</b>.`)}${def("מה עשו",`<b>L-DOPA</b> עזר, אבל רק לזמן מה. שניים מהנפגעים עברו בשוודיה <b>השתלה</b> של נוירונים פולטי דופמין מרקמה עוברית לגרעין הזנבי ולפוטמן. לפני הניתוח, סריקת <b>PET</b> עם L-DOPA רדיואקטיבי הראתה את מקום הנזק. ההשתלה בוצעה בעזרת <b>מכשיר סטראוטקסי</b>. שנה אחר כך, PET הראה שהתאים שרדו ופולטים דופמין, והתנועה השתפרה מאוד.`)}${rem("היום MPTP הוא <b>כלי מחקר</b>: מזריקים אותו לחיות כדי ליצור מודל של פרקינסון ולבדוק תרופות חדשות. ההשפעות המרפאות של השתלות הן בדרך כלל זמניות.")}`,q:"q1"},
+  {h:"למה צריך הרבה שיטות",html:`<p>מחקר הוא שאלה שאנחנו שואלים את הטבע, ו<b>השיטה מגדירה את השאלה</b>. לפעמים התשובה מוזרה, ומתברר שהשאלה שנשאלה לא הייתה זו שרצינו לבדוק.</p>${rem("המסקנות החשובות ביותר לא מגיעות מניסוי אחד, אלא מ<b>תוכנית מחקר</b> שמשווה תוצאות של גישות שונות, כל אחת עם היתרונות והמגבלות שלה.")}${tiles([["x","כריתה ופגע","מה קורה כשאזור לא עובד"],["chart","רישום","מה האזור עושה בזמן התנהגות"],["bulb","גרייה","מה קורה כשמפעילים את האזור"],["flask","נוירוכימיה","אילו חומרים וקולטנים יש באזור"],["copies","גנטיקה","מה התרומה של גנים מסוימים"]])}${ex(`דוגמה שחוזרת בפרק: <b>ההיפותלמוס הגחוני־מדיאלי</b> (VMH) והתנהגות ההזדווגות של חולדות נקבות. בודקים אותו בפגע, בהתחקות אחר קשרים, ברישום, בגרייה ובחסימה גנטית.`)}`,q:"q3"}
+ ]},
+ {id:"t2",icon:"x",title:"כריתה ניסויית ופגעים",blocks:[
+  {h:"ההיגיון של פגע מוחי",html:`${def("כריתה ניסויית",`<mark>כריתה ניסויית</mark> ${E("experimental ablation")}: הורסים חלק מהמוח בחיה ובודקים מה היא כבר לא מסוגלת לעשות. זו השיטה הוותיקה ביותר. בדרך כלל לא מסירים את הרקמה אלא הורסים אותה במקומה, ויוצרים <b>פגע</b> ${E("lesion")}.`)}${def("זהירות בפרשנות",`אם אחרי הפגע החיה לא מבצעת התנהגות, זה לא אומר שהאזור הוא ״המרכז״ שלה. ייתכן שהוא רק <b>חלק ממעגל</b>, או שהפגע פגע ב<b>אקסונים שעוברים</b> דרכו.`)}${def("ניתוח דמה",`קבוצת הביקורת עוברת <b>ניתוח דמה</b> ${E("sham lesion")}: אותו ניתוח, כולל החדרת אלקטרודה, בלי להעביר זרם. כך מפרידים בין השפעת הפגע להשפעת הניתוח עצמו.`)}`,q:"q5"},
+  {h:"סוגי פגעים",html:`${tiles([["bulb","זרם בתדר רדיו","חום הורס את כל הרקמה סביב קצה האלקטרודה, כולל אקסונים עוברים"],["target","פגע אקסיטוטוקסי","הזרקת חומצה אמינית מעוררת (חומצה קאינית): הורגת רק גופי תאים"],["lock","רעלן בררני","6-OHDA הורס נוירונים דופמינרגיים ונוראדרנרגיים; ספורין מצומד לנוגדן הורס סוג תאים מסוים"],["clock","שיתוק זמני","סם הרדמה מקומי או מוסקימול: הפיך, והחיה ביקורת של עצמה"]])}${def("למה פגע אקסיטוטוקסי מדויק יותר",`קולטני הגלוטמט נמצאים על <b>גופי התאים והדנדריטים</b>, ולא על אקסונים. לכן החומצה הקאינית מגרה למוות רק את הנוירונים שבאזור, ואקסונים שרק עוברים דרכו נשארים שלמים.`)}${ex(`אם פגע ברדיו באזור X מבטל התנהגות, אבל פגע אקסיטוטוקסי באותו אזור לא מבטל אותה, כנראה שהאחראים הם <b>אקסונים שעוברים</b> באזור ולא הנוירונים שבו.`)}`,q:"q7"}
+ ]},
+ {id:"t3",icon:"target",title:"ניתוח סטראוטקסי ושיטות היסטולוגיות",blocks:[
+  {h:"ניתוח סטראוטקסי",html:`${def("איך מגיעים ליעד",`<mark>ניתוח סטראוטקסי</mark> ${E("stereotaxic surgery")} (stereo = תלת־ממד, taxis = סידור) מאפשר להחדיר אלקטרודה או קנולה לנקודה מדויקת בתוך המוח.`)}${tiles([["doc","אטלס סטראוטקסי","דפים של חתכים חזיתיים עם קואורדינטות ביחס לנקודת ציון בגולגולת, ברגמה"],["gear","מכשיר סטראוטקסי","מחזיק את הראש ומזיז את האלקטרודה בשלושה צירים"]])}${rem("גם בבני אדם משתמשים במסגרת סטראוטקסית, למשל להשתלת אלקטרודות של <b>גרייה מוחית עמוקה</b> (DBS) בפרקינסון, או להשתלה במקרה ה־MPTP.")}`,q:"q9"},
+  {h:"הכנת הרקמה וצביעה",html:`<ol><li><b>פרפוזיה</b>: שוטפים את הדם בתמיסה ומחליפים אותו ב<b>קבעון</b> (כמו פורמלין) שמקבע את הרקמה.</li><li>מוציאים את המוח וחותכים אותו ב<b>מיקרוטום</b>, או ב<b>קריאוסטט</b>, מיקרוטום בתא קפוא, כי ההקפאה מקשה את הרקמה.</li><li>מניחים את החתכים על זכוכיות ו<b>צובעים</b>.</li></ol>${def("צביעה",`<b>סגול קרסיל</b> ${E("cresyl violet")} צובע גופי תאים. כך רואים גרעינים במוח ואת מקום הפגע, כי שם אין תאים צבועים.`)}${tiles([["data","מיקרוסקופ אלקטרונים חודר","פרטים זעירים: סינפסות ושלפוחיות"],["copies","מיקרוסקופ אלקטרונים סורק","מראה תלת־ממדי, בהגדלה קטנה יותר"],["bulb","מיקרוסקופ לייזר קונפוקלי","״פרוסות״ אופטיות ברקמה עבה; דורש סימון פלואורסצנטי"]])}`,q:"q11"}
+ ]},
+ {id:"t4",icon:"link",title:"התחקות אחר קשרים עצביים",blocks:[
+  {h:"קדומני, אחורני וטרנס־נוירוני",html:`<p>אחרי שמגלים שאזור משתתף בהתנהגות, שואלים: מאיפה הוא מקבל מידע, ולאן הוא שולח?</p>${fig("trace")}${def("סימון קדומני",`מזריקים לאזור <b>PHA-L</b> (לקטין מצמח השעועית). גופי התאים קולטים אותו, והוא מובל בתובלה <b>קדומנית</b> עד הכפתורים. מוצאים אותו בעזרת נוגדנים. כך התגלו אקסונים מה־VMH אל החומר האפור המרכזי (PAG).`)}${def("סימון אחורני",`מזריקים <b>פלואורוגולד</b>. הכפתורים באזור קולטים אותו, והוא מובל <b>אחורה</b> לגופי התאים, שזוהרים באור אולטרה סגול. כך התגלו נוירונים באמיגדלה המדיאלית ששולחים אקסונים ל־VMH.`)}${def("התחקות טרנס־נוירונית",`נגיפים שעוברים סינפסות מגלים שרשראות של כמה נוירונים: <b>פסאודו־רביס</b> להתחקות אחורנית, ו<b>הרפס סימפלקס</b> להתחקות קדומנית.`)}`,q:"q13"}
+ ]},
+ {id:"t5",icon:"brain",title:"הדמיה של מוח האדם החי",blocks:[
+  {h:"CT, MRI ו־DTI",html:`${tiles([["data","טומוגרפיה ממוחשבת (CT)","קרני רנטגן מכמה זוויות; המחשב בונה ״פרוסות״ אופקיות. מראה גידולים ודימום"],["brain","הדמיית תהודה מגנטית (MRI)","שדה מגנטי ותדרי רדיו. פירוט טוב יותר, בכל מישור, בלי קרני רנטגן"],["link","DTI","בסורק MRI: אלומות אקסונים עם מיילין, לפי כיוון התנועה של המים"]])}${fig("img")}${rem("CT ו־MRI מראים <b>מבנה</b>, למשל איפה הפגע אצל מטופל. כדי לראות <b>פעילות</b> צריך שיטות אחרות, כמו PET ו־fMRI.")}`,q:"q15"}
+ ]},
+ {id:"t6",icon:"chart",title:"רישום פעילות המוח",blocks:[
+  {h:"רישום חשמלי",html:`${tiles([["target","מיקרו־אלקטרודות","פעילות של נוירונים יחידים. אפשר להשתיל באופן קבוע ולרשום בחיה ערה ומתנועעת"],["chart","מקרו־אלקטרודות","סכום הפעילות של נוירונים רבים. על הקרקפת: EEG"],["bulb","מגנטו־אנצפלוגרפיה (MEG)","שדות מגנטיים זעירים מפעילות עצבית, בגלאי SQUID"]])}${def("EEG",`<b>אלקטרו־אנצפלוגרם</b> רושם בעיקר את סכום הפוטנציאלים הפוסט־סינפטיים מתחת לאלקטרודות שעל הקרקפת. הוא משמש לחקר שינה ולאיתור מוקדים של אפילפסיה.`)}${rem("מיקרו־אלקטרודה עונה על השאלה ״מה תא אחד עושה?״. מקרו־אלקטרודה עונה על ״מה אזור שלם עושה?״.")}`,q:"q17"},
+  {h:"רישום פעילות מטבולית",html:`${tiles([["data","אוטורדיוגרפיה של 2-DG","2-DG רדיואקטיבי נקלט כמו גלוקוז ולא מתפרק, ולכן מצטבר בתאים פעילים. בחיות"],["id","החלבון פוס (Fos)","נוצר בגרעין של נוירונים שזה עתה הופעלו; מאתרים אותו בנוגדנים"],["bulb","PET","בבני אדם: FDG רדיואקטיבי מראה צריכת גלוקוז, ואפשר לסמן גם חומרים אחרים"],["brain","fMRI","מודד את רמת החמצן בדם באזורים פעילים, במוח ער, בלי קרינה"]])}${ex(`אחרי שחולדה נקבה הזדווגה, מוצאים <b>חלבון פוס</b> בנוירונים של האמיגדלה המדיאלית. זה מראה אילו נוירונים הופעלו בזמן ההתנהגות.`)}${rem("ב־PET משתמשים בחומרים עם זמן מחצית חיים <b>קצר מאוד</b>, ולכן השיטה יקרה. ב־fMRI אין חומר רדיואקטיבי, והפירוט המרחבי טוב יותר.")}`,q:"q19"}
+ ]},
+ {id:"t7",icon:"bulb",title:"גרייה של פעילות עצבית",blocks:[
+  {h:"חשמל, כימיה, מגנט ואור",html:`${tiles([["bulb","גרייה חשמלית","מעוררת נוירונים ליד קצה האלקטרודה, וגם אקסונים שעוברים"],["flask","גרייה כימית","כמות קטנה של חומצה אמינית מעוררת דרך קנולה: רק גופי תאים"],["gear","גרייה מגנטית חוצת גולגולת (TMS)","סליל בצורת 8 על הראש מגרה את הקורטקס שמתחתיו"],["target","אופטוגנטיקה","חלבונים רגישים לאור מוחדרים לסוג מסוים של נוירונים בעזרת נגיפים"]])}${def("אופטוגנטיקה",`<b>ChR2</b> היא תעלת יונים שנפתחת ב<b>אור כחול</b> וגורמת לדפולריזציה (עירור). <b>NpHR</b> הוא נשא שמופעל ב<b>אור צהוב</b> וגורם להיפר־פולריזציה (עכבה). כך אפשר להדליק ולכבות נוירונים מסוג מסוים, במדויק ובמהירות.`)}${rem("ההבדל בין גרייה חשמלית לכימית דומה להבדל בין פגע ברדיו לפגע אקסיטוטוקסי: החשמל משפיע גם על <b>אקסונים עוברים</b>, והחומצה האמינית רק על <b>גופי תאים</b>.")}`,q:"q21"}
+ ]},
+ {id:"t8",icon:"id",title:"שיטות נוירוכימיות",blocks:[
+  {h:"איתור חומרים וקולטנים",html:`${def("אימונו־ציטוכימיה",`<mark>אימונו־ציטוכימיה</mark> ${E("immunocytochemistry")} משתמשת ב<b>נוגדנים</b> מסומנים שנקשרים לחלבון או לפפטיד מסוים. כך רואים, למשל, אקסונים שמכילים <b>ואזופרסין</b>. אם החומר אינו חלבון (כמו דופמין), מאתרים את <b>האנזים</b> שמייצר אותו.`)}${def("איתור קולטנים",`<b>אוטורדיוגרפיה</b>: מצפים חתכי מוח בתמיסה של <b>ליגנד רדיואקטיבי</b> לקולטן, ומפתחים כדי לראות איפה הוא נקשר. אפשר גם באימונו־ציטוכימיה, עם נוגדן לחלבון הקולטן.`)}${rem("אימונו־ציטוכימיה מצריכה <b>נוגדן מיוחד</b> לכל חלבון, ואוטורדיוגרפיה מצריכה <b>ליגנד רדיואקטיבי</b>.")}`,q:"q23"},
+  {h:"מיקרודיאליזה",html:`${def("מדידת חומרים שנפלטים",`ב<mark>מיקרודיאליזה</mark> ${E("microdialysis")} משתילים במוח צינורית דקה עם ממברנה חדירה למחצה. תמיסת מלח עוברת בה לאט, ומולקולות מהנוזל החוץ־תאי עוברות אליה. אחר כך בודקים מה נאסף.`)}${ex(`בחולדה ערה אפשר לראות ש<b>פליטת נוראפינפרין</b> עולה באזור מסוים בזמן התנהגות מסוימת. היתרון: בודקים מגוון רחב של חומרים, בחיה שמתנהגת.`)}${rem("בבני אדם אפשר למדוד נוירוכימיקלים בעזרת <b>PET</b> עם חומר מסומן, כמו L-DOPA רדיואקטיבי במקרה ה־MPTP.")}`,q:"q25"}
+ ]},
+ {id:"t9",icon:"copies",title:"שיטות גנטיות",blocks:[
+  {h:"תאומים ואימוץ",html:`${def("מחקרי תאומים",`משווים את <b>שכיחות שוויון המקרים</b> ${E("concordance")}: אם לאחד התאומים יש תכונה, כמה פעמים יש אותה גם לשני? תאומים <b>זהים</b> חולקים את כל הגנים, ולא־זהים כמחצית. אם השוויון גבוה יותר בזהים, יש תרומה גנטית, ואפשר לאמוד את התורשתיות.`)}${def("מחקרי אימוץ",`משווים את הדמיון של ילד מאומץ להוריו <b>הביולוגיים</b> לעומת הוריו <b>המאמצים</b>. דמיון להורים הביולוגיים מעיד על תרומה גנטית.`)}${ex(`אם אחד מתאומים זהים חולה בסכיזופרניה, הסיכוי שגם השני יחלה גבוה בהרבה מאשר אצל תאומים לא־זהים. זה מצביע על תרומה גנטית, אבל לא שלמה, כי גם בזהים השוויון רחוק מ־100%.`)}`,q:"q27"},
+  {h:"מוטציות מכוונות ואוליגו־נוקלאוטידים",html:`${tiles([["x","השתקת גן (knockout)","עכברים בלי גן מסוים, למשל בלי קולטן"],["check","החדרת גן (knock-in)","הוספת גן, למשל גן אנושי פגום"],["chart","הגברת ביטוי","הגן מייצר יותר מהחלבון"]])}${def("אוליגו־נוקלאוטידים משלימים",`<mark>אוליגו־נוקלאוטידים משלימים</mark> ${E("antisense oligonucleotides")} הם מקטעים סינתטיים שנקשרים ל־<b>mRNA</b> ומונעים את התרגום שלו לחלבון. זו חסימה <b>זמנית</b> של ייצור חלבון, בלי לשנות את הגן.`)}${ex(`הזרקה ל־VMH של אוליגו־נוקלאוטידים שמונעים ייצור של <b>קולטני הורמונים</b> פוגעת בהתנהגות המינית של חולדות נקבות. זה מראה שהקולטנים האלה, באזור הזה, חיוניים להתנהגות.`)}`,q:"q29"}
+ ]}
+];
+const Q={
+q1:{t:"t1",v:[
+ {q:"מה גרם לתסמינים דמויי פרקינסון אצל הצעירים ב־1982?",a:"MPTP שהרס נוירונים דופמינרגיים",w:["מנת יתר של L-DOPA שנלקח בטעות","דלקת חריפה בקרומי המוח","מחלה גנטית תורשתית במשפחה"],e:"האופיאט הסינתטי שהזריקו היה מזוהם ב־MPTP, רעלן שהורס נוירונים דופמינרגיים. L-DOPA היה דווקא הטיפול, ולא הסיבה."},
+ {q:"מה היה חריג בתסמינים של המטופלים לעומת פרקינסון רגיל?",a:"הם היו צעירים, והמחלה הופיעה מהר",w:["הם היו מבוגרים מאוד מהרגיל","התסמינים היו קלים מאוד אצל כולם","הם לא הגיבו בכלל לטיפול ב־L-DOPA"],e:"פרקינסון מתפתח לאט ונדיר לפני גיל העמידה המאוחר, והמטופלים היו בשנות ה־20 וה־30. L-DOPA דווקא עזר להם, אבל רק לזמן מה."}]},
+q2:{t:"t1",v:[
+ {q:"מה הראתה סריקת PET שנה אחרי ההשתלה?",a:"שהתאים שהושתלו שרדו ופולטים דופמין",w:["שהנזק התפשט לאזורים נוספים","שהגוף דחה את התאים שהושתלו","שהמטופל כבר לא זקוק לשום טיפול"],e:"הקליטה של L-DOPA רדיואקטיבי בגנגליונים הבסיסיים עלתה, וזה מעיד על נוירונים פעילים. בדרך כלל ההשפעה המרפאה של שתלים כאלה זמנית."},
+ {q:"למה MPTP נחשב היום כלי מחקר חשוב?",a:"הוא יוצר בחיות מודל של פרקינסון",w:["הוא מרפא פרקינסון בבני אדם","הוא מגביר ייצור דופמין במוח","הוא מראה פעילות מוחית בסריקה"],e:"MPTP הורס באופן בררני את המערכת הדופמינרגית, ולכן בחיות הוא יוצר תסמינים דמויי פרקינסון שעליהם אפשר לבדוק תרופות. הוא לא מרפא."}]},
+q3:{t:"t1",v:[
+ {q:"למה, לפי הפרק, צריך תוכנית מחקר עם כמה שיטות?",a:"לכל שיטה מגבלות, וכל שיטה שואלת שאלה אחרת",w:["כי שיטה אחת תמיד נותנת תשובה שגויה","כי ועדות האתיקה דורשות זאת","כי חיות לא מגיבות לשיטה אחת"],e:"השיטה מגדירה את השאלה, ולכן תוצאה מוזרה יכולה לנבוע מהשיטה. השוואה בין שיטות נותנת את המסקנות החזקות ביותר."},
+ {q:"איזו שאלה עונה עליה בעיקר שיטת הגרייה?",a:"מה קורה כשמפעילים את האזור",w:["מה קורה כשהאזור לא עובד","אילו חומרים יש באזור","מה התרומה של הגנים"],e:"גרייה מפעילה אזור ובודקת מה מתרחש. פגע בודק מה קורה כשהאזור לא עובד, ושיטות נוירוכימיות בודקות אילו חומרים יש בו."}]},
+q4:{t:"t1",v:[
+ {q:"באילו כלים השתמשו במקרה ה־MPTP?",a:"PET, ניתוח סטראוטקסי ופגע כימי",w:["EEG, מיקרודיאליזה ותאומים","CT, TMS ואוליגו־נוקלאוטידים","MRI, מיקרו־אלקטרודות ופוס"],e:"PET הראה את הנזק ואת הצלחת ההשתלה, ניתוח סטראוטקסי שימש להשתלה, ו־MPTP הוא דוגמה לפגע כימי בררני."},
+ {q:"איזה אזור משמש בפרק כדוגמה חוזרת?",a:"ההיפותלמוס הגחוני־מדיאלי (VMH)",w:["הקורטקס המוטורי הראשוני","ההיפוקמפוס שבאונת הרקה","המוחון שמאחורי הגשר"],e:"ה־VMH קשור להתנהגות ההזדווגות של חולדות נקבות, והפרק מראה איך כל שיטה תורמת להבנתו."}]},
+q5:{t:"t2",v:[
+ {q:"חיה לא מבצעת התנהגות אחרי פגע באזור X. מה אפשר להסיק בזהירות?",a:"האזור משתתף בהתנהגות, אולי כחלק ממעגל",w:["האזור הוא המרכז היחיד של ההתנהגות","האזור לא קשור להתנהגות","ההתנהגות נלמדת ולא קשורה למוח"],e:"הפגע מראה שהאזור נחוץ, אבל לא שהוא ״המרכז״. ייתכן שהוא חלק ממעגל, או שהפגע פגע באקסונים שעוברים דרכו."},
+ {q:"מהו ניתוח דמה?",a:"אותו ניתוח, בלי להעביר זרם או חומר",w:["ניתוח באזור אחר במוח","ניתוח שנעשה רק על חיות זקנות","הזרקה של חומצה קאינית"],e:"בקבוצת הביקורת מבצעים את כל שלבי הניתוח, כולל החדרת האלקטרודה, בלי ליצור פגע. כך יודעים מה נובע מהפגע עצמו."}]},
+q6:{t:"t2",v:[
+ {q:"מה השיטה הוותיקה ביותר במדע העצב?",a:"כריתה ניסויית",w:["אופטוגנטיקה","הדמיית fMRI","מיקרודיאליזה"],e:"הסרה או הרס של אזור ובדיקה מה החיה כבר לא עושה היא שיטה ותיקה, עוד מימי פלורנס. האחרות פותחו בעשורים האחרונים."},
+ {q:"מה נכון לגבי כריתה ניסויית?",a:"לרוב הורסים את הרקמה במקומה",w:["תמיד מסירים את הרקמה מהמוח","היא נעשית רק בבני אדם חולים","היא משמשת להגברה של פעילות"],e:"למרות השם, ברוב המקרים לא מסירים רקמה אלא יוצרים פגע במקום. היא נעשית בחיות, ומטרתה לבטל ולא להגביר פעילות."}]},
+q7:{t:"t2",v:[
+ {q:"מה היתרון של פגע אקסיטוטוקסי על פגע בזרם רדיו?",a:"הורס גופי תאים ולא אקסונים עוברים",w:["הוא הפיך לגמרי אחרי כמה שעות","הוא לא דורש ניתוח בכלל","הוא הורס שטח גדול יותר במוח"],e:"החומצה הקאינית פועלת על קולטני גלוטמט שנמצאים על גופי תאים, ולכן אקסונים עוברים נשארים. זרם רדיו הורס הכול."},
+ {q:"איזו שיטה מאפשרת לחיה לשמש ביקורת של עצמה?",a:"שיתוק זמני בסם הרדמה מקומי",w:["פגע בזרם בתדר רדיו","פגע אקסיטוטוקסי בחומצה קאינית","הזרקה של הרעלן 6-OHDA"],e:"שיתוק זמני הוא הפיך, ולכן אפשר לבדוק את החיה לפני, בזמן ואחרי. הפגעים האחרים הורסים תאים לצמיתות."}]},
+q8:{t:"t2",v:[
+ {q:"פגע ברדיו ב־X מבטל התנהגות, ופגע אקסיטוטוקסי באותו מקום לא. מה המסקנה?",a:"האחראים הם אקסונים שעוברים ב־X",w:["הנוירונים ב־X הם האחראים להתנהגות","הפגע האקסיטוטוקסי פשוט לא הצליח","שני הפגעים הרסו בדיוק את אותם תאים"],e:"ההבדל היחיד בין הפגעים הוא אם אקסונים עוברים נהרסו. לכן מה שמבטל את ההתנהגות הוא הנזק לאקסונים."},
+ {q:"מה עושה ספורין המצומד לנוגדן?",a:"הורס רק נוירונים מסוג מסוים",w:["משתק את כל האזור באופן זמני","מסמן אקסונים לצורך מעקב","מגרה נוירונים באור כחול"],e:"הנוגדן מכוון את הרעלן לתאים שיש להם חלבון מסוים, ולכן הפגע מדויק מאוד. שיתוק זמני נעשה בסם הרדמה מקומי."}]},
+q9:{t:"t3",v:[
+ {q:"למה צריך אטלס סטראוטקסי?",a:"כדי לדעת את הקואורדינטות",w:["כדי לצבוע את חתכי המוח","כדי לרשום פעילות של תא בודד","כדי לחשב את מינון החומר"],e:"האטלס מכיל חתכים עם קואורדינטות ביחס לנקודת ציון בגולגולת, ברגמה. בעזרתו מכוונים את המכשיר לנקודה הנכונה."},
+ {q:"מהי ברגמה?",a:"נקודת ציון בגולגולת",w:["אזור בהיפותלמוס","סוג של צבע לגופי תאים","חלבון שמסמן אקסונים"],e:"ברגמה היא נקודה על הגולגולת שממנה מודדים את הקואורדינטות במכשיר הסטראוטקסי."}]},
+q10:{t:"t3",v:[
+ {q:"איפה משמש מכשיר סטראוטקסי בבני אדם?",a:"בהשתלת אלקטרודות לגרייה עמוקה",w:["בסריקות CT שגרתיות בבית חולים","בבדיקות דם לפני ניתוח","בהקלטת EEG בזמן שינה"],e:"גם בבני אדם משתמשים במסגרת סטראוטקסית כדי להגיע לנקודה מדויקת, למשל ב־DBS לפרקינסון או בהשתלה במקרה ה־MPTP."},
+ {q:"מה מאפשר מכשיר סטראוטקסי?",a:"להגיע לנקודה מדויקת בתוך המוח",w:["לראות את פני המוח בלי ניתוח","לצבוע את כל גופי התאים","למדוד שדות מגנטיים"],e:"המכשיר מחזיק את הראש ומזיז אלקטרודה או קנולה בשלושה צירים, כך שאפשר להגיע לאזור עמוק במדויק."}]},
+q11:{t:"t3",v:[
+ {q:"מה תפקיד הפרפוזיה?",a:"להחליף את הדם בקבעון",w:["לצבוע את גופי התאים ברקמה","לחתוך את המוח לפרוסות דקות","להקפיא את המוח לפני חיתוך"],e:"בפרפוזיה שוטפים את הדם ומכניסים קבעון כמו פורמלין, וכך הרקמה נשמרת. החיתוך והצביעה באים אחר כך."},
+ {q:"למה משתמשים בקריאוסטט?",a:"ההקפאה מקשה את הרקמה לחיתוך דק",w:["הוא צובע את הרקמה בזמן החיתוך","הוא מגדיל את הרקמה לצפייה","הוא משמר את הדם בתוך כלי הדם"],e:"קריאוסטט הוא מיקרוטום בתא קפוא. רקמה קפואה קשה מספיק כדי לחתוך אותה לפרוסות דקות."}]},
+q12:{t:"t3",v:[
+ {q:"מה צובע סגול קרסיל?",a:"גופי תאים",w:["אקסונים עם מיילין","כלי דם","קולטנים מסוימים"],e:"סגול קרסיל צובע גופי תאים, ולכן רואים בו גרעינים ואת מקום הפגע. הוא לא צובע אקסונים."},
+ {q:"מה היתרון של מיקרוסקופ לייזר קונפוקלי?",a:"״פרוסות״ אופטיות ברקמה עבה",w:["הגדלה גדולה מכל מיקרוסקופ","לא צריך שום סימון","מראה פעילות חשמלית"],e:"המיקרוסקופ הקונפוקלי מראה שכבות ברקמה עבה, אבל צריך סימון פלואורסצנטי. הפרטים הזעירים ביותר נראים במיקרוסקופ אלקטרונים."}]},
+q13:{t:"t4",v:[
+ {q:"איזו שיטה תגלה לאן אזור שולח את האקסונים שלו?",a:"סימון קדומני עם PHA-L",w:["סימון אחורני עם פלואורוגולד","צביעה בסגול קרסיל","מיקרודיאליזה"],e:"PHA-L נקלט בגופי התאים ומובל קדימה עד הכפתורים, ולכן מראה את היעדים. פלואורוגולד עושה את הדרך ההפוכה."},
+ {q:"איזו שיטה תגלה מאין אזור מקבל קלט?",a:"סימון אחורני עם פלואורוגולד",w:["סימון קדומני עם PHA-L","פגע אקסיטוטוקסי באזור","הדמיית CT של כל המוח"],e:"פלואורוגולד נקלט בכפתורים שבאזור ומובל אחורה לגופי התאים שלהם, ולכן מראה מאיפה מגיעים האקסונים."}]},
+q14:{t:"t4",v:[
+ {q:"מה התגלה כשהזריקו PHA-L ל־VMH?",a:"אקסונים מה־VMH שמגיעים ל־PAG",w:["נוירונים באמיגדלה ששולחים ל־VMH","פעילות מוגברת בזמן הזדווגות","קולטני הורמונים ב־VMH"],e:"PHA-L מראה פלט, ולכן התגלו אקסונים מה־VMH אל החומר האפור המרכזי. הקלט מהאמיגדלה התגלה בסימון האחורני."},
+ {q:"מה התגלה כשהזריקו פלואורוגולד ל־VMH?",a:"נוירונים באמיגדלה ששולחים אליו",w:["אקסונים מה־VMH אל ה־PAG","פגע שנוצר באמיגדלה המדיאלית","קולטנים לגלוטמט בתוך ה־VMH"],e:"פלואורוגולד מובל אחורה לגופי התאים של האקסונים שמגיעים לאזור. כך התגלו הנוירונים באמיגדלה המדיאלית."}]},
+q15:{t:"t4",v:[
+ {q:"מה מוסיפה התחקות טרנס־נוירונית?",a:"חוצה סינפסות ומגלה שרשראות",w:["היא מראה פעילות של תאים בזמן אמת","היא הורסת נוירונים מסוג מסוים","היא מודדת חומרים בנוזל החוץ־תאי"],e:"נגיפים כמו פסאודו־רביס והרפס סימפלקס עוברים מנוירון לנוירון, ולכן מגלים מעגל של כמה תחנות ולא רק קשר אחד."},
+ {q:"איזה נגיף משמש להתחקות אחורנית?",a:"פסאודו־רביס",w:["הרפס סימפלקס","PHA-L","2-DG"],e:"לפי טבלה 5.1, פסאודו־רביס משמש להתחקות אחורנית והרפס סימפלקס לקדומנית. PHA-L ו־2-DG אינם נגיפים."}]},
+q16:{t:"t4",v:[
+ {q:"באיזה מנגנון תאי מובל PHA-L לכפתורים?",a:"בתובלה אקסופלזמית קדומנית",w:["בתובלה אחורנית","בדיפוזיה בנוזל החוץ־תאי","בזרם הדם"],e:"השיטה מנצלת את התובלה הקדומנית מגוף התא לכפתורים, שעליה למדנו בפרק 2. פלואורוגולד מנצל את האחורנית."},
+ {q:"איך מוצאים את PHA-L בחתכי המוח?",a:"בנוגדנים מסומנים",w:["בסריקת MRI של המוח","בגלאי SQUID רגיש","בצבע סגול קרסיל"],e:"מאתרים את ה־PHA-L בנוגדנים מסומנים, ואז רואים את האקסונים והכפתורים הצבועים. סגול קרסיל צובע כל גוף תא."}]},
+q17:{t:"t5",v:[
+ {q:"מה היתרון של MRI על פני CT?",a:"פירוט טוב יותר ובכל מישור",w:["מראה פעילות מטבולית","זול ומהיר יותר תמיד","משתמש בקרני רנטגן חזקות"],e:"MRI משתמש בשדה מגנטי ובתדרי רדיו, נותן פירוט טוב יותר ומציג חתכים בכל מישור. CT משתמש בקרני רנטגן ומציג חתכים אופקיים."},
+ {q:"מה מראה DTI?",a:"אלומות אקסונים עם מיילין",w:["פעילות מטבולית של אזורים","גופי תאים צבועים","פליטת נוירוטרנסמיטרים"],e:"DTI מתבצע בסורק MRI ומזהה את כיוון התנועה של מים לאורך אקסונים, ולכן מראה מסילות של חומר לבן."}]},
+q18:{t:"t5",v:[
+ {q:"באיזו שיטה משתמשים בקרני רנטגן?",a:"CT",w:["MRI","fMRI","MEG"],e:"טומוגרפיה ממוחשבת מצלמת בקרני רנטגן מזוויות רבות. MRI ו־fMRI משתמשים בשדה מגנטי, ו־MEG מודד שדות מגנטיים."},
+ {q:"מה מציגות שיטות CT ו־MRI?",a:"מבנה המוח, לא פעילות",w:["פעילות מטבולית בזמן משימה","פעילות של נוירון יחיד","קשרים בין שני נוירונים"],e:"שתיהן משמשות למשל למציאת פגע אצל מטופל. כדי לראות פעילות משתמשים ב־PET או ב־fMRI."}]},
+q19:{t:"t5",v:[
+ {q:"מטופל אחרי שבץ. באיזו שיטה יראו איפה הנזק בפירוט הטוב ביותר?",a:"MRI",w:["EEG","מיקרודיאליזה","מחקר תאומים"],e:"MRI מראה את מבנה המוח בפירוט גבוה. EEG רושם פעילות חשמלית, ושתי האחרות לא מראות מבנה."},
+ {q:"איזו שיטה מציגה חתכים אופקיים בלבד?",a:"CT",w:["MRI","DTI","מיקרוסקופ קונפוקלי"],e:"לפי טבלה 5.1, CT מציג חתכי מוח במישור האופקי בלבד, ו־MRI מציג חתכים בכל המישורים."}]},
+q20:{t:"t5",v:[
+ {q:"על מה מבוססת הדמיית DTI?",a:"על כיוון התנועה של מים ברקמה",w:["על קליטת גלוקוז רדיואקטיבי","על רמת החמצן בדם","על שדות מגנטיים מפעילות עצבית"],e:"באלומות אקסונים המים נעים לאורך הסיבים, ו־DTI מזהה את הכיוון הזה. רמת החמצן היא הבסיס של fMRI."},
+ {q:"באיזה מכשיר מבצעים DTI?",a:"בסורק MRI",w:["בסורק CT","בסורק PET","בגלאי SQUID"],e:"DTI היא שיטה שמשתמשת בסורק MRI. סורקי CT ו־PET ומגנטומטר עם SQUID מודדים דברים אחרים."}]},
+q21:{t:"t6",v:[
+ {q:"מה רושמת מקרו־אלקטרודה על הקרקפת?",a:"סכום הפעילות של נוירונים רבים (EEG)",w:["פוטנציאל פעולה של נוירון יחיד","פליטה של נוירוטרנסמיטר","צריכת גלוקוז של אזור"],e:"מקרו־אלקטרודות רושמות בעיקר סכום של פוטנציאלים פוסט־סינפטיים מתאים רבים. נוירון יחיד נרשם במיקרו־אלקטרודה."},
+ {q:"איך אפשר לרשום פעילות של נוירונים יחידים בחיה שמתנהגת?",a:"בהשתלת מיקרו־אלקטרודות",w:["בסריקת PET חוזרת","בהדמיית CT של הגולגולת","בצביעת חלבון פוס בחתכים"],e:"מיקרו־אלקטרודות מושתלות עם מחבר על הגולגולת מאפשרות לרשום תאים בזמן שהחיה ערה ומתנועעת."}]},
+q22:{t:"t6",v:[
+ {q:"מה מודדת מגנטו־אנצפלוגרפיה (MEG)?",a:"שדות מגנטיים מפעילות עצבית",w:["רמת החמצן בדם במוח","צריכת גלוקוז רדיואקטיבי","חומרים בנוזל החוץ־תאי"],e:"MEG משתמשת בגלאי SQUID כדי לקלוט שדות מגנטיים זעירים, ומאכנת קבוצות נוירונים שיורות יחד. רמת החמצן היא fMRI."},
+ {q:"למה משמש EEG בבני אדם?",a:"לחקר שינה ולאיתור אפילפסיה",w:["לראות את מבנה המוח בפירוט רב","לסמן אקסונים לצורך מעקב","למדוד את ריכוז הדופמין"],e:"EEG רושם את הפעילות החשמלית הכללית ולכן מתאים לשינה ולהתקפים. מבנה רואים ב־MRI."}]},
+q23:{t:"t6",v:[
+ {q:"למה 2-DG מצטבר בתאים פעילים?",a:"נקלט כמו גלוקוז, אבל לא מתפרק",w:["נקשר לקולטני גלוטמט","נוצר בגרעין של תאים פעילים","מובל אחורה לגוף התא"],e:"תאים פעילים קולטים יותר גלוקוז, ו־2-DG נקלט באותה דרך ונתקע בתוכם. כך רואים באוטורדיוגרפיה אילו אזורים פעלו."},
+ {q:"מה מעיד החלבון פוס?",a:"שהנוירון הופעל זה עתה",w:["שהנוירון מת","שהנוירון דופמינרגי","שהנוירון שולח אקסון לאזור מסוים"],e:"פוס נוצר בגרעין כשנוירון מופעל, ולכן מסמן אילו תאים פעלו בזמן התנהגות, כמו האמיגדלה המדיאלית אחרי הזדווגות."}]},
+q24:{t:"t6",v:[
+ {q:"מה מודד fMRI?",a:"רמת החמצן בדם באזורים פעילים",w:["קליטת FDG רדיואקטיבי","שדות מגנטיים מנוירונים","פוטנציאלים של תאים בודדים"],e:"fMRI מזהה שינויים ברמת החמצן בדם, שעולה באזורים פעילים. FDG שייך ל־PET."},
+ {q:"מה היתרון של fMRI על פני PET?",a:"אין חומר רדיואקטיבי והפירוט טוב יותר",w:["הוא מאתר כל חומר מסומן","הוא זול יותר כי צריך ציקלוטרון","הוא רושם נוירונים יחידים"],e:"fMRI לא דורש חומר רדיואקטיבי ונותן פירוט מרחבי טוב יותר. PET יכול לאכן חומרים מסומנים, וזה היתרון שלו."}]},
+q25:{t:"t7",v:[
+ {q:"מה ההבדל בין גרייה חשמלית לגרייה כימית?",a:"חשמל מעורר גם אקסונים עוברים; חומר כימי רק גופי תאים",w:["חשמל מעורר רק גופי תאים; חומר כימי גם אקסונים","חשמל מעכב; חומר כימי מעורר","אין הבדל ביניהן"],e:"חומצה אמינית מעוררת פועלת על קולטנים שנמצאים על גופי תאים. זרם חשמלי מעורר כל דבר ליד הקצה, כולל אקסונים שרק עוברים."},
+ {q:"מה עושה TMS?",a:"מגרה את הקורטקס בשדה מגנטי מבחוץ",w:["מודד שדות מגנטיים שהמוח מייצר","מגרה נוירונים עמוקים באור כחול","מצלם את המוח בקרני רנטגן"],e:"TMS יוצר שדה מגנטי שמגרה את הקורטקס שמתחת לסליל. מדידת שדות מגנטיים היא MEG."}]},
+q26:{t:"t7",v:[
+ {q:"מה קורה כשמאירים באור כחול על נוירון עם ChR2?",a:"התעלה נפתחת: דפולריזציה",w:["הנוירון עובר היפר־פולריזציה","הנוירון מת אחרי כמה שניות","שום דבר, כי ChR2 מגיב לאור צהוב"],e:"ChR2 היא תעלת יונים שנפתחת באור כחול ומעוררת את התא. NpHR מופעל באור צהוב וגורם להיפר־פולריזציה."},
+ {q:"איך מכניסים חלבונים רגישים לאור לנוירונים?",a:"בעזרת נגיפים מהונדסים",w:["בהזרקה לווריד","בצביעה של חתכי מוח","בגרייה מגנטית"],e:"הנגיפים מכניסים את הגן לחלבון לסוג מסוים של נוירונים, וכך האור משפיע רק עליהם. זה מה שהופך את השיטה לבררנית."}]},
+q27:{t:"t7",v:[
+ {q:"מה מאפשר NpHR באופטוגנטיקה?",a:"לעכב נוירונים באור צהוב",w:["לעורר נוירונים באור כחול","לסמן אקסונים לצורך מעקב","להרוס נוירונים באופן קבוע"],e:"NpHR הוא נשא שמופעל באור צהוב וגורם להיפר־פולריזציה, ולכן מכבה את הנוירון. העירור נעשה ב־ChR2 ובאור כחול."},
+ {q:"מה היתרון של אופטוגנטיקה על גרייה חשמלית?",a:"היא פועלת רק על סוג תאים מסוים",w:["היא לא דורשת שום ניתוח","היא מגרה גם אקסונים עוברים","היא הורסת את האזור לצמיתות"],e:"החלבונים הרגישים לאור נמצאים רק בנוירונים שהנגיף הכניס אליהם, ולכן אפשר להפעיל או לעכב סוג מסוים בלבד, במהירות."}]},
+q28:{t:"t7",v:[
+ {q:"איזו שיטה מתאימה לגרות את הקורטקס של אדם בלי ניתוח?",a:"גרייה מגנטית חוצת גולגולת",w:["גרייה כימית דרך קנולה","השתלה של מיקרו־אלקטרודות","הפעלה אופטוגנטית באור"],e:"TMS פועל מבחוץ, דרך הגולגולת. גרייה כימית, מיקרו־אלקטרודות ואופטוגנטיקה דורשים ניתוח."},
+ {q:"למה גרייה כימית דומה לפגע אקסיטוטוקסי?",a:"שתיהן פועלות רק על גופי תאים",w:["שתיהן הורסות את כל הרקמה באזור","שתיהן הפיכות לגמרי בתוך דקות","שתיהן מגרות גם אקסונים עוברים"],e:"שתיהן מנצלות קולטני גלוטמט שעל גופי תאים. ההבדל הוא בכמות: מעט חומר מגרה, והרבה חומר הורג את התאים."}]},
+q29:{t:"t8",v:[
+ {q:"איך מוצאים נוירונים שמכילים פפטיד מסוים?",a:"בנוגדן לפפטיד",w:["בצביעה של סגול קרסיל","בסריקה של CT","במחקר של תאומים"],e:"נוגדן מסומן נקשר לפפטיד ומראה איפה הוא נמצא, למשל ואזופרסין. סגול קרסיל צובע כל גוף תא בלי קשר לתוכן."},
+ {q:"איך מוצאים נוירונים שמייצרים דופמין, שאינו חלבון?",a:"מאתרים את האנזים שמייצר אותו",w:["מזריקים דופמין רדיואקטיבי לדם","מודדים EEG מעל האזור","משתמשים בסימון אחורני"],e:"נוגדנים נקשרים לחלבונים, ודופמין אינו חלבון. לכן מאתרים את האנזים שמייצר אותו, שהוא חלבון."}]},
+q30:{t:"t8",v:[
+ {q:"מה דרוש לאוטורדיוגרפיה של קולטנים?",a:"ליגנד רדיואקטיבי לקולטן",w:["נוגדן לחלבון הקולטן","נגיף שעובר סינפסות","חלבון רגיש לאור"],e:"באוטורדיוגרפיה מצפים חתכים בליגנד רדיואקטיבי ורואים איפה הוא נקשר. נוגדן לחלבון הקולטן הוא דרך אחרת, אימונו־ציטוכימית."},
+ {q:"מה ההבדל בין שתי הדרכים לאתר קולטנים?",a:"ליגנד רדיואקטיבי מול נוגדן",w:["אחת לחיות, ואחת רק לבני אדם","אחת מודדת פעילות, ואחת מבנה","אין שתי דרכים, יש רק אחת"],e:"אוטורדיוגרפיה משתמשת בליגנד רדיואקטיבי, ואימונו־ציטוכימיה בנוגדן מיוחד לחלבון הקולטן."}]},
+q31:{t:"t8",v:[
+ {q:"מה מאפשרת מיקרודיאליזה?",a:"למדוד חומרים שנפלטים בחיה ערה",w:["לראות את מבנה המוח בפירוט רב","לסמן אקסונים לצורך מעקב","לגרות נוירונים באור כחול"],e:"הצינורית אוספת מולקולות מהנוזל החוץ־תאי, וכך רואים למשל שפליטת נוראפינפרין עולה בזמן התנהגות."},
+ {q:"מה נמצא בתוך צינורית המיקרודיאליזה?",a:"תמיסת מלח שאוספת מולקולות",w:["ליגנד רדיואקטיבי לקולטן","נוגדנים מסומנים לחלבון","חומצה קאינית מעוררת"],e:"תמיסת מלח עוברת לאט בצינורית, ומולקולות מהנוזל החוץ־תאי עוברות אליה דרך הממברנה. אחר כך בודקים את התמיסה."}]},
+q32:{t:"t8",v:[
+ {q:"איך אפשר למדוד נוירוכימיקלים במוח של אדם חי?",a:"בסריקת PET עם חומר מסומן",w:["במיקרודיאליזה שגרתית","בצביעה של חתכים","בהדמיית DTI"],e:"PET מאתר כל חומר רדיואקטיבי שנקלט במוח, כמו L-DOPA במקרה ה־MPTP. מיקרודיאליזה וצביעה נעשות בעיקר בחיות."},
+ {q:"מה היתרון של מיקרודיאליזה על פני אימונו־ציטוכימיה?",a:"היא מודדת פליטה בזמן התנהגות",w:["היא מראה את מיקום התאים","היא לא דורשת שום ניתוח","היא מאתרת קולטנים"],e:"אימונו־ציטוכימיה מראה איפה החומר נמצא ברקמה מקובעת. מיקרודיאליזה מודדת מה נפלט, בחיה חיה שמתנהגת."}]},
+q33:{t:"t9",v:[
+ {q:"מה מעיד שוויון מקרים גבוה יותר בתאומים זהים מבלא־זהים?",a:"תרומה גנטית לתכונה",w:["שהסביבה היא הגורם היחיד","שהתכונה נלמדת בבית","שאין שום קשר לגנים"],e:"תאומים זהים חולקים את כל הגנים ולא־זהים כמחצית. אם הזהים דומים יותר, הגנים תורמים לתכונה."},
+ {q:"מה משווים במחקרי אימוץ?",a:"הורים ביולוגיים מול מאמצים",w:["תאומים זהים מול לא־זהים","חיות עם הגן ובלעדיו","פעילות לפני פגע ואחריו"],e:"ילד מאומץ קיבל גנים מהוריו הביולוגיים וסביבה מהמאמצים. דמיון להורים הביולוגיים מעיד על תרומה גנטית."}]},
+q34:{t:"t9",v:[
+ {q:"שוויון המקרים בתאומים זהים גבוה אבל לא 100%. מה זה אומר?",a:"גם לגנים וגם לסביבה יש השפעה",w:["אין שום השפעה גנטית על התכונה","הגנים קובעים את כל התכונה","המחקר נכשל ואין ממנו מסקנה"],e:"אילו הגנים היו קובעים הכול, תאומים זהים היו תמיד דומים. השוויון החלקי מראה שגם הסביבה משחקת תפקיד."},
+ {q:"מה מאפשרת השוואה בין תאומים זהים ללא־זהים?",a:"לאמוד את התורשתיות",w:["לזהות את הגן המדויק","לטפל בהפרעה עצמה","למדוד פעילות מוחית"],e:"ההבדל בשוויון המקרים בין שני סוגי התאומים נותן אומדן לתורשתיות. הוא לא מזהה גן מסוים."}]},
+q35:{t:"t9",v:[
+ {q:"מה עושים אוליגו־נוקלאוטידים משלימים?",a:"חוסמים את ה־mRNA ואת ייצור החלבון",w:["מוחקים גן מה־DNA לצמיתות","מוסיפים גן חדש לכרומוזום","מגבירים את ייצור החלבון"],e:"הם חוסמים את התרגום של mRNA מסוים, ולכן החלבון לא נוצר, באופן זמני. מחיקת גן היא השתקת גן בעכברי knockout."},
+ {q:"מה ההבדל בין השתקת גן לאוליגו־נוקלאוטידים משלימים?",a:"השתקה משנה גן; האוליגו זמני",w:["השתקה זמנית; האוליגו קבוע","שתיהן מגבירות ביטוי של גן","אין שום הבדל ביניהן"],e:"בעכבר knockout הגן חסר תמיד. אוליגו־נוקלאוטידים פועלים על ה־mRNA, ולכן החסימה זמנית ואפשר לכוון אותה לאזור מסוים."}]},
+q36:{t:"t9",v:[
+ {q:"מה הראתה הזרקת אוליגו־נוקלאוטידים ל־VMH של חולדות נקבות?",a:"שהקולטנים שם חיוניים להתנהגות",w:["שה־VMH לא קשור להתנהגות מינית","שהורמונים לא משפיעים על התנהגות","שה־VMH שולט בעיקר בתנועה"],e:"כשנמנע ייצור קולטני ההורמונים ב־VMH, ההתנהגות המינית נפגעה. זה משלים את הממצאים מהשיטות האחרות בפרק."},
+ {q:"מהו עכבר knock-in?",a:"עכבר שהוחדר לו גן נוסף",w:["עכבר שהוסר ממנו גן מסוים","עכבר שקיבל אוליגו־נוקלאוטידים","עכבר עם פגע אקסיטוטוקסי"],e:"בהחדרת גן מוסיפים גן, ובהשתקת גן (knockout) מוחקים אותו. שתיהן מוטציות מכוונות."}]},
+};
+for(const t of T) t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id);
+const KEY=CONFIG.key;
+let S={q:{},read:{}};
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.q) S=s;}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const st=id=>S.q[id]||(S.q[id]={n:0,c:0,w:0,t:0,lv:-1});
+const mastered=id=>(S.q[id]?.c||0)>=2;
+const topicPct=t=>Math.round(100*t.qids.filter(mastered).length/t.qids.length);
+const topicStarted=t=>S.read[t.id]||t.qids.some(id=>S.q[id]&&S.q[id].n);
+const allIds=Object.keys(Q);
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+const pickVariant=id=>{const s=st(id),n=Q[id].v.length;return n>1?(s.lv+1)%n:0};
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const color=t=>`var(--${t.id})`;
+const app=document.getElementById("app");
+const LET=["א","ב","ג","ד"];
+
+function qCard(id,onDone,label){
+  const vi=pickVariant(id),v=Q[id].v[vi],opts=shuffle([v.a,...v.w]);
+  const box=document.createElement("div");box.className="q fade";
+  box.innerHTML=(label?`<span class="eyebrow">${label}</span>`:"")+`<div class="qtext">${esc(v.q)}</div><div class="opts"></div>`;
+  const wrap=box.querySelector(".opts");
+  opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt";b.dataset.a=o===v.a?"1":"";
+    b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+    b.onclick=()=>{const ok=o===v.a,s=st(id);s.n++;s.t=Date.now();s.lv=vi;ok?s.c++:(s.c=0,s.w++);save();
+      wrap.querySelectorAll("button").forEach(x=>{x.disabled=true;if(x.dataset.a)x.classList.add("right")});
+      if(!ok)b.classList.add("wrong");
+      const fb=document.createElement("div");fb.className="fb fade "+(ok?"ok":"no");
+      fb.innerHTML=`${ic(ok?"check":"x")}<div><strong>${ok?"נכון!":"לא בדיוק"}</strong>${esc(v.e)}</div>`;box.appendChild(fb);
+      const nx=document.createElement("button");nx.className="primary";nx.textContent="המשך";nx.style.alignSelf="flex-start";
+      nx.onclick=()=>onDone(ok);box.appendChild(nx);nx.focus({preventScroll:true});nx.scrollIntoView({block:"nearest",behavior:"smooth"});
+    };wrap.appendChild(b)});
+  return box;
+}
+
+function home(){
+  document.body.style.removeProperty("--c");
+  const started=T.filter(topicStarted);
+  const total=Math.round(100*allIds.filter(mastered).length/allIds.length);
+  const weak=allIds.filter(id=>S.q[id]&&S.q[id].n&&!mastered(id)).length;
+  app.innerHTML=`<div class="stack fade">
+   <section class="cover" style="--c:var(--accent)">
+    <div class="cover-art">${FIG[CONFIG.cover]()}</div>
+    <div class="cover-body">
+     <span class="eyebrow">${CONFIG.eyebrow}</span>
+     ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
+     <p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר, ובסוף הלומדה מבחן מסכם עם ציון.</p>
+     <div class="stats">
+      <div class="ring" style="--p:${total}"><span>${total}%</span></div>
+      <div class="stat-text"><b>${total===0?"עוד לא התחלת":total>=80?"אתה שולט בחומר":"בדרך"}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
+     </div>
+     <div class="actions">
+      <button class="primary review-btn" id="rev" ${started.length?"":"disabled"}>${ic("cycle")}<span>${started.length?"חזרה מהירה":"חזרה מהירה (אחרי נושא ראשון)"}</span></button>
+      <button class="review-btn" id="exm">${ic("grad")}<span>מבחן מסכם${S.exam?` · ציון אחרון ${S.exam.pct}`:""}</span></button>
+      <button class="review-btn" id="wk" ${started.length?"":"disabled"}>${ic("target")}<span>נושאים לחיזוק</span></button>
+     </div>
+    </div>
+   </section>
+   <div class="grid" id="list"></div>
+   <div class="foot"><a href="../#phys" style="color:var(--accent);font-weight:700;text-decoration:none">→ לקורס</a><span>${CONFIG.note}</span><button class="ghost" id="reset">איפוס התקדמות</button></div>
+  </div>`;
+  app.querySelectorAll(".actions svg").forEach(x=>x.style.cssText="width:20px;height:20px");
+  const list=app.querySelector("#list");
+  T.forEach((t,i)=>{const p=topicPct(t),b=document.createElement("button");b.className="tcard";b.style.setProperty("--c",color(t));
+    const status=!topicStarted(t)?"לא התחלת":p>=80?"שולט":"בתהליך";
+    b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
+    b.onclick=()=>topic(i,0);list.appendChild(b)});
+  app.querySelector("#rev").onclick=review;app.querySelector("#exm").onclick=exam;app.querySelector("#wk").onclick=weakTopics;
+  const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
+  scrollTo(0,0);
+}
+
+function bar(title,n,i,label){
+  return `<div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">${label}</span></div><div class="steps">${Array.from({length:n},(_,k)=>`<i class="${k<=i?"on":""}"></i>`).join("")}</div></div><span class="eyebrow">${title}</span>`;
+}
+
+function topic(ti,bi){
+  const t=T[ti],blk=t.blocks[bi];document.body.style.setProperty("--c",color(t));
+  app.innerHTML=`<div class="stack">${bar(`נושא ${ti+1} · ${t.title}`,t.blocks.length+1,bi,`קטע ${bi+1} מתוך ${t.blocks.length}`)}
+   <article class="card fade"><h3>${blk.h}</h3>${blk.html}</article><div id="slot"></div></div>`;
+  app.querySelector("#back").onclick=home;
+  const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;save();quiz(ti)}};
+  const slot=app.querySelector("#slot");
+  {const b=document.createElement("button");b.className="primary";b.textContent=bi+1<t.blocks.length?"המשך":`למבחן הנושא (${t.qids.length} שאלות)`;b.onclick=next;slot.appendChild(b)}
+  scrollTo(0,0);
+}
+
+function runSet(title,ids,c,onEnd){
+  let i=0,right=0;document.body.style.setProperty("--c",c);
+  const step=()=>{
+    if(i>=ids.length)return onEnd(right,ids.length);
+    const id=ids[i],from=T.find(t=>t.id===Q[id].t);
+    app.innerHTML=`<div class="stack">${bar(title,ids.length,i,`שאלה ${i+1} מתוך ${ids.length}`)}<div id="slot"></div></div>`;
+    app.querySelector("#back").onclick=home;
+    const card=qCard(id,ok=>{if(ok)right++;i++;step()},from.title);card.style.setProperty("--c",color(from));
+    app.querySelector("#slot").appendChild(card);scrollTo(0,0);
+  };step();
+}
+
+function quiz(ti){
+  const t=T[ti];
+  const prev=T.slice(0,ti).filter(topicStarted).flatMap(x=>x.qids);
+  const extra=shuffle(prev).sort((a,b)=>st(a).c-st(b).c).slice(0,2);
+  runSet(`מבחן סיום · ${t.title}`,shuffle(t.qids).concat(extra),color(t),(r,n)=>done(r,n,ti));
+}
+
+function review(){
+  const pool=T.filter(topicStarted).flatMap(t=>t.qids),now=Date.now();
+  const tw={};T.forEach(t=>tw[t.id]=(100-strength(t))/20);
+  const score=id=>{const s=S.q[id]||{n:0,c:0,w:0,t:0};return (s.n?0:2)+s.w*2+(s.c<2?3:0)+Math.min(3,(now-s.t)/864e5)+tw[Q[id].t]+Math.random()*2};
+  const ids=pool.map(id=>[id,score(id)]).sort((a,b)=>b[1]-a[1]).slice(0,12).map(x=>x[0]);
+  runSet("חזרה מהירה",shuffle(ids),"var(--accent)",(r,n)=>done(r,n,null));
+}
+
+const strength=t=>Math.round(100*t.qids.filter(id=>S.q[id]&&S.q[id].n&&S.q[id].c>0).length/t.qids.length);
+
+function practice(ti){const t=T[ti];runSet(`תרגול · ${t.title}`,shuffle(t.qids),color(t),(r,n)=>done(r,n,ti))}
+
+function exam(){
+  const N=Math.min(allIds.length,Math.max(15,Math.min(20,T.length*3)));
+  const pools=T.map(t=>shuffle(t.qids)),ids=[];
+  for(let k=0;ids.length<N;k++)for(const p of pools){if(ids.length>=N)break;if(k<p.length)ids.push(p[k])}
+  const items=shuffle(ids).map(id=>{const vi=pickVariant(id),v=Q[id].v[vi];return{id,vi,v,opts:shuffle([v.a,...v.w]),pick:null}});
+  document.body.style.setProperty("--c","var(--accent)");
+  let i=0;
+  const step=()=>{
+    const it=items[i],from=T.find(t=>t.id===Q[it.id].t),last=i===items.length-1;
+    app.innerHTML=`<div class="stack">${bar("מבחן מסכם",items.length,i,`שאלה ${i+1} מתוך ${items.length}`)}
+     <div class="q fade"><span class="eyebrow">${esc(from.title)}</span><div class="qtext">${esc(it.v.q)}</div><div class="opts"></div>
+     <div class="row"><button class="primary" id="nx" ${it.pick==null?"disabled":""}>${last?"הגשה ובדיקה":"הבא"}</button>${i?`<button class="ghost" id="pv">הקודם</button>`:""}</div></div></div>`;
+    {const bk=app.querySelector("#back");bk.onclick=()=>{if(bk.dataset.sure)home();else{bk.dataset.sure=1;bk.textContent="לחץ שוב כדי לצאת (התשובות לא יישמרו)"}}}
+    const wrap=app.querySelector(".opts"),nx=app.querySelector("#nx");
+    it.opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt"+(it.pick===o?" sel":"");
+      b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+      b.onclick=()=>{it.pick=o;wrap.querySelectorAll(".opt").forEach(x=>x.classList.remove("sel"));b.classList.add("sel");nx.disabled=false};
+      wrap.appendChild(b)});
+    nx.onclick=()=>{if(last)grade(items);else{i++;step()}};
+    const pv=app.querySelector("#pv");if(pv)pv.onclick=()=>{i--;step()};
+    scrollTo(0,0);
+  };step();
+}
+
+function grade(items){
+  const now=Date.now();let r=0;const per={};
+  items.forEach(it=>{const ok=it.pick===it.v.a,s=st(it.id),tid=Q[it.id].t;s.n++;s.t=now;s.lv=it.vi;ok?(s.c++,r++):(s.c=0,s.w++);
+    it.ok=ok;(per[tid]=per[tid]||{r:0,n:0}).n++;if(ok)per[tid].r++});
+  const n=items.length,pct=Math.round(100*r/n);S.exam={pct,t:now};save();
+  const rows=T.filter(t=>per[t.id]).map(t=>{const p=per[t.id],q=Math.round(100*p.r/p.n);
+    return `<div class="trow" style="--c:${color(t)}"><span class="tt">${esc(t.title)}</span><div class="bar"><i style="width:${q}%"></i></div><span class="sc">${p.r}/${p.n}</span></div>`}).join("");
+  const wrong=items.filter(it=>!it.ok);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">ציון המבחן המסכם</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct}"><span>${pct}</span></div><div class="big">${r}/${n}</div></div>
+    <p>${pct>=90?"מצוין, אתה שולט בחומר.":pct>=70?"טוב. עבור על הטעויות למטה וחזור על הנושאים החלשים.":"כדאי לחזור על החומר. למטה תמצא את הטעויות, ולכל אחת כפתור לחזרה על הנושא."}</p>
+    <h3>לפי נושא</h3><div class="trows">${rows}</div>
+    <div class="row"><button class="primary" id="again">מבחן מסכם חדש</button><button id="hm">לכל הנושאים</button></div>
+   </article>
+   ${wrong.length?`<h3>הטעויות שלך (${wrong.length})</h3>`:`<p class="muted">לא היו טעויות.</p>`}
+   <div class="stack" id="wl"></div></div>`;
+  const wl=app.querySelector("#wl");
+  wrong.forEach(it=>{const ti=T.findIndex(t=>t.id===Q[it.id].t),t=T[ti],c=document.createElement("article");c.className="card rev";c.style.setProperty("--c",color(t));
+    c.innerHTML=`<span class="eyebrow">${esc(t.title)}</span><div class="qtext">${esc(it.v.q)}</div>
+     <div class="opt wrong" aria-disabled="true"><span class="k">${ic("x")}</span><span><b>התשובה שלך:</b> ${esc(it.pick)}</span></div>
+     <div class="opt right" aria-disabled="true"><span class="k">${ic("check")}</span><span><b>התשובה הנכונה:</b> ${esc(it.v.a)}</span></div>
+     <div class="fb no">${ic("bulb")}<div><strong>למה?</strong>${esc(it.v.e)}</div></div>
+     <div class="row"><button class="primary go">חזרה על הנושא: ${esc(t.title)}</button></div>`;
+    c.querySelector(".go").onclick=()=>topic(ti,0);wl.appendChild(c)});
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;app.querySelector("#again").onclick=exam;
+  scrollTo(0,0);
+}
+
+function weakTopics(){
+  document.body.style.setProperty("--c","var(--accent)");
+  const list=T.map((t,i)=>({t,i,s:strength(t),started:topicStarted(t)})).sort((a,b)=>(a.started-b.started)||(a.s-b.s));
+  const lab=x=>!x.started?"עוד לא תרגלת":x.s>=80?"חזק":x.s>=50?"בינוני":"צריך חיזוק";
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <span class="eyebrow">נושאים לחיזוק</span><p class="muted">הנושאים מסודרים מהחלש לחזק, לפי התשובות האחרונות שלך בכל שאלה.</p>
+   <div class="stack" id="wl"></div></div>`;
+  const wl=app.querySelector("#wl");
+  list.forEach(x=>{const c=document.createElement("article");c.className="card rev";c.style.setProperty("--c",color(x.t));
+    c.innerHTML=`<div class="trow"><span class="tt">${x.i+1}. ${esc(x.t.title)}</span><div class="bar"><i style="width:${x.s}%"></i></div><span class="sc">${x.started?x.s+"%":"—"}</span></div>
+     <span class="tag ${!x.started?"":x.s>=80?"good":x.s>=50?"mid":"low"}">${lab(x)}</span>
+     <div class="row"><button class="primary pr">תרגול שאלות הנושא</button><button class="rd">קריאה חוזרת</button></div>`;
+    c.querySelector(".pr").onclick=()=>practice(x.i);c.querySelector(".rd").onclick=()=>topic(x.i,0);wl.appendChild(c)});
+  app.querySelector("#back").onclick=home;scrollTo(0,0);
+}
+
+function done(r,n,ti){
+  const nextT=ti!=null&&ti+1<T.length?ti+1:null,pct=Math.round(100*r/n);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">${ti!=null?`סיום נושא ${ti+1} · ${T[ti].title}`:"סיום חזרה מהירה"}</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct};--accent:var(--c)"><span>${pct}%</span></div><div class="big">${r}/${n}</div></div>
+    <p>${r===n?"מצוין, הכל נכון.":r>=n*0.7?"טוב מאוד. מה שטעית בו יחזור בחזרה המהירה, בניסוח אחר.":"כדאי לעבור שוב על הנושא. השאלות שטעית בהן יחזרו בחזרה המהירה."}</p>
+    <div class="row">${nextT!=null?`<button class="primary" id="nx" style="--c:${color(T[nextT])}">לנושא הבא: ${T[nextT].title}</button>`:""}<button id="hm">לכל הנושאים</button></div>
+   </article></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;
+  const nx=app.querySelector("#nx");if(nx)nx.onclick=()=>topic(nextT,0);
+  scrollTo(0,0);
+}
+home();
+</script>
+</body>
+</html>
