@@ -95,6 +95,9 @@ button.course:hover{transform:translateY(-3px)}
 .mcard .name{font-family:var(--display);font-size:1.3rem;line-height:1.25}
 .mcard .bar,.cbody .bar{flex:none}
 .mcard .sub{font-size:.85rem;color:var(--muted)}
+.mcard .when{display:flex;gap:8px;align-items:flex-start;font-size:.82rem;font-weight:600;line-height:1.4;color:var(--ink);background:color-mix(in srgb,var(--c) 10%,var(--surface));border-radius:10px;padding:7px 10px}
+.mcard .when svg{width:16px;height:16px;flex:none;margin-top:2px;color:var(--c)}
+.mcard .soon{margin-inline-start:auto;flex:none;background:var(--c);color:var(--surface);border-radius:99px;padding:1px 8px;font-size:.75rem}
 footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 @media (prefers-reduced-motion:no-preference){.course{animation:up .45s ease-out both}.course:nth-child(2){animation-delay:.05s}.course:nth-child(3){animation-delay:.1s}.course:nth-child(4){animation-delay:.15s}.course:nth-child(5){animation-delay:.2s}@keyframes up{from{transform:translateY(8px)}to{transform:none}}}
 </style>
@@ -123,58 +126,60 @@ const ICON={
  social:'<circle cx="12" cy="5.5" r="2.5"/><circle cx="5" cy="17" r="2.5"/><circle cx="19" cy="17" r="2.5"/><path d="M10.7 7.7L6.3 14.8M13.3 7.7l4.4 7.1M7.5 17h9"/>',
  dev:'<circle cx="5" cy="15" r="1.6"/><path d="M5 16.6V21"/><circle cx="12" cy="11" r="2"/><path d="M12 13v8"/><circle cx="19" cy="6" r="2.4"/><path d="M19 8.4V21M2 21h20"/>',
  phys:'<circle cx="12" cy="12" r="3.2"/><path d="M12 8.8V3M9.2 10.4L4 7M14.8 10.4L20 7M10 14.6L6 20M14 14.6l4 5.4M12 3l-2 1.5M12 3l2 1.5M4 7l.5 2.4M20 7l-.5 2.4"/>',
+ cal:'<rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',
  clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>'
 };
 const ic=k=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[k]}</svg>`;
 const COURSES=[
  {id:"mgmt",name:"מבוא לניהול ומבנה ארגוני",tag:"מנהל עסקים",items:[
-   {title:"התופעה הארגונית",sub:"ארגונים · פרק 1",href:"org/ch1.html",key:"lomda-org-1",total:36},
-  {title:"מבנים ארגוניים",sub:"ארגונים · פרק 4",href:"org/ch4.html",key:"lomda-org-4",total:34},
-   {title:"תפיסה וקבלת החלטות",sub:"פרק 6",href:"mgmt/ch6.html",key:"lomda-mgmt-ch6",total:31},
-   {title:"מוטיבציה",sub:"פרק 7",href:"mgmt/ch7.html",key:"lomda-mgmt-ch7",total:28},
-   {title:"קבוצות",sub:"פרק 9",href:"mgmt/ch9.html",key:"lomda-mgmt-ch9",total:36},
-   {title:"מנהיגות",sub:"פרק 12",href:"mgmt/ch12.html",key:"lomda-mgmt-ch12",total:30},
-   {title:"מבנים ארגוניים",sub:"פרק 15",href:"mgmt/ch15.html",key:"lomda-mgmt-ch15",total:27},
-   {title:"תרבות ארגונית",sub:"פרק 16",href:"mgmt/ch16.html",key:"lomda-mgmt-ch16",total:29}
+   {title:"התופעה הארגונית",sub:"ארגונים · פרק 1",href:"org/ch1.html",key:"lomda-org-1",total:45,ord:1,when:"נושא 1 מתוך 8 · מבוא"},
+  {title:"מבנים ארגוניים",sub:"ארגונים · פרק 4",href:"org/ch4.html",key:"lomda-org-4",total:48,ord:2,when:"נושא 1 מתוך 8 · מבוא (ספר ארגונים פרק 4)"},
+   {title:"תפיסה וקבלת החלטות",sub:"פרק 6",href:"mgmt/ch6.html",key:"lomda-mgmt-ch6",total:39,ord:4,when:"נושא 3 · תפיסה וקבלת החלטות"},
+   {title:"מוטיבציה",sub:"פרק 7",href:"mgmt/ch7.html",key:"lomda-mgmt-ch7",total:42,ord:5,when:"נושא 5 · עמ' 211–212, 215–219, 228"},
+   {title:"קבוצות",sub:"פרק 9",href:"mgmt/ch9.html",key:"lomda-mgmt-ch9",total:44,ord:6,when:"נושא 6 · עמ' 276, 285–286, 296–297"},
+   {title:"מנהיגות",sub:"פרק 12",href:"mgmt/ch12.html",key:"lomda-mgmt-ch12",total:41,ord:7,when:"נושא 7 · עמ' 376–379, 386, 393–397"},
+   {title:"מבנים ארגוניים",sub:"פרק 15",href:"mgmt/ch15.html",key:"lomda-mgmt-ch15",total:35,ord:3,when:"נושא 2 · למידה עצמית · עמ' 480–500, 502"},
+   {title:"תרבות ארגונית",sub:"פרק 16",href:"mgmt/ch16.html",key:"lomda-mgmt-ch16",total:38,ord:8,when:"נושא 8 · תרבות ארגונית"}
  ]},
  {id:"intro",name:"מבוא לפסיכולוגיה",tag:"פסיכולוגיה",items:[
-  {type:"מאמר חובת קריאה 1/4 · תרגיל 3",en:true,title:"Beneficial effects of a daytime nap on verbal memory in adolescents",sub:"תנומת צהריים וזיכרון מילולי אצל מתבגרים",href:"intro/ex3-1.html",key:"lomda-intro-ex3-1",total:26},
-  {type:"מאמר חובת קריאה 2/4 · תרגיל 3",en:true,title:"Effects of smartphone-based memory training for older adults with subjective memory complaints: a randomized controlled trial",sub:"אימון זיכרון בסמארטפון למבוגרים עם תלונות זיכרון",href:"intro/ex3-2.html",key:"lomda-intro-ex3-2",total:28},
-  {type:"מאמר חובת קריאה 3/4 · תרגיל 3",en:true,title:"One Month of Cannabis Abstinence in Adolescents and Young Adults is Associated with Improved Memory",sub:"חודש בלי קנאביס ושיפור בזיכרון",href:"intro/ex3-3.html",key:"lomda-intro-ex3-3",total:26},
-  {title:"אגרנות כפייתית - אפשר לטפל בהסכמה",sub:"תיאור מקרה · עבודה סוציאלית בהסכמה",href:"intro/hoarding.html",key:"lomda-intro-hoarding",total:30},
-  {title:"רווקים ורווקות באי־החלטיות מתמשכת",sub:"קבלת החלטות ותגובות בזוגיות",href:"intro/singles.html",key:"lomda-intro-singles",total:34},
-  {title:"האם מתילפנידאט (ריטלין) מסייע לבעלי דיסלקסיית שיכול אותיות ודיסלקסיה קשבית?",sub:"קריאת חובה לתרגול 3 · תקציר, מבוא ושיטה",href:"intro/ritalin.html",key:"lomda-intro-ritalin",total:27},
-  {title:"עיצוב התנהגות בבית ספר לילדים קשיי חינוך",sub:"ניסוי בכלכלת אסימונים",href:"intro/tokens.html",key:"lomda-intro-tokens",total:32},
-  {title:"אספרגר - הפרעת קשר ותקשורת",sub:"תיאור מקרה בטיפול פסיכולוגי",href:"intro/asperger.html",key:"lomda-intro-asperger",total:34},
-  {title:"טיפול בתנועה - סיוע לשיחות עם חולה הלוקה בסכיזופרניה",sub:"תיאור מקרה · תופעת ההחשה",href:"intro/movement.html",key:"lomda-intro-movement",total:30},
-  {title:"טיפול בילדה שחוותה התעללות מינית במשפחה - במסגרת קבוצת פסיכודרמה לילדים",sub:"תיאור מקרה · פסיכודרמה",href:"intro/psychodrama.html",key:"lomda-intro-psychodrama",total:34}
+  {type:"מאמר חובת קריאה · בחירה 4/4",en:true,title:"Beneficial effects of a daytime nap on verbal memory in adolescents",sub:"תנומת צהריים וזיכרון מילולי אצל מתבגרים",href:"intro/ex3-1.html",key:"lomda-intro-ex3-1",total:32,ord:6,when:"בוחרים 1 מתוך 4 · תרגיל 3 · הגשה 6.1.27",date:"2027-01-06"},
+  {type:"מאמר חובת קריאה · בחירה 1/4",en:true,title:"Effects of smartphone-based memory training for older adults with subjective memory complaints: a randomized controlled trial",sub:"אימון זיכרון בסמארטפון למבוגרים עם תלונות זיכרון",href:"intro/ex3-2.html",key:"lomda-intro-ex3-2",total:34,ord:4,when:"בוחרים 1 מתוך 4 · תרגיל 3 · הגשה 6.1.27",date:"2027-01-06"},
+  {type:"מאמר חובת קריאה · בחירה 3/4",en:true,title:"One Month of Cannabis Abstinence in Adolescents and Young Adults is Associated with Improved Memory",sub:"חודש בלי קנאביס ושיפור בזיכרון",href:"intro/ex3-3.html",key:"lomda-intro-ex3-3",total:32,ord:5,when:"בוחרים 1 מתוך 4 · תרגיל 3 · הגשה 6.1.27",date:"2027-01-06"},
+  {type:"לומדת חובת קריאה · בחירה 1/4",title:"אגרנות כפייתית - אפשר לטפל בהסכמה",sub:"תיאור מקרה · עבודה סוציאלית בהסכמה",href:"intro/hoarding.html",key:"lomda-intro-hoarding",total:37,ord:7,when:"בוחרים 1 מתוך 4 · תרגול 12 (6.1.27)",date:"2027-01-06"},
+  {type:"לומדת חובת קריאה · בחירה 1/3",title:"רווקים ורווקות באי־החלטיות מתמשכת",sub:"קבלת החלטות ותגובות בזוגיות",href:"intro/singles.html",key:"lomda-intro-singles",total:42,ord:1,when:"בוחרים 1 מתוך 3 · תרגול 5 (17.11): כותרת ותקציר · תרגול 7 (2.12): מבוא ושיטה",date:"2026-11-17"},
+  {type:"לומדת חובת קריאה · בחירה 2/3",title:"האם מתילפנידאט (ריטלין) מסייע לבעלי דיסלקסיית שיכול אותיות ודיסלקסיה קשבית?",sub:"דיסלקסיה קשבית וטיפול בריטלין",href:"intro/ritalin.html",key:"lomda-intro-ritalin",total:40,ord:2,when:"בוחרים 1 מתוך 3 · תרגול 5 (17.11): כותרת ותקציר · תרגול 7 (2.12): מבוא ושיטה",date:"2026-11-17"},
+  {title:"עיצוב התנהגות בבית ספר לילדים קשיי חינוך",sub:"ניסוי בכלכלת אסימונים",href:"intro/tokens.html",key:"lomda-intro-tokens",total:41,ord:3,when:"חובה · תרגול 8 (9.12) ותרגול 10 (23.12)",date:"2026-12-09"},
+  {type:"לומדת חובת קריאה · בחירה 2/4",title:"אספרגר - הפרעת קשר ותקשורת",sub:"תיאור מקרה בטיפול פסיכולוגי",href:"intro/asperger.html",key:"lomda-intro-asperger",total:41,ord:8,when:"בוחרים 1 מתוך 4 · תרגול 12 (6.1.27)",date:"2027-01-06"},
+  {type:"לומדת חובת קריאה · בחירה 4/4",title:"טיפול בתנועה - סיוע לשיחות עם חולה הלוקה בסכיזופרניה",sub:"תיאור מקרה · תופעת ההחשה",href:"intro/movement.html",key:"lomda-intro-movement",total:37,ord:10,when:"בוחרים 1 מתוך 4 · תרגול 12 (6.1.27)",date:"2027-01-06"},
+  {type:"לומדת חובת קריאה · בחירה 3/4",title:"טיפול בילדה שחוותה התעללות מינית במשפחה - במסגרת קבוצת פסיכודרמה לילדים",sub:"תיאור מקרה · פסיכודרמה",href:"intro/psychodrama.html",key:"lomda-intro-psychodrama",total:41,ord:9,when:"בוחרים 1 מתוך 4 · תרגול 12 (6.1.27)",date:"2027-01-06"}
  ]},
  {id:"social",name:"פסיכולוגיה חברתית א'",tag:"פסיכולוגיה",items:[
-  {type:"מאמר קריאה",en:true,title:"Durably reducing conspiracy beliefs through dialogues with AI",sub:"שיחות עם בינה מלאכותית מפחיתות אמונה בקונספירציות",href:"social/costello.html",key:"lomda-social-costello",total:37},
-  {type:"מאמר קריאה",en:true,title:"The headwinds/tailwinds asymmetry: An availability bias in assessments of barriers and blessings",sub:"רוח נגדית ורוח גבית: הטיית זמינות",href:"social/davidai.html",key:"lomda-social-davidai",total:42}
+  {type:"מאמר קריאה",en:true,title:"Durably reducing conspiracy beliefs through dialogues with AI",sub:"שיחות עם בינה מלאכותית מפחיתות אמונה בקונספירציות",href:"social/costello.html",key:"lomda-social-costello",total:45,ord:2,when:"מפגשים 11–13 · עמדות ושכנוע"},
+  {type:"מאמר קריאה",en:true,title:"The headwinds/tailwinds asymmetry: An availability bias in assessments of barriers and blessings",sub:"רוח נגדית ורוח גבית: הטיית זמינות",href:"social/davidai.html",key:"lomda-social-davidai",total:52,ord:1,when:"מפגשים 5–6 · תהליכי חשיבה ושיפוט חברתי"}
  ]},
  {id:"dev",name:"פסיכולוגיה התפתחותית א'",tag:"פסיכולוגיה",items:[
-  {title:"פרק 1 - היסטוריה, תיאוריה ואסטרטגיות מחקר",sub:"עמ' \u20663–13\u2069, \u206634–40\u2069, \u206642–64\u2069",href:"dev/ch1.html",key:"lomda-dev-ch1",total:52},
-  {title:"פרק 2 - יסודות גנטיים וסביבתיים",sub:"עמ' \u206692–111\u2069",href:"dev/ch2.html",key:"lomda-dev-ch2",total:42},
-  {title:"פרק 5 - למידה, התפתחות מוטורית ותפיסה בינקות",sub:"עמ' \u2066245–274\u2069",href:"dev/ch5.html",key:"lomda-dev-ch5",total:40},
-  {title:"פרק 6 - פיאז'ה בינקות ומבחני משכל מוקדמים",sub:"עמ' \u2066279–297\u2069, \u2066311–319\u2069",href:"dev/ch6.html",key:"lomda-dev-ch6",total:36},
-  {title:"פרק 7 - רגשות, מזג והיקשרות בינקות",sub:"עמ' \u2066341–381\u2069",href:"dev/ch7.html",key:"lomda-dev-ch7",total:52},
-  {type:"מאמר · קריאת חובה",en:true,title:"VI. Sensitive Periods",sub:"תקופות רגישות: מה מלמדים ילדים שגדלו במוסדות",href:"dev/sensitive.html",key:"lomda-dev-sp",total:48},
-  {type:"מאמר · קריאת חובה",en:true,title:"Evidence for Infants' Internal Working Models of Attachment",sub:"עדות למודלים פנימיים עובדים של היקשרות אצל תינוקות",href:"dev/iwm.html",key:"lomda-dev-iwm",total:20},
-  {type:"מאמר · רשימת קריאה",en:true,title:"Balancing the Family and the Collective in Raising Children: Why Communal Sleeping in Kibbutzim Was Predestined to End",sub:"הלינה המשותפת בקיבוצים והיקשרות",href:"dev/kibbutz.html",key:"lomda-dev-kibbutz",total:50},
-  {type:"מאמר · רשימת קריאה",en:true,title:"Impact of parents mobile device use on parent-child interaction: A literature review",sub:"הורים, סמארטפונים ואינטראקציה עם הילד",href:"dev/phones.html",key:"lomda-dev-phones",total:44}
+  {title:"פרק 1 - היסטוריה, תיאוריה ואסטרטגיות מחקר",sub:"עמ' \u20663–13\u2069, \u206634–40\u2069, \u206642–64\u2069",href:"dev/ch1.html",key:"lomda-dev-ch1",total:60,ord:1,when:"שיעור 20.10 + 3.11 · מבוא",date:"2026-10-20"},
+  {title:"פרק 2 - יסודות גנטיים וסביבתיים",sub:"עמ' \u206692–111\u2069",href:"dev/ch2.html",key:"lomda-dev-ch2",total:50,ord:2,when:"שיעור 10.11 + 17.11 · ההקשרים הסביבתיים",date:"2026-11-10"},
+  {title:"פרק 5 - למידה, התפתחות מוטורית ותפיסה בינקות",sub:"עמ' \u2066245–274\u2069",href:"dev/ch5.html",key:"lomda-dev-ch5",total:48,ord:3,when:"שיעור 24.11 · יחידה א־סינכרונית",date:"2026-11-24"},
+  {title:"פרק 6 - פיאז'ה בינקות ומבחני משכל מוקדמים",sub:"עמ' \u2066279–297\u2069, \u2066311–319\u2069",href:"dev/ch6.html",key:"lomda-dev-ch6",total:45,ord:4,when:"שיעור 1.12 + 8.12 · התפתחות קוגניטיבית",date:"2026-12-01"},
+  {title:"פרק 7 - רגשות, מזג והיקשרות בינקות",sub:"עמ' \u2066341–381\u2069",href:"dev/ch7.html",key:"lomda-dev-ch7",total:62,ord:8,when:"שיעור 5.1.27 · יחידה א־סינכרונית (מזג)",date:"2027-01-05"},
+  {type:"מאמר · קריאת חובה",en:true,title:"VI. Sensitive Periods",sub:"תקופות רגישות: מה מלמדים ילדים שגדלו במוסדות",href:"dev/sensitive.html",key:"lomda-dev-sp",total:56,ord:5,when:"שיעור 15.12 · חסך אימהי",date:"2026-12-15"},
+  {type:"מאמר · קריאת חובה",en:true,title:"Evidence for Infants' Internal Working Models of Attachment",sub:"עדות למודלים פנימיים עובדים של היקשרות אצל תינוקות",href:"dev/iwm.html",key:"lomda-dev-iwm",total:26,ord:6,when:"שיעור 22.12 · תיאוריית ההתקשרות",date:"2026-12-22"},
+  {type:"מאמר · רשימת קריאה",en:true,title:"Balancing the Family and the Collective in Raising Children: Why Communal Sleeping in Kibbutzim Was Predestined to End",sub:"הלינה המשותפת בקיבוצים והיקשרות",href:"dev/kibbutz.html",key:"lomda-dev-kibbutz",total:59,ord:7,when:"שיעור 29.12 · נוכחות חובה + צפייה בסרט + תרגיל כיתה",date:"2026-12-29"},
+  {type:"מאמר · רשימת קריאה",en:true,title:"Impact of parents mobile device use on parent-child interaction: A literature review",sub:"הורים, סמארטפונים ואינטראקציה עם הילד",href:"dev/phones.html",key:"lomda-dev-phones",total:55,ord:9,when:"שיעור 12.1.27 · הורים וילדים במסכים",date:"2027-01-12"}
  ]},
  {id:"phys",name:"יסודות פיזיולוגיים של התנהגות",tag:"פסיכולוגיה",items:[
-  {title:"פרק 1 - מבוא",sub:"עמ' \u206617–43\u2069",href:"phys/ch1.html",key:"lomda-phys-ch1",total:32},
-  {title:"פרק 2 - תאי מערכת העצבים, מבנם ותפקודיהם",sub:"עמ' \u206645–92\u2069",href:"phys/ch2.html",key:"lomda-phys-ch2",total:42},
-  {title:"פרק 3 - מבנה מערכת העצבים",sub:"עמ' \u206693–138\u2069",href:"phys/ch3.html",key:"lomda-phys-ch3",total:36},
-  {title:"פרק 4 - פסיכופרמקולוגיה",sub:"עמ' \u2066139–184\u2069",href:"phys/ch4.html",key:"lomda-phys-ch4",total:38},
-  {title:"פרק 5 - שיטות וגישות במחקר",sub:"עמ' \u2066185–226\u2069",href:"phys/ch5.html",key:"lomda-phys-ch5",total:36}
+  {title:"פרק 1 - מבוא",sub:"עמ' \u206617–43\u2069",href:"phys/ch1.html",key:"lomda-phys-ch1",total:39,ord:1,when:"שבועות 1–2"},
+  {title:"פרק 2 - תאי מערכת העצבים, מבנם ותפקודיהם",sub:"עמ' \u206645–92\u2069",href:"phys/ch2.html",key:"lomda-phys-ch2",total:53,ord:2,when:"שבועות 3–8"},
+  {title:"פרק 3 - מבנה מערכת העצבים",sub:"עמ' \u206693–138\u2069",href:"phys/ch3.html",key:"lomda-phys-ch3",total:44,ord:3,when:"שבועות 9–10"},
+  {title:"פרק 4 - פסיכופרמקולוגיה",sub:"עמ' \u2066139–184\u2069",href:"phys/ch4.html",key:"lomda-phys-ch4",total:48,ord:4,when:"שבוע 11"},
+  {title:"פרק 5 - שיטות וגישות במחקר",sub:"עמ' \u2066185–226\u2069",href:"phys/ch5.html",key:"lomda-phys-ch5",total:46,ord:5,when:"שבוע 12"}
  ]}
 ];
 function stats(key){try{const s=JSON.parse(localStorage.getItem(key)||"null");if(!s||!s.q)return null;const v=Object.values(s.q);if(!v.some(x=>x.n))return null;return v.filter(x=>x.c>=2).length}catch(e){return null}}
 const pct=it=>{const m=stats(it.key);return m==null?null:Math.round(100*m/it.total)};
 const coursePct=c=>{const tot=c.items.reduce((a,i)=>a+i.total,0);if(!tot)return 0;return Math.round(100*c.items.reduce((a,i)=>a+(stats(i.key)||0),0)/tot)};
+const soon=d=>{if(!d)return "";const t=new Date(d+"T00:00"),now=new Date();now.setHours(0,0,0,0);const n=Math.round((t-now)/864e5);return n<0||n>14?"":n===0?"היום":n===1?"מחר":`בעוד ${n} ימים`};
 const view=document.getElementById("view");
 const word=n=>n===0?"אין עדיין לומדות":n===1?"לומדה אחת":`${n} לומדות`;
 function home(){
@@ -189,7 +194,7 @@ function home(){
 function course(c){
   view.innerHTML=`<div class="cview"><button class="back" id="back">→ כל הקורסים</button>
    <div class="vhead" style="--c:var(--${c.id})"><span class="cicon" style="background:var(--c);color:var(--surface);display:grid;place-items:center">${ic(c.id)}</span><div class="ctitle"><small>${c.tag} · ${word(c.items.length)}</small><h2>${c.name}</h2></div></div>
-   ${c.items.length?`<div class="mlist">${c.items.map(it=>{const p=pct(it);return `<a class="mcard" style="--c:var(--${c.id})" href="${it.href}"><span class="type">${it.type||"לומדת חובת קריאה"}</span><span class="name"${it.en?' dir="ltr" lang="en" style="text-align:right;font-family:Rubik,system-ui,sans-serif;font-weight:700"':""}>${it.title}</span><span class="sub">${it.sub}</span><div class="bar"><i style="width:${p||0}%"></i></div><div class="cmeta"><span>${p==null?"לא התחלת":p>=80?"שולט":"בתהליך"}</span><span>${p||0}%</span></div></a>`}).join("")}</div>`
+   ${c.items.length?`<div class="mlist">${[...c.items].sort((a,b)=>(a.ord||99)-(b.ord||99)).map(it=>{const p=pct(it),sn=soon(it.date);return `<a class="mcard" style="--c:var(--${c.id})" href="${it.href}"><span class="type">${it.type||"לומדת חובת קריאה"}</span>${it.when?`<span class="when">${ic("cal")}<span>${it.when}</span>${sn?`<span class="soon">${sn}</span>`:""}</span>`:""}<span class="name"${it.en?' dir="ltr" lang="en" style="text-align:right;font-family:Rubik,system-ui,sans-serif;font-weight:700"':""}>${it.title}</span><span class="sub">${it.sub}</span><div class="bar"><i style="width:${p||0}%"></i></div><div class="cmeta"><span>${p==null?"לא התחלת":p>=80?"שולט":"בתהליך"}</span><span>${p||0}%</span></div></a>`}).join("")}</div>`
    :`<div class="empty" style="--c:var(--${c.id})">${ic("clock")}<span>הלומדה הראשונה בקורס הזה תעלה בקרוב</span></div>`}</div>`;
   document.getElementById("back").onclick=()=>{location.hash=""};
 }
