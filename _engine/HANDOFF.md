@@ -38,3 +38,9 @@
 - Modules m30–m34 = phys/ch1–ch5 (keys lomda-phys-ch1..5): Carlson & Birkett, הפיזיולוגיה של ההתנהגות כרך א (מהד' 12, האו"פ), chapters 1–5 (book pp. 17–226). Book is on lamda (psik) book_id 6293, via Moodle course 2731 reading list (mod/lti/view.php?id=151791).
 - build.py COURSE has 'phys' (#b5305a / #f07a9e). Build: python3 build.py mN "<title>" <repo>/phys/chN.html site phys
 - Text extraction: pdf.js in the viewer iframe (PDFViewerApplication.pdfDocument), split columns by x; JS results are capped ~50KB, so return arrays of 800-char chunks.
+
+## Weekly bar ("מה לומדים השבוע?")
+- Data: /schedule.json — one row per lesson: c (course id), n (lesson #, counted by syllabus week slot), date (YYYY-MM-DD), topic, mods (hub keys), status ("" | "בוטל" | "נדחה"), newDate (for נדחה), note, est (estimated date).
+- mgmt dates are estimated (syllabus has topics only; class is on Sundays). intro lectures are Wednesdays (syllabus printed 3.11–24.11 as Tuesdays).
+- Module pages accept #sum (open summary) and #quiz (open final exam); patched in app.js startup line.
+- A daily scheduled task reads college mail and edits status/newDate in schedule.json, then pushes.

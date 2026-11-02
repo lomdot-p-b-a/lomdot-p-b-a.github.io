@@ -1,0 +1,809 @@
+{
+ "updated": "2026-11-02",
+ "note": "cancellations: status=בוטל; postponed: status=נדחה + newDate (YYYY-MM-DD)",
+ "lessons": [
+  {
+   "c": "dev",
+   "n": 1,
+   "date": "2026-10-20",
+   "topic": "מבוא - סוגיות מרכזיות בהתפתחות",
+   "mods": [
+    "lomda-dev-ch1"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "dev",
+   "n": 2,
+   "date": "2026-10-27",
+   "topic": "יום בחירות - אין שיעור",
+   "mods": [],
+   "status": "בוטל",
+   "newDate": "",
+   "note": "יום בחירות"
+  },
+  {
+   "c": "dev",
+   "n": 3,
+   "date": "2026-11-03",
+   "topic": "סוגיות מרכזיות בהתפתחות - המשך",
+   "mods": [
+    "lomda-dev-ch1"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "dev",
+   "n": 4,
+   "date": "2026-11-10",
+   "topic": "ההקשרים הסביבתיים של ההתפתחות",
+   "mods": [
+    "lomda-dev-ch2"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "dev",
+   "n": 5,
+   "date": "2026-11-17",
+   "topic": "ההקשרים הסביבתיים - המשך + עבודה בקבוצות (ברונפנברנר)",
+   "mods": [
+    "lomda-dev-ch2"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "dev",
+   "n": 6,
+   "date": "2026-11-24",
+   "topic": "חישה ותפיסה בינקות · יחידה א־סינכרונית",
+   "mods": [
+    "lomda-dev-ch5"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "dev",
+   "n": 7,
+   "date": "2026-12-01",
+   "topic": "התפתחות קוגניטיבית בינקות ובגיל הרך",
+   "mods": [
+    "lomda-dev-ch6"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "dev",
+   "n": 8,
+   "date": "2026-12-08",
+   "topic": "התפתחות קוגניטיבית - המשך",
+   "mods": [
+    "lomda-dev-ch6"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "dev",
+   "n": 9,
+   "date": "2026-12-15",
+   "topic": "התפתחות רגשית וחברתית: חסך אימהי",
+   "mods": [
+    "lomda-dev-sp"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "dev",
+   "n": 10,
+   "date": "2026-12-22",
+   "topic": "התפתחות רגשית וחברתית: תיאוריית ההתקשרות",
+   "mods": [
+    "lomda-dev-iwm"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "dev",
+   "n": 11,
+   "date": "2026-12-29",
+   "topic": "לינה משותפת בקיבוצים · נוכחות חובה + סרט ותרגיל כיתה",
+   "mods": [
+    "lomda-dev-kibbutz"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "dev",
+   "n": 12,
+   "date": "2027-01-05",
+   "topic": "התפתחות רגשית וחברתית: מזג · יחידה א־סינכרונית",
+   "mods": [
+    "lomda-dev-ch7"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "dev",
+   "n": 13,
+   "date": "2027-01-12",
+   "topic": "הורים וילדים במסכים + סיכום הקורס",
+   "mods": [
+    "lomda-dev-phones"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "social",
+   "n": 1,
+   "date": "2026-10-21",
+   "topic": "מבוא לפסיכולוגיה חברתית",
+   "mods": [
+    "lomda-social-myers1"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "social",
+   "n": 2,
+   "date": "2026-10-28",
+   "topic": "מבוא לפסיכולוגיה חברתית",
+   "mods": [
+    "lomda-social-myers1"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "social",
+   "n": 3,
+   "date": "2026-11-04",
+   "topic": "תפיסה חברתית: איך מבינים אחרים",
+   "mods": [
+    "lomda-social-myers2"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "social",
+   "n": 4,
+   "date": "2026-11-11",
+   "topic": "תפיסה חברתית: איך מבינים אחרים",
+   "mods": [
+    "lomda-social-myers2"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "social",
+   "n": 5,
+   "date": "2026-11-18",
+   "topic": "תהליכי חשיבה ושיפוט חברתי",
+   "mods": [
+    "lomda-social-myers3",
+    "lomda-social-davidai"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "social",
+   "n": 6,
+   "date": "2026-11-25",
+   "topic": "תהליכי חשיבה ושיפוט חברתי",
+   "mods": [
+    "lomda-social-myers3",
+    "lomda-social-davidai"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "social",
+   "n": 7,
+   "date": "2026-12-02",
+   "topic": "תפיסת העצמי",
+   "mods": [
+    "lomda-social-myers4"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "social",
+   "n": 8,
+   "date": "2026-12-09",
+   "topic": "תפיסת העצמי",
+   "mods": [
+    "lomda-social-myers4"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "social",
+   "n": 9,
+   "date": "2026-12-16",
+   "topic": "דעות קדומות ואפליה",
+   "mods": [
+    "lomda-social-myers7"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "social",
+   "n": 10,
+   "date": "2026-12-23",
+   "topic": "דעות קדומות ואפליה",
+   "mods": [
+    "lomda-social-myers7"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "social",
+   "n": 11,
+   "date": "2026-12-30",
+   "topic": "עמדות ושכנוע",
+   "mods": [
+    "lomda-social-myers5",
+    "lomda-social-myers6",
+    "lomda-social-costello"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "social",
+   "n": 12,
+   "date": "2027-01-06",
+   "topic": "עמדות ושכנוע",
+   "mods": [
+    "lomda-social-myers5",
+    "lomda-social-myers6",
+    "lomda-social-costello"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "social",
+   "n": 13,
+   "date": "2027-01-13",
+   "topic": "עמדות ושכנוע",
+   "mods": [
+    "lomda-social-myers5",
+    "lomda-social-myers6",
+    "lomda-social-costello"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "intro",
+   "n": 1,
+   "date": "2026-10-21",
+   "topic": "מבוא: שורשי הפסיכולוגיה וגישות",
+   "mods": [],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "intro",
+   "n": 2,
+   "date": "2026-10-28",
+   "topic": "שיטות מחקר",
+   "mods": [
+    "lomda-intro-sp2"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "intro",
+   "n": 3,
+   "date": "2026-11-04",
+   "topic": "יסודות ביולוגיים של ההתנהגות",
+   "mods": [
+    "lomda-intro-sp2"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "intro",
+   "n": 4,
+   "date": "2026-11-11",
+   "topic": "תפיסה: מציאות או אשליה?",
+   "mods": [
+    "lomda-intro-sp5"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "intro",
+   "n": 5,
+   "date": "2026-11-18",
+   "topic": "למידה והתניות · תרגול: מאמר מחקרי (כותרת ותקציר)",
+   "mods": [
+    "lomda-intro-sp6",
+    "lomda-intro-singles",
+    "lomda-intro-ritalin"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "intro",
+   "n": 6,
+   "date": "2026-11-25",
+   "topic": "זיכרון חושי וזיכרון לטווח קצר · הגשת תרגיל 1",
+   "mods": [
+    "lomda-intro-sp8"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "intro",
+   "n": 7,
+   "date": "2026-12-02",
+   "topic": "זיכרון ארוך טווח · תרגול: מבוא ושיטה",
+   "mods": [
+    "lomda-intro-sp8",
+    "lomda-intro-singles",
+    "lomda-intro-ritalin"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "intro",
+   "n": 8,
+   "date": "2026-12-09",
+   "topic": "שכחה ופתולוגיות של הזיכרון · תרגול: תוצאות ודיון",
+   "mods": [
+    "lomda-intro-sp8",
+    "lomda-intro-tokens"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "intro",
+   "n": 9,
+   "date": "2026-12-16",
+   "topic": "לחץ: להילחם או לברוח? · הגשת תרגיל 2",
+   "mods": [
+    "lomda-intro-sp14"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "intro",
+   "n": 10,
+   "date": "2026-12-23",
+   "topic": "פסיכופתולוגיה (הרצאת אורח) · תרגול: עיצוב התנהגות",
+   "mods": [
+    "lomda-intro-sp15",
+    "lomda-intro-tokens"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "intro",
+   "n": 11,
+   "date": "2026-12-30",
+   "topic": "פסיכופתולוגיה: איך אפשר לעזור?",
+   "mods": [
+    "lomda-intro-sp15"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "intro",
+   "n": 12,
+   "date": "2027-01-06",
+   "topic": "פסיכו־נוירו־אימונולוגיה · תרגול: תיאורי מקרה · הגשת תרגיל 3",
+   "mods": [
+    "lomda-intro-hoarding",
+    "lomda-intro-asperger",
+    "lomda-intro-psychodrama",
+    "lomda-intro-movement",
+    "lomda-intro-ex3-1",
+    "lomda-intro-ex3-2",
+    "lomda-intro-ex3-3",
+    "lomda-intro-ex3-4"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "intro",
+   "n": 13,
+   "date": "2027-01-13",
+   "topic": "שיעור הכנה למבחן",
+   "mods": [],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "phys",
+   "n": 1,
+   "date": "2026-10-21",
+   "topic": "מבוא: נפש וגוף, דואליזם ומוניזם",
+   "mods": [
+    "lomda-phys-ch1"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "phys",
+   "n": 2,
+   "date": "2026-10-28",
+   "topic": "מבוא: נפש וגוף - המשך",
+   "mods": [
+    "lomda-phys-ch1"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "phys",
+   "n": 3,
+   "date": "2026-11-04",
+   "topic": "תאי מערכת העצבים: מבנה הנוירון",
+   "mods": [
+    "lomda-phys-ch2"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "phys",
+   "n": 4,
+   "date": "2026-11-11",
+   "topic": "תאי גליה ומחסום דם־מוח",
+   "mods": [
+    "lomda-phys-ch2"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "phys",
+   "n": 5,
+   "date": "2026-11-18",
+   "topic": "התקשורת בתוך הנוירון: פוטנציאל המנוחה",
+   "mods": [
+    "lomda-phys-ch2"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "phys",
+   "n": 6,
+   "date": "2026-11-25",
+   "topic": "התקשורת בתוך הנוירון - המשך",
+   "mods": [
+    "lomda-phys-ch2"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "phys",
+   "n": 7,
+   "date": "2026-12-02",
+   "topic": "התקשורת בין נוירונים: פוטנציאל פעולה וסינפסה",
+   "mods": [
+    "lomda-phys-ch2"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "phys",
+   "n": 8,
+   "date": "2026-12-09",
+   "topic": "התקשורת בין נוירונים - המשך",
+   "mods": [
+    "lomda-phys-ch2"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "phys",
+   "n": 9,
+   "date": "2026-12-16",
+   "topic": "מבנה מערכת העצבים: קרומים, CSF, כיוונים וחתכים",
+   "mods": [
+    "lomda-phys-ch3"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "phys",
+   "n": 10,
+   "date": "2026-12-23",
+   "topic": "מערכת העצבים המרכזית ואזורים תת־קורטיקליים",
+   "mods": [
+    "lomda-phys-ch3"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "phys",
+   "n": 11,
+   "date": "2026-12-30",
+   "topic": "פסיכופרמקולוגיה",
+   "mods": [
+    "lomda-phys-ch4"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "phys",
+   "n": 12,
+   "date": "2027-01-06",
+   "topic": "שיטות מחקר בחקר המוח",
+   "mods": [
+    "lomda-phys-ch5"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "phys",
+   "n": 13,
+   "date": "2027-01-13",
+   "topic": "שיעור חזרה למבחן",
+   "mods": [],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "mgmt",
+   "n": 1,
+   "date": "2026-10-18",
+   "topic": "מבוא להתנהגות ארגונית וגישות ניהול",
+   "mods": [
+    "lomda-org-1",
+    "lomda-org-4"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "mgmt",
+   "n": 2,
+   "date": "2026-10-25",
+   "topic": "מבוא - המשך",
+   "mods": [
+    "lomda-org-1",
+    "lomda-org-4"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "mgmt",
+   "n": 3,
+   "date": "2026-11-01",
+   "topic": "מבוא - גישות ניהוליות (הנחיה: מבנים ארגוניים בלמידה עצמית)",
+   "mods": [
+    "lomda-org-1",
+    "lomda-org-4",
+    "lomda-mgmt-ch15"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": ""
+  },
+  {
+   "c": "mgmt",
+   "n": 4,
+   "date": "2026-11-08",
+   "topic": "תפיסה וקבלת החלטות",
+   "mods": [
+    "lomda-mgmt-ch6"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": "תאריך משוער - הסילבוס לא נותן תאריכים",
+   "est": true
+  },
+  {
+   "c": "mgmt",
+   "n": 5,
+   "date": "2026-11-15",
+   "topic": "תפיסה וקבלת החלטות - המשך",
+   "mods": [
+    "lomda-mgmt-ch6"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": "תאריך משוער - הסילבוס לא נותן תאריכים",
+   "est": true
+  },
+  {
+   "c": "mgmt",
+   "n": 6,
+   "date": "2026-11-22",
+   "topic": "עמדות כלפי העבודה והארגון",
+   "mods": [],
+   "status": "",
+   "newDate": "",
+   "note": "תאריך משוער - הסילבוס לא נותן תאריכים",
+   "est": true
+  },
+  {
+   "c": "mgmt",
+   "n": 7,
+   "date": "2026-11-29",
+   "topic": "הנבואה שמגשימה את עצמה",
+   "mods": [
+    "lomda-mgmt-ch6"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": "תאריך משוער - הסילבוס לא נותן תאריכים",
+   "est": true
+  },
+  {
+   "c": "mgmt",
+   "n": 8,
+   "date": "2026-12-06",
+   "topic": "מוטיבציה בעבודה",
+   "mods": [
+    "lomda-mgmt-ch7"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": "תאריך משוער - הסילבוס לא נותן תאריכים",
+   "est": true
+  },
+  {
+   "c": "mgmt",
+   "n": 9,
+   "date": "2026-12-13",
+   "topic": "מוטיבציה - המשך",
+   "mods": [
+    "lomda-mgmt-ch7"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": "תאריך משוער - הסילבוס לא נותן תאריכים",
+   "est": true
+  },
+  {
+   "c": "mgmt",
+   "n": 10,
+   "date": "2026-12-20",
+   "topic": "מנהיגות",
+   "mods": [
+    "lomda-mgmt-ch12"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": "תאריך משוער - הסילבוס לא נותן תאריכים",
+   "est": true
+  },
+  {
+   "c": "mgmt",
+   "n": 11,
+   "date": "2026-12-27",
+   "topic": "קבוצות בארגונים",
+   "mods": [
+    "lomda-mgmt-ch9"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": "תאריך משוער - הסילבוס לא נותן תאריכים",
+   "est": true
+  },
+  {
+   "c": "mgmt",
+   "n": 12,
+   "date": "2027-01-03",
+   "topic": "תרבות ארגונית",
+   "mods": [
+    "lomda-mgmt-ch16"
+   ],
+   "status": "",
+   "newDate": "",
+   "note": "תאריך משוער - הסילבוס לא נותן תאריכים",
+   "est": true
+  },
+  {
+   "c": "mgmt",
+   "n": 13,
+   "date": "2027-01-10",
+   "topic": "סיכום וחזרה",
+   "mods": [],
+   "status": "",
+   "newDate": "",
+   "note": "תאריך משוער - הסילבוס לא נותן תאריכים",
+   "est": true
+  }
+ ]
+}

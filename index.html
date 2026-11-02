@@ -98,6 +98,43 @@ button.course:hover{transform:translateY(-3px)}
 .mcard .when{display:flex;gap:8px;align-items:flex-start;font-size:.82rem;font-weight:600;line-height:1.4;color:var(--ink);background:color-mix(in srgb,var(--c) 10%,var(--surface));border-radius:10px;padding:7px 10px}
 .mcard .when svg{width:16px;height:16px;flex:none;margin-top:2px;color:var(--c)}
 .mcard .soon{margin-inline-start:auto;flex:none;background:var(--c);color:var(--surface);border-radius:99px;padding:1px 8px;font-size:.75rem}
+/* weekly bar */
+.week{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--line)}
+.wtop{width:100%;font:inherit;color:inherit;background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:16px 20px;text-align:right}
+.wico{flex:none;width:48px;height:48px;border-radius:14px;background:var(--hero);color:var(--hero-ink);display:grid;place-items:center;position:relative;overflow:hidden}
+.wico::after{content:"";position:absolute;inset:auto 0 0 0;height:4px;background:linear-gradient(90deg,var(--mgmt),var(--intro),var(--social),var(--dev),var(--phys))}
+.wico svg{width:26px;height:26px}
+.wtt{display:flex;flex-direction:column;min-width:0;flex:1}
+.wtt h2{font-size:1.45rem}
+.wtt small{color:var(--muted);font-size:.88rem;font-variant-numeric:tabular-nums}
+.wchev{flex:none;width:34px;height:34px;border-radius:50%;background:var(--raised);display:grid;place-items:center;transition:transform .2s;color:var(--muted)}
+.wchev svg{width:18px;height:18px}
+.week.open .wchev{transform:rotate(180deg)}
+.wbody{border-top:1px solid var(--line);padding:14px 14px 16px;display:flex;flex-direction:column;gap:12px}
+.wnav{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:.88rem}
+.wnav button{font:inherit;font-weight:600;background:var(--raised);border:1px solid var(--line);color:var(--ink);border-radius:99px;padding:4px 12px;cursor:pointer}
+.wnav button:hover{border-color:var(--muted)}
+.wnav span{color:var(--muted);font-variant-numeric:tabular-nums;text-align:center}
+.les{--c:var(--mgmt);border-radius:14px;background:color-mix(in srgb,var(--c) 7%,var(--surface));border-inline-start:5px solid var(--c);padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.les.off{opacity:.75}
+.lhd{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+.lhd b{font-size:1.05rem;font-weight:800}
+.lhd b i{font-style:normal;color:var(--c)}
+.tag{font-size:.74rem;font-weight:700;border-radius:99px;padding:1px 9px;background:var(--c);color:var(--surface)}
+.tag.warn{background:#b42318;color:#fff}.tag.est{background:var(--raised);color:var(--muted);border:1px solid var(--line)}
+.ltop{font-size:.93rem;color:var(--muted);line-height:1.45}
+.les.off .ltop{text-decoration:line-through}
+.lmods{display:flex;flex-direction:column;gap:6px}
+.lmod{display:flex;align-items:center;gap:8px 12px;flex-wrap:wrap;background:var(--surface);border-radius:10px;padding:8px 10px}
+.lmod .t{flex:1 1 220px;font-weight:700;font-size:.95rem;line-height:1.35;min-width:0;display:flex;flex-direction:column}
+.lmod .t small{font-weight:500;font-size:.8rem;color:var(--muted)}
+.lbtns{display:flex;gap:6px;flex:none}
+.lbtns a{text-decoration:none;font-size:.82rem;font-weight:700;border-radius:99px;padding:4px 12px;border:1.5px solid var(--c);color:var(--c)}
+.lbtns a:first-child{background:var(--c);color:var(--surface)}
+.lbtns a:hover{filter:brightness(1.1)}
+.lnone{font-size:.88rem;color:var(--muted)}
+.wempty{color:var(--muted);font-size:.95rem;padding:6px 4px}
+.wfoot{font-size:.78rem;color:var(--muted)}
 footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 @media (prefers-reduced-motion:no-preference){.course{animation:up .45s ease-out both}.course:nth-child(2){animation-delay:.05s}.course:nth-child(3){animation-delay:.1s}.course:nth-child(4){animation-delay:.15s}.course:nth-child(5){animation-delay:.2s}@keyframes up{from{transform:translateY(8px)}to{transform:none}}}
 </style>
@@ -127,6 +164,7 @@ const ICON={
  dev:'<circle cx="5" cy="15" r="1.6"/><path d="M5 16.6V21"/><circle cx="12" cy="11" r="2"/><path d="M12 13v8"/><circle cx="19" cy="6" r="2.4"/><path d="M19 8.4V21M2 21h20"/>',
  phys:'<circle cx="12" cy="12" r="3.2"/><path d="M12 8.8V3M9.2 10.4L4 7M14.8 10.4L20 7M10 14.6L6 20M14 14.6l4 5.4M12 3l-2 1.5M12 3l2 1.5M4 7l.5 2.4M20 7l-.5 2.4"/>',
  cal:'<rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',
+ chev:'<path d="M6 9l6 6 6-6"/>',
  clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>'
 };
 const ic=k=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[k]}</svg>`;
@@ -196,14 +234,51 @@ const coursePct=c=>{const tot=c.items.reduce((a,i)=>a+i.total,0);if(!tot)return 
 const soon=d=>{if(!d)return "";const t=new Date(d+"T00:00"),now=new Date();now.setHours(0,0,0,0);const n=Math.round((t-now)/864e5);return n<0||n>14?"":n===0?"היום":n===1?"מחר":`בעוד ${n} ימים`};
 const view=document.getElementById("view");
 const word=n=>n===0?"אין עדיין לומדות":n===1?"לומדה אחת":`${n} לומדות`;
+const SHORT={mgmt:"מבוא לניהול",intro:"מבוא לפסיכולוגיה",social:"פסיכולוגיה חברתית",dev:"פסיכולוגיה התפתחותית",phys:"יסודות פיזיולוגיים"};
+let SCHED=null,wOff=0,wOpen=false;try{wOpen=localStorage.getItem("week-open")==="1"}catch(e){}
+fetch("schedule.json",{cache:"no-cache"}).then(r=>r.json()).then(d=>{SCHED=d.lessons||[];renderWeek()}).catch(()=>{SCHED=[];renderWeek()});
+const dm=iso=>{const [y,m,d]=iso.split("-").map(Number);return `${d}/${m}`};
+const isoOf=t=>`${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,"0")}-${String(t.getDate()).padStart(2,"0")}`;
+function weekRange(off){const t=new Date();t.setHours(0,0,0,0);t.setDate(t.getDate()-t.getDay()+7*off);const e=new Date(t);e.setDate(e.getDate()+6);return [isoOf(t),isoOf(e)]}
+const ITEM=k=>{for(const c of COURSES){const it=c.items.find(i=>i.key===k);if(it)return it}return null};
+function lessonHTML(l,a,b){
+  const moved=l.status==="נדחה"&&l.newDate, here=moved&&l.newDate>=a&&l.newDate<=b;
+  const date=here?l.newDate:l.date, off=l.status==="בוטל"||(moved&&!here);
+  let tags="";
+  if(l.status==="בוטל")tags+=`<span class="tag warn">בוטל</span>`;
+  else if(moved&&!here)tags+=`<span class="tag warn">נדחה ל־${dm(l.newDate)}</span>`;
+  else if(here)tags+=`<span class="tag">נדחה מ־${dm(l.date)}</span>`;
+  if(l.est&&!l.status)tags+=`<span class="tag est">תאריך משוער</span>`;
+  const mods=l.mods.map(ITEM).filter(Boolean);
+  return `<div class="les${off?" off":""}" style="--c:var(--${l.c})"><div class="lhd"><b>${SHORT[l.c]} · <i>שיעור ${l.n}</i> · ${dm(date)}</b>${tags}</div>
+   <div class="ltop">${l.topic}${l.note&&!l.est?` · ${l.note}`:""}</div>
+   ${mods.length?`<div class="lmods">${mods.map(it=>`<div class="lmod"><span class="t"><span${it.en?' dir="ltr" lang="en"':""}>${it.title}</span><small>${it.sub}</small></span><span class="lbtns"><a href="${it.href}">לומדה</a><a href="${it.href}#sum">סיכום</a><a href="${it.href}#quiz">מבחן</a></span></div>`).join("")}</div>`:`<div class="lnone">אין לומדה לשיעור הזה</div>`}</div>`;
+}
+function renderWeek(){
+  const box=document.getElementById("week");if(!box)return;
+  const [a,b]=weekRange(wOff);
+  const L=(SCHED||[]).filter(l=>(l.date>=a&&l.date<=b)||(l.newDate&&l.newDate>=a&&l.newDate<=b)).sort((x,y)=>((x.newDate>=a&&x.newDate<=b)?x.newDate:x.date).localeCompare((y.newDate>=a&&y.newDate<=b)?y.newDate:y.date));
+  const live=L.filter(l=>l.status!=="בוטל"&&!(l.status==="נדחה"&&l.newDate&&!(l.newDate>=a&&l.newDate<=b))).length;
+  const lab=wOff===0?"השבוע":wOff===1?"שבוע הבא":wOff===-1?"שבוע שעבר":wOff>0?`בעוד ${wOff} שבועות`:`לפני ${-wOff} שבועות`;
+  box.className="week"+(wOpen?" open":"");
+  box.innerHTML=`<button class="wtop" id="wtg" aria-expanded="${wOpen}"><span class="wico">${ic("cal")}</span><span class="wtt"><h2>מה לומדים השבוע?</h2><small><span dir="ltr">${dm(a)}–${dm(b)}</span> · ${SCHED==null?"טוען…":live?`${live} שיעורים`:"אין שיעורים"}${wOff?` · ${lab}`:""}</small></span><span class="wchev">${ic("chev")}</span></button>
+  ${wOpen?`<div class="wbody"><div class="wnav"><button id="wprev">→ הקודם</button><span>${lab}</span><button id="wnext">הבא ←</button></div>
+  ${L.length?L.map(l=>lessonHTML(l,a,b)).join(""):`<div class="wempty">אין שיעורים בשבוע הזה.</div>`}
+  ${wOff?`<div class="wnav" style="justify-content:center"><button id="wnow">חזרה לשבוע הנוכחי</button></div>`:""}
+  <div class="wfoot">לפי הסילבוסים. ביטולים ודחיות מתעדכנים אוטומטית מהודעות המכללה.</div></div>`:""}`;
+  box.querySelector("#wtg").onclick=()=>{wOpen=!wOpen;try{localStorage.setItem("week-open",wOpen?"1":"0")}catch(e){}renderWeek()};
+  const g=(id,f)=>{const e=box.querySelector(id);if(e)e.onclick=f};
+  g("#wprev",()=>{wOff--;renderWeek()});g("#wnext",()=>{wOff++;renderWeek()});g("#wnow",()=>{wOff=0;renderWeek()});
+}
 function home(){
   const n=COURSES.reduce((a,c)=>a+c.items.length,0);
-  view.innerHTML=`<div class="sechead"><h2>הקורסים</h2><span>${COURSES.length} קורסים · ${word(n)}</span></div>
+  view.innerHTML=`<section id="week" class="week"></section><div class="sechead"><h2>הקורסים</h2><span>${COURSES.length} קורסים · ${word(n)}</span></div>
   <div class="courses">${COURSES.map(c=>{const p=coursePct(c);return `<button class="course" style="--c:var(--${c.id})" data-id="${c.id}">
     <div class="chead"><span class="cicon">${ic(c.id)}</span><div class="ctitle"><small>${c.tag}</small><h3>${c.name}</h3></div></div>
     <div class="cbody"><div class="bar"><i style="width:${p}%"></i></div><div class="cmeta"><span>${word(c.items.length)}</span><span class="copen">${c.items.length?"פתח ←":"בקרוב"}</span></div></div></button>`}).join("")}</div>
   <footer><span>ההתקדמות נשמרת במכשיר שלכם בלבד.</span><span>חומר חדש עולה במהלך הסמסטר.</span></footer>`;
   view.querySelectorAll("button.course").forEach(b=>b.onclick=()=>{location.hash=b.dataset.id});
+  renderWeek();
 }
 function course(c){
   view.innerHTML=`<div class="cview"><button class="back" id="back">→ כל הקורסים</button>
