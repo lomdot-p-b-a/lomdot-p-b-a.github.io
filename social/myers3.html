@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>לומדת חובת קריאה: מאיירס פרק 3 · תפיסה ושיפוט חברתי</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Rubik:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: a study notebook. Home = illustrated cover + topic cards; topic = one reading card at a time, with a highlighter for key terms and drawn figures */
+:root{
+  --bg:#eef2f4; --surface:#ffffff; --raised:#f7f9fa; --ink:#15222a; --muted:#4c5b66; --line:#dbe2e6;
+  --accent:#2457a6; --mark:#ffe27a; --good:#23855a; --good-soft:#e2f4ea; --bad:#c2452d; --bad-soft:#fbe6e1;
+  --t1:#d35d36; --t2:#3667cf; --t3:#0e8a7c; --t4:#8448c9; --t5:#b9800c; --t6:#2a7fa6; --t7:#b4436c; --t8:#5a6b2e;
+  --display:"Suez One","Frank Ruhl Libre","David",serif;
+  --body:"Rubik","Arial Hebrew","Segoe UI",Arial,sans-serif;
+  --shadow:0 1px 2px rgba(21,34,42,.06),0 8px 24px rgba(21,34,42,.07);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;font-weight:500;line-height:1.75;direction:rtl}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
+p{margin:0}
+.stack{display:flex;flex-direction:column;gap:16px}
+.muted{color:var(--muted)}
+mark{background:linear-gradient(transparent 38%,var(--mark) 38%,var(--mark) 92%,transparent 92%);color:inherit;padding:0 2px;font-weight:600}
+button{font:inherit;cursor:pointer;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:11px 18px}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button[disabled]{opacity:.55;cursor:default}
+.primary{background:var(--c,var(--accent));border-color:var(--c,var(--accent));color:var(--surface);font-weight:600}
+.ghost{background:transparent;border:none;color:var(--muted);padding:6px 2px}
+.ghost:hover{color:var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.badge{display:inline-block;align-self:flex-start;font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:99px;background:var(--accent);color:var(--surface);margin-bottom:6px}.entitle{display:inline;unicode-bidi:isolate;font-family:Rubik,system-ui,sans-serif;font-weight:800}.hetitle{margin:4px 0 0;font-weight:700;font-size:1.05rem}.cite{text-align:right;margin:4px 0 0;font-size:.85rem;color:var(--muted)}.cite a{color:var(--accent)}
+.eyebrow{font-size:.8rem;letter-spacing:.05em;font-weight:600;color:var(--c,var(--muted))}
+
+/* home */
+.cover{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.cover-art{background:var(--raised);border-bottom:1px solid var(--line);padding:8px 8px 0}
+.cover-art svg{display:block;width:100%;height:auto;max-height:230px}
+.cover-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px}
+.cover h1{font-size:clamp(2rem,6vw,2.6rem);font-weight:900}
+.stats{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.ring{--p:0;width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center;flex:none}
+.ring span{width:50px;height:50px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.9rem;font-variant-numeric:tabular-nums}
+.stat-text{display:flex;flex-direction:column;line-height:1.35;flex:1;min-width:160px}
+.stat-text b{font-size:1.05rem}
+.review-btn{display:flex;align-items:center;gap:8px}
+.actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.actions button{justify-content:center}
+.opt.sel{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--raised))}
+.opt[aria-disabled]{cursor:default}
+.opt .k svg{width:16px;height:16px}
+.trows{display:flex;flex-direction:column;gap:10px;width:100%}
+.trow{display:grid;grid-template-columns:minmax(0,1fr) minmax(70px,30%) auto;gap:10px;align-items:center;width:100%}
+.trow .tt{font-family:inherit;font-size:1rem;font-weight:600;line-height:1.35}
+.trow .bar i{background:var(--c)}
+.trow .sc{font-variant-numeric:tabular-nums;font-weight:700;min-width:3ch;text-align:left}
+.card.rev{align-items:stretch}
+.tag{align-self:flex-start;font-size:.82rem;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--raised)}
+.tag.good{background:var(--good-soft);color:var(--good)} .tag.low{background:var(--bad-soft);color:var(--bad)} .tag.mid{background:color-mix(in srgb,var(--mark) 45%,var(--raised))}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.tcard{--c:var(--accent);text-align:right;padding:0;overflow:hidden;border:none;border-radius:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s}
+.tcard:hover{transform:translateY(-2px)}
+.tcard .band{background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.tcard .band svg{width:44px;height:44px}
+.tcard .n{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;opacity:.85}
+.tcard .body{padding:12px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tcard .t{font-weight:700;font-size:1.05rem;line-height:1.35}
+.bar{height:7px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--c);border-radius:4px}
+.meta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip{font-size:.75rem;padding:3px 10px;border-radius:99px;font-weight:600;background:color-mix(in srgb,var(--c,var(--accent)) 14%,transparent);color:var(--c,var(--accent));white-space:nowrap}
+.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+
+/* topic */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;display:flex;flex-direction:column;gap:8px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.steps{display:flex;gap:5px}
+.steps i{flex:1;height:5px;border-radius:3px;background:var(--line)}
+.steps i.on{background:var(--c)}
+.prog{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tt{font-size:1.6rem;font-weight:900}
+.card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px}
+.card h3{font-size:1.25rem;color:var(--c)}
+.fig{background:var(--raised);border-radius:14px;padding:10px;margin-inline:-4px}
+.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{font-size:.8rem;color:var(--muted);text-align:center;margin-top:4px}
+figure{margin:0}
+.def{border:1.5px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 6%,var(--surface));border-radius:14px;padding:14px 16px}
+.lbl{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:var(--c);margin-bottom:4px}
+.who{display:flex;gap:12px;align-items:flex-start}
+.who .av{flex:none;width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.15rem}
+.who .yr{font-size:.8rem;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.tile{background:var(--raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile svg{width:32px;height:32px;color:var(--c)}
+.tile b{font-size:.98rem}
+.tile span{font-size:.88rem;color:var(--muted);line-height:1.45}
+.ex{background:var(--raised);border-radius:12px;padding:12px 14px;font-size:.95rem}
+.ex .lbl{color:var(--muted)}
+.yesno{display:flex;flex-wrap:wrap;gap:8px}
+.yn{padding:5px 12px;border-radius:99px;font-size:.88rem;font-weight:500;display:inline-flex;gap:6px;align-items:center}
+.yn.y{background:var(--good-soft);color:var(--good)} .yn.n{background:var(--bad-soft);color:var(--bad)}
+.spectrum{display:flex;flex-direction:column;gap:6px}
+.spectrum .track{height:12px;border-radius:6px;background:linear-gradient(90deg,var(--bad),var(--line) 50%,var(--good));position:relative}
+.spectrum .dot{position:absolute;top:50%;left:50%;width:20px;height:20px;border-radius:50%;background:var(--surface);border:3px solid var(--ink);transform:translate(-50%,-50%)}
+.spectrum .ends{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);gap:10px}
+.remember{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;border-top:1px dashed var(--line);padding-top:12px}
+.remember svg{flex:none;width:22px;height:22px;color:var(--c)}
+
+/* question */
+.q{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:12px}
+.qtext{font-weight:600;font-size:1.08rem;line-height:1.55}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{text-align:right;line-height:1.45;display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--raised);border:1.5px solid transparent}
+.opt:hover:not([disabled]){border-color:var(--c)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:8px;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.85rem;color:var(--c)}
+.opt.right{background:var(--good-soft);border-color:var(--good);opacity:1}
+.opt.right .k{background:var(--good);color:var(--surface)}
+.opt.wrong{background:var(--bad-soft);border-color:var(--bad);opacity:1}
+.opt.wrong .k{background:var(--bad);color:var(--surface)}
+.fb{padding:12px 14px;border-radius:12px;font-size:.95rem;display:flex;gap:10px;align-items:flex-start}
+.fb svg{flex:none;width:22px;height:22px;margin-top:2px}
+.fb.ok{background:var(--good-soft)} .fb.ok svg{color:var(--good)}
+.fb.no{background:var(--bad-soft)} .fb.no svg{color:var(--bad)}
+.fb strong{display:block}
+.big{font-family:var(--display);font-size:3.4rem;font-weight:900;color:var(--c);font-variant-numeric:tabular-nums;line-height:1}
+@media (prefers-reduced-motion:no-preference){.fade{animation:f .3s ease-out}@keyframes f{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+
+/* svg figure classes */
+.s-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.s-c{stroke:var(--c);stroke-width:2;fill:none}
+.f-c{fill:var(--c)}
+.f-soft{fill:color-mix(in srgb,var(--c) 16%,var(--surface))}
+.f-surf{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.f-ink{fill:var(--ink)}
+.f-mut{fill:var(--muted)}
+.f-inv{fill:var(--surface)}
+svg text{font-family:var(--body)}
+h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
+.card p,.def p,.tile span,.ex p{font-weight:500}
+.qtext{font-weight:700}
+.tile b,.who b{font-weight:700}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:.95rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.tbl th,.tbl td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl th{background:color-mix(in srgb,var(--c) 10%,var(--surface));color:var(--c);font-weight:700;font-size:.85rem}
+.tbl .in{color:var(--c);font-weight:700}.tbl .out{color:var(--muted);font-weight:700}
+.tblwrap{overflow-x:auto}
+.en{font-size:.82em;color:var(--muted);font-weight:500;direction:ltr;unicode-bidi:isolate}
+.ak{white-space:nowrap}
+.acr{font-size:.82em;color:var(--muted);font-weight:500}
+.acrnote{font-size:.85rem;color:var(--muted);background:color-mix(in srgb,var(--c,var(--accent)) 7%,var(--surface));border-radius:10px;padding:8px 12px;line-height:1.6}
+.tcard.done .band{background:color-mix(in srgb,var(--good) 16%,var(--surface))}
+.tcard.done .meta span:first-child{color:var(--good);font-weight:700}
+.card.sum{gap:6px;align-items:stretch}
+.card.sum h2{font-family:var(--display);font-size:1.5rem;margin:6px 0 2px;color:var(--accent)}
+.card.sum h3{margin:18px 0 4px;color:var(--accent);border-bottom:2px solid color-mix(in srgb,var(--accent) 25%,transparent);padding-bottom:4px}
+.card.sum h4{margin:10px 0 2px}
+.card.sum p,.card.sum li{line-height:1.75}
+.card.sum ul,.card.sum ol{margin:4px 0;padding-inline-start:22px}
+.card.sum .key{background:color-mix(in srgb,var(--accent) 9%,var(--surface));border-inline-start:4px solid var(--accent);border-radius:10px;padding:10px 14px;margin:8px 0}
+.card.sum .trap{background:color-mix(in srgb,var(--bad) 9%,var(--surface));border-inline-start:4px solid var(--bad);border-radius:10px;padding:10px 14px;margin:8px 0}
+.card.sum table{border-collapse:collapse;width:100%;font-size:.92rem;margin:6px 0}
+.card.sum th,.card.sum td{border:1px solid var(--line);padding:6px 8px;text-align:right;vertical-align:top}
+.card.sum th{background:color-mix(in srgb,var(--accent) 10%,var(--surface))}
+.card.sum .tw{overflow-x:auto}
+</style>
+<style>:root{--accent:#d0532c}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent:#f28a64}}:root[data-theme="dark"]{--accent:#f28a64}</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const CONFIG={key:"lomda-social-myers3",cover:"cover44",badge:"ספר הקורס · חובה",eyebrow:"פסיכולוגיה חברתית א' · מאיירס, כרך א׳",title:"פרק 3 (חלק א׳): לתפוס ולשפוט את העולם החברתי",cite:`מאיירס, ד' (2012). <i>פסיכולוגיה חברתית</i>, כרך א׳, פרק 3, עמ׳ ⁦91–119⁩. האוניברסיטה הפתוחה.`,note:"הלומדה מבוססת על עמ׳ 91–119 בספר הקורס (שיפוט חברתי), לקריאה לקראת מפגשים 5–6. מספרי העמודים מתייחסים לספר המודפס."};
+const I={
+ building:'<path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h2M14 8h2M8 12h2M14 12h2M10 21v-4h4v4"/>',
+ people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
+ cycle:'<path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/>',
+ pyramid:'<path d="M12 3L2.5 20h19z"/><path d="M8.2 10.5h7.6M5.5 15.2h13"/>',
+ chart:'<path d="M4 20V10M9.5 20V4M15 20v-7M20.5 20V8M2 20h20"/>',
+ gear:'<circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="7.5" stroke-dasharray="3.2 2.7" stroke-width="3.2"/>',
+ sprout:'<path d="M12 21v-9"/><path d="M12 14C7 14 4.5 11 4.5 6.5 9 6.5 12 9 12 14z"/><path d="M12 12c0-4.5 3-7 7.5-7 0 4.5-3 7-7.5 7z"/>',
+ scales:'<path d="M12 3v17M7 20h10M4 7h16"/><path d="M4 7l-2.5 6h5zM20 7l-2.5 6h5z"/>',
+ factory:'<path d="M3 21V10l5 3v-3l5 3V5h4v16zM1.5 21h21M17 9h4v12"/>',
+ question:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 1 1 3.6 2.4c-.8.4-1.1.9-1.1 1.8"/><path d="M12 17h.01"/>',
+ data:'<ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6M4.5 11.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6"/>',
+ doc:'<path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/>',
+ split:'<circle cx="12" cy="4.5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="12" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/><path d="M12 6.7v10M12 11l-6 6M12 11l6 6"/>',
+ grad:'<path d="M1.5 9L12 4l10.5 5L12 14z"/><path d="M6 11.2V16c3.3 2.4 8.7 2.4 12 0v-4.8M21 10v5"/>',
+ copies:'<rect x="3" y="7" width="12" height="14" rx="2"/><path d="M7 4h11a2 2 0 0 1 2 2v12"/>',
+ link:'<rect x="2" y="8" width="11" height="8" rx="4"/><rect x="11" y="8" width="11" height="8" rx="4"/>',
+ hand:'<circle cx="8" cy="7" r="3"/><circle cx="16" cy="7" r="3"/><path d="M2.5 20c0-3.3 2.5-6 5.5-6 1.6 0 3 .7 4 1.9 1-1.2 2.4-1.9 4-1.9 3 0 5.5 2.7 5.5 6"/>',
+ target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',
+ id:'<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><circle cx="8.5" cy="11" r="2.3"/><path d="M5 16c.6-1.6 2-2.4 3.5-2.4S11.4 14.4 12 16M14.5 10h4M14.5 13.5h3"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>',
+ pie:'<path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/>',
+ cart:'<path d="M2 3h3l2.5 12h11l2-8H6.5"/><circle cx="9" cy="19.5" r="1.6"/><circle cx="17" cy="19.5" r="1.6"/>',
+ bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/>',
+ check:'<circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/>',
+ x:'<circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/>',
+ lock:'<rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>',
+ moon:'<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>',
+ brain:'<path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a2 2 0 0 0-3-1z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/>',
+ phone:'<rect x="6.5" y="2" width="11" height="20" rx="2.5"/><path d="M10.5 18.5h3"/>',
+ flask:'<path d="M9 2.5h6M10 2.5v6L4.5 19a2 2 0 0 0 1.8 2.9h11.4a2 2 0 0 0 1.8-2.9L14 8.5v-6"/><path d="M7 15h10"/>',
+ leaf:'<path d="M5 19C5 10 11 4 20 4c0 9-6 15-15 15z"/><path d="M5 19l8-8"/>'
+};
+const ic=(k,cls="")=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="${cls}" aria-hidden="true">${I[k]}</svg>`;
+
+const arrowDef=id=>`<defs><marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="f-c"/></marker></defs>`;
+
+const FIG={
+ cover44:()=>`<svg viewBox="0 0 400 228" role="img" aria-label="משקפיים ומאזניים">
+  <circle cx="200" cy="114" r="96" class="f-soft"/>
+  <circle cx="165" cy="100" r="28" class="f-surf" stroke-width="3"/><circle cx="235" cy="100" r="28" class="f-surf" stroke-width="3"/>
+  <path d="M193 100 q7 -8 14 0" class="s-line" stroke-width="3" fill="none"/>
+  <circle cx="165" cy="100" r="16" class="f-c" opacity=".35"/><circle cx="235" cy="100" r="16" class="f-c" opacity=".35"/>
+  <path d="M150 160 h100 M200 140 v20" class="s-line" stroke-width="3"/>
+  <text x="200" y="185" text-anchor="middle" font-size="12" font-weight="800" class="f-ink">רואים דרך האמונות</text>
+ </svg>`,
+ podium44:()=>`<svg viewBox="0 0 400 210" role="img" aria-label="דוכן המנצחים: הארד שמח יותר מהכסף">
+  ${[[200,70,"1","זהב","הכי שמח"],[300,100,"2","כסף","״כמעט זהב״"],[100,120,"3","ארד","״כמעט כלום״"]].map(([x,y,n,m,t])=>`<rect x="${x-46}" y="${y}" width="92" height="${170-y}" rx="6" class="${n=="2"?"f-mut":"f-c"}"/><text x="${x}" y="${y+28}" text-anchor="middle" font-size="18" font-weight="800" class="f-inv">${n}</text><text x="${x}" y="${y-30}" text-anchor="middle" font-size="12" font-weight="800" class="f-ink">${m}</text><text x="${x}" y="${y-12}" text-anchor="middle" font-size="11" class="f-mut">${t}</text>`).join("")}
+  <text x="200" y="196" text-anchor="middle" font-size="12" font-weight="800" class="f-ink">סדר האושר: ראשון, שלישי, שני</text>
+ </svg>`
+};
+const E=t=>`<span class="en">(${t})</span>`;
+const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</figcaption>`:""}</figure>`;
+const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
+const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;
+const tiles=a=>`<div class="tiles">${a.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`;
+const ex=h=>`<div class="ex"><span class="lbl">דוגמה</span><p>${h}</p></div>`;
+const rem=h=>`<div class="remember">${ic("bulb")}<p>${h}</p></div>`;
+const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")}${t}</span>`).join("")}${n.map(t=>`<span class="yn n">${ic("x")}${t}</span>`).join("")}</div>`;
+const spectrum=(r,l,dot)=>`<div class="spectrum"><div class="track">${dot?'<span class="dot"></span>':""}</div><div class="ends"><span>${r}</span><span>${l}</span></div></div>`;
+document.head.insertAdjacentHTML("beforeend",'<style>.yn svg{width:16px;height:16px}</style>');
+
+const ACR={
+"AAI":["Adult Attachment Interview","ריאיון ההיקשרות למבוגרים"],
+"ABA":["","תבנית הברות שבה הראשונה והאחרונה זהות (גה טי גה)"],
+"ABB":["","תבנית הברות שבה השתיים האחרונות זהות (וו פי פי)"],
+"ACh":["Acetylcholine","אצטילכולין"],
+"AChE":["Acetylcholinesterase","אצטילכולין־אסטראז, האנזים שמפרק אצטילכולין"],
+"ADD":["Attention Deficit Disorder","הפרעת קשב"],
+"ADHD":["Attention Deficit Hyperactivity Disorder","הפרעת קשב וריכוז עם היפראקטיביות"],
+"AI":["Artificial Intelligence","בינה מלאכותית"],
+"AMPA":["","סוג של קולטן גלוטמט יונוטרופי, הנפוץ ביותר"],
+"ANOVA":["Analysis of Variance","ניתוח שונות, מבחן סטטיסטי להשוואת כמה ממוצעים"],
+"AP5":["","חומר שחוסם את אתר הגלוטמט בקולטן NMDA"],
+"AST":["Attention Switching Task","משימת מעבר קשב בין כללים"],
+"ATP":["Adenosine Triphosphate","אדנוזין טריפוספט, מולקולת האנרגיה של התא"],
+"AVG":["","ארגון שערך את הסקר על ילדים והטלפונים של הוריהם"],
+"BCTI":["Belief in Conspiracy Theories Inventory","שאלון האמונה בתיאוריות קונספירציה"],
+"BEIP":["Bucharest Early Intervention Project","מחקר ההתערבות המוקדמת בבוקרשט"],
+"BRAIN":["Brain Research through Advancing Innovative Neurotechnologies","מיזם חקר המוח האמריקני"],
+"CANTAB":["Cambridge Neuropsychological Test Automated Battery","סוללת מבחנים נוירופסיכולוגיים ממוחשבת"],
+"CASQ":["Cleveland Adolescent Sleepiness Questionnaire","שאלון ישנוניות כללית"],
+"CB1":["Cannabinoid receptor 1","קולטן קנבינואידים מסוג 1, במוח"],
+"CBT":["Cognitive Behavioral Therapy","טיפול קוגניטיבי־התנהגותי"],
+"CCT":["Computerized Cognitive Training","אימון קוגניטיבי ממוחשב"],
+"CES-D":["Center for Epidemiologic Studies Depression scale","שאלון לדיכאון"],
+"CFA":["Confirmatory Factor Analysis","ניתוח גורמים מאשש"],
+"ChAT":["Choline Acetyltransferase","האנזים שבונה אצטילכולין"],
+"ChR2":["Channelrhodopsin-2","תעלה רגישה לאור כחול שמעוררת נוירון"],
+"CNS":["Central Nervous System","מערכת העצבים המרכזית: המוח ומוח השדרה"],
+"CR":["Conditioned Response","תגובה מותנית"],
+"CS":["Conditioned Stimulus","גירוי מותנה"],
+"CSF":["Cerebrospinal Fluid","נוזל המוח והשדרה"],
+"CT":["Computed Tomography","טומוגרפיה ממוחשבת, צילום רנטגן בפרוסות"],
+"DBS":["Deep Brain Stimulation","גרייה מוחית עמוקה"],
+"DMS":["Delayed Matching to Sample","משימת התאמה לדוגמה אחרי השהיה (זיכרון חזותי)"],
+"DNA":["Deoxyribonucleic Acid","החומר התורשתי, שנמצא בכרומוזומים"],
+"DQ":["Developmental Quotient","מנת הרמה ההתפתחותית"],
+"DRD4":["Dopamine Receptor D4","גן של קולטן דופמין מסוג D4"],
+"DSM-5":["DSM, 5th edition","המהדורה החמישית של המדריך האמריקני לאבחון הפרעות נפשיות"],
+"DSM-IV":["DSM, 4th edition","המהדורה הרביעית של המדריך לאבחון הפרעות נפשיות"],
+"DSM-III":["DSM, 3rd edition","המהדורה השלישית של המדריך לאבחון הפרעות נפשיות"],
+"5-HT1A":["","קולטן סרוטונין מסוג 1A"],
+"5-HT3":["","קולטן סרוטונין מסוג 3, יונוטרופי"],
+"MAO-A":["Monoamine Oxidase A","מונואמין אוקסידאז מסוג A"],
+"MAO-B":["Monoamine Oxidase B","מונואמין אוקסידאז מסוג B"],
+"GPT-4":["Generative Pre-trained Transformer 4","מודל שפה של OpenAI"],
+"DSM":["Diagnostic and Statistical Manual of Mental Disorders","המדריך האמריקני לאבחון הפרעות נפשיות"],
+"DTI":["Diffusion Tensor Imaging","הדמיה של מסילות אקסונים לפי תנועת המים"],
+"EEG":["Electroencephalogram","רישום הפעילות החשמלית של המוח מהקרקפת"],
+"EPSP":["Excitatory Postsynaptic Potential","פוטנציאל פוסט־סינפטי מעורר"],
+"ERA":["English and Romanian Adoptees study","מחקר המאומצים מרומניה לאנגליה"],
+"ERP":["Event-Related Potential","פוטנציאל מעורר: תגובה חשמלית במוח לאירוע מסוים"],
+"FDG":["Fluorodeoxyglucose","גלוקוז רדיואקטיבי שמשמש בסריקת PET"],
+"FDR":["False Discovery Rate","תיקון סטטיסטי להשוואות מרובות"],
+"fMRI":["functional MRI","MRI תפקודי, מודד פעילות לפי רמת החמצן בדם"],
+"GABA":["Gamma-Aminobutyric Acid","גאבא, הנוירוטרנסמיטר המעכב העיקרי"],
+"GABAA":["","קולטן גאבא מסוג A, תעלת כלוריד"],
+"GAD":["Glutamic Acid Decarboxylase","האנזים שבונה גאבא מגלוטמט"],
+"GE":["General Electric","חברת ג'נרל אלקטריק"],
+"GLOBE":["Global Leadership and Organizational Behavior Effectiveness","מחקר בין־לאומי על מנהיגות ותרבות"],
+"GPS":["Global Positioning System","מערכת ניווט לווייני"],
+"HOME":["Home Observation for Measurement of the Environment","תצפית בבית למדידת הסביבה"],
+"IACUC":["Institutional Animal Care and Use Committee","ועדה מוסדית לפיקוח על מחקר בבעלי חיים"],
+"ICD":["International Classification of Diseases","הסיווג הבין־לאומי של מחלות"],
+"ICV":["Intracerebroventricular","מתן לתוך חדרי המוח"],
+"IM":["Intramuscular","הזרקה לתוך שריר"],
+"IP":["Intraperitoneal","הזרקה לחלל הבטן"],
+"IPSP":["Inhibitory Postsynaptic Potential","פוטנציאל פוסט־סינפטי מעכב"],
+"IQ":["Intelligence Quotient","מנת משכל"],
+"IRB":["Institutional Review Board","ועדת אתיקה מוסדית למחקר בבני אדם"],
+"IV":["Intravenous","הזרקה לווריד"],
+"LA":["Long-acting","שחרור ממושך"],
+"LLMs":["Large Language Models","מודלי שפה גדולים"],
+"LMX":["Leader-Member Exchange","תיאוריית חילופי מנהיג־עובד"],
+"LPC":["Least Preferred Coworker","שאלון העמית הפחות מועדף"],
+"LPD":["Letter Position Dyslexia","דיסלקסיית מיקום אותיות"],
+"MAO":["Monoamine Oxidase","מונואמין אוקסידאז, האנזים שמפרק מונואמינים"],
+"MBO":["Management by Objectives","ניהול לפי יעדים"],
+"MDMA":["","אקסטזי"],
+"MDS":["","סוללה ממוחשבת שנותנת מנות לקשב, זיכרון, זיכרון עבודה ותפקוד ניהולי"],
+"AQ":["Attention Quotient","מנת קשב"],
+"EFQ":["Executive Function Quotient","מנת התפקוד הניהולי"],
+"MEG":["Magnetoencephalography","מגנטו־אנצפלוגרפיה, מדידת השדות המגנטיים של המוח"],
+"MMQ":["Multifactorial Memory Questionnaire","שאלון זיכרון רב־גורמי"],
+"MMQ-C":["Multifactorial Memory Questionnaire - Contentment","שביעות רצון מהזיכרון"],
+"MMQ-S":["Multifactorial Memory Questionnaire - Strategy","שימוש באסטרטגיות זיכרון"],
+"MPTP":["","רעלן שהורס נוירונים דופמינרגיים"],
+"MQ":["Memory Quotient","מנת זיכרון כללית"],
+"MRI":["Magnetic Resonance Imaging","הדמיית תהודה מגנטית"],
+"mRNA":["messenger RNA","RNA שליח, העתק של גן שמשמש לבניית חלבון"],
+"NBAS":["Neonatal Behavioral Assessment Scale","סולם ברזלטון להערכת התנהגות יילודים"],
+"NCCP":["National Center for Children in Poverty","המרכז הלאומי לילדים בעוני"],
+"NE":["Norepinephrine","נוראפינפרין"],
+"NICHD":["National Institute of Child Health and Human Development","המכון הלאומי האמריקני לבריאות הילד"],
+"NMDA":["N-methyl-D-aspartate","סוג של קולטן גלוטמט שמעביר סידן"],
+"NpHR":["Halorhodopsin","נשא רגיש לאור צהוב שמעכב נוירון"],
+"OCD":["Obsessive-Compulsive Disorder","הפרעה טורדנית־כפייתית"],
+"OCPD":["Obsessive-Compulsive Personality Disorder","הפרעת אישיות טורדנית־כפייתית"],
+"OECD":["Organisation for Economic Co-operation and Development","הארגון לשיתוף פעולה ולפיתוח כלכלי"],
+"PAG":["Periaqueductal Gray","החומר האפור המרכזי"],
+"PBS":["Public Broadcasting Service","רשת השידור הציבורית האמריקנית"],
+"PCP":["Phencyclidine","פנציקלידין, ״אבק מלאכים״"],
+"PET":["Positron Emission Tomography","טומוגרפיה בפליטת פוזיטרונים"],
+"PHA-L":["Phaseolus vulgaris leucoagglutinin","חומר לסימון קדומני של אקסונים"],
+"PNS":["Peripheral Nervous System","מערכת העצבים ההיקפית"],
+"PSD":["Parental Screen Distraction","הסחת מסך הורית"],
+"RAVLT":["Rey Auditory Verbal Learning Test","מבחן הלמידה המילולית של ריי"],
+"REM":["Rapid Eye Movement","שנת חלומות, שבה העיניים זזות מהר"],
+"RNA":["Ribonucleic Acid","חומצה ריבונוקלאית"],
+"RQ1":["Research Question 1","שאלת המחקר הראשונה"],
+"RQ2":["Research Question 2","שאלת המחקר השנייה"],
+"RQ3":["Research Question 3","שאלת המחקר השלישית"],
+"RQ4":["Research Question 4","שאלת המחקר הרביעית"],
+"RVP":["Rapid Visual Information Processing","משימת קשב מתמשך"],
+"SAT":["Separation Anxiety Test","מבחן חרדת הפרידה"],
+"SC":["Subcutaneous","הזרקה מתחת לעור"],
+"SES":["Socioeconomic Status","מעמד סוציו־אקונומי"],
+"SfN":["Society for Neuroscience","העמותה למדע העצב"],
+"SLT":["Situational Leadership Theory","תיאוריית המנהיגות המצבית"],
+"SMC":["Subjective Memory Complaints","תלונות זיכרון סובייקטיביות"],
+"SQUID":["Superconducting Quantum Interference Device","גלאי רגיש במיוחד לשדות מגנטיים"],
+"SR":["Slow Release","שחרור איטי"],
+"SSP":["Spatial Span","משימת טווח זיכרון מרחבי"],
+"SSRI":["Selective Serotonin Reuptake Inhibitor","מעכב סלקטיבי של קליטה חוזרת של סרוטונין"],
+"SSS":["Stanford Sleepiness Scale","סולם הישנוניות של סטנפורד, ישנוניות ברגע"],
+"STAI-S":["State-Trait Anxiety Inventory - State","שאלון חרדת מצב"],
+"SVZ":["Subventricular Zone","האזור התת־חדרי"],
+"THC":["Tetrahydrocannabinol","החומר הפעיל בקנאביס"],
+"THCCOOH":["","תוצר הפירוק של THC שנמדד בבדיקה"],
+"TMN":["Tuberomammillary Nucleus","גרעין הפקעת הדדי"],
+"TMS":["Transcranial Magnetic Stimulation","גרייה מגנטית חוצת גולגולת"],
+"UCR":["Unconditioned Response","תגובה לא מותנית"],
+"UCS":["Unconditioned Stimulus","גירוי לא מותנה"],
+"VMH":["Ventromedial Hypothalamus","ההיפותלמוס הגחוני־מדיאלי"],
+"VRM":["Verbal Recognition Memory","זיכרון זיהוי מילולי"],
+"VTA":["Ventral Tegmental Area","אזור הטגמנטום הגחוני"],
+"VZ":["Ventricular Zone","האזור החדרי"],
+"WMQ":["Working Memory Quotient","מנת זיכרון העבודה"],
+"5-HT":["5-hydroxytryptamine","סרוטונין"],
+"2-DG":["2-deoxyglucose","גלוקוז מסומן שנקלט ולא מתפרק"],
+"L-DOPA":["","מולקולת־הקדם של דופמין"],
+"6-OHDA":["6-hydroxydopamine","רעלן שהורס נוירונים דופמינרגיים ונוראדרנרגיים"]
+};
+const ACR_RE=new RegExp("(?<![A-Za-z0-9])(?<![A-Za-z0-9]-)("+Object.keys(ACR).sort((a,b)=>b.length-a.length).map(k=>k.replace(/[-]/g,"\\-")).join("|")+")(?![A-Za-z0-9])(?!-[A-Za-z0-9])","g");
+const acrText=k=>{const [en,he]=ACR[k];return en?`${he}; <bdi dir="ltr">${en}</bdi>`:he};
+function acrExpand(html){
+  const plain=html.replace(/<[^>]+>/g," ");const seen=new Set();
+  for(const k of Object.keys(ACR)){const [en,he]=ACR[k];if((he&&plain.includes(he))||(en&&plain.toLowerCase().includes(en.toLowerCase())))seen.add(k)}
+  let inSvg=0;
+  return html.split(/(<svg[\s\S]*?<\/svg>|<[^>]+>)/).map(p=>{if(p.startsWith("<"))return p;
+    return p.replace(ACR_RE,(m,k,off,str)=>{if(seen.has(k))return m;seen.add(k);
+      const before=str.slice(0,off),inP=before.lastIndexOf("(")>before.lastIndexOf(")");
+      return inP?`<bdi class="ak">${m}</bdi>: ${acrText(k)}`:`<bdi class="ak">${m}</bdi> <span class="acr">(${acrText(k)})</span>`})}).join("");
+}
+function acrNote(...texts){const s=texts.join(" "),f=new Set();let m;ACR_RE.lastIndex=0;while((m=ACR_RE.exec(s)))f.add(m[1]);
+  return f.size?`<div class="acrnote"><b>ראשי תיבות:</b> ${[...f].map(k=>`<bdi class="ak">${k}</bdi> = ${acrText(k)}`).join(" · ")}</div>`:""}
+const T=[
+ {id:"t1",icon:"brain",title:"הטרמה",blocks:[
+  {h:"יואב, והמציאות שאנחנו בונים",html:`${def("על מה הנושא",`איך גירויים שאנחנו לא שמים לב אליהם משפיעים על הפירוש ועל ההתנהגות.<br><b>מה נלמד כאן:</b> יואב · הטרמה · זקנה והליכה · ריח ניקוי · גירויים תת־סיפיים`)}${ex("<b>יואב</b> (דמות בדויה להמחשה) סטודנט שנה ב׳, תומך נלהב של מפלגה מסוימת ומתכונן למבחן בסטטיסטיקה. נלווה אותו לאורך הלומדה ונראה איך האמונות, הזיכרון והאינטואיציה שלו מטעים אותו, ולפעמים עוזרים לו.")}<p>הפרק נפתח במקיין ובאובמה: כל אחד שינה עמדה, ותומכי הצד השני ראו בזה <b>צביעות</b>, בעוד שבצד שלהם ראו <b>גמישות</b>. הנקודה: איננו מגיבים למציאות כפי שהיא, אלא למציאות כפי שאנו <b>מבנים</b> אותה.</p>${def("הטרמה",`${E("Priming")} הפעלה של אסוציאציות מסוימות בזיכרון, שמשפיעה על מחשבה או פעולה אחרת, <b>גם בלי שנהיה מודעים</b> לכך.`)}`,q:"q1"},
+  {h:"הטרמה בניסויים ובחיים",html:`${tiles([["clock","זקנה","מי שהשלים משפטים עם ״זקן״, ״חכם״, ״גמלאי״ הלך למעלית <b>לאט יותר</b>, בלי לשים לב (בארג׳)"],["check","ריח ניקוי","סטודנטים שהריחו חומר ניקוי השאירו את השולחן <b>נקי יותר</b> מפירורים"],["moon","סרט מפחיד","לבד בבית, רעש מהמקרר נשמע כמו פורץ"]])}<p>הטרמה עובדת גם עם גירויים <b>תת־סיפיים</b>, שמוצגים קצר מכדי לתפוס במודע: ״לחם״ מזרז זיהוי של ״חמאה״.</p>${rem("הלקח: חלק נכבד מעיבוד המידע החברתי שלנו הוא <b>אוטומטי</b>: לא מכוון, לא גלוי, ומחוץ למודעות.")}${ex("יואב קרא לפני השינה על הפרעות חרדה. למחרת, כשהלב שלו דופק לפני המבחן, הוא בטוח שיש לו ״התקף״. הקריאה <b>הטרימה</b> את הפירוש.")}`,q:"q3"}
+ ]},
+ {id:"t2",icon:"scales",title:"תפיסה ופירוש של אירועים",blocks:[
+  {h:"התקשורת ״נגדנו״",html:`${def("על מה הנושא",`איך האמונות המוקדמות שלנו משנות את מה שאנחנו רואים.<br><b>מה נלמד כאן:</b> הטיית תקשורת נתפסת · עונש מוות · הפנים של ״הנאצי״ · אפקט קולשוב`)}<p>ברוב המקרים אנחנו <b>מדייקים</b> בתפיסת אחרים. אבל כשהמידע <b>דו־משמעי</b>, התפיסות המוקדמות מכריעות.</p><p><b>ואלון ועמיתיו</b> (1985): סטודנטים <b>פרו־ישראלים ופרו־ערבים</b> צפו באותם דיווחי חדשות על הטבח בסברה ושתילה (1982). <b>שתי הקבוצות</b> חשבו שהדיווח מוטה <b>נגדן</b>.</p>${ex("יואב צופה בעימות טלוויזיוני ובטוח שהמועמד שלו ניצח. גם תומכי הצד השני בטוחים בכך. תומכים ראו את המועמד שלהם כמנצח ביחס של כ־<b>10:1</b>.")}`,q:"q5"},
+  {h:"אותן ראיות, שני כיוונים",html:`<p><b>לורד ועמיתיו</b> (1979): תומכים ומתנגדים לעונש מוות קראו <b>אותם</b> שני מחקרים, אחד בעד ואחד נגד. כל צד קיבל את המחקר שתומך בו ופסל את השני. החשיפה לאותו מידע <b>הגבירה</b> את המחלוקת.</p><div class="tw"><table><tr><th>מחקר</th><th>מה נמצא</th></tr><tr><td><b>הפנים של האיש</b> (רותברט ובירל)</td><td>מי ששמע שהוא היה בגסטפו ראה הבעה <b>אכזרית</b>; מי ששמע שהציל יהודים ראה הבעה <b>חמה</b></td></tr><tr><td><b>אפקט קולשוב</b></td><td>אותן פנים ניטרליות נראו עצובות, מהורהרות או שמחות לפי הסצנה שלפניהן</td></tr><tr><td><b>העברת תכונה ספונטנית</b></td><td>מי שמכנה אחרים ״רכלנים״ נתפס בעצמו כרכלן</td></tr></table></div>${rem("״אִמרו לי היכן אתם רואים הטיה, ואומר לכם מהן עמדותיכם״.")}`,q:"q7"}
+ ]},
+ {id:"t3",icon:"lock",title:"השתמרות אמונה וזיכרון",blocks:[
+  {h:"אמונה ששורדת את ההפרכה",html:`${def("על מה הנושא",`למה אמונות שורדות גם אחרי שהבסיס שלהן קרס, ואיך הזיכרון נבנה מחדש.<br><b>מה נלמד כאן:</b> השתמרות האמונה · הכבאים · לשקול את ההפך · בניית זיכרונות · עמדות והתנהגות בעבר`)}${def("השתמרות האמונה",`${E("Belief perseverance")} דבקות באמונה גם כשהבסיס שלה הופרך, כי <b>ההסבר</b> שבנינו לה שורד.`)}<p>רוס ועמיתיו שתלו אמונה, ביקשו להסביר <b>למה</b> היא נכונה, ואז גילו שהיא הומצאה. האמונה השתמרה ב־<b>75%</b>. בניסוי <b>הכבאים</b> (אנדרסון), מי שהסביר למה אנשים שמסתכנים הם כבאים טובים (״אמיצים״) המשיך להאמין בכך גם אחרי שנאמר לו שהמקרים בדויים.</p>${def("התרופה: להסביר את ההפך",`הוראה ״להיות אובייקטיבי״ <b>לא עזרה</b>. מה שעזר: לשאול ״מה הייתי חושב אם התוצאה הייתה <b>הפוכה</b>?״, או להסביר למה <b>התאוריה ההפוכה</b> נכונה.`)}`,q:"q9"},
+  {h:"הזיכרון נבנה בזמן השליפה",html:`<p>כ־<b>85%</b> מהסטודנטים חשבו שהזיכרון הוא ״תיבת אחסון״. בפועל אנחנו <b>בונים</b> את הזיכרון בזמן השליפה, כמו חוקר מאובנים שמשחזר דינוזאור משברי עצמות.</p>${def("אפקט המידע המטעה",`${E("Misinformation effect")} עד ראייה שקיבל מידע שגוי אחרי האירוע <b>מטמיע</b> אותו בזיכרון: תמרור ״תן זכות קדימה״ נזכר כ״עצור״ (לופטוס). כ<b>רבע</b> מהאנשים ״נזכרו״ בחוויית ילדות בדויה שדמיינו.`)}${ex("סטודנטים ששמעו שבן שיחם <b>חיבב</b> אותם זכרו אותו רגוע ושמח; מי ששמע שלא חיבב, זכר אותו עצבני.")}`,q:"q11"},
+  {h:"משכתבים את העבר",html:`<div class="tw"><table><tr><th>מה משוכתב</th><th>דוגמה</th></tr><tr><td><b>עמדות</b></td><td>סטודנטים שכתבו חיבור ושינו עמדה ״זכרו״ שתמיד חשבו כך (בם ומקונל)</td></tr><tr><td><b>חוויות</b></td><td>טיולים נזכרים כ<b>נעימים יותר</b> ממה שהיו (משקפיים ורודים)</td></tr><tr><td><b>מערכות יחסים</b></td><td>מי שהתאהב יותר ״זוכר״ אהבה ממבט ראשון; מי שנפרד ״זוכר״ שתמיד היה אנוכי</td></tr><tr><td><b>התנהגות</b></td><td>אחרי מסר על צחצוח שיניים, סטודנטים ״זכרו״ שצחצחו יותר</td></tr></table></div><p>מי שהשקיע בטיפול או בדיאטה זוכר את העבר <b>גרוע</b> ממה שהיה, ולכן מרגיש שהשתפר הרבה. גרינוולד: לכולנו יש <b>״אגו טוטליטרי״</b>.</p>`,q:"q13"}
+ ]},
+ {id:"t4",icon:"bulb",title:"שיפוטים אינטואיטיביים",blocks:[
+  {h:"שתי מערכות",html:`${def("על מה הנושא",`מה האינטואיציה יודעת, ואיפה היא נכשלת.<br><b>מה נלמד כאן:</b> עיבוד מבוקר ואוטומטי · סכמות · רגש · מומחיות · זיכרון חבוי · גבולות`)}<div class="tw"><table><tr><th>עיבוד מבוקר</th><th>עיבוד אוטומטי</th></tr><tr><td>גלוי (explicit): מחושב, רפלקטיבי, <b>מודע</b></td><td>חבוי (implicit): נטול מאמץ, <b>לא מודע</b>, ״אינטואיציה״</td></tr></table></div><p>החלק האוטומטי <b>גדול</b> יותר ממה שחשבו. דוגמאות: <b>סכמות</b> (״לשנן״ או ״לשמן״), <b>תגובות רגשיות</b> (מסלול מהיר לאמיגדלה, לפני הקורטקס), ו<b>מומחיות</b> (רב־אמן בשחמט ״רואה״ את המהלך).</p>`,q:"q15"},
+  {h:"כוחה וגבולותיה",html:`${tiles([["hand","זיכרון חבוי","מטופלת שלא זכרה את הרופא סירבה ללחוץ את ידו אחרי שדקר אותה בנעץ"],["id","ראייה עיוורת","״לא רואים כלום״, אבל מנחשים נכון את כיוון המקלות"],["data","החלטה עם הסחה","בבחירת דירה, מי שדעתו הוסחה בחר הכי טוב (דייקסטרהאוס; שנוי במחלוקת)"]])}${rem("יש גם גבולות: אין ראיות שקלטות ״תת־סיפיות״ ״מתכנתות מחדש״ את התודעה. חולי ״מוח מפוצל״ <b>ממציאים</b> הסברים להתנהגות שלהם.")}${ex("יואב מתלבט בין שתי דירות. אחרי שהוא ״ישן על זה״, הבחירה ברורה לו. ייתכן שהעיבוד האוטומטי עשה כאן עבודה טובה.")}`,q:"q17"}
+ ]},
+ {id:"t5",icon:"target",title:"ביטחון יתר והטיית האישוש",blocks:[
+  {h:"בטוחים מדי",html:`${def("על מה הנושא",`למה אנחנו בטוחים יותר ממה שאנחנו צודקים, ואיך מצמצמים את זה.<br><b>מה נלמד כאן:</b> ביטחון יתר · דאנינג־קרוגר · כשל התכנון · מומחים · הטיית האישוש · תרופות`)}${def("ביטחון יתר בהיסק",`${E("Overconfidence phenomenon")} הנטייה להפריז בדיוק של השיפוטים שלנו. אצל כהנמן וטברסקי, תשובות ש״בטוחים בהן ב־98%״ היו שגויות ב־<b>30%</b>.`)}<div class="tw"><table><tr><th>מצב</th><th>צדקו</th><th>היו בטוחים</th></tr><tr><td>ניבוי תשובות של זר</td><td>63%</td><td>75%</td></tr><tr><td>ניבוי תשובות של שותף לדירה</td><td>68%</td><td>78%</td></tr><tr><td>מומחים פוליטיים (טטלוק)</td><td>פחות מ־40%</td><td>יותר מ־80%</td></tr></table></div>`,q:"q19"},
+  {h:"בורות על הבורות, וכשל התכנון",html:`${def("קרוגר ודאנינג",`דווקא מי שקיבל את הציונים <b>הנמוכים</b> ביותר בדקדוק, הומור והיגיון <b>מפריז</b> ביכולתו. צריך יכולת כדי לזהות חוסר יכולת. במשימות <b>קשות מאוד</b> החלשים כן מבינים שהם חלשים.`)}${def("כשל התכנון",`מעריכים בחסר כמה זמן ייקח לסיים. אצטדיון מונטריאול: הגג לבדו עלה 120 מיליון דולר, כמו האומדן לכל האצטדיון. ה״Big Dig״ בבוסטון: 2.6 מיליארד הפכו ל־14.6.`)}${ex("יואב בטוח ב־90% שיסיים את העבודה תוך יומיים. זה לוקח לו שבוע. סטודנטים שהיו בטוחים ב־100% בניבוי על עצמם טעו ב־15%.")}<p>מומחים שטעו אמרו ״<b>כמעט</b> צדקתי״, וכך שמרו על הביטחון.</p>`,q:"q21"},
+  {h:"הטיית האישוש, ומה עוזר",html:`${def("הטיית האישוש",`${E("Confirmation bias")} הנטייה לחפש מידע ש<b>מאשש</b> את מה שאנחנו כבר מאמינים. <b>ווסון</b>: הכלל ל־2,4,6 היה ״מספרים עולים״. רוב המשתתפים בדקו רק סדרות שמאשרות את הניחוש שלהם (8,10,12), ו־<b>23 מתוך 29</b> שכנעו את עצמם בכלל שגוי.`)}<p><b>אימות עצמי</b>: אנחנו מחפשים חברים ומשוב שמאשרים את התפיסה העצמית שלנו, גם כשהיא לא חיובית.</p>${tiles([["chart","משוב מיידי","חזאים ומהמרים בסוסים מקבלים משוב יומי, ומעריכים טוב את הסיכוי שלהם"],["split","לפרק משימה","הערכת זמן לכל חלק נותנת הערכה מציאותית יותר"],["question","למה אני טועה?","לחשוב על סיבה טובה אחת שבגללה השיפוט שגוי"]])}`,q:"q23"}
+ ]},
+ {id:"t6",icon:"gear",title:"היריסטיקות ומחשבות ״אילו״",blocks:[
+  {h:"יציגות",html:`${def("על מה הנושא",`קיצורי דרך מנטליים: מהירים, לרוב טובים, ולפעמים מטעים.<br><b>מה נלמד כאן:</b> היריסטיקה · יציגות · שיעור בסיס · זמינות · מחשבות ״אילו״`)}${def("היריסטיקה",`${E("Heuristic")} אסטרטגיית חשיבה פשוטה שמאפשרת שיפוט <b>מהיר ויעיל</b>.`)}${def("היריסטיקת היציגות",`שיפוט לפי <b>הדמיון</b> לחבר טיפוסי בקטגוריה, תוך התעלמות מההסתברות.`)}<p><b>פלג</b> תואר כגרוש שאוהב לריב: יותר מ־80% אמרו ״עורך דין״. גם כשנאמר ש־<b>70%</b> מהמדגם מהנדסים, ההערכה <b>לא השתנתה</b>: התעלמו מ<b>שיעור הבסיס</b>.</p><p><b>ליאת</b> (פילוסופיה, אפליה, הפגנות): רוב האנשים אמרו שסביר יותר שהיא ״כספרית <b>ופמיניסטית</b>״ מאשר ״כספרית״. אבל הסיכוי לשני דברים יחד <b>לא יכול</b> להיות גדול מהסיכוי לאחד מהם.</p>`,q:"q25"},
+  {h:"זמינות",html:`${def("היריסטיקת הזמינות",`${E("Availability heuristic")} שיפוט שכיחות לפי כמה <b>קל להיזכר</b> בדוגמאות.`)}<div class="tw"><table><tr><th>דוגמה</th><th>מה קרה</th></tr><tr><td>עירק או טנזניה?</td><td>רוב האנשים אמרו עירק (28 מיליון), אבל בטנזניה 40 מיליון</td></tr><tr><td>רשימת שמות</td><td>שמות <b>מפורסמים</b> מאחד המינים גרמו להעריך שהמין הזה היה רוב</td></tr><tr><td>טיסה מול נהיגה</td><td>נהיגה מסוכנת פי <b>230</b>; אחרי 11 בספטמבר, כ־<b>350</b> הרוגים נוספים בכבישים</td></tr></table></div>${rem("אנחנו ממהרים להסיק ממקרה <b>אחד ברור</b> על כלל, ולא מכלל על מקרה. התוצאה: ״<b>הזנחת ההסתברות</b>״, פחד מהדברים הלא נכונים.")}`,q:"q27"},
+  {h:"מחשבות ״אילו״",html:`${def("מחשבות ״אילו״",`${E("Counterfactual thinking")} דמיון של תוצאה חלופית שהייתה יכולה לקרות. ככל שקל יותר לדמיין אותה, הרגש חזק יותר.`)}${fig("podium44","זוכי <b>ארד</b> (״כמעט בלי מדליה״) שמחים יותר מזוכי <b>כסף</b> (״כמעט זהב״).")}${ex("יואב קיבל <b>89</b> וחבר שלו קיבל 81. יואב מרגיש <b>גרוע</b> יותר: חסרה לו נקודה אחת ל־90.")}<p>שינוי תשובה במבחן מ<b>שגויה לנכונה</b> שכיח יותר מההפך, למרות התחושה. בטווח הארוך מתחרטים יותר על מה ש<b>לא</b> עשינו.</p>`,q:"q29"}
+ ]},
+ {id:"t7",icon:"cycle",title:"מתאם מדומה, שליטה ומצב רוח",blocks:[
+  {h:"קשרים שאינם קיימים",html:`${def("על מה הנושא",`איך אנחנו ״מוצאים״ סדר באקראיות, ואיך מצב הרוח צובע את השיפוט.<br><b>מה נלמד כאן:</b> מתאם מדומה · אשליית השליטה · רגרסיה לממוצע · מצב רוח`)}${def("מתאם מדומה",`${E("Illusory correlation")} תפיסת קשר שאינו קיים. מי שהאמין בזריעת עננים ״ראה״ קשר לגשם בנתונים <b>אקראיים</b>. חבר מתקשר כשחשבנו עליו, ואנחנו לא זוכרים את כל הפעמים שזה לא קרה.`)}${def("אשליית השליטה",`${E("Illusion of control")} תחושה שאירועים מקריים נתונים לשליטתנו. מי ש<b>בחר בעצמו</b> כרטיס הגרלה דרש עליו מחיר גבוה פי <b>4</b> (לנגר). מהמרים זורקים קובייה בעדינות למספר נמוך ובכוח לגבוה.`)}`,q:"q31"},
+  {h:"רגרסיה לממוצע",html:`${def("רגרסיה אל הממוצע",`${E("Regression toward the average")} תוצאות קיצוניות נוטות לחזור לכיוון הממוצע. אחרי ציון מצוין, הציון הבא צפוי להיות נמוך יותר; אחרי ציון גרוע, גבוה יותר.`)}<p><b>שפנר</b> (1985): סטודנטים ״חינכו״ את תום (דמיוני) להגיע עד 8:30. זמני ההגעה היו <b>אקראיים</b> בין 8:20 ל־8:40, ובכל זאת אחרי נזיפה הוא ״השתפר״. רוב הסטודנטים סיימו בתחושה שהנזיפות <b>עבדו</b>.</p>${ex("יואב נכשל בבוחן, נרשם לשיעור יוגה, ובבוחן הבא קיבל ציון טוב יותר. ייתכן שהיוגה לא עשתה דבר: אחרי שפל, כמעט כל דבר ״עוזר״.")}`,q:"q33"},
+  {h:"מצב רוח ושיפוט",html:`<p>במצב רוח <b>טוב</b> העולם נראה ידידותי: מי שקיבל מתנה קטנה דירג את המכונית והטלוויזיה שלו גבוה יותר; אוהדי הקבוצה המנצחת העריכו שמלחמה פחות סבירה. במצב רוח <b>רע</b> נזכרים באירועים שליליים.</p>${def("פורגס ועמיתיו (1984)",`אנשים צפו בווידאו של עצמם משוחחים. במצב רוח טוב (בהיפנוזה) ראו את עצמם נינוחים וחברותיים; במצב רוח רע, <b>נוקשים ועצבניים</b>. ואנחנו מייחסים את השינוי <b>לעולם</b>, לא למצב הרוח.`)}${rem("בעוררות רגשית (כעס, או אפילו שמחה גדולה) נוטים לשפוט מהר ולפי <b>סטראוטיפים</b>.")}`,q:"q35"}
+ ]}
+];
+const Q={"q1":{"t":"t1","v":[{"q":"מהי הטרמה?","a":"הפעלת אסוציאציות שמשפיעה על מחשבה או פעולה","w":["חזרה מכוונת על חומר כדי לזכור אותו טוב יותר","שיפוט מוקדם של אדם לפני שמכירים אותו לעומק","מצב שבו מידע חדש מוחק זיכרון ישן"],"e":"הטרמה מפעילה אסוציאציות, לפעמים בלי שנהיה מודעים לכך, ומשפיעה על פירוש ועל התנהגות."},{"q":"מה הלקח הכללי ממחקרי ההטרמה, לפי הפרק?","a":"חלק גדול מעיבוד המידע שלנו הוא אוטומטי","w":["אנחנו מודעים כמעט לכל מה שמשפיע עלינו","הטרמה פועלת רק כשהגירוי מוצג זמן רב","רק אנשים עם זיכרון חלש מושפעים מהטרמה"],"e":"העיבוד לא מכוון, לא גלוי, ומחוץ למודעות."}]},"q2":{"t":"t1","v":[{"q":"מה מצא בארג׳ אצל מי שהשלים משפטים עם מילים כמו ״זקן״ ו״גמלאי״?","a":"הם הלכו לאט יותר בלי לשים לב","w":["הם נזכרו ביותר מילים הקשורות לזקנה","הם דיווחו שהם מרגישים עייפים","הם הלכו מהר יותר כדי להרגיש צעירים"],"e":"המילים הטרימו ״זקנה״, וזה השפיע על קצב ההליכה. המשתתפים לא היו מודעים לכך."}]},"q3":{"t":"t1","v":[{"q":"מה קרה לסטודנטים שנחשפו לריח של חומר ניקוי?","a":"השאירו את השולחן נקי יותר","w":["התלוננו על הריח החזק בחדר","לא הושפעו מהריח בשום צורה","אכלו פחות עוגיות מהרגיל"],"e":"הם גם זיהו מהר יותר מילים של ניקיון, בלי להיות מודעים לריח."},{"q":"מהו גירוי תת־סיפי?","a":"גירוי שמוצג קצר מכדי לתפוס במודע","w":["גירוי חזק במיוחד שקשה להתעלם ממנו","גירוי שמוצג רק לאוזן אחת","גירוי שאדם בוחר להתעלם ממנו"],"e":"גם גירויים כאלה יכולים להטרים: ״לחם״ תת־סיפי מזרז זיהוי של ״חמאה״."}]},"q4":{"t":"t1","v":[{"q":"יואב קרא על הפרעות חרדה, ולמחרת פירש דפיקות לב כהתקף. מה זה מדגים?","a":"הטרמה של פירוש","w":["הטיית האישוש","השתמרות אמונה","אפקט המידע המטעה"],"e":"הקריאה הפעילה אסוציאציות שהשפיעו על הפירוש של התחושה, כמו אצל סטודנטים לרפואה."}]},"q5":{"t":"t2","v":[{"q":"מה מצאו ואלון ועמיתיו אצל סטודנטים פרו־ישראלים ופרו־ערבים?","a":"שתי הקבוצות ראו בדיווח הטיה נגדן","w":["רק הפרו־ערבים ראו הטיה בדיווח","שתי הקבוצות ראו בדיווח הטיה בעדן","שתי הקבוצות חשבו שהדיווח ניטרלי"],"e":"אותו דיווח נתפס כעוין על ידי שני הצדדים. זו הטיית התקשורת הנתפסת."},{"q":"מתי התפיסות המוקדמות משפיעות הכי הרבה?","a":"כשהמידע דו־משמעי","w":["כשהמידע ברור וחד־משמעי","כשאין שום מידע מוקדם","כשהמידע מגיע ממומחה"],"e":"כשאפשר לפרש מידע בכמה דרכים, האמונות שלנו קובעות את הפירוש."}]},"q6":{"t":"t2","v":[{"q":"מה קורה בדרך כלל לתומכים אחרי עימות טלוויזיוני?","a":"כל צד חושב שהמועמד שלו ניצח","w":["רוב הצופים משנים את עמדתם","שני הצדדים מסכימים מי ניצח","התמיכה במועמדים נחלשת"],"e":"היחס היה בערך 10:1 לטובת ״המועמד שלי״, והאהדה עשויה אף להתחזק."}]},"q7":{"t":"t2","v":[{"q":"מה מצא לורד (1979) על תומכים ומתנגדים לעונש מוות?","a":"אותו מידע מעורב הגביר את המחלוקת","w":["אותו מידע מעורב קירב את העמדות","שני הצדדים קיבלו את שני המחקרים","רק המתנגדים היו ביקורתיים"],"e":"כל צד קיבל את המחקר שתומך בו ופסל את השני."},{"q":"מה הראה המחקר על הפנים של האיש שתואר כאיש גסטפו או כמציל יהודים?","a":"נראו אכזריות או חמות לפי מה שנאמר","w":["כולם ראו את אותה הבעה בדיוק","אנשים זיהו נכון את האיש לפי פניו","ההבעה נשפטה רק לפי השפם"],"e":"המידע המוקדם שינה את תפיסת ההבעה (רותברט ובירל)."}]},"q8":{"t":"t2","v":[{"q":"מהו אפקט קולשוב?","a":"פנים ניטרליות נתפסות לפי הסצנה שלפניהן","w":["שחקנים מתאימים את ההבעה לסצנה שלפניה","צופים זוכרים פנים טוב יותר מאשר סצנות","פנים מוכרות נראות לנו מושכות יותר"],"e":"אותן פנים נראו עצובות אחרי אישה מתה, ושמחות אחרי ילדה משחקת."},{"q":"מהי העברת תכונה ספונטנית?","a":"מה שאנחנו אומרים על אחרים נקשר אלינו","w":["תכונות עוברות מההורים לילדים שלהם","אנחנו מעתיקים בלי לשים לב תכונות של חברים","תכונה של קבוצה מיוחסת לכל אחד מחבריה"],"e":"מי שקורא לאחרים ״רכלנים״ עשוי להיתפס בעצמו כרכלן."}]},"q9":{"t":"t3","v":[{"q":"מהי השתמרות האמונה?","a":"דבקות באמונה גם אחרי שהבסיס שלה הופרך","w":["שינוי מהיר של אמונה אחרי ראיה חדשה","שמירה על אמונות שקיבלנו מההורים","הנטייה לזכור רק אמונות חיוביות"],"e":"ההסבר שבנינו לאמונה שורד גם כשהמידע המקורי מוכחש."},{"q":"למה האמונה השתמרה אצל 75% אחרי שנאמר שהמידע הומצא?","a":"כי ההסברים שבנו לה המשיכו להתקיים","w":["כי לא האמינו לחוקרים שהמידע בדוי","כי שכחו שהמידע הוכחש","כי האמונה הייתה נכונה בפועל"],"e":"ברגע שהסברנו למה משהו נכון, ההסבר מקבל חיים משלו."}]},"q10":{"t":"t3","v":[{"q":"מה עזר לצמצם השתמרות אמונה?","a":"לחשוב למה ההפך עשוי להיות נכון","w":["להנחות אותם להיות אובייקטיביים","לחזור שוב ושוב על המידע המקורי","לתת להם יותר זמן לחשוב על זה"],"e":"ההוראה ״היו אובייקטיביים״ לא עזרה. לשקול את ההפך הפחית את ההטיה מאוד."}]},"q11":{"t":"t3","v":[{"q":"איך הזיכרון עובד, לפי המחקר?","a":"אנחנו בונים את הזיכרון מחדש בזמן השליפה","w":["הזיכרון הוא תיבת אחסון של העתקים מדויקים","הזיכרון נמחק אחרי כמה שנים בדיוק","כל מה שחווינו נשמר בשלמותו"],"e":"כ־85% מהסטודנטים חשבו שהזיכרון הוא תיבת אחסון. המחקר הראה שזה לא נכון."},{"q":"מהו אפקט המידע המטעה?","a":"הטמעת מידע שגוי שהתקבל אחרי האירוע","w":["שכחת אירוע בגלל מידע שקדם לו","הנטייה לשקר לגבי אירועים מביכים","בלבול בין שני אירועים דומים"],"e":"לופטוס: ״תן זכות קדימה״ נזכר כ״עצור״ אחרי מידע מטעה."}]},"q12":{"t":"t3","v":[{"q":"כמה מהאנשים ״נזכרו״ בחוויית ילדות בדויה שדמיינו?","a":"כרבע","w":["כמעט כולם","אף אחד","כ־90%"],"e":"לופטוס וברנשטיין: כרבע זכרו את האירוע הבדוי כאילו קרה."}]},"q13":{"t":"t3","v":[{"q":"סטודנטים כתבו חיבור ושינו עמדה. מה הם ״זכרו״ על העמדה הקודמת?","a":"שתמיד חשבו כמו עכשיו","w":["שהעמדה הקודמת הייתה הפוכה לגמרי","שלא הייתה להם עמדה בכלל","שהחיבור לא השפיע עליהם"],"e":"בם ומקונל: הם בנו מחדש את העמדה הקודמת לפי העמדה הנוכחית."},{"q":"מה ״זוכרים״ זוגות שנפרדו על בן הזוג לשעבר?","a":"שתמיד היו בו סימני אנוכיות","w":["שהיה מושלם עד הרגע האחרון","שלא היה ביניהם שום קשר","שהם אשמים בכל מה שקרה"],"e":"הרגשות הנוכחיים מכוונים את השליפה מהזיכרון."}]},"q14":{"t":"t3","v":[{"q":"למה אנשים בתכניות לשיפור עצמי מדווחים על תועלת רבה מהשיפור הקטן?","a":"הם זוכרים את העבר גרוע ממה שהיה","w":["הם באמת השתפרו מאוד בזכות התכנית","הם מנסים לרצות את המטפל או המדריך","הם לא זוכרים את התכנית עצמה"],"e":"אחרי השקעה גדולה, ״קודם הייתי במצב גרוע יותר״."},{"q":"מה טען גרינוולד על ״האגו הטוטליטרי״?","a":"אנחנו משכתבים את העבר לפי ההווה","w":["אנחנו שולטים באחרים כדי להרגיש טוב","אנחנו זוכרים רק כישלונות מהעבר","אנחנו מעדיפים מנהיגים סמכותיים"],"e":"כמו ב־1984 של אורוול: ממעיטים בהתנהגות רעה ומפריזים בטובה."}]},"q15":{"t":"t4","v":[{"q":"מה ההבדל בין עיבוד מבוקר לעיבוד אוטומטי?","a":"מבוקר מודע ומחושב; אוטומטי לא מודע","w":["מבוקר מהיר יותר; אוטומטי מדויק יותר","מבוקר קיים רק אצל מומחים; אוטומטי אצל כולם","מבוקר רגשי; אוטומטי לוגי"],"e":"העיבוד האוטומטי מקביל לאינטואיציה, והוא גדול יותר ממה שחשבו."},{"q":"למה רבי־אמן בשחמט ״רואים״ את המהלך הבא במבט אחד?","a":"מומחיות מאפשרת זיהוי אינטואיטיבי","w":["הם מחשבים במהירות את כל האפשרויות","הם זוכרים בעל פה כל משחק שראו","הם מנחשים ובדרך כלל פשוט מצליחים"],"e":"רמזי המידע מאוחסנים בזיכרון, והזיהוי אוטומטי."}]},"q16":{"t":"t4","v":[{"q":"למה תגובות רגשיות מגיעות לפעמים לפני שחושבים?","a":"מסלול קצר מגיע לאמיגדלה לפני הקורטקס","w":["הקורטקס מעבד רגשות מהר יותר מהאמיגדלה","רגשות נלמדים ולכן הם אוטומטיים","אנחנו מדחיקים את המחשבה המודעת"],"e":"לדו: מידע עובר מהתלמוס לאמיגדלה לפני ש״הקורטקס החושב״ מתערב."}]},"q17":{"t":"t4","v":[{"q":"מטופלת שלא זכרה את הרופא סירבה ללחוץ את ידו אחרי הנעץ. מה זה מדגים?","a":"זיכרון חבוי","w":["זיכרון גלוי","השתמרות אמונה","ראייה עיוורת"],"e":"היא לא זיהתה אותו במודע, אבל הזיכרון המרומז השתמר."},{"q":"מה מצא דייקסטרהאוס על בחירת דירה?","a":"מי שדעתו הוסחה בחר הכי טוב","w":["מי שהחליט מיד בחר הכי טוב","מי שניתח זמן רב בחר הכי טוב","לא היה הבדל בין הקבוצות"],"e":"לפעמים כדאי ״לקחת את הזמן״ ולתת לעיבוד הלא מודע לפעול. הממצא שנוי במחלוקת."}]},"q18":{"t":"t4","v":[{"q":"מה ידוע על קלטות ״תת־סיפיות״ לשיפור עצמי?","a":"אין ראיות שהן עובדות","w":["הן עובדות טוב יותר מטיפול","הן עובדות רק בשינה","הן עובדות רק אצל ילדים"],"e":"גירוי תת־סיפי יכול לגרום לתגובה חלשה וחולפת, לא ״לתכנת מחדש״."}]},"q19":{"t":"t5","v":[{"q":"מהי תופעת ביטחון היתר בהיסק?","a":"הפרזה בדיוק של השיפוטים שלנו","w":["הערכה נמוכה מדי של היכולות שלנו","ביטחון מוצדק שנבנה מניסיון","חשש מופרז מטעויות"],"e":"אצל כהנמן וטברסקי, תשובות ״בטוחות ב־98%״ היו שגויות ב־30%."},{"q":"מראיינים ניבאו תשובות של זרים. כמה צדקו וכמה היו בטוחים?","a":"צדקו ב־63%, היו בטוחים ב־75%","w":["צדקו ב־75%, היו בטוחים ב־63%","צדקו ב־90%, היו בטוחים ב־90%","צדקו ב־50%, היו בטוחים ב־50%"],"e":"63% הוא רק 13% מעל ניחוש. הביטחון היה גבוה יותר מהדיוק."}]},"q20":{"t":"t5","v":[{"q":"מה הראו מומחים פוליטיים במחקר של טטלוק?","a":"בטוחים מעל 80%, צדקו פחות מ־40%","w":["צדקו כמעט בכל הניבויים שנתנו","הודו מיד בטעות כשהתבררה","היו פחות בטוחים מאנשים רגילים"],"e":"מי שטעה אמר ״כמעט צדקתי״, וכך שמר על הביטחון."}]},"q21":{"t":"t5","v":[{"q":"מה מצאו קרוגר ודאנינג?","a":"החלשים ביותר מפריזים ביכולתם","w":["החזקים ביותר מפריזים ביכולתם","כולם מעריכים את עצמם בדיוק","החלשים יודעים שהם חלשים"],"e":"צריך יכולת כדי לזהות חוסר יכולת. במשימות קשות מאוד, החלשים כן מבינים."},{"q":"מהו כשל התכנון?","a":"הערכה בחסר של הזמן שייקח לסיים","w":["תכנון יתר שמונע התחלה","הערכה ביתר של הזמן הדרוש","ויתור על תכנון לטובת אינטואיציה"],"e":"אצטדיון מונטריאול וה״Big Dig״ בבוסטון: הרבה יותר זמן וכסף מהמתוכנן."}]},"q22":{"t":"t5","v":[{"q":"סטודנטים שהיו בטוחים ב־100% בניבוי על עצמם. כמה טעו?","a":"כ־15%","w":["אף אחד","כ־50%","כמעט כולם"],"e":"גם ביטחון מלא לא מבטיח צדקה. בממוצע הם טעו כמעט פי 2 מהצפוי."}]},"q23":{"t":"t5","v":[{"q":"מהי הטיית האישוש?","a":"חיפוש מידע שמאשש את מה שכבר מאמינים","w":["חיפוש מידע שעלול להפריך את האמונה","אישור של אחרים לפני שמחליטים","נטייה להסכים עם הרוב"],"e":"ווסון: רוב המשתתפים בדקו רק סדרות שמאשרות את הניחוש."},{"q":"מה היה הכלל בניסוי 2,4,6 של ווסון?","a":"שלושה מספרים בסדר עולה","w":["מספרים זוגיים בהפרש 2","כל מספר כפול מקודמו","שלושה מספרים זוגיים"],"e":"23 מתוך 29 שכנעו את עצמם בכלל שגוי, כי לא ניסו להפריך."}]},"q24":{"t":"t5","v":[{"q":"איזו דרך עוזרת לצמצם ביטחון יתר?","a":"לחשוב על סיבה טובה לכך שאני טועה","w":["לחשוב על עוד סיבות לכך שאני צודק","להתייעץ רק עם מי שמסכים","להחליט מהר כדי לא להתבלבל"],"e":"גם משוב מיידי ופירוק משימה לחלקים עוזרים."},{"q":"מהו אימות עצמי?","a":"חיפוש משוב שמאשר את התפיסה העצמית","w":["בדיקה עצמית של עבודה לפני הגשה","חיפוש משוב שמשפר את התפיסה העצמית","הסתמכות על עצמנו בלבד"],"e":"אנשים מחפשים חברים ובני זוג שמאשרים את דעתם על עצמם, גם כשהיא לא חיובית."}]},"q25":{"t":"t6","v":[{"q":"מהי היריסטיקה?","a":"אסטרטגיית חשיבה פשוטה לשיפוט מהיר","w":["כלל לוגי שמבטיח תמיד תשובה נכונה","טעות שיטתית בזיכרון לטווח ארוך","שיטת מחקר מקובלת בפסיכולוגיה"],"e":"היריסטיקות חוסכות מאמץ ובדרך כלל עובדות, אבל לפעמים מטעות."},{"q":"מהי היריסטיקת היציגות?","a":"שיפוט לפי דמיון לחבר טיפוסי","w":["שיפוט לפי כמה קל להיזכר בדוגמאות","שיפוט לפי מה שרוב האנשים חושבים","שיפוט לפי המידע הראשון שקיבלנו"],"e":"היא מובילה להתעלמות מהסתברות, כמו בשיעור הבסיס."}]},"q26":{"t":"t6","v":[{"q":"מה קרה כשנאמר ש־70% מהמדגם מהנדסים, בתיאור של פלג?","a":"ההערכות לא השתנו בכלל","w":["רוב האנשים אמרו ״מהנדס״","ההערכות ירדו מעט","האנשים ביקשו עוד מידע"],"e":"התעלמו משיעור הבסיס, כי פלג ״ייצג״ עורכי דין."},{"q":"מה הבעיה בתשובה ״ליאת כספרית ופמיניסטית״?","a":"שני דברים יחד לא סבירים יותר מאחד מהם","w":["ליאת לא מתאימה לתיאור של פמיניסטית","אין מספיק מידע על ליאת","כספריות לא יכולות להיות פעילות"],"e":"טברסקי וכהנמן: הסבירות לצירוף אינה יכולה לעלות על הסבירות לכל חלק."}]},"q27":{"t":"t6","v":[{"q":"מהי היריסטיקת הזמינות?","a":"שיפוט שכיחות לפי קלות ההיזכרות","w":["שיפוט לפי דמיון לחבר טיפוסי","שיפוט לפי המידע הזמין באינטרנט","שיפוט לפי דעת הרוב"],"e":"מה שקל לזכור נראה שכיח. בדרך כלל זה עובד, אבל לא תמיד."},{"q":"למה רוב האנשים חושבים שבעירק יותר תושבים מבטנזניה?","a":"עירקים זמינים יותר בזיכרון","w":["בעירק באמת יש יותר תושבים","עירק גדולה יותר בשטח שלה","טנזניה היא מדינה חדשה יחסית"],"e":"בטנזניה 40 מיליון, בעירק 28 מיליון."}]},"q28":{"t":"t6","v":[{"q":"מה קרה בכבישי ארה״ב אחרי 11 בספטמבר, כשאנשים העדיפו לנהוג?","a":"כ־350 הרוגים נוספים בשלושה חודשים","w":["מספר תאונות הדרכים דווקא ירד","לא היה שום שינוי במספר ההרוגים","רק כ־10 הרוגים נוספים בכל השנה"],"e":"גיגרנצר בדק. נהיגה מסוכנת פי 230 מטיסה לאותו מרחק."},{"q":"מהי ״הזנחת ההסתברות״?","a":"פחד מסכנות נדירות והתעלמות משכיחות","w":["הערכה מדויקת של כל סיכון","התעלמות מסכנות נדירות ופחד משכיחות","חוסר עניין בסטטיסטיקה"],"e":"פוחדים מטרור ומשפעת החזירים, ולא מעישון, נהיגה או שפעת רגילה."}]},"q29":{"t":"t6","v":[{"q":"מהן מחשבות ״אילו״?","a":"דמיון תוצאה חלופית שלא קרתה","w":["תכנון של מה לעשות בפעם הבאה","ניבוי של מה יקרה בעתיד","זיכרון מדויק של מה שקרה"],"e":"נקראות גם מחשבות נוגדות עובדות."},{"q":"למה זוכי ארד שמחים יותר מזוכי כסף?","a":"לארד קל לדמיין שלא זכה בכלל","w":["לארד היו ציפיות גבוהות יותר","לכסף קל לדמיין שלא זכה בכלל","זוכי ארד צעירים יותר"],"e":"זוכה הכסף מדמיין זהב; זוכה הארד מדמיין ״בלי מדליה״."}]},"q30":{"t":"t6","v":[{"q":"יואב קיבל 89 וחברו קיבל 81. מי מרגיש גרוע יותר, ולמה?","a":"יואב, כי קל לו לדמיין 90","w":["החבר, כי הציון שלו נמוך יותר","שניהם מרגישים אותו דבר","יואב, כי למד יותר שעות"],"e":"ככל שקל יותר לדמיין את החלופה הטובה, תחושת ההחמצה חזקה יותר."},{"q":"על מה אנשים מתחרטים יותר בטווח הארוך?","a":"על מה שלא עשו","w":["על מה שעשו","על החלטות כספיות","על דברים שאמרו בכעס"],"e":"למשל, ״הלוואי שהייתי לומד ברצינות״. זה נכון גם במערב וגם באסיה."}]},"q31":{"t":"t7","v":[{"q":"מהו מתאם מדומה?","a":"תפיסת קשר שאינו קיים","w":["מתאם אמיתי שקשה למדוד","מתאם שמתבטל אחרי זמן","קשר בין שני משתנים מדומיינים"],"e":"מי שהאמין בזריעת עננים ״ראה״ קשר לגשם בנתונים אקראיים."},{"q":"למה נדמה לנו שחברים מתקשרים בדיוק כשחשבנו עליהם?","a":"אנחנו זוכרים רק את צירופי המקרים","w":["יש קשר אמיתי בין מחשבה לטלפון","חברים קרובים חושבים זה על זה באותו זמן","אנחנו מתקשרים אחרי שאנחנו חושבים עליהם"],"e":"לא שמים לב לפעמים שחשבנו על חבר והוא לא התקשר."}]},"q32":{"t":"t7","v":[{"q":"מהי אשליית השליטה?","a":"תחושה שאירועים מקריים נתונים לשליטתנו","w":["שליטה אמיתית באירועים שנראים מקריים","ויתור על שליטה במצבים קשים במיוחד","חשש מופרז מאובדן שליטה בחיים"],"e":"היא מזינה מהמרים ומסחר בבורסה."},{"q":"מה מצאה לנגר על מי שבחר בעצמו את כרטיס ההגרלה?","a":"דרש מחיר גבוה פי 4 כדי למכור אותו","w":["מכר אותו בזול יותר משאר המשתתפים","זכה בתדירות גבוהה יותר בהגרלה","לא היה מוכן למכור אותו בשום מחיר"],"e":"הבחירה יצרה תחושת שליטה, אף שהסיכוי זהה."}]},"q33":{"t":"t7","v":[{"q":"מהי רגרסיה אל הממוצע?","a":"תוצאות קיצוניות נוטות לחזור לממוצע","w":["תוצאות נוטות להיעשות קיצוניות יותר","ממוצעים משתנים לאורך זמן","חזרה להרגל ישן אחרי שינוי"],"e":"אחרי ציון מצוין, הבא צפוי להיות נמוך יותר, ולהפך."},{"q":"למה סטודנטים בניסוי של שפנר חשבו שהנזיפות לתום עבדו?","a":"אחרי איחור קיצוני, הבא מוקדם יותר","w":["תום באמת שיפר את זמן ההגעה שלו","הנזיפות הפחידו את תום","המחשב תוכנת להגיב לנזיפות"],"e":"הזמנים היו אקראיים. זו רגרסיה לממוצע, שיצרה אשליית שליטה."}]},"q34":{"t":"t7","v":[{"q":"יואב נכשל, התחיל יוגה, והשתפר. מה ההסבר האפשרי לפי הפרק?","a":"רגרסיה לממוצע","w":["מתאם מדומה","היריסטיקת יציגות","הטיית האישוש"],"e":"אחרי שפל, כמעט כל ניסיון ״עוזר״ כי הציון נוטה לחזור לממוצע."}]},"q35":{"t":"t7","v":[{"q":"מה מצאו פורגס ועמיתיו כשאנשים צפו בווידאו של עצמם?","a":"במצב רוח רע ראו את עצמם עצבניים","w":["מצב הרוח לא השפיע על השיפוט","במצב רוח טוב ראו את עצמם עצבניים","כולם ראו את עצמם באופן חיובי"],"e":"ואנחנו מייחסים את השינוי לעולם, לא למצב הרוח שלנו."},{"q":"איך מצב רוח טוב משפיע על השיפוט?","a":"העולם נראה ידידותי יותר","w":["אנחנו ביקורתיים יותר","אנחנו נזכרים באירועים שליליים","אין לו השפעה על השיפוט"],"e":"מי שקיבל מתנה קטנה דירג את המכונית והטלוויזיה שלו גבוה יותר."}]},"q36":{"t":"t7","v":[{"q":"מה קורה לשיפוט בעוררות רגשית חזקה?","a":"שופטים מהר ולפי סטראוטיפים","w":["שופטים לאט ובזהירות רבה","נמנעים לחלוטין מכל שיפוט","שופטים בדיוק רב יותר מהרגיל"],"e":"גם בכעס וגם בשמחה גדולה, מחשבות של מצב הרוח מסיחות מחשיבה מורכבת."}]}};
+const SUM=`<h2>סיכום: מאיירס פרק 3 (חלק א׳) - לתפוס ולשפוט את העולם החברתי</h2>
+<div class="key"><b>על מה מדובר?</b> אנחנו לא מגיבים למציאות כפי שהיא, אלא למציאות כפי שאנחנו <b>בונים</b> אותה. החלק הזה מראה איך האמונות המוקדמות משנות את מה שאנחנו <b>רואים</b> (הטרמה, פירוש), את מה שאנחנו <b>זוכרים</b> (זיכרון שנבנה מחדש), ואת השיפוט שלנו: האינטואיציה מהירה ולרוב טובה, אבל היא מובילה ל<b>ביטחון יתר</b>, לשימוש ב<b>היריסטיקות</b> מטעות, ל<b>מתאמים מדומים</b> ול<b>אשליית שליטה</b>. גם מצב הרוח צובע את השיפוט.</div>
+
+<h3>הדוגמה שתלווה אותנו: יואב</h3>
+<p><b>יואב</b> (דמות בדויה להמחשה) סטודנט שנה ב׳, תומך נלהב של מפלגה מסוימת ומתכונן למבחן בסטטיסטיקה. נראה איך האמונות, הזיכרון והאינטואיציה שלו מטעים אותו.</p>
+
+<h3>1. הטרמה</h3>
+<ul>
+<li><b>הטרמה</b>: הפעלת אסוציאציות שמשפיעה על מחשבה או פעולה, <b>בלי מודעות</b>.</li>
+<li>מילים של זקנה = הליכה <b>איטית</b> יותר (בארג׳). ריח ניקוי = שולחן <b>נקי</b> יותר. עובד גם עם גירויים <b>תת־סיפיים</b>.</li>
+<li>יואב קרא על חרדה, ולמחרת פירש דפיקות לב כהתקף.</li>
+<li>הלקח: חלק גדול מהעיבוד החברתי <b>אוטומטי</b>.</li>
+</ul>
+
+<h3>2. תפיסה ופירוש</h3>
+<p>כשהמידע <b>דו־משמעי</b>, האמונות המוקדמות מכריעות:</p>
+<div class="tw"><table><tr><th>מחקר</th><th>מה נמצא</th></tr>
+<tr><td><b>ואלון</b> (סברה ושתילה)</td><td>פרו־ישראלים ופרו־ערבים: <b>שניהם</b> ראו הטיה <b>נגדם</b></td></tr>
+<tr><td><b>לורד</b> (עונש מוות)</td><td>אותו מידע מעורב <b>הגביר</b> את המחלוקת</td></tr>
+<tr><td><b>עימותים</b></td><td>כ־10:1 ״המועמד שלי ניצח״</td></tr>
+<tr><td><b>רותברט ובירל</b></td><td>אותן פנים: ״גסטפו״ = אכזרי, ״מציל יהודים״ = חם</td></tr>
+<tr><td><b>קולשוב</b></td><td>פנים ניטרליות נקראות לפי הסצנה שלפניהן</td></tr>
+<tr><td><b>העברת תכונה ספונטנית</b></td><td>מי שקורא לאחרים רכלנים נתפס כרכלן</td></tr></table></div>
+
+<h3>3. השתמרות אמונה וזיכרון</h3>
+<ul>
+<li><b>השתמרות האמונה</b>: אמונה שורדת גם אחרי שהבסיס הופרך (75%), כי <b>ההסבר</b> שבנינו שורד. ניסוי הכבאים.</li>
+<li>התרופה: לא ״היו אובייקטיביים״, אלא <b>להסביר את ההפך</b>.</li>
+<li>הזיכרון <b>נבנה בזמן השליפה</b> (85% חשבו שהוא ״תיבה״). <b>אפקט המידע המטעה</b> (לופטוס): ״תן זכות קדימה״ הופך ל״עצור״. כרבע ״נזכרו״ באירוע בדוי.</li>
+<li>משכתבים <b>עמדות</b> (״תמיד חשבתי כך״), <b>חוויות</b> (טיולים ורודים), <b>מערכות יחסים</b> (מי שנפרד ״זוכר״ אנוכיות), ו<b>התנהגות</b> (צחצוח שיניים). ״<b>אגו טוטליטרי</b>״ (גרינוולד).</li>
+</ul>
+
+<h3>4. אינטואיציה</h3>
+<div class="tw"><table><tr><th>עיבוד מבוקר</th><th>עיבוד אוטומטי</th></tr>
+<tr><td>גלוי, מחושב, מודע</td><td>חבוי, נטול מאמץ, לא מודע</td></tr></table></div>
+<ul>
+<li>האוטומטי כולל <b>סכמות</b>, <b>תגובות רגשיות</b> (לאמיגדלה לפני הקורטקס), ו<b>מומחיות</b> (שחמט).</li>
+<li><b>זיכרון חבוי</b> (המטופלת והנעץ), <b>ראייה עיוורת</b>, ובחירת דירה טובה יותר <b>עם הסחה</b> (שנוי במחלוקת).</li>
+<li>גבולות: אין ראיות לקלטות ״תת־סיפיות״.</li>
+</ul>
+
+<h3>5. ביטחון יתר והטיית האישוש</h3>
+<div class="tw"><table><tr><th>ממצא</th><th>צדקו</th><th>בטוחים</th></tr>
+<tr><td>כהנמן וטברסקי</td><td>70%</td><td>98%</td></tr>
+<tr><td>ניבוי תשובות של זר</td><td>63%</td><td>75%</td></tr>
+<tr><td>מומחים פוליטיים (טטלוק)</td><td>&lt;40%</td><td>&gt;80%</td></tr></table></div>
+<ul>
+<li><b>קרוגר ודאנינג</b>: החלשים ביותר מפריזים ביכולתם (במשימות שנראות פשוטות).</li>
+<li><b>כשל התכנון</b>: מונטריאול, ה־Big Dig.</li>
+<li><b>הטיית האישוש</b>: מחפשים מידע מאשש. <b>ווסון 2,4,6</b> (״סדר עולה״): 23 מתוך 29 טעו. <b>אימות עצמי</b>.</li>
+<li><b>מה עוזר</b>: משוב מיידי, פירוק משימה, ולחשוב <b>למה אני טועה</b>.</li>
+</ul>
+
+<h3>6. היריסטיקות ומחשבות ״אילו״</h3>
+<div class="tw"><table><tr><th>היריסטיקה</th><th>מה היא</th><th>דוגמה</th></tr>
+<tr><td><b>יציגות</b></td><td>שיפוט לפי דמיון לטיפוסי</td><td>פלג = עורך דין גם כש־70% מהנדסים (<b>שיעור בסיס</b>); ליאת ״כספרית ופמיניסטית״</td></tr>
+<tr><td><b>זמינות</b></td><td>שכיחות לפי קלות ההיזכרות</td><td>עירק מול טנזניה; פחד מטיסה (נהיגה מסוכנת פי 230; כ־350 הרוגים נוספים)</td></tr></table></div>
+<p><b>מחשבות ״אילו״</b>: ככל שקל לדמיין חלופה, הרגש חזק יותר. <b>ארד</b> שמח יותר מ<b>כסף</b>; 89 מרגיש גרוע מ־81. מתחרטים יותר על מה ש<b>לא</b> עשינו.</p>
+
+<h3>7. מתאם מדומה, שליטה ומצב רוח</h3>
+<ul>
+<li><b>מתאם מדומה</b>: זריעת עננים וגשם; ״חשבתי עליו והוא התקשר״.</li>
+<li><b>אשליית השליטה</b>: כרטיס שבחרתי שווה <b>פי 4</b> (לנגר); קובייה בעדינות למספר נמוך.</li>
+<li><b>רגרסיה לממוצע</b>: אחרי קיצון חוזרים לממוצע. תום והנזיפות (שפנר): הנזיפות ״עבדו״ בלי להשפיע. יואב והיוגה.</li>
+<li><b>מצב רוח</b>: טוב = עולם ידידותי; רע = זיכרונות שליליים. פורגס: אותו וידאו נראה אחרת, ואנחנו חושבים ש<b>העולם</b> השתנה. בעוררות שופטים לפי <b>סטראוטיפים</b>.</li>
+</ul>
+
+<h3>מלכודות נפוצות במבחן</h3>
+<div class="trap"><ul>
+<li><b>הטרמה פועלת גם בלי מודעות</b>, ואפילו תת־סיפית.</li>
+<li>חשיפה למידע מעורב <b>מגבירה</b> מחלוקת, לא ממתנת.</li>
+<li>״היו אובייקטיביים״ <b>לא עוזר</b>; ״שקלו את ההפך״ עוזר.</li>
+<li>הזיכרון <b>נבנה מחדש</b>, הוא לא העתק.</li>
+<li><b>החלשים</b> מפריזים ביכולתם, לא החזקים.</li>
+<li><b>יציגות = דמיון</b>; <b>זמינות = קלות היזכרות</b>. לא להחליף.</li>
+<li>הצירוף (״כספרית ופמיניסטית״) <b>לא יכול</b> להיות סביר יותר מחלק אחד.</li>
+<li><b>ארד שמח יותר מכסף.</b></li>
+<li>שינוי תשובה במבחן מוביל <b>יותר</b> לתיקון מאשר לטעות.</li>
+</ul></div>`;
+for(const t of T) t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id);
+const KEY=CONFIG.key;
+let S={q:{},read:{}};
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.q) S=s;}catch(e){}
+S.pos=S.pos||{};S.done=S.done||{};
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const st=id=>S.q[id]||(S.q[id]={n:0,c:0,w:0,t:0,lv:-1});
+const mastered=id=>(S.q[id]?.c||0)>=2;
+const topicPct=t=>Math.round(100*t.qids.filter(mastered).length/t.qids.length);
+const topicStarted=t=>S.read[t.id]||S.pos[t.id]!=null||t.qids.some(id=>S.q[id]&&S.q[id].n);
+const allIds=Object.keys(Q);
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+const pickVariant=id=>{const s=st(id),n=Q[id].v.length;return n>1?(s.lv+1)%n:0};
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const color=t=>`var(--${t.id})`;
+const app=document.getElementById("app");
+const LET=["א","ב","ג","ד"];
+
+function qCard(id,onDone,label){
+  const vi=pickVariant(id),v=Q[id].v[vi],opts=shuffle([v.a,...v.w]);
+  const box=document.createElement("div");box.className="q fade";
+  box.innerHTML=(label?`<span class="eyebrow">${label}</span>`:"")+`<div class="qtext">${esc(v.q)}</div>${acrNote(v.q,v.a,...v.w)}<div class="opts"></div>`;
+  const wrap=box.querySelector(".opts");
+  opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt";b.dataset.a=o===v.a?"1":"";
+    b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+    b.onclick=()=>{const ok=o===v.a,s=st(id);s.n++;s.t=Date.now();s.lv=vi;ok?s.c++:(s.c=0,s.w++);save();
+      wrap.querySelectorAll("button").forEach(x=>{x.disabled=true;if(x.dataset.a)x.classList.add("right")});
+      if(!ok)b.classList.add("wrong");
+      const fb=document.createElement("div");fb.className="fb fade "+(ok?"ok":"no");
+      fb.innerHTML=`${ic(ok?"check":"x")}<div><strong>${ok?"נכון!":"לא בדיוק"}</strong>${esc(v.e)}</div>`;box.appendChild(fb);
+      const nx=document.createElement("button");nx.className="primary";nx.textContent="המשך";nx.style.alignSelf="flex-start";
+      nx.onclick=()=>onDone(ok);box.appendChild(nx);nx.focus({preventScroll:true});nx.scrollIntoView({block:"nearest",behavior:"smooth"});
+    };wrap.appendChild(b)});
+  return box;
+}
+
+function home(){
+  document.body.style.removeProperty("--c");if(S.at){delete S.at;save()}
+  const started=T.filter(topicStarted);
+  const total=Math.round(T.reduce((a,t)=>a+strength(t)*t.qids.length,0)/allIds.length);
+  const weak=allIds.filter(id=>S.q[id]&&S.q[id].n&&!mastered(id)).length;
+  app.innerHTML=`<div class="stack fade">
+   <section class="cover" style="--c:var(--accent)">
+    <div class="cover-art">${FIG[CONFIG.cover]()}</div>
+    <div class="cover-body">
+     <span class="eyebrow">${CONFIG.eyebrow}</span>
+     ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
+     <p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר, ובסוף הלומדה מבחן מסכם עם ציון.</p>
+     <div class="stats">
+      <div class="ring" style="--p:${total}"><span>${total}%</span></div>
+      <div class="stat-text"><b>${total===0&&!started.length?"עוד לא התחלת":total>=80?"אתה שולט בחומר":`התקדמת ב־${total}% מהשאלות`}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
+     </div>
+     <div class="actions">
+      <button class="primary review-btn" id="rev" ${started.length?"":"disabled"}>${ic("cycle")}<span>${started.length?"חזרה מהירה":"חזרה מהירה (אחרי נושא ראשון)"}</span></button>
+      <button class="review-btn" id="exm">${ic("grad")}<span>מבחן מסכם${S.exam?` · ציון אחרון ${S.exam.pct}`:""}</span></button>
+      <button class="review-btn" id="wk" ${started.length?"":"disabled"}>${ic("target")}<span>נושאים לחיזוק</span></button>
+      ${typeof SUM!=="undefined"?`<button class="review-btn" id="sum">${ic("doc")}<span>סיכום הקריאה</span></button>`:""}
+     </div>
+    </div>
+   </section>
+   <div class="grid" id="list"></div>
+   <div class="foot"><a href="../#social" style="color:var(--accent);font-weight:700;text-decoration:none">→ לקורס</a><span>${CONFIG.note}</span><button class="ghost" id="reset">איפוס התקדמות</button></div>
+  </div>`;
+  app.querySelectorAll(".actions svg").forEach(x=>x.style.cssText="width:20px;height:20px");
+  const list=app.querySelector("#list");
+  T.forEach((t,i)=>{const p=strength(t),pos=S.pos[t.id],dn=S.done[t.id],b=document.createElement("button");b.className="tcard";b.style.setProperty("--c",color(t));
+    const status=dn?`✓ הושלם · מבחן ${dn.r}/${dn.n}`:pos!=null?`באמצע · קטע ${pos+1} מתוך ${t.blocks.length}`:S.read[t.id]?"✓ נקרא":topicStarted(t)?"בתהליך":"לא התחלת";
+    b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(dn?"check":t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${dn&&!p?100*dn.r/dn.n:p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
+    if(dn)b.classList.add("done");
+    b.onclick=()=>topic(i,pos!=null?pos:0);list.appendChild(b)});
+  app.querySelector("#rev").onclick=review;{const sb=app.querySelector("#sum");if(sb)sb.onclick=summary}app.querySelector("#exm").onclick=exam;app.querySelector("#wk").onclick=weakTopics;
+  const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{},pos:{},done:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
+  scrollTo(0,0);
+}
+
+function bar(title,n,i,label){
+  return `<div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">${label}</span></div><div class="steps">${Array.from({length:n},(_,k)=>`<i class="${k<=i?"on":""}"></i>`).join("")}</div></div><span class="eyebrow">${title}</span>`;
+}
+
+function topic(ti,bi){
+  const t=T[ti],blk=t.blocks[bi];document.body.style.setProperty("--c",color(t));
+  app.innerHTML=`<div class="stack">${bar(`נושא ${ti+1} · ${t.title}`,t.blocks.length+1,bi,`קטע ${bi+1} מתוך ${t.blocks.length}`)}
+   <article class="card fade"><h3>${blk.h}</h3>${acrExpand(blk.html)}</article><div id="slot"></div></div>`;
+  S.pos[t.id]=bi;S.at={ti,bi};save();
+  app.querySelector("#back").onclick=home;
+  const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;delete S.pos[t.id];S.at={ti,quiz:1};save();quiz(ti)}};
+  if(bi>0){const pb=document.createElement("button");pb.className="ghost";pb.textContent="→ הקטע הקודם";pb.style.marginTop="6px";pb.onclick=()=>topic(ti,bi-1);setTimeout(()=>slot.appendChild(pb))}
+  const slot=app.querySelector("#slot");
+  {const b=document.createElement("button");b.className="primary";b.textContent=bi+1<t.blocks.length?"המשך":`למבחן הנושא (${t.qids.length} שאלות)`;b.onclick=next;slot.appendChild(b)}
+  scrollTo(0,0);
+}
+
+function runSet(title,ids,c,onEnd){
+  let i=0,right=0;document.body.style.setProperty("--c",c);
+  const step=()=>{
+    if(i>=ids.length)return onEnd(right,ids.length);
+    const id=ids[i],from=T.find(t=>t.id===Q[id].t);
+    app.innerHTML=`<div class="stack">${bar(title,ids.length,i,`שאלה ${i+1} מתוך ${ids.length}`)}<div id="slot"></div></div>`;
+    app.querySelector("#back").onclick=home;
+    const card=qCard(id,ok=>{if(ok)right++;i++;step()},from.title);card.style.setProperty("--c",color(from));
+    app.querySelector("#slot").appendChild(card);scrollTo(0,0);
+  };step();
+}
+
+function quiz(ti){
+  const t=T[ti];
+  const prev=T.slice(0,ti).filter(topicStarted).flatMap(x=>x.qids);
+  const extra=shuffle(prev).sort((a,b)=>st(a).c-st(b).c).slice(0,2);
+  runSet(`מבחן סיום · ${t.title}`,shuffle(t.qids).concat(extra),color(t),(r,n)=>done(r,n,ti));
+}
+
+function review(){
+  const pool=T.filter(topicStarted).flatMap(t=>t.qids),now=Date.now();
+  const tw={};T.forEach(t=>tw[t.id]=(100-strength(t))/20);
+  const score=id=>{const s=S.q[id]||{n:0,c:0,w:0,t:0};return (s.n?0:2)+s.w*2+(s.c<2?3:0)+Math.min(3,(now-s.t)/864e5)+tw[Q[id].t]+Math.random()*2};
+  const ids=pool.map(id=>[id,score(id)]).sort((a,b)=>b[1]-a[1]).slice(0,12).map(x=>x[0]);
+  runSet("חזרה מהירה",shuffle(ids),"var(--accent)",(r,n)=>done(r,n,null));
+}
+
+const strength=t=>Math.round(100*t.qids.filter(id=>S.q[id]&&S.q[id].n&&S.q[id].c>0).length/t.qids.length);
+
+function practice(ti){const t=T[ti];runSet(`תרגול · ${t.title}`,shuffle(t.qids),color(t),(r,n)=>done(r,n,ti))}
+
+function exam(){
+  const N=Math.min(allIds.length,Math.max(15,Math.min(20,T.length*3)));
+  const pools=T.map(t=>shuffle(t.qids)),ids=[];
+  for(let k=0;ids.length<N;k++)for(const p of pools){if(ids.length>=N)break;if(k<p.length)ids.push(p[k])}
+  const items=shuffle(ids).map(id=>{const vi=pickVariant(id),v=Q[id].v[vi];return{id,vi,v,opts:shuffle([v.a,...v.w]),pick:null}});
+  document.body.style.setProperty("--c","var(--accent)");
+  let i=0;
+  const step=()=>{
+    const it=items[i],from=T.find(t=>t.id===Q[it.id].t),last=i===items.length-1;
+    app.innerHTML=`<div class="stack">${bar("מבחן מסכם",items.length,i,`שאלה ${i+1} מתוך ${items.length}`)}
+     <div class="q fade"><span class="eyebrow">${esc(from.title)}</span><div class="qtext">${esc(it.v.q)}</div>${acrNote(it.v.q,it.v.a,...it.v.w)}<div class="opts"></div>
+     <div class="row"><button class="primary" id="nx" ${it.pick==null?"disabled":""}>${last?"הגשה ובדיקה":"הבא"}</button>${i?`<button class="ghost" id="pv">הקודם</button>`:""}</div></div></div>`;
+    {const bk=app.querySelector("#back");bk.onclick=()=>{if(bk.dataset.sure)home();else{bk.dataset.sure=1;bk.textContent="לחץ שוב כדי לצאת (התשובות לא יישמרו)"}}}
+    const wrap=app.querySelector(".opts"),nx=app.querySelector("#nx");
+    it.opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt"+(it.pick===o?" sel":"");
+      b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+      b.onclick=()=>{it.pick=o;wrap.querySelectorAll(".opt").forEach(x=>x.classList.remove("sel"));b.classList.add("sel");nx.disabled=false};
+      wrap.appendChild(b)});
+    nx.onclick=()=>{if(last)grade(items);else{i++;step()}};
+    const pv=app.querySelector("#pv");if(pv)pv.onclick=()=>{i--;step()};
+    scrollTo(0,0);
+  };step();
+}
+
+function grade(items){
+  const now=Date.now();let r=0;const per={};
+  items.forEach(it=>{const ok=it.pick===it.v.a,s=st(it.id),tid=Q[it.id].t;s.n++;s.t=now;s.lv=it.vi;ok?(s.c++,r++):(s.c=0,s.w++);
+    it.ok=ok;(per[tid]=per[tid]||{r:0,n:0}).n++;if(ok)per[tid].r++});
+  const n=items.length,pct=Math.round(100*r/n);S.exam={pct,t:now};save();
+  const rows=T.filter(t=>per[t.id]).map(t=>{const p=per[t.id],q=Math.round(100*p.r/p.n);
+    return `<div class="trow" style="--c:${color(t)}"><span class="tt">${esc(t.title)}</span><div class="bar"><i style="width:${q}%"></i></div><span class="sc">${p.r}/${p.n}</span></div>`}).join("");
+  const wrong=items.filter(it=>!it.ok);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">ציון המבחן המסכם</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct}"><span>${pct}</span></div><div class="big">${r}/${n}</div></div>
+    <p>${pct>=90?"מצוין, אתה שולט בחומר.":pct>=70?"טוב. עבור על הטעויות למטה וחזור על הנושאים החלשים.":"כדאי לחזור על החומר. למטה תמצא את הטעויות, ולכל אחת כפתור לחזרה על הנושא."}</p>
+    <h3>לפי נושא</h3><div class="trows">${rows}</div>
+    <div class="row"><button class="primary" id="again">מבחן מסכם חדש</button><button id="hm">לכל הנושאים</button></div>
+   </article>
+   ${wrong.length?`<h3>הטעויות שלך (${wrong.length})</h3>`:`<p class="muted">לא היו טעויות.</p>`}
+   <div class="stack" id="wl"></div></div>`;
+  const wl=app.querySelector("#wl");
+  wrong.forEach(it=>{const ti=T.findIndex(t=>t.id===Q[it.id].t),t=T[ti],c=document.createElement("article");c.className="card rev";c.style.setProperty("--c",color(t));
+    c.innerHTML=`<span class="eyebrow">${esc(t.title)}</span><div class="qtext">${esc(it.v.q)}</div>${acrNote(it.v.q,it.v.a,it.pick,it.v.e)}
+     <div class="opt wrong" aria-disabled="true"><span class="k">${ic("x")}</span><span><b>התשובה שלך:</b> ${esc(it.pick)}</span></div>
+     <div class="opt right" aria-disabled="true"><span class="k">${ic("check")}</span><span><b>התשובה הנכונה:</b> ${esc(it.v.a)}</span></div>
+     <div class="fb no">${ic("bulb")}<div><strong>למה?</strong>${esc(it.v.e)}</div></div>
+     <div class="row"><button class="primary go">חזרה על הנושא: ${esc(t.title)}</button></div>`;
+    c.querySelector(".go").onclick=()=>topic(ti,0);wl.appendChild(c)});
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;app.querySelector("#again").onclick=exam;
+  scrollTo(0,0);
+}
+
+function weakTopics(){
+  document.body.style.setProperty("--c","var(--accent)");
+  const list=T.map((t,i)=>({t,i,s:strength(t),started:topicStarted(t)})).sort((a,b)=>(a.started-b.started)||(a.s-b.s));
+  const lab=x=>!x.started?"עוד לא תרגלת":x.s>=80?"חזק":x.s>=50?"בינוני":"צריך חיזוק";
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <span class="eyebrow">נושאים לחיזוק</span><p class="muted">הנושאים מסודרים מהחלש לחזק, לפי התשובות האחרונות שלך בכל שאלה.</p>
+   <div class="stack" id="wl"></div></div>`;
+  const wl=app.querySelector("#wl");
+  list.forEach(x=>{const c=document.createElement("article");c.className="card rev";c.style.setProperty("--c",color(x.t));
+    c.innerHTML=`<div class="trow"><span class="tt">${x.i+1}. ${esc(x.t.title)}</span><div class="bar"><i style="width:${x.s}%"></i></div><span class="sc">${x.started?x.s+"%":"—"}</span></div>
+     <span class="tag ${!x.started?"":x.s>=80?"good":x.s>=50?"mid":"low"}">${lab(x)}</span>
+     <div class="row"><button class="primary pr">תרגול שאלות הנושא</button><button class="rd">קריאה חוזרת</button></div>`;
+    c.querySelector(".pr").onclick=()=>practice(x.i);c.querySelector(".rd").onclick=()=>topic(x.i,0);wl.appendChild(c)});
+  app.querySelector("#back").onclick=home;scrollTo(0,0);
+}
+
+function done(r,n,ti){
+  if(ti!=null){S.done[T[ti].id]={r,n};}if(S.at){delete S.at}save();
+  const nextT=ti!=null&&ti+1<T.length?ti+1:null,pct=Math.round(100*r/n);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">${ti!=null?`סיום נושא ${ti+1} · ${T[ti].title}`:"סיום חזרה מהירה"}</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct};--accent:var(--c)"><span>${pct}%</span></div><div class="big">${r}/${n}</div></div>
+    <p>${r===n?"מצוין, הכל נכון.":r>=n*0.7?"טוב מאוד. מה שטעית בו יחזור בחזרה המהירה, בניסוח אחר.":"כדאי לעבור שוב על הנושא. השאלות שטעית בהן יחזרו בחזרה המהירה."}</p>
+    <div class="row">${nextT!=null?`<button class="primary" id="nx" style="--c:${color(T[nextT])}">לנושא הבא: ${T[nextT].title}</button>`:""}<button id="hm">לכל הנושאים</button></div>
+   </article></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;
+  const nx=app.querySelector("#nx");if(nx)nx.onclick=()=>topic(nextT,0);
+  scrollTo(0,0);
+}
+function summary(){
+  document.body.style.setProperty("--c","var(--accent)");
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">סיכום הקריאה</span></div></div>
+   <article class="card sum">${acrExpand(SUM)}</article>
+   <div class="row"><button class="primary" id="hm">חזרה לכל הנושאים</button></div></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;scrollTo(0,0);
+}
+if(S.at&&T[S.at.ti]){const a=S.at;if(a.quiz)quiz(a.ti);else topic(a.ti,Math.min(a.bi||0,T[a.ti].blocks.length-1))}else home();
+</script>
+</body>
+</html>
