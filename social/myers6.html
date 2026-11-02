@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>לומדת חובת קריאה: מאיירס פרק 7 · שכנוע</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Rubik:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: a study notebook. Home = illustrated cover + topic cards; topic = one reading card at a time, with a highlighter for key terms and drawn figures */
+:root{
+  --bg:#eef2f4; --surface:#ffffff; --raised:#f7f9fa; --ink:#15222a; --muted:#4c5b66; --line:#dbe2e6;
+  --accent:#2457a6; --mark:#ffe27a; --good:#23855a; --good-soft:#e2f4ea; --bad:#c2452d; --bad-soft:#fbe6e1;
+  --t1:#d35d36; --t2:#3667cf; --t3:#0e8a7c; --t4:#8448c9; --t5:#b9800c; --t6:#2a7fa6; --t7:#b4436c; --t8:#5a6b2e;
+  --display:"Suez One","Frank Ruhl Libre","David",serif;
+  --body:"Rubik","Arial Hebrew","Segoe UI",Arial,sans-serif;
+  --shadow:0 1px 2px rgba(21,34,42,.06),0 8px 24px rgba(21,34,42,.07);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;font-weight:500;line-height:1.75;direction:rtl}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
+p{margin:0}
+.stack{display:flex;flex-direction:column;gap:16px}
+.muted{color:var(--muted)}
+mark{background:linear-gradient(transparent 38%,var(--mark) 38%,var(--mark) 92%,transparent 92%);color:inherit;padding:0 2px;font-weight:600}
+button{font:inherit;cursor:pointer;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:11px 18px}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button[disabled]{opacity:.55;cursor:default}
+.primary{background:var(--c,var(--accent));border-color:var(--c,var(--accent));color:var(--surface);font-weight:600}
+.ghost{background:transparent;border:none;color:var(--muted);padding:6px 2px}
+.ghost:hover{color:var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.badge{display:inline-block;align-self:flex-start;font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:99px;background:var(--accent);color:var(--surface);margin-bottom:6px}.entitle{display:inline;unicode-bidi:isolate;font-family:Rubik,system-ui,sans-serif;font-weight:800}.hetitle{margin:4px 0 0;font-weight:700;font-size:1.05rem}.cite{text-align:right;margin:4px 0 0;font-size:.85rem;color:var(--muted)}.cite a{color:var(--accent)}
+.eyebrow{font-size:.8rem;letter-spacing:.05em;font-weight:600;color:var(--c,var(--muted))}
+
+/* home */
+.cover{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.cover-art{background:var(--raised);border-bottom:1px solid var(--line);padding:8px 8px 0}
+.cover-art svg{display:block;width:100%;height:auto;max-height:230px}
+.cover-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px}
+.cover h1{font-size:clamp(2rem,6vw,2.6rem);font-weight:900}
+.stats{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.ring{--p:0;width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center;flex:none}
+.ring span{width:50px;height:50px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.9rem;font-variant-numeric:tabular-nums}
+.stat-text{display:flex;flex-direction:column;line-height:1.35;flex:1;min-width:160px}
+.stat-text b{font-size:1.05rem}
+.review-btn{display:flex;align-items:center;gap:8px}
+.actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.actions button{justify-content:center}
+.opt.sel{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--raised))}
+.opt[aria-disabled]{cursor:default}
+.opt .k svg{width:16px;height:16px}
+.trows{display:flex;flex-direction:column;gap:10px;width:100%}
+.trow{display:grid;grid-template-columns:minmax(0,1fr) minmax(70px,30%) auto;gap:10px;align-items:center;width:100%}
+.trow .tt{font-family:inherit;font-size:1rem;font-weight:600;line-height:1.35}
+.trow .bar i{background:var(--c)}
+.trow .sc{font-variant-numeric:tabular-nums;font-weight:700;min-width:3ch;text-align:left}
+.card.rev{align-items:stretch}
+.tag{align-self:flex-start;font-size:.82rem;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--raised)}
+.tag.good{background:var(--good-soft);color:var(--good)} .tag.low{background:var(--bad-soft);color:var(--bad)} .tag.mid{background:color-mix(in srgb,var(--mark) 45%,var(--raised))}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.tcard{--c:var(--accent);text-align:right;padding:0;overflow:hidden;border:none;border-radius:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s}
+.tcard:hover{transform:translateY(-2px)}
+.tcard .band{background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.tcard .band svg{width:44px;height:44px}
+.tcard .n{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;opacity:.85}
+.tcard .body{padding:12px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tcard .t{font-weight:700;font-size:1.05rem;line-height:1.35}
+.bar{height:7px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--c);border-radius:4px}
+.meta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip{font-size:.75rem;padding:3px 10px;border-radius:99px;font-weight:600;background:color-mix(in srgb,var(--c,var(--accent)) 14%,transparent);color:var(--c,var(--accent));white-space:nowrap}
+.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+
+/* topic */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;display:flex;flex-direction:column;gap:8px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.steps{display:flex;gap:5px}
+.steps i{flex:1;height:5px;border-radius:3px;background:var(--line)}
+.steps i.on{background:var(--c)}
+.prog{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tt{font-size:1.6rem;font-weight:900}
+.card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px}
+.card h3{font-size:1.25rem;color:var(--c)}
+.fig{background:var(--raised);border-radius:14px;padding:10px;margin-inline:-4px}
+.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{font-size:.8rem;color:var(--muted);text-align:center;margin-top:4px}
+figure{margin:0}
+.def{border:1.5px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 6%,var(--surface));border-radius:14px;padding:14px 16px}
+.lbl{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:var(--c);margin-bottom:4px}
+.who{display:flex;gap:12px;align-items:flex-start}
+.who .av{flex:none;width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.15rem}
+.who .yr{font-size:.8rem;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.tile{background:var(--raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile svg{width:32px;height:32px;color:var(--c)}
+.tile b{font-size:.98rem}
+.tile span{font-size:.88rem;color:var(--muted);line-height:1.45}
+.ex{background:var(--raised);border-radius:12px;padding:12px 14px;font-size:.95rem}
+.ex .lbl{color:var(--muted)}
+.yesno{display:flex;flex-wrap:wrap;gap:8px}
+.yn{padding:5px 12px;border-radius:99px;font-size:.88rem;font-weight:500;display:inline-flex;gap:6px;align-items:center}
+.yn.y{background:var(--good-soft);color:var(--good)} .yn.n{background:var(--bad-soft);color:var(--bad)}
+.spectrum{display:flex;flex-direction:column;gap:6px}
+.spectrum .track{height:12px;border-radius:6px;background:linear-gradient(90deg,var(--bad),var(--line) 50%,var(--good));position:relative}
+.spectrum .dot{position:absolute;top:50%;left:50%;width:20px;height:20px;border-radius:50%;background:var(--surface);border:3px solid var(--ink);transform:translate(-50%,-50%)}
+.spectrum .ends{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);gap:10px}
+.remember{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;border-top:1px dashed var(--line);padding-top:12px}
+.remember svg{flex:none;width:22px;height:22px;color:var(--c)}
+
+/* question */
+.q{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:12px}
+.qtext{font-weight:600;font-size:1.08rem;line-height:1.55}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{text-align:right;line-height:1.45;display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--raised);border:1.5px solid transparent}
+.opt:hover:not([disabled]){border-color:var(--c)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:8px;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.85rem;color:var(--c)}
+.opt.right{background:var(--good-soft);border-color:var(--good);opacity:1}
+.opt.right .k{background:var(--good);color:var(--surface)}
+.opt.wrong{background:var(--bad-soft);border-color:var(--bad);opacity:1}
+.opt.wrong .k{background:var(--bad);color:var(--surface)}
+.fb{padding:12px 14px;border-radius:12px;font-size:.95rem;display:flex;gap:10px;align-items:flex-start}
+.fb svg{flex:none;width:22px;height:22px;margin-top:2px}
+.fb.ok{background:var(--good-soft)} .fb.ok svg{color:var(--good)}
+.fb.no{background:var(--bad-soft)} .fb.no svg{color:var(--bad)}
+.fb strong{display:block}
+.big{font-family:var(--display);font-size:3.4rem;font-weight:900;color:var(--c);font-variant-numeric:tabular-nums;line-height:1}
+@media (prefers-reduced-motion:no-preference){.fade{animation:f .3s ease-out}@keyframes f{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+
+/* svg figure classes */
+.s-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.s-c{stroke:var(--c);stroke-width:2;fill:none}
+.f-c{fill:var(--c)}
+.f-soft{fill:color-mix(in srgb,var(--c) 16%,var(--surface))}
+.f-surf{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.f-ink{fill:var(--ink)}
+.f-mut{fill:var(--muted)}
+.f-inv{fill:var(--surface)}
+svg text{font-family:var(--body)}
+h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
+.card p,.def p,.tile span,.ex p{font-weight:500}
+.qtext{font-weight:700}
+.tile b,.who b{font-weight:700}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:.95rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.tbl th,.tbl td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl th{background:color-mix(in srgb,var(--c) 10%,var(--surface));color:var(--c);font-weight:700;font-size:.85rem}
+.tbl .in{color:var(--c);font-weight:700}.tbl .out{color:var(--muted);font-weight:700}
+.tblwrap{overflow-x:auto}
+.en{font-size:.82em;color:var(--muted);font-weight:500;direction:ltr;unicode-bidi:isolate}
+.ak{white-space:nowrap}
+.acr{font-size:.82em;color:var(--muted);font-weight:500}
+.acrnote{font-size:.85rem;color:var(--muted);background:color-mix(in srgb,var(--c,var(--accent)) 7%,var(--surface));border-radius:10px;padding:8px 12px;line-height:1.6}
+.tcard.done .band{background:color-mix(in srgb,var(--good) 16%,var(--surface))}
+.tcard.done .meta span:first-child{color:var(--good);font-weight:700}
+.card.sum{gap:6px;align-items:stretch}
+.card.sum h2{font-family:var(--display);font-size:1.5rem;margin:6px 0 2px;color:var(--accent)}
+.card.sum h3{margin:18px 0 4px;color:var(--accent);border-bottom:2px solid color-mix(in srgb,var(--accent) 25%,transparent);padding-bottom:4px}
+.card.sum h4{margin:10px 0 2px}
+.card.sum p,.card.sum li{line-height:1.75}
+.card.sum ul,.card.sum ol{margin:4px 0;padding-inline-start:22px}
+.card.sum .key{background:color-mix(in srgb,var(--accent) 9%,var(--surface));border-inline-start:4px solid var(--accent);border-radius:10px;padding:10px 14px;margin:8px 0}
+.card.sum .trap{background:color-mix(in srgb,var(--bad) 9%,var(--surface));border-inline-start:4px solid var(--bad);border-radius:10px;padding:10px 14px;margin:8px 0}
+.card.sum table{border-collapse:collapse;width:100%;font-size:.92rem;margin:6px 0}
+.card.sum th,.card.sum td{border:1px solid var(--line);padding:6px 8px;text-align:right;vertical-align:top}
+.card.sum th{background:color-mix(in srgb,var(--accent) 10%,var(--surface))}
+.card.sum .tw{overflow-x:auto}
+</style>
+<style>:root{--accent:#d0532c}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent:#f28a64}}:root[data-theme="dark"]{--accent:#f28a64}</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const CONFIG={key:"lomda-social-myers6",cover:"cover47",badge:"ספר הקורס · חובה",eyebrow:"פסיכולוגיה חברתית א' · מאיירס, כרך א׳",title:"פרק 7: שכנוע",cite:`מאיירס, ד' (2012). <i>פסיכולוגיה חברתית</i>, כרך א׳, פרק 7, עמ׳ ⁦268–314⁩. האוניברסיטה הפתוחה.`,note:"הלומדה מבוססת על פרק 7 בספר הקורס (שכנוע), לקריאה לקראת מפגשים 11–13. מספרי העמודים מתייחסים לספר המודפס."};
+const I={
+ building:'<path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h2M14 8h2M8 12h2M14 12h2M10 21v-4h4v4"/>',
+ people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
+ cycle:'<path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/>',
+ pyramid:'<path d="M12 3L2.5 20h19z"/><path d="M8.2 10.5h7.6M5.5 15.2h13"/>',
+ chart:'<path d="M4 20V10M9.5 20V4M15 20v-7M20.5 20V8M2 20h20"/>',
+ gear:'<circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="7.5" stroke-dasharray="3.2 2.7" stroke-width="3.2"/>',
+ sprout:'<path d="M12 21v-9"/><path d="M12 14C7 14 4.5 11 4.5 6.5 9 6.5 12 9 12 14z"/><path d="M12 12c0-4.5 3-7 7.5-7 0 4.5-3 7-7.5 7z"/>',
+ scales:'<path d="M12 3v17M7 20h10M4 7h16"/><path d="M4 7l-2.5 6h5zM20 7l-2.5 6h5z"/>',
+ factory:'<path d="M3 21V10l5 3v-3l5 3V5h4v16zM1.5 21h21M17 9h4v12"/>',
+ question:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 1 1 3.6 2.4c-.8.4-1.1.9-1.1 1.8"/><path d="M12 17h.01"/>',
+ data:'<ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6M4.5 11.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6"/>',
+ doc:'<path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/>',
+ split:'<circle cx="12" cy="4.5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="12" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/><path d="M12 6.7v10M12 11l-6 6M12 11l6 6"/>',
+ grad:'<path d="M1.5 9L12 4l10.5 5L12 14z"/><path d="M6 11.2V16c3.3 2.4 8.7 2.4 12 0v-4.8M21 10v5"/>',
+ copies:'<rect x="3" y="7" width="12" height="14" rx="2"/><path d="M7 4h11a2 2 0 0 1 2 2v12"/>',
+ link:'<rect x="2" y="8" width="11" height="8" rx="4"/><rect x="11" y="8" width="11" height="8" rx="4"/>',
+ hand:'<circle cx="8" cy="7" r="3"/><circle cx="16" cy="7" r="3"/><path d="M2.5 20c0-3.3 2.5-6 5.5-6 1.6 0 3 .7 4 1.9 1-1.2 2.4-1.9 4-1.9 3 0 5.5 2.7 5.5 6"/>',
+ target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',
+ id:'<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><circle cx="8.5" cy="11" r="2.3"/><path d="M5 16c.6-1.6 2-2.4 3.5-2.4S11.4 14.4 12 16M14.5 10h4M14.5 13.5h3"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>',
+ pie:'<path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/>',
+ cart:'<path d="M2 3h3l2.5 12h11l2-8H6.5"/><circle cx="9" cy="19.5" r="1.6"/><circle cx="17" cy="19.5" r="1.6"/>',
+ bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/>',
+ check:'<circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/>',
+ x:'<circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/>',
+ lock:'<rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>',
+ moon:'<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>',
+ brain:'<path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a2 2 0 0 0-3-1z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/>',
+ phone:'<rect x="6.5" y="2" width="11" height="20" rx="2.5"/><path d="M10.5 18.5h3"/>',
+ flask:'<path d="M9 2.5h6M10 2.5v6L4.5 19a2 2 0 0 0 1.8 2.9h11.4a2 2 0 0 0 1.8-2.9L14 8.5v-6"/><path d="M7 15h10"/>',
+ leaf:'<path d="M5 19C5 10 11 4 20 4c0 9-6 15-15 15z"/><path d="M5 19l8-8"/>'
+};
+const ic=(k,cls="")=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="${cls}" aria-hidden="true">${I[k]}</svg>`;
+
+const arrowDef=id=>`<defs><marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="f-c"/></marker></defs>`;
+
+const FIG={
+ cover47:()=>`<svg viewBox="0 0 400 228" role="img" aria-label="מגפון וגלי קול">
+  <circle cx="200" cy="114" r="96" class="f-soft"/>
+  <path d="M230 84 L170 100 V128 L230 144Z" class="f-c"/><rect x="152" y="100" width="20" height="28" rx="4" class="f-c"/>
+  <path d="M246 96 q14 18 0 36 M260 86 q24 28 0 56" class="s-c" stroke-width="3" fill="none"/>
+ </svg>`,
+ elm47:()=>`<svg viewBox="0 0 400 230" role="img" aria-label="שני מסלולי השכנוע">
+  <rect x="140" y="10" width="120" height="34" rx="10" class="f-soft"/><text x="200" y="32" text-anchor="middle" font-size="13" font-weight="800" class="f-ink">מסר משכנע</text>
+  <path d="M200 44 v12 M100 56 h200 M100 56 v14 M300 56 v14" class="s-line" stroke-width="2"/>
+  ${[[300,"מסלול מרכזי","מוטיבציה ויכולת לחשוב","מתמקדים בטיעונים","שינוי עמיד, משפיע על התנהגות","f-c"],[100,"מסלול היקפי","אין עניין, הסחה, עומס","רמזים: מקור מושך, מוכר","שינוי שטחי וקצר","f-mut"]].map(([x,t,a,b,c,k])=>`<rect x="${x-92}" y="70" width="184" height="36" rx="10" class="${k}"/><text x="${x}" y="93" text-anchor="middle" font-size="13" font-weight="800" class="f-inv">${t}</text>
+  <text x="${x}" y="130" text-anchor="middle" font-size="12" class="f-ink">${a}</text><text x="${x}" y="152" text-anchor="middle" font-size="12" class="f-ink">${b}</text>
+  <rect x="${x-92}" y="168" width="184" height="34" rx="10" class="f-soft"/><text x="${x}" y="190" text-anchor="middle" font-size="12" font-weight="800" class="f-ink">${c}</text>`).join("")}
+ </svg>`,
+ prim47:()=>`<svg viewBox="0 0 400 200" role="img" aria-label="אפקט הראשונות ואפקט האחרונות">
+  ${[[60,"ראשונות","מסר 1","מסר 2","זמן","תגובה","מסר 1 מנצח"],[140,"אחרונות","מסר 1","זמן","מסר 2","תגובה","מסר 2 מנצח"]].map(([y,t,a,b,c,d,w])=>`<text x="370" y="${y-22}" text-anchor="start" font-size="13" font-weight="800" class="f-ink">${t}</text>
+  ${[a,b,c,d].map((s,i)=>`<rect x="${300-i*80}" y="${y-12}" width="70" height="30" rx="8" class="${s=="זמן"?"f-soft":s=="תגובה"?"f-c":"f-surf"}" ${s.startsWith("מסר")?'stroke-width="2"':''}/><text x="${335-i*80}" y="${y+8}" text-anchor="middle" font-size="12" font-weight="800" class="${s=="תגובה"?"f-inv":"f-ink"}">${s}</text>`).join("")}
+  <text x="200" y="${y+38}" text-anchor="middle" font-size="11" font-weight="800" class="f-ink">${w}</text>`).join("")}
+ </svg>`
+};
+const E=t=>`<span class="en">(${t})</span>`;
+const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</figcaption>`:""}</figure>`;
+const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
+const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;
+const tiles=a=>`<div class="tiles">${a.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`;
+const ex=h=>`<div class="ex"><span class="lbl">דוגמה</span><p>${h}</p></div>`;
+const rem=h=>`<div class="remember">${ic("bulb")}<p>${h}</p></div>`;
+const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")}${t}</span>`).join("")}${n.map(t=>`<span class="yn n">${ic("x")}${t}</span>`).join("")}</div>`;
+const spectrum=(r,l,dot)=>`<div class="spectrum"><div class="track">${dot?'<span class="dot"></span>':""}</div><div class="ends"><span>${r}</span><span>${l}</span></div></div>`;
+document.head.insertAdjacentHTML("beforeend",'<style>.yn svg{width:16px;height:16px}</style>');
+
+const ACR={
+"AAI":["Adult Attachment Interview","ריאיון ההיקשרות למבוגרים"],
+"ABA":["","תבנית הברות שבה הראשונה והאחרונה זהות (גה טי גה)"],
+"ABB":["","תבנית הברות שבה השתיים האחרונות זהות (וו פי פי)"],
+"ACh":["Acetylcholine","אצטילכולין"],
+"AChE":["Acetylcholinesterase","אצטילכולין־אסטראז, האנזים שמפרק אצטילכולין"],
+"ADD":["Attention Deficit Disorder","הפרעת קשב"],
+"ADHD":["Attention Deficit Hyperactivity Disorder","הפרעת קשב וריכוז עם היפראקטיביות"],
+"AI":["Artificial Intelligence","בינה מלאכותית"],
+"AMPA":["","סוג של קולטן גלוטמט יונוטרופי, הנפוץ ביותר"],
+"ANOVA":["Analysis of Variance","ניתוח שונות, מבחן סטטיסטי להשוואת כמה ממוצעים"],
+"AP5":["","חומר שחוסם את אתר הגלוטמט בקולטן NMDA"],
+"AST":["Attention Switching Task","משימת מעבר קשב בין כללים"],
+"ATP":["Adenosine Triphosphate","אדנוזין טריפוספט, מולקולת האנרגיה של התא"],
+"AVG":["","ארגון שערך את הסקר על ילדים והטלפונים של הוריהם"],
+"BCTI":["Belief in Conspiracy Theories Inventory","שאלון האמונה בתיאוריות קונספירציה"],
+"BEIP":["Bucharest Early Intervention Project","מחקר ההתערבות המוקדמת בבוקרשט"],
+"BRAIN":["Brain Research through Advancing Innovative Neurotechnologies","מיזם חקר המוח האמריקני"],
+"CANTAB":["Cambridge Neuropsychological Test Automated Battery","סוללת מבחנים נוירופסיכולוגיים ממוחשבת"],
+"CASQ":["Cleveland Adolescent Sleepiness Questionnaire","שאלון ישנוניות כללית"],
+"CB1":["Cannabinoid receptor 1","קולטן קנבינואידים מסוג 1, במוח"],
+"CBT":["Cognitive Behavioral Therapy","טיפול קוגניטיבי־התנהגותי"],
+"CCT":["Computerized Cognitive Training","אימון קוגניטיבי ממוחשב"],
+"CES-D":["Center for Epidemiologic Studies Depression scale","שאלון לדיכאון"],
+"CFA":["Confirmatory Factor Analysis","ניתוח גורמים מאשש"],
+"ChAT":["Choline Acetyltransferase","האנזים שבונה אצטילכולין"],
+"ChR2":["Channelrhodopsin-2","תעלה רגישה לאור כחול שמעוררת נוירון"],
+"CNS":["Central Nervous System","מערכת העצבים המרכזית: המוח ומוח השדרה"],
+"CR":["Conditioned Response","תגובה מותנית"],
+"CS":["Conditioned Stimulus","גירוי מותנה"],
+"CSF":["Cerebrospinal Fluid","נוזל המוח והשדרה"],
+"CT":["Computed Tomography","טומוגרפיה ממוחשבת, צילום רנטגן בפרוסות"],
+"DBS":["Deep Brain Stimulation","גרייה מוחית עמוקה"],
+"DMS":["Delayed Matching to Sample","משימת התאמה לדוגמה אחרי השהיה (זיכרון חזותי)"],
+"DNA":["Deoxyribonucleic Acid","החומר התורשתי, שנמצא בכרומוזומים"],
+"DQ":["Developmental Quotient","מנת הרמה ההתפתחותית"],
+"DRD4":["Dopamine Receptor D4","גן של קולטן דופמין מסוג D4"],
+"DSM-5":["DSM, 5th edition","המהדורה החמישית של המדריך האמריקני לאבחון הפרעות נפשיות"],
+"DSM-IV":["DSM, 4th edition","המהדורה הרביעית של המדריך לאבחון הפרעות נפשיות"],
+"DSM-III":["DSM, 3rd edition","המהדורה השלישית של המדריך לאבחון הפרעות נפשיות"],
+"5-HT1A":["","קולטן סרוטונין מסוג 1A"],
+"5-HT3":["","קולטן סרוטונין מסוג 3, יונוטרופי"],
+"MAO-A":["Monoamine Oxidase A","מונואמין אוקסידאז מסוג A"],
+"MAO-B":["Monoamine Oxidase B","מונואמין אוקסידאז מסוג B"],
+"GPT-4":["Generative Pre-trained Transformer 4","מודל שפה של OpenAI"],
+"DSM":["Diagnostic and Statistical Manual of Mental Disorders","המדריך האמריקני לאבחון הפרעות נפשיות"],
+"DTI":["Diffusion Tensor Imaging","הדמיה של מסילות אקסונים לפי תנועת המים"],
+"EEG":["Electroencephalogram","רישום הפעילות החשמלית של המוח מהקרקפת"],
+"EPSP":["Excitatory Postsynaptic Potential","פוטנציאל פוסט־סינפטי מעורר"],
+"ERA":["English and Romanian Adoptees study","מחקר המאומצים מרומניה לאנגליה"],
+"ERP":["Event-Related Potential","פוטנציאל מעורר: תגובה חשמלית במוח לאירוע מסוים"],
+"FDG":["Fluorodeoxyglucose","גלוקוז רדיואקטיבי שמשמש בסריקת PET"],
+"FDR":["False Discovery Rate","תיקון סטטיסטי להשוואות מרובות"],
+"fMRI":["functional MRI","MRI תפקודי, מודד פעילות לפי רמת החמצן בדם"],
+"GABA":["Gamma-Aminobutyric Acid","גאבא, הנוירוטרנסמיטר המעכב העיקרי"],
+"GABAA":["","קולטן גאבא מסוג A, תעלת כלוריד"],
+"GAD":["Glutamic Acid Decarboxylase","האנזים שבונה גאבא מגלוטמט"],
+"GE":["General Electric","חברת ג'נרל אלקטריק"],
+"GLOBE":["Global Leadership and Organizational Behavior Effectiveness","מחקר בין־לאומי על מנהיגות ותרבות"],
+"GPS":["Global Positioning System","מערכת ניווט לווייני"],
+"HOME":["Home Observation for Measurement of the Environment","תצפית בבית למדידת הסביבה"],
+"IACUC":["Institutional Animal Care and Use Committee","ועדה מוסדית לפיקוח על מחקר בבעלי חיים"],
+"ICD":["International Classification of Diseases","הסיווג הבין־לאומי של מחלות"],
+"ICV":["Intracerebroventricular","מתן לתוך חדרי המוח"],
+"IM":["Intramuscular","הזרקה לתוך שריר"],
+"IP":["Intraperitoneal","הזרקה לחלל הבטן"],
+"IPSP":["Inhibitory Postsynaptic Potential","פוטנציאל פוסט־סינפטי מעכב"],
+"IQ":["Intelligence Quotient","מנת משכל"],
+"IRB":["Institutional Review Board","ועדת אתיקה מוסדית למחקר בבני אדם"],
+"IV":["Intravenous","הזרקה לווריד"],
+"LA":["Long-acting","שחרור ממושך"],
+"LLMs":["Large Language Models","מודלי שפה גדולים"],
+"LMX":["Leader-Member Exchange","תיאוריית חילופי מנהיג־עובד"],
+"LPC":["Least Preferred Coworker","שאלון העמית הפחות מועדף"],
+"LPD":["Letter Position Dyslexia","דיסלקסיית מיקום אותיות"],
+"MAO":["Monoamine Oxidase","מונואמין אוקסידאז, האנזים שמפרק מונואמינים"],
+"MBO":["Management by Objectives","ניהול לפי יעדים"],
+"MDMA":["","אקסטזי"],
+"MDS":["","סוללה ממוחשבת שנותנת מנות לקשב, זיכרון, זיכרון עבודה ותפקוד ניהולי"],
+"AQ":["Attention Quotient","מנת קשב"],
+"EFQ":["Executive Function Quotient","מנת התפקוד הניהולי"],
+"MEG":["Magnetoencephalography","מגנטו־אנצפלוגרפיה, מדידת השדות המגנטיים של המוח"],
+"MMQ":["Multifactorial Memory Questionnaire","שאלון זיכרון רב־גורמי"],
+"MMQ-C":["Multifactorial Memory Questionnaire - Contentment","שביעות רצון מהזיכרון"],
+"MMQ-S":["Multifactorial Memory Questionnaire - Strategy","שימוש באסטרטגיות זיכרון"],
+"MPTP":["","רעלן שהורס נוירונים דופמינרגיים"],
+"MQ":["Memory Quotient","מנת זיכרון כללית"],
+"MRI":["Magnetic Resonance Imaging","הדמיית תהודה מגנטית"],
+"mRNA":["messenger RNA","RNA שליח, העתק של גן שמשמש לבניית חלבון"],
+"NBAS":["Neonatal Behavioral Assessment Scale","סולם ברזלטון להערכת התנהגות יילודים"],
+"NCCP":["National Center for Children in Poverty","המרכז הלאומי לילדים בעוני"],
+"NE":["Norepinephrine","נוראפינפרין"],
+"NICHD":["National Institute of Child Health and Human Development","המכון הלאומי האמריקני לבריאות הילד"],
+"NMDA":["N-methyl-D-aspartate","סוג של קולטן גלוטמט שמעביר סידן"],
+"NpHR":["Halorhodopsin","נשא רגיש לאור צהוב שמעכב נוירון"],
+"OCD":["Obsessive-Compulsive Disorder","הפרעה טורדנית־כפייתית"],
+"OCPD":["Obsessive-Compulsive Personality Disorder","הפרעת אישיות טורדנית־כפייתית"],
+"OECD":["Organisation for Economic Co-operation and Development","הארגון לשיתוף פעולה ולפיתוח כלכלי"],
+"PAG":["Periaqueductal Gray","החומר האפור המרכזי"],
+"PBS":["Public Broadcasting Service","רשת השידור הציבורית האמריקנית"],
+"PCP":["Phencyclidine","פנציקלידין, ״אבק מלאכים״"],
+"PET":["Positron Emission Tomography","טומוגרפיה בפליטת פוזיטרונים"],
+"PHA-L":["Phaseolus vulgaris leucoagglutinin","חומר לסימון קדומני של אקסונים"],
+"PNS":["Peripheral Nervous System","מערכת העצבים ההיקפית"],
+"PSD":["Parental Screen Distraction","הסחת מסך הורית"],
+"RAVLT":["Rey Auditory Verbal Learning Test","מבחן הלמידה המילולית של ריי"],
+"REM":["Rapid Eye Movement","שנת חלומות, שבה העיניים זזות מהר"],
+"RNA":["Ribonucleic Acid","חומצה ריבונוקלאית"],
+"RQ1":["Research Question 1","שאלת המחקר הראשונה"],
+"RQ2":["Research Question 2","שאלת המחקר השנייה"],
+"RQ3":["Research Question 3","שאלת המחקר השלישית"],
+"RQ4":["Research Question 4","שאלת המחקר הרביעית"],
+"RVP":["Rapid Visual Information Processing","משימת קשב מתמשך"],
+"SAT":["Separation Anxiety Test","מבחן חרדת הפרידה"],
+"SC":["Subcutaneous","הזרקה מתחת לעור"],
+"SES":["Socioeconomic Status","מעמד סוציו־אקונומי"],
+"SfN":["Society for Neuroscience","העמותה למדע העצב"],
+"SLT":["Situational Leadership Theory","תיאוריית המנהיגות המצבית"],
+"SMC":["Subjective Memory Complaints","תלונות זיכרון סובייקטיביות"],
+"SQUID":["Superconducting Quantum Interference Device","גלאי רגיש במיוחד לשדות מגנטיים"],
+"SR":["Slow Release","שחרור איטי"],
+"SSP":["Spatial Span","משימת טווח זיכרון מרחבי"],
+"SSRI":["Selective Serotonin Reuptake Inhibitor","מעכב סלקטיבי של קליטה חוזרת של סרוטונין"],
+"SSS":["Stanford Sleepiness Scale","סולם הישנוניות של סטנפורד, ישנוניות ברגע"],
+"STAI-S":["State-Trait Anxiety Inventory - State","שאלון חרדת מצב"],
+"SVZ":["Subventricular Zone","האזור התת־חדרי"],
+"THC":["Tetrahydrocannabinol","החומר הפעיל בקנאביס"],
+"THCCOOH":["","תוצר הפירוק של THC שנמדד בבדיקה"],
+"TMN":["Tuberomammillary Nucleus","גרעין הפקעת הדדי"],
+"TMS":["Transcranial Magnetic Stimulation","גרייה מגנטית חוצת גולגולת"],
+"UCR":["Unconditioned Response","תגובה לא מותנית"],
+"UCS":["Unconditioned Stimulus","גירוי לא מותנה"],
+"VMH":["Ventromedial Hypothalamus","ההיפותלמוס הגחוני־מדיאלי"],
+"VRM":["Verbal Recognition Memory","זיכרון זיהוי מילולי"],
+"VTA":["Ventral Tegmental Area","אזור הטגמנטום הגחוני"],
+"VZ":["Ventricular Zone","האזור החדרי"],
+"WMQ":["Working Memory Quotient","מנת זיכרון העבודה"],
+"5-HT":["5-hydroxytryptamine","סרוטונין"],
+"2-DG":["2-deoxyglucose","גלוקוז מסומן שנקלט ולא מתפרק"],
+"L-DOPA":["","מולקולת־הקדם של דופמין"],
+"6-OHDA":["6-hydroxydopamine","רעלן שהורס נוירונים דופמינרגיים ונוראדרנרגיים"]
+};
+const ACR_RE=new RegExp("(?<![A-Za-z0-9])(?<![A-Za-z0-9]-)("+Object.keys(ACR).sort((a,b)=>b.length-a.length).map(k=>k.replace(/[-]/g,"\\-")).join("|")+")(?![A-Za-z0-9])(?!-[A-Za-z0-9])","g");
+const acrText=k=>{const [en,he]=ACR[k];return en?`${he}; <bdi dir="ltr">${en}</bdi>`:he};
+function acrExpand(html){
+  const plain=html.replace(/<[^>]+>/g," ");const seen=new Set();
+  for(const k of Object.keys(ACR)){const [en,he]=ACR[k];if((he&&plain.includes(he))||(en&&plain.toLowerCase().includes(en.toLowerCase())))seen.add(k)}
+  let inSvg=0;
+  return html.split(/(<svg[\s\S]*?<\/svg>|<[^>]+>)/).map(p=>{if(p.startsWith("<"))return p;
+    return p.replace(ACR_RE,(m,k,off,str)=>{if(seen.has(k))return m;seen.add(k);
+      const before=str.slice(0,off),inP=before.lastIndexOf("(")>before.lastIndexOf(")");
+      return inP?`<bdi class="ak">${m}</bdi>: ${acrText(k)}`:`<bdi class="ak">${m}</bdi> <span class="acr">(${acrText(k)})</span>`})}).join("");
+}
+function acrNote(...texts){const s=texts.join(" "),f=new Set();let m;ACR_RE.lastIndex=0;while((m=ACR_RE.exec(s)))f.add(m[1]);
+  return f.size?`<div class="acrnote"><b>ראשי תיבות:</b> ${[...f].map(k=>`<bdi class="ak">${k}</bdi> = ${acrText(k)}`).join(" · ")}</div>`:""}
+const T=[
+ {id:"t1",icon:"split",title:"שני מסלולים לשכנוע",blocks:[
+  {h:"תמר והקמפיין",html:`${def("על מה הנושא",`מהו שכנוע, ובאילו שני מסלולים הוא פועל.<br><b>מה נלמד כאן:</b> תמר · שכנוע · חינוך או תעמולה · אבני הנגף · מסלול מרכזי והיקפי`)}${ex("<b>תמר</b> (דמות בדויה להמחשה) סטודנטית שמובילה קמפיין נגד עישון בקמפוס. נלווה אותה בכל שלב: מי יעביר את המסר, מה הוא יגיד, באיזה ערוץ, ולמי.")}${def("שכנוע",`${E("Persuasion")} התהליך שבו מסר מחולל שינוי באמונות, בעמדות או בהתנהגות.`)}<p>שכנוע אינו טוב או רע מיסודו. גבלס ושטרייכר הפיצו תעמולה נאצית; קמפיינים לבריאות הורידו עישון בארה״ב ל־21%. אנחנו נוטים לקרוא לשכנוע ״<b>חינוך</b>״ כשאנחנו מסכימים איתו ו״<b>תעמולה</b>״ כשלא.</p><p><b>הובלנד</b> חקר במלחמת העולם השנייה ואחריה ארבעה מרכיבים: <b>מקור, מסר, ערוץ, קהל</b>. <b>מגווייר</b>: מסר צריך לעבור משוכות: קשב, הבנה, אמונה, זכירה ופעולה.</p>`,q:"q1"},
+  {h:"מרכזי והיקפי",html:`${fig("elm47","פטי וקסיופו (וגם איגלי וצ׳ייקן): הבחירה במסלול תלויה במוטיבציה וביכולת לחשוב.")}${def("מסלול מרכזי",`${E("Central route")} כשיש <b>עניין</b> ויכולת, מתמקדים ב<b>טיעונים</b>. טיעון חזק משכנע; טיעון חלש מעורר טיעוני נגד.`)}${def("מסלול היקפי",`${E("Peripheral route")} כשאין עניין או שהדעת מוסחת, מגיבים ל<b>רמזים</b>: מקור מושך, מומחה, מסר מוכר. מוזיקה גרמנית ברקע מוכרת יין גרמני.`)}${rem("המסלול המרכזי יוצר שינוי <b>עמיד</b> יותר שמשפיע על <b>התנהגות</b>. מה שמשכנע הוא לא הטיעון עצמו אלא <b>המחשבות</b> שהוא מעורר.")}`,q:"q3"},
+  {h:"התאמת המסלול",html:`<p>פרסומות למחשבים בכתבי עת מציגות מפרט ומחיר (מרכזי). פרסומות למשקאות מציגות זוהר ודובי קוטב (היקפי). מאיירס הצביע במשאל מקומי לפי מי שתומך, כי לא היה לו זמן לעיין: ״על חברים ומומחים אפשר לסמוך״.</p>${ex("לסטודנטים לרפואה שמעוניינים בנושא, תמר תציג נתונים ומחקרים. לסטודנטים שעוברים במסדרון בדרך לשיעור, היא תשתמש בשלט קצר עם דמות אהודה.")}`,q:"q5"}
+ ]},
+ {id:"t2",icon:"id",title:"מי אומר: המקור",blocks:[
+  {h:"אמינות והשפעה רדומה",html:`${def("על מה הנושא",`אילו תכונות של המקור הופכות מסר למשכנע.<br><b>מה נלמד כאן:</b> אמינות · השפעה רדומה · מומחיות · מהימנות · אטרקטיביות · דמיון`)}<p>אותו טיעון בפרלמנט ההולנדי שכנע יותר את חברי מפלגת הדובר. המקור משנה.</p>${def("אמינות",`${E("Credibility")} מקור שנתפס <b>מומחה</b> ו<b>ראוי לאמון</b>.`)}${def("השפעה רדומה",`${E("Sleeper effect")} מסר ממקור לא אמין נדחה בהתחלה, אבל משפיע <b>מאוחר יותר</b>, כי זוכרים את המסר ושוכחים את המקור. בדומה, השפעת מקור אמין דועכת אחרי כחודש.`)}`,q:"q7"},
+  {h:"מומחיות ומהימנות",html:`<div class="tw"><table><tr><th>מה מגביר</th><th>דוגמה</th></tr><tr><td><b>מומחיות</b></td><td>״ד״ר ג׳יימס ראנדל מהאגודה לרפואת שיניים״ שכנע יותר מ״ג׳ים, תלמיד תיכון״</td></tr><tr><td><b>דיבור בטוח וישיר</b></td><td>עד ש״אמר ישר ׳עשרים דקות׳״ נתפס אמין יותר מעד מהסס</td></tr><tr><td><b>מבט ישיר</b></td><td>עדים שמישירים מבט נתפסים אמינים יותר</td></tr><tr><td><b>לא מנסה לשכנע</b></td><td>שיחה ״שנשמעה במקרה״ השפיעה יותר</td></tr><tr><td><b>נגד האינטרס שלו</b></td><td>פוליטיקאי עם רקע עסקי שתוקף חברה מזהמת</td></tr><tr><td><b>דיבור מהיר</b></td><td>190 מילים בדקה נתפסו אמינים יותר מ־110</td></tr></table></div>`,q:"q9"},
+  {h:"אטרקטיביות ודמיון",html:`${def("אטרקטיביות",`${E("Attractiveness")} מקור שמוצא חן משכנע במיוחד ב<b>העדפות אישיות</b>. כולל משיכה פיזית, ו<b>דמיון</b> אלינו. אנשי מכירות מלמדים ״לחקות ולשקף״; דמות וירטואלית שחיקתה את הצופה שכנעה יותר.`)}<p>תלמידים שחורים צחצחו שיניים טוב יותר אחרי מסר מ<b>רופא שיניים שחור</b>.</p><div class="tw"><table><tr><th>נושא</th><th>מי משכנע יותר</th></tr><tr><td><b>סובייקטיבי</b> (טעם, ערכים: איזה קפה)</td><td>מקור <b>דומה</b> לנו</td></tr><tr><td><b>אובייקטיבי</b> (עובדות: איזה מחשב)</td><td>מקור <b>מומחה</b></td></tr></table></div>${ex("לסטודנטים, תמר תביא סטודנטית אהודה שהפסיקה לעשן. לשאלה ״כמה זה באמת מזיק״, היא תביא רופאה.")}`,q:"q11"}
+ ]},
+ {id:"t3",icon:"bulb",title:"מה נאמר: היגיון, הרגשה טובה ופחד",blocks:[
+  {h:"היגיון או רגש",html:`${def("על מה הנושא",`איך תוכן המסר משפיע: פנייה להיגיון, לרגש, להרגשה טובה ולפחד.<br><b>מה נלמד כאן:</b> קהל אנליטי · מקור העמדה · בוטנים ומוזיקה · מסרים מאיימים`)}<p>התשובה: <b>תלוי בקהל</b>. משכילים ואנליטיים מגיבים יותר ל<b>היגיון</b>; חסרי עניין, לרגש. ב־2004 רבים הסכימו יותר עם קרי אבל <b>חיבבו</b> יותר את בוש, והצביעו לו.</p>${rem("עמדה שנוצרה מ<b>רגש</b> משתנה ממסר רגשי; עמדה שנוצרה מ<b>היגיון</b> משתנה מטיעונים.")}`,q:"q13"},
+  {h:"הרגשה טובה",html:`<p><b>ג׳ניס</b>: סטודנטים שאכלו <b>בוטנים ושתו משקה</b> בזמן הקריאה השתכנעו יותר. שירים עם נגינת גיטרה שכנעו יותר ממילים בלבד.</p><p>במצב רוח <b>טוב</b> מחליטים מהר ונשענים על רמזים היקפיים. במצב רוח <b>רע</b> חושבים יותר, ולכן קשה לשכנע בטיעונים חלשים.</p>${rem("אם אין לכם טיעונים חזקים, כדאי לשפר את מצב הרוח של הקהל.")}`,q:"q15"},
+  {h:"מסרים מאיימים",html:`<p>ככל שאנשים חשים <b>מפוחדים ופגיעים</b> יותר, הם נענים יותר. תמונות על חפיסות סיגריות בקנדה עבדו. פרסומת ״1,200 שקי גוויות״ הפחיתה עישון; ״חשוב, אל תעשן״ לא.</p><div class="tw"><table><tr><th>ממוגרפיה</th><th>נבדקו בתוך שנה</th></tr><tr><td>מסר חיובי (״יכולה להציל את חייך״)</td><td>כמחצית</td></tr><tr><td>מסר מאיים (״את עלולה למות״)</td><td>כשני שלישים</td></tr></table></div>${rem("אבל פחד בלי <b>דרך התמודדות</b> מוביל ל<b>הכחשה</b>. מסר מאיים יעיל כשאנשים מבינים גם <b>מה לעשות</b> וחושבים שהם <b>מסוגלים</b>.")}${ex("השלט של תמר יראה ריאות של מעשן, ומתחת: ״רוצה להפסיק? המרכז לבריאות בקמפוס, חדר 12, ללא תשלום״.")}`,q:"q17"}
+ ]},
+ {id:"t4",icon:"scales",title:"פער, צדדים וסדר",blocks:[
+  {h:"פער עמדות",html:`${def("על מה הנושא",`כמה רחוק מהקהל לעמוד, האם להציג את הצד השני, ומי צריך לדבר ראשון.<br><b>מה נלמד כאן:</b> פער ומהימנות · חד־צדדי ודו־צדדי · ראשונות ואחרונות`)}<p>פער גדול יוצר דיסוננס (שמניע שינוי), אבל גם גורם למקור להיראות לא אמין.</p>${def("ארונסון, טרנר וקרלסמית׳ (1963)",`כשהמשורר הנערץ <b>ת״ס אליוט</b> שיבח שיר שהנבדקים לא אהבו, פער גדול שינה דעה <b>יותר</b>. כשזו הייתה ״<b>אגנס סטרנס</b>״, סטודנטית, לא היה הבדל.`)}${rem("מקור <b>מהימן מאוד</b>: אפשר לעמוד בעמדה רחוקה. קהל <b>מעורב</b> בנושא מקבל רק טווח צר, ולכן פער מתון עדיף.")}`,q:"q19"},
+  {h:"חד־צדדי או דו־צדדי",html:`<div class="tw"><table><tr><th>מסר</th><th>יעיל כשהקהל...</th></tr><tr><td><b>חד־צדדי</b></td><td>כבר <b>מסכים</b>, לא מכיר את טיעוני הנגד</td></tr><tr><td><b>דו־צדדי</b></td><td><b>מתנגד</b>, מכיר או ייחשף לטיעוני הנגד</td></tr></table></div><p><b>הובלנד</b>: חיילים שחשבו שהמלחמה ביפן תהיה קלה השתכנעו יותר ממסר <b>דו־צדדי</b>. בשלטי מחזור ביוטה, תוספת ״זה אולי לא נוח, אבל זה חשוב״ העלתה את המחזור ל־<b>80%</b>.</p>`,q:"q21"},
+  {h:"ראשונות ואחרונות",html:`${fig("prim47","בדרך כלל המסר הראשון גובר. אם יש זמן בין המסרים וההחלטה סמוכה לשני, השני גובר.")}${def("אפקט הראשונות",`${E("Primacy effect")} המידע הראשון משפיע יותר. ״אינטליגנטי, חרוץ... קנאי״ נשפט חיובי יותר מאותו רצף הפוך (אש). מועמדים ראשונים בקלפי מקבלים יתרון. 62% בחרו את המסטיק הראשון.`)}${def("אפקט האחרונות",`${E("Recency effect")} פחות שכיח: קורה כשיש <b>מרווח זמן</b> בין המסרים, <b>וגם</b> מחליטים סמוך למסר השני (השכחה פועלת על הראשון).`)}`,q:"q23"}
+ ]},
+ {id:"t5",icon:"phone",title:"איך: הערוץ",blocks:[
+  {h:"פעיל או סביל",html:`${def("על מה הנושא",`איך אופן העברת המסר משנה את השפעתו.<br><b>מה נלמד כאן:</b> קליטה סבילה · חזרה ושטף · השפעה אישית · זרימה דו־שלבית · כתב מול וידאו`)}${tiles([["x","דרשות בכנסייה","רק 10% נזכרו בדרשה נגד גזענות, ולא חל שינוי בעמדות"],["x","קמפיין ניקיון","לפני: 0 מ־180 הרימו אשפה. אחרי שבוע של שלטים: 2 מ־180"]])}<p>שני הניסיונות כשלו כי הקהל היה <b>סביל</b>. התנסות <b>פעילה</b> יוצרת עמדות עמידות: תכניות למניעת איידס שכוללות <b>תרגול</b> סירוב הן היעילות ביותר.</p>`,q:"q25"},
+  {h:"חזרה, ומה שקל להגיד",html:`<p>ובכל זאת, מסרים סבילים כן עובדים לפעמים: אספירין מפורסם נמכר פי 3 ביוקר. עצם <b>החזרה</b> גורמת להאמין: עובדות טריוויה שנקראו שבוע קודם נשפטו נכונות יותר. שמועות כוזבות ב־2008 שרדו ניסיונות הפרכה, כי ההפרכה חזרה עליהן.</p><p>גם <b>חריזה</b> מעלה אמינות: ״חיפזון מוליד אסון״ נשמע נכון יותר מ״מהירות גורמת לתאונות״.</p>${rem("הכלל: השכנוע <b>פוחת</b> ככל שהנושא <b>חשוב ומוכר</b> יותר. קל להשפיע על בחירת אספירין; קשה על עמדה כלפי מלחמה.")}`,q:"q27"},
+  {h:"אישי, תקשורתי, כתוב",html:`<div class="tw"><table><tr><th>מחקר</th><th>תקשורת בלבד</th><th>דואר</th><th>אישי</th></tr><tr><td>אן ארבור: הצבעה בעד תיקון</td><td>19%</td><td>45%</td><td><b>75%</b></td></tr></table></div><p>במחקר הלב בקליפורניה: טרייסי (ביקורת) הפחיתה סיכון ב־8%, גילרוי (תקשורת) ב־20%, ווטסונוויל (תקשורת + מפגשים אישיים) בכ־<b>30%</b>.</p>${def("זרימה דו־שלבית",`${E("Two-step flow")} <b>כ״ץ</b>: מתקשורת ההמונים ל<b>מנהיגי דעה</b>, ומהם לשאר. רופאים בוחרים תרופות לפי עמיתים מומחים.`)}<p><b>כתב או וידאו?</b> מסר <b>פשוט</b> משכנע ביותר בווידאו; מסר <b>מורכב</b>, בכתב, כי אפשר לקרוא בקצב שלך.</p>`,q:"q29"}
+ ]},
+ {id:"t6",icon:"people",title:"למי: הקהל",blocks:[
+  {h:"גיל",html:`${def("על מה הנושא",`מאפייני הקהל: גיל, אזהרה מראש, הסחה וצורך בקוגניציה.<br><b>מה נלמד כאן:</b> הסבר בין־דורי · שנים מעצבות · בנינגטון · אזהרה · הסחה · צורך בקוגניציה`)}<p>הבדלי עמדות בין גילים: <b>מחזור חיים</b> (נעשים שמרנים) או <b>בין־דורי</b> (נשארים עם העמדות מהצעירות)? רוב הראיות: <b>בין־דורי</b>.</p>${def("השנים המעצבות",`גיל ההתבגרות ותחילת שנות ה־20. עמדות שמתגבשות אז נוטות להישאר. בוגרות <b>מכללת בנינגטון</b> שנעשו ליברליות בשנות ה־30 הצביעו דמוקרטים <b>3:1</b> גם כעבור 50 שנה, כשבנות גילן הצביעו רפובליקנים 3:1.`)}${rem("עם זאת, גם מבוגרים משתנים: עמדות כלפי מין וגזע נעשו ליברליות יותר בשנות ה־50 וה־60 לחייהם.")}`,q:"q31"},
+  {h:"מה הקהל חושב",html:`<div class="tw"><table><tr><th>גורם</th><th>השפעה</th></tr><tr><td><b>אזהרה מראש</b></td><td>מאפשרת להכין טיעוני נגד, ומפחיתה שכנוע (״למה לא לתת לבני נוער לנהוג״)</td></tr><tr><td><b>הסחה</b></td><td>מונעת טיעוני נגד, ומגבירה שכנוע במסרים פשוטים; הסחה חזקה מדי (אלימות, מין) מונעת עיבוד בכלל</td></tr><tr><td><b>צורך בקוגניציה</b></td><td>גבוה: מושפעים מאיכות הטיעון; נמוך: מרמזים היקפיים</td></tr></table></div><p>דרכים לגרות חשיבה: <b>שאלות רטוריות</b> (רייגן: ״האם מצבכם טוב יותר מלפני ארבע שנים?״), כמה דוברים, אחריות, חזרה ותשומת לב. חשיבה מחזקת מסרים <b>חזקים</b> ומחלישה <b>חלשים</b>.</p>`,q:"q33"}
+ ]},
+ {id:"t7",icon:"lock",title:"שכנוע קיצוני: כתות",blocks:[
+  {h:"מעשים, ורגל בדלת",html:`${def("על מה הנושא",`איך עקרונות השכנוע מסבירים את כוחן של כתות.<br><b>מה נלמד כאן:</b> כת · היענות ומחויבות · רגל בדלת · מקור, מסר, קהל · בידוד`)}${def("כת",`${E("Cult")} נקראת גם ״תנועה דתית חדשה״: טקסים ואמונות ייחודיים, ניתוק מהתרבות הסובבת, ומנהיג כריזמטי. דוגמאות: ג׳ים ג׳ונס (914 מתו), דייוויד כורש, ״שער גן העדן״.`)}${rem("להסביר <b>למה</b> אנשים מאמינים אינו אומר אם האמונה <b>נכונה</b>.")}<p><b>היענות מובילה לקבלה</b>: חברים חדשים נעשים פעילים, מגייסים וממשיכים, וזה מחזק את הזהות. <b>רגל בדלת</b>: ארוחת ערב, סוף שבוע, הכשרה, גיוס. ג׳ונס: מעשרה אחוזים, ל־25%, לכל הרכוש. ״לאט לאט ויתרת על דברים״.</p>`,q:"q35"},
+  {h:"מקור, מסר, קהל וקבוצה",html:`<div class="tw"><table><tr><th>מרכיב</th><th>בכתות</th></tr><tr><td><b>מקור</b></td><td>מנהיג כריזמטי ואמין; ג׳ונס ״קרא מחשבות״ בעזרת שיחות טלפון מוקדמות. גיוס דרך חברים ומשפחה</td></tr><tr><td><b>מסר</b></td><td>חי, רגשי, חם, ״הדרך האחת״</td></tr><tr><td><b>קהל</b></td><td>צעירים מתחת ל־25, לרוב ממעמד הביניים, בנקודת מפנה או משבר</td></tr><tr><td><b>קבוצה</b></td><td>בידוד ממערכות תמיכה, ״קריסה פנימה״, מראית עין של קונצנזוס</td></tr></table></div>${rem("אותם עקרונות פועלים גם בקבוצות חיוביות: אחוות סטודנטים, קבוצות עזרה עצמית ופסיכותרפיה. הגבול בין חינוך לשטיפת מוח <b>מטושטש</b>.")}`,q:"q37"}
+ ]},
+ {id:"t8",icon:"check",title:"להתנגד לשכנוע",blocks:[
+  {h:"מחויבות וחיסון עמדות",html:`${def("על מה הנושא",`איך עוזרים לאנשים להתנגד לשכנוע לא רצוי.<br><b>מה נלמד כאן:</b> מחויבות פומבית · התקפה מתונה · חיסון עמדות · טפיל רעיל · יישומים`)}<p>קל יותר לקבל מסר מאשר לפקפק בו. הדרכים להתנגד: הצהרה <b>פומבית</b> על עמדה, ו<b>התקפה מתונה</b> על העמדה, שמעוררת התבצרות.</p>${def("חיסון עמדות",`${E("Attitude inoculation")} <b>מגווייר</b>: חשיפה למתקפה <b>חלשה</b> שמכינה טיעוני נגד למתקפה חזקה. ״לצחצח אחרי כל ארוחה״ קרס מול מתקפה חזקה, אלא אם חוסנו קודם בטיעון נגד מתון והפריכו אותו.`)}${rem("החיסון צריך <b>לגרות</b> את ההגנות, לא <b>להכריע</b> אותן: התנגדות שנכשלה מחלישה את העמדה. גם עייפות ושליטה עצמית מרוקנת מחלישות התנגדות.")}${def("טפיל רעיל",`צ׳לדיני: טיעון נגד חזק על העתק של פרסומת מתחרה (״איש המרלבורו״ משתעל). אחר כך הפרסומת המקורית מזכירה את טיעון הנגד.`)}`,q:"q39"},
+  {h:"יישומים",html:`${tiles([["leaf","מניעת עישון","תלמידי תיכון ״חיסנו״ תלמידי ז׳ (״הייתי פחדן אם הייתי מעשן כדי להרשים אתכם״): שיעור המעשנים החדשים כמחצית"],["people","משחקי תפקידים","31% התחילו לעשן אחרי סרטים, לעומת 19% אחרי תרגול סירוב"],["phone","פרסומות לילדים","ילדים שבדקו אם הצעצוע באמת עובד כמו בפרסומת פיתחו הבנה מציאותית"]])}<p><b>השלכות</b>: הורים ומחנכים צריכים להימנע מ״סביבה סטרילית״ ולחשוף לטיעונים. ומבחינת המשכנע, <b>שכנוע כושל גרוע מכלום</b>: מי שדחה מסר מחוסן מפני הבא.</p>${ex("תמר מכינה מראש את חברי הקבוצה שלה: ״יגידו לכם שזה רק סיגריה אחת במסיבה. מה תענו?״. זה חיסון עמדות.")}`,q:"q41"}
+ ]}
+];
+const Q={"q1":{"t":"t1","v":[{"q":"מהו שכנוע?","a":"מסר שמשנה עמדות או התנהגות","w":["הפעלת לחץ כדי לקבל ציות מיידי","העברת מידע בלי כוונה לשנות","שינוי עמדה שקורה בלי שום מסר"],"e":"שכנוע אינו טוב או רע מיסודו; זה תלוי במטרה ובתוכן."},{"q":"מתי נוטים לכנות שכנוע ״חינוך״?","a":"כשמסכימים עם המסר","w":["כשהמסר מגיע מבית ספר","כשהמסר ארוך ומפורט","כשהמסר מבוסס על פחד"],"e":"וכשלא מסכימים, קוראים לו ״תעמולה״."}]},"q2":{"t":"t1","v":[{"q":"מהם ארבעת המרכיבים שחקר הובלנד?","a":"מקור, מסר, ערוץ וקהל","w":["קשב, הבנה, זכירה ופעולה","היגיון, רגש, פחד והנאה","עמדה, כוונה, נורמה ושליטה"],"e":"מי אומר, מה, באיזה ערוץ, למי."},{"q":"מה מתאר המודל של מגווייר?","a":"משוכות שמסר צריך לעבור עד לפעולה","w":["שני מסלולי השכנוע: המרכזי וההיקפי","שלבי השינוי בטיפול פסיכולוגי ארוך","סדר ההצגה הנכון של טיעונים בוויכוח"],"e":"כל גורם שמסיר משוכה מגביר את הסיכוי לשכנוע."}]},"q3":{"t":"t1","v":[{"q":"מתי סביר שקהל יבחר במסלול המרכזי?","a":"כשיש מוטיבציה ויכולת לחשוב","w":["כשדעתו מוסחת או שהוא עסוק","כשהמקור מושך במיוחד","כשהנושא לא רלוונטי לו"],"e":"אז הוא מתמקד בטיעונים עצמם."},{"q":"מה מאפיין את המסלול ההיקפי?","a":"תגובה לרמזים כמו מקור מושך","w":["בחינה מעמיקה של איכות הטיעונים","העלאת טיעוני נגד לכל טענה","שינוי עמדה עמיד לאורך זמן"],"e":"למשל, מוזיקה גרמנית ברקע מגבירה קניית יין גרמני."}]},"q4":{"t":"t1","v":[{"q":"איזה מסלול מוביל לשינוי עמיד יותר?","a":"המרכזי","w":["ההיקפי","שניהם באותה מידה","אף אחד מהם"],"e":"חשיבה מעמיקה יוצרת שינוי שעומד בפני מתקפה ומשפיע על התנהגות."},{"q":"לפי גישת התגובה הקוגניטיבית, מה משכנע בפועל?","a":"המחשבות שהמסר מעורר","w":["מספר הטיעונים במסר","אורך המסר","עוצמת הקול של הדובר"],"e":"טיעון חזק מעורר מחשבות תומכות; חלש מעורר טיעוני נגד."}]},"q5":{"t":"t1","v":[{"q":"למה פרסומות למשקאות קלים מציגות זוהר ודובי קוטב?","a":"הן פונות למסלול ההיקפי","w":["הן פונות למסלול המרכזי","הן מציגות מידע על המוצר","הן מנסות לעורר טיעוני נגד"],"e":"פרסומות למחשבים בכתבי עת מציגות מפרט ומחיר, כי הקורא מעוניין."}]},"q6":{"t":"t1","v":[{"q":"מאיירס הצביע לפי מי שתומך בהצעה, בלי ללמוד אותה. מה זה מדגים?","a":"שימוש בהיריסטיקה היקפית","w":["עיבוד מעמיק במסלול המרכזי","אפקט הראשונות בהצבעה","חיסון עמדות מפני שכנוע"],"e":"״על חברים ומומחים אפשר לסמוך״."}]},"q7":{"t":"t2","v":[{"q":"מהו מקור אמין?","a":"מקור מומחה וראוי לאמון","w":["מקור שאנחנו מחבבים מאוד","מקור שדומה לנו ברקע ובגיל","מקור שמדבר לאט וברור"],"e":"אמינות = מומחיות + מהימנות."},{"q":"מהי השפעה רדומה?","a":"מסר ממקור לא אמין משפיע מאוחר יותר","w":["מסר ממקור אמין משפיע רק אחרי שינה","מסר שמשפיע רק כשאנחנו עייפים","מסר שנשכח לגמרי אחרי חודש"],"e":"זוכרים את המסר ושוכחים מה גרם לנו לדחות אותו."}]},"q8":{"t":"t2","v":[{"q":"מה קורה להשפעה של מקור אמין לאורך זמן?","a":"היא דועכת אחרי כחודש","w":["היא מתחזקת עם הזמן","היא נשארת לתמיד","היא הופכת להשפעה הפוכה"],"e":"כשהמקור נשכח או מתנתק מהמסר, היתרון שלו נעלם."}]},"q9":{"t":"t2","v":[{"q":"מי שכנע יותר לצחצח שיניים?","a":"״ד״ר ראנדל מהאגודה לרפואת שיניים״","w":["״ג׳ים ראנדל, תלמיד תיכון מקומי״","שניהם באותה מידה","אף אחד מהם"],"e":"מומחיות נתפסת מגבירה שכנוע."},{"q":"איזה עד נתפס אמין יותר?","a":"מי שעונה מיד וישירות","w":["מי שעונה בהיסוס ובזהירות","מי שמשפיל את מבטו","מי שמדבר לאט מאוד"],"e":"״עשרים דקות״ אמין יותר מ״אה... נדמה לי... בערך עשרים דקות״."}]},"q10":{"t":"t2","v":[{"q":"מתי מסר משפיע יותר על מי שמצותת לשיחה?","a":"כשהדוברים לא יודעים שמאזינים","w":["כשהדוברים יודעים שמקשיבים להם","כשהשיחה ארוכה ומפורטת מאוד","כשהנושא לא רלוונטי למצותת"],"e":"מי שלא יודע שמקשיבים לו נתפס כן יותר."},{"q":"למה פוליטיקאי עם רקע עסקי שתוקף חברה מזהמת משכנע?","a":"הוא טוען נגד האינטרס של עצמו","w":["הוא מומחה מוכר לאיכות הסביבה","הוא מדבר מהר ובביטחון רב","הוא אדם מושך מבחינה פיזית"],"e":"עמדה נגד האינטרס האישי נתפסת כנה."}]},"q11":{"t":"t2","v":[{"q":"מתי מקור דומה לנו משכנע יותר ממומחה?","a":"בנושאים סובייקטיביים, כמו טעם","w":["בנושאים אובייקטיביים כמו עובדות","בכל נושא באותה מידה","רק בנושאים מדעיים"],"e":"בנושאים עובדתיים המומחה משכנע יותר, כשופט בלתי תלוי."},{"q":"מה קרה כשתלמידים שחורים שמעו מסר מרופא שיניים שחור?","a":"השיניים שלהם היו נקיות יותר","w":["הם לא האמינו למסר בכלל","לא היה הבדל לעומת רופא לבן","הם שכחו את המסר מהר מאוד"],"e":"אנשים מגיבים טוב יותר למקור מהקבוצה שלהם."}]},"q12":{"t":"t2","v":[{"q":"מה קרה כשדמות וירטואלית חיקתה את תנועות הצופה?","a":"הצופה חיבב אותה והשתכנע יותר","w":["הצופה הרגיש לא בנוח והתנגד","הצופה לא שם לב להבדל","הצופה שכח את המסר"],"e":"ביילנסון ויה: חיקוי מעורר חיבה, ולכן שכנוע."}]},"q13":{"t":"t3","v":[{"q":"מי מגיב יותר למסרים שפונים להיגיון?","a":"אנשים משכילים ואנליטיים","w":["אנשים שאין להם עניין בנושא","אנשים במצב רוח טוב","אנשים צעירים מאוד"],"e":"הם פונים למסלול המרכזי."},{"q":"איך כדאי לשנות עמדה שנוצרה מרגש?","a":"במסר רגשי","w":["בטיעונים לוגיים","בנתונים סטטיסטיים","בהתעלמות מהעמדה"],"e":"עמדה רגשית משתנה מרגש; עמדה שכלית מטיעונים."}]},"q14":{"t":"t3","v":[{"q":"למה רבים הצביעו לבוש ב־2004 אף שהסכימו יותר עם קרי?","a":"חיבבו יותר את בוש","w":["לא הכירו את עמדות קרי","שכחו את העמדות של שניהם","הושפעו מאפקט האחרונות"],"e":"אצל מצביעים לא מעורבים, תגובה רגשית מנבאת הצבעה."}]},"q15":{"t":"t3","v":[{"q":"מה מצא ג׳ניס כשסטודנטים אכלו בוטנים בזמן הקריאה?","a":"הם השתכנעו יותר","w":["הם השתכנעו פחות","הם לא הבינו את המסר","דעתם הוסחה והם שכחו"],"e":"מסר שמקושר להרגשה טובה משכנע יותר."},{"q":"איך מצב רוח טוב משפיע על עיבוד המסר?","a":"מחליטים מהר, לפי רמזים היקפיים","w":["חושבים לעומק ומבקרים יותר","מתנגדים כמעט לכל מסר","זוכרים את המסר טוב יותר מהרגיל"],"e":"במצב רוח רע חושבים יותר וקשה לשכנע בטיעונים חלשים."}]},"q16":{"t":"t3","v":[{"q":"מתי כדאי לשפר את מצב הרוח של הקהל?","a":"כשאין טיעונים חזקים","w":["כשהטיעונים חזקים מאוד","כשהקהל אנליטי","אף פעם, זה פוגע בשכנוע"],"e":"אז מקווים לתגובה חיובית בלי הרבה מחשבה."}]},"q17":{"t":"t3","v":[{"q":"מה קרה עם המסר המאיים על ממוגרפיה?","a":"כשני שלישים נבדקו, לעומת כמחצית","w":["פחות נשים נבדקו מאשר במסר החיובי","אף אישה לא נבדקה","שתי הקבוצות נבדקו באותה מידה"],"e":"מסרים מאיימים יעילים במיוחד כשהמטרה למנוע תוצאה שלילית."},{"q":"מתי מסר מאיים מוביל להכחשה?","a":"כשאין הסבר איך להתמודד עם האיום","w":["כשיש הסבר ברור ומפורט מה לעשות","כשהאיום קל ולא מפחיד במיוחד","כשהמקור אמין ונחשב מומחה"],"e":"צריך גם פחד וגם דרך פעולה שאנשים מרגישים מסוגלים לה."}]},"q18":{"t":"t3","v":[{"q":"איזו פרסומת נגד עישון הפחיתה עישון אצל בני נוער?","a":"1,200 שקי גוויות מול חברת טבק","w":["תמונת מוח עם ״חשוב. אל תעשן״","פרסומת עם מוזיקה נעימה","פרסומת עם נתונים סטטיסטיים"],"e":"הפרסומת הדרמטית עבדה; ״חשוב. אל תעשן״ לא שינתה דבר."}]},"q19":{"t":"t4","v":[{"q":"מה מצאו ארונסון, טרנר וקרלסמית׳ על פער עמדות?","a":"מקור מהימן משכנע יותר בעמדה רחוקה","w":["כל מקור משכנע יותר בעמדה קרובה","פער גדול תמיד מפחית שכנוע","מקור לא מהימן משכנע יותר בעמדה רחוקה"],"e":"ת״ס אליוט שינה דעות יותר בשבח קיצוני; אגנס סטרנס לא."},{"q":"מה כדאי כשהקהל מעורב מאוד בנושא?","a":"להציג עמדה קרובה לעמדתו","w":["להציג את העמדה הקיצונית ביותר","להימנע מכל עמדה","להציג רק את טיעוני הנגד"],"e":"קהל מעורב מקבל רק טווח צר של השקפות."}]},"q20":{"t":"t4","v":[{"q":"למה פער גדול יכול להפחית שכנוע?","a":"המקור נתפס פחות אמין","w":["הקהל לא מבין את המסר","הקהל שוכח את המסר","הקהל מחבב את המקור יותר"],"e":"מצד שני, פער גדול יוצר דיסוננס, שמניע שינוי."}]},"q21":{"t":"t4","v":[{"q":"מתי מסר דו־צדדי יעיל יותר?","a":"כשהקהל מתנגד או מכיר טיעוני נגד","w":["כשהקהל כבר מסכים עם המסר מראש","כשהקהל לא מכיר את הנושא בכלל","כשהמסר קצר מאוד וקל להבנה"],"e":"הובלנד: חיילים שחשבו שהמלחמה תהיה קלה השתכנעו יותר ממסר דו־צדדי."},{"q":"מה קרה כשלשלט מחזור נוסף ״זה אולי לא נוח, אבל זה חשוב״?","a":"המחזור עלה ל־80%","w":["המחזור ירד","לא היה שינוי","הסטודנטים התלוננו"],"e":"התייחסות לטיעון הנגד העיקרי הפכה את המסר לדו־צדדי."}]},"q22":{"t":"t4","v":[{"q":"למה ההגנה במשפט מדומה הביאה ראיות נגד הנאשם לפני התביעה?","a":"כך היא נתפסה אמינה יותר","w":["כך היא בלבלה את המושבעים","כך היא קיצרה את המשפט","כך היא הפחידה את התביעה"],"e":"הכרה בטיעוני הנגד מגבירה אמינות."}]},"q23":{"t":"t4","v":[{"q":"מהו אפקט הראשונות?","a":"המידע שמוצג ראשון משפיע יותר","w":["המידע שמוצג אחרון משפיע יותר","המידע הארוך ביותר משפיע יותר","המידע הרגשי ביותר משפיע יותר"],"e":"זה המצב השכיח. לרושם הראשון יש חשיבות."},{"q":"מתי מתרחש אפקט האחרונות?","a":"כשיש מרווח בין המסרים וההחלטה אחרי השני","w":["כששני המסרים מוצגים ברצף ואז יש הפסקה","כשהמסר הראשון חזק מאוד","כשהקהל מעורב מאוד בנושא"],"e":"השכחה פועלת על המסר הראשון."}]},"q24":{"t":"t4","v":[{"q":"מה מצא אש כשהציג תכונות מ״אינטליגנטי״ ל״קנאי״?","a":"נשפט חיובי יותר מבסדר ההפוך","w":["האדם נשפט שלילי יותר","סדר התכונות לא שינה דבר","זכרו רק את התכונה האחרונה"],"e":"המידע המוקדם צבע את הפירוש של המאוחר."}]},"q25":{"t":"t5","v":[{"q":"למה הדרשות נגד גזענות בכנסיות לא השפיעו?","a":"הקהל היה סביל","w":["הכומר לא היה אמין","הדרשות היו קצרות מדי","הקהל כבר הסכים"],"e":"רק 10% נזכרו בדרשה, והעמדות לא השתנו."},{"q":"מה קרה בקמפיין הניקיון בקמפוס?","a":"כמעט אף אחד לא הרים, גם אחרי","w":["רוב העוברים הרימו אשפה","המצב השתפר מאוד","הסטודנטים התלוננו על השלטים"],"e":"0 מ־180 לפני, 2 מ־180 אחרי. מסר סביל לא עובד."}]},"q26":{"t":"t5","v":[{"q":"איזו תכנית למניעת איידס יעילה ביותר?","a":"מידע ותרגול התנהגותי יחד","w":["מידע כתוב ומפורט בלבד, בלי תרגול","הרצאה של מומחה מוכר בתחום","סרטים מפחידים על המחלה בלבד"],"e":"התנסות פעילה יוצרת עמדות עמידות יותר."}]},"q27":{"t":"t5","v":[{"q":"מה עושה עצם החזרה על טענה?","a":"גורמת להאמין בה יותר","w":["גורמת להתנגד לה","לא משפיעה על האמונה","גורמת לשכוח אותה"],"e":"טענה שחוזרת נעשית שגורה, ולכן נראית נכונה."},{"q":"למה ״חיפזון מוליד אסון״ נשמע נכון יותר מ״מהירות גורמת לתאונות״?","a":"החריזה מקלה על ההגייה","w":["הוא ארוך ומפורט יותר","הוא פתגם עתיק ומוכר","הוא מבוסס על מחקר מדעי"],"e":"מה שקל לבטא נראה אמין יותר."}]},"q28":{"t":"t5","v":[{"q":"מתי קל במיוחד להשפיע דרך התקשורת?","a":"בנושאים שוליים ולא מוכרים","w":["בנושאים חשובים ומוכרים","בנושאים פוליטיים שנויים במחלוקת","בעמדות שנוצרו בילדות"],"e":"בחירת אספירין קלה להשפעה; עמדה על מלחמה כמו לדחוף פסנתר במעלה גבעה."}]},"q29":{"t":"t5","v":[{"q":"באן ארבור, מה הוביל להכי הרבה הצבעות בעד התיקון?","a":"מפגש אישי פנים אל פנים","w":["מכתבים בדואר לבית","תקשורת ההמונים בלבד","שלטי חוצות ברחבי העיר"],"e":"19% בתקשורת, 45% בדואר, 75% במפגש אישי."},{"q":"מהי הזרימה הדו־שלבית של כ״ץ?","a":"מהתקשורת למנהיגי דעה, ומהם הלאה","w":["מהמקור לקהל ובחזרה אל המקור עצמו","ממסר כתוב למסר מצולם בווידאו","מהרגש של הקהל אל ההיגיון שלו"],"e":"מנהיגי דעה מעבירים את המסר הלאה, ולכן מחזרים אחריהם."}]},"q30":{"t":"t5","v":[{"q":"איך מסר מורכב משכנע ביותר?","a":"בכתב","w":["בווידאו","בהקלטת שמע","בשיחה מהירה"],"e":"אפשר לקרוא בקצב שלך ולחזור על מה שלא הבנת. מסר פשוט משכנע ביותר בווידאו."}]},"q31":{"t":"t6","v":[{"q":"מה מסביר הכי טוב הבדלי עמדות בין גילים?","a":"ההסבר הבין־דורי","w":["הסבר מחזור החיים","הבדלים גנטיים","הבדלים בהשכלה"],"e":"מבוגרים נשארים עם העמדות שאימצו בצעירותם."},{"q":"מה קרה לבוגרות מכללת בנינגטון כעבור 50 שנה?","a":"נשארו ליברליות והצביעו לדמוקרטים","w":["חזרו לעמדות השמרניות של משפחתן","הפסיקו להצביע","הצביעו כמו בנות גילן"],"e":"3:1 לדמוקרטים, כשבנות גילן הצביעו 3:1 לרפובליקנים."}]},"q32":{"t":"t6","v":[{"q":"מהן ״השנים המעצבות״?","a":"ההתבגרות ותחילת שנות ה־20","w":["שנות הילדות המוקדמת עד בית הספר","שנות העמידה והקריירה המקצועית","שנות הזקנה, אחרי הפרישה"],"e":"העמדות שמתגבשות אז נוטות להישאר."}]},"q33":{"t":"t6","v":[{"q":"איך משפיעה אזהרה מראש על שכנוע?","a":"מפחיתה אותו, כי מכינים טיעונים","w":["מגבירה אותו, כי מקשיבים יותר","לא משפיעה בכלל","מגבירה רק אצל צעירים"],"e":"תלמידים שהוזהרו מראש לא זזו מדעתם."},{"q":"איך הסחה קלה משפיעה על שכנוע?","a":"מגבירה, כי מונעת טיעוני נגד","w":["מפחיתה אותו, כי לא שמים לב","לא משפיעה בכלל","מגבירה רק מסרים מורכבים"],"e":"יעילה בעיקר במסרים פשוטים. הסחה חזקה מדי מונעת עיבוד בכלל."}]},"q34":{"t":"t6","v":[{"q":"על מי ישפיעו יותר ניסיונות שכנוע עם הרבה רמזים היקפיים?","a":"על בעלי צורך נמוך בקוגניציה","w":["על בעלי צורך גבוה בקוגניציה","על כולם באותה מידה","על אנשים משכילים מאוד"],"e":"בעלי צורך גבוה נהנים לחשוב ומושפעים מאיכות הטיעון."},{"q":"מה קורה כשמגרים את הקהל לחשוב?","a":"חזקים משכנעים יותר, חלשים פחות","w":["כל המסרים נעשים משכנעים יותר","כל המסרים נעשים משכנעים פחות","אין לכך השפעה על השכנוע"],"e":"למשל, שאלות רטוריות כמו של רייגן."}]},"q35":{"t":"t7","v":[{"q":"מה מאפיין כת?","a":"טקסים ייחודיים, ניתוק ומנהיג כריזמטי","w":["ארגון דתי גדול וותיק מאוד, עם מסורת","קבוצה גדולה בלי מנהיג מוגדר","קבוצה שפתוחה לכל ביקורת מבחוץ"],"e":"נקראת גם ״תנועה דתית חדשה״."},{"q":"איך כתות מגייסות חברים, לפי הפרק?","a":"בהדרגה, ברגל בדלת","w":["בהחלטה פתאומית של המצטרף","בפנייה ישירה ברחוב","בעזרת כפייה מההתחלה"],"e":"ארוחה, סוף שבוע, הכשרה, גיוס כספים."}]},"q36":{"t":"t7","v":[{"q":"מה ממחיש סיפורה של גרייס סטואן על ג׳ים ג׳ונס?","a":"הוויתורים נעשו לאט ובהדרגה","w":["היא החליטה בבת אחת לוותר על הכל","ג׳ונס כפה עליה הכל מיד","היא התנגדה מההתחלה"],"e":"״הגעתי עד כאן, מה זה כבר משנה?״."}]},"q37":{"t":"t7","v":[{"q":"מי נוטה יותר להצטרף לכתות?","a":"צעירים בנקודת מפנה או משבר","w":["מבוגרים יציבים ומבוססים","אנשים עם השכלה גבוהה מאוד בלבד","ילדים צעירים"],"e":"הכת מציעה מענה לצרכים שלהם."},{"q":"מה תפקיד הבידוד בכתות?","a":"מנתק מטיעוני נגד ויוצר ״הסכמה״","w":["מאפשר לחברים לחשוב בשקט ובריכוז","מגן על החברים מסכנות פיזיות מבחוץ","מחזק את הקשר עם המשפחה הקרובה"],"e":"הקבוצה מגדירה את המציאות, וכל ספק נעלם."}]},"q38":{"t":"t7","v":[{"q":"מה מסקנת הפרק מקווי הדמיון בין כתות לקבוצות חיוביות?","a":"הגבול בין חינוך לשטיפת מוח מעורפל","w":["כל הקבוצות החיוביות הן בעצם כתות","כתות אינן מסוכנות כפי שחושבים","אין שום דמיון בין כתות לקבוצות אחרות"],"e":"גם אחוות, קבוצות עזרה עצמית ופסיכותרפיה משתמשות בעקרונות דומים."}]},"q39":{"t":"t8","v":[{"q":"מהו חיסון עמדות?","a":"חשיפה למתקפה חלשה שמכינה תגובה","w":["הגנה על עמדות באמצעות התעלמות","חשיפה למתקפה חזקה כבר בהתחלה","הימנעות מכל מידע סותר"],"e":"מגווייר, בדומה לחיסון בנגיף מוחלש."},{"q":"מה קורה אם ההתנגדות למסר נכשלת?","a":"העמדה נחלשת","w":["העמדה מתחזקת","העמדה לא משתנה","הקהל שוכח את המסר"],"e":"חיסון צריך לגרות את ההגנות, לא להכריע אותן."}]},"q40":{"t":"t8","v":[{"q":"מהו ״טפיל רעיל״?","a":"טיעון נגד על העתק של פרסומת","w":["פרסומת שמזיקה למוצר עצמו","מסר שמפיץ שמועות שקריות","טכניקה להפחדה בעזרת תמונות"],"e":"אחר כך הפרסומת המקורית מזכירה את טיעון הנגד."},{"q":"מה קורה לעמדה כשמתקיפים אותה במתינות?","a":"המחויבות אליה מתחזקת","w":["היא קורסת מיד","היא נשכחת","היא הופכת לקיצונית בכיוון ההפוך"],"e":"כמו בוויכוח שבו כל צד מתבצר יותר."}]},"q41":{"t":"t8","v":[{"q":"מה היה שיעור המעשנים החדשים בקרב תלמידים ״מחוסנים״?","a":"כמחצית משיעורם בקבוצת הביקורת","w":["כפול משיעורם בקבוצת הביקורת","זהה לשיעור בקבוצת הביקורת","אפס, אף אחד לא התחיל לעשן"],"e":"מקליסטר: תלמידי תיכון לימדו תלמידי ז׳ להשיב ללחץ לעשן."},{"q":"מה עבד טוב יותר למניעת עישון?","a":"משחקי תפקידים של סירוב","w":["צפייה בסרטים נגד עישון","הרצאה על נזקי עישון","עונשים על עישון"],"e":"19% התחילו לעשן לעומת 31% אחרי סרטים."}]},"q42":{"t":"t8","v":[{"q":"למה שכנוע כושל עלול להיות גרוע מכלום?","a":"מי שדחה מסר מחוסן מפני הבא","w":["הקהל נעלב ומתנתק לגמרי","המקור מאבד את המוניטין","המסר הבא נשמע זהה לראשון"],"e":"הוא מפעיל את ההגנות ומקשה את הלב מול מסרים נוספים."}]}};
+const SUM=`<h2>סיכום: מאיירס פרק 7 - שכנוע</h2>
+<div class="key"><b>על מה מדובר?</b> שכנוע הוא תהליך שבו מסר משנה אמונות, עמדות או התנהגות. הוא פועל ב<b>שני מסלולים</b>: <b>מרכזי</b> (חשיבה על הטיעונים, שינוי עמיד) ו<b>היקפי</b> (רמזים כמו מקור מושך, שינוי שטחי). הפרק בוחן ארבעה מרכיבים: <b>מי</b> אומר (אמינות, אטרקטיביות), <b>מה</b> (היגיון או רגש, פחד, פער, צדדים, סדר), <b>איך</b> (ערוץ פעיל או סביל, אישי או המוני) ו<b>למי</b> (גיל, צורך בקוגניציה). בסוף: כתות כשכנוע קיצוני, ואיך להתנגד לשכנוע (<b>חיסון עמדות</b>).</div>
+
+<h3>הדוגמה שתלווה אותנו: תמר</h3>
+<p><b>תמר</b> (דמות בדויה להמחשה) מובילה קמפיין נגד עישון בקמפוס, וצריכה להחליט מי יעביר את המסר, מה יגיד, באיזה ערוץ ולמי.</p>
+
+<h3>1. שני מסלולים</h3>
+<div class="tw"><table><tr><th></th><th>מסלול מרכזי</th><th>מסלול היקפי</th></tr>
+<tr><td>מתי</td><td>יש <b>מוטיבציה ויכולת</b> לחשוב</td><td>אין עניין, הסחה, עומס</td></tr>
+<tr><td>מה משפיע</td><td><b>איכות הטיעונים</b> והמחשבות שהם מעוררים</td><td><b>רמזים</b>: מקור מושך, מומחה, מסר מוכר</td></tr>
+<tr><td>התוצאה</td><td>שינוי <b>עמיד</b>, משפיע על התנהגות</td><td>שינוי שטחי וקצר</td></tr>
+<tr><td>דוגמה</td><td>פרסומת למחשב עם מפרט</td><td>פרסומת למשקה עם דובי קוטב</td></tr></table></div>
+<p><b>הובלנד</b> הגדיר את ארבעת המרכיבים; <b>מגווייר</b>: משוכות של קשב, הבנה, אמונה, זכירה ופעולה. שכנוע נקרא ״חינוך״ כשמסכימים ו״תעמולה״ כשלא.</p>
+
+<h3>2. מי אומר: המקור</h3>
+<ul>
+<li><b>אמינות</b> = מומחיות + מהימנות. דועכת אחרי כחודש. <b>השפעה רדומה</b>: מסר ממקור לא אמין משפיע <b>מאוחר יותר</b>, כששוכחים את המקור.</li>
+<li><b>מהימנות</b> עולה עם: דיבור ישיר ובטוח, מבט ישיר, כשהדובר <b>לא מנסה לשכנע</b>, כשהוא טוען <b>נגד האינטרס שלו</b>, ודיבור <b>מהיר</b>.</li>
+<li><b>אטרקטיביות ודמיון</b>: חיקוי מגביר שכנוע; רופא שיניים שחור שכנע תלמידים שחורים. בנושא <b>סובייקטיבי</b> משכנע מי ש<b>דומה</b>; ב<b>אובייקטיבי</b>, ה<b>מומחה</b>.</li>
+</ul>
+
+<h3>3. מה נאמר: התוכן</h3>
+<div class="tw"><table><tr><th>שאלה</th><th>התשובה</th></tr>
+<tr><td><b>היגיון או רגש?</b></td><td>תלוי בקהל: אנליטיים להיגיון. עמדה רגשית משתנה מרגש</td></tr>
+<tr><td><b>הרגשה טובה</b></td><td>בוטנים ומשקה הגבירו שכנוע (ג׳ניס); במצב רוח טוב נשענים על רמזים</td></tr>
+<tr><td><b>פחד</b></td><td>מגביר שכנוע (ממוגרפיה: 2/3 מול 1/2), <b>אם</b> יש דרך התמודדות; בלעדיה, הכחשה</td></tr>
+<tr><td><b>פער עמדות</b></td><td>מקור <b>מהימן מאוד</b> (ת״ס אליוט) משכנע יותר בעמדה רחוקה; קהל מעורב מקבל טווח צר</td></tr>
+<tr><td><b>חד או דו־צדדי</b></td><td>חד־צדדי לקהל <b>מסכים</b>; דו־צדדי לקהל <b>מתנגד</b> או שייחשף לטיעוני נגד (מחזור: 80%)</td></tr>
+<tr><td><b>ראשונות או אחרונות</b></td><td>בדרך כלל <b>ראשונות</b>; אחרונות רק עם <b>מרווח זמן</b> והחלטה סמוך למסר השני</td></tr></table></div>
+
+<h3>4. איך: הערוץ</h3>
+<ul>
+<li>קליטה <b>סבילה</b> לא עובדת בנושאים חשובים (דרשות: 10% נזכרו; ניקיון: 2 מ־180). התנסות <b>פעילה</b> כן.</li>
+<li><b>חזרה</b> וחריזה מגבירות אמונה. השכנוע פוחת ככל שהנושא <b>חשוב ומוכר</b> יותר.</li>
+<li><b>השפעה אישית</b> חזקה מתקשורת: אן ארבור 19%, 45%, 75%; מחקר הלב: 8%, 20%, 30%.</li>
+<li><b>זרימה דו־שלבית</b> (כ״ץ): תקשורת, מנהיגי דעה, כולם.</li>
+<li>מסר <b>פשוט</b>: וידאו; מסר <b>מורכב</b>: כתב.</li>
+</ul>
+
+<h3>5. למי: הקהל</h3>
+<ul>
+<li><b>גיל</b>: הסבר <b>בין־דורי</b>, לא מחזור חיים. <b>השנים המעצבות</b> (התבגרות ותחילת ה־20). בנינגטון: ליברליות גם אחרי 50 שנה.</li>
+<li><b>אזהרה מראש</b> מפחיתה שכנוע; <b>הסחה</b> קלה מגבירה (פחות טיעוני נגד).</li>
+<li><b>צורך בקוגניציה</b>: גבוה, איכות הטיעון; נמוך, רמזים. גירוי חשיבה (שאלות רטוריות) מחזק טיעונים חזקים ומחליש חלשים.</li>
+</ul>
+
+<h3>6. כתות</h3>
+<ul>
+<li><b>מעשים</b>: היענות מובילה לקבלה; <b>רגל בדלת</b> (ג׳ונס: 10%, 25%, הכל).</li>
+<li><b>מקור</b> כריזמטי ואמין; <b>מסר</b> רגשי וחם; <b>קהל</b> צעיר בנקודת מפנה; <b>בידוד</b> וקונצנזוס מדומה.</li>
+<li>אותם עקרונות בקבוצות חיוביות; הגבול בין חינוך לשטיפת מוח מטושטש.</li>
+</ul>
+
+<h3>7. להתנגד לשכנוע</h3>
+<ul>
+<li><b>מחויבות פומבית</b> ו<b>התקפה מתונה</b> מחזקות עמדה.</li>
+<li><b>חיסון עמדות</b> (מגווייר): מתקפה חלשה מכינה טיעוני נגד. אבל התנגדות שנכשלה <b>מחלישה</b>.</li>
+<li><b>טפיל רעיל</b> (צ׳לדיני): טיעון נגד על העתק הפרסומת.</li>
+<li>תלמידים ״מחוסנים״: כמחצית מעשנים חדשים; משחקי תפקידים: 19% מול 31%.</li>
+<li><b>שכנוע כושל גרוע מכלום</b>: מחסן מפני הבא.</li>
+</ul>
+
+<h3>מלכודות נפוצות במבחן</h3>
+<div class="trap"><ul>
+<li><b>השפעה רדומה</b> = מקור <b>לא</b> אמין שמשפיע <b>מאוחר</b>.</li>
+<li><b>ראשונות</b> הוא השכיח; <b>אחרונות</b> דורש מרווח זמן <b>וגם</b> החלטה מיד אחרי השני.</li>
+<li>דו־צדדי לקהל <b>מתנגד</b>; חד־צדדי לקהל <b>מסכים</b>.</li>
+<li>פחד עובד רק עם <b>דרך פעולה</b>.</li>
+<li>הסבר <b>בין־דורי</b>, לא מחזור חיים.</li>
+<li>אזהרה מראש <b>מפחיתה</b>; הסחה קלה <b>מגבירה</b>.</li>
+<li>מסר <b>מורכב</b> = כתב; <b>פשוט</b> = וידאו.</li>
+<li>מקור <b>דומה</b> לטעם; <b>מומחה</b> לעובדות.</li>
+</ul></div>`;
+for(const t of T) t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id);
+const KEY=CONFIG.key;
+let S={q:{},read:{}};
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.q) S=s;}catch(e){}
+S.pos=S.pos||{};S.done=S.done||{};
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const st=id=>S.q[id]||(S.q[id]={n:0,c:0,w:0,t:0,lv:-1});
+const mastered=id=>(S.q[id]?.c||0)>=2;
+const topicPct=t=>Math.round(100*t.qids.filter(mastered).length/t.qids.length);
+const topicStarted=t=>S.read[t.id]||S.pos[t.id]!=null||t.qids.some(id=>S.q[id]&&S.q[id].n);
+const allIds=Object.keys(Q);
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+const pickVariant=id=>{const s=st(id),n=Q[id].v.length;return n>1?(s.lv+1)%n:0};
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const color=t=>`var(--${t.id})`;
+const app=document.getElementById("app");
+const LET=["א","ב","ג","ד"];
+
+function qCard(id,onDone,label){
+  const vi=pickVariant(id),v=Q[id].v[vi],opts=shuffle([v.a,...v.w]);
+  const box=document.createElement("div");box.className="q fade";
+  box.innerHTML=(label?`<span class="eyebrow">${label}</span>`:"")+`<div class="qtext">${esc(v.q)}</div>${acrNote(v.q,v.a,...v.w)}<div class="opts"></div>`;
+  const wrap=box.querySelector(".opts");
+  opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt";b.dataset.a=o===v.a?"1":"";
+    b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+    b.onclick=()=>{const ok=o===v.a,s=st(id);s.n++;s.t=Date.now();s.lv=vi;ok?s.c++:(s.c=0,s.w++);save();
+      wrap.querySelectorAll("button").forEach(x=>{x.disabled=true;if(x.dataset.a)x.classList.add("right")});
+      if(!ok)b.classList.add("wrong");
+      const fb=document.createElement("div");fb.className="fb fade "+(ok?"ok":"no");
+      fb.innerHTML=`${ic(ok?"check":"x")}<div><strong>${ok?"נכון!":"לא בדיוק"}</strong>${esc(v.e)}</div>`;box.appendChild(fb);
+      const nx=document.createElement("button");nx.className="primary";nx.textContent="המשך";nx.style.alignSelf="flex-start";
+      nx.onclick=()=>onDone(ok);box.appendChild(nx);nx.focus({preventScroll:true});nx.scrollIntoView({block:"nearest",behavior:"smooth"});
+    };wrap.appendChild(b)});
+  return box;
+}
+
+function home(){
+  document.body.style.removeProperty("--c");if(S.at){delete S.at;save()}
+  const started=T.filter(topicStarted);
+  const total=Math.round(T.reduce((a,t)=>a+strength(t)*t.qids.length,0)/allIds.length);
+  const weak=allIds.filter(id=>S.q[id]&&S.q[id].n&&!mastered(id)).length;
+  app.innerHTML=`<div class="stack fade">
+   <section class="cover" style="--c:var(--accent)">
+    <div class="cover-art">${FIG[CONFIG.cover]()}</div>
+    <div class="cover-body">
+     <span class="eyebrow">${CONFIG.eyebrow}</span>
+     ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
+     <p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר, ובסוף הלומדה מבחן מסכם עם ציון.</p>
+     <div class="stats">
+      <div class="ring" style="--p:${total}"><span>${total}%</span></div>
+      <div class="stat-text"><b>${total===0&&!started.length?"עוד לא התחלת":total>=80?"אתה שולט בחומר":`התקדמת ב־${total}% מהשאלות`}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
+     </div>
+     <div class="actions">
+      <button class="primary review-btn" id="rev" ${started.length?"":"disabled"}>${ic("cycle")}<span>${started.length?"חזרה מהירה":"חזרה מהירה (אחרי נושא ראשון)"}</span></button>
+      <button class="review-btn" id="exm">${ic("grad")}<span>מבחן מסכם${S.exam?` · ציון אחרון ${S.exam.pct}`:""}</span></button>
+      <button class="review-btn" id="wk" ${started.length?"":"disabled"}>${ic("target")}<span>נושאים לחיזוק</span></button>
+      ${typeof SUM!=="undefined"?`<button class="review-btn" id="sum">${ic("doc")}<span>סיכום הקריאה</span></button>`:""}
+     </div>
+    </div>
+   </section>
+   <div class="grid" id="list"></div>
+   <div class="foot"><a href="../#social" style="color:var(--accent);font-weight:700;text-decoration:none">→ לקורס</a><span>${CONFIG.note}</span><button class="ghost" id="reset">איפוס התקדמות</button></div>
+  </div>`;
+  app.querySelectorAll(".actions svg").forEach(x=>x.style.cssText="width:20px;height:20px");
+  const list=app.querySelector("#list");
+  T.forEach((t,i)=>{const p=strength(t),pos=S.pos[t.id],dn=S.done[t.id],b=document.createElement("button");b.className="tcard";b.style.setProperty("--c",color(t));
+    const status=dn?`✓ הושלם · מבחן ${dn.r}/${dn.n}`:pos!=null?`באמצע · קטע ${pos+1} מתוך ${t.blocks.length}`:S.read[t.id]?"✓ נקרא":topicStarted(t)?"בתהליך":"לא התחלת";
+    b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(dn?"check":t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${dn&&!p?100*dn.r/dn.n:p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
+    if(dn)b.classList.add("done");
+    b.onclick=()=>topic(i,pos!=null?pos:0);list.appendChild(b)});
+  app.querySelector("#rev").onclick=review;{const sb=app.querySelector("#sum");if(sb)sb.onclick=summary}app.querySelector("#exm").onclick=exam;app.querySelector("#wk").onclick=weakTopics;
+  const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{},pos:{},done:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
+  scrollTo(0,0);
+}
+
+function bar(title,n,i,label){
+  return `<div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">${label}</span></div><div class="steps">${Array.from({length:n},(_,k)=>`<i class="${k<=i?"on":""}"></i>`).join("")}</div></div><span class="eyebrow">${title}</span>`;
+}
+
+function topic(ti,bi){
+  const t=T[ti],blk=t.blocks[bi];document.body.style.setProperty("--c",color(t));
+  app.innerHTML=`<div class="stack">${bar(`נושא ${ti+1} · ${t.title}`,t.blocks.length+1,bi,`קטע ${bi+1} מתוך ${t.blocks.length}`)}
+   <article class="card fade"><h3>${blk.h}</h3>${acrExpand(blk.html)}</article><div id="slot"></div></div>`;
+  S.pos[t.id]=bi;S.at={ti,bi};save();
+  app.querySelector("#back").onclick=home;
+  const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;delete S.pos[t.id];S.at={ti,quiz:1};save();quiz(ti)}};
+  if(bi>0){const pb=document.createElement("button");pb.className="ghost";pb.textContent="→ הקטע הקודם";pb.style.marginTop="6px";pb.onclick=()=>topic(ti,bi-1);setTimeout(()=>slot.appendChild(pb))}
+  const slot=app.querySelector("#slot");
+  {const b=document.createElement("button");b.className="primary";b.textContent=bi+1<t.blocks.length?"המשך":`למבחן הנושא (${t.qids.length} שאלות)`;b.onclick=next;slot.appendChild(b)}
+  scrollTo(0,0);
+}
+
+function runSet(title,ids,c,onEnd){
+  let i=0,right=0;document.body.style.setProperty("--c",c);
+  const step=()=>{
+    if(i>=ids.length)return onEnd(right,ids.length);
+    const id=ids[i],from=T.find(t=>t.id===Q[id].t);
+    app.innerHTML=`<div class="stack">${bar(title,ids.length,i,`שאלה ${i+1} מתוך ${ids.length}`)}<div id="slot"></div></div>`;
+    app.querySelector("#back").onclick=home;
+    const card=qCard(id,ok=>{if(ok)right++;i++;step()},from.title);card.style.setProperty("--c",color(from));
+    app.querySelector("#slot").appendChild(card);scrollTo(0,0);
+  };step();
+}
+
+function quiz(ti){
+  const t=T[ti];
+  const prev=T.slice(0,ti).filter(topicStarted).flatMap(x=>x.qids);
+  const extra=shuffle(prev).sort((a,b)=>st(a).c-st(b).c).slice(0,2);
+  runSet(`מבחן סיום · ${t.title}`,shuffle(t.qids).concat(extra),color(t),(r,n)=>done(r,n,ti));
+}
+
+function review(){
+  const pool=T.filter(topicStarted).flatMap(t=>t.qids),now=Date.now();
+  const tw={};T.forEach(t=>tw[t.id]=(100-strength(t))/20);
+  const score=id=>{const s=S.q[id]||{n:0,c:0,w:0,t:0};return (s.n?0:2)+s.w*2+(s.c<2?3:0)+Math.min(3,(now-s.t)/864e5)+tw[Q[id].t]+Math.random()*2};
+  const ids=pool.map(id=>[id,score(id)]).sort((a,b)=>b[1]-a[1]).slice(0,12).map(x=>x[0]);
+  runSet("חזרה מהירה",shuffle(ids),"var(--accent)",(r,n)=>done(r,n,null));
+}
+
+const strength=t=>Math.round(100*t.qids.filter(id=>S.q[id]&&S.q[id].n&&S.q[id].c>0).length/t.qids.length);
+
+function practice(ti){const t=T[ti];runSet(`תרגול · ${t.title}`,shuffle(t.qids),color(t),(r,n)=>done(r,n,ti))}
+
+function exam(){
+  const N=Math.min(allIds.length,Math.max(15,Math.min(20,T.length*3)));
+  const pools=T.map(t=>shuffle(t.qids)),ids=[];
+  for(let k=0;ids.length<N;k++)for(const p of pools){if(ids.length>=N)break;if(k<p.length)ids.push(p[k])}
+  const items=shuffle(ids).map(id=>{const vi=pickVariant(id),v=Q[id].v[vi];return{id,vi,v,opts:shuffle([v.a,...v.w]),pick:null}});
+  document.body.style.setProperty("--c","var(--accent)");
+  let i=0;
+  const step=()=>{
+    const it=items[i],from=T.find(t=>t.id===Q[it.id].t),last=i===items.length-1;
+    app.innerHTML=`<div class="stack">${bar("מבחן מסכם",items.length,i,`שאלה ${i+1} מתוך ${items.length}`)}
+     <div class="q fade"><span class="eyebrow">${esc(from.title)}</span><div class="qtext">${esc(it.v.q)}</div>${acrNote(it.v.q,it.v.a,...it.v.w)}<div class="opts"></div>
+     <div class="row"><button class="primary" id="nx" ${it.pick==null?"disabled":""}>${last?"הגשה ובדיקה":"הבא"}</button>${i?`<button class="ghost" id="pv">הקודם</button>`:""}</div></div></div>`;
+    {const bk=app.querySelector("#back");bk.onclick=()=>{if(bk.dataset.sure)home();else{bk.dataset.sure=1;bk.textContent="לחץ שוב כדי לצאת (התשובות לא יישמרו)"}}}
+    const wrap=app.querySelector(".opts"),nx=app.querySelector("#nx");
+    it.opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt"+(it.pick===o?" sel":"");
+      b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+      b.onclick=()=>{it.pick=o;wrap.querySelectorAll(".opt").forEach(x=>x.classList.remove("sel"));b.classList.add("sel");nx.disabled=false};
+      wrap.appendChild(b)});
+    nx.onclick=()=>{if(last)grade(items);else{i++;step()}};
+    const pv=app.querySelector("#pv");if(pv)pv.onclick=()=>{i--;step()};
+    scrollTo(0,0);
+  };step();
+}
+
+function grade(items){
+  const now=Date.now();let r=0;const per={};
+  items.forEach(it=>{const ok=it.pick===it.v.a,s=st(it.id),tid=Q[it.id].t;s.n++;s.t=now;s.lv=it.vi;ok?(s.c++,r++):(s.c=0,s.w++);
+    it.ok=ok;(per[tid]=per[tid]||{r:0,n:0}).n++;if(ok)per[tid].r++});
+  const n=items.length,pct=Math.round(100*r/n);S.exam={pct,t:now};save();
+  const rows=T.filter(t=>per[t.id]).map(t=>{const p=per[t.id],q=Math.round(100*p.r/p.n);
+    return `<div class="trow" style="--c:${color(t)}"><span class="tt">${esc(t.title)}</span><div class="bar"><i style="width:${q}%"></i></div><span class="sc">${p.r}/${p.n}</span></div>`}).join("");
+  const wrong=items.filter(it=>!it.ok);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">ציון המבחן המסכם</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct}"><span>${pct}</span></div><div class="big">${r}/${n}</div></div>
+    <p>${pct>=90?"מצוין, אתה שולט בחומר.":pct>=70?"טוב. עבור על הטעויות למטה וחזור על הנושאים החלשים.":"כדאי לחזור על החומר. למטה תמצא את הטעויות, ולכל אחת כפתור לחזרה על הנושא."}</p>
+    <h3>לפי נושא</h3><div class="trows">${rows}</div>
+    <div class="row"><button class="primary" id="again">מבחן מסכם חדש</button><button id="hm">לכל הנושאים</button></div>
+   </article>
+   ${wrong.length?`<h3>הטעויות שלך (${wrong.length})</h3>`:`<p class="muted">לא היו טעויות.</p>`}
+   <div class="stack" id="wl"></div></div>`;
+  const wl=app.querySelector("#wl");
+  wrong.forEach(it=>{const ti=T.findIndex(t=>t.id===Q[it.id].t),t=T[ti],c=document.createElement("article");c.className="card rev";c.style.setProperty("--c",color(t));
+    c.innerHTML=`<span class="eyebrow">${esc(t.title)}</span><div class="qtext">${esc(it.v.q)}</div>${acrNote(it.v.q,it.v.a,it.pick,it.v.e)}
+     <div class="opt wrong" aria-disabled="true"><span class="k">${ic("x")}</span><span><b>התשובה שלך:</b> ${esc(it.pick)}</span></div>
+     <div class="opt right" aria-disabled="true"><span class="k">${ic("check")}</span><span><b>התשובה הנכונה:</b> ${esc(it.v.a)}</span></div>
+     <div class="fb no">${ic("bulb")}<div><strong>למה?</strong>${esc(it.v.e)}</div></div>
+     <div class="row"><button class="primary go">חזרה על הנושא: ${esc(t.title)}</button></div>`;
+    c.querySelector(".go").onclick=()=>topic(ti,0);wl.appendChild(c)});
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;app.querySelector("#again").onclick=exam;
+  scrollTo(0,0);
+}
+
+function weakTopics(){
+  document.body.style.setProperty("--c","var(--accent)");
+  const list=T.map((t,i)=>({t,i,s:strength(t),started:topicStarted(t)})).sort((a,b)=>(a.started-b.started)||(a.s-b.s));
+  const lab=x=>!x.started?"עוד לא תרגלת":x.s>=80?"חזק":x.s>=50?"בינוני":"צריך חיזוק";
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <span class="eyebrow">נושאים לחיזוק</span><p class="muted">הנושאים מסודרים מהחלש לחזק, לפי התשובות האחרונות שלך בכל שאלה.</p>
+   <div class="stack" id="wl"></div></div>`;
+  const wl=app.querySelector("#wl");
+  list.forEach(x=>{const c=document.createElement("article");c.className="card rev";c.style.setProperty("--c",color(x.t));
+    c.innerHTML=`<div class="trow"><span class="tt">${x.i+1}. ${esc(x.t.title)}</span><div class="bar"><i style="width:${x.s}%"></i></div><span class="sc">${x.started?x.s+"%":"—"}</span></div>
+     <span class="tag ${!x.started?"":x.s>=80?"good":x.s>=50?"mid":"low"}">${lab(x)}</span>
+     <div class="row"><button class="primary pr">תרגול שאלות הנושא</button><button class="rd">קריאה חוזרת</button></div>`;
+    c.querySelector(".pr").onclick=()=>practice(x.i);c.querySelector(".rd").onclick=()=>topic(x.i,0);wl.appendChild(c)});
+  app.querySelector("#back").onclick=home;scrollTo(0,0);
+}
+
+function done(r,n,ti){
+  if(ti!=null){S.done[T[ti].id]={r,n};}if(S.at){delete S.at}save();
+  const nextT=ti!=null&&ti+1<T.length?ti+1:null,pct=Math.round(100*r/n);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">${ti!=null?`סיום נושא ${ti+1} · ${T[ti].title}`:"סיום חזרה מהירה"}</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct};--accent:var(--c)"><span>${pct}%</span></div><div class="big">${r}/${n}</div></div>
+    <p>${r===n?"מצוין, הכל נכון.":r>=n*0.7?"טוב מאוד. מה שטעית בו יחזור בחזרה המהירה, בניסוח אחר.":"כדאי לעבור שוב על הנושא. השאלות שטעית בהן יחזרו בחזרה המהירה."}</p>
+    <div class="row">${nextT!=null?`<button class="primary" id="nx" style="--c:${color(T[nextT])}">לנושא הבא: ${T[nextT].title}</button>`:""}<button id="hm">לכל הנושאים</button></div>
+   </article></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;
+  const nx=app.querySelector("#nx");if(nx)nx.onclick=()=>topic(nextT,0);
+  scrollTo(0,0);
+}
+function summary(){
+  document.body.style.setProperty("--c","var(--accent)");
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">סיכום הקריאה</span></div></div>
+   <article class="card sum">${acrExpand(SUM)}</article>
+   <div class="row"><button class="primary" id="hm">חזרה לכל הנושאים</button></div></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;scrollTo(0,0);
+}
+if(S.at&&T[S.at.ti]){const a=S.at;if(a.quiz)quiz(a.ti);else topic(a.ti,Math.min(a.bi||0,T[a.ti].blocks.length-1))}else home();
+</script>
+</body>
+</html>
