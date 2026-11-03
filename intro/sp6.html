@@ -519,7 +519,10 @@ const SUM=`<h2>סיכום: Spielman פרק 6 - למידה</h2>
 <li><b>למידה סמויה = בלי חיזוק</b>, ומופיעה רק כשיש סיבה.</li>
 <li><b>סלידה מטעם היא חריג</b> לכלל התזמון: נוצרת גם אחרי שעות.</li>
 </ul></div>`;
-for(const t of T) t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id);
+if(typeof H!=="undefined")for(const k in H)Q[k]=Object.assign({},H[k],{lv:2});
+const isH=id=>Q[id].lv===2;
+for(const t of T){t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id&&!isH(k));t.hids=Object.keys(Q).filter(k=>Q[k].t===t.id&&isH(k))}
+const HAS_H=T.some(t=>t.hids.length);
 const KEY=CONFIG.key;
 let S={q:{},read:{}};
 try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.q) S=s;}catch(e){}
@@ -529,7 +532,9 @@ const st=id=>S.q[id]||(S.q[id]={n:0,c:0,w:0,t:0,lv:-1});
 const mastered=id=>(S.q[id]?.c||0)>=2;
 const topicPct=t=>Math.round(100*t.qids.filter(mastered).length/t.qids.length);
 const topicStarted=t=>S.read[t.id]||S.pos[t.id]!=null||t.qids.some(id=>S.q[id]&&S.q[id].n);
-const allIds=Object.keys(Q);
+const allIds=Object.keys(Q).filter(id=>!isH(id));
+const rnd=t=>S.done[t.id]?(S.done[t.id].k||1)+1:1;
+const hardOn=t=>rnd(t)>1&&t.hids.length>0;
 function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 const pickVariant=id=>{const s=st(id),n=Q[id].v.length;return n>1?(s.lv+1)%n:0};
 const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
@@ -566,14 +571,14 @@ function home(){
     <div class="cover-body">
      <span class="eyebrow">${CONFIG.eyebrow}</span>
      ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
-     <p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר, ובסוף הלומדה מבחן מסכם עם ציון.</p>
+     <p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר, ובסוף הלומדה מבחן מסכם עם ציון.${HAS_H?" מהסבב השני, המבחנים עוברים לשאלות הבנה: מקרים וסיפורים שצריך לזהות לאיזה רעיון הם שייכים.":""}</p>
      <div class="stats">
       <div class="ring" style="--p:${total}"><span>${total}%</span></div>
       <div class="stat-text"><b>${total===0&&!started.length?"עוד לא התחלת":total>=80?"אתה שולט בחומר":`התקדמת ב־${total}% מהשאלות`}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
      </div>
      <div class="actions">
       <button class="primary review-btn" id="rev" ${started.length?"":"disabled"}>${ic("cycle")}<span>${started.length?"חזרה מהירה":"חזרה מהירה (אחרי נושא ראשון)"}</span></button>
-      <button class="review-btn" id="exm">${ic("grad")}<span>מבחן מסכם${S.exam?` · ציון אחרון ${S.exam.pct}`:""}</span></button>
+      <button class="review-btn" id="exm">${ic("grad")}<span>מבחן מסכם${S.exam&&HAS_H?" · סבב "+((S.exam.k||1)+1)+": שאלות הבנה":""}${S.exam?` · ציון אחרון ${S.exam.pct}`:""}</span></button>
       <button class="review-btn" id="wk" ${started.length?"":"disabled"}>${ic("target")}<span>נושאים לחיזוק</span></button>
       ${typeof SUM!=="undefined"?`<button class="review-btn" id="sum">${ic("doc")}<span>סיכום הקריאה</span></button>`:""}
      </div>
@@ -585,7 +590,7 @@ function home(){
   app.querySelectorAll(".actions svg").forEach(x=>x.style.cssText="width:20px;height:20px");
   const list=app.querySelector("#list");
   T.forEach((t,i)=>{const p=strength(t),pos=S.pos[t.id],dn=S.done[t.id],b=document.createElement("button");b.className="tcard";b.style.setProperty("--c",color(t));
-    const status=dn?`✓ הושלם · מבחן ${dn.r}/${dn.n}`:pos!=null?`באמצע · קטע ${pos+1} מתוך ${t.blocks.length}`:S.read[t.id]?"✓ נקרא":topicStarted(t)?"בתהליך":"לא התחלת";
+    const status=dn?`✓ הושלם · מבחן ${dn.r}/${dn.n}${t.hids.length?" · הבא: סבב "+rnd(t)+" (הבנה)":""}`:pos!=null?`באמצע · קטע ${pos+1} מתוך ${t.blocks.length}`:S.read[t.id]?"✓ נקרא":topicStarted(t)?"בתהליך":"לא התחלת";
     b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(dn?"check":t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${dn&&!p?100*dn.r/dn.n:p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
     if(dn)b.classList.add("done");
     b.onclick=()=>topic(i,pos!=null?pos:0);list.appendChild(b)});
@@ -625,13 +630,15 @@ function runSet(title,ids,c,onEnd){
 
 function quiz(ti){
   const t=T[ti];
+  if(hardOn(t)){const weak=shuffle(t.qids.filter(id=>!mastered(id))).slice(0,2);
+    return runSet(`מבחן הנושא · סבב ${rnd(t)} · שאלות הבנה`,shuffle(shuffle(t.hids).slice(0,Math.max(8,t.qids.length)).concat(weak)),color(t),(r,n)=>done(r,n,ti))}
   const prev=T.slice(0,ti).filter(topicStarted).flatMap(x=>x.qids);
   const extra=shuffle(prev).sort((a,b)=>st(a).c-st(b).c).slice(0,2);
   runSet(`מבחן סיום · ${t.title}`,shuffle(t.qids).concat(extra),color(t),(r,n)=>done(r,n,ti));
 }
 
 function review(){
-  const pool=T.filter(topicStarted).flatMap(t=>t.qids),now=Date.now();
+  const pool=T.filter(topicStarted).flatMap(t=>S.done[t.id]?t.qids.concat(t.hids):t.qids),now=Date.now();
   const tw={};T.forEach(t=>tw[t.id]=(100-strength(t))/20);
   const score=id=>{const s=S.q[id]||{n:0,c:0,w:0,t:0};return (s.n?0:2)+s.w*2+(s.c<2?3:0)+Math.min(3,(now-s.t)/864e5)+tw[Q[id].t]+Math.random()*2};
   const ids=pool.map(id=>[id,score(id)]).sort((a,b)=>b[1]-a[1]).slice(0,12).map(x=>x[0]);
@@ -640,18 +647,18 @@ function review(){
 
 const strength=t=>Math.round(100*t.qids.filter(id=>S.q[id]&&S.q[id].n&&S.q[id].c>0).length/t.qids.length);
 
-function practice(ti){const t=T[ti];runSet(`תרגול · ${t.title}`,shuffle(t.qids),color(t),(r,n)=>done(r,n,ti))}
+function practice(ti){const t=T[ti];if(hardOn(t))return quiz(ti);runSet(`תרגול · ${t.title}`,shuffle(t.qids),color(t),(r,n)=>done(r,n,ti))}
 
 function exam(){
   const N=Math.min(allIds.length,Math.max(15,Math.min(20,T.length*3)));
-  const pools=T.map(t=>shuffle(t.qids)),ids=[];
+  const xh=S.exam&&HAS_H,pools=T.map(t=>xh&&t.hids.length?shuffle(t.hids).concat(shuffle(t.qids)):shuffle(t.qids)),ids=[];
   for(let k=0;ids.length<N;k++)for(const p of pools){if(ids.length>=N)break;if(k<p.length)ids.push(p[k])}
   const items=shuffle(ids).map(id=>{const vi=pickVariant(id),v=Q[id].v[vi];return{id,vi,v,opts:shuffle([v.a,...v.w]),pick:null}});
   document.body.style.setProperty("--c","var(--accent)");
   let i=0;
   const step=()=>{
     const it=items[i],from=T.find(t=>t.id===Q[it.id].t),last=i===items.length-1;
-    app.innerHTML=`<div class="stack">${bar("מבחן מסכם",items.length,i,`שאלה ${i+1} מתוך ${items.length}`)}
+    app.innerHTML=`<div class="stack">${bar(xh?`מבחן מסכם · סבב ${(S.exam.k||1)+1} · שאלות הבנה`:"מבחן מסכם",items.length,i,`שאלה ${i+1} מתוך ${items.length}`)}
      <div class="q fade"><span class="eyebrow">${esc(from.title)}</span><div class="qtext">${esc(it.v.q)}</div>${acrNote(it.v.q,it.v.a,...it.v.w)}<div class="opts"></div>
      <div class="row"><button class="primary" id="nx" ${it.pick==null?"disabled":""}>${last?"הגשה ובדיקה":"הבא"}</button>${i?`<button class="ghost" id="pv">הקודם</button>`:""}</div></div></div>`;
     {const bk=app.querySelector("#back");bk.onclick=()=>{if(bk.dataset.sure)home();else{bk.dataset.sure=1;bk.textContent="לחץ שוב כדי לצאת (התשובות לא יישמרו)"}}}
@@ -670,7 +677,7 @@ function grade(items){
   const now=Date.now();let r=0;const per={};
   items.forEach(it=>{const ok=it.pick===it.v.a,s=st(it.id),tid=Q[it.id].t;s.n++;s.t=now;s.lv=it.vi;ok?(s.c++,r++):(s.c=0,s.w++);
     it.ok=ok;(per[tid]=per[tid]||{r:0,n:0}).n++;if(ok)per[tid].r++});
-  const n=items.length,pct=Math.round(100*r/n);S.exam={pct,t:now};save();
+  const n=items.length,pct=Math.round(100*r/n);S.exam={pct,t:now,k:S.exam?(S.exam.k||1)+1:1};save();
   const rows=T.filter(t=>per[t.id]).map(t=>{const p=per[t.id],q=Math.round(100*p.r/p.n);
     return `<div class="trow" style="--c:${color(t)}"><span class="tt">${esc(t.title)}</span><div class="bar"><i style="width:${q}%"></i></div><span class="sc">${p.r}/${p.n}</span></div>`}).join("");
   const wrong=items.filter(it=>!it.ok);
@@ -713,7 +720,7 @@ function weakTopics(){
 }
 
 function done(r,n,ti){
-  if(ti!=null){S.done[T[ti].id]={r,n};}if(S.at){delete S.at}save();
+  if(ti!=null){const o=S.done[T[ti].id];S.done[T[ti].id]={r,n,k:o?(o.k||1)+1:1};}if(S.at){delete S.at}save();
   const nextT=ti!=null&&ti+1<T.length?ti+1:null,pct=Math.round(100*r/n);
   app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
    <article class="card" style="align-items:flex-start">
