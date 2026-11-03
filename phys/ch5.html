@@ -788,14 +788,14 @@ function done(r,n,ti){
   const nx=app.querySelector("#nx");if(nx)nx.onclick=()=>topic(nextT,0);
   scrollTo(0,0);
 }
-function summary(){
+function summary(sec){
   document.body.style.setProperty("--c","var(--accent)");
   app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">סיכום הקריאה</span></div></div>
    <article class="card sum">${acrExpand(SUM)}</article>
    <div class="row"><button class="primary" id="hm">חזרה לכל הנושאים</button></div></div>`;
-  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;scrollTo(0,0);
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;scrollTo(0,0);if(sec){const h=[...app.querySelectorAll(".sum h3")].find(x=>x.textContent.trim().startsWith(sec+"."));if(h)h.scrollIntoView()}
 }
-const _h=location.hash;if(_h)history.replaceState(null,"",location.pathname+location.search);if(_h==="#sum"&&typeof SUM!=="undefined")summary();else if(_h==="#quiz")exam();else if(S.at&&T[S.at.ti]){const a=S.at;if(a.quiz)quiz(a.ti);else topic(a.ti,Math.min(a.bi||0,T[a.ti].blocks.length-1))}else home();
+const _h=location.hash;if(_h)history.replaceState(null,"",location.pathname+location.search);if(_h.startsWith("#sum")&&typeof SUM!=="undefined")summary(+_h.slice(5)||0);else if(_h.startsWith("#topic-")&&T[+_h.slice(7)-1])topic(+_h.slice(7)-1,0);else if(_h==="#quiz")exam();else if(S.at&&T[S.at.ti]){const a=S.at;if(a.quiz)quiz(a.ti);else topic(a.ti,Math.min(a.bi||0,T[a.ti].blocks.length-1))}else home();
 </script>
 </body>
 </html>

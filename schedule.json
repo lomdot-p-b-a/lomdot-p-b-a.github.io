@@ -519,7 +519,13 @@
    ],
    "status": "",
    "newDate": "",
-   "note": ""
+   "note": "",
+   "focus": {
+    "lomda-phys-ch2": {
+     "sec": 2,
+     "t": 1
+    }
+   }
   },
   {
    "c": "phys",
@@ -531,7 +537,13 @@
    ],
    "status": "",
    "newDate": "",
-   "note": ""
+   "note": "",
+   "focus": {
+    "lomda-phys-ch2": {
+     "sec": 3,
+     "t": 3
+    }
+   }
   },
   {
    "c": "phys",
@@ -543,7 +555,13 @@
    ],
    "status": "",
    "newDate": "",
-   "note": ""
+   "note": "",
+   "focus": {
+    "lomda-phys-ch2": {
+     "sec": 4,
+     "t": 4
+    }
+   }
   },
   {
    "c": "phys",
@@ -555,7 +573,13 @@
    ],
    "status": "",
    "newDate": "",
-   "note": ""
+   "note": "",
+   "focus": {
+    "lomda-phys-ch2": {
+     "sec": 4,
+     "t": 4
+    }
+   }
   },
   {
    "c": "phys",
@@ -567,7 +591,13 @@
    ],
    "status": "",
    "newDate": "",
-   "note": ""
+   "note": "",
+   "focus": {
+    "lomda-phys-ch2": {
+     "sec": 5,
+     "t": 5
+    }
+   }
   },
   {
    "c": "phys",
@@ -579,7 +609,13 @@
    ],
    "status": "",
    "newDate": "",
-   "note": ""
+   "note": "",
+   "focus": {
+    "lomda-phys-ch2": {
+     "sec": 8,
+     "t": 6
+    }
+   }
   },
   {
    "c": "phys",
