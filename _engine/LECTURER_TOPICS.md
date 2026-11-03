@@ -16,3 +16,6 @@ Book ch2 learning objectives 2.1-2.18 (incl. 2.5 withdrawal reflex with/without 
 Reading focus: ch1 pp 3-13, 34-40, 42-64; ch2 pp 92-111; ch5 pp 245-250, 251-274; ch6 pp 279-297, 311-319; ch7 pp 341-381; + 4 articles.
 ### Ch5 lesson (asynchronous) goals
 להבחין בין חישה לתפיסה; שיטות לחקר חישה ותפיסה בינקות: הסתכלות בעלת העדפה, התרגלות והפרת התרגלות; התפתחות טעם וריח, מגע, שמיעה וראייה; תפיסת עומק, גבולות ודפוסים, פרצופים.
+
+## Intro (2786) - Spielman, Psychology 2e (OpenStax, English). Required chapters 2,5,6,8,14,15 (optional 1,16).
+WebFetch to openstax.org is blocked; read via Chrome tab with fetch("/books/psychology-2e/pages/<ch>-summary") and section pages (learning objectives in .learning-objectives li).
