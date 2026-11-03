@@ -370,7 +370,7 @@
    "c": "intro",
    "n": 5,
    "date": "2026-11-18",
-   "topic": "למידה והתניות · תרגול: מאמר מחקרי (כותרת ותקציר)",
+   "topic": "למידה והתניות · תרגול 5: מאמר מחקרי, קוראים רק כותרת ותקציר",
    "mods": [
     "lomda-intro-sp6",
     "lomda-intro-singles",
@@ -378,7 +378,15 @@
    ],
    "status": "",
    "newDate": "",
-   "note": ""
+   "note": "",
+   "focus": {
+    "lomda-intro-singles": {
+     "abs": true
+    },
+    "lomda-intro-ritalin": {
+     "abs": true
+    }
+   }
   },
   {
    "c": "intro",
@@ -396,7 +404,7 @@
    "c": "intro",
    "n": 7,
    "date": "2026-12-02",
-   "topic": "זיכרון ארוך טווח · תרגול: מבוא ושיטה",
+   "topic": "זיכרון ארוך טווח · תרגול 7: מאמר מחקרי, קוראים מבוא ושיטה",
    "mods": [
     "lomda-intro-sp8",
     "lomda-intro-singles",

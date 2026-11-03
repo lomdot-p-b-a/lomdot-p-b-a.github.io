@@ -51,3 +51,4 @@
 - Writing H: understanding questions - short or longer scenarios, "which concept does this represent", distinguish similar concepts; 2 phrasings where possible. Source txt in scratchpad hq2/mN.txt -> newq/mkq.py -> rename const Q to const H. Length check: answer <= 1.1x longest distractor.
 - Done: m31 (phys ch2), m43 (Myers ch3B), m18 (dev ch2), m37 (Spielman ch5).
 - schedule.json "focus": {hubKey:{sec,t}} -> weekly bar links lomda to #topic-t and summary to #sum-sec (engine scrolls to the h3 starting "sec."). Used for phys ch2 across weeks 3-8.
+- #abs view: SUM may contain <div id="abs">…</div> (title + abstract only). Hash #abs shows only that block; weekly bar uses focus {abs:true} (intro lesson 5: singles, ritalin). Full summary keeps everything.

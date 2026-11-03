@@ -252,7 +252,7 @@ function lessonHTML(l,a,b){
   const mods=l.mods.map(ITEM).filter(Boolean);
   return `<div class="les${off?" off":""}" style="--c:var(--${l.c})"><div class="lhd"><b>${SHORT[l.c]} · <i>שיעור ${l.n}</i> · ${dm(date)}</b>${tags}</div>
    <div class="ltop">${l.topic}${l.note&&!l.est?` · ${l.note}`:""}</div>
-   ${mods.length?`<div class="lmods">${mods.map(it=>{const f=(l.focus||{})[it.key]||{};return `<div class="lmod"><span class="t"><span${it.en?' dir="ltr" lang="en"':""}>${it.title}</span><small>${it.sub}${f.sec?` · השבוע: סעיף ${f.sec} בסיכום`:""}</small></span><span class="lbtns"><a href="${it.href}${f.t?"#topic-"+f.t:""}">לומדה</a><a href="${it.href}#sum${f.sec?"-"+f.sec:""}">סיכום</a><a href="${it.href}#quiz">מבחן</a></span></div>`}).join("")}</div>`:`<div class="lnone">אין לומדה לשיעור הזה</div>`}</div>`;
+   ${mods.length?`<div class="lmods">${mods.map(it=>{const f=(l.focus||{})[it.key]||{};return `<div class="lmod"><span class="t"><span${it.en?' dir="ltr" lang="en"':""}>${it.title}</span><small>${it.sub}${f.sec?` · השבוע: סעיף ${f.sec} בסיכום`:""}${f.abs?" · השבוע: רק כותרת ותקציר":""}</small></span><span class="lbtns"><a href="${it.href}${f.t?"#topic-"+f.t:""}">לומדה</a><a href="${it.href}${f.abs?"#abs":"#sum"+(f.sec?"-"+f.sec:"")}">${f.abs?"כותרת ותקציר":"סיכום"}</a><a href="${it.href}#quiz">מבחן</a></span></div>`}).join("")}</div>`:`<div class="lnone">אין לומדה לשיעור הזה</div>`}</div>`;
 }
 function renderWeek(){
   const box=document.getElementById("week");if(!box)return;
