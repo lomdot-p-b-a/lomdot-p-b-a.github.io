@@ -6,6 +6,10 @@ Before writing:
 3. Build the summary around what the chapter is trying to teach and its link to the course's field
    (e.g. physiological psychology = how cells produce behavior), not a list of facts.
    Use the book's own central examples (e.g. withdrawal reflex + hot mug in Carlson ch2).
+4. SOURCE RULE (standing): every fact, study, number and attribution must come from the ASSIGNED READING PAGES.
+   No general knowledge or outside history. If a lecturer topic is not covered in those pages, write that
+   explicitly ("הספר לא מפרט את זה בעמודי הקריאה – לבדוק בשקפים") instead of filling the gap.
+   Everyday-life illustrations are fine only when clearly marked as an illustration, never as a finding.
 
 Writing rules:
 1. Audience: first-year student with zero background. Simple explanation beats brevity; length is fine.
