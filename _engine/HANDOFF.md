@@ -52,3 +52,4 @@
 - Done: m31 (phys ch2), m43 (Myers ch3B), m18 (dev ch2), m37 (Spielman ch5).
 - schedule.json "focus": {hubKey:{sec,t}} -> weekly bar links lomda to #topic-t and summary to #sum-sec (engine scrolls to the h3 starting "sec."). Used for phys ch2 across weeks 3-8.
 - #abs view: SUM may contain <div id="abs">…</div> (title + abstract only). Hash #abs shows only that block; weekly bar uses focus {abs:true} (intro lesson 5: singles, ritalin). Full summary keeps everything.
+- Myers vol B on Lamda: pdfViewerGlance/7187 (PDF page = book page - 360). Vol A: 7202 (PDF = book + 15).
