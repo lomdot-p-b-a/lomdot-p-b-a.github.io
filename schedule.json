@@ -425,7 +425,13 @@
    ],
    "status": "",
    "newDate": "",
-   "note": ""
+   "note": "",
+   "focus": {
+    "lomda-intro-tokens": {
+     "sec": 4,
+     "t": 5
+    }
+   }
   },
   {
    "c": "intro",
@@ -450,7 +456,13 @@
    ],
    "status": "",
    "newDate": "",
-   "note": ""
+   "note": "",
+   "focus": {
+    "lomda-intro-tokens": {
+     "sec": 2,
+     "t": 2
+    }
+   }
   },
   {
    "c": "intro",
