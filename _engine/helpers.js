@@ -3,7 +3,7 @@ const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</fi
 const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
 const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;
 const _dot=s=>{const t=String(s).replace(/<[^>]+>/g,"").trim();return /[.!?:׃…]$/.test(t)?s:s+"."};
-const tiles=a=>{const s=a.filter(x=>x.length<4),c=a.filter(x=>x.length>=4);return (s.length?`<div class="tiles">${s.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`:"")+c.map(([i,t,d,x,e])=>`<div class="cpt"><div class="cpt-h">${ic(i)}<b>${t}</b></div><p class="cpt-d">${_dot(d)}</p>${x?`<p>${x}</p>`:""}${e?`<div class="cpt-ex"><b>דוגמה:</b> ${e}</div>`:""}</div>`).join("")};
+const tiles=a=>{const s=a.filter(x=>x.length<4),c=a.filter(x=>x.length>=4);return (s.length?`<div class="tiles">${s.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`:"")+c.map(([i,t,d,x,e])=>`<div class="cpt"><div class="cpt-h">${ic(i)}<b>${t}</b></div>${String(d).replace(/<[^>]+>/g,"").trim()?`<p class="cpt-d">${_dot(d)}</p>`:""}${x?`<p>${x}</p>`:""}${e?`<div class="cpt-ex"><b>דוגמה:</b> ${e}</div>`:""}</div>`).join("")};
 const ex=h=>`<div class="ex"><span class="lbl">דוגמה</span><p>${h}</p></div>`;
 const rem=h=>`<div class="remember">${ic("bulb")}<p>${h}</p></div>`;
 const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")}${t}</span>`).join("")}${n.map(t=>`<span class="yn n">${ic("x")}${t}</span>`).join("")}</div>`;

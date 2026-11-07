@@ -103,6 +103,7 @@ figure{margin:0}
 .who{display:flex;gap:12px;align-items:flex-start}
 .who .av{flex:none;width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.15rem}
 .who .yr{font-size:.8rem;color:var(--muted)}
+.cpt{border:1px solid var(--line);border-inline-start:4px solid var(--c,var(--accent));border-radius:14px;padding:14px 16px;margin:12px 0;background:var(--surface)}.cpt-h{display:flex;gap:10px;align-items:center;font-size:1.08rem}.cpt-h svg{width:26px;height:26px;color:var(--c,var(--accent));flex:none}.cpt p{margin:.5rem 0 .7rem;line-height:1.75}.cpt p.cpt-d{font-weight:600;margin-bottom:.3rem}.cpt-ex{background:var(--raised);border-radius:10px;padding:10px 12px;line-height:1.7;font-size:.97rem}.cpt-ex b{color:var(--c,var(--accent))}
 .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
 .tile{background:var(--raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
 .tile svg{width:32px;height:32px;color:var(--c)}
@@ -184,7 +185,7 @@ h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
 <body>
 <div class="wrap" id="app"></div>
 <script>
-const CONFIG={key:"lomda-social-myers4",cover:"cover45",badge:"ספר הקורס · חובה",eyebrow:"פסיכולוגיה חברתית א' · מאיירס, כרך א׳",title:"פרק 2: העצמי בעולם החברתי",cite:`מאיירס, ד' (2012). <i>פסיכולוגיה חברתית</i>, כרך א׳, פרק 2, עמ׳ ⁦39–89⁩. האוניברסיטה הפתוחה.`,note:"הלומדה מבוססת על פרק 2 בספר הקורס (העצמי), לקריאה לקראת מפגשים 7–8. מספרי העמודים מתייחסים לספר המודפס."};
+const CONFIG={about:"איך אנחנו רואים את עצמנו, כמה התמונה הזו נכונה, ואיך היא משפיעה עלינו מול אחרים? הלומדה עוברת על מושג העצמי ותרבות, על הכרת העצמי, על הערכה עצמית ושליטה עצמית, על ההטיה לטובת העצמי, ועל הצגת העצמי.",key:"lomda-social-myers4",cover:"cover45",badge:"ספר הקורס · חובה",eyebrow:"פסיכולוגיה חברתית א' · מאיירס, כרך א׳",title:"פרק 2: העצמי בעולם החברתי",cite:`מאיירס, ד' (2012). <i>פסיכולוגיה חברתית</i>, כרך א׳, פרק 2, עמ׳ ⁦39–89⁩. האוניברסיטה הפתוחה.`,note:"הלומדה מבוססת על פרק 2 בספר הקורס (העצמי), לקריאה לקראת מפגשים 7–8. מספרי העמודים מתייחסים לספר המודפס."};
 const I={
  building:'<path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h2M14 8h2M8 12h2M14 12h2M10 21v-4h4v4"/>',
  people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
@@ -239,7 +240,8 @@ const E=t=>`<span class="en">(${t})</span>`;
 const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</figcaption>`:""}</figure>`;
 const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
 const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;
-const tiles=a=>`<div class="tiles">${a.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`;
+const _dot=s=>{const t=String(s).replace(/<[^>]+>/g,"").trim();return /[.!?:׃…]$/.test(t)?s:s+"."};
+const tiles=a=>{const s=a.filter(x=>x.length<4),c=a.filter(x=>x.length>=4);return (s.length?`<div class="tiles">${s.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`:"")+c.map(([i,t,d,x,e])=>`<div class="cpt"><div class="cpt-h">${ic(i)}<b>${t}</b></div>${String(d).replace(/<[^>]+>/g,"").trim()?`<p class="cpt-d">${_dot(d)}</p>`:""}${x?`<p>${x}</p>`:""}${e?`<div class="cpt-ex"><b>דוגמה:</b> ${e}</div>`:""}</div>`).join("")};
 const ex=h=>`<div class="ex"><span class="lbl">דוגמה</span><p>${h}</p></div>`;
 const rem=h=>`<div class="remember">${ic("bulb")}<p>${h}</p></div>`;
 const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")}${t}</span>`).join("")}${n.map(t=>`<span class="yn n">${ic("x")}${t}</span>`).join("")}</div>`;
@@ -429,7 +431,7 @@ const T=[
  {id:"t6",icon:"hand",title:"שליטה עצמית נתפסת",blocks:[
   {h:"כוח רצון ויעילות עצמית",html:`${def("על מה הנושא",`השליטה העצמית כמשאב, והאמונה שאני יכול להשפיע.<br><b>מה נלמד כאן:</b> כוח רצון כשריר · יעילות עצמית · מקור שליטה · חוסר אונים נרכש · עודף בחירה`)}<p>שליטה עצמית <b>מתרוקנת</b>: מי שאכל צנוניות במקום שוקולד ויתר מהר יותר על חידות בלתי פתירות. היא פועלת כמו <b>שריר</b>: נחלשת במאמץ, מתחדשת במנוחה, ומתחזקת באימון (באומייסטר).</p>${def("יעילות עצמית",`${E("Self-efficacy")} האמונה שאני <b>מסוגל</b> לבצע משימה (<b>בנדורה</b>). שונה מ<b>הערכה עצמית</b>, שהיא תחושת ערך כללית. מתכנתת יכולה להרגיש יעילה ובו בזמן להעריך את עצמה נמוך.`)}<p>ילדים ששובחו על <b>מאמץ</b> המשיכו לאתגר; ששובחו על <b>פיקחות</b> חששו לנסות שוב (מולר ודווק). המקור החזק ליעילות עצמית: <b>חוויות של הצלחה</b>.</p>`,q:"q29"},
   {h:"מקור שליטה וחוסר אונים",html:`${def("מקור שליטה",`${E("Locus of control")} <b>רוטר</b>: האם מה שקורה לי תלוי ב<b>מאמציי</b> (פנימי) או ב<b>מזל</b> ובכוחות חיצוניים (חיצוני).`)}${fig("locus45","בעלי מקור שליטה פנימי מצליחים יותר בלימודים, מפסיקים לעשן, חוגרים חגורות ומרוויחים יותר.")}${def("חוסר אונים נרכש",`${E("Learned helplessness")} <b>סליגמן</b>: כלבים שלא יכלו להימלט מהלם נשארו פסיביים גם כשיכלו. דומה לאנשים בדיכאון או תחת דיכוי.`)}<p><b>לנגר ורודין</b>: בבית אבות, קבוצה שקיבלה <b>אחריות ובחירה</b> השתפרה בערנות ובשמחת חיים (93%); קבוצה שטופלה בפסיביות נעשתה תשושה יותר.</p>`,q:"q31"},
-  {h:"המחיר של עודף בחירה",html:`<p>בחירה חופשית קשורה לשביעות רצון ב־73 מדינות, אבל <b>יותר מדי</b> בחירה פוגעת (שוורץ: ״רודנות החופש״).</p>${tiles([["cart","ריבה","בחירה מתוך <b>30</b> אפשרויות: פחות מרוצים מאשר מתוך <b>6</b>"],["clock","עייפות","מי שבחר קורסים למד אחר כך פחות למבחן"],["lock","החלטה סופית","מרוצים יותר מבחירה ״בלי החזרות״, אבל מעדיפים לשלם על אפשרות לשנות"]])}${ex("מאיה התלבטה שבועות בין שלוש דירות. גם אחרי שבחרה, היא ממשיכה לחשוב על האחרות. בחירה סופית הייתה כנראה משאירה אותה מרוצה יותר.")}`,q:"q33"}
+  {h:"המחיר של עודף בחירה",html:`<p>בחירה חופשית קשורה לשביעות רצון ב־73 מדינות, אבל <b>יותר מדי</b> בחירה פוגעת (שוורץ: ״רודנות החופש״).</p>${tiles([["cart","ריבה","בחירה מתוך <b>30</b> אפשרויות: פחות מרוצים מאשר מתוך <b>6</b>","הרבה אפשרויות נשמעות טוב, אבל בפועל הן מקשות להחליט ומורידות את שביעות הרצון מהבחירה, כי תמיד יש מחשבה שאולי היה טוב יותר.","מאיה מתלבטת שעה בין 30 סוגי שמפו, ואחר כך פחות מרוצה ממה שבחרה מאשר כשהיו רק 6."],["clock","עייפות","מי שבחר קורסים למד אחר כך פחות למבחן","לבחור דורש כוח רצון. אחרי הרבה החלטות, נשאר פחות כוח לשליטה עצמית, למשל ללמוד.","אחרי שמאיה בחרה את כל הקורסים לסמסטר, היא התקשתה לשבת ללמוד למבחן באותו ערב."],["lock","החלטה סופית","מרוצים יותר מבחירה ״בלי החזרות״, אבל מעדיפים לשלם על אפשרות לשנות"]])}${ex("מאיה התלבטה שבועות בין שלוש דירות. גם אחרי שבחרה, היא ממשיכה לחשוב על האחרות. בחירה סופית הייתה כנראה משאירה אותה מרוצה יותר.")}`,q:"q33"}
  ]},
  {id:"t7",icon:"chart",title:"ההטיה לטובת העצמי",blocks:[
   {h:"הצלחה שלי, כישלון של המצב",html:`${def("על מה הנושא",`הנטייה החזקה לראות את עצמנו באור חיובי, וכל הצורות שלה.<br><b>מה נלמד כאן:</b> ייחוס לטובת העצמי · טובים מהממוצע · אופטימיות לא מציאותית · קונצנזוס וייחודיות מדומים · הסברים · מחירים`)}${def("הטיה לטובת העצמי",`${E("Self-serving bias")} הנטייה לראות את עצמנו באור חיובי. בכל 53 המדינות שנבדקו, הממוצע בהערכה עצמית היה <b>מעל האמצע</b>.`)}${def("ייחוס לטובת העצמי",`הצלחה = ליכולת ולמאמץ שלי; כישלון = למזל, לשופט, למבחן ״הלא הוגן״. ״מכונית בלתי נראית הגיחה משום מקום ופגעה בי״.`)}<p><b>״הכתם העיוור של ההטיה״</b>: אנחנו רואים הטיה אצל אחרים, אבל לא אצלנו. סטודנטים תיארו את ״העצמי הקודם״ בשווה חיובי ושלילי, ואת העצמי הנוכחי פי 3 חיובי.</p>`,q:"q35"},
@@ -638,7 +640,7 @@ function home(){
     <div class="cover-body">
      <span class="eyebrow">${CONFIG.eyebrow}</span>
      ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
-     <p class="about"><b>על מה הלומדה:</b> איך אנחנו רואים את עצמנו, כמה התמונה הזו נכונה, ואיך היא משפיעה עלינו מול אחרים? הלומדה עוברת על מושג העצמי ותרבות, על הכרת העצמי, על הערכה עצמית ושליטה עצמית, על ההטיה לטובת העצמי, ועל הצגת העצמי.</p>
+     ${CONFIG.about?`<p class="about"><b>על מה הלומדה:</b> ${CONFIG.about}</p>`:`<p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר, ובסוף הלומדה מבחן מסכם עם ציון.${HAS_H?" מהסבב השני, המבחנים עוברים לשאלות הבנה: מקרים וסיפורים שצריך לזהות לאיזה רעיון הם שייכים.":""}</p>`}
      <div class="stats">
       <div class="ring" style="--p:${total}"><span>${total}%</span></div>
       <div class="stat-text"><b>${total===0&&!started.length?"עוד לא התחלת":total>=80?"אתה שולט בחומר":`התקדמת ב־${total}% מהשאלות`}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
