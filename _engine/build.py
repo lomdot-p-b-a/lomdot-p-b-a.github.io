@@ -8,7 +8,7 @@ def build(m,title,out,site=True,course='mgmt'):
     head=r('head.html').replace('__TITLE__',title)
     if COURSE.get(course):
         l,dk=COURSE[course]; head+=f'<style>:root{{--accent:{l}}}@media (prefers-color-scheme:dark){{:root:not([data-theme="light"]){{--accent:{dk}}}}}:root[data-theme="dark"]{{--accent:{dk}}}</style>\n'
-    body='<div class="wrap" id="app"></div>\n<script>\n'+js+'</script>\n'
+    body='<div class="wrap" id="app"></div>\n<script>\n'+js+'</script>\n'+('<script src="../_engine/ai-config.js"></script><script src="../_engine/ai.js"></script>\n' if site else '')
     if site:
         body=body.replace('<div class="foot"><span>','<div class="foot"><a href="../#'+course+'" style="color:var(--accent);font-weight:700;text-decoration:none">→ לקורס</a><span>')
         page=f'<!doctype html>\n<html lang="he" dir="rtl">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n<meta name="robots" content="noindex,nofollow">\n<style>:root{{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}}body{{margin:0}}img{{max-width:100%}}[hidden]{{display:none!important}}</style>\n{head}</head>\n<body>\n{body}</body>\n</html>\n'
