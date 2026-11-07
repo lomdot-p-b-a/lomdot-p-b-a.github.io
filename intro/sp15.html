@@ -103,6 +103,7 @@ figure{margin:0}
 .who{display:flex;gap:12px;align-items:flex-start}
 .who .av{flex:none;width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.15rem}
 .who .yr{font-size:.8rem;color:var(--muted)}
+.cpt{border:1px solid var(--line);border-inline-start:4px solid var(--c,var(--accent));border-radius:14px;padding:14px 16px;margin:12px 0;background:var(--surface)}.cpt-h{display:flex;gap:10px;align-items:center;font-size:1.08rem}.cpt-h svg{width:26px;height:26px;color:var(--c,var(--accent));flex:none}.cpt p{margin:.5rem 0 .7rem;line-height:1.75}.cpt p.cpt-d{font-weight:600;margin-bottom:.3rem}.cpt-ex{background:var(--raised);border-radius:10px;padding:10px 12px;line-height:1.7;font-size:.97rem}.cpt-ex b{color:var(--c,var(--accent))}
 .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
 .tile{background:var(--raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
 .tile svg{width:32px;height:32px;color:var(--c)}
@@ -184,7 +185,7 @@ h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
 <body>
 <div class="wrap" id="app"></div>
 <script>
-const CONFIG={key:"lomda-intro-sp15",cover:"cover41",en:true,badge:"ספר הקורס · חובה",eyebrow:"מבוא לפסיכולוגיה · Spielman, פרק 15",title:"Psychological Disorders",he:"הפרעות פסיכולוגיות",cite:`Spielman, Jenkins &amp; Lovett (2020). <i>Psychology 2e</i>, Chapter 15: Psychological Disorders. OpenStax. <a href="https://openstax.org/books/psychology-2e/pages/15-introduction" target="_blank" rel="noopener">openstax.org</a>`,note:"פרק מספר הקורס באנגלית. כאן הוא מתורגם ומתומצת לעברית, והמונחים באנגלית מופיעים בסוגריים. אם משהו בפרק נוגע בך אישית, אפשר לפנות לער״ן בטלפון 1201."};
+const CONFIG={about:"מתי התנהגות או רגש הם ״הפרעה״, ואיך מאבחנים? הלומדה עוברת על ההגדרה והסיווג, על נקודות המבט על מקור ההפרעות, ועל הקבוצות העיקריות: חרדה, OCD ו־PTSD, מצב רוח, סכיזופרניה, דיסוציאציה והפרעות אישיות.",key:"lomda-intro-sp15",cover:"cover41",en:true,badge:"ספר הקורס · חובה",eyebrow:"מבוא לפסיכולוגיה · Spielman, פרק 15",title:"Psychological Disorders",he:"הפרעות פסיכולוגיות",cite:`Spielman, Jenkins &amp; Lovett (2020). <i>Psychology 2e</i>, Chapter 15: Psychological Disorders. OpenStax. <a href="https://openstax.org/books/psychology-2e/pages/15-introduction" target="_blank" rel="noopener">openstax.org</a>`,note:"פרק מספר הקורס באנגלית. כאן הוא מתורגם ומתומצת לעברית, והמונחים באנגלית מופיעים בסוגריים. אם משהו בפרק נוגע בך אישית, אפשר לפנות לער״ן בטלפון 1201."};
 const I={
  building:'<path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h2M14 8h2M8 12h2M14 12h2M10 21v-4h4v4"/>',
  people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
@@ -238,7 +239,8 @@ const E=t=>`<span class="en">(${t})</span>`;
 const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</figcaption>`:""}</figure>`;
 const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
 const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;
-const tiles=a=>`<div class="tiles">${a.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`;
+const _dot=s=>{const t=String(s).replace(/<[^>]+>/g,"").trim();return /[.!?:׃…]$/.test(t)?s:s+"."};
+const tiles=a=>{const s=a.filter(x=>x.length<4),c=a.filter(x=>x.length>=4);return (s.length?`<div class="tiles">${s.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`:"")+c.map(([i,t,d,x,e])=>`<div class="cpt"><div class="cpt-h">${ic(i)}<b>${t}</b></div>${String(d).replace(/<[^>]+>/g,"").trim()?`<p class="cpt-d">${_dot(d)}</p>`:""}${x?`<p>${x}</p>`:""}${e?`<div class="cpt-ex"><b>דוגמה:</b> ${e}</div>`:""}</div>`).join("")};
 const ex=h=>`<div class="ex"><span class="lbl">דוגמה</span><p>${h}</p></div>`;
 const rem=h=>`<div class="remember">${ic("bulb")}<p>${h}</p></div>`;
 const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")}${t}</span>`).join("")}${n.map(t=>`<span class="yn n">${ic("x")}${t}</span>`).join("")}</div>`;
@@ -428,7 +430,7 @@ const T=[
  ]},
  {id:"t7",icon:"people",title:"דיסוציאציה, ילדות ואישיות",blocks:[
   {h:"הפרעות דיסוציאטיביות",html:`${def("על מה הנושא",`שלוש קבוצות אחרונות: ניתוק מהעצמי, הפרעות שמתחילות בילדות, והפרעות אישיות.<br><b>מה נלמד כאן:</b> דיסוציאציה · ADHD · אוטיזם · אשכולות אישיות · גבולית · אנטי־חברתית`)}<div class="tw"><table><tr><th>הפרעה</th><th>מה זה</th></tr><tr><td><b>אמנזיה דיסוציאטיבית</b></td><td>לא זוכרים מידע אישי חשוב, לרוב אחרי טראומה</td></tr><tr><td><b>דה־פרסונליזציה / דה־ריאליזציה</b></td><td>תחושת ניתוק מעצמי או מהעולם</td></tr><tr><td><b>הפרעת זהות דיסוציאטיבית</b></td><td>שתי זהויות או יותר, עם פערי זיכרון</td></tr></table></div>${rem("הפרעת זהות דיסוציאטיבית <b>שנויה במחלוקת</b>: יש שחושבים שמזייפים אותה כדי להתחמק מאחריות, והאבחונים עלו מאוד אחרי שהופיעה בתרבות הפופולרית. ובכל זאת, רבים סובלים ממנה באמת.")}`,q:"q27"},
-  {h:"הפרעות בילדות",html:`${tiles([["target","ADHD","דפוס מתמשך של קשב לקוי ו/או היפראקטיביות ואימפולסיביות שמפריע לתפקוד. גורמים גנטיים ונוירולוגיים. יכול להימשך לבגרות"],["people","הספקטרום האוטיסטי","קשיים באינטראקציה ובתקשורת חברתית, ותנועות או תחומי עניין חוזרים. לגנטיקה תפקיד מרכזי"]])}${rem("יש שטוענים שחיסון MMR גורם לאוטיזם, אבל <b>הראיות לא תומכות</b> בזה (זוכרים את המחקר שנמשך מפרק 2?).")}${ex("סטודנט מספר לד״ר מיכל שמאז ומתמיד הוא לא מצליח לשבת בהרצאה, מאבד דברים ומתחיל עבודות בלי לסיים. היא תשאל מתי זה התחיל, כי ADHD היא הפרעה התפתחותית שמתחילה בילדות.")}`,q:"q29"},
+  {h:"הפרעות בילדות",html:`${tiles([["target","ADHD","דפוס מתמשך של קשב לקוי ו/או היפראקטיביות ואימפולסיביות שמפריע לתפקוד. גורמים גנטיים ונוירולוגיים. יכול להימשך לבגרות","הפרעה שמתחילה בילדות ומתבטאת בקושי מתמשך בקשב, ו/או בפעלתנות יתר ובאימפולסיביות, שמפריעים לתפקוד. יש לה רקע גנטי ונוירולוגי, והיא יכולה להימשך גם בבגרות.","סטודנט שמגיע לד״ר מיכל מספר שמאז ומעולם קשה לו לשבת בהרצאה, הוא מאבד דברים ומגיש עבודות ברגע האחרון, וזה פוגע בלימודים."],["people","הספקטרום האוטיסטי","קשיים באינטראקציה ובתקשורת חברתית, ותנועות או תחומי עניין חוזרים. לגנטיקה תפקיד מרכזי"]])}${rem("יש שטוענים שחיסון MMR גורם לאוטיזם, אבל <b>הראיות לא תומכות</b> בזה (זוכרים את המחקר שנמשך מפרק 2?).")}${ex("סטודנט מספר לד״ר מיכל שמאז ומתמיד הוא לא מצליח לשבת בהרצאה, מאבד דברים ומתחיל עבודות בלי לסיים. היא תשאל מתי זה התחיל, כי ADHD היא הפרעה התפתחותית שמתחילה בילדות.")}`,q:"q29"},
   {h:"הפרעות אישיות",html:`<p>הפרעת אישיות = סגנון אישיות <b>נוקשה</b> שגורם מצוקה ופגיעה לאדם ולסביבה. ב־DSM-5 יש <b>10</b> הפרעות בשלושה אשכולות:</p><div class="tw"><table><tr><th>אשכול</th><th>הסגנון</th></tr><tr><td><b>A</b></td><td>מוזר, אקסצנטרי</td></tr><tr><td><b>B</b></td><td>אימפולסיבי, דרמטי, רגשי</td></tr><tr><td><b>C</b></td><td>חרד ופוחד</td></tr></table></div>${tiles([["cycle","גבולית (B)","חוסר יציבות במצב רוח, בהתנהגות ובדימוי העצמי; פחד מבדידות; יחסים סוערים; כעס עז. גנטיקה וחוויות ילדות קשות"],["x","אנטי־חברתית (B)","התעלמות מזכויות אחרים, הטעיה, אימפולסיביות, מעט או אין אשמה. גנטיקה וחיברות, וכנראה חוויה רגשית שונה"]])}`,q:"q31"}
  ]}
 ];
@@ -629,7 +631,7 @@ function home(){
     <div class="cover-body">
      <span class="eyebrow">${CONFIG.eyebrow}</span>
      ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
-     <p class="about"><b>על מה הלומדה:</b> מתי התנהגות או רגש הם ״הפרעה״, ואיך מאבחנים? הלומדה עוברת על ההגדרה והסיווג, על נקודות המבט על מקור ההפרעות, ועל הקבוצות העיקריות: חרדה, OCD ו־PTSD, מצב רוח, סכיזופרניה, דיסוציאציה והפרעות אישיות.</p>
+     ${CONFIG.about?`<p class="about"><b>על מה הלומדה:</b> ${CONFIG.about}</p>`:`<p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר, ובסוף הלומדה מבחן מסכם עם ציון.${HAS_H?" מהסבב השני, המבחנים עוברים לשאלות הבנה: מקרים וסיפורים שצריך לזהות לאיזה רעיון הם שייכים.":""}</p>`}
      <div class="stats">
       <div class="ring" style="--p:${total}"><span>${total}%</span></div>
       <div class="stat-text"><b>${total===0&&!started.length?"עוד לא התחלת":total>=80?"אתה שולט בחומר":`התקדמת ב־${total}% מהשאלות`}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
