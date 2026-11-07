@@ -137,7 +137,7 @@ button.course:hover{transform:translateY(-3px)}
 .wfoot{font-size:.78rem;color:var(--muted)}
 footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 @media (prefers-reduced-motion:no-preference){.course{animation:up .45s ease-out both}.course:nth-child(2){animation-delay:.05s}.course:nth-child(3){animation-delay:.1s}.course:nth-child(4){animation-delay:.15s}.course:nth-child(5){animation-delay:.2s}@keyframes up{from{transform:translateY(8px)}to{transform:none}}}
-</style>
+.howto{margin:0 0 1rem;padding:.85rem 1rem;border-radius:14px;background:color-mix(in srgb,var(--c,#888) 10%,transparent);line-height:1.65;font-size:.95rem}</style>
 </head>
 <body>
 <header class="hero">
@@ -283,6 +283,7 @@ function home(){
 function course(c){
   view.innerHTML=`<div class="cview"><button class="back" id="back">→ כל הקורסים</button>
    <div class="vhead" style="--c:var(--${c.id})"><span class="cicon" style="background:var(--c);color:var(--surface);display:grid;place-items:center">${ic(c.id)}</span><div class="ctitle"><small>${c.tag} · ${word(c.items.length)}</small><h2>${c.name}</h2></div></div>
+   <p class="howto">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר, ובסוף הלומדה מבחן מסכם עם ציון. מהסבב השני, המבחנים עוברים לשאלות הבנה: מקרים וסיפורים שצריך לזהות לאיזה רעיון הם שייכים.</p>
    ${c.items.length?`<div class="mlist">${[...c.items].sort((a,b)=>(a.ord||99)-(b.ord||99)).map(it=>{const p=pct(it),sn=soon(it.date);return `<a class="mcard" style="--c:var(--${c.id})" href="${it.href}"><span class="type">${it.type||"לומדת חובת קריאה"}</span>${it.when?`<span class="when">${ic("cal")}<span>${it.when}</span>${sn?`<span class="soon">${sn}</span>`:""}</span>`:""}<span class="name"${it.en?' dir="ltr" lang="en" style="text-align:right;font-family:Rubik,system-ui,sans-serif;font-weight:700"':""}>${it.title}</span><span class="sub">${it.sub}</span><div class="bar"><i style="width:${p||0}%"></i></div><div class="cmeta"><span>${p==null?"לא התחלת":p>=80?"שולט":"בתהליך"}</span><span>${p||0}%</span></div></a>`}).join("")}</div>`
    :`<div class="empty" style="--c:var(--${c.id})">${ic("clock")}<span>הלומדה הראשונה בקורס הזה תעלה בקרוב</span></div>`}</div>`;
   document.getElementById("back").onclick=()=>{location.hash=""};

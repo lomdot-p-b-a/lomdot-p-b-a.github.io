@@ -177,6 +177,7 @@ h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
 .card.sum th,.card.sum td{border:1px solid var(--line);padding:6px 8px;text-align:right;vertical-align:top}
 .card.sum th{background:color-mix(in srgb,var(--accent) 10%,var(--surface))}
 .card.sum .tw{overflow-x:auto}
+.about{margin:.6rem 0 0;line-height:1.65}.about b{color:var(--ink,inherit)}
 </style>
 <style>:root{--accent:#6a46c2}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent:#ad90f2}}:root[data-theme="dark"]{--accent:#ad90f2}</style>
 </head>
@@ -650,7 +651,7 @@ function home(){
     <div class="cover-body">
      <span class="eyebrow">${CONFIG.eyebrow}</span>
      ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
-     <p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר, ובסוף הלומדה מבחן מסכם עם ציון.${HAS_H?" מהסבב השני, המבחנים עוברים לשאלות הבנה: מקרים וסיפורים שצריך לזהות לאיזה רעיון הם שייכים.":""}</p>
+     <p class="about"><b>על מה הלומדה:</b> האם ריטלין משפר קריאה אצל אנשים עם דיסלקסיה ״קשבית״? הלומדה עוברת על סוגי הדיסלקסיה הקשבית, על השאלה אם הבעיה היא בקשב הכללי או בקשב לאותיות, על המחקר ועל מה שנמצא. היא גם מלמדת לקרוא מאמר מחקרי.</p>
      <div class="stats">
       <div class="ring" style="--p:${total}"><span>${total}%</span></div>
       <div class="stat-text"><b>${total===0&&!started.length?"עוד לא התחלת":total>=80?"אתה שולט בחומר":`התקדמת ב־${total}% מהשאלות`}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>

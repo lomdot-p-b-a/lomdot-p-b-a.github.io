@@ -50,7 +50,7 @@ function home(){
     <div class="cover-body">
      <span class="eyebrow">${CONFIG.eyebrow}</span>
      ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
-     <p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר, ובסוף הלומדה מבחן מסכם עם ציון.${HAS_H?" מהסבב השני, המבחנים עוברים לשאלות הבנה: מקרים וסיפורים שצריך לזהות לאיזה רעיון הם שייכים.":""}</p>
+     ${CONFIG.about?`<p class="about"><b>על מה הלומדה:</b> ${CONFIG.about}</p>`:`<p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר, ובסוף הלומדה מבחן מסכם עם ציון.${HAS_H?" מהסבב השני, המבחנים עוברים לשאלות הבנה: מקרים וסיפורים שצריך לזהות לאיזה רעיון הם שייכים.":""}</p>`}
      <div class="stats">
       <div class="ring" style="--p:${total}"><span>${total}%</span></div>
       <div class="stat-text"><b>${total===0&&!started.length?"עוד לא התחלת":total>=80?"אתה שולט בחומר":`התקדמת ב־${total}% מהשאלות`}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
