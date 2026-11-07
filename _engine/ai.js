@@ -2,9 +2,8 @@
    Needs window.AI_CFG = {key:"...", model:"..."} from ai-config.js. */
 (function(){
   const CFG = window.AI_CFG || {};
-  const KEY = (CFG.key || "").trim();
-  const MODEL = CFG.model || "gemini-flash-latest";
-  const ENABLED = KEY && !/^PASTE/.test(KEY);
+  const ENDPOINT = (CFG.endpoint || "").trim();
+  const ENABLED = /^https:\/\//.test(ENDPOINT);
 
   const css = `
   .ai-fab{position:fixed;inset-inline-start:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;display:flex;align-items:center;gap:8px;border:0;border-radius:999px;padding:12px 16px;background:var(--ink,#1b2230);color:var(--surface,#fff);font:600 15px/1 Rubik,system-ui,sans-serif;box-shadow:0 6px 20px rgba(0,0,0,.18);cursor:pointer}
@@ -102,7 +101,7 @@ ${summaryText().slice(0,60000)}`;
     const d=document.createElement("div"); d.className="ai-hint";
     d.innerHTML = ENABLED
       ? "אפשר לשאול על כל חלק בלומדה: מושג שלא הבנת, איך שני נושאים מתחברים, או לבקש דוגמה נוספת."
-      : "העוזר עוד לא הופעל באתר (חסר מפתח). ברגע שיוגדר, הוא יעבוד כאן.";
+      : "העוזר עוד לא הופעל באתר. ברגע שיוגדר, הוא יעבוד כאן.";
     if(ENABLED){
       const s=document.createElement("div"); s.className="ai-sug";
       const t=currentTopic();
@@ -122,9 +121,9 @@ ${summaryText().slice(0,60000)}`;
     ta.value=""; send.disabled=true;
     const wait=bubble("ai-a","<span class='ai-dots'>חושב</span>");
     try{
-      const r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`,{
-        method:"POST", headers:{"Content-Type":"application/json","x-goog-api-key":KEY},
-        body:JSON.stringify({systemInstruction:{parts:[{text:system()}]},contents:hist.slice(-12),generationConfig:{temperature:0.4,maxOutputTokens:1200}})
+      const r=await fetch(ENDPOINT,{
+        method:"POST", headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({system:system(),contents:hist.slice(-12)})
       });
       const j=await r.json();
       if(!r.ok) throw new Error((j.error&&j.error.status)||("HTTP "+r.status));
