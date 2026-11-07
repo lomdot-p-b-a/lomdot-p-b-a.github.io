@@ -7,7 +7,7 @@
 
   const css = `
   .ai-fab{position:fixed;inset-inline-start:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;display:flex;align-items:center;gap:8px;border:0;border-radius:999px;padding:12px 16px;background:var(--ink,#1b2230);color:var(--surface,#fff);font:600 15px/1 Rubik,system-ui,sans-serif;box-shadow:0 6px 20px rgba(0,0,0,.18);cursor:pointer}
-  .ai-fab svg{width:20px;height:20px}
+  .ai-fab svg{width:20px;height:20px}@media(max-width:600px){.ai-fab span{display:none}.ai-fab{padding:13px;opacity:.92}}
   .ai-panel{position:fixed;z-index:61;inset-inline-start:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:min(400px,calc(100vw - 32px));height:min(600px,calc(100vh - 32px));display:flex;flex-direction:column;background:var(--surface,#fff);color:var(--ink,#1b2230);border:1px solid var(--line,#dde2ea);border-radius:18px;box-shadow:0 12px 40px rgba(0,0,0,.22);overflow:hidden;direction:rtl}
   .ai-panel[hidden]{display:none}
   .ai-head{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line,#dde2ea)}
