@@ -127,7 +127,7 @@ ${summaryText().slice(0,60000)}`;
       });
       const j=await r.json();
       if(!r.ok) throw new Error((j.error&&j.error.status)||("HTTP "+r.status));
-      const a=(j.candidates&&j.candidates[0]&&j.candidates[0].content&&j.candidates[0].content.parts||[]).map(p=>p.text||"").join("").trim()||"לא התקבלה תשובה. נסה לנסח אחרת.";
+      const a=(j.candidates&&j.candidates[0]&&j.candidates[0].content&&j.candidates[0].content.parts||[]).filter(p=>!p.thought).map(p=>p.text||"").join("").trim()||"לא התקבלה תשובה. נסה לנסח אחרת.";
       hist.push({role:"model",parts:[{text:a}]});
       wait.innerHTML=md(a);
     }catch(e){

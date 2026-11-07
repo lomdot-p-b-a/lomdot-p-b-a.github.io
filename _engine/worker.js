@@ -31,7 +31,7 @@ export default {
       body: JSON.stringify({
         systemInstruction: { parts: [{ text: system }] },
         contents,
-        generationConfig: { temperature: 0.4, maxOutputTokens: 1200 },
+        generationConfig: { temperature: 0.4, maxOutputTokens: 1200, thinkingConfig: { thinkingBudget: 0 } },
       }),
     });
     const text = await r.text();
