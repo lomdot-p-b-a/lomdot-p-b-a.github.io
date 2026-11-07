@@ -103,6 +103,7 @@ figure{margin:0}
 .who{display:flex;gap:12px;align-items:flex-start}
 .who .av{flex:none;width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.15rem}
 .who .yr{font-size:.8rem;color:var(--muted)}
+.cpt{border:1px solid var(--line);border-inline-start:4px solid var(--c,var(--accent));border-radius:14px;padding:14px 16px;margin:12px 0;background:var(--surface)}.cpt-h{display:flex;gap:10px;align-items:center;font-size:1.08rem}.cpt-h svg{width:26px;height:26px;color:var(--c,var(--accent));flex:none}.cpt p{margin:.5rem 0 .7rem;line-height:1.75}.cpt p.cpt-d{font-weight:600;margin-bottom:.3rem}.cpt-ex{background:var(--raised);border-radius:10px;padding:10px 12px;line-height:1.7;font-size:.97rem}.cpt-ex b{color:var(--c,var(--accent))}
 .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
 .tile{background:var(--raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
 .tile svg{width:32px;height:32px;color:var(--c)}
@@ -184,7 +185,7 @@ h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
 <body>
 <div class="wrap" id="app"></div>
 <script>
-const CONFIG={key:"lomda-social-myers2",cover:"cover43",badge:"ספר הקורס · חובה",eyebrow:"פסיכולוגיה חברתית א' · מאיירס, כרך א׳",title:"פרק 3 (חלק ב׳): ייחוס וציפיות",cite:`מאיירס, ד' (2012). <i>פסיכולוגיה חברתית</i>, כרך א׳, פרק 3, עמ׳ ⁦118–140⁩. האוניברסיטה הפתוחה.`,note:"הלומדה מבוססת על עמ׳ 118–140 בספר הקורס (תפיסה חברתית), לקריאה לקראת מפגשים 3–4. מספרי העמודים מתייחסים לספר המודפס."};
+const CONFIG={about:"איך אנחנו מסבירים לעצמנו למה אנשים מתנהגים כפי שהם מתנהגים, ואיפה אנחנו טועים? הלומדה עוברת על הסקת תכונות, על המודל של קלי, על טעות הייחוס הבסיסית, ועל נבואה שמגשימה את עצמה.",key:"lomda-social-myers2",cover:"cover43",badge:"ספר הקורס · חובה",eyebrow:"פסיכולוגיה חברתית א' · מאיירס, כרך א׳",title:"פרק 3 (חלק ב׳): ייחוס וציפיות",cite:`מאיירס, ד' (2012). <i>פסיכולוגיה חברתית</i>, כרך א׳, פרק 3, עמ׳ ⁦118–140⁩. האוניברסיטה הפתוחה.`,note:"הלומדה מבוססת על עמ׳ 118–140 בספר הקורס (תפיסה חברתית), לקריאה לקראת מפגשים 3–4. מספרי העמודים מתייחסים לספר המודפס."};
 const I={
  building:'<path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h2M14 8h2M8 12h2M14 12h2M10 21v-4h4v4"/>',
  people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
@@ -258,7 +259,8 @@ const E=t=>`<span class="en">(${t})</span>`;
 const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</figcaption>`:""}</figure>`;
 const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
 const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;
-const tiles=a=>`<div class="tiles">${a.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`;
+const _dot=s=>{const t=String(s).replace(/<[^>]+>/g,"").trim();return /[.!?:׃…]$/.test(t)?s:s+"."};
+const tiles=a=>{const s=a.filter(x=>x.length<4),c=a.filter(x=>x.length>=4);return (s.length?`<div class="tiles">${s.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`:"")+c.map(([i,t,d,x,e])=>`<div class="cpt"><div class="cpt-h">${ic(i)}<b>${t}</b></div><p class="cpt-d">${_dot(d)}</p>${x?`<p>${x}</p>`:""}${e?`<div class="cpt-ex"><b>דוגמה:</b> ${e}</div>`:""}</div>`).join("")};
 const ex=h=>`<div class="ex"><span class="lbl">דוגמה</span><p>${h}</p></div>`;
 const rem=h=>`<div class="remember">${ic("bulb")}<p>${h}</p></div>`;
 const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")}${t}</span>`).join("")}${n.map(t=>`<span class="yn n">${ic("x")}${t}</span>`).join("")}</div>`;
@@ -444,7 +446,7 @@ const T=[
   {h:"תרבות, והשלכות",html:`${def("תרבות",`התרבות ה<b>מערבית</b> מעדיפה הסברים פנימיים (״אתה יכול!״). בתרבויות <b>מזרח אסיה</b> וקולקטיביסטיות רגישים יותר למצב. הודים־הינדים הציעו יותר הסברים מצביים, אמריקנים יותר הסברים של תכונות (מילר, 1984).`)}${ex("בנו של מאיירס כתב ״The gate caught Tom on his sleeve״ (השער תפס את טום), והמורה סימנה ״טעות״. התשובה ה״נכונה״ שמה את הסיבה אצל טום.")}<p><b>השלכות:</b> מי שמייחס עוני ואבטלה ל<b>תכונות</b> (״הם עצלנים״) תומך פחות בעזרה לעניים. מי שמייחס ל<b>מצב</b> תומך יותר.</p>${rem("למה ללמוד טעויות? כי רובן תוצר לוואי של קיצורי דרך מועילים, כי לא תמיד צריך להאשים אנשים בבעיותיהם, וכי מודעות עוזרת: סטודנטים לפסיכולוגיה מסבירים התנהגות פחות פשטני.")}`,q:"q23"}
  ]},
  {id:"t6",icon:"cycle",title:"נבואה המגשימה את עצמה",blocks:[
-  {h:"אמונה שיוצרת מציאות",html:`${def("על מה הנושא",`איך הציפיות שלנו משנות את ההתנהגות של אחרים.<br><b>מה נלמד כאן:</b> מרטון · הבורסה · הטיית הנסיין · ציפיות מורים · ציפיות תלמידים`)}${def("נבואה המגשימה את עצמה",`${E("Self-fulfilling prophecy")} אמונה שגורמת לנו להתנהג כך שהיא מתממשת (הסוציולוג <b>רוברט מרטון</b>, 1948).`)}${tiles([["building","בנק","לקוחות שחושבים שהבנק יתמוטט מושכים את כספם, והבנק באמת מתמוטט"],["chart","בורסה","גרנוויל כתב ״מכרו מחר״ (1981), ו־7 בינואר היה יום המסחר העמוס ביותר עד אז"]])}${fig("sfp43","הציפייה משנה את ההתנהגות שלי, וההתנהגות שלי משנה את שלה.")}`,q:"q25"},
+  {h:"אמונה שיוצרת מציאות",html:`${def("על מה הנושא",`איך הציפיות שלנו משנות את ההתנהגות של אחרים.<br><b>מה נלמד כאן:</b> מרטון · הבורסה · הטיית הנסיין · ציפיות מורים · ציפיות תלמידים`)}${def("נבואה המגשימה את עצמה",`${E("Self-fulfilling prophecy")} אמונה שגורמת לנו להתנהג כך שהיא מתממשת (הסוציולוג <b>רוברט מרטון</b>, 1948).`)}${tiles([["building","בנק","לקוחות שחושבים שהבנק יתמוטט מושכים את כספם, והבנק באמת מתמוטט","זו נבואה שמגשימה את עצמה: האמונה עצמה גורמת להתנהגות שמביאה בדיוק את התוצאה שחששו ממנה. הבנק לא היה בבעיה עד שכולם האמינו שהוא בבעיה.","שמועה בווטסאפ שסניף ״עומד לקרוס״ גורמת לעשרות לקוחות למשוך כסף באותו יום, ואז הסניף באמת לא יכול לשלם לכולם."],["chart","בורסה","גרנוויל כתב ״מכרו מחר״ (1981), ו־7 בינואר היה יום המסחר העמוס ביותר עד אז"]])}${fig("sfp43","הציפייה משנה את ההתנהגות שלי, וההתנהגות שלי משנה את שלה.")}`,q:"q25"},
   {h:"הטיית הנסיין וציפיות מורים",html:`<p><b>רוזנטל</b>: נסיינים שציפו שמשתתפים ידרגו פנים בתמונות כ״מצליחים״ קיבלו דירוגים גבוהים יותר, עם אותן הוראות ואותן תמונות.</p>${def("רוזנטל וג׳ייקובסון (1968)",`בבית ספר יסודי בסן פרנסיסקו נבחרו ילדים <b>באקראי</b>, ולמורים נאמר שהם ״על סף פריצה אינטלקטואלית״. ציוני המשכל שלהם עלו.`)}${rem("אבל האפקט פחות חזק ממה שחשבו: רק כ־<b>40%</b> מכ־500 הניסויים מצאו אותו. ברוב המקרים ציפיות המורים פשוט <b>מדויקות</b> (ג׳סים). מחקר על 4,300 תלמידים מצא השפעה בשני הכיוונים.")}<p><b>איך מועברות ציפיות?</b> המורה מביטה יותר, מחייכת, מהנהנת, מלמדת יותר חומר, מציבה יעדים קשים, ונותנת יותר זמן לענות. די ב<b>10 שניות</b> של וידאו כדי לזהות על איזה תלמיד המורה מדברת.</p>`,q:"q27"},
   {h:"גם התלמידים משפיעים",html:`<p>סטודנטים שנאמר להם שהמרצה <b>מצוין</b> תפסו אותו כמעניין יותר, ו<b>למדו יותר</b>. מורים שתלמידים העבירו להם ציפיות חיוביות לימדו טוב יותר לפי צופים בלתי תלויים. בתיכון באונטריו, כיתות ששמעו שהמורה החדשה מצוינת הקשיבו יותר וקיבלו ציונים טובים יותר.</p>${ex("נועה שמעה ש״ד״ר לוי משעמם״. אם תיכנס לשיעור עם הציפייה הזו, היא תקשיב פחות, תשאל פחות, וייתכן שגם ד״ר לוי ילמד בפחות התלהבות.")}`,q:"q29"}
  ]},
@@ -701,7 +703,7 @@ function home(){
     <div class="cover-body">
      <span class="eyebrow">${CONFIG.eyebrow}</span>
      ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
-     <p class="about"><b>על מה הלומדה:</b> איך אנחנו מסבירים לעצמנו למה אנשים מתנהגים כפי שהם מתנהגים, ואיפה אנחנו טועים? הלומדה עוברת על הסקת תכונות, על המודל של קלי, על טעות הייחוס הבסיסית, ועל נבואה שמגשימה את עצמה.</p>
+     ${CONFIG.about?`<p class="about"><b>על מה הלומדה:</b> ${CONFIG.about}</p>`:`<p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר, ובסוף הלומדה מבחן מסכם עם ציון.${HAS_H?" מהסבב השני, המבחנים עוברים לשאלות הבנה: מקרים וסיפורים שצריך לזהות לאיזה רעיון הם שייכים.":""}</p>`}
      <div class="stats">
       <div class="ring" style="--p:${total}"><span>${total}%</span></div>
       <div class="stat-text"><b>${total===0&&!started.length?"עוד לא התחלת":total>=80?"אתה שולט בחומר":`התקדמת ב־${total}% מהשאלות`}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
