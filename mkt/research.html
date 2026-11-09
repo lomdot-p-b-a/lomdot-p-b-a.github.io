@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>לומדת חובת קריאה: מחקר שיווקי וחיזוי ביקושים</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Rubik:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: a study notebook. Home = illustrated cover + topic cards; topic = one reading card at a time, with a highlighter for key terms and drawn figures */
+:root{
+  --bg:#eef2f4; --surface:#ffffff; --raised:#f7f9fa; --ink:#15222a; --muted:#4c5b66; --line:#dbe2e6;
+  --accent:#2457a6; --mark:#ffe27a; --good:#23855a; --good-soft:#e2f4ea; --bad:#c2452d; --bad-soft:#fbe6e1;
+  --t1:#d35d36; --t2:#3667cf; --t3:#0e8a7c; --t4:#8448c9; --t5:#b9800c; --t6:#2a7fa6; --t7:#b4436c; --t8:#5a6b2e;
+  --display:"Suez One","Frank Ruhl Libre","David",serif;
+  --body:"Rubik","Arial Hebrew","Segoe UI",Arial,sans-serif;
+  --shadow:0 1px 2px rgba(21,34,42,.06),0 8px 24px rgba(21,34,42,.07);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;font-weight:500;line-height:1.75;direction:rtl}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
+p{margin:0}
+.stack{display:flex;flex-direction:column;gap:16px}
+.muted{color:var(--muted)}
+mark{background:linear-gradient(transparent 38%,var(--mark) 38%,var(--mark) 92%,transparent 92%);color:inherit;padding:0 2px;font-weight:600}
+button{font:inherit;cursor:pointer;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:11px 18px}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button[disabled]{opacity:.55;cursor:default}
+.primary{background:var(--c,var(--accent));border-color:var(--c,var(--accent));color:var(--surface);font-weight:600}
+.ghost{background:transparent;border:none;color:var(--muted);padding:6px 2px}
+.ghost:hover{color:var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.badge{display:inline-block;align-self:flex-start;font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:99px;background:var(--accent);color:var(--surface);margin-bottom:6px}.entitle{display:inline;unicode-bidi:isolate;font-family:Rubik,system-ui,sans-serif;font-weight:800}.hetitle{margin:4px 0 0;font-weight:700;font-size:1.05rem}.cite{text-align:right;margin:4px 0 0;font-size:.85rem;color:var(--muted)}.cite a{color:var(--accent)}
+.eyebrow{font-size:.8rem;letter-spacing:.05em;font-weight:600;color:var(--c,var(--muted))}
+
+/* home */
+.cover{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.cover-art{background:var(--raised);border-bottom:1px solid var(--line);padding:8px 8px 0}
+.cover-art svg{display:block;width:100%;height:auto;max-height:230px}
+.cover-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px}
+.cover h1{font-size:clamp(2rem,6vw,2.6rem);font-weight:900}
+.stats{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.ring{--p:0;width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center;flex:none}
+.ring span{width:50px;height:50px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.9rem;font-variant-numeric:tabular-nums}
+.stat-text{display:flex;flex-direction:column;line-height:1.35;flex:1;min-width:160px}
+.stat-text b{font-size:1.05rem}
+.review-btn{display:flex;align-items:center;gap:8px}
+.actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.actions button{justify-content:center}
+.opt.sel{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--raised))}
+.opt[aria-disabled]{cursor:default}
+.opt .k svg{width:16px;height:16px}
+.trows{display:flex;flex-direction:column;gap:10px;width:100%}
+.trow{display:grid;grid-template-columns:minmax(0,1fr) minmax(70px,30%) auto;gap:10px;align-items:center;width:100%}
+.trow .tt{font-family:inherit;font-size:1rem;font-weight:600;line-height:1.35}
+.trow .bar i{background:var(--c)}
+.trow .sc{font-variant-numeric:tabular-nums;font-weight:700;min-width:3ch;text-align:left}
+.card.rev{align-items:stretch}
+.tag{align-self:flex-start;font-size:.82rem;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--raised)}
+.tag.good{background:var(--good-soft);color:var(--good)} .tag.low{background:var(--bad-soft);color:var(--bad)} .tag.mid{background:color-mix(in srgb,var(--mark) 45%,var(--raised))}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.tcard{--c:var(--accent);text-align:right;padding:0;overflow:hidden;border:none;border-radius:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s}
+.tcard:hover{transform:translateY(-2px)}
+.tcard .band{background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.tcard .band svg{width:44px;height:44px}
+.tcard .n{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;opacity:.85}
+.tcard .body{padding:12px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tcard .t{font-weight:700;font-size:1.05rem;line-height:1.35}
+.bar{height:7px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--c);border-radius:4px}
+.meta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip{font-size:.75rem;padding:3px 10px;border-radius:99px;font-weight:600;background:color-mix(in srgb,var(--c,var(--accent)) 14%,transparent);color:var(--c,var(--accent));white-space:nowrap}
+.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+
+/* topic */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;display:flex;flex-direction:column;gap:8px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.steps{display:flex;gap:5px}
+.steps i{flex:1;height:5px;border-radius:3px;background:var(--line)}
+.steps i.on{background:var(--c)}
+.prog{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tt{font-size:1.6rem;font-weight:900}
+.card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px}
+.card h3{font-size:1.25rem;color:var(--c)}
+.fig{background:var(--raised);border-radius:14px;padding:10px;margin-inline:-4px}
+.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{font-size:.8rem;color:var(--muted);text-align:center;margin-top:4px}
+figure{margin:0}
+.def{border:1.5px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 6%,var(--surface));border-radius:14px;padding:14px 16px}
+.lbl{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:var(--c);margin-bottom:4px}
+.who{display:flex;gap:12px;align-items:flex-start}
+.who .av{flex:none;width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.15rem}
+.who .yr{font-size:.8rem;color:var(--muted)}
+.lec{display:inline-flex;align-items:center;gap:5px;font-size:.78rem;font-weight:700;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 40%,transparent);background:color-mix(in srgb,var(--accent) 8%,transparent);border-radius:999px;padding:2px 10px;margin:0 0 8px}.lec svg{width:14px;height:14px}.podbox{margin-top:12px;border:1px solid var(--line);border-radius:14px;padding:12px;background:var(--surface)}.podbox p{margin:0 0 8px;font-size:.9rem}.podframe iframe{width:100%;height:90px;border:0;border-radius:10px}.cpt{border:1px solid var(--line);border-inline-start:4px solid var(--c,var(--accent));border-radius:14px;padding:14px 16px;margin:12px 0;background:var(--surface)}.cpt-h{display:flex;gap:10px;align-items:center;font-size:1.08rem}.cpt-h svg{width:26px;height:26px;color:var(--c,var(--accent));flex:none}.cpt p{margin:.5rem 0 .7rem;line-height:1.75}.cpt p.cpt-d{font-weight:600;margin-bottom:.3rem}.cpt-ex{background:var(--raised);border-radius:10px;padding:10px 12px;line-height:1.7;font-size:.97rem}.cpt-ex b{color:var(--c,var(--accent))}
+.tiles>.cpt{grid-column:1/-1;margin:0}.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.tile{background:var(--raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile svg{width:32px;height:32px;color:var(--c)}
+.tile b{font-size:.98rem}
+.tile span{font-size:.88rem;color:var(--muted);line-height:1.45}
+.ex{background:var(--raised);border-radius:12px;padding:12px 14px;font-size:.95rem}
+.ex .lbl{color:var(--muted)}
+.yesno{display:flex;flex-wrap:wrap;gap:8px}
+.yn{padding:5px 12px;border-radius:99px;font-size:.88rem;font-weight:500;display:inline-flex;gap:6px;align-items:center}
+.yn.y{background:var(--good-soft);color:var(--good)} .yn.n{background:var(--bad-soft);color:var(--bad)}
+.spectrum{display:flex;flex-direction:column;gap:6px}
+.spectrum .track{height:12px;border-radius:6px;background:linear-gradient(90deg,var(--bad),var(--line) 50%,var(--good));position:relative}
+.spectrum .dot{position:absolute;top:50%;left:50%;width:20px;height:20px;border-radius:50%;background:var(--surface);border:3px solid var(--ink);transform:translate(-50%,-50%)}
+.spectrum .ends{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);gap:10px}
+.remember{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;border-top:1px dashed var(--line);padding-top:12px}
+.remember svg{flex:none;width:22px;height:22px;color:var(--c)}
+
+/* question */
+.q{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:12px}
+.qtext{font-weight:600;font-size:1.08rem;line-height:1.55}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{text-align:right;line-height:1.45;display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--raised);border:1.5px solid transparent}
+.opt:hover:not([disabled]){border-color:var(--c)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:8px;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.85rem;color:var(--c)}
+.opt.right{background:var(--good-soft);border-color:var(--good);opacity:1}
+.opt.right .k{background:var(--good);color:var(--surface)}
+.opt.wrong{background:var(--bad-soft);border-color:var(--bad);opacity:1}
+.opt.wrong .k{background:var(--bad);color:var(--surface)}
+.fb{padding:12px 14px;border-radius:12px;font-size:.95rem;display:flex;gap:10px;align-items:flex-start}
+.fb svg{flex:none;width:22px;height:22px;margin-top:2px}
+.fb.ok{background:var(--good-soft)} .fb.ok svg{color:var(--good)}
+.fb.no{background:var(--bad-soft)} .fb.no svg{color:var(--bad)}
+.fb strong{display:block}
+.big{font-family:var(--display);font-size:3.4rem;font-weight:900;color:var(--c);font-variant-numeric:tabular-nums;line-height:1}
+@media (prefers-reduced-motion:no-preference){.fade{animation:f .3s ease-out}@keyframes f{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+
+/* svg figure classes */
+.s-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.s-c{stroke:var(--c);stroke-width:2;fill:none}
+.f-c{fill:var(--c)}
+.f-soft{fill:color-mix(in srgb,var(--c) 16%,var(--surface))}
+.f-surf{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.f-ink{fill:var(--ink)}
+.f-mut{fill:var(--muted)}
+.f-inv{fill:var(--surface)}
+svg text{font-family:var(--body)}
+h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
+.card p,.def p,.tile span,.ex p{font-weight:500}
+.qtext{font-weight:700}
+.tile b,.who b{font-weight:700}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:.95rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.tbl th,.tbl td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl th{background:color-mix(in srgb,var(--c) 10%,var(--surface));color:var(--c);font-weight:700;font-size:.85rem}
+.tbl .in{color:var(--c);font-weight:700}.tbl .out{color:var(--muted);font-weight:700}
+.tblwrap{overflow-x:auto}
+.en{font-size:.82em;color:var(--muted);font-weight:500;direction:ltr;unicode-bidi:isolate}
+.ak{white-space:nowrap}
+.acr{font-size:.82em;color:var(--muted);font-weight:500}
+.acrnote{font-size:.85rem;color:var(--muted);background:color-mix(in srgb,var(--c,var(--accent)) 7%,var(--surface));border-radius:10px;padding:8px 12px;line-height:1.6}
+.tcard.done .band{background:color-mix(in srgb,var(--good) 16%,var(--surface))}
+.tcard.done .meta span:first-child{color:var(--good);font-weight:700}
+.card.sum{gap:6px;align-items:stretch}
+.card.sum h2{font-family:var(--display);font-size:1.5rem;margin:6px 0 2px;color:var(--accent)}
+.card.sum h3{margin:18px 0 4px;color:var(--accent);border-bottom:2px solid color-mix(in srgb,var(--accent) 25%,transparent);padding-bottom:4px}
+.card.sum h4{margin:10px 0 2px}
+.card.sum p,.card.sum li{line-height:1.75}
+.card.sum ul,.card.sum ol{margin:4px 0;padding-inline-start:22px}
+.card.sum .key{background:color-mix(in srgb,var(--accent) 9%,var(--surface));border-inline-start:4px solid var(--accent);border-radius:10px;padding:10px 14px;margin:8px 0}
+.card.sum .trap{background:color-mix(in srgb,var(--bad) 9%,var(--surface));border-inline-start:4px solid var(--bad);border-radius:10px;padding:10px 14px;margin:8px 0}
+.card.sum table{border-collapse:collapse;width:100%;font-size:.92rem;margin:6px 0}
+.card.sum th,.card.sum td{border:1px solid var(--line);padding:6px 8px;text-align:right;vertical-align:top}
+.card.sum th{background:color-mix(in srgb,var(--accent) 10%,var(--surface))}
+.card.sum .tw{overflow-x:auto}
+.about{margin:.6rem 0 0;line-height:1.65}.about b{color:var(--ink,inherit)}
+</style>
+<style>:root{--accent:#0e7c86}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent:#4cc9d4}}:root[data-theme="dark"]{--accent:#4cc9d4}</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const CONFIG={about:"איך עסק יודע מה קורה בשוק, ואיך הוא מעריך כמה ימכור? הלומדה עוברת על מערכת המידע השיווקי והמודיעין השיווקי, על ששת שלבי המחקר השיווקי (שיטות, כלים, דגימה ושיטות התקשרות), ועל מדידת ביקוש: סוגי שוק, פונקציית ביקוש, תחזיות ופוטנציאל שוק.",key:"lomda-mkt-research",cover:"cover51",eyebrow:"מבוא לניהול השיווק · שיעור 4",title:"פרק 3 - מחקר שיווקי וחיזוי ביקושים",cite:`קוטלר וקלר, <i>עקרונות ניהול השיווק</i>, האוניברסיטה הפתוחה, 2020. פרק 3 עמ' ⁦65–77⁩.`,note:"מבוסס על חובת הקריאה לשיעור 4 לפי הסילבוס. ההמשך של הפרק (חיזוי וסביבת המקרו, מעמ' 78) נמצא בלומדה של שיעור 3."};
+const I={
+ building:'<path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h2M14 8h2M8 12h2M14 12h2M10 21v-4h4v4"/>',
+ people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
+ cycle:'<path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/>',
+ pyramid:'<path d="M12 3L2.5 20h19z"/><path d="M8.2 10.5h7.6M5.5 15.2h13"/>',
+ chart:'<path d="M4 20V10M9.5 20V4M15 20v-7M20.5 20V8M2 20h20"/>',
+ gear:'<circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="7.5" stroke-dasharray="3.2 2.7" stroke-width="3.2"/>',
+ sprout:'<path d="M12 21v-9"/><path d="M12 14C7 14 4.5 11 4.5 6.5 9 6.5 12 9 12 14z"/><path d="M12 12c0-4.5 3-7 7.5-7 0 4.5-3 7-7.5 7z"/>',
+ scales:'<path d="M12 3v17M7 20h10M4 7h16"/><path d="M4 7l-2.5 6h5zM20 7l-2.5 6h5z"/>',
+ factory:'<path d="M3 21V10l5 3v-3l5 3V5h4v16zM1.5 21h21M17 9h4v12"/>',
+ question:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 1 1 3.6 2.4c-.8.4-1.1.9-1.1 1.8"/><path d="M12 17h.01"/>',
+ data:'<ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6M4.5 11.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6"/>',
+ doc:'<path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/>',
+ split:'<circle cx="12" cy="4.5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="12" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/><path d="M12 6.7v10M12 11l-6 6M12 11l6 6"/>',
+ grad:'<path d="M1.5 9L12 4l10.5 5L12 14z"/><path d="M6 11.2V16c3.3 2.4 8.7 2.4 12 0v-4.8M21 10v5"/>',
+ copies:'<rect x="3" y="7" width="12" height="14" rx="2"/><path d="M7 4h11a2 2 0 0 1 2 2v12"/>',
+ link:'<rect x="2" y="8" width="11" height="8" rx="4"/><rect x="11" y="8" width="11" height="8" rx="4"/>',
+ hand:'<circle cx="8" cy="7" r="3"/><circle cx="16" cy="7" r="3"/><path d="M2.5 20c0-3.3 2.5-6 5.5-6 1.6 0 3 .7 4 1.9 1-1.2 2.4-1.9 4-1.9 3 0 5.5 2.7 5.5 6"/>',
+ target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',
+ id:'<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><circle cx="8.5" cy="11" r="2.3"/><path d="M5 16c.6-1.6 2-2.4 3.5-2.4S11.4 14.4 12 16M14.5 10h4M14.5 13.5h3"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>',
+ pie:'<path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/>',
+ cart:'<path d="M2 3h3l2.5 12h11l2-8H6.5"/><circle cx="9" cy="19.5" r="1.6"/><circle cx="17" cy="19.5" r="1.6"/>',
+ bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/>',
+ check:'<circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/>',
+ x:'<circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/>',
+ lock:'<rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>',
+ moon:'<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>',
+ brain:'<path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a2 2 0 0 0-3-1z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/>',
+ phone:'<rect x="6.5" y="2" width="11" height="20" rx="2.5"/><path d="M10.5 18.5h3"/>',
+ flask:'<path d="M9 2.5h6M10 2.5v6L4.5 19a2 2 0 0 0 1.8 2.9h11.4a2 2 0 0 0 1.8-2.9L14 8.5v-6"/><path d="M7 15h10"/>',
+ leaf:'<path d="M5 19C5 10 11 4 20 4c0 9-6 15-15 15z"/><path d="M5 19l8-8"/>'
+};
+const ic=(k,cls="")=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="${cls}" aria-hidden="true">${I[k]}</svg>`;
+
+const arrowDef=id=>`<defs><marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="f-c"/></marker></defs>`;
+
+const FIG={
+ cover51:()=>`<svg viewBox="0 0 400 228" role="img" aria-label="זכוכית מגדלת מעל גרף">
+  <circle cx="200" cy="114" r="96" class="f-soft"/>
+  <rect x="128" y="132" width="22" height="40" rx="4" class="f-surf"/><rect x="158" y="112" width="22" height="60" rx="4" class="f-surf"/><rect x="188" y="92" width="22" height="80" rx="4" class="f-surf"/>
+  <circle cx="238" cy="92" r="34" class="f-surf"/><circle cx="238" cy="92" r="24" class="f-soft"/>
+  <path d="M262 116 L290 144" class="s-c" stroke-width="10" stroke-linecap="round"/>
+ </svg>`
+};
+const E=t=>`<span class="en">(${t})</span>`;
+const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</figcaption>`:""}</figure>`;
+const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
+const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;
+const _dot=s=>{const t=String(s).replace(/<[^>]+>/g,"").trim();return /[.!?:׃…]$/.test(t)?s:s+"."};
+const tiles=a=>{const s=a.filter(x=>x.length<4),c=a.filter(x=>x.length>=4);return (s.length?`<div class="tiles">${s.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`:"")+c.map(([i,t,d,x,e])=>`<div class="cpt"><div class="cpt-h">${ic(i)}<b>${t}</b></div>${String(d).replace(/<[^>]+>/g,"").trim()?`<p class="cpt-d">${_dot(d)}</p>`:""}${x?`<p>${x}</p>`:""}${e?`<div class="cpt-ex"><b>דוגמה:</b> ${e}</div>`:""}</div>`).join("")};
+const ex=h=>`<div class="ex"><span class="lbl">דוגמה</span><p>${h}</p></div>`;
+const rem=h=>`<div class="remember">${ic("bulb")}<p>${h}</p></div>`;
+const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")}${t}</span>`).join("")}${n.map(t=>`<span class="yn n">${ic("x")}${t}</span>`).join("")}</div>`;
+const spectrum=(r,l,dot)=>`<div class="spectrum"><div class="track">${dot?'<span class="dot"></span>':""}</div><div class="ends"><span>${r}</span><span>${l}</span></div></div>`;
+document.head.insertAdjacentHTML("beforeend",'<style>.yn svg{width:16px;height:16px}</style>');
+
+
+const LEC=`<span class="lec">${ic("doc")}מהשיעור (מצגת)</span>`;
+const ACR={
+"AAI":["Adult Attachment Interview","ריאיון ההיקשרות למבוגרים"],
+"ABA":["","תבנית הברות שבה הראשונה והאחרונה זהות (גה טי גה)"],
+"ABB":["","תבנית הברות שבה השתיים האחרונות זהות (וו פי פי)"],
+"ACh":["Acetylcholine","אצטילכולין"],
+"AChE":["Acetylcholinesterase","אצטילכולין־אסטראז, האנזים שמפרק אצטילכולין"],
+"ADD":["Attention Deficit Disorder","הפרעת קשב"],
+"ADHD":["Attention Deficit Hyperactivity Disorder","הפרעת קשב וריכוז עם היפראקטיביות"],
+"AI":["Artificial Intelligence","בינה מלאכותית"],
+"AMPA":["","סוג של קולטן גלוטמט יונוטרופי, הנפוץ ביותר"],
+"ANOVA":["Analysis of Variance","ניתוח שונות, מבחן סטטיסטי להשוואת כמה ממוצעים"],
+"AP5":["","חומר שחוסם את אתר הגלוטמט בקולטן NMDA"],
+"AST":["Attention Switching Task","משימת מעבר קשב בין כללים"],
+"ATP":["Adenosine Triphosphate","אדנוזין טריפוספט, מולקולת האנרגיה של התא"],
+"AVG":["","ארגון שערך את הסקר על ילדים והטלפונים של הוריהם"],
+"BCTI":["Belief in Conspiracy Theories Inventory","שאלון האמונה בתיאוריות קונספירציה"],
+"BEIP":["Bucharest Early Intervention Project","מחקר ההתערבות המוקדמת בבוקרשט"],
+"BRAIN":["Brain Research through Advancing Innovative Neurotechnologies","מיזם חקר המוח האמריקני"],
+"CANTAB":["Cambridge Neuropsychological Test Automated Battery","סוללת מבחנים נוירופסיכולוגיים ממוחשבת"],
+"CASQ":["Cleveland Adolescent Sleepiness Questionnaire","שאלון ישנוניות כללית"],
+"CB1":["Cannabinoid receptor 1","קולטן קנבינואידים מסוג 1, במוח"],
+"CBT":["Cognitive Behavioral Therapy","טיפול קוגניטיבי־התנהגותי"],
+"CCT":["Computerized Cognitive Training","אימון קוגניטיבי ממוחשב"],
+"CES-D":["Center for Epidemiologic Studies Depression scale","שאלון לדיכאון"],
+"CFA":["Confirmatory Factor Analysis","ניתוח גורמים מאשש"],
+"ChAT":["Choline Acetyltransferase","האנזים שבונה אצטילכולין"],
+"ChR2":["Channelrhodopsin-2","תעלה רגישה לאור כחול שמעוררת נוירון"],
+"CNS":["Central Nervous System","מערכת העצבים המרכזית: המוח ומוח השדרה"],
+"CR":["Conditioned Response","תגובה מותנית"],
+"CS":["Conditioned Stimulus","גירוי מותנה"],
+"CSF":["Cerebrospinal Fluid","נוזל המוח והשדרה"],
+"CT":["Computed Tomography","טומוגרפיה ממוחשבת, צילום רנטגן בפרוסות"],
+"DBS":["Deep Brain Stimulation","גרייה מוחית עמוקה"],
+"DMS":["Delayed Matching to Sample","משימת התאמה לדוגמה אחרי השהיה (זיכרון חזותי)"],
+"DNA":["Deoxyribonucleic Acid","החומר התורשתי, שנמצא בכרומוזומים"],
+"DQ":["Developmental Quotient","מנת הרמה ההתפתחותית"],
+"DRD4":["Dopamine Receptor D4","גן של קולטן דופמין מסוג D4"],
+"DSM-5":["DSM, 5th edition","המהדורה החמישית של המדריך האמריקני לאבחון הפרעות נפשיות"],
+"DSM-IV":["DSM, 4th edition","המהדורה הרביעית של המדריך לאבחון הפרעות נפשיות"],
+"DSM-III":["DSM, 3rd edition","המהדורה השלישית של המדריך לאבחון הפרעות נפשיות"],
+"5-HT1A":["","קולטן סרוטונין מסוג 1A"],
+"5-HT3":["","קולטן סרוטונין מסוג 3, יונוטרופי"],
+"MAO-A":["Monoamine Oxidase A","מונואמין אוקסידאז מסוג A"],
+"MAO-B":["Monoamine Oxidase B","מונואמין אוקסידאז מסוג B"],
+"GPT-4":["Generative Pre-trained Transformer 4","מודל שפה של OpenAI"],
+"DSM":["Diagnostic and Statistical Manual of Mental Disorders","המדריך האמריקני לאבחון הפרעות נפשיות"],
+"DTI":["Diffusion Tensor Imaging","הדמיה של מסילות אקסונים לפי תנועת המים"],
+"EEG":["Electroencephalogram","רישום הפעילות החשמלית של המוח מהקרקפת"],
+"EPSP":["Excitatory Postsynaptic Potential","פוטנציאל פוסט־סינפטי מעורר"],
+"ERA":["English and Romanian Adoptees study","מחקר המאומצים מרומניה לאנגליה"],
+"ERP":["Event-Related Potential","פוטנציאל מעורר: תגובה חשמלית במוח לאירוע מסוים"],
+"FDG":["Fluorodeoxyglucose","גלוקוז רדיואקטיבי שמשמש בסריקת PET"],
+"FDR":["False Discovery Rate","תיקון סטטיסטי להשוואות מרובות"],
+"fMRI":["functional MRI","MRI תפקודי, מודד פעילות לפי רמת החמצן בדם"],
+"GABA":["Gamma-Aminobutyric Acid","גאבא, הנוירוטרנסמיטר המעכב העיקרי"],
+"GABAA":["","קולטן גאבא מסוג A, תעלת כלוריד"],
+"GAD":["Glutamic Acid Decarboxylase","האנזים שבונה גאבא מגלוטמט"],
+"GE":["General Electric","חברת ג'נרל אלקטריק"],
+"GLOBE":["Global Leadership and Organizational Behavior Effectiveness","מחקר בין־לאומי על מנהיגות ותרבות"],
+"GPS":["Global Positioning System","מערכת ניווט לווייני"],
+"HOME":["Home Observation for Measurement of the Environment","תצפית בבית למדידת הסביבה"],
+"IACUC":["Institutional Animal Care and Use Committee","ועדה מוסדית לפיקוח על מחקר בבעלי חיים"],
+"ICD":["International Classification of Diseases","הסיווג הבין־לאומי של מחלות"],
+"ICV":["Intracerebroventricular","מתן לתוך חדרי המוח"],
+"IM":["Intramuscular","הזרקה לתוך שריר"],
+"IP":["Intraperitoneal","הזרקה לחלל הבטן"],
+"IPSP":["Inhibitory Postsynaptic Potential","פוטנציאל פוסט־סינפטי מעכב"],
+"IQ":["Intelligence Quotient","מנת משכל"],
+"IRB":["Institutional Review Board","ועדת אתיקה מוסדית למחקר בבני אדם"],
+"IV":["Intravenous","הזרקה לווריד"],
+"LA":["Long-acting","שחרור ממושך"],
+"LLMs":["Large Language Models","מודלי שפה גדולים"],
+"LMX":["Leader-Member Exchange","תיאוריית חילופי מנהיג־עובד"],
+"LPC":["Least Preferred Coworker","שאלון העמית הפחות מועדף"],
+"LPD":["Letter Position Dyslexia","דיסלקסיית מיקום אותיות"],
+"MAO":["Monoamine Oxidase","מונואמין אוקסידאז, האנזים שמפרק מונואמינים"],
+"MBO":["Management by Objectives","ניהול לפי יעדים"],
+"MDMA":["","אקסטזי"],
+"MDS":["","סוללה ממוחשבת שנותנת מנות לקשב, זיכרון, זיכרון עבודה ותפקוד ניהולי"],
+"AQ":["Attention Quotient","מנת קשב"],
+"EFQ":["Executive Function Quotient","מנת התפקוד הניהולי"],
+"MEG":["Magnetoencephalography","מגנטו־אנצפלוגרפיה, מדידת השדות המגנטיים של המוח"],
+"MMQ":["Multifactorial Memory Questionnaire","שאלון זיכרון רב־גורמי"],
+"MMQ-C":["Multifactorial Memory Questionnaire - Contentment","שביעות רצון מהזיכרון"],
+"MMQ-S":["Multifactorial Memory Questionnaire - Strategy","שימוש באסטרטגיות זיכרון"],
+"MPTP":["","רעלן שהורס נוירונים דופמינרגיים"],
+"MQ":["Memory Quotient","מנת זיכרון כללית"],
+"MRI":["Magnetic Resonance Imaging","הדמיית תהודה מגנטית"],
+"mRNA":["messenger RNA","RNA שליח, העתק של גן שמשמש לבניית חלבון"],
+"NBAS":["Neonatal Behavioral Assessment Scale","סולם ברזלטון להערכת התנהגות יילודים"],
+"NCCP":["National Center for Children in Poverty","המרכז הלאומי לילדים בעוני"],
+"NE":["Norepinephrine","נוראפינפרין"],
+"NICHD":["National Institute of Child Health and Human Development","המכון הלאומי האמריקני לבריאות הילד"],
+"NMDA":["N-methyl-D-aspartate","סוג של קולטן גלוטמט שמעביר סידן"],
+"NpHR":["Halorhodopsin","נשא רגיש לאור צהוב שמעכב נוירון"],
+"OCD":["Obsessive-Compulsive Disorder","הפרעה טורדנית־כפייתית"],
+"OCPD":["Obsessive-Compulsive Personality Disorder","הפרעת אישיות טורדנית־כפייתית"],
+"OECD":["Organisation for Economic Co-operation and Development","הארגון לשיתוף פעולה ולפיתוח כלכלי"],
+"PAG":["Periaqueductal Gray","החומר האפור המרכזי"],
+"PBS":["Public Broadcasting Service","רשת השידור הציבורית האמריקנית"],
+"PCP":["Phencyclidine","פנציקלידין, ״אבק מלאכים״"],
+"PET":["Positron Emission Tomography","טומוגרפיה בפליטת פוזיטרונים"],
+"PHA-L":["Phaseolus vulgaris leucoagglutinin","חומר לסימון קדומני של אקסונים"],
+"PNS":["Peripheral Nervous System","מערכת העצבים ההיקפית"],
+"PSD":["Parental Screen Distraction","הסחת מסך הורית"],
+"RAVLT":["Rey Auditory Verbal Learning Test","מבחן הלמידה המילולית של ריי"],
+"REM":["Rapid Eye Movement","שנת חלומות, שבה העיניים זזות מהר"],
+"RNA":["Ribonucleic Acid","חומצה ריבונוקלאית"],
+"RQ1":["Research Question 1","שאלת המחקר הראשונה"],
+"RQ2":["Research Question 2","שאלת המחקר השנייה"],
+"RQ3":["Research Question 3","שאלת המחקר השלישית"],
+"RQ4":["Research Question 4","שאלת המחקר הרביעית"],
+"RVP":["Rapid Visual Information Processing","משימת קשב מתמשך"],
+"SAT":["Separation Anxiety Test","מבחן חרדת הפרידה"],
+"SC":["Subcutaneous","הזרקה מתחת לעור"],
+"SES":["Socioeconomic Status","מעמד סוציו־אקונומי"],
+"SfN":["Society for Neuroscience","העמותה למדע העצב"],
+"SLT":["Situational Leadership Theory","תיאוריית המנהיגות המצבית"],
+"SMC":["Subjective Memory Complaints","תלונות זיכרון סובייקטיביות"],
+"SQUID":["Superconducting Quantum Interference Device","גלאי רגיש במיוחד לשדות מגנטיים"],
+"SR":["Slow Release","שחרור איטי"],
+"SSP":["Spatial Span","משימת טווח זיכרון מרחבי"],
+"SSRI":["Selective Serotonin Reuptake Inhibitor","מעכב סלקטיבי של קליטה חוזרת של סרוטונין"],
+"SSS":["Stanford Sleepiness Scale","סולם הישנוניות של סטנפורד, ישנוניות ברגע"],
+"STAI-S":["State-Trait Anxiety Inventory - State","שאלון חרדת מצב"],
+"SVZ":["Subventricular Zone","האזור התת־חדרי"],
+"THC":["Tetrahydrocannabinol","החומר הפעיל בקנאביס"],
+"THCCOOH":["","תוצר הפירוק של THC שנמדד בבדיקה"],
+"TMN":["Tuberomammillary Nucleus","גרעין הפקעת הדדי"],
+"TMS":["Transcranial Magnetic Stimulation","גרייה מגנטית חוצת גולגולת"],
+"UCR":["Unconditioned Response","תגובה לא מותנית"],
+"UCS":["Unconditioned Stimulus","גירוי לא מותנה"],
+"VMH":["Ventromedial Hypothalamus","ההיפותלמוס הגחוני־מדיאלי"],
+"VRM":["Verbal Recognition Memory","זיכרון זיהוי מילולי"],
+"VTA":["Ventral Tegmental Area","אזור הטגמנטום הגחוני"],
+"VZ":["Ventricular Zone","האזור החדרי"],
+"WMQ":["Working Memory Quotient","מנת זיכרון העבודה"],
+"5-HT":["5-hydroxytryptamine","סרוטונין"],
+"2-DG":["2-deoxyglucose","גלוקוז מסומן שנקלט ולא מתפרק"],
+"L-DOPA":["","מולקולת־הקדם של דופמין"],
+"6-OHDA":["6-hydroxydopamine","רעלן שהורס נוירונים דופמינרגיים ונוראדרנרגיים"]
+};
+const ACR_RE=new RegExp("(?<![A-Za-z0-9])(?<![A-Za-z0-9]-)("+Object.keys(ACR).sort((a,b)=>b.length-a.length).map(k=>k.replace(/[-]/g,"\\-")).join("|")+")(?![A-Za-z0-9])(?!-[A-Za-z0-9])","g");
+const acrText=k=>{const [en,he]=ACR[k];return en?`${he}; <bdi dir="ltr">${en}</bdi>`:he};
+function acrExpand(html){
+  const plain=html.replace(/<[^>]+>/g," ");const seen=new Set();
+  for(const k of Object.keys(ACR)){const [en,he]=ACR[k];if((he&&plain.includes(he))||(en&&plain.toLowerCase().includes(en.toLowerCase())))seen.add(k)}
+  let inSvg=0;
+  return html.split(/(<svg[\s\S]*?<\/svg>|<[^>]+>)/).map(p=>{if(p.startsWith("<"))return p;
+    return p.replace(ACR_RE,(m,k,off,str)=>{if(seen.has(k))return m;seen.add(k);
+      const before=str.slice(0,off),inP=before.lastIndexOf("(")>before.lastIndexOf(")");
+      return inP?`<bdi class="ak">${m}</bdi>: ${acrText(k)}`:`<bdi class="ak">${m}</bdi> <span class="acr">(${acrText(k)})</span>`})}).join("");
+}
+function acrNote(...texts){const s=texts.join(" "),f=new Set();let m;ACR_RE.lastIndex=0;while((m=ACR_RE.exec(s)))f.add(m[1]);
+  return f.size?`<div class="acrnote"><b>ראשי תיבות:</b> ${[...f].map(k=>`<bdi class="ak">${k}</bdi> = ${acrText(k)}`).join(" · ")}</div>`:""}
+const T=[
+ {id:"t1",icon:"data",title:"מערכת המידע השיווקי",blocks:[
+  {h:"מערכת מידע שיווקי ורשומות פנימיות",html:`${def("על מה הנושא",`כדי לזהות שינויים בשוק, אנשי השיווק צריכים זרם קבוע של מידע. הנושא מסביר מאיפה המידע מגיע ואיך מארגנים אותו.<br><b>מה נלמד כאן:</b> מערכת מידע שיווקי · רשומות פנימיות · מסדי נתונים וכריית נתונים · ביג דאטה · מודיעין שיווקי`)}${ex("בלומדה נלווה את <b>מיכל</b>, מנהלת השיווק של ״טבעי״, חברה שמייצרת חטיפים בריאים ושוקלת להשיק סדרה חדשה.")}<p>לפי הספר, האחריות לזהות שינויים בשוק מוטלת בעיקר על אנשי השיווק. יש להם שני יתרונות: שיטות מסודרות לאיסוף מידע, והזמן שהם מבלים עם לקוחות ובמעקב אחר מתחרים.</p>${def("מושג מפתח",`<mark>מערכת מידע שיווקי</mark> ${E("Marketing information system, MIS")}: אנשים, ציוד והליכים לאיסוף, מיון, ניתוח, הערכה והפצה של מידע נחוץ, מדויק ובזמן למקבלי ההחלטות. היא נשענת על <b>שלושה מקורות</b>: רשומות פנימיות, מודיעין שיווקי ומחקר שיווקי.`)}<p><b>רשומות פנימיות</b>: דוחות על הזמנות, מכירות, מחירים, עלויות, מלאי, תקבולים ותשלומים. הליבה שלהן היא <b>מחזור הזמנה־עד־תשלום</b> ${E("Order-to-payment cycle")}: הזמנה, חשבונית, חידוש מלאי, משלוח ודרישת תשלום. לקוחות מעדיפים מי שמספק בזמן, ולכן צריך לבצע את השלבים מהר ובדיוק.</p>${rem("״וולמרט״ שומרת נתונים על כל פריט, לכל לקוח, לכל חנות ולכל יום, ומעדכנת כל שעה. ועדיין, הספר מזהיר: צריך לפרש נתוני מכירות בזהירות כדי לא להגיע למסקנות שגויות.")}`,q:"e1"},
+  {h:"מסדי נתונים, כריית נתונים וביג דאטה",html:`${tiles([["data","מסד נתוני לקוחות","Customer database: אוסף מסודר ומעודכן של מידע על לקוחות","מידע מקיף על לקוחות קיימים או פוטנציאליים, שנגיש בכל עת. משמש לאיתור לקוחות, למכירות ולניהול יחסי לקוחות. <b>שיווק במסדי נתונים</b> הוא הקמה, תחזוקה וניצול של מסדי נתונים כדי ליצור קשר, לבצע עסקאות ולבנות יחסים.","מיכל שומרת את פרטי הלקוחות שנרשמו למועדון של ״טבעי״ ואת מה שהם קונים."],["building","מחסן נתונים","Data warehouse: המקום שבו מאורגן כל המידע של העסק","אנשי השיווק מחפשים בו ומנתחים אותו, כדי להעלות השערות על הצרכים של לקוחות יחידים ועל התגובות שלהם.",""],["gear","כריית נתונים","Data mining: שיטות לחילוץ תובנות מתוך הרבה נתונים","אנליסטים מחלצים מהנתונים תובנות על התנהגות לקוחות, מגמות ופלחי שוק.","הניתוח מגלה שמי שקונה חטיף חלבון קונה גם בקבוק מים."]])}${def("מושג מפתח",`<mark>ביג דאטה</mark> ${E("Big data")}: מערכי נתונים שאי אפשר לנהל ביעילות בכלים המסורתיים. יותר נתונים הם לא בהכרח נתונים טובים יותר, אלא אם מעבדים ומפרשים אותם נכון. ארבעה מאפיינים (לפי קובילוס): <b>נפח</b>, <b>מהירות</b> (עד זמן אמת), <b>מגוון</b> (מובנה, לא מובנה ומובנה למחצה) ו<b>נפיצות</b> (הרבה מקורות חדשים).`)}<p>דוגמאות מהספר: ״טסקו״ קובעת מחירים ומבצעים לפי הנתונים שהיא אוספת, ומנוע ההמלצות של ״אמזון״ מניב כ־30% מהמכירות.</p><p><b>סימון שוקי מטרה לפי התנהגות</b> ${E("Behavioral targeting")}: מעקב אחרי התנהגות מקוונת כדי לשווק בצורה מדויקת יותר. יש צרכנים שמתנגדים לזה, ויש לקוחות שלא רוצים שהנתונים שלהם יישמרו בכלל.</p>`,q:"e2"},
+  {h:"מודיעין שיווקי",html:`${def("מושג מפתח",`<mark>מערכת מודיעין שיווקי</mark> ${E("Marketing intelligence system")}: הליכים ומקורות שמנהלים משתמשים בהם כדי לקבל מידע יומיומי על מה שקורה בסביבה השיווקית.`)}<div class="tw"><table><tr><th></th><th>רשומות פנימיות</th><th>מודיעין שיווקי</th></tr><tr><td><b>מה הן נותנות</b></td><td>נתוני <b>תוצאות</b></td><td>נתונים <b>שוטפים</b> על מה שקורה עכשיו</td></tr><tr><td><b>מאיפה</b></td><td>הזמנות, מכירות, מלאי</td><td>ספרים, עיתונים, שיחות עם לקוחות וספקים, רשתות חברתיות</td></tr></table></div><p><b>שמונה דרכים לשפר את המודיעין</b> (טבלה 3.1):</p><ol><li>להכשיר את צוות המכירות לזהות ולדווח על התפתחויות.</li><li>לגרום למפיצים ולקמעונאים להעביר מידע (הם קרובים יותר ללקוח).</li><li>לשכור מומחים חיצוניים, למשל <b>״קונים מדומים״</b> שחושפים בעיות בשירות.</li><li>רישות פנימי וחיצוני: לקנות מוצרים של מתחרים, ללכת לתערוכות, לקרוא את הדוחות שלהם.</li><li>להקים <b>מועצה מייעצת של לקוחות</b>.</li><li>להשתמש במקורות ממשלתיים, כמו מפקד האוכלוסין.</li><li>לקנות מידע מחברות מחקר (נילסן, NPD).</li><li>לאסוף מודיעין באינטרנט: פורומים, אתרי תלונות, בלוגים ורשתות חברתיות.</li></ol>${ex("מיכל שולחת עובדת לקנות את החטיף החדש של המתחרה ולצלם את התצוגה שלו בסופר. זה רישות חיצוני.")}${rem("<b>עוגיות</b> (Cookies) הן רשומות שמאוחסנות בדפדפן. לפי הספר, צרכנים רבים לא מוחקים אותן, ואף מצפים לפניות ולמבצעים מותאמים אישית.")}`,q:"e3"}
+ ]},
+ {id:"t2",icon:"flask",title:"המחקר השיווקי ותהליך המחקר",blocks:[
+  {h:"מהו מחקר שיווקי",html:`${def("על מה הנושא",`לפעמים לא מספיק המידע השוטף, וצריך מחקר מסודר על שאלה ספציפית. הנושא מגדיר מחקר שיווקי ומציג את ששת השלבים שלו.<br><b>מה נלמד כאן:</b> תובנות שיווקיות · הגדרת המחקר · סוגי מכוני מחקר · ששת השלבים · מחקר גישוש, תיאורי וסיבתי`)}<p>מנהלים מזמינים מחקרים על בעיות ספציפיות: סקר שוק, מבחן העדפת מוצר, תחזית מכירות לפי אזור, או הערכת יעילות הפרסום. התפקיד של החוקר הוא להפיק <b>תובנות</b> שיעזרו למנהל להחליט.</p>${def("מושג מפתח",`<mark>תובנות שיווקיות</mark> ${E("Marketing insights")}: מידע על איך ולמה מתרחשות השפעות מסוימות בשוק, ומה המשמעות שלהן למשווקים. לפי הספר, להשגת תובנות יש חשיבות מכרעת להצלחה.`)}${ex("״פרוקטר אנד גמבל״ חקרה את הרגשות של נשים לגבי שיער, גם בסקרים וגם במדידת גלי מוח (EEG). בעקבות זה שינתה את הנוסחאות ואת האריזות של ״פנטן״, צמצמה את קו המוצר ושיפרה את הפרסום.")}${def("מושג מפתח",`<mark>מחקר שיווקי</mark> ${E("Marketing research")}, לפי איגוד השיווק האמריקני: פונקציה שמקשרת את הצרכן, הלקוח והציבור למשווק דרך מידע. המידע משמש לזיהוי הזדמנויות ובעיות, לתכנון ולהערכה של פעולות שיווקיות, לניטור ביצועים ולשיפור ההבנה של השיווק.`)}<p>מקובל להקצות למחקר <b>1%–2% מהמכירות</b>, ורוב הכסף הולך למכוני מחקר חיצוניים. יש <b>שלושה סוגים</b>:</p><div class="tw"><table><tr><th>סוג</th><th>מה עושה</th></tr><tr><td><b>שירותי מחקר מאוגדים</b></td><td>אוספים מידע צרכני ומסחרי ומוכרים אותו (נילסן)</td></tr><tr><td><b>מחקרי שוק ייעודיים</b></td><td>מתכננים ועורכים מחקר לפי הזמנה ומדווחים למזמין</td></tr><tr><td><b>מומחיות מקצועית</b></td><td>שירותים ספציפיים, כמו ראיונות שטח</td></tr></table></div>`,q:"e4"},
+  {h:"ששת השלבים, ושלב 1: הגדרת הבעיה",html:`<p>משווקים טובים עובדים לפי תהליך פורמלי של <b>שישה שלבים</b> (איור 3.1):</p><ol><li>הגדרת הבעיה, החלופות ויעדי המחקר</li><li>פיתוח תוכנית המחקר</li><li>איסוף המידע</li><li>ניתוח המידע</li><li>הצגת הממצאים</li><li>קבלת ההחלטה</li></ol>${ex("הדוגמה בספר: ״אמריקן איירליינס״ שוקלת לתת לנוסעי המחלקה הראשונה Wi-Fi מהיר בטיסה, ורוצה לדעת כמה ישתמשו בו ובכמה כסף.")}<p><b>שלב 1</b>: הבעיה לא צריכה להיות מוגדרת רחב מדי וגם לא צר מדי. בדוגמה, הבעיה היא אם ה־Wi-Fi ייצור העדפה ורווחים שיצדיקו את העלות, בהשוואה לשיפורים אחרים. מזה נגזרים חמישה יעדי מחקר, למשל: אילו נוסעים ייענו, כמה ישתמשו בכל מחיר, וכמה יבחרו בחברה בזכותו.</p><p>לא כל מחקר יכול להיות ספציפי כל כך. יש שלושה סוגים:</p>${tiles([["question","מחקר גישוש","Exploratory: לזהות את הבעיה ולהציע פתרונות","כשעוד לא ברור מה בדיוק הבעיה.","מיכל רוצה להבין למה המכירות ירדו, ועוד לא יודעת מה לבדוק."],["chart","מחקר תיאורי","Descriptive: לכמת את הביקוש","למשל: כמה נוסעים יקנו Wi-Fi תמורת 25 דולר.","כמה לקוחות יקנו חטיף חדש במחיר 8 ש״ח."],["link","מחקר סיבתי","Causal: לבחון קשר בין סיבה לתוצאה","האם שינוי מסוים גורם לתוצאה מסוימת.","האם האריזה החדשה גרמה לעלייה במכירות."]])}`,q:"e5"}
+ ]},
+ {id:"t3",icon:"doc",title:"שלב 2: תוכנית המחקר",blocks:[
+  {h:"מקורות נתונים וגישות מחקריות",html:`${def("על מה הנושא",`שלב 2 הוא הלב של המחקר: מחליטים מאיפה יבוא המידע ואיך יאספו אותו.<br><b>מה נלמד כאן:</b> נתונים משניים וראשוניים · חמש גישות מחקריות · שלושה כלי מחקר · תוכנית דגימה · ארבע שיטות התקשרות`)}<p>בתוכנית המחקר מחליטים על <b>חמישה דברים</b>: מקורות נתונים, גישות מחקריות, כלי מחקר, תוכנית דגימה ושיטות התקשרות.</p><div class="tw"><table><tr><th></th><th>נתונים משניים</th><th>נתונים ראשוניים</th></tr><tr><td><b>מה הם</b></td><td>נאספו כבר בעבר <b>למטרה אחרת</b></td><td>נאספים עכשיו <b>למטרה הספציפית</b></td></tr><tr><td><b>מתי</b></td><td>מתחילים בהם</td><td>כשהמשניים חסרים, מיושנים, לא מדויקים או לא מהימנים</td></tr></table></div><p><b>חמש גישות</b> לאיסוף נתונים ראשוניים:</p>${tiles([["id","מחקר תצפיתי","Observational: צופים בלקוחות מהצד","צופים בלקוחות כשהם משתמשים במוצר, או מראיינים אותם באופן לא פורמלי. <b>מחקר אתנוגרפי</b> משתמש בכלים מהאנתרופולוגיה כדי להבין לעומק את דרך החיים של אנשים.","חוקרי ״אמריקן״ יושבים בטרקלין ומקשיבים איך הנוסעים מדברים."],["people","קבוצת מיקוד","Focus group: 6 עד 10 אנשים בדיון מונחה","נבחרים לפי שיקולים דמוגרפיים או פסיכוגרפיים, ודנים בהרחבה בהנחיית מנחה מקצועי, תמורת תשלום צנוע. המנחה מתחיל בשאלה רחבה ומתקדם לספציפית.","שמונה הורים טועמים את החטיפים של ״טבעי״ ומדברים על מה שחשוב להם."],["check","מחקר סקר","Survey: ידע, אמונות, העדפות ושביעות רצון","מאפשר להעריך גם כמה זה נפוץ באוכלוסייה. אפשר להוסיף שאלות ל<b>סקר כללי</b> (Omnibus) של כמה עסקים, בעלות נמוכה הרבה יותר, או לשאול <b>פאנל</b> קבוע.","שאלון על הקבלה בקופה, עם הגרלה של פרס."],["cart","נתוני התנהגות","Behavioral data: העקבות שהלקוחות משאירים","נתוני סורקים בחנויות, רכישות ומסדי נתונים. הרכישות בפועל לרוב <b>מהימנות יותר</b> ממה שהצרכנים אומרים לחוקרים.","ניתוח רשומות קניית הכרטיסים."],["flask","מחקר ניסויי","Experimental: הגישה עם התוקף המדעי הגבוה ביותר","מטרתו לזהות קשר של סיבה ותוצאה, על ידי שלילת הסברים מתחרים.","Wi-Fi ב־25 דולר בשבוע אחד וב־15 בשבוע אחר. אם הכול דומה, ההבדל בשימוש נובע מהמחיר."]])}`,q:"e6"},
+  {h:"כלי המחקר",html:`<p>יש <b>שלושה כלים</b> עיקריים לאיסוף נתונים ראשוניים:</p>${tiles([["doc","שאלון","Questionnaire: מערך שאלות. הכלי הנפוץ ביותר","נפוץ בזכות הגמישות. הצורה, הניסוח והסדר משפיעים על התשובות, ולכן צריך לבדוק ולתקן אותו לפני שמשתמשים. <b>שאלות סגורות</b> מפרטות את כל התשובות, וקל לפרש אותן. <b>שאלות פתוחות</b> מאפשרות לענות במילים שלך, ומועילות במיוחד במחקר גישוש.","״מה הכי חשוב לך בחטיף?״ היא שאלה פתוחה. ״דרג מ־1 עד 5״ היא סגורה."],["bulb","טכניקות מחקר איכותני","Qualitative: מדידה עקיפה ופחות מובנית","יש משווקים שמעדיפים אותן, כי מה שאנשים עושים לא תמיד מתאים למה שהם עונים בסקר. המגבלה היחידה היא היצירתיות של החוקר. המשיבים נזהרים פחות ומגלים יותר על עצמם.",""],["brain","התקנים טכנולוגיים","Technological devices: מדידת תגובות בגוף","<b>גלוונומטר</b> מודד עניין או ריגוש מפרסומת. <b>טכיטוסקופ</b> מציג מודעה בהבזקים קצרים, ואחר כך הנבדק מספר מה זכר. יש גם מעקב אחרי העיניים והפנים, חיישני עור וסורקי גלי מוח.","צמיד שמודד הזעה בזמן שהנבדק צופה בפרסומת."]])}${rem("כדאי לזכור את ההבדל: <b>גישה מחקרית</b> היא <i>איך</i> אוספים (תצפית, סקר, ניסוי...). <b>כלי מחקר</b> הוא <i>במה</i> אוספים (שאלון, התקן...).")}`,q:"e7"},
+  {h:"תוכנית הדגימה ושיטות ההתקשרות",html:`<p>תוכנית דגימה דורשת <b>שלוש החלטות</b>:</p><ol><li><b>יחידת הדגימה</b>: את מי לכלול? למשל, רק נוסעי עסקים, או גם נוסעי נופש? אחר כך בונים <b>מסגרת דגימה</b>, כך שלכל אחד באוכלוסייה יש סיכוי שווה או ידוע להידגם.</li><li><b>גודל המדגם</b>: כמה אנשים? מדגם גדול מהימן יותר, אבל לא צריך לדגום את כולם. פחות מאחוז אחד מהאוכלוסייה יכול להספיק, בתהליך דגימה אמין.</li><li><b>הליך הדגימה</b>: איך בוחרים? <b>מדגם הסתברותי</b> מאפשר לחשב את מרווח הביטחון, ומייצג יותר.</li></ol><p><b>ארבע שיטות התקשרות</b> (טבלה 3.2):</p><div class="tw"><table><tr><th>שיטה</th><th>יתרון</th><th>חיסרון</th></tr><tr><td><b>דואר</b></td><td>מגיע למי שלא יתראיין, בלי הטיה של מראיין</td><td>שיעור תגובה נמוך או איטי</td></tr><tr><td><b>טלפון</b></td><td>מהיר, אפשר להבהיר שאלות, תגובה גבוהה מדואר</td><td>ראיון קצר ולא אישי מדי, עוינות כלפי משווקים בטלפון</td></tr><tr><td><b>מפגש אישי</b></td><td>הכי משוכלל: יותר שאלות, ותצפית בלבוש ובשפת גוף</td><td>הכי יקר, חשוף להטיית מראיין, דורש תכנון ופיקוח</td></tr><tr><td><b>מקוון</b></td><td>זול, מהיר, תשובות כנות ושקולות</td><td>מדגם מוטה וקטן, תקלות טכניות, תחלופה בפאנלים</td></tr></table></div>${ex("מיכל צריכה תשובות תוך יומיים, ובתקציב קטן. השיטה שהכי מתאימה לה היא סקר מקוון, אבל היא צריכה לזכור שהמדגם עלול להיות מוטה.")}`,q:"e8"}
+ ]},
+ {id:"t4",icon:"chart",title:"שלבים 3–6: מהנתונים להחלטה",blocks:[
+  {h:"איסוף, ניתוח, הצגה והחלטה",html:`${def("על מה הנושא",`אחרי התכנון אוספים את הנתונים, מנתחים אותם ומציגים אותם למנהלים, שמחליטים.<br><b>מה נלמד כאן:</b> הבעיות באיסוף · כלי הניתוח · חישוב לדוגמה · מי מחליט`)}${tiles([["people","שלב 3: איסוף הנתונים","בדרך כלל השלב היקר ביותר, והחשוף ביותר לטעויות","יש משיבים שלא בבית או לא זמינים, וצריך לחזור אליהם או להחליף אותם. יש מי שמסרבים, או עונים בכוונה תשובות מוטות או שקריות.",""],["pie","שלב 4: ניתוח המידע","מכמתים, מצליבים בטבלאות ומחשבים מדדים מסכמים","ממוצעים ומדדי פיזור, טכניקות סטטיסטיות ומודלים. בוחנים השערות, ועושים <b>ניתוח רגישות</b> כדי לבדוק את ההנחות ואת חוזק המסקנות.",""],["chart","שלב 5: הצגת הממצאים","החוקר מתרגם את הנתונים לתובנות ולהמלצות","היום מצפים מהחוקרים לתפקיד פעיל ומייעץ, ולהציג את הנתונים בצורה מובנת ומשכנעת.",""]])}<p><b>החישוב מהדוגמה</b>: ב־25 דולר ישתמשו כ־5 מכל 10 נוסעים, וב־15 דולר כ־6.</p><div class="tw"><table><tr><th>מחיר</th><th>משתמשים</th><th>הכנסה בטיסה</th></tr><tr><td>25 דולר</td><td>5</td><td><b>125 דולר</b></td></tr><tr><td>15 דולר</td><td>6</td><td>90 דולר</td></tr></table></div><p>כלומר, המחיר הגבוה מכניס יותר. 125 × 365 ימים = <b>45,625 דולר בשנה</b>. ההשקעה היא 90,000 דולר למטוס, ולכן ההחזר לוקח <b>שנתיים</b>. השירות גם יחזק את התדמית החדשנית של החברה.</p>${def("שלב 6: קבלת ההחלטה",`המנהלים שהזמינו את המחקר שוקלים את הנתונים. הם יכולים לוותר, להשיק בכל זאת (והממצאים אולי יתמכו בזה), או להזמין מחקר נוסף. <b>המחקר נותן תובנה, וההחלטה היא של המנהלים.</b>`)}`,q:"e9"}
+ ]},
+ {id:"t5",icon:"target",title:"מדידת ביקוש בשוק",blocks:[
+  {h:"חמש רמות של שוק",html:`${def("על מה הנושא",`אחרי שמזהים הזדמנות, צריך להעריך כמה גדולה היא. תחזית המכירות משמשת את כל החברה: כספים, ייצור, רכש ומשאבי אנוש. תחזית שגויה תגרום לעודף או לחוסר במלאי.<br><b>מה נלמד כאן:</b> סוגי שוק · פונקציית ביקוש שוק · מינימום ופוטנציאל · ביקוש ראשוני ובררני · תחזית, מכסה ותקציב מכירות`)}<p>הספר מפרק את השוק לרמות, מהרחבה לצרה:</p><div class="tw"><table><tr><th>שוק</th><th>מי בו</th></tr><tr><td><b>פוטנציאלי</b></td><td>צרכנים שמביעים <b>עניין</b> מספיק בהצעה</td></tr><tr><td><b>זמין</b></td><td>יש להם עניין, <b>הכנסה וגישה</b> להצעה</td></tr><tr><td><b>זמין כשיר</b></td><td>יש להם גם את <b>הכישורים</b> המתאימים (למשל, מעל גיל 21 לאופנוע)</td></tr><tr><td><b>מטרה</b></td><td>החלק בשוק הזמין הכשיר שהעסק <b>בוחר להתמקד</b> בו</td></tr><tr><td><b>חדירה</b></td><td>הצרכנים ש<b>כבר קונים</b> את המוצר</td></tr></table></div>${rem("עניין לבד לא מספיק כדי להגדיר שוק. צריך גם הכנסה וגישה.")}<p>אם המכירות לא מספיקות, העסק יכול: למשוך יותר קונים משוק המטרה; להוריד את דרישות הכישורים; להרחיב את השוק הזמין (ערוצי הפצה חדשים או מחיר נמוך יותר); או למצב את עצמו מחדש.</p>${ex("״טבעי״ מתחילה למכור גם בתחנות דלק, ולא רק בסופרים. כך היא מגדילה את השוק הזמין.")}`,q:"e10"},
+  {h:"פונקציית ביקוש השוק",html:`${def("מושג מפתח",`<mark>ביקוש שוק</mark> ${E("Market demand")}: הכמות הכוללת שתקנה קבוצת לקוחות מוגדרת, באזור מוגדר, בתקופה מוגדרת, בסביבה שיווקית מוגדרת ובתוכנית שיווקית מוגדרת. זה לא מספר קבוע, אלא <b>פונקציה</b> של התנאים האלה, ולכן נקרא <b>פונקציית ביקוש שוק</b>.`)}<p>באיור 3.2 (א), הציר האופקי הוא ההוצאה של כל הענף על שיווק, והאנכי הוא הביקוש:</p><ul><li><b>מינימום שוק</b> (Q1): מכירות שיהיו גם בלי שום הוצאה על שיווק.</li><li>בהתחלה הביקוש עולה בקצב גובר, ואחר כך בקצב יורד.</li><li><b>פוטנציאל שוק</b> (Q2): הגבול העליון. מעבר לרמה מסוימת, עוד הוצאה כמעט לא מוסיפה ביקוש.</li></ul>${tiles([["sprout","שוק שאפשר להרחיב","Expansible: המרחק בין Q1 ל־Q2 גדול","הגודל הכולל מושפע מאוד מהוצאת הענף על שיווק.",""],["lock","שוק שאי אפשר להרחיב","Nonexpansible: המרחק בין Q1 ל־Q2 קטן","השוק כמעט לא מגיב לשיווק. העסק חייב לקבל את גודל השוק, כלומר את <b>הביקוש הראשוני</b> לקטגוריה, ולהתמקד בהגדלת <b>נתח השוק</b> שלו, כלומר <b>ביקוש בררני</b> למוצר שלו.","אם פרסום לא גורם לאנשים לאכול יותר חטיפים, ״טבעי״ תתמקד בלקיחת נתח מהמתחרים."]])}${rem("פונקציית הביקוש היא <b>לא</b> תמונה של הביקוש לאורך זמן. היא מראה מה יהיה הביקוש בכל רמת הוצאה אפשרית. בפועל יש רק רמת הוצאה אחת, והביקוש שמתאים לה נקרא <b>תחזית שוק</b>: הביקוש <b>הצפוי</b>, לא המרבי.")}<p><b>פוטנציאל השוק</b> תלוי בסביבה. למשל, פוטנציאל השוק למכוניות גבוה יותר בתקופת גאות מאשר בשפל (איור 3.2 ב). עסקים לא קובעים את צורת העקומה, אבל הם בוחרים את המקום שלהם עליה, כשהם מחליטים כמה להוציא על שיווק.</p>`,q:"e11"},
+  {h:"ביקוש החברה ותחזית המכירות",html:`<p>עד עכשיו דיברנו על כל השוק. עכשיו עוברים לעסק עצמו. <b>ביקוש חברה</b> הוא הנתח של העסק מתוך ביקוש השוק, בכל רמה של מאמץ שיווקי. הוא תלוי באיך המוצרים, המחירים והמסרים של העסק נתפסים לעומת המתחרים. בוני מודלים פיתחו <b>פונקציות תגובת מכירות</b> כדי למדוד את זה.</p><div class="tw"><table><tr><th>מושג</th><th>מה זה</th><th>ביחס לתחזית</th></tr><tr><td><b>תחזית המכירות לחברה</b></td><td>המכירות הצפויות לפי תוכנית השיווק שנבחרה והסביבה הנתונה</td><td>נקודת הייחוס</td></tr><tr><td><b>מכסת מכירות</b></td><td>יעד לקו מוצר, חטיבה או נציג. כלי להנעת אנשי המכירות</td><td><b>מעט גבוהה</b> יותר</td></tr><tr><td><b>תקציב מכירות</b></td><td>אומדן שמרני, להחלטות על רכש, ייצור ותזרים מזומנים</td><td>בדרך כלל <b>נמוך</b> יותר</td></tr><tr><td><b>פוטנציאל מכירות החברה</b></td><td>הגבול שאליו מגיע ביקוש החברה כשהמאמץ השיווקי שלה גדל ביחס למתחרים</td><td>הגבול העליון של העסק</td></tr></table></div><p>פוטנציאל המכירות של החברה היה שווה לפוטנציאל השוק רק אם העסק היה יכול לקבל 100% מהשוק. ברוב המקרים הוא <b>נמוך</b> יותר, כי לכל מתחרה יש קונים נאמנים.</p>${ex("מיכל צופה למכור 100,000 חטיפים. היא קובעת לאנשי המכירות מכסה של 110,000, ובונה את תקציב הייצור על 90,000.")}`,q:"e12"}
+ ]},
+ {id:"t6",icon:"pie",title:"הערכת הביקוש הנוכחי",blocks:[
+  {h:"פוטנציאל כולל, פוטנציאל לפי אזור ונתח שוק",html:`${def("על מה הנושא",`איך מחשבים בפועל כמה גדול השוק היום, באיזה אזור כדאי להשקיע, ואיך העסק עומד ביחס לענף.<br><b>מה נלמד כאן:</b> נוסחת הפוטנציאל הכולל · שיטת שוק מצטבר · מדד רב־גורמי · מכירות ענפיות ונתח שוק`)}${def("מושג מפתח",`<mark>פוטנציאל כולל של שוק</mark> ${E("Total market potential")}: המכירות המרביות שזמינות לכל העסקים בענף, בתקופה נתונה, ברמת מאמץ נתונה ובתנאים נתונים.`)}<p><b>הנוסחה</b>: מספר הקונים × הכמות הממוצעת לקונה × המחיר. בדוגמה: 100 מיליון קוני ספרים × 3 ספרים × 20 דולר = <b>6 מיליארד דולר</b>.</p>${rem("החלק הקשה ביותר להערכה הוא <b>מספר הקונים</b>. מתחילים מכל האוכלוסייה, מורידים קבוצות שברור שלא יקנו, ועורכים מחקר כדי להוריד את מי שאין לו עניין או הכנסה.")}<p><b>פוטנציאל לפי אזורים</b>: כדי לחלק את תקציב השיווק בין האזורים, יש שתי שיטות:</p>${tiles([["building","שיטת שוק מצטבר","Market-buildup: בעיקר במשווקים עסקיים","מזהים את כל הקונים הפוטנציאליים בכל שוק ומעריכים כמה כל אחד יקנה. מדויקת, אבל רק אם יש רשימה של כולם, ולא תמיד קל להשיג אותה. בארה״ב נעזרים בסיווג הענפי <b>NAICS</b> (20 ענפים, קוד בן שש ספרות): יצרן מחרטות מאתר את הענפים שצריכים מחרטות.",""],["scales","מדד רב־גורמי","Multiple-factor index: בעיקר במשווקים לצרכנים","יש יותר מדי לקוחות לרשימה, ולכן משתמשים במדד. גורם אחד (כמו גודל האוכלוסייה) לרוב לא מספיק, אז נותנים משקל לכמה גורמים.","וירג׳יניה: 0.5 × 2.00 (הכנסה פנויה) + 0.3 × 1.96 (מכירות קמעונאיות) + 0.2 × 2.28 (אוכלוסייה) = <b>2.04</b>, מדד כוח הקנייה שלה."]])}<p><b>מכירות ענפיות ונתח שוק</b>: העסק צריך לדעת גם כמה נמכר בפועל בענף. איגוד התעשיינים מפרסם את סך המכירות בענף, בדרך כלל בלי פירוט לכל עסק. אפשר גם לקנות דוחות ממכוני מחקר שעוקבים אחרי מכירות לפי מותג.</p>${ex("המכירות של ״טבעי״ גדלו ב־5% בשנה, אבל הענף גדל ב־10%. כלומר, למרות הצמיחה, ״טבעי״ מאבדת מעמד יחסי בענף.")}`,q:"e13"}
+ ]},
+ {id:"tx",icon:"grad",title:"תרגול בסגנון המבחן",blocks:[
+  {h:"שאלות מסכמות",html:`${def("על מה הנושא",`שאלות שמחברות בין חלקי הפרק: מקורות מידע, שלבי המחקר ומדידת ביקוש.`)}${rem("טיפ: בשאלות על סוגי שוק, עברו מהרחב לצר: עניין ← הכנסה וגישה ← כישורים ← בחירת העסק ← כבר קונים.")}`,q:"ex"}
+ ]}
+];
+const Q={"e1": {"t": "t1", "v": [{"q": "על אילו שלושה מקורות נשענת מערכת המידע השיווקי?", "a": "רשומות, מודיעין ומחקר שיווקי", "w": ["פרסום, קידום מכירות ויחסי הציבור", "מוצר, מחיר, הפצה וקידום מכירות", "ספקים, מפיצים ולקוחות קבועים"], "e": "ה־MIS נשען על רשומות פנימיות, פעילויות מודיעין שיווקי ומחקר שיווקי."}, {"q": "מהו הליבה של מערכת הרשומות הפנימיות?", "a": "מחזור הזמנה־עד־תשלום", "w": ["מחזור חיי המוצר", "תהליך המחקר השיווקי", "מערכת המודיעין השיווקי"], "e": "הזמנה, חשבונית, חידוש מלאי, משלוח ודרישת תשלום."}]}, "e2": {"t": "t1", "v": [{"q": "אנליסט מחלץ מהנתונים תובנה: מי שקונה חטיף חלבון קונה גם מים. איך נקרא התהליך?", "a": "כריית נתונים", "w": ["מחקר אתנוגרפי", "קבוצת מיקוד", "מודיעין שיווקי"], "e": "כריית נתונים היא חילוץ תובנות על התנהגות, מגמות ופלחים מתוך הרבה נתונים."}, {"q": "איזה מהבאים אינו אחד המאפיינים של ביג דאטה לפי הספר?", "a": "דיוק", "w": ["נפח", "מהירות", "מגוון"], "e": "ארבעת המאפיינים לפי קובילוס: נפח, מהירות, מגוון ונפיצות."}]}, "e3": {"t": "t1", "v": [{"q": "מה ההבדל בין רשומות פנימיות למודיעין שיווקי?", "a": "רשומות: תוצאות; מודיעין: מה שקורה", "w": ["הרשומות: מתחרים; המודיעין: לקוחות", "הרשומות חיצוניות; המודיעין רק פנימי", "אין הבדל, אלה שני שמות לאותה מערכת"], "e": "הרשומות הפנימיות נותנות נתוני תוצאות, והמודיעין נותן נתונים שוטפים על המתרחש בסביבה."}, {"q": "חברה שולחת ״קונים מדומים״ לחנויות שלה. איזו דרך לשיפור המודיעין זו?", "a": "שכירת מומחים חיצוניים", "w": ["הקמת מועצה מייעצת", "ניצול מקורות ממשלתיים", "רכישה מחברות מחקר"], "e": "בטבלה 3.1, קונים מדומים הם דוגמה לשכירת מומחים חיצוניים, כדי לחשוף בעיות באיכות ובשירות."}]}, "e4": {"t": "t2", "v": [{"q": "חברה קונה מנילסן מידע צרכני שנאסף לכמה לקוחות. מאיזה סוג מכון מחקר היא קונה?", "a": "שירותי מחקר מאוגדים", "w": ["מחקרי שוק ייעודיים", "מומחיות מקצועית", "מועצה מייעצת"], "e": "חברות שירותי מחקר מאוגדים אוספות מידע ומוכרות אותו לפי תעריף."}, {"q": "לפי הספר, כמה נהוג לתקצב למחקר שיווקי?", "a": "אחוז עד שניים מהמכירות", "w": ["עשרה אחוזים מכל הרווחים", "חצי מתקציב הפרסום השנתי", "שלושים אחוז מהמכירות"], "e": "נהוג לתקצב 1%–2% מהמכירות, ורוב התקציב הולך למכוני מחקר חיצוניים."}]}, "e5": {"t": "t2", "v": [{"q": "מה השלב השני בתהליך המחקר השיווקי?", "a": "תוכנית המחקר", "w": ["איסוף המידע", "הגדרת הבעיה", "ניתוח הנתונים"], "e": "השלבים: הגדרת הבעיה, תוכנית המחקר, איסוף, ניתוח, הצגה והחלטה."}, {"q": "מנהלת רוצה לדעת כמה לקוחות יקנו חטיף חדש ב־8 ש״ח. איזה סוג מחקר זה?", "a": "מחקר תיאורי", "w": ["מחקר גישוש", "מחקר סיבתי", "מחקר אתנוגרפי"], "e": "מחקר תיאורי מכמת את הביקוש. גישוש מזהה בעיה, סיבתי בוחן סיבה ותוצאה."}]}, "e6": {"t": "t3", "v": [{"q": "חוקר משתמש בנתונים שנאספו בעבר למטרה אחרת. אילו נתונים אלה?", "a": "נתונים משניים", "w": ["נתונים ראשוניים", "נתוני התנהגות", "נתוני ניסוי"], "e": "נתונים משניים כבר נאספו למטרה אחרת. ראשוניים נאספים עכשיו למטרה הספציפית."}, {"q": "איזו גישה מחקרית בעלת התוקף המדעי הגבוה ביותר?", "a": "מחקר ניסויי", "w": ["מחקר סקר", "קבוצת מיקוד", "מחקר תצפיתי"], "e": "מחקר ניסויי מזהה קשרי סיבה ותוצאה על ידי שלילת הסברים מתחרים."}]}, "e7": {"t": "t3", "v": [{"q": "מהו הכלי הנפוץ ביותר לאיסוף נתונים ראשוניים, ולמה?", "a": "שאלון, בגלל הגמישות שלו", "w": ["טכיטוסקופ, בגלל הדיוק שלו", "קבוצת מיקוד, כי היא זולה", "גלוונומטר, כי הוא מהיר"], "e": "שאלון הוא הכלי הנפוץ ביותר, בזכות הגמישות שלו."}, {"q": "איזה מכשיר מציג מודעה בהבזקים קצרים, ואחר כך הנבדק מתאר מה זכר?", "a": "טכיטוסקופ", "w": ["גלוונומטר", "סורק גלי מוח", "חיישן עור"], "e": "הטכיטוסקופ מציג מודעה בהבזקים של שבריר שנייה עד שניות. גלוונומטר מודד עניין או ריגוש."}]}, "e8": {"t": "t3", "v": [{"q": "מה מאפשר מדגם הסתברותי?", "a": "לחשב מרווח ביטחון לשגיאות הדגימה", "w": ["לדגום את כל אוכלוסיית המטרה", "לוותר על בניית מסגרת דגימה", "לקבל רק תשובות של לקוחות נאמנים"], "e": "מדגם הסתברותי מאפשר לחשב מרווח ביטחון, והופך את המדגם למייצג יותר."}, {"q": "איזו שיטת התקשרות היא המשוכללת ביותר, אבל גם היקרה ביותר?", "a": "מפגש אישי", "w": ["סקר בדואר", "ריאיון בטלפון", "ריאיון מקוון"], "e": "במפגש אישי אפשר לשאול יותר ולצפות בשפת גוף, אבל הוא הכי יקר וחשוף להטיית מראיין."}]}, "e9": {"t": "t4", "v": [{"q": "איזה שלב במחקר הוא בדרך כלל היקר ביותר והחשוף ביותר לטעויות?", "a": "איסוף הנתונים", "w": ["הגדרת הבעיה", "הצגת הממצאים", "קבלת ההחלטה"], "e": "באיסוף, משיבים לא זמינים, מסרבים, או עונים תשובות מוטות ושקריות."}, {"q": "ב־25 דולר ישתמשו 5 נוסעים, וב־15 דולר ישתמשו 6. מה נכון?", "a": "25 דולר מכניס יותר: 125 מול 90", "w": ["15 דולר מכניס יותר: 90 מול 75", "שני המחירים מכניסים אותו סכום", "25 דולר מכניס פחות: 125 מול 150"], "e": "5×25=125 ו־6×15=90. המחיר הגבוה מכניס יותר."}]}, "e10": {"t": "t5", "v": [{"q": "צרכנים עם עניין, הכנסה, גישה וכישורים מתאימים להצעה. איזה שוק הם?", "a": "השוק הזמין הכשיר", "w": ["השוק הפוטנציאלי", "שוק החדירה", "השוק הזמין בלבד"], "e": "פוטנציאלי: עניין. זמין: גם הכנסה וגישה. זמין כשיר: גם כישורים."}, {"q": "מהו שוק החדירה?", "a": "הצרכנים שכבר קונים את המוצר", "w": ["הצרכנים שיש להם רק עניין", "החלק שהעסק בוחר להתמקד בו", "הצרכנים שאין להם גישה למוצר"], "e": "שוק החדירה הוא מערך הצרכנים שכבר רוכשים את המוצר."}]}, "e11": {"t": "t5", "v": [{"q": "מה מייצג ״מינימום שוק״ (Q1) באיור 3.2?", "a": "מכירות שיהיו גם בלי שיווק", "w": ["הגבול העליון של כל הביקוש בשוק", "המכירות הצפויות לפי התוכנית", "נתח השוק של המוביל בענף"], "e": "מינימום שוק הוא כמות מכירות שמתרחשת גם בלי הוצאות לגירוי ביקוש."}, {"q": "בשוק שאי אפשר להרחיב, על מה כדאי לעסק להתמקד?", "a": "בביקוש בררני, כלומר בנתח השוק שלו", "w": ["בהגדלת הביקוש הראשוני לקטגוריה", "בהגדלת ההוצאה של כל הענף", "בהורדת מינימום השוק של הענף"], "e": "בשוק כזה מקבלים את הביקוש הראשוני, ומתמקדים בהגדלת הנתח, כלומר הביקוש הבררני."}]}, "e12": {"t": "t5", "v": [{"q": "מה נכון לגבי מכסת מכירות ותקציב מכירות, ביחס לתחזית?", "a": "המכסה גבוהה מעט, התקציב בדרך כלל נמוך", "w": ["המכסה נמוכה מעט, התקציב בדרך כלל גבוה", "שתיהן תמיד שוות בדיוק לתחזית", "שתיהן תמיד גבוהות מהתחזית"], "e": "המכסה גבוהה מעט כדי לדרבן. התקציב הוא אומדן שמרני, ולכן בדרך כלל נמוך יותר."}, {"q": "למה פוטנציאל המכירות של החברה נמוך בדרך כלל מפוטנציאל השוק?", "a": "כי לכל מתחרה יש קונים נאמנים", "w": ["כי החברה לא מוציאה כסף על שיווק", "כי פוטנציאל השוק תמיד שווה לאפס", "כי התקציב נמוך מהתחזית תמיד"], "e": "הם היו שווים רק אם העסק היה מקבל 100% מהשוק. לכל מתחרה יש קונים נאמנים."}]}, "e13": {"t": "t6", "v": [{"q": "100 מיליון קונים, 3 יחידות לקונה, 20 דולר ליחידה. מה הפוטנציאל הכולל?", "a": "6 מיליארד דולר", "w": ["600 מיליון דולר", "60 מיליארד דולר", "2 מיליארד דולר"], "e": "100 מיליון × 3 × 20 = 6 מיליארד דולר."}, {"q": "איזו שיטה להערכת פוטנציאל לפי אזור משמשת בעיקר משווקים לצרכנים?", "a": "מדד רב־גורמי", "w": ["שיטת שוק מצטבר", "סיווג NAICS", "קבוצת מיקוד"], "e": "שוק מצטבר מתאים בעיקר למשווקים עסקיים. מדד רב־גורמי מתאים בעיקר לצריכה פרטית."}]}, "f1": {"t": "t1", "v": [{"q": "מה זה ״סימון שוקי מטרה לפי התנהגות״?", "a": "מעקב אחרי התנהגות ברשת", "w": ["סקר בקופה של הסופר עם פרס", "תצפית בלקוחות בבית קפה", "חלוקת שוק לפי גיל והכנסה"], "e": "מעקב אחר התנהגות לקוחות ברשת כדי לשפר את דיוק הפרסום. יש צרכנים שמתנגדים לזה."}, {"q": "רשת מזמינה את הלקוחות הגדולים והמתוחכמים שלה לתת משוב. מה היא מקימה?", "a": "מועצה מייעצת של לקוחות", "w": ["קבוצה דורית של לקוחות", "שוק חדירה חדש", "מחסן נתונים של לקוחות"], "e": "בטבלה 3.1: מזמינים את הלקוחות הגדולים, המתבטאים או המייצגים ומבקשים משוב."}]}, "f2": {"t": "t3", "v": [{"q": "״מה הכי חשוב לך בחטיף?״, בלי אפשרויות תשובה. איזו שאלה זו, ומתי היא מועילה במיוחד?", "a": "שאלה פתוחה, במחקר גישוש", "w": ["שאלה סגורה, במחקר סיבתי", "שאלה סגורה, במחקר ניסויי", "שאלה פתוחה, רק במחקר ניסויי"], "e": "שאלות פתוחות מאפשרות לענות במילים שלך, ומועילות במיוחד למחקרי גישוש."}, {"q": "מה החיסרון העיקרי של ריאיון מקוון?", "a": "המדגם עלול להיות מוטה וקטן", "w": ["זו השיטה היקרה ביותר", "שיעור התגובה תמיד אפס", "אי אפשר לשאול בו שום שאלה"], "e": "מקוון זול ומהיר, אבל המדגם עלול להיות מוטה וקטן, ויש תקלות ותחלופה בפאנלים."}]}, "f3": {"t": "t5", "v": [{"q": "מה מציגה פונקציית ביקוש שוק?", "a": "ביקוש בכל רמת הוצאה של הענף", "w": ["את הביקוש לאורך השנים בשוק", "את נתח השוק של כל מתחרה", "רק את המכירות בשנה שעברה"], "e": "היא לא תמונה לאורך זמן, אלא תחזיות חלופיות לפי רמות הוצאה אפשריות."}, {"q": "למה פוטנציאל השוק למכוניות גבוה יותר בגאות מבשפל?", "a": "כי פוטנציאל השוק תלוי בסביבה", "w": ["כי בשפל אין בכלל מינימום שוק", "כי בגאות העסקים קובעים את העקומה", "כי בשפל מחירי המכוניות יורדים"], "e": "פוטנציאל השוק מוגדר ״בסביבת שוק נתונה״. העסקים לא קובעים את העקומה, רק את המקום עליה."}]}, "f4": {"t": "t6", "v": [{"q": "המכירות של עסק גדלו ב־5%, והענף גדל ב־10%. מה המשמעות?", "a": "העסק מאבד מעמד יחסי בענף", "w": ["העסק מוביל את הצמיחה בענף", "העסק הגדיל את נתח השוק שלו", "אין שום משמעות לנתון הזה"], "e": "העסק צומח לאט מהענף, ולכן הנתח שלו קטן."}, {"q": "מה החלק הקשה ביותר להערכה בנוסחת הפוטנציאל הכולל?", "a": "מספר הקונים", "w": ["המחיר הממוצע", "כמות לקונה", "אורך התקופה"], "e": "מתחילים מהאוכלוסייה כולה, ומורידים מי שלא יקנה או שאין לו עניין והכנסה."}]}, "ex": {"t": "tx", "v": [{"q": "״טבעי״ רוצה לדעת אם האריזה החדשה גרמה לעלייה במכירות. איזה מחקר מתאים?", "a": "מחקר סיבתי, למשל ניסוי", "w": ["מחקר גישוש בקבוצת מיקוד", "מחקר תיאורי בסקר כללי", "איסוף מודיעין ברשתות"], "e": "שאלה על סיבה ותוצאה מתאימה למחקר סיבתי, והניסוי הוא הגישה שמזהה קשרים כאלה."}, {"q": "חברה מתחילה למכור גם בתחנות דלק. איזה שוק היא מרחיבה?", "a": "את השוק הזמין", "w": ["את שוק החדירה", "את מינימום השוק", "את הביקוש הבררני"], "e": "פתיחת ערוצי הפצה חדשים מרחיבה את השוק הזמין, כי יותר צרכנים מקבלים גישה."}]}};
+const SUM=`<h2>סיכום: קוטלר וקלר פרק 3 - מחקר שיווקי וחיזוי ביקושים</h2>
+<div class="key"><b>על מה הקריאה?</b> עמודים 65–77 מפרק 3, לפי הסילבוס של שיעור 4: מאיפה עסק מקבל מידע על השוק (מערכת מידע ומודיעין שיווקי), איך עורכים מחקר שיווקי בשישה שלבים, ואיך מודדים ומעריכים ביקוש. ההמשך (חיזוי וסביבת המקרו) נמצא בלומדה של שיעור 3.</div>
+<h3>1. מערכת המידע השיווקי</h3>
+<ul>
+<li><b>מערכת מידע שיווקי</b> (MIS): אנשים, ציוד והליכים לאיסוף, מיון, ניתוח, הערכה והפצה של מידע נחוץ, מדויק ובזמן. שלושה מקורות: רשומות פנימיות, מודיעין שיווקי ומחקר שיווקי.</li>
+<li><b>רשומות פנימיות</b>: הזמנות, מכירות, מחירים, עלויות, מלאי ותשלומים. הליבה: <b>מחזור הזמנה־עד־תשלום</b>. צריך לפרש נתוני מכירות בזהירות.</li>
+<li><b>מסד נתוני לקוחות</b>, <b>שיווק במסדי נתונים</b>, <b>מחסן נתונים</b> ו<b>כריית נתונים</b> (חילוץ תובנות על התנהגות, מגמות ופלחים).</li>
+<li><b>ביג דאטה</b>: נתונים שאי אפשר לנהל בכלים מסורתיים. נפח, מהירות, מגוון ונפיצות. יותר נתונים אינם בהכרח נתונים טובים יותר.</li>
+<li><b>סימון שוקי מטרה לפי התנהגות</b>: מעקב מקוון לשיווק מדויק. יש צרכנים שמתנגדים.</li>
+<li><b>מודיעין שיווקי</b>: מידע יומיומי על המתרחש (הרשומות נותנות תוצאות). שמונה דרכים לשיפור (טבלה 3.1): צוות המכירות, מפיצים וקמעונאים, מומחים חיצוניים (קונים מדומים), רישות פנימי וחיצוני, מועצה מייעצת של לקוחות, מקורות ממשלתיים, חברות מחקר, ואינטרנט.</li>
+</ul>
+<h3>2. המחקר השיווקי</h3>
+<ul>
+<li><b>תובנות שיווקיות</b>: איך ולמה מתרחשות השפעות בשוק, ומה המשמעות. דוגמת ״פנטן״.</li>
+<li><b>הגדרה</b> (איגוד השיווק האמריקני): פונקציה שמקשרת צרכן, לקוח וציבור למשווק דרך מידע.</li>
+<li><b>תקציב</b>: 1%–2% מהמכירות. <b>שלושה סוגי מכונים</b>: שירותי מחקר מאוגדים (נילסן), מחקרי שוק ייעודיים, ומומחיות מקצועית (ראיונות שטח).</li>
+</ul>
+<h3>3. ששת שלבי המחקר</h3>
+<ol>
+<li><b>הגדרת הבעיה והיעדים</b>: לא רחב מדי ולא צר מדי. סוגי מחקר: <b>גישוש</b> (לזהות בעיה), <b>תיאורי</b> (לכמת), <b>סיבתי</b> (סיבה ותוצאה).</li>
+<li><b>תוכנית המחקר</b>, חמש החלטות:
+<ul><li><b>מקורות</b>: משניים (נאספו למטרה אחרת, מתחילים בהם) וראשוניים (חדשים).</li>
+<li><b>גישות</b>: תצפית (כולל אתנוגרפיה), קבוצת מיקוד (6–10 אנשים ומנחה), סקר (כולל סקר כללי ופאנל), נתוני התנהגות (מהימנים יותר מהצהרות), ניסוי (התוקף המדעי הגבוה ביותר).</li>
+<li><b>כלים</b>: שאלון (הנפוץ ביותר; שאלות סגורות ופתוחות), טכניקות איכותניות, התקנים טכנולוגיים (גלוונומטר, טכיטוסקופ, מעקב עיניים, חיישנים).</li>
+<li><b>דגימה</b>: יחידת דגימה (ומסגרת דגימה), גודל מדגם (פחות מ־1% יכול להספיק), הליך דגימה (הסתברותי מאפשר מרווח ביטחון).</li>
+<li><b>התקשרות</b> (טבלה 3.2): דואר (תגובה נמוכה), טלפון (מהיר, קצר), מפגש אישי (משוכלל ויקר), מקוון (זול ומהיר, מדגם מוטה).</li></ul></li>
+<li><b>איסוף</b>: בדרך כלל היקר ביותר והחשוף ביותר לטעויות.</li>
+<li><b>ניתוח</b>: הצלבות, ממוצעים, מדדי פיזור, מודלים וניתוח רגישות.</li>
+<li><b>הצגת הממצאים</b>: החוקר מייעץ ומתרגם לתובנות. בדוגמה: 5×25=125 דולר מול 6×15=90 דולר, 45,625 דולר בשנה, החזר השקעה בשנתיים.</li>
+<li><b>קבלת ההחלטה</b>: המחקר נותן תובנה, ההחלטה של המנהלים.</li>
+</ol>
+<h3>4. מדידת ביקוש</h3>
+<ul>
+<li><b>רמות שוק</b>: פוטנציאלי (עניין) ← זמין (עניין, הכנסה וגישה) ← זמין כשיר (גם כישורים) ← מטרה (מה שהעסק בוחר) ← חדירה (כבר קונים).</li>
+<li><b>ביקוש שוק</b>: כמות כוללת בתנאים מוגדרים. זו <b>פונקציה</b>, לא מספר. <b>מינימום שוק</b> (Q1) בלי שיווק, <b>פוטנציאל שוק</b> (Q2) הגבול העליון.</li>
+<li><b>שוק שאפשר להרחיב</b> (פער גדול בין Q1 ל־Q2) מול <b>שוק שאי אפשר</b> (פער קטן). בשני: מקבלים את <b>הביקוש הראשוני</b> ונלחמים על <b>נתח שוק</b> (<b>ביקוש בררני</b>).</li>
+<li><b>תחזית שוק</b>: הביקוש הצפוי ברמת ההוצאה בפועל, לא המרבי. פוטנציאל השוק תלוי בסביבה (גאות מול שפל).</li>
+<li><b>ביקוש חברה</b>: הנתח של העסק. <b>תחזית המכירות לחברה</b>; <b>מכסת מכירות</b> (מעט גבוהה, להנעה); <b>תקציב מכירות</b> (שמרני, בדרך כלל נמוך); <b>פוטנציאל מכירות החברה</b> (בדרך כלל נמוך מפוטנציאל השוק, בגלל קונים נאמנים למתחרים).</li>
+</ul>
+<h3>5. הערכת ביקוש נוכחי</h3>
+<ul>
+<li><b>פוטנציאל כולל</b>: קונים × כמות לקונה × מחיר (100 מיליון × 3 × 20 = 6 מיליארד דולר). הקשה ביותר: מספר הקונים.</li>
+<li><b>לפי אזורים</b>: <b>שוק מצטבר</b> (בעיקר עסקי, כל הקונים, NAICS) ו<b>מדד רב־גורמי</b> (בעיקר צרכני, משקלות; וירג׳יניה 2.04).</li>
+<li><b>מכירות ענפיות ונתח שוק</b>: עסק שגדל ב־5% בענף שגדל ב־10% מאבד מעמד יחסי.</li>
+</ul>
+<div class="key"><b>השורה התחתונה: מה רוצים ממך</b><br>להבחין בין רשומות פנימיות, מודיעין ומחקר; לסדר את ששת השלבים; לזהות סוג מחקר, גישה, כלי ושיטת התקשרות במקרה; לסדר את רמות השוק; להסביר מינימום, פוטנציאל ותחזית שוק ואת ההבדל בין ביקוש ראשוני לבררני; להבחין בין מכסה, תקציב ותחזית; ולחשב פוטנציאל כולל ומדד רב־גורמי.</div>`;
+if(typeof H!=="undefined")for(const k in H)Q[k]=Object.assign({},H[k],{lv:2});
+const isH=id=>Q[id].lv===2;
+for(const t of T){t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id&&!isH(k));t.hids=Object.keys(Q).filter(k=>Q[k].t===t.id&&isH(k))}
+const HAS_H=T.some(t=>t.hids.length);
+const KEY=CONFIG.key;
+let S={q:{},read:{}};
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.q) S=s;}catch(e){}
+S.pos=S.pos||{};S.done=S.done||{};
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const st=id=>S.q[id]||(S.q[id]={n:0,c:0,w:0,t:0,lv:-1});
+const mastered=id=>(S.q[id]?.c||0)>=2;
+const topicPct=t=>Math.round(100*t.qids.filter(mastered).length/t.qids.length);
+const topicStarted=t=>S.read[t.id]||S.pos[t.id]!=null||t.qids.some(id=>S.q[id]&&S.q[id].n);
+const allIds=Object.keys(Q).filter(id=>!isH(id));
+const rnd=t=>S.done[t.id]?(S.done[t.id].k||1)+1:1;
+const hardOn=t=>rnd(t)>1&&t.hids.length>0;
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+const pickVariant=id=>{const s=st(id),n=Q[id].v.length;return n>1?(s.lv+1)%n:0};
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const color=t=>`var(--${t.id})`;
+const app=document.getElementById("app");
+const LET=["א","ב","ג","ד"];
+
+function qCard(id,onDone,label){
+  const vi=pickVariant(id),v=Q[id].v[vi],opts=shuffle([v.a,...v.w]);
+  const box=document.createElement("div");box.className="q fade";
+  box.innerHTML=(label?`<span class="eyebrow">${label}</span>`:"")+`<div class="qtext">${esc(v.q)}</div>${acrNote(v.q,v.a,...v.w)}<div class="opts"></div>`;
+  const wrap=box.querySelector(".opts");
+  opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt";b.dataset.a=o===v.a?"1":"";
+    b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+    b.onclick=()=>{const ok=o===v.a,s=st(id);s.n++;s.t=Date.now();s.lv=vi;ok?s.c++:(s.c=0,s.w++);save();
+      wrap.querySelectorAll("button").forEach(x=>{x.disabled=true;if(x.dataset.a)x.classList.add("right")});
+      if(!ok)b.classList.add("wrong");
+      const fb=document.createElement("div");fb.className="fb fade "+(ok?"ok":"no");
+      fb.innerHTML=`${ic(ok?"check":"x")}<div><strong>${ok?"נכון!":"לא בדיוק"}</strong>${esc(v.e)}</div>`;box.appendChild(fb);
+      const nx=document.createElement("button");nx.className="primary";nx.textContent="המשך";nx.style.alignSelf="flex-start";
+      nx.onclick=()=>onDone(ok);box.appendChild(nx);nx.focus({preventScroll:true});nx.scrollIntoView({block:"nearest",behavior:"smooth"});
+    };wrap.appendChild(b)});
+  return box;
+}
+
+function home(){
+  document.body.style.removeProperty("--c");if(S.at){delete S.at;save()}
+  const started=T.filter(topicStarted);
+  const total=Math.round(T.reduce((a,t)=>a+strength(t)*t.qids.length,0)/allIds.length);
+  const weak=allIds.filter(id=>S.q[id]&&S.q[id].n&&!mastered(id)).length;
+  app.innerHTML=`<div class="stack fade">
+   <section class="cover" style="--c:var(--accent)">
+    <div class="cover-art">${FIG[CONFIG.cover]()}</div>
+    <div class="cover-body">
+     <span class="eyebrow">${CONFIG.eyebrow}</span>
+     ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
+     ${CONFIG.about?`<p class="about"><b>על מה הלומדה:</b> ${CONFIG.about}</p>`:`<p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר, ובסוף הלומדה מבחן מסכם עם ציון.${HAS_H?" מהסבב השני, המבחנים עוברים לשאלות הבנה: מקרים וסיפורים שצריך לזהות לאיזה רעיון הם שייכים.":""}</p>`}
+     <div class="stats">
+      <div class="ring" style="--p:${total}"><span>${total}%</span></div>
+      <div class="stat-text"><b>${total===0&&!started.length?"עוד לא התחלת":total>=80?"אתה שולט בחומר":`התקדמת ב־${total}% מהשאלות`}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
+     </div>
+     <div class="actions">
+      <button class="primary review-btn" id="rev" ${started.length?"":"disabled"}>${ic("cycle")}<span>${started.length?"חזרה מהירה":"חזרה מהירה (אחרי נושא ראשון)"}</span></button>
+      <button class="review-btn" id="exm">${ic("grad")}<span>מבחן מסכם${S.exam&&HAS_H?" · סבב "+((S.exam.k||1)+1)+": שאלות הבנה":""}${S.exam?` · ציון אחרון ${S.exam.pct}`:""}</span></button>
+      <button class="review-btn" id="wk" ${started.length?"":"disabled"}>${ic("target")}<span>נושאים לחיזוק</span></button>
+      ${typeof SUM!=="undefined"?`<button class="review-btn" id="sum">${ic("doc")}<span>סיכום הקריאה</span></button>`:""}
+      ${CONFIG.podcast?`<button class="review-btn" id="pod"><span aria-hidden="true">🎧</span><span>פודקאסט${CONFIG.podcast.min?` · ${CONFIG.podcast.min} דק׳`:""}</span></button>`:""}
+     </div>
+     ${CONFIG.podcast?`<div id="podbox" class="podbox" hidden><p class="muted">פודקאסט שנוצר ב־Gemini Notebook מקריאת החובה. כמו כל סיכום אוטומטי, הוא עלול לטעות, והקריאה עצמה קובעת.</p><div class="podframe"></div></div>`:""}
+    </div>
+   </section>
+   <div class="grid" id="list"></div>
+   <div class="foot"><a href="../#mkt" style="color:var(--accent);font-weight:700;text-decoration:none">→ לקורס</a><span>${CONFIG.note}</span><button class="ghost" id="reset">איפוס התקדמות</button></div>
+  </div>`;
+  app.querySelectorAll(".actions svg").forEach(x=>x.style.cssText="width:20px;height:20px");
+  const list=app.querySelector("#list");
+  T.forEach((t,i)=>{const p=strength(t),pos=S.pos[t.id],dn=S.done[t.id],b=document.createElement("button");b.className="tcard";b.style.setProperty("--c",color(t));
+    const status=dn?`✓ הושלם · מבחן ${dn.r}/${dn.n}${t.hids.length?" · הבא: סבב "+rnd(t)+" (הבנה)":""}`:pos!=null?`באמצע · קטע ${pos+1} מתוך ${t.blocks.length}`:S.read[t.id]?"✓ נקרא":topicStarted(t)?"בתהליך":"לא התחלת";
+    b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(dn?"check":t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${dn&&!p?100*dn.r/dn.n:p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
+    if(dn)b.classList.add("done");
+    b.onclick=()=>topic(i,pos!=null?pos:0);list.appendChild(b)});
+  app.querySelector("#rev").onclick=review;{const sb=app.querySelector("#sum");if(sb)sb.onclick=summary}{const pb=app.querySelector("#pod");if(pb)pb.onclick=()=>{const bx=app.querySelector("#podbox");bx.hidden=!bx.hidden;const f=bx.querySelector(".podframe");if(!bx.hidden&&!f.firstChild)f.innerHTML=`<iframe src="https://drive.google.com/file/d/${CONFIG.podcast.id}/preview" allow="autoplay" title="פודקאסט" loading="lazy"></iframe>`}}app.querySelector("#exm").onclick=exam;app.querySelector("#wk").onclick=weakTopics;
+  const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{},pos:{},done:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
+  scrollTo(0,0);
+}
+
+function bar(title,n,i,label){
+  return `<div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">${label}</span></div><div class="steps">${Array.from({length:n},(_,k)=>`<i class="${k<=i?"on":""}"></i>`).join("")}</div></div><span class="eyebrow">${title}</span>`;
+}
+
+function topic(ti,bi){
+  const t=T[ti],blk=t.blocks[bi];document.body.style.setProperty("--c",color(t));
+  app.innerHTML=`<div class="stack">${bar(`נושא ${ti+1} · ${t.title}`,t.blocks.length+1,bi,`קטע ${bi+1} מתוך ${t.blocks.length}`)}
+   <article class="card fade"><h3>${blk.h}</h3>${acrExpand(blk.html)}</article><div id="slot"></div></div>`;
+  S.pos[t.id]=bi;S.at={ti,bi};save();
+  app.querySelector("#back").onclick=home;
+  const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;delete S.pos[t.id];S.at={ti,quiz:1};save();quiz(ti)}};
+  if(bi>0){const pb=document.createElement("button");pb.className="ghost";pb.textContent="→ הקטע הקודם";pb.style.marginTop="6px";pb.onclick=()=>topic(ti,bi-1);setTimeout(()=>slot.appendChild(pb))}
+  const slot=app.querySelector("#slot");
+  {const b=document.createElement("button");b.className="primary";b.textContent=bi+1<t.blocks.length?"המשך":`למבחן הנושא (${t.qids.length} שאלות)`;b.onclick=next;slot.appendChild(b)}
+  scrollTo(0,0);
+}
+
+function runSet(title,ids,c,onEnd){
+  let i=0,right=0;document.body.style.setProperty("--c",c);
+  const step=()=>{
+    if(i>=ids.length)return onEnd(right,ids.length);
+    const id=ids[i],from=T.find(t=>t.id===Q[id].t);
+    app.innerHTML=`<div class="stack">${bar(title,ids.length,i,`שאלה ${i+1} מתוך ${ids.length}`)}<div id="slot"></div></div>`;
+    app.querySelector("#back").onclick=home;
+    const card=qCard(id,ok=>{if(ok)right++;i++;step()},from.title);card.style.setProperty("--c",color(from));
+    app.querySelector("#slot").appendChild(card);scrollTo(0,0);
+  };step();
+}
+
+function quiz(ti){
+  const t=T[ti];
+  if(hardOn(t)){const weak=shuffle(t.qids.filter(id=>!mastered(id))).slice(0,2);
+    return runSet(`מבחן הנושא · סבב ${rnd(t)} · שאלות הבנה`,shuffle(shuffle(t.hids).slice(0,Math.max(8,t.qids.length)).concat(weak)),color(t),(r,n)=>done(r,n,ti))}
+  const prev=T.slice(0,ti).filter(topicStarted).flatMap(x=>x.qids);
+  const extra=shuffle(prev).sort((a,b)=>st(a).c-st(b).c).slice(0,2);
+  runSet(`מבחן סיום · ${t.title}`,shuffle(t.qids).concat(extra),color(t),(r,n)=>done(r,n,ti));
+}
+
+function review(){
+  const pool=T.filter(topicStarted).flatMap(t=>S.done[t.id]?t.qids.concat(t.hids):t.qids),now=Date.now();
+  const tw={};T.forEach(t=>tw[t.id]=(100-strength(t))/20);
+  const score=id=>{const s=S.q[id]||{n:0,c:0,w:0,t:0};return (s.n?0:2)+s.w*2+(s.c<2?3:0)+Math.min(3,(now-s.t)/864e5)+tw[Q[id].t]+Math.random()*2};
+  const ids=pool.map(id=>[id,score(id)]).sort((a,b)=>b[1]-a[1]).slice(0,12).map(x=>x[0]);
+  runSet("חזרה מהירה",shuffle(ids),"var(--accent)",(r,n)=>done(r,n,null));
+}
+
+const strength=t=>Math.round(100*t.qids.filter(id=>S.q[id]&&S.q[id].n&&S.q[id].c>0).length/t.qids.length);
+
+function practice(ti){const t=T[ti];if(hardOn(t))return quiz(ti);runSet(`תרגול · ${t.title}`,shuffle(t.qids),color(t),(r,n)=>done(r,n,ti))}
+
+function exam(){
+  const N=Math.min(allIds.length,Math.max(15,Math.min(20,T.length*3)));
+  const xh=S.exam&&HAS_H,pools=T.map(t=>xh&&t.hids.length?shuffle(t.hids).concat(shuffle(t.qids)):shuffle(t.qids)),ids=[];
+  for(let k=0;ids.length<N;k++)for(const p of pools){if(ids.length>=N)break;if(k<p.length)ids.push(p[k])}
+  const items=shuffle(ids).map(id=>{const vi=pickVariant(id),v=Q[id].v[vi];return{id,vi,v,opts:shuffle([v.a,...v.w]),pick:null}});
+  document.body.style.setProperty("--c","var(--accent)");
+  let i=0;
+  const step=()=>{
+    const it=items[i],from=T.find(t=>t.id===Q[it.id].t),last=i===items.length-1;
+    app.innerHTML=`<div class="stack">${bar(xh?`מבחן מסכם · סבב ${(S.exam.k||1)+1} · שאלות הבנה`:"מבחן מסכם",items.length,i,`שאלה ${i+1} מתוך ${items.length}`)}
+     <div class="q fade"><span class="eyebrow">${esc(from.title)}</span><div class="qtext">${esc(it.v.q)}</div>${acrNote(it.v.q,it.v.a,...it.v.w)}<div class="opts"></div>
+     <div class="row"><button class="primary" id="nx" ${it.pick==null?"disabled":""}>${last?"הגשה ובדיקה":"הבא"}</button>${i?`<button class="ghost" id="pv">הקודם</button>`:""}</div></div></div>`;
+    {const bk=app.querySelector("#back");bk.onclick=()=>{if(bk.dataset.sure)home();else{bk.dataset.sure=1;bk.textContent="לחץ שוב כדי לצאת (התשובות לא יישמרו)"}}}
+    const wrap=app.querySelector(".opts"),nx=app.querySelector("#nx");
+    it.opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt"+(it.pick===o?" sel":"");
+      b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+      b.onclick=()=>{it.pick=o;wrap.querySelectorAll(".opt").forEach(x=>x.classList.remove("sel"));b.classList.add("sel");nx.disabled=false};
+      wrap.appendChild(b)});
+    nx.onclick=()=>{if(last)grade(items);else{i++;step()}};
+    const pv=app.querySelector("#pv");if(pv)pv.onclick=()=>{i--;step()};
+    scrollTo(0,0);
+  };step();
+}
+
+function grade(items){
+  const now=Date.now();let r=0;const per={};
+  items.forEach(it=>{const ok=it.pick===it.v.a,s=st(it.id),tid=Q[it.id].t;s.n++;s.t=now;s.lv=it.vi;ok?(s.c++,r++):(s.c=0,s.w++);
+    it.ok=ok;(per[tid]=per[tid]||{r:0,n:0}).n++;if(ok)per[tid].r++});
+  const n=items.length,pct=Math.round(100*r/n);S.exam={pct,t:now,k:S.exam?(S.exam.k||1)+1:1};save();
+  const rows=T.filter(t=>per[t.id]).map(t=>{const p=per[t.id],q=Math.round(100*p.r/p.n);
+    return `<div class="trow" style="--c:${color(t)}"><span class="tt">${esc(t.title)}</span><div class="bar"><i style="width:${q}%"></i></div><span class="sc">${p.r}/${p.n}</span></div>`}).join("");
+  const wrong=items.filter(it=>!it.ok);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">ציון המבחן המסכם</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct}"><span>${pct}</span></div><div class="big">${r}/${n}</div></div>
+    <p>${pct>=90?"מצוין, אתה שולט בחומר.":pct>=70?"טוב. עבור על הטעויות למטה וחזור על הנושאים החלשים.":"כדאי לחזור על החומר. למטה תמצא את הטעויות, ולכל אחת כפתור לחזרה על הנושא."}</p>
+    <h3>לפי נושא</h3><div class="trows">${rows}</div>
+    <div class="row"><button class="primary" id="again">מבחן מסכם חדש</button><button id="hm">לכל הנושאים</button></div>
+   </article>
+   ${wrong.length?`<h3>הטעויות שלך (${wrong.length})</h3>`:`<p class="muted">לא היו טעויות.</p>`}
+   <div class="stack" id="wl"></div></div>`;
+  const wl=app.querySelector("#wl");
+  wrong.forEach(it=>{const ti=T.findIndex(t=>t.id===Q[it.id].t),t=T[ti],c=document.createElement("article");c.className="card rev";c.style.setProperty("--c",color(t));
+    c.innerHTML=`<span class="eyebrow">${esc(t.title)}</span><div class="qtext">${esc(it.v.q)}</div>${acrNote(it.v.q,it.v.a,it.pick,it.v.e)}
+     <div class="opt wrong" aria-disabled="true"><span class="k">${ic("x")}</span><span><b>התשובה שלך:</b> ${esc(it.pick)}</span></div>
+     <div class="opt right" aria-disabled="true"><span class="k">${ic("check")}</span><span><b>התשובה הנכונה:</b> ${esc(it.v.a)}</span></div>
+     <div class="fb no">${ic("bulb")}<div><strong>למה?</strong>${esc(it.v.e)}</div></div>
+     <div class="row"><button class="primary go">חזרה על הנושא: ${esc(t.title)}</button></div>`;
+    c.querySelector(".go").onclick=()=>topic(ti,0);wl.appendChild(c)});
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;app.querySelector("#again").onclick=exam;
+  scrollTo(0,0);
+}
+
+function weakTopics(){
+  document.body.style.setProperty("--c","var(--accent)");
+  const list=T.map((t,i)=>({t,i,s:strength(t),started:topicStarted(t)})).sort((a,b)=>(a.started-b.started)||(a.s-b.s));
+  const lab=x=>!x.started?"עוד לא תרגלת":x.s>=80?"חזק":x.s>=50?"בינוני":"צריך חיזוק";
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <span class="eyebrow">נושאים לחיזוק</span><p class="muted">הנושאים מסודרים מהחלש לחזק, לפי התשובות האחרונות שלך בכל שאלה.</p>
+   <div class="stack" id="wl"></div></div>`;
+  const wl=app.querySelector("#wl");
+  list.forEach(x=>{const c=document.createElement("article");c.className="card rev";c.style.setProperty("--c",color(x.t));
+    c.innerHTML=`<div class="trow"><span class="tt">${x.i+1}. ${esc(x.t.title)}</span><div class="bar"><i style="width:${x.s}%"></i></div><span class="sc">${x.started?x.s+"%":"—"}</span></div>
+     <span class="tag ${!x.started?"":x.s>=80?"good":x.s>=50?"mid":"low"}">${lab(x)}</span>
+     <div class="row"><button class="primary pr">תרגול שאלות הנושא</button><button class="rd">קריאה חוזרת</button></div>`;
+    c.querySelector(".pr").onclick=()=>practice(x.i);c.querySelector(".rd").onclick=()=>topic(x.i,0);wl.appendChild(c)});
+  app.querySelector("#back").onclick=home;scrollTo(0,0);
+}
+
+function done(r,n,ti){
+  if(ti!=null){const o=S.done[T[ti].id];S.done[T[ti].id]={r,n,k:o?(o.k||1)+1:1};}if(S.at){delete S.at}save();
+  const nextT=ti!=null&&ti+1<T.length?ti+1:null,pct=Math.round(100*r/n);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">${ti!=null?`סיום נושא ${ti+1} · ${T[ti].title}`:"סיום חזרה מהירה"}</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct};--accent:var(--c)"><span>${pct}%</span></div><div class="big">${r}/${n}</div></div>
+    <p>${r===n?"מצוין, הכל נכון.":r>=n*0.7?"טוב מאוד. מה שטעית בו יחזור בחזרה המהירה, בניסוח אחר.":"כדאי לעבור שוב על הנושא. השאלות שטעית בהן יחזרו בחזרה המהירה."}</p>
+    <div class="row">${nextT!=null?`<button class="primary" id="nx" style="--c:${color(T[nextT])}">לנושא הבא: ${T[nextT].title}</button>`:""}<button id="hm">לכל הנושאים</button></div>
+   </article></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;
+  const nx=app.querySelector("#nx");if(nx)nx.onclick=()=>topic(nextT,0);
+  scrollTo(0,0);
+}
+function summary(sec){
+  document.body.style.setProperty("--c","var(--accent)");
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">סיכום הקריאה</span></div></div>
+   <article class="card sum">${acrExpand(SUM)}</article>
+   <div class="row"><button class="primary" id="hm">חזרה לכל הנושאים</button></div></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;scrollTo(0,0);if(sec){const h=[...app.querySelectorAll(".sum h3")].find(x=>x.textContent.trim().startsWith(sec+"."));if(h)h.scrollIntoView()}
+}
+function absView(){
+  document.body.style.setProperty("--c","var(--accent)");
+  const tmp=document.createElement("div");tmp.innerHTML=SUM;const a=tmp.querySelector("#abs");
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">כותרת ותקציר</span></div></div>
+   <article class="card sum"><h2>${CONFIG.title}: כותרת ותקציר</h2><div class="key">לתרגול הזה קוראים <b>רק את הכותרת והתקציר</b>. זה מה שיש בעמוד הזה. הסיכום המלא של המאמר נמצא בכפתור ״סיכום הקריאה״ בלומדה.</div>${a?acrExpand(a.innerHTML):""}</article>
+   <div class="row"><button class="primary" id="hm">ללומדה</button><button id="full">לסיכום המלא</button></div></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;app.querySelector("#full").onclick=()=>summary();scrollTo(0,0);
+}
+const _h=location.hash;if(_h)history.replaceState(null,"",location.pathname+location.search);if(_h==="#abs"&&typeof SUM!=="undefined"&&SUM.includes('id="abs"'))absView();else if(_h.startsWith("#sum")&&typeof SUM!=="undefined")summary(+_h.slice(5)||0);else if(_h.startsWith("#topic-")&&T[+_h.slice(7)-1])topic(+_h.slice(7)-1,0);else if(_h==="#quiz")exam();else if(S.at&&T[S.at.ti]){const a=S.at;if(a.quiz)quiz(a.ti);else topic(a.ti,Math.min(a.bi||0,T[a.ti].blocks.length-1))}else home();
+</script>
+<script src="../_engine/ai-config.js"></script><script src="../_engine/ai.js"></script>
+</body>
+</html>
