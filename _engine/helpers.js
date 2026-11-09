@@ -10,3 +10,5 @@ const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")
 const spectrum=(r,l,dot)=>`<div class="spectrum"><div class="track">${dot?'<span class="dot"></span>':""}</div><div class="ends"><span>${r}</span><span>${l}</span></div></div>`;
 document.head.insertAdjacentHTML("beforeend",'<style>.yn svg{width:16px;height:16px}</style>');
 
+
+const LEC=`<span class="lec">${ic("doc")}מהשיעור (מצגת)</span>`;
