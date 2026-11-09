@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>לומדת חובת קריאה: פרק 5 - ניתוח שווקים צרכניים ועסקיים</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Rubik:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: a study notebook. Home = illustrated cover + topic cards; topic = one reading card at a time, with a highlighter for key terms and drawn figures */
+:root{
+  --bg:#eef2f4; --surface:#ffffff; --raised:#f7f9fa; --ink:#15222a; --muted:#4c5b66; --line:#dbe2e6;
+  --accent:#2457a6; --mark:#ffe27a; --good:#23855a; --good-soft:#e2f4ea; --bad:#c2452d; --bad-soft:#fbe6e1;
+  --t1:#d35d36; --t2:#3667cf; --t3:#0e8a7c; --t4:#8448c9; --t5:#b9800c; --t6:#2a7fa6; --t7:#b4436c; --t8:#5a6b2e;
+  --display:"Suez One","Frank Ruhl Libre","David",serif;
+  --body:"Rubik","Arial Hebrew","Segoe UI",Arial,sans-serif;
+  --shadow:0 1px 2px rgba(21,34,42,.06),0 8px 24px rgba(21,34,42,.07);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;font-weight:500;line-height:1.75;direction:rtl}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
+p{margin:0}
+.stack{display:flex;flex-direction:column;gap:16px}
+.muted{color:var(--muted)}
+mark{background:linear-gradient(transparent 38%,var(--mark) 38%,var(--mark) 92%,transparent 92%);color:inherit;padding:0 2px;font-weight:600}
+button{font:inherit;cursor:pointer;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:11px 18px}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button[disabled]{opacity:.55;cursor:default}
+.primary{background:var(--c,var(--accent));border-color:var(--c,var(--accent));color:var(--surface);font-weight:600}
+.ghost{background:transparent;border:none;color:var(--muted);padding:6px 2px}
+.ghost:hover{color:var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.badge{display:inline-block;align-self:flex-start;font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:99px;background:var(--accent);color:var(--surface);margin-bottom:6px}.entitle{display:inline;unicode-bidi:isolate;font-family:Rubik,system-ui,sans-serif;font-weight:800}.hetitle{margin:4px 0 0;font-weight:700;font-size:1.05rem}.cite{text-align:right;margin:4px 0 0;font-size:.85rem;color:var(--muted)}.cite a{color:var(--accent)}
+.eyebrow{font-size:.8rem;letter-spacing:.05em;font-weight:600;color:var(--c,var(--muted))}
+
+/* home */
+.cover{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.cover-art{background:var(--raised);border-bottom:1px solid var(--line);padding:8px 8px 0}
+.cover-art svg{display:block;width:100%;height:auto;max-height:230px}
+.cover-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px}
+.cover h1{font-size:clamp(2rem,6vw,2.6rem);font-weight:900}
+.stats{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.ring{--p:0;width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center;flex:none}
+.ring span{width:50px;height:50px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.9rem;font-variant-numeric:tabular-nums}
+.stat-text{display:flex;flex-direction:column;line-height:1.35;flex:1;min-width:160px}
+.stat-text b{font-size:1.05rem}
+.review-btn{display:flex;align-items:center;gap:8px}
+.actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.actions button{justify-content:center}
+.opt.sel{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--raised))}
+.opt[aria-disabled]{cursor:default}
+.opt .k svg{width:16px;height:16px}
+.trows{display:flex;flex-direction:column;gap:10px;width:100%}
+.trow{display:grid;grid-template-columns:minmax(0,1fr) minmax(70px,30%) auto;gap:10px;align-items:center;width:100%}
+.trow .tt{font-family:inherit;font-size:1rem;font-weight:600;line-height:1.35}
+.trow .bar i{background:var(--c)}
+.trow .sc{font-variant-numeric:tabular-nums;font-weight:700;min-width:3ch;text-align:left}
+.card.rev{align-items:stretch}
+.tag{align-self:flex-start;font-size:.82rem;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--raised)}
+.tag.good{background:var(--good-soft);color:var(--good)} .tag.low{background:var(--bad-soft);color:var(--bad)} .tag.mid{background:color-mix(in srgb,var(--mark) 45%,var(--raised))}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.tcard{--c:var(--accent);text-align:right;padding:0;overflow:hidden;border:none;border-radius:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s}
+.tcard:hover{transform:translateY(-2px)}
+.tcard .band{background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.tcard .band svg{width:44px;height:44px}
+.tcard .n{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;opacity:.85}
+.tcard .body{padding:12px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tcard .t{font-weight:700;font-size:1.05rem;line-height:1.35}
+.bar{height:7px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--c);border-radius:4px}
+.meta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip{font-size:.75rem;padding:3px 10px;border-radius:99px;font-weight:600;background:color-mix(in srgb,var(--c,var(--accent)) 14%,transparent);color:var(--c,var(--accent));white-space:nowrap}
+.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+
+/* topic */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;display:flex;flex-direction:column;gap:8px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.steps{display:flex;gap:5px}
+.steps i{flex:1;height:5px;border-radius:3px;background:var(--line)}
+.steps i.on{background:var(--c)}
+.prog{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tt{font-size:1.6rem;font-weight:900}
+.card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px}
+.card h3{font-size:1.25rem;color:var(--c)}
+.fig{background:var(--raised);border-radius:14px;padding:10px;margin-inline:-4px}
+.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{font-size:.8rem;color:var(--muted);text-align:center;margin-top:4px}
+figure{margin:0}
+.def{border:1.5px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 6%,var(--surface));border-radius:14px;padding:14px 16px}
+.lbl{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:var(--c);margin-bottom:4px}
+.who{display:flex;gap:12px;align-items:flex-start}
+.who .av{flex:none;width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.15rem}
+.who .yr{font-size:.8rem;color:var(--muted)}
+.lec{display:inline-flex;align-items:center;gap:5px;font-size:.78rem;font-weight:700;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 40%,transparent);background:color-mix(in srgb,var(--accent) 8%,transparent);border-radius:999px;padding:2px 10px;margin:0 0 8px}.lec svg{width:14px;height:14px}.podbox{margin-top:12px;border:1px solid var(--line);border-radius:14px;padding:12px;background:var(--surface)}.podbox p{margin:0 0 8px;font-size:.9rem}.podframe iframe{width:100%;height:90px;border:0;border-radius:10px}.cpt{border:1px solid var(--line);border-inline-start:4px solid var(--c,var(--accent));border-radius:14px;padding:14px 16px;margin:12px 0;background:var(--surface)}.cpt-h{display:flex;gap:10px;align-items:center;font-size:1.08rem}.cpt-h svg{width:26px;height:26px;color:var(--c,var(--accent));flex:none}.cpt p{margin:.5rem 0 .7rem;line-height:1.75}.cpt p.cpt-d{font-weight:600;margin-bottom:.3rem}.cpt-ex{background:var(--raised);border-radius:10px;padding:10px 12px;line-height:1.7;font-size:.97rem}.cpt-ex b{color:var(--c,var(--accent))}
+.tiles>.cpt{grid-column:1/-1;margin:0}.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.tile{background:var(--raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile svg{width:32px;height:32px;color:var(--c)}
+.tile b{font-size:.98rem}
+.tile span{font-size:.88rem;color:var(--muted);line-height:1.45}
+.ex{background:var(--raised);border-radius:12px;padding:12px 14px;font-size:.95rem}
+.ex .lbl{color:var(--muted)}
+.yesno{display:flex;flex-wrap:wrap;gap:8px}
+.yn{padding:5px 12px;border-radius:99px;font-size:.88rem;font-weight:500;display:inline-flex;gap:6px;align-items:center}
+.yn.y{background:var(--good-soft);color:var(--good)} .yn.n{background:var(--bad-soft);color:var(--bad)}
+.spectrum{display:flex;flex-direction:column;gap:6px}
+.spectrum .track{height:12px;border-radius:6px;background:linear-gradient(90deg,var(--bad),var(--line) 50%,var(--good));position:relative}
+.spectrum .dot{position:absolute;top:50%;left:50%;width:20px;height:20px;border-radius:50%;background:var(--surface);border:3px solid var(--ink);transform:translate(-50%,-50%)}
+.spectrum .ends{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);gap:10px}
+.remember{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;border-top:1px dashed var(--line);padding-top:12px}
+.remember svg{flex:none;width:22px;height:22px;color:var(--c)}
+
+/* question */
+.q{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:12px}
+.qtext{font-weight:600;font-size:1.08rem;line-height:1.55}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{text-align:right;line-height:1.45;display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--raised);border:1.5px solid transparent}
+.opt:hover:not([disabled]){border-color:var(--c)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:8px;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.85rem;color:var(--c)}
+.opt.right{background:var(--good-soft);border-color:var(--good);opacity:1}
+.opt.right .k{background:var(--good);color:var(--surface)}
+.opt.wrong{background:var(--bad-soft);border-color:var(--bad);opacity:1}
+.opt.wrong .k{background:var(--bad);color:var(--surface)}
+.fb{padding:12px 14px;border-radius:12px;font-size:.95rem;display:flex;gap:10px;align-items:flex-start}
+.fb svg{flex:none;width:22px;height:22px;margin-top:2px}
+.fb.ok{background:var(--good-soft)} .fb.ok svg{color:var(--good)}
+.fb.no{background:var(--bad-soft)} .fb.no svg{color:var(--bad)}
+.fb strong{display:block}
+.big{font-family:var(--display);font-size:3.4rem;font-weight:900;color:var(--c);font-variant-numeric:tabular-nums;line-height:1}
+@media (prefers-reduced-motion:no-preference){.fade{animation:f .3s ease-out}@keyframes f{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+
+/* svg figure classes */
+.s-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.s-c{stroke:var(--c);stroke-width:2;fill:none}
+.f-c{fill:var(--c)}
+.f-soft{fill:color-mix(in srgb,var(--c) 16%,var(--surface))}
+.f-surf{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.f-ink{fill:var(--ink)}
+.f-mut{fill:var(--muted)}
+.f-inv{fill:var(--surface)}
+svg text{font-family:var(--body)}
+h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
+.card p,.def p,.tile span,.ex p{font-weight:500}
+.qtext{font-weight:700}
+.tile b,.who b{font-weight:700}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:.95rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.tbl th,.tbl td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl th{background:color-mix(in srgb,var(--c) 10%,var(--surface));color:var(--c);font-weight:700;font-size:.85rem}
+.tbl .in{color:var(--c);font-weight:700}.tbl .out{color:var(--muted);font-weight:700}
+.tblwrap{overflow-x:auto}
+.en{font-size:.82em;color:var(--muted);font-weight:500;direction:ltr;unicode-bidi:isolate}
+.ak{white-space:nowrap}
+.acr{font-size:.82em;color:var(--muted);font-weight:500}
+.acrnote{font-size:.85rem;color:var(--muted);background:color-mix(in srgb,var(--c,var(--accent)) 7%,var(--surface));border-radius:10px;padding:8px 12px;line-height:1.6}
+.tcard.done .band{background:color-mix(in srgb,var(--good) 16%,var(--surface))}
+.tcard.done .meta span:first-child{color:var(--good);font-weight:700}
+.card.sum{gap:6px;align-items:stretch}
+.card.sum h2{font-family:var(--display);font-size:1.5rem;margin:6px 0 2px;color:var(--accent)}
+.card.sum h3{margin:18px 0 4px;color:var(--accent);border-bottom:2px solid color-mix(in srgb,var(--accent) 25%,transparent);padding-bottom:4px}
+.card.sum h4{margin:10px 0 2px}
+.card.sum p,.card.sum li{line-height:1.75}
+.card.sum ul,.card.sum ol{margin:4px 0;padding-inline-start:22px}
+.card.sum .key{background:color-mix(in srgb,var(--accent) 9%,var(--surface));border-inline-start:4px solid var(--accent);border-radius:10px;padding:10px 14px;margin:8px 0}
+.card.sum .trap{background:color-mix(in srgb,var(--bad) 9%,var(--surface));border-inline-start:4px solid var(--bad);border-radius:10px;padding:10px 14px;margin:8px 0}
+.card.sum table{border-collapse:collapse;width:100%;font-size:.92rem;margin:6px 0}
+.card.sum th,.card.sum td{border:1px solid var(--line);padding:6px 8px;text-align:right;vertical-align:top}
+.card.sum th{background:color-mix(in srgb,var(--accent) 10%,var(--surface))}
+.card.sum .tw{overflow-x:auto}
+.about{margin:.6rem 0 0;line-height:1.65}.about b{color:var(--ink,inherit)}
+</style>
+<style>:root{--accent:#0e7c86}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent:#4cc9d4}}:root[data-theme="dark"]{--accent:#4cc9d4}</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const CONFIG={about:"למה אנחנו קונים את מה שאנחנו קונים? הלומדה עוברת על הגורמים שמשפיעים על הצרכן, על התהליכים הפסיכולוגיים, על חמשת שלבי החלטת הקנייה ועל ההחלטות הלא רציונליות, ואז על השוק העסקי: מרכז הקניות, שלבי הקנייה העסקית והיחסים עם הספקים.",key:"lomda-mkt-ch5",cover:"cover52",eyebrow:"מבוא לניהול השיווק · פרק 5",title:"פרק 5 - ניתוח שווקים צרכניים ועסקיים",cite:`קוטלר וקלר, <i>עקרונות ניהול השיווק</i>, האוניברסיטה הפתוחה, 2020. פרק 5, עמ' ⁦109–135⁩.`,note:"מבוסס על חובת הקריאה בפרק 5. המונחים באנגלית מופיעים בסוגריים."};
+const I={
+ building:'<path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h2M14 8h2M8 12h2M14 12h2M10 21v-4h4v4"/>',
+ people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
+ cycle:'<path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/>',
+ pyramid:'<path d="M12 3L2.5 20h19z"/><path d="M8.2 10.5h7.6M5.5 15.2h13"/>',
+ chart:'<path d="M4 20V10M9.5 20V4M15 20v-7M20.5 20V8M2 20h20"/>',
+ gear:'<circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="7.5" stroke-dasharray="3.2 2.7" stroke-width="3.2"/>',
+ sprout:'<path d="M12 21v-9"/><path d="M12 14C7 14 4.5 11 4.5 6.5 9 6.5 12 9 12 14z"/><path d="M12 12c0-4.5 3-7 7.5-7 0 4.5-3 7-7.5 7z"/>',
+ scales:'<path d="M12 3v17M7 20h10M4 7h16"/><path d="M4 7l-2.5 6h5zM20 7l-2.5 6h5z"/>',
+ factory:'<path d="M3 21V10l5 3v-3l5 3V5h4v16zM1.5 21h21M17 9h4v12"/>',
+ question:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 1 1 3.6 2.4c-.8.4-1.1.9-1.1 1.8"/><path d="M12 17h.01"/>',
+ data:'<ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6M4.5 11.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6"/>',
+ doc:'<path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/>',
+ split:'<circle cx="12" cy="4.5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="12" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/><path d="M12 6.7v10M12 11l-6 6M12 11l6 6"/>',
+ grad:'<path d="M1.5 9L12 4l10.5 5L12 14z"/><path d="M6 11.2V16c3.3 2.4 8.7 2.4 12 0v-4.8M21 10v5"/>',
+ copies:'<rect x="3" y="7" width="12" height="14" rx="2"/><path d="M7 4h11a2 2 0 0 1 2 2v12"/>',
+ link:'<rect x="2" y="8" width="11" height="8" rx="4"/><rect x="11" y="8" width="11" height="8" rx="4"/>',
+ hand:'<circle cx="8" cy="7" r="3"/><circle cx="16" cy="7" r="3"/><path d="M2.5 20c0-3.3 2.5-6 5.5-6 1.6 0 3 .7 4 1.9 1-1.2 2.4-1.9 4-1.9 3 0 5.5 2.7 5.5 6"/>',
+ target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',
+ id:'<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><circle cx="8.5" cy="11" r="2.3"/><path d="M5 16c.6-1.6 2-2.4 3.5-2.4S11.4 14.4 12 16M14.5 10h4M14.5 13.5h3"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>',
+ pie:'<path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/>',
+ cart:'<path d="M2 3h3l2.5 12h11l2-8H6.5"/><circle cx="9" cy="19.5" r="1.6"/><circle cx="17" cy="19.5" r="1.6"/>',
+ bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/>',
+ check:'<circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/>',
+ x:'<circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/>',
+ lock:'<rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>',
+ moon:'<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>',
+ brain:'<path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a2 2 0 0 0-3-1z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/>',
+ phone:'<rect x="6.5" y="2" width="11" height="20" rx="2.5"/><path d="M10.5 18.5h3"/>',
+ flask:'<path d="M9 2.5h6M10 2.5v6L4.5 19a2 2 0 0 0 1.8 2.9h11.4a2 2 0 0 0 1.8-2.9L14 8.5v-6"/><path d="M7 15h10"/>',
+ leaf:'<path d="M5 19C5 10 11 4 20 4c0 9-6 15-15 15z"/><path d="M5 19l8-8"/>'
+};
+const ic=(k,cls="")=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="${cls}" aria-hidden="true">${I[k]}</svg>`;
+
+const arrowDef=id=>`<defs><marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="f-c"/></marker></defs>`;
+
+const FIG={
+ cover52:()=>`<svg viewBox="0 0 400 228" role="img" aria-label="עגלת קניות וצרכן">
+  <circle cx="200" cy="114" r="96" class="f-soft"/>
+  <path d="M110 70 h26 l22 78 h96 l18-58 h-128" class="s-c" fill="none" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="170" cy="168" r="11" class="f-c"/><circle cx="240" cy="168" r="11" class="f-c"/>
+  <rect x="166" y="98" width="22" height="34" rx="4" class="f-surf"/><rect x="194" y="88" width="22" height="44" rx="4" class="f-surf"/><rect x="222" y="104" width="22" height="28" rx="4" class="f-surf"/>
+  <circle cx="300" cy="78" r="16" class="f-c"/><path d="M300 98 v40 M284 112 h32" class="s-c" stroke-width="6" stroke-linecap="round"/>
+ </svg>`
+};
+const E=t=>`<span class="en">(${t})</span>`;
+const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</figcaption>`:""}</figure>`;
+const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
+const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;
+const _dot=s=>{const t=String(s).replace(/<[^>]+>/g,"").trim();return /[.!?:׃…]$/.test(t)?s:s+"."};
+const tiles=a=>{const s=a.filter(x=>x.length<4),c=a.filter(x=>x.length>=4);return (s.length?`<div class="tiles">${s.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`:"")+c.map(([i,t,d,x,e])=>`<div class="cpt"><div class="cpt-h">${ic(i)}<b>${t}</b></div>${String(d).replace(/<[^>]+>/g,"").trim()?`<p class="cpt-d">${_dot(d)}</p>`:""}${x?`<p>${x}</p>`:""}${e?`<div class="cpt-ex"><b>דוגמה:</b> ${e}</div>`:""}</div>`).join("")};
+const ex=h=>`<div class="ex"><span class="lbl">דוגמה</span><p>${h}</p></div>`;
+const rem=h=>`<div class="remember">${ic("bulb")}<p>${h}</p></div>`;
+const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")}${t}</span>`).join("")}${n.map(t=>`<span class="yn n">${ic("x")}${t}</span>`).join("")}</div>`;
+const spectrum=(r,l,dot)=>`<div class="spectrum"><div class="track">${dot?'<span class="dot"></span>':""}</div><div class="ends"><span>${r}</span><span>${l}</span></div></div>`;
+document.head.insertAdjacentHTML("beforeend",'<style>.yn svg{width:16px;height:16px}</style>');
+
+
+const LEC=`<span class="lec">${ic("doc")}מהשיעור (מצגת)</span>`;
+const ACR={
+"AAI":["Adult Attachment Interview","ריאיון ההיקשרות למבוגרים"],
+"ABA":["","תבנית הברות שבה הראשונה והאחרונה זהות (גה טי גה)"],
+"ABB":["","תבנית הברות שבה השתיים האחרונות זהות (וו פי פי)"],
+"ACh":["Acetylcholine","אצטילכולין"],
+"AChE":["Acetylcholinesterase","אצטילכולין־אסטראז, האנזים שמפרק אצטילכולין"],
+"ADD":["Attention Deficit Disorder","הפרעת קשב"],
+"ADHD":["Attention Deficit Hyperactivity Disorder","הפרעת קשב וריכוז עם היפראקטיביות"],
+"AI":["Artificial Intelligence","בינה מלאכותית"],
+"AMPA":["","סוג של קולטן גלוטמט יונוטרופי, הנפוץ ביותר"],
+"ANOVA":["Analysis of Variance","ניתוח שונות, מבחן סטטיסטי להשוואת כמה ממוצעים"],
+"AP5":["","חומר שחוסם את אתר הגלוטמט בקולטן NMDA"],
+"AST":["Attention Switching Task","משימת מעבר קשב בין כללים"],
+"ATP":["Adenosine Triphosphate","אדנוזין טריפוספט, מולקולת האנרגיה של התא"],
+"AVG":["","ארגון שערך את הסקר על ילדים והטלפונים של הוריהם"],
+"BCTI":["Belief in Conspiracy Theories Inventory","שאלון האמונה בתיאוריות קונספירציה"],
+"BEIP":["Bucharest Early Intervention Project","מחקר ההתערבות המוקדמת בבוקרשט"],
+"BRAIN":["Brain Research through Advancing Innovative Neurotechnologies","מיזם חקר המוח האמריקני"],
+"CANTAB":["Cambridge Neuropsychological Test Automated Battery","סוללת מבחנים נוירופסיכולוגיים ממוחשבת"],
+"CASQ":["Cleveland Adolescent Sleepiness Questionnaire","שאלון ישנוניות כללית"],
+"CB1":["Cannabinoid receptor 1","קולטן קנבינואידים מסוג 1, במוח"],
+"CBT":["Cognitive Behavioral Therapy","טיפול קוגניטיבי־התנהגותי"],
+"CCT":["Computerized Cognitive Training","אימון קוגניטיבי ממוחשב"],
+"CES-D":["Center for Epidemiologic Studies Depression scale","שאלון לדיכאון"],
+"CFA":["Confirmatory Factor Analysis","ניתוח גורמים מאשש"],
+"ChAT":["Choline Acetyltransferase","האנזים שבונה אצטילכולין"],
+"ChR2":["Channelrhodopsin-2","תעלה רגישה לאור כחול שמעוררת נוירון"],
+"CNS":["Central Nervous System","מערכת העצבים המרכזית: המוח ומוח השדרה"],
+"CR":["Conditioned Response","תגובה מותנית"],
+"CS":["Conditioned Stimulus","גירוי מותנה"],
+"CSF":["Cerebrospinal Fluid","נוזל המוח והשדרה"],
+"CT":["Computed Tomography","טומוגרפיה ממוחשבת, צילום רנטגן בפרוסות"],
+"DBS":["Deep Brain Stimulation","גרייה מוחית עמוקה"],
+"DMS":["Delayed Matching to Sample","משימת התאמה לדוגמה אחרי השהיה (זיכרון חזותי)"],
+"DNA":["Deoxyribonucleic Acid","החומר התורשתי, שנמצא בכרומוזומים"],
+"DQ":["Developmental Quotient","מנת הרמה ההתפתחותית"],
+"DRD4":["Dopamine Receptor D4","גן של קולטן דופמין מסוג D4"],
+"DSM-5":["DSM, 5th edition","המהדורה החמישית של המדריך האמריקני לאבחון הפרעות נפשיות"],
+"DSM-IV":["DSM, 4th edition","המהדורה הרביעית של המדריך לאבחון הפרעות נפשיות"],
+"DSM-III":["DSM, 3rd edition","המהדורה השלישית של המדריך לאבחון הפרעות נפשיות"],
+"5-HT1A":["","קולטן סרוטונין מסוג 1A"],
+"5-HT3":["","קולטן סרוטונין מסוג 3, יונוטרופי"],
+"MAO-A":["Monoamine Oxidase A","מונואמין אוקסידאז מסוג A"],
+"MAO-B":["Monoamine Oxidase B","מונואמין אוקסידאז מסוג B"],
+"GPT-4":["Generative Pre-trained Transformer 4","מודל שפה של OpenAI"],
+"DSM":["Diagnostic and Statistical Manual of Mental Disorders","המדריך האמריקני לאבחון הפרעות נפשיות"],
+"DTI":["Diffusion Tensor Imaging","הדמיה של מסילות אקסונים לפי תנועת המים"],
+"EEG":["Electroencephalogram","רישום הפעילות החשמלית של המוח מהקרקפת"],
+"EPSP":["Excitatory Postsynaptic Potential","פוטנציאל פוסט־סינפטי מעורר"],
+"ERA":["English and Romanian Adoptees study","מחקר המאומצים מרומניה לאנגליה"],
+"ERP":["Event-Related Potential","פוטנציאל מעורר: תגובה חשמלית במוח לאירוע מסוים"],
+"FDG":["Fluorodeoxyglucose","גלוקוז רדיואקטיבי שמשמש בסריקת PET"],
+"FDR":["False Discovery Rate","תיקון סטטיסטי להשוואות מרובות"],
+"fMRI":["functional MRI","MRI תפקודי, מודד פעילות לפי רמת החמצן בדם"],
+"GABA":["Gamma-Aminobutyric Acid","גאבא, הנוירוטרנסמיטר המעכב העיקרי"],
+"GABAA":["","קולטן גאבא מסוג A, תעלת כלוריד"],
+"GAD":["Glutamic Acid Decarboxylase","האנזים שבונה גאבא מגלוטמט"],
+"GE":["General Electric","חברת ג'נרל אלקטריק"],
+"GLOBE":["Global Leadership and Organizational Behavior Effectiveness","מחקר בין־לאומי על מנהיגות ותרבות"],
+"GPS":["Global Positioning System","מערכת ניווט לווייני"],
+"HOME":["Home Observation for Measurement of the Environment","תצפית בבית למדידת הסביבה"],
+"IACUC":["Institutional Animal Care and Use Committee","ועדה מוסדית לפיקוח על מחקר בבעלי חיים"],
+"ICD":["International Classification of Diseases","הסיווג הבין־לאומי של מחלות"],
+"ICV":["Intracerebroventricular","מתן לתוך חדרי המוח"],
+"IM":["Intramuscular","הזרקה לתוך שריר"],
+"IP":["Intraperitoneal","הזרקה לחלל הבטן"],
+"IPSP":["Inhibitory Postsynaptic Potential","פוטנציאל פוסט־סינפטי מעכב"],
+"IQ":["Intelligence Quotient","מנת משכל"],
+"IRB":["Institutional Review Board","ועדת אתיקה מוסדית למחקר בבני אדם"],
+"IV":["Intravenous","הזרקה לווריד"],
+"LA":["Long-acting","שחרור ממושך"],
+"LLMs":["Large Language Models","מודלי שפה גדולים"],
+"LMX":["Leader-Member Exchange","תיאוריית חילופי מנהיג־עובד"],
+"LPC":["Least Preferred Coworker","שאלון העמית הפחות מועדף"],
+"LPD":["Letter Position Dyslexia","דיסלקסיית מיקום אותיות"],
+"MAO":["Monoamine Oxidase","מונואמין אוקסידאז, האנזים שמפרק מונואמינים"],
+"MBO":["Management by Objectives","ניהול לפי יעדים"],
+"MDMA":["","אקסטזי"],
+"MDS":["","סוללה ממוחשבת שנותנת מנות לקשב, זיכרון, זיכרון עבודה ותפקוד ניהולי"],
+"AQ":["Attention Quotient","מנת קשב"],
+"EFQ":["Executive Function Quotient","מנת התפקוד הניהולי"],
+"MEG":["Magnetoencephalography","מגנטו־אנצפלוגרפיה, מדידת השדות המגנטיים של המוח"],
+"MMQ":["Multifactorial Memory Questionnaire","שאלון זיכרון רב־גורמי"],
+"MMQ-C":["Multifactorial Memory Questionnaire - Contentment","שביעות רצון מהזיכרון"],
+"MMQ-S":["Multifactorial Memory Questionnaire - Strategy","שימוש באסטרטגיות זיכרון"],
+"MPTP":["","רעלן שהורס נוירונים דופמינרגיים"],
+"MQ":["Memory Quotient","מנת זיכרון כללית"],
+"MRI":["Magnetic Resonance Imaging","הדמיית תהודה מגנטית"],
+"mRNA":["messenger RNA","RNA שליח, העתק של גן שמשמש לבניית חלבון"],
+"NBAS":["Neonatal Behavioral Assessment Scale","סולם ברזלטון להערכת התנהגות יילודים"],
+"NCCP":["National Center for Children in Poverty","המרכז הלאומי לילדים בעוני"],
+"NE":["Norepinephrine","נוראפינפרין"],
+"NICHD":["National Institute of Child Health and Human Development","המכון הלאומי האמריקני לבריאות הילד"],
+"NMDA":["N-methyl-D-aspartate","סוג של קולטן גלוטמט שמעביר סידן"],
+"NpHR":["Halorhodopsin","נשא רגיש לאור צהוב שמעכב נוירון"],
+"OCD":["Obsessive-Compulsive Disorder","הפרעה טורדנית־כפייתית"],
+"OCPD":["Obsessive-Compulsive Personality Disorder","הפרעת אישיות טורדנית־כפייתית"],
+"OECD":["Organisation for Economic Co-operation and Development","הארגון לשיתוף פעולה ולפיתוח כלכלי"],
+"PAG":["Periaqueductal Gray","החומר האפור המרכזי"],
+"PBS":["Public Broadcasting Service","רשת השידור הציבורית האמריקנית"],
+"PCP":["Phencyclidine","פנציקלידין, ״אבק מלאכים״"],
+"PET":["Positron Emission Tomography","טומוגרפיה בפליטת פוזיטרונים"],
+"PHA-L":["Phaseolus vulgaris leucoagglutinin","חומר לסימון קדומני של אקסונים"],
+"PNS":["Peripheral Nervous System","מערכת העצבים ההיקפית"],
+"PSD":["Parental Screen Distraction","הסחת מסך הורית"],
+"RAVLT":["Rey Auditory Verbal Learning Test","מבחן הלמידה המילולית של ריי"],
+"REM":["Rapid Eye Movement","שנת חלומות, שבה העיניים זזות מהר"],
+"RNA":["Ribonucleic Acid","חומצה ריבונוקלאית"],
+"RQ1":["Research Question 1","שאלת המחקר הראשונה"],
+"RQ2":["Research Question 2","שאלת המחקר השנייה"],
+"RQ3":["Research Question 3","שאלת המחקר השלישית"],
+"RQ4":["Research Question 4","שאלת המחקר הרביעית"],
+"RVP":["Rapid Visual Information Processing","משימת קשב מתמשך"],
+"SAT":["Separation Anxiety Test","מבחן חרדת הפרידה"],
+"SC":["Subcutaneous","הזרקה מתחת לעור"],
+"SES":["Socioeconomic Status","מעמד סוציו־אקונומי"],
+"SfN":["Society for Neuroscience","העמותה למדע העצב"],
+"SLT":["Situational Leadership Theory","תיאוריית המנהיגות המצבית"],
+"SMC":["Subjective Memory Complaints","תלונות זיכרון סובייקטיביות"],
+"SQUID":["Superconducting Quantum Interference Device","גלאי רגיש במיוחד לשדות מגנטיים"],
+"SR":["Slow Release","שחרור איטי"],
+"SSP":["Spatial Span","משימת טווח זיכרון מרחבי"],
+"SSRI":["Selective Serotonin Reuptake Inhibitor","מעכב סלקטיבי של קליטה חוזרת של סרוטונין"],
+"SSS":["Stanford Sleepiness Scale","סולם הישנוניות של סטנפורד, ישנוניות ברגע"],
+"STAI-S":["State-Trait Anxiety Inventory - State","שאלון חרדת מצב"],
+"SVZ":["Subventricular Zone","האזור התת־חדרי"],
+"THC":["Tetrahydrocannabinol","החומר הפעיל בקנאביס"],
+"THCCOOH":["","תוצר הפירוק של THC שנמדד בבדיקה"],
+"TMN":["Tuberomammillary Nucleus","גרעין הפקעת הדדי"],
+"TMS":["Transcranial Magnetic Stimulation","גרייה מגנטית חוצת גולגולת"],
+"UCR":["Unconditioned Response","תגובה לא מותנית"],
+"UCS":["Unconditioned Stimulus","גירוי לא מותנה"],
+"VMH":["Ventromedial Hypothalamus","ההיפותלמוס הגחוני־מדיאלי"],
+"VRM":["Verbal Recognition Memory","זיכרון זיהוי מילולי"],
+"VTA":["Ventral Tegmental Area","אזור הטגמנטום הגחוני"],
+"VZ":["Ventricular Zone","האזור החדרי"],
+"WMQ":["Working Memory Quotient","מנת זיכרון העבודה"],
+"5-HT":["5-hydroxytryptamine","סרוטונין"],
+"2-DG":["2-deoxyglucose","גלוקוז מסומן שנקלט ולא מתפרק"],
+"L-DOPA":["","מולקולת־הקדם של דופמין"],
+"6-OHDA":["6-hydroxydopamine","רעלן שהורס נוירונים דופמינרגיים ונוראדרנרגיים"]
+};
+const ACR_RE=new RegExp("(?<![A-Za-z0-9])(?<![A-Za-z0-9]-)("+Object.keys(ACR).sort((a,b)=>b.length-a.length).map(k=>k.replace(/[-]/g,"\\-")).join("|")+")(?![A-Za-z0-9])(?!-[A-Za-z0-9])","g");
+const acrText=k=>{const [en,he]=ACR[k];return en?`${he}; <bdi dir="ltr">${en}</bdi>`:he};
+function acrExpand(html){
+  const plain=html.replace(/<[^>]+>/g," ");const seen=new Set();
+  for(const k of Object.keys(ACR)){const [en,he]=ACR[k];if((he&&plain.includes(he))||(en&&plain.toLowerCase().includes(en.toLowerCase())))seen.add(k)}
+  let inSvg=0;
+  return html.split(/(<svg[\s\S]*?<\/svg>|<[^>]+>)/).map(p=>{if(p.startsWith("<"))return p;
+    return p.replace(ACR_RE,(m,k,off,str)=>{if(seen.has(k))return m;seen.add(k);
+      const before=str.slice(0,off),inP=before.lastIndexOf("(")>before.lastIndexOf(")");
+      return inP?`<bdi class="ak">${m}</bdi>: ${acrText(k)}`:`<bdi class="ak">${m}</bdi> <span class="acr">(${acrText(k)})</span>`})}).join("");
+}
+function acrNote(...texts){const s=texts.join(" "),f=new Set();let m;ACR_RE.lastIndex=0;while((m=ACR_RE.exec(s)))f.add(m[1]);
+  return f.size?`<div class="acrnote"><b>ראשי תיבות:</b> ${[...f].map(k=>`<bdi class="ak">${k}</bdi> = ${acrText(k)}`).join(" · ")}</div>`:""}
+const T=[
+ {id:"t1",icon:"people",title:"מה משפיע על התנהגות צרכנים",blocks:[
+  {h:"מהי התנהגות צרכנים, וגורמים תרבותיים",html:`${def("על מה הנושא",`למה אדם אחד קונה מותג מסוים, ואדם אחר לא? הנושא מציג את שלוש קבוצות הגורמים שמשפיעות על הקנייה: תרבותיים, חברתיים ואישיים.<br><b>מה נלמד כאן:</b> התנהגות צרכנים · תרבות · תרבות משנה · מעמד חברתי`)}${def("מושג מפתח",`<mark>התנהגות צרכנים</mark> ${E("Consumer behavior")}: תחום מחקר שעוסק באופן שבו יחידים, קבוצות וארגונים בוחרים, קונים, משתמשים ומפסיקים להשתמש במוצרים, בשירותים ובחוויות, כדי לספק את הצרכים והרצונות שלהם.`)}${ex("בלומדה נלווה את <b>שירה</b>, סטודנטית שמחפשת מחשב נייד חדש, ואת <b>חברת ״אור״</b>, מפעל קטן שקונה חלקים מספקים.")}<p>לפי הספר, ל<b>גורמים התרבותיים</b> יש ההשפעה הרחבה והעמוקה ביותר.</p>${tiles([["building","תרבות","Culture: הגורם הבסיסי ביותר שקובע רצונות והתנהגות","ילד לומד מהמשפחה וממוסדות נוספים ערכי יסוד, כמו הישגיות, יעילות או אינדיבידואליזם. ילד שגדל בארץ אחרת יגדל עם ערכים ומנהגים אחרים.","שירה גדלה בבית שבו ״חוסכים לפני שקונים״, ולכן היא משווה מחירים הרבה לפני קנייה גדולה."],["copies","תרבות משנה","לאומים, דתות, קבוצות אתניות ואזורים גיאוגרפיים","כל תרבות מורכבת מתרבויות משנה קטנות יותר, שנותנות לחברים בהן זהות ספציפית יותר. כשתרבות משנה גדלה ומתעשרת, עסקים בונים לה תוכניות שיווק ייעודיות.","חברת מזון מפתחת קו מוצרים כשרים במיוחד לקהל דתי."],["pyramid","מעמד חברתי","קבוצות היררכיות שחבריהן חולקים ערכים, תחומי עניין והתנהגות","החלוקה הקלאסית בארצות הברית כוללת שבעה מעמדות, מהנמוך התחתון ועד הגבוה העליון. לבני מעמדות שונים יש העדפות שונות למוצרים ולמותגים.","בני מעמדות שונים יעדיפו לרוב רשתות ביגוד שונות."]])}`,q:"c1"},
+  {h:"גורמים חברתיים",html:`<p>מעבר לתרבות, גם הסביבה החברתית הקרובה משפיעה: <b>קבוצות התייחסות</b>, <b>משפחה</b>, ו<b>תפקידים ומעמד</b>.</p>${def("מושג מפתח",`<mark>קבוצות התייחסות</mark> ${E("Reference groups")}: כל הקבוצות שמשפיעות על העמדות או על ההתנהגות של אדם, באופן ישיר (פנים אל פנים) או עקיף.`)}<div class="tw"><table><tr><th>סוג קבוצה</th><th>מה זה</th><th>דוגמה</th></tr><tr><td><b>ראשונית</b></td><td>קבוצת חברוּת עם קשר רצוף ולא רשמי</td><td>משפחה, חברים, שכנים, עמיתים</td></tr><tr><td><b>משנית</b></td><td>קבוצת חברוּת רשמית יותר, עם פחות קשר רצוף</td><td>איגוד מקצועי, קהילה דתית</td></tr><tr><td><b>שאיפה</b></td><td>קבוצה שהאדם מקווה להצטרף אליה</td><td>״אנשי הייטק מצליחים״</td></tr><tr><td><b>מנותקת</b></td><td>קבוצה שהאדם דוחה ורוצה להתרחק ממנה</td><td>סגנון שהאדם לא רוצה שיזהו אותו איתו</td></tr></table></div>${tiles([["bulb","מנהיג דעה","Opinion leader: נותן עצות ומידע לא רשמי על מוצר או קטגוריה","משווקים מנסים לזהות אותו לפי מאפיינים דמוגרפיים ופסיכוגרפיים, ולהגיע אליו דרך ערוצי התקשורת שלו.","החבר של שירה ״שמבין במחשבים״, שכולם שואלים אותו איזה מחשב לקנות."],["people","משפחה","קבוצת ההתייחסות הראשונית המשפיעה ביותר","משפחת המוצא (הורים ואחים) מעצבת עמדות כלפי דת, פוליטיקה וכסף. משפחת ההקמה (בן או בת זוג וילדים) משפיעה ישירות על הקנייה היומיומית. בקניות יקרות, רוב בני הזוג מחליטים יחד, וגם לילדים ולבני נוער יש השפעה גדלה.","בני זוג מחליטים יחד על רכב חדש, והילדים משפיעים על בחירת יעד החופשה."],["id","תפקיד ומעמד","תפקיד הוא מה שמצפים מאדם לעשות, ולכל תפקיד יש מעמד","אנשים בוחרים מוצרים שמשדרים את התפקיד ואת המעמד שלהם, האמיתי או הרצוי. לכן מוצר יכול להפוך ל״סמל סטטוס״.","מנהלת בכירה בוחרת תיק עור יוקרתי שמתאים לתפקיד שלה."]])}`,q:"c2"},
+  {h:"גורמים אישיים",html:`<p>גם מאפיינים של האדם עצמו משפיעים על ההחלטה: גיל ושלב בחיים, עיסוק ומצב כלכלי, אישיות ותפיסת עצמי, וסגנון חיים וערכים.</p>${tiles([["clock","גיל ושלב במחזור החיים","הטעם משתנה עם הגיל, ומחזור חיי המשפחה משפיע על הצריכה","מעבר לגיל, חשוב גם מי גר בבית ובאיזה שלב. משווקים מתייחסים גם לאירועי חיים קריטיים, כמו נישואים, לידה, מעבר דירה או פרישה, שמעוררים צרכים חדשים.","זוג שנולד לו תינוק מתחיל פתאום לחפש רכב גדול ועגלה."],["chart","עיסוק ומצב כלכלי","המקצוע וההכנסה משפיעים על מה שקונים","עסקים מזהים קבוצות עיסוק עם עניין גבוה במוצר שלהם, ולפעמים מתאימים להן מוצר. מצב כלכלי כולל הכנסה פנויה, חסכונות, חובות ועמדות כלפי חיסכון והוצאה.","חברת תוכנה מפתחת גרסה מיוחדת לעורכי דין וגרסה אחרת לרופאים."],["target","אישיות מותג","Brand personality: תכונות אנושיות שאפשר לייחס למותג","החוקרת ג׳ניפר אקר זיהתה חמש תכונות: כנות, ריגוש, כשירות, תחכום וחספוס. צרכנים נוטים לבחור מותגים שהאישיות שלהם מתאימה לשלהם.","מותג רכב שטח ״מחוספס״ מושך מי שרואה את עצמו הרפתקן."],["id","תפיסת עצמי","בפועל, אידיאלית, או בעיני אחרים","ההתאמה בין המותג לאדם יכולה להיות לפי איך שהוא רואה את עצמו, איך שהוא רוצה לראות את עצמו, או איך שהוא חושב שאחרים רואים אותו. במוצרים שצורכים בפומבי, ההשפעה חזקה יותר.","שירה קונה מחשב שמתאים ל״סטודנטית מקצועית״ שהיא רוצה להיות."],["sprout","סגנון חיים","Lifestyle: דפוס החיים של אדם, כפי שהוא מתבטא בפעילויות, בתחומי עניין ובדעות","אנשים מאותו מעמד ועיסוק יכולים לחיות בסגנון שונה לגמרי. סגנון החיים מושפע גם ממגבלות של כסף ושל זמן.","יצרן מחשבים מגלה שרוב הקונים שלו ״הישגיים״, ומכוון את המותג לסגנון חיים כזה."],["check","ערכי יסוד","Core values: האמונות העמוקות שמנחות בחירות לטווח ארוך","הם עמוקים יותר מעמדות ומהתנהגות. משווקים מאמינים שאם פונים ל״עצמי הפנימי״, משפיעים גם על התנהגות הקנייה.","מותג שמדגיש קיימות פונה לצרכנים שאיכות הסביבה היא ערך חשוב בשבילם."]])}`,q:"c3"}
+ ]},
+ {id:"t2",icon:"brain",title:"תהליכים פסיכולוגיים",blocks:[
+  {h:"מודל הגירוי־תגובה והנעה",html:`${def("על מה הנושא",`מה קורה בראש של הצרכן בין הרגע שהוא נחשף לפרסומת לבין הרגע שהוא קונה? הספר מציג ארבעה תהליכים פסיכולוגיים: הנעה, תפיסה, למידה וזיכרון.<br><b>מה נלמד כאן:</b> מודל הגירוי־תגובה · הנעה · פרויד · מאסלו · הרצברג`)}<p>לפי <mark>מודל הגירוי־תגובה</mark> (איור 5.1), <b>גירויים שיווקיים</b> (מוצר, מחיר, הפצה, תקשורת) ו<b>גירויים סביבתיים</b> (כלכליים, טכנולוגיים, פוליטיים, תרבותיים) נכנסים לתודעת הצרכן. שם הם פוגשים את הפסיכולוגיה שלו ואת המאפיינים שלו, והתוצאה היא תהליך החלטה והחלטת קנייה. התפקיד של המשווק הוא להבין מה קורה ״בתוך הקופסה״.</p>${def("מושג מפתח",`<mark>מניע</mark> ${E("Motive")}: צורך שהתעורר בעוצמה מספיקה כדי לגרום לנו לפעול. צרכים יכולים להיות <b>ביוגניים</b> (רעב, צמא) או <b>פסיכוגניים</b> (הכרה, הערכה, שייכות). להנעה יש כיוון (לאיזה יעד) ועצימות (כמה מתאמצים).`)}${tiles([["brain","פרויד","הכוחות שמעצבים התנהגות הם ברובם לא מודעים","לכן אדם מגיב לא רק לתכונות המוצהרות של מותג, אלא גם לאותות פחות מודעים, כמו צורה, צבע, משקל ושם. טכניקת ה<b>סילום</b> (Laddering) עוקבת אחרי המניעים, מהמעשיים ועד הרגשיים.","קונה רכב אומר ״הוא חסכוני בדלק״, אבל בסילום מתגלה שהוא רוצה להרגיש אחראי ובוגר."],["pyramid","מאסלו","הצרכים מסודרים בהיררכיה, מהדחוף ביותר לפחות דחוף","פיזיולוגיים, ביטחון, חברתיים, הערכה ומימוש עצמי. אדם מנסה לספק קודם את הצרכים החשובים ביותר, ורק אחר כך את הבאים.","מי שבקושי מסתדר עם שכר דירה לא יחשוב עכשיו על קורס צילום להעשרה."],["scales","הרצברג","מבחין בין גורמים שאינם משביעי רצון לבין גורמים משביעי רצון","היעדר של גורם מתסכל לא מספיק כדי שאדם יקנה. צריך גם גורם משביע רצון אמיתי. לכן צריך להימנע מגורמים מתסכלים, וגם לספק גורמים מניעים.","מחשב בלי תעודת אחריות מתסכל, אבל אחריות לבד לא תגרום לשירה לקנות. קלות השימוש היא מה שימשוך אותה."]])}`,q:"c4"},
+  {h:"תפיסה",html:`${def("מושג מפתח",`<mark>תפיסה</mark> ${E("Perception")}: התהליך שבו אנחנו בוחרים, מארגנים ומפרשים מידע כדי ליצור תמונת עולם עם משמעות. בשיווק, התפיסה חשובה יותר מהמציאות, כי היא זו שמשפיעה על ההתנהגות.`)}<p><b>שיווק חישתי</b> הוא שיווק שמפעיל את החושים, ומשפיע על התפיסה, השיפוט וההתנהגות. אפשר להשתמש בו כדי לעצב תפיסה של איכויות מופשטות, כמו אישיות המותג, או של תכונות ספציפיות, כמו צבע או טעם.</p><p>אנשים שונים תופסים אותו דבר בצורה שונה בגלל שלושה תהליכים:</p>${tiles([["target","קשב בררני","Selective attention: מסננים החוצה את רוב הגירויים","שמים לב בעיקר לגירויים שקשורים לצורך קיים, לגירויים שמצפים להם, ולגירויים חריגים בגודלם. לכן משווקים מתאמצים מאוד למשוך תשומת לב.","מאז ששירה מחפשת מחשב, היא פתאום שמה לב לכל פרסומת למחשבים."],["cycle","סילוף בררני","Selective distortion: מפרשים מידע כך שיתאים למה שכבר חושבים","זה עוזר למותגים חזקים: מידע ניטרלי או עמום מתפרש לטובתם.","אותו קפה נראה לצרכן טעים יותר כשהוא יודע שזה המותג האהוב עליו."],["lock","זכירה בררנית","Selective retention: זוכרים את היתרונות של מה שאוהבים, ושוכחים את של המתחרים","גם זה יתרון למותגים חזקים. זו גם הסיבה שמשווקים חוזרים על המסר שוב ושוב.","שירה זוכרת את כל היתרונות של המותג שהיא אוהבת, ושוכחת שהמחשב המתחרה קל יותר."]])}`,q:"c5"},
+  {h:"למידה, רגשות וזיכרון",html:`${def("מושג מפתח",`<mark>למידה</mark> ${E("Learning")}: שינוי בהתנהגות שנובע מניסיון. לפי תיאוריות הלמידה, היא נוצרת ממשחק בין <b>דחפים</b> (גירוי פנימי חזק שדוחף לפעולה), <b>איתותים</b> (גירויים שקובעים מתי, איפה ואיך מגיבים), תגובות וחיזוקים.`)}${tiles([["copies","הכללה","Generalization: מגיבים לגירוי דומה כמו לגירוי המקורי","חוויה טובה עם מוצר אחד של מותג גורמת להניח שגם מוצרים אחרים שלו טובים.","שירה מרוצה מהמחשב, ולכן מניחה שגם המדפסת של אותה חברה טובה."],["split","הבחנה","Discrimination: לומדים לזהות הבדלים בין גירויים דומים","זו הנטייה ההפוכה להכללה: מתאימים את התגובה לכל גירוי בנפרד.","אחרי שהמדפסת אכזבה, שירה לומדת שהחברה טובה במחשבים, אבל לא במדפסות."]])}<p><b>רגשות:</b> התגובה של צרכנים היא לא רק רציונלית. מותג יכול לגרום להרגיש גאווה או ביטחון, ופרסומת יכולה לעורר שעשוע או פליאה. סיפור מותג רגשי גורם לאנשים לספר עליו הלאה, ולכן עסקים מוסיפים פנייה רגשית לתקשורת שלהם.</p>${def("מושג מפתח",`<mark>מודל רשת אסוציאטיבית של זיכרון</mark>: הזיכרון לטווח ארוך הוא רשת של <b>צמתים</b> (מידע שמור) ו<b>קישורים</b> ביניהם. כשצומת אחד מופעל, ההפעלה מתפשטת לצמתים שקשורים אליו חזק מספיק. ההבדל בין <b>זיכרון לטווח קצר</b> (זמני ומוגבל) לבין <b>זיכרון לטווח ארוך</b> (קבוע יותר וכמעט בלתי מוגבל).`)}${tiles([["brain","אסוציאציות למותג","כל המחשבות, הרגשות, החוויות והדימויים שמחוברים למותג בזיכרון","משווקים בונים ״מפות מנטליות״ שמראות את האסוציאציות העיקריות ואת העוצמה שלהן (איור 5.2).","״אמינה״, ״ותיקה״, ״שירות אישי״: אסוציאציות של חברת ביטוח."],["doc","קידוד","איך ומתי המידע נכנס לזיכרון","ככל שחושבים יותר על משמעות המידע בזמן הקידוד, הקשרים בזיכרון חזקים יותר.","פרסומת שגורמת לחשוב על המשמעות של המוצר תיזכר טוב יותר."],["cycle","אחזור","איך שולפים את המידע מהזיכרון","מידע יכול להיות שמור אבל לא נגיש בלי תזכורת. לכן השיווק בחנות, באריזה ובתצוגה, חשוב כל כך. וכשזוכרים מותג היטב, גם מדברים עליו.","האריזה על המדף מזכירה לשירה פרסומת שראתה לפני שבוע."]])}`,q:"c6"}
+ ]},
+ {id:"t3",icon:"cycle",title:"תהליך החלטת הקנייה",blocks:[
+  {h:"חמשת השלבים, זיהוי בעיה וחיפוש מידע",html:`${def("על מה הנושא",`איך צרכן מגיע להחלטה לקנות? הספר מציג מודל של חמישה שלבים. צרכנים לא תמיד עוברים את כולם, לפעמים מדלגים או חוזרים, אבל המודל מתאים במיוחד לקנייה עם <b>מעורבות גבוהה</b>.<br><b>מה נלמד כאן:</b> חמשת השלבים · חיפוש מידע · קבוצות המותגים`)}<div class="tw"><table><tr><th>שלב</th><th>מה קורה</th></tr><tr><td><b>1. זיהוי בעיה</b></td><td>הקונה מזהה צורך, מגירוי פנימי (רעב) או חיצוני (פרסומת)</td></tr><tr><td><b>2. חיפוש מידע</b></td><td>אוספים מידע על המוצרים והמותגים</td></tr><tr><td><b>3. הערכת חלופות</b></td><td>משווים בין המותגים לפי התכונות</td></tr><tr><td><b>4. החלטת קנייה</b></td><td>בוחרים, אבל גורמים שונים עוד יכולים להתערב</td></tr><tr><td><b>5. התנהגות אחרי הקנייה</b></td><td>שביעות רצון, שימוש, והיפטרות מהמוצר</td></tr></table></div><p><b>חיפוש מידע</b> יכול להיות ברמה מתונה, <b>קשב מוגבר</b> (פתוחים יותר לקלוט מידע), או ברמה גבוהה, <b>חיפוש מידע פעיל</b> (קוראים, שואלים, מחפשים ברשת, מבקרים בחנויות).</p>${tiles([["people","מקורות אישיים","משפחה וחברים","לרוב הם, יחד עם המקורות החווייתיים, המקורות היעילים ביותר.","שירה שואלת את אחיה איזה מחשב יש לו."],["cart","מקורות מסחריים","פרסומות, אתרים, אנשי מכירות, אריזות ותצוגות","מכאן מגיע רוב המידע, והוא בשליטת המשווק.","מוכר בחנות מסביר לשירה על המפרט."],["data","מקורות ציבוריים","תקשורת המונים ורשתות חברתיות","מקור ציבורי עצמאי נחשב לסמכותי.","כתבה עם השוואת מחשבים באתר חדשות."],["hand","מקורות חווייתיים","אחיזה, מישוש ושימוש במוצר","יחד עם המקורות האישיים, הם בדרך כלל היעילים ביותר.","שירה מקלידה על המחשב בחנות כדי לבדוק את המקלדת."]])}<p>המידע מצמצם את המותגים בהדרגה (איור 5.4): <b>הקבוצה הכוללת</b> (כל המותגים הזמינים) ← <b>קבוצת המודעות</b> (מה שהצרכן מכיר) ← <b>קבוצת השיקול</b> (מה שעומד בדרישות הראשונות) ← <b>קבוצת הבחירה</b> (המתמודדים החזקים) ← החלטה. העסק צריך להכניס את המותג שלו לכל הקבוצות האלה.</p>`,q:"c7"},
+  {h:"הערכת חלופות",html:`<p>רוב המודלים רואים בצרכן מי שמעריך מוצרים <b>באופן מודע ורציונלי</b>: הוא מנסה לספק צורך, מחפש תועלות מסוימות, ורואה בכל מוצר <b>חבילת תכונות</b>.</p>${tiles([["doc","אמונה","Belief: מחשבה תיאורית שיש לאדם על משהו","למשל, ״המחשב הזה קל״.","שירה מאמינה שמחשב א׳ הוא בעל הזיכרון הגדול ביותר."],["scales","עמדה","Attitude: הערכה יציבה, חיובית או שלילית, עם רגשות ונטייה לפעולה","עמדות חוסכות מאמץ ולכן קשה לשנות אותן. עדיף לעסק להתאים את המוצר לעמדות קיימות מאשר לנסות לשנות אותן.","שירה ״לא סובלת״ מותג מסוים, ולא תשקול אותו גם אם הוא זול."]])}${def("מושג מפתח",`<mark>מודל תוחלת הערך</mark> ${E("Value-expectancy model")}: הצרכן מעריך כל מותג על ידי שקלול האמונות שלו לגבי כל תכונה, לפי החשיבות של התכונה. מכפילים את המשקל של כל תכונה בציון של המותג בה, ומחברים.`)}${ex(`הדוגמה מהספר: גל נותנת משקל של 40% לזיכרון, 30% ליכולת גרפית, 20% לגודל ומשקל ו־10% למחיר. מחשב א׳ קיבל ממנה 8, 9, 6 ו־9. החישוב: 0.4×8 + 0.3×9 + 0.2×6 + 0.1×9 = <b>8.0</b>. המחשב עם הציון הגבוה ביותר הוא הבחירה הצפויה.`)}<p>כשמשווק יודע איך הקונים מעריכים, הוא יכול להשפיע:</p>${tiles([["gear","מיצוב מחדש אמיתי","לשנות את המוצר עצמו","מעצבים מחדש את המחשב.","מוסיפים זיכרון למחשב."],["brain","מיצוב מחדש פסיכולוגי","לשנות את האמונות לגבי המותג","בלי לשנות את המוצר, משנים איך רואים אותו.","פרסומת שמראה שהמחשב קל יותר ממה שחושבים."],["split","מיצוב מחדש תחרותי","לשנות את האמונות לגבי המתחרים","מראים שהמתחרים פחות טובים ממה שנדמה.","השוואה שמראה שהמחשב המתחרה כבד יותר."],["scales","שינוי משקלים או אידיאלים","לשכנע שתכונה מסוימת חשובה יותר, או לשנות את הרמה האידיאלית","מעודדים את הקונה לתת משקל גבוה לתכונה שבה המותג מצטיין.","״במחשב לסטודנטים, הכי חשוב זה חיי סוללה.״"]])}`,q:"c8"},
+  {h:"החלטת רכישה והתנהגות אחרי הקנייה",html:`<p>גם אחרי שיש כוונה לקנות, שני גורמים יכולים להפריד בין <b>כוונת הרכישה</b> לבין <b>החלטת הרכישה</b>:</p>${tiles([["people","עמדות של אחרים","כמה האחר שלילי כלפי הבחירה, וכמה הצרכן מוכן להתחשב בו","ככל שעמדת האחר שלילית יותר והוא קרוב יותר לצרכן, הצרכן ישנה את הכוונה שלו יותר.","החבר של שירה אומר ״המחשב הזה נתקע כל הזמן״, והיא מתחילה להסס."],["x","נסיבות בלא צפויות","אירועים שמשנים את כוונת הרכישה","בגלל זה, העדפות ואפילו כוונות לא מנבאות היטב קנייה בפועל.","שירה מאבדת את העבודה, והקנייה נדחית."]])}${def("מושג מפתח",`<mark>סיכון נתפס</mark> ${E("Perceived risk")}: החשש שהקנייה לא תצליח. הוא יכול להיות <b>תפקודי</b> (המוצר לא עונה על הציפיות) או <b>חברתי</b> (המוצר מביך מול אחרים). הסיכון גדל עם הסכום, עם אי־הוודאות לגבי התכונות, ועם חוסר ביטחון עצמי. המשווק צריך לספק מידע ותמיכה שמקטינים אותו.`)}<p><b>אחרי הקנייה</b> הצרכן יכול לחוות <b>דיסוננס</b>: הוא מבחין בחסרונות, או שומע דברים טובים על מותגים אחרים, ומחפש מידע שיתמוך בהחלטה שלו. צרכן מרוצה יקנה שוב וימליץ. צרכן לא מרוצה עלול להחזיר את המוצר, להתלונן בפומבי או להזהיר חברים.</p>${rem("לכן המשווק צריך לעקוב גם אחרי מה שקורה אחרי הקנייה: שביעות רצון, שימוש, קצב צריכה ואיך נפטרים מהמוצר. תקשורת עם הקונה אחרי הקנייה מפחיתה החזרות וביטולים.")}`,q:"c9"}
+ ]},
+ {id:"t4",icon:"question",title:"החלטות לא רציונליות",blocks:[
+  {h:"היוריסטיקות ומסגור",html:`${def("על מה הנושא",`צרכנים לא תמיד מחליטים בצורה שקולה ורציונלית. <b>תיאוריית ההחלטה ההתנהגותית</b> (BDT) מצאה מצבים רבים של בחירה ״לא רציונלית לכאורה״, והובילה לתחום ה<b>כלכלה ההתנהגותית</b>. ההקשר שבו מחליטים משנה מאוד את ההחלטה.<br><b>מה נלמד כאן:</b> היוריסטיקות · מסגור · חשבונאות מנטלית · תורת הערך`)}${def("מושג מפתח",`<mark>היוריסטיקה</mark> ${E("Heuristic")}: קיצור דרך מנטלי או ״כלל אצבע״ שבו משתמשים כשמעריכים כמה סביר שמשהו יקרה.`)}${tiles([["clock","היוריסטיקת זמינות","מעריכים לפי כמה מהר דוגמה עולה לראש","אם דוגמה עולה בקלות רבה מדי, מגזימים בהערכת הסבירות שלה.","אחרי שהמחשב הקודם התקלקל, שירה בטוחה שגם החדש יתקלקל, וקונה אחריות מורחבת."],["copies","היוריסטיקת ייצוגיות","מעריכים לפי כמה משהו דומה לדוגמה מוכרת","זו אחת הסיבות שאריזות של מותגים באותה קטגוריה דומות זו לזו: כדי להיתפס כמייצגות את הקטגוריה.","מותג פרטי של רשת מעצב אריזה שדומה למותג המוביל."],["target","היוריסטיקת עיגון והתאמה","מגבשים רושם ראשוני ואז מתקנים אותו, לפעמים בקושי","לכן לרושם ראשוני חזק יש חשיבות גדולה, במיוחד בשירותים: הוא יוצר עוגן, וכל מה שבא אחריו מתפרש לאורו.","קבלת פנים חמה בבית מלון גורמת לאורחים לסלוח על תקלה קטנה אחר כך."]])}${def("מושג מפתח",`<mark>מסגור החלטות</mark> ${E("Decision framing")}: האופן שבו מוצגות האפשרויות משנה את ההחלטה.`)}${ex(`טלפון ב־200 דולר לא ייראה יקר ליד טלפונים ב־400 דולר, אבל ייראה יקר מאוד ליד טלפונים ב־50 דולר.`)}${tiles([["pie","חשבונאות מנטלית","Mental accounting: מחלקים את הכסף ל״חשבונות״ בראש","כך צרכנים מקודדים, מסווגים ומעריכים את התוצאות הכספיות של הבחירות שלהם.","כסף ״מתנה״ מוציאים בקלות, וכסף ״משכורת״ שומרים."],["scales","תורת הערך","Prospect theory: מסגרים בחירות כרווח או הפסד","צרכנים נרתעים מהפסדים, נותנים משקל יתר להסתברויות נמוכות מאוד, ומעט מדי משקל להסתברויות גבוהות מאוד.","הפסד של 100 ש״ח מכאיב יותר משמשמח רווח של 100 ש״ח."]])}`,q:"c10"}
+ ]},
+ {id:"t5",icon:"factory",title:"השוק העסקי",blocks:[
+  {h:"קנייה מוסדית ומה מיוחד בשוק העסקי",html:`${def("על מה הנושא",`לא כל המשווקים מוכרים לצרכנים פרטיים. רבים מוכרים לארגונים. הנושא מסביר מה זו קנייה מוסדית ובמה השוק העסקי שונה משוק הצרכנים.<br><b>מה נלמד כאן:</b> קנייה מוסדית · שוק עסקי · שוק מוסדי וממשלתי`)}${def("מושג מפתח",`<mark>קנייה מוסדית</mark> ${E("Organizational buying")}: לפי וובסטר ווינד, תהליך קבלת ההחלטות שבו ארגונים רשמיים קובעים שיש צורך לרכוש מוצרים ושירותים, ומזהים, מעריכים ובוחרים בין מותגים וספקים.`)}<p>ה<mark>שוק העסקי</mark> ${E("Business market")} כולל את כל הארגונים שקונים מוצרים ושירותים כדי לייצר מוצרים או שירותים אחרים, שנמכרים, מושכרים או מסופקים לאחרים. לדוגמה, בייצור זוג נעליים: סוחר עורות מוכר למפעל עיבוד, שמוכר ליצרן נעליים, שמוכר לסיטונאי, שמוכר לקמעונאי, שמוכר לצרכן.</p><div class="tw"><table><tr><th>מאפיין (טבלה 5.1)</th><th>מה זה אומר</th></tr><tr><td><b>פחות קונים, וגדולים יותר</b></td><td>הרבה פחות לקוחות, אבל כל אחד קונה הרבה</td></tr><tr><td><b>יחסי ספק־לקוח הדוקים</b></td><td>מצפים מהספק להתאים את ההצעה לכל לקוח</td></tr><tr><td><b>קניינות מקצועית</b></td><td>עובדי רכש מוכשרים, מדיניות רכש, הצעות מחיר וחוזים</td></tr><tr><td><b>יותר גורמים משפיעים</b></td><td>הרבה אנשים מעורבים בהחלטה</td></tr><tr><td><b>פגישות מכירה רבות</b></td><td>מחזור מכירה שנמדד לפעמים בשנים</td></tr><tr><td><b>ביקוש נגזר</b></td><td>הביקוש נובע בסוף מהביקוש של צרכני הקצה</td></tr><tr><td><b>ביקוש קשיח</b></td><td>כמעט לא מושפע משינויי מחיר בטווח הקצר</td></tr><tr><td><b>ביקוש תנודתי</b></td><td>שינוי קטן אצל הצרכנים יוצר שינוי גדול בביקוש לציוד</td></tr><tr><td><b>ריכוז גיאוגרפי</b></td><td>הקונים מרוכזים באזורים מסוימים</td></tr><tr><td><b>רכש ישיר</b></td><td>קונים ישירות מהיצרן, במיוחד פריטים מורכבים או יקרים</td></tr></table></div>${tiles([["building","שוק מוסדי","Institutional market: בתי ספר, בתי חולים ומוסדות שמספקים שירות לאנשים שבטיפולם","לרוב יש להם תקציב נמוך ולקוחות ״שבויים״. המטרה היא לא רווח, אבל גם לא רק לחסוך: צריך איכות מינימלית במחיר נמוך.","בית חולים בוחר ספק מזון שעומד ברמת איכות מינימלית, אבל זול."],["pyramid","שוק ממשלתי","גופים ממשלתיים קונים הרבה מאוד מוצרים ושירותים","לרוב דורשים מכרזים ובוחרים בהצעה הזולה, אבל לפעמים מתחשבים באיכות או במוניטין. בפרויקטים מורכבים ומסוכנים, קונים לפי חוזה שנקבע במשא ומתן.","משרד ממשלתי מפרסם מכרז לאספקת מחשבים."]])}`,q:"c11"},
+  {h:"מצבי קנייה עסקיים",html:`<p>מספר ההחלטות שהקונה העסקי צריך לקבל תלוי במורכבות הבעיה, בכמה הקנייה חדשה, במספר המעורבים ובזמן. יש שלושה מצבי קנייה עיקריים:</p>${tiles([["cycle","קנייה חוזרת פשוטה","Straight rebuy: הזמנה שגרתית מספק ברשימת הספקים המורשים","הספקים הקיימים שומרים על איכות ומציעים הזמנה אוטומטית. ספקים מבחוץ מנסים להציע משהו חדש, להתחיל בהזמנה קטנה ולגדול.","חברת ״אור״ מזמינה נייר למשרד מאותו ספק כל חודש."],["gear","קנייה חוזרת בשינויים","Modified rebuy: רוצים לשנות מפרט, מחיר, אספקה או תנאים","יותר משתתפים מעורבים. הספקים הקיימים חוששים לאבד את הלקוח, וספקים מבחוץ רואים הזדמנות.","״אור״ רוצה את אותם חלקים, אבל באספקה מהירה יותר ובמחיר נמוך יותר."],["bulb","מטלה חדשה","New task: קונים מוצר או שירות בפעם הראשונה","ככל שהעלות והסיכון גדולים יותר, יש יותר משתתפים, יותר מידע, וההחלטה לוקחת יותר זמן. זה המצב עם הכי הרבה החלטות.","״אור״ קונה בפעם הראשונה מערכת אבטחה למפעל."]])}<p>עם הזמן, מטלה חדשה הופכת לקנייה חוזרת שגרתית. הקנייה עוברת שלבים: מודעות, עניין, הערכה, ניסוי ואימוץ. תקשורת המונים חשובה בשלב המודעות, אנשי מכירות בשלב העניין, ומקורות טכניים בשלב ההערכה.</p>${def("מושג מפתח",`<mark>קניית מערכות</mark> ${E("Systems buying")}: הקונה מעדיף לקנות פתרון שלם מספק אחד. בגרסה של <b>קבלנות מערכות</b>, ספק אחד מספק את כל צורכי התחזוקה, התיקון והתפעול (MRO). זה חוסך לקונה עלויות רכש ומלאי, ונותן לספק ביקוש קבוע.`)}`,q:"c12"}
+ ]},
+ {id:"t6",icon:"people",title:"מרכז הקניות ותהליך הקנייה העסקי",blocks:[
+  {h:"מרכז הקניות",html:`${def("מושג מפתח",`<mark>מרכז הקניות</mark> ${E("Buying center")}: לפי וובסטר ווינד, כל האנשים והקבוצות שמשתתפים בהחלטת הרכש, חולקים מטרות משותפות, וחולקים גם את הסיכונים של ההחלטה.`)}<div class="tw"><table><tr><th>תפקיד</th><th>מה הוא עושה</th></tr><tr><td><b>יוזמים</b></td><td>מבקשים שמשהו ייקנה</td></tr><tr><td><b>משתמשים</b></td><td>ישתמשו במוצר. לעתים קרובות הם גם היוזמים ועוזרים להגדיר דרישות</td></tr><tr><td><b>משפיעים</b></td><td>עוזרים להגדיר מפרט ומספקים מידע להערכת חלופות</td></tr><tr><td><b>מחליטים</b></td><td>מחליטים על הדרישות או על הספקים</td></tr><tr><td><b>מאשרים</b></td><td>מאשרים את מה שהמחליטים או הקניינים מציעים</td></tr><tr><td><b>קניינים</b></td><td>בעלי הסמכות הרשמית לבחור ספק ולנהל משא ומתן</td></tr><tr><td><b>שומרי סף</b></td><td>יכולים למנוע ממוכרים או ממידע להגיע לשאר המשתתפים</td></tr></table></div>${ex(`בחברת ״אור״ מנהל הרכש יכול להיות בבת אחת קניין, משפיע ושומר סף: הוא מחליט אילו אנשי מכירות יגיעו לאחרים, איזה תקציב יש, ומי יזכה.`)}<p>המשתתפים במרכז הקניות שונים זה מזה באינטרסים, בסמכויות ובקריטריונים: מהנדסים רוצים ביצועים, אנשי הייצור רוצים קלות שימוש ואספקה אמינה, אנשי הכספים מתמקדים בעלות. וובסטר מזכיר שבסוף <b>אנשים</b> מחליטים, לא ארגונים, ויש להם מניעים ותפיסות אישיים.</p>${rem("מוכרים קטנים מתרכזים בהגעה למשפיעים העיקריים. מוכרים גדולים משתמשים במכירה רב־שכבתית לעומק, כדי להגיע לכמה שיותר משתתפים.")}`,q:"c13"},
+  {h:"שמונת שלבי הקנייה העסקית",html:`<p>לפי <mark>טבלת הקנייה</mark> ${E("Buygrid")} של רובינסון ועמיתיו, תהליך הקנייה העסקית כולל שמונה שלבים. בקנייה חוזרת, חלק מהשלבים מתקצרים או נעקפים.</p><div class="tw"><table><tr><th>שלב</th><th>מטלה חדשה</th><th>קנייה חוזרת בשינויים</th><th>קנייה חוזרת פשוטה</th></tr><tr><td>1. זיהוי בעיה</td><td>כן</td><td>אולי</td><td>לא</td></tr><tr><td>2. תיאור צורך כללי</td><td>כן</td><td>אולי</td><td>לא</td></tr><tr><td>3. מפרט מוצר</td><td>כן</td><td>כן</td><td>כן</td></tr><tr><td>4. חיפוש ספק</td><td>כן</td><td>אולי</td><td>לא</td></tr><tr><td>5. בקשת הצעות</td><td>כן</td><td>אולי</td><td>לא</td></tr><tr><td>6. בחירת ספק</td><td>כן</td><td>אולי</td><td>לא</td></tr><tr><td>7. מפרט שגרת הזמנה</td><td>כן</td><td>אולי</td><td>לא</td></tr><tr><td>8. ביקורת ביצועים</td><td>כן</td><td>כן</td><td>כן</td></tr></table></div>${tiles([["gear","ניתוח ערך מוצר","PVA: בודקים אם אפשר לעצב, לתקנן או לייצר רכיבים בזול, בלי לפגוע בביצועים","זה נעשה בשלב המפרט. ספקים יכולים להשתמש בזה כדי לזכות בלקוח.","צוות הנדסה מגלה שרכיב מסוים מחזיק יותר שנים מהמוצר עצמו, ומחליף אותו בזול."],["link","צמתי מסחר אלקטרוני","e-hubs: אנכיים (לפי ענף) ותפקודיים (לפי פונקציה)","בשלב חיפוש הספק, עסקים משתמשים בשוק האלקטרוני: קטלוגים, אתרי ענף, מכירות פומביות, בריתות קנייה ועוד (טבלה 5.3).","מפעל מחפש ספק פלסטיק באתר שמרכז ספקים מהענף."],["doc","חוזה כולל","Blanket contract: הספק מתחייב לספק לפי הצורך, במחירים קבועים, לאורך תקופה","זה נקרא גם תוכנית רכש נטול מלאי, כי המלאי נשאר אצל הספק. יחסים כאלה מקשים על ספקים חדשים להיכנס.","״אור״ חותמת על חוזה שנתי לברגים, ומקבלת משלוח בכל פעם שצריך."],["cycle","מלאי בניהול הספק","VMI: הספק רואה את רמות המלאי של הלקוח ואחראי לחדש אותו","זה נעשה דרך תוכניות חידוש מתמיד.","הספק רואה שהמלאי של ״אור״ ירד, ושולח משלוח בלי לחכות להזמנה."]])}<p><b>ביקורת ביצועים</b>: הקניין בודק את הספק בשלוש דרכים: שואל את משתמשי הקצה, מדרג לפי ציון משוקלל, או מחשב את העלות של ביצועים גרועים. התוצאה יכולה להיות המשך, שינוי או סיום של הקשר.</p>`,q:"c14"}
+ ]},
+ {id:"t7",icon:"link",title:"יחסים עם לקוחות עסקיים",blocks:[
+  {h:"תיאום אנכי, סיכונים ואופורטוניזם",html:`${def("על מה הנושא",`ספקים ולקוחות עסקיים מחפשים דרכים לנהל את היחסים ביניהם. הנושא עוסק ביתרונות של קשר הדוק, ובסיכונים שלו.<br><b>מה נלמד כאן:</b> תיאום אנכי · שמונה סוגי יחסים · השקעות ספציפיות · אופורטוניזם`)}<p>מחקרים ממליצים על <mark>תיאום אנכי</mark> בין הקונה למוכר, כך שהיחסים יהיו יותר מעסקה בודדת ויצרו ערך לשני הצדדים. בניית <b>אמון</b> היא תנאי בסיסי. היחסים מושפעים מזמינות החלופות, מחשיבות האספקה, ממורכבות האספקה ומהדינמיקה בשוק.</p><div class="tw"><table><tr><th>סוג יחסים</th><th>במה מאופיין</th></tr><tr><td><b>קנייה ומכירה בסיסית</b></td><td>שגרתי, שיתוף פעולה ומידע ברמה מתונה</td></tr><tr><td><b>רק מה שהכרחי</b></td><td>המוכר מסתגל יותר, פחות שיתוף פעולה ומידע</td></tr><tr><td><b>עסקה חוזית</b></td><td>מוגדר בחוזה, אמון ושיתוף פעולה נמוכים</td></tr><tr><td><b>אספקה ללקוח</b></td><td>מסורתי, תחרות ולא שיתוף פעולה</td></tr><tr><td><b>מערכות שיתוף פעולה</b></td><td>מאוחדים תפעולית, בלי מחויבות מבנית</td></tr><tr><td><b>עבודת צוות</b></td><td>אמון ומחויבות הדדיים, יכול להוביל לשותפות אמיתית</td></tr><tr><td><b>סתגלנות הדדית</b></td><td>מסתגלים זה לזה בתחומים מסוימים, בלי בהכרח אמון רב</td></tr><tr><td><b>הלקוח הוא המלך</b></td><td>המוכר מתאים את עצמו ללקוח בלי לצפות לשינוי מצד הלקוח</td></tr></table></div>${tiles([["lock","השקעות ספציפיות","הוצאות שמותאמות לעסק מסוים ולשותפים שלו","למשל הדרכה ייחודית, ציוד או מערכות תפעול. הן עוזרות להגדיל רווחים ולהשיג מיצוב, אבל מגדילות את הסיכון, כי אי אפשר להשתמש בהן במקום אחר.","ספק קונה מכונה שמייצרת רק את החלק המיוחד של ״אור״."],["x","אופורטוניזם","סוג של רמאות או אספקה חסרה ביחס לחוזה","הספק מפר הסכם לטובתו, או מסרב להסתגל לנסיבות. זה מחייב את הלקוח להשקיע בבקרה. ספק עם שם טוב נוטה להימנע מזה, כדי לשמור על המוניטין.","ספק שולח חלקים באיכות נמוכה מהמוסכם, כי הוא יודע שקשה לבדוק."]])}${rem("בבניית יחסים יש מתח בין שמירה על המשמר (פתרונות צפויים) לבין הסתגלות (גמישות מול הלא צפוי). חוזה לבד לא תמיד מספיק, במיוחד כשקשה לגלות אופורטוניזם או לצפות את הנסיבות מראש.")}`,q:"c15"}
+ ]},
+ {id:"tx",icon:"grad",title:"תרגול בסגנון המבחן",blocks:[
+  {h:"שאלות מסכמות",html:`${def("על מה הנושא",`שאלות שמחברות בין חלקי הפרק. נסו לזהות לאיזה מושג שייך כל מקרה.`)}${rem("טיפ: בשאלות מקרה, חפשו קודם באיזה חלק של הפרק מדובר: גורם שמשפיע על הצרכן, תהליך פסיכולוגי, שלב בתהליך הקנייה, או קנייה עסקית.")}`,q:"cx"}
+ ]}
+];
+const Q={"c1": {"t": "t1", "v": [{"q": "לפי הספר, לאיזו קבוצת גורמים יש ההשפעה הרחבה והעמוקה ביותר על הצרכן?", "a": "הגורמים התרבותיים", "w": ["הגורמים החברתיים", "הגורמים האישיים", "הגורמים הפסיכולוגיים"], "e": "הספר קובע שלגורמים התרבותיים (תרבות, תרבות משנה ומעמד) יש ההשפעה המקיפה והעמוקה ביותר."}, {"q": "חברת מזון מפתחת קו מוצרים מיוחד לקהילה דתית שגדלה ומתעשרת. לאיזה גורם היא מתייחסת?", "a": "תרבות משנה", "w": ["מעמד חברתי", "קבוצת שאיפה", "סגנון חיים"], "e": "תרבויות משנה כוללות דתות, לאומים, קבוצות אתניות ואזורים. כשהן גדלות, עסקים בונים להן תוכניות ייעודיות."}]}, "c2": {"t": "t1", "v": [{"q": "סטודנט קונה בגדים כמו של ״אנשי ההייטק המצליחים״, שהוא מקווה להיות אחד מהם. איזו קבוצה זו?", "a": "קבוצת שאיפה", "w": ["קבוצה ראשונית", "קבוצה משנית", "קבוצה מנותקת"], "e": "קבוצת שאיפה היא קבוצה שאדם מקווה להצטרף אליה, גם אם הוא עוד לא חבר בה."}, {"q": "מהי ״משפחת ההקמה״?", "a": "בן או בת הזוג והילדים", "w": ["ההורים והאחים", "כל בני המשפחה המורחבת", "המשפחה שבה האדם גדל"], "e": "משפחת המוצא היא ההורים והאחים. משפחת ההקמה היא בן או בת הזוג והילדים, ולה השפעה ישירה יותר על הקנייה היומיומית."}]}, "c3": {"t": "t1", "v": [{"q": "לפי ג׳ניפר אקר, מה מהבאים הוא אחת מתכונות אישיות המותג?", "a": "תחכום", "w": ["נאמנות", "מחיר", "זמינות"], "e": "אקר זיהתה חמש תכונות: כנות, ריגוש, כשירות, תחכום וחספוס."}, {"q": "אדם בוחר מותג שמתאים לאיך שהוא רוצה לראות את עצמו. על איזו תפיסת עצמי מבוססת הבחירה?", "a": "תפיסת העצמי האידיאלי", "w": ["תפיסת העצמי בפועל", "תפיסת העצמי בעיני אחרים", "תפיסת העצמי המעמדי"], "e": "בפועל: איך אדם רואה את עצמו. אידיאלי: איך הוא רוצה לראות את עצמו. בעיני אחרים: איך הוא חושב שאחרים רואים אותו."}]}, "c4": {"t": "t2", "v": [{"q": "מחשב בלי תעודת אחריות מרתיע קונים, אבל אחריות לבד לא גורמת לקנות. איזו תיאוריה מסבירה את זה?", "a": "התיאוריה הדו־גורמית של הרצברג", "w": ["היררכיית הצרכים של אברהם מאסלו", "התיאוריה של פרויד על מניעים סמויים", "מודל הגירוי־תגובה של התנהגות צרכנים"], "e": "הרצברג מבחין בין גורמים שאינם משביעי רצון (היעדרם מרתיע) לבין גורמים משביעי רצון (הם מה שמניע לקנות)."}, {"q": "איזו טכניקה עוקבת אחרי המניעים של הצרכן, מהמניע המעשי ועד הרגשי?", "a": "סילום (Laddering)", "w": ["מסגור החלטות", "ניתוח ערך מוצר (PVA)", "מודל תוחלת הערך"], "e": "טכניקת הסילום קשורה לגישה של פרויד, שלפיה רוב המניעים לא מודעים, ועוזרת להחליט באיזו רמה לבנות את המסר."}]}, "c5": {"t": "t2", "v": [{"q": "צרכן שאוהב מותג מסוים זוכר את כל היתרונות שלו, ושוכח את היתרונות של המתחרים. איזה תהליך זה?", "a": "זכירה בררנית", "w": ["קשב בררני", "סילוף בררני", "הכללה"], "e": "זכירה בררנית: זוכרים את הנקודות לזכות מה שאוהבים, ושוכחים את הנקודות לזכות המתחרים."}, {"q": "לפי הספר, למה שאנשים יבחינו בפרסומת על הנחה של 100 דולר יותר מאשר על הנחה של 5 דולר?", "a": "כי שמים לב לגירויים חריגים בגודלם", "w": ["כי מסלפים מידע לטובת מותגים חזקים", "כי זוכרים רק מידע שמתאים לעמדות", "כי הנחה גדולה מעוררת דיסוננס"], "e": "בקשב בררני, אנשים נוטים להבחין בגירויים שקשורים לצורך, שהם מצפים להם, או שחריגים בגודלם."}]}, "c6": {"t": "t2", "v": [{"q": "צרכן מרוצה מהמחשב של חברה, ולכן מניח שגם המדפסת שלה טובה. איזה עיקרון למידה זה?", "a": "הכללה", "w": ["הבחנה", "חיזוק שלילי", "קידוד זיכרון"], "e": "הכללה היא תגובה דומה לגירויים דומים. הבחנה היא ההפך: לומדים לזהות הבדלים."}, {"q": "לפי מודל הרשת האסוציאטיבית, מה קורה כשצומת אחד בזיכרון מופעל?", "a": "ההפעלה מתפשטת לצמתים הקשורים אליו", "w": ["הזיכרון לטווח הקצר מתאפס לגמרי", "רק המידע החזותי נשלף מהזיכרון", "כל הקישורים החלשים מתחזקים מיד"], "e": "ההפעלה מתפשטת מצומת לצומת, וכך קובעת איזה מידע נשלף, אם הקשר חזק מספיק."}]}, "c7": {"t": "t3", "v": [{"q": "מה מהבאים הוא הסדר הנכון של קבוצות המותגים בתהליך ההחלטה?", "a": "כוללת ← מודעות ← שיקול ← בחירה", "w": ["מודעות ← כוללת ← בחירה ← שיקול", "שיקול ← מודעות ← כוללת ← בחירה", "כוללת ← שיקול ← מודעות ← בחירה"], "e": "מכל המותגים הזמינים, הצרכן מכיר רק חלק, שוקל רק חלק מהם, ובוחר מתוך קבוצה קטנה של מתמודדים חזקים."}, {"q": "לפי הספר, אילו מקורות מידע הם בדרך כלל היעילים ביותר?", "a": "מקורות אישיים וחווייתיים", "w": ["מקורות מסחריים בלבד", "פרסומות בתקשורת ההמונים", "אנשי מכירות וקטלוגים"], "e": "רוב המידע מגיע ממקורות מסחריים, אבל המידע היעיל ביותר מגיע לרוב ממקורות אישיים או חווייתיים, או ממקור ציבורי עצמאי."}]}, "c8": {"t": "t3", "v": [{"q": "משווק מנסה לשכנע קונים שחיי סוללה הם התכונה הכי חשובה, כי בה המחשב שלו מצטיין. מה הוא עושה?", "a": "משנה את משקלי החשיבות", "w": ["עושה מיצוב מחדש אמיתי", "עושה מיצוב מחדש תחרותי", "משנה את המוצר עצמו"], "e": "שינוי משקלים: לשכנע קונים לייחס יותר חשיבות לתכונות שבהן המותג חזק."}, {"q": "לפי הספר, למה עדיף לעסק להתאים את המוצר לעמדות קיימות?", "a": "כי קשה מאוד לשנות עמדות", "w": ["כי עמדות משתנות כל יום", "כי לצרכנים אין עמדות על מוצרים", "כי עמדות לא משפיעות על קנייה"], "e": "עמדות חוסכות לאדם מאמץ וחשיבה, ולכן קשה לשנות אותן."}]}, "c9": {"t": "t3", "v": [{"q": "קונה חושש שהמוצר יביך אותו מול חברים. איזה סוג של סיכון נתפס זה?", "a": "סיכון חברתי", "w": ["סיכון תפקודי", "סיכון כספי", "סיכון אופורטוניסטי"], "e": "סיכון תפקודי: המוצר לא עונה על הציפיות. סיכון חברתי: המוצר גורם למבוכה מול אחרים."}, {"q": "שירה כבר רצתה לקנות מחשב, אבל אז איבדה את העבודה ודחתה את הקנייה. מה זה מדגים?", "a": "נסיבות בלתי צפויות", "w": ["דיסוננס אחרי קנייה", "עמדות של אחרים", "היוריסטיקת זמינות"], "e": "שני גורמים מתערבים בין כוונת הרכישה להחלטה: עמדות של אחרים ונסיבות בלתי צפויות."}]}, "c10": {"t": "t4", "v": [{"q": "אחרי שמוצר התקלקל לה, צרכנית בטוחה שגם הבא יתקלקל וקונה אחריות מורחבת. איזו היוריסטיקה זו?", "a": "היוריסטיקת זמינות", "w": ["היוריסטיקת ייצוגיות", "היוריסטיקת עיגון והתאמה", "חשבונאות מנטלית"], "e": "בזמינות, מעריכים סבירות לפי כמה מהר דוגמה עולה לראש."}, {"q": "טלפון ב־200 דולר נראה זול ליד טלפונים ב־400, ויקר ליד טלפונים ב־50. איזה מושג זה?", "a": "מסגור החלטות", "w": ["סילוף בררני", "ביקוש נגזר", "הכללה"], "e": "מסגור: האופן שבו מוצגות האפשרויות משנה את ההחלטה."}]}, "c11": {"t": "t5", "v": [{"q": "הביקוש לעורות תלוי בסוף בביקוש של הצרכנים לנעליים. איזה מאפיין של השוק העסקי זה?", "a": "ביקוש נגזר", "w": ["ביקוש קשיח", "ביקוש תנודתי", "רכש ישיר"], "e": "ביקוש נגזר: הביקוש למוצרים עסקיים נובע בסוף מהביקוש למוצרי צריכה."}, {"q": "בית חולים בוחר ספק מזון שעומד ברמת איכות מינימלית ובמחיר נמוך. לאיזה שוק הוא שייך?", "a": "לשוק המוסדי", "w": ["לשוק הממשלתי", "לשוק הצרכנים", "לשוק הקמעונאי"], "e": "השוק המוסדי כולל בתי ספר, בתי חולים ומוסדות. המטרה שם היא לא רווח, אבל גם לא רק חיסכון."}]}, "c12": {"t": "t5", "v": [{"q": "חברה קונה בפעם הראשונה מערכת אבטחה יקרה למפעל. איזה מצב קנייה זה?", "a": "מטלה חדשה", "w": ["קנייה חוזרת פשוטה", "קנייה חוזרת בשינויים", "קניית מערכות"], "e": "מטלה חדשה: קונים משהו בפעם הראשונה. זה המצב עם הכי הרבה החלטות, משתתפים ומידע."}, {"q": "ספק אחד מספק לחברה את כל צורכי התחזוקה, התיקון והתפעול. איך זה נקרא?", "a": "קבלנות מערכות", "w": ["חוזה עסקה בודדת", "קנייה חוזרת פשוטה", "ניתוח ערך מוצר"], "e": "קבלנות מערכות היא סוג של קניית מערכות: ספק אחד מספק את כל צורכי ה־MRO."}]}, "c13": {"t": "t6", "v": [{"q": "פקידת קבלה שמחליטה אילו אנשי מכירות יגיעו למנהלים. איזה תפקיד במרכז הקניות היא ממלאת?", "a": "שומרת סף", "w": ["משפיעה", "מאשרת", "יוזמת קנייה"], "e": "שומרי סף יכולים למנוע ממוכרים או ממידע להגיע למשתתפים אחרים."}, {"q": "מי בעלי הסמכות הרשמית לבחור ספק ולנהל משא ומתן?", "a": "הקניינים", "w": ["המשתמשים", "המשפיעים", "היוזמים"], "e": "הקניינים בוחרים ספק ומנהלים משא ומתן. המשפיעים עוזרים להגדיר מפרט ומספקים מידע."}]}, "c14": {"t": "t6", "v": [{"q": "אילו שלבים מתקיימים בטבלת הקנייה גם בקנייה חוזרת פשוטה?", "a": "מפרט מוצר וביקורת ביצועים", "w": ["זיהוי בעיה וחיפוש ספק", "בקשת הצעות ובחירת ספק", "תיאור צורך כללי ומפרט הזמנה"], "e": "בטבלה 5.2, רק מפרט המוצר וביקורת הביצועים מסומנים ״כן״ בכל שלושת מצבי הקנייה."}, {"q": "הספק רואה את רמות המלאי של הלקוח ומחדש אותו בעצמו. איך זה נקרא?", "a": "מלאי בניהול הספק", "w": ["חוזה עסקה חוזית", "ניתוח ערך מוצר", "קנייה חוזרת בשינויים"], "e": "במערכת מלאי בניהול הספק (VMI), הספק אחראי לחדש את המלאי, דרך תוכניות חידוש מתמיד."}]}, "c15": {"t": "t7", "v": [{"q": "ספק שולח חלקים באיכות נמוכה מהמוסכם, כי הוא יודע שקשה לבדוק. איך זה נקרא?", "a": "אופורטוניזם", "w": ["השקעה ספציפית", "תיאום אנכי", "סתגלנות הדדית"], "e": "אופורטוניזם: רמאות או אספקה חסרה ביחס לחוזה. ספק עם שם טוב נוטה להימנע ממנו."}, {"q": "באיזה סוג יחסים המוכר מתאים את עצמו ללקוח, בלי לצפות לשינוי מצד הלקוח?", "a": "הלקוח הוא המלך", "w": ["עבודת צוות", "עסקה חוזית", "סתגלנות הדדית"], "e": "זו אחת משמונה הקטגוריות של יחסי קניין־ספק."}]}, "d1": {"t": "t1", "v": [{"q": "מהי קבוצת התייחסות ״ראשונית״?", "a": "קבוצה עם קשר רצוף ולא רשמי", "w": ["קבוצה שאדם רוצה להצטרף אליה", "קבוצה עם קשר רשמי ומעט מגע", "קבוצה שאדם דוחה ומתרחק ממנה"], "e": "קבוצות ראשוניות הן משפחה, חברים, שכנים ועמיתים, עם קשר רצוף ולא רשמי."}, {"q": "מנהלת בכירה קונה תיק יוקרתי שמתאים לתפקיד שלה. איזה גורם משפיע?", "a": "תפקיד ומעמד", "w": ["תרבות משנה", "מחזור חיי המשפחה", "קבוצה מנותקת"], "e": "אנשים בוחרים מוצרים שמשדרים את התפקיד ואת המעמד שלהם, ולכן מוצרים הופכים לסמל סטטוס."}]}, "d2": {"t": "t1", "v": [{"q": "זוג שנולד לו תינוק מתחיל לחפש רכב גדול. על מה כדאי למשווק לשים לב?", "a": "אירועי חיים קריטיים", "w": ["ערכי היסוד שלהם", "המעמד החברתי הנוכחי", "אישיות המותג שלהם"], "e": "נישואים, לידה, מעבר דירה ופרישה הם אירועי חיים שמעוררים צרכים חדשים."}, {"q": "מה מגדיר ״סגנון חיים״ לפי הספר?", "a": "דפוס החיים בפעילויות ובדעות", "w": ["המעמד החברתי וההכנסה הפנויה", "הערכים שאדם ספג בבית הוריו", "התפקיד והמעמד של האדם בחברה"], "e": "סגנון חיים הוא דפוס החיים של אדם, כפי שהוא מתבטא בפעילויות, בתחומי עניין ובדעות."}]}, "d3": {"t": "t2", "v": [{"q": "מה מתאר מודל הגירוי־תגובה?", "a": "איך גירויים הופכים להחלטה", "w": ["איך מחשבים ציון לכל מותג", "איך מחלקים את השוק לפלחים", "איך בוחרים ספק בשוק עסקי"], "e": "גירויים שיווקיים וסביבתיים פוגשים את הפסיכולוגיה ואת מאפייני הצרכן, והתוצאה היא החלטת קנייה."}, {"q": "לפי מאסלו, מה צפוי לקרות אצל אדם שצורכי הביטחון שלו לא מסופקים?", "a": "הוא יתמקד קודם בהם", "w": ["הוא יחפש קודם מימוש עצמי", "הוא יתעלם מכל הצרכים", "הוא יקנה מותג יוקרתי"], "e": "אדם מנסה לספק קודם את הצרכים החשובים ביותר בהיררכיה, ורק אחר כך את הבאים."}]}, "d4": {"t": "t2", "v": [{"q": "צרכן חושב שהקפה של המותג האהוב עליו טעים יותר, גם בטעימה עיוורת חלקית. איזה תהליך תפיסתי זה?", "a": "סילוף בררני", "w": ["קשב בררני", "זכירה בררנית", "הבחנה"], "e": "סילוף בררני: מפרשים מידע כך שיתאים לאמונות ולציפיות הקיימות."}, {"q": "מהו ״שיווק חישתי״?", "a": "שיווק שמפעיל את החושים", "w": ["שיווק לפי נתוני מכירות", "שיווק לפלח של מומחים", "שיווק דרך מנהיגי דעה"], "e": "שיווק חישתי משפיע על התפיסה, השיפוט וההתנהגות דרך החושים."}]}, "d5": {"t": "t2", "v": [{"q": "למה השיווק בתוך החנות חשוב במיוחד, לפי הספר?", "a": "כי האריזה והתצוגה מזכירות מידע", "w": ["כי שם מתבצע הקידוד הראשון", "כי בחנות אין השפעה של מתחרים", "כי הזיכרון לטווח קצר לא מוגבל"], "e": "מידע יכול להיות שמור בזיכרון אבל לא נגיש בלי תזכורת. האריזה והתצוגה מזכירות לצרכן מה שכבר שמע."}, {"q": "מה קובע את עוצמת הקשר בזיכרון בזמן הקידוד?", "a": "כמה חושבים על משמעות המידע", "w": ["כמה זמן עבר מאז הקנייה", "כמה מותגים יש בקטגוריה", "כמה המוצר יקר ביחס לאחרים"], "e": "ככל שמקדישים יותר תשומת לב למשמעות המידע בזמן הקידוד, הקשרים בזיכרון חזקים יותר."}]}, "d6": {"t": "t3", "v": [{"q": "גל נותנת משקל 50% לזיכרון ו־50% למחיר. מחשב קיבל 6 בזיכרון ו־8 במחיר. מה הציון שלו?", "a": "7", "w": ["6", "8", "14"], "e": "0.5×6 + 0.5×8 = 3 + 4 = 7."}, {"q": "משווק מנסה לשנות את האמונות של הצרכנים לגבי המותג, בלי לשנות את המוצר. מה הוא עושה?", "a": "מיצוב מחדש פסיכולוגי", "w": ["מיצוב מחדש אמיתי", "מיצוב מחדש תחרותי", "שינוי משקלי החשיבות"], "e": "מיצוב מחדש פסיכולוגי משנה את האמונות לגבי המותג. מיצוב אמיתי משנה את המוצר עצמו."}]}, "d7": {"t": "t3", "v": [{"q": "קונה מחפש באינטרנט, שואל חברים ומבקר בחנויות. באיזו רמת חיפוש מדובר?", "a": "חיפוש מידע פעיל", "w": ["קשב מוגבר", "זיהוי של הבעיה", "קבוצת השיקול"], "e": "קשב מוגבר הוא רמה מתונה של פתיחות למידע. חיפוש פעיל כולל קריאה, שאלות וביקורים."}, {"q": "אחרי הקנייה, צרכן שומע שמותג אחר טוב יותר ומרגיש אי־נוחות. מה זה?", "a": "דיסוננס", "w": ["סיכון חברתי", "הכללה", "עיגון"], "e": "אחרי הקנייה צרכן עלול לחוות דיסוננס, ולחפש מידע שיתמוך בהחלטה שלו."}]}, "d8": {"t": "t4", "v": [{"q": "לפי תורת הערך, איך צרכנים מתייחסים להפסדים?", "a": "הם נרתעים מהם", "w": ["הם מתעלמים מהם", "הם מעדיפים אותם על פני רווחים", "הם מחשבים אותם כמו רווחים"], "e": "לפי תורת הערך, צרכנים ממסגרים בחירות כרווח והפסד, ונרתעים מהפסדים."}, {"q": "מלון דואג לקבלת פנים חמה, כדי שהחוויות הבאות יפורשו לטובה. על איזו היוריסטיקה הוא נשען?", "a": "עיגון והתאמה", "w": ["זמינות", "ייצוגיות", "חשבונאות מנטלית"], "e": "בעיגון, הרושם הראשוני יוצר עוגן, וכל מה שבא אחריו מתפרש לאורו."}]}, "d9": {"t": "t5", "v": [{"q": "למה הביקוש למוצרים עסקיים נחשב ״תנודתי״?", "a": "שינוי קטן בצריכה יוצר שינוי גדול", "w": ["כי הוא לא מושפע ממחיר בטווח הקצר", "כי הקונים מרוכזים באזורים מסוימים", "כי יש מעט קונים, אבל גדולים מאוד"], "e": "גידול בביקוש הצרכנים יכול ליצור גידול גדול עוד יותר בצורך במפעלים ובציוד."}, {"q": "ממשלה בוחרת ספק לפרויקט מורכב עם סיכון גבוה. איך היא קונה בדרך כלל?", "a": "בחוזה שנקבע במשא ומתן", "w": ["תמיד במכרז להצעה הזולה", "בקנייה חוזרת פשוטה", "דרך קבוצת שאיפה"], "e": "בדרך כלל ממשלות עושות מכרזים, אבל בפרויקטים מורכבים ומסוכנים הן קונות בחוזה שנקבע במשא ומתן."}]}, "d10": {"t": "t5", "v": [{"q": "חברה רוצה את אותם חלקים, אבל במחיר נמוך ובאספקה מהירה יותר. איזה מצב קנייה זה?", "a": "קנייה חוזרת בשינויים", "w": ["קנייה חוזרת פשוטה", "מטלה חדשה לגמרי", "קבלנות מערכות שלמות"], "e": "בקנייה חוזרת בשינויים הקניין רוצה לשנות מפרט, מחיר, אספקה או תנאים."}, {"q": "באיזה שלב של הקנייה העסקית יש לאנשי מכירות את ההשפעה העיקרית?", "a": "בשלב העניין", "w": ["בשלב המודעות", "בשלב ההערכה", "בשלב האימוץ"], "e": "תקשורת המונים חשובה בשלב המודעות, אנשי מכירות בשלב העניין, ומקורות טכניים בשלב ההערכה."}]}, "d11": {"t": "t6", "v": [{"q": "עובדים במחלקה מבקשים לקנות מכונה חדשה, וגם ישתמשו בה. אילו תפקידים הם ממלאים?", "a": "יוזמים ומשתמשים", "w": ["מאשרים וקניינים", "שומרי סף ומחליטים", "משפיעים ומאשרים"], "e": "לעתים קרובות המשתמשים הם גם היוזמים, ועוזרים להגדיר את הדרישות."}, {"q": "צוות הנדסה בודק אם אפשר לייצר רכיב בזול יותר בלי לפגוע בביצועים. איך זה נקרא?", "a": "ניתוח ערך מוצר", "w": ["ביקורת ביצועים", "חוזה כולל", "קנייה חוזרת פשוטה"], "e": "ניתוח ערך מוצר (PVA) נעשה בשלב המפרט, ומטרתו להפחית עלויות."}]}, "d12": {"t": "t7", "v": [{"q": "ספק קונה מכונה שמתאימה רק ללקוח אחד. איך נקראת השקעה כזו?", "a": "השקעה ספציפית", "w": ["אופורטוניזם", "חוזה כולל", "קניית מערכות"], "e": "השקעות ספציפיות מותאמות לשותף מסוים. הן עוזרות לרווח, אבל מגדילות את הסיכון."}, {"q": "לפי הספר, מה הוא תנאי היסוד ליחסים עסקיים בריאים לטווח ארוך?", "a": "בניית אמון", "w": ["חוזה מפורט מאוד", "מחיר נמוך ככל האפשר", "ריבוי ספקים חלופיים"], "e": "בניית אמון היא תנאי יסוד להנאה מיחסים בריאים לטווח ארוך."}]}, "cx": {"t": "tx", "v": [{"q": "צרכנית בוחרת מותג קפה כי בפרסומת הוא נראה ״כמו המותג המוביל״. איזו היוריסטיקה פועלת?", "a": "היוריסטיקת ייצוגיות", "w": ["היוריסטיקת זמינות", "היוריסטיקת עיגון והתאמה", "קשב בררני לפרסומות"], "e": "בייצוגיות, מעריכים לפי דמיון לדוגמה מוכרת. לכן אריזות באותה קטגוריה דומות."}, {"q": "מה מבדיל בין קנייה מוסדית לבין קנייה של צרכן פרטי?", "a": "יותר משפיעים וקניינות מקצועית", "w": ["תמיד יש רק אדם אחד שמחליט", "הביקוש תמיד גמיש מאוד למחיר", "אין שום משא ומתן על המחיר"], "e": "בשוק העסקי יש יותר משפיעים, קניינים מקצועיים, מחזורי מכירה ארוכים ויחסים הדוקים."}]}};
+const SUM=`<h2>סיכום: קוטלר וקלר פרק 5 - ניתוח שווקים צרכניים ועסקיים</h2>
+<div class="key"><b>על מה הפרק?</b> כדי לשווק טוב צריך להבין את הלקוח, בין אם הוא צרכן פרטי ובין אם הוא ארגון. החלק הראשון עוסק בצרכן: מה משפיע עליו, מה קורה לו בראש, ואיך הוא מחליט. החלק השני עוסק בקונה העסקי: מי מחליט בארגון, באילו שלבים, ואיך בונים איתו יחסים.</div>
+<h3>1. מה משפיע על התנהגות צרכנים</h3>
+<p><b>התנהגות צרכנים</b> (Consumer behavior): התחום שעוסק באופן שבו יחידים, קבוצות וארגונים בוחרים, קונים, משתמשים ומפסיקים להשתמש במוצרים, כדי לספק צרכים ורצונות. שלוש קבוצות גורמים:</p>
+<ul>
+<li><b>גורמים תרבותיים</b> (ההשפעה העמוקה ביותר): <b>תרבות</b>, הגורם הבסיסי לרצונות ולהתנהגות; <b>תרבות משנה</b> (לאום, דת, קבוצה אתנית, אזור); <b>מעמד חברתי</b>, קבוצות היררכיות עם ערכים והתנהגות משותפים.</li>
+<li><b>גורמים חברתיים</b>: <b>קבוצות התייחסות</b>, שמשפיעות ישירות או בעקיפין. ראשוניות (משפחה, חברים), משניות (איגוד, קהילה), קבוצות שאיפה (רוצים להצטרף) וקבוצות מנותקות (רוצים להתרחק). <b>מנהיג דעה</b> נותן מידע ועצות לא רשמיים. <b>משפחה</b>: משפחת המוצא (הורים ואחים) ומשפחת ההקמה (בן זוג וילדים), שמשפיעה ישירות על הקנייה. <b>תפקיד ומעמד</b>: אנשים בוחרים מוצרים שמשדרים אותם, ומכאן ״סמל סטטוס״.</li>
+<li><b>גורמים אישיים</b>: גיל ושלב במחזור החיים, כולל אירועי חיים קריטיים; עיסוק ומצב כלכלי; אישיות ותפיסת עצמי. <b>אישיות מותג</b> לפי אקר: כנות, ריגוש, כשירות, תחכום וחספוס. תפיסת עצמי בפועל, אידיאלית, או בעיני אחרים. <b>סגנון חיים</b> הוא דפוס החיים כפי שהוא מתבטא בפעילויות, בתחומי עניין ובדעות. <b>ערכי יסוד</b> הם האמונות העמוקות שמנחות בחירות.</li>
+</ul>
+<h3>2. תהליכים פסיכולוגיים</h3>
+<p><b>מודל הגירוי־תגובה</b>: גירויים שיווקיים (מוצר, מחיר, הפצה, תקשורת) וסביבתיים נכנסים לתודעה, פוגשים את הפסיכולוגיה ואת מאפייני הצרכן, ומובילים להחלטה.</p>
+<ul>
+<li><b>הנעה</b>: צורך (ביוגני או פסיכוגני) הופך ל<b>מניע</b> כשהוא חזק מספיק. <b>פרויד</b>: רוב המניעים לא מודעים, וטכניקת ה<b>סילום</b> חושפת אותם. <b>מאסלו</b>: היררכיית צרכים מפיזיולוגיים ועד מימוש עצמי. <b>הרצברג</b>: גורמים שאינם משביעי רצון לעומת גורמים משביעי רצון. לא מספיק להימנע מהראשונים, צריך גם את השניים.</li>
+<li><b>תפיסה</b>: בחירה, ארגון ופירוש של מידע. בשיווק התפיסה חשובה יותר מהמציאות. <b>שיווק חישתי</b> משפיע דרך החושים. שלושה תהליכים: <b>קשב בררני</b> (שמים לב לגירויים שקשורים לצורך, שמצפים להם או שחריגים בגודלם); <b>סילוף בררני</b> (מפרשים לפי מה שכבר מאמינים); <b>זכירה בררנית</b> (זוכרים את היתרונות של מה שאוהבים).</li>
+<li><b>למידה</b>: שינוי התנהגות מניסיון, דרך דחפים, איתותים, תגובות וחיזוקים. <b>הכללה</b> (תגובה דומה לגירוי דומה) מול <b>הבחנה</b> (זיהוי הבדלים). <b>רגשות</b>: פנייה רגשית גורמת לספר על המותג הלאה.</li>
+<li><b>זיכרון</b>: לטווח קצר (זמני ומוגבל) ולטווח ארוך (קבוע וכמעט בלתי מוגבל). <b>מודל הרשת האסוציאטיבית</b>: צמתים וקישורים, וההפעלה מתפשטת. <b>אסוציאציות למותג</b> (מפה מנטלית). <b>קידוד</b>: ככל שחושבים יותר על המשמעות, הזיכרון חזק יותר. <b>אחזור</b>: מידע שמור לא תמיד נגיש בלי תזכורת, ולכן האריזה והתצוגה בחנות חשובות.</li>
+</ul>
+<h3>3. תהליך החלטת הקנייה</h3>
+<p>חמישה שלבים, במיוחד בקנייה עם מעורבות גבוהה. צרכנים לפעמים מדלגים או חוזרים:</p>
+<ol>
+<li><b>זיהוי בעיה</b>: מגירוי פנימי או חיצוני.</li>
+<li><b>חיפוש מידע</b>: קשב מוגבר או חיפוש פעיל. מקורות: אישיים, מסחריים, ציבוריים וחווייתיים. רוב המידע מסחרי, אבל היעיל ביותר אישי או חווייתי. קבוצות המותגים: כוללת ← מודעות ← שיקול ← בחירה.</li>
+<li><b>הערכת חלופות</b>: הצרכן רואה במוצר חבילת תכונות. <b>אמונה</b> היא מחשבה תיאורית, <b>עמדה</b> היא הערכה יציבה שקשה לשנות. <b>מודל תוחלת הערך</b>: משקל של כל תכונה כפול הציון בה, ומחברים (בדוגמת גל: 0.4×8 + 0.3×9 + 0.2×6 + 0.1×9 = 8.0). המשווק יכול להשפיע דרך מיצוב מחדש אמיתי, פסיכולוגי או תחרותי, או בשינוי משקלים ואידיאלים.</li>
+<li><b>החלטת רכישה</b>: בין הכוונה להחלטה מתערבים <b>עמדות של אחרים</b> ו<b>נסיבות בלתי צפויות</b>. <b>סיכון נתפס</b>: תפקודי או חברתי.</li>
+<li><b>התנהגות אחרי הקנייה</b>: דיסוננס, שביעות רצון, שימוש והיפטרות מהמוצר. צרכן מרוצה קונה שוב וממליץ. לא מרוצה מחזיר, מתלונן או מזהיר אחרים.</li>
+</ol>
+<h3>4. החלטות לא רציונליות</h3>
+<p><b>תיאוריית ההחלטה ההתנהגותית</b> (BDT) ו<b>הכלכלה ההתנהגותית</b>: צרכנים לא תמיד רציונליים, וההקשר חשוב.</p>
+<ul>
+<li><b>היוריסטיקות</b>: <b>זמינות</b> (לפי כמה מהר דוגמה עולה לראש); <b>ייצוגיות</b> (לפי דמיון לדוגמה מוכרת, ולכן אריזות דומות); <b>עיגון והתאמה</b> (רושם ראשוני שמתוקן בקושי).</li>
+<li><b>מסגור החלטות</b>: האופן שבו מוצגות האפשרויות משנה את הבחירה. <b>חשבונאות מנטלית</b>: ״חשבונות״ בראש. <b>תורת הערך</b>: רווח והפסד, רתיעה מהפסד, משקל יתר להסתברויות נמוכות מאוד.</li>
+</ul>
+<h3>5. השוק העסקי</h3>
+<p><b>קנייה מוסדית</b> (וובסטר ווינד): התהליך שבו ארגונים קובעים צורך, ומזהים, מעריכים ובוחרים בין מותגים וספקים. <b>השוק העסקי</b>: ארגונים שקונים כדי לייצר ולמכור לאחרים.</p>
+<p>במה הוא שונה משוק הצרכנים (טבלה 5.1): פחות קונים וגדולים יותר; יחסים הדוקים; קניינות מקצועית; יותר משפיעים; פגישות מכירה רבות; <b>ביקוש נגזר</b> (מהביקוש לצריכה); <b>ביקוש קשיח</b> (לא מגיב למחיר בטווח הקצר); <b>ביקוש תנודתי</b>; ריכוז גיאוגרפי; רכש ישיר.</p>
+<p><b>השוק המוסדי</b> (בתי ספר, בתי חולים): תקציב נמוך ולקוחות ״שבויים״. <b>השוק הממשלתי</b>: מכרזים, לרוב להצעה הזולה, ובפרויקטים מורכבים חוזים במשא ומתן.</p>
+<p><b>מצבי קנייה</b>: <b>קנייה חוזרת פשוטה</b> (שגרתית, הכי מעט החלטות); <b>קנייה חוזרת בשינויים</b> (שינוי במפרט, במחיר או בתנאים); <b>מטלה חדשה</b> (בפעם הראשונה, הכי הרבה החלטות). <b>קניית מערכות</b> ו<b>קבלנות מערכות</b>: פתרון שלם מספק אחד.</p>
+<h3>6. מרכז הקניות ותהליך הקנייה העסקי</h3>
+<p><b>מרכז הקניות</b>: כל מי שמשתתף בהחלטה וחולק את מטרותיה וסיכוניה. שבעה תפקידים: יוזמים, משתמשים, משפיעים, מחליטים, מאשרים, קניינים ושומרי סף. אדם אחד יכול למלא כמה תפקידים. בסוף אנשים מחליטים, לא ארגונים.</p>
+<p><b>שמונת שלבי הקנייה</b> (טבלת הקנייה של רובינסון): זיהוי בעיה; תיאור צורך כללי; מפרט מוצר (כולל <b>ניתוח ערך מוצר</b>, PVA); חיפוש ספק (כולל צמתי מסחר אלקטרוני, אנכיים ותפקודיים); בקשת הצעות; בחירת ספק; מפרט שגרת הזמנה (<b>חוזה כולל</b>, <b>מלאי בניהול הספק</b>); ביקורת ביצועים. בקנייה חוזרת פשוטה רק מפרט המוצר וביקורת הביצועים תמיד מתקיימים.</p>
+<h3>7. יחסים עם לקוחות עסקיים</h3>
+<ul>
+<li><b>תיאום אנכי</b>: יחסים שהם יותר מעסקה בודדת ויוצרים ערך לשני הצדדים. אמון הוא תנאי בסיסי.</li>
+<li><b>שמונה סוגי יחסים</b>: קנייה ומכירה בסיסית; רק מה שהכרחי; עסקה חוזית; אספקה ללקוח; מערכות שיתוף פעולה; עבודת צוות; סתגלנות הדדית; הלקוח הוא המלך.</li>
+<li><b>השקעות ספציפיות</b>: הוצאות שמותאמות לשותף מסוים. הן עוזרות לרווח ולמיצוב, אבל מגדילות סיכון.</li>
+<li><b>אופורטוניזם</b>: רמאות או אספקה חסרה ביחס לחוזה. מחייב בקרה. ספק עם שם טוב נוטה להימנע ממנו.</li>
+</ul>
+<div class="key"><b>השורה התחתונה: מה רוצים ממך</b><br>לזהות במקרה איזה גורם משפיע (תרבותי, חברתי, אישי) ואיזה תהליך פסיכולוגי פועל; לסדר את חמשת שלבי ההחלטה ואת קבוצות המותגים; לחשב ציון לפי מודל תוחלת הערך; לזהות היוריסטיקה או מסגור; להבחין בין שלושת מצבי הקנייה העסקית; ולזהות תפקיד במרכז הקניות.</div>`;
+if(typeof H!=="undefined")for(const k in H)Q[k]=Object.assign({},H[k],{lv:2});
+const isH=id=>Q[id].lv===2;
+for(const t of T){t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id&&!isH(k));t.hids=Object.keys(Q).filter(k=>Q[k].t===t.id&&isH(k))}
+const HAS_H=T.some(t=>t.hids.length);
+const KEY=CONFIG.key;
+let S={q:{},read:{}};
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.q) S=s;}catch(e){}
+S.pos=S.pos||{};S.done=S.done||{};
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const st=id=>S.q[id]||(S.q[id]={n:0,c:0,w:0,t:0,lv:-1});
+const mastered=id=>(S.q[id]?.c||0)>=2;
+const topicPct=t=>Math.round(100*t.qids.filter(mastered).length/t.qids.length);
+const topicStarted=t=>S.read[t.id]||S.pos[t.id]!=null||t.qids.some(id=>S.q[id]&&S.q[id].n);
+const allIds=Object.keys(Q).filter(id=>!isH(id));
+const rnd=t=>S.done[t.id]?(S.done[t.id].k||1)+1:1;
+const hardOn=t=>rnd(t)>1&&t.hids.length>0;
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+const pickVariant=id=>{const s=st(id),n=Q[id].v.length;return n>1?(s.lv+1)%n:0};
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const color=t=>`var(--${t.id})`;
+const app=document.getElementById("app");
+const LET=["א","ב","ג","ד"];
+
+function qCard(id,onDone,label){
+  const vi=pickVariant(id),v=Q[id].v[vi],opts=shuffle([v.a,...v.w]);
+  const box=document.createElement("div");box.className="q fade";
+  box.innerHTML=(label?`<span class="eyebrow">${label}</span>`:"")+`<div class="qtext">${esc(v.q)}</div>${acrNote(v.q,v.a,...v.w)}<div class="opts"></div>`;
+  const wrap=box.querySelector(".opts");
+  opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt";b.dataset.a=o===v.a?"1":"";
+    b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+    b.onclick=()=>{const ok=o===v.a,s=st(id);s.n++;s.t=Date.now();s.lv=vi;ok?s.c++:(s.c=0,s.w++);save();
+      wrap.querySelectorAll("button").forEach(x=>{x.disabled=true;if(x.dataset.a)x.classList.add("right")});
+      if(!ok)b.classList.add("wrong");
+      const fb=document.createElement("div");fb.className="fb fade "+(ok?"ok":"no");
+      fb.innerHTML=`${ic(ok?"check":"x")}<div><strong>${ok?"נכון!":"לא בדיוק"}</strong>${esc(v.e)}</div>`;box.appendChild(fb);
+      const nx=document.createElement("button");nx.className="primary";nx.textContent="המשך";nx.style.alignSelf="flex-start";
+      nx.onclick=()=>onDone(ok);box.appendChild(nx);nx.focus({preventScroll:true});nx.scrollIntoView({block:"nearest",behavior:"smooth"});
+    };wrap.appendChild(b)});
+  return box;
+}
+
+function home(){
+  document.body.style.removeProperty("--c");if(S.at){delete S.at;save()}
+  const started=T.filter(topicStarted);
+  const total=Math.round(T.reduce((a,t)=>a+strength(t)*t.qids.length,0)/allIds.length);
+  const weak=allIds.filter(id=>S.q[id]&&S.q[id].n&&!mastered(id)).length;
+  app.innerHTML=`<div class="stack fade">
+   <section class="cover" style="--c:var(--accent)">
+    <div class="cover-art">${FIG[CONFIG.cover]()}</div>
+    <div class="cover-body">
+     <span class="eyebrow">${CONFIG.eyebrow}</span>
+     ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
+     ${CONFIG.about?`<p class="about"><b>על מה הלומדה:</b> ${CONFIG.about}</p>`:`<p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר, ובסוף הלומדה מבחן מסכם עם ציון.${HAS_H?" מהסבב השני, המבחנים עוברים לשאלות הבנה: מקרים וסיפורים שצריך לזהות לאיזה רעיון הם שייכים.":""}</p>`}
+     <div class="stats">
+      <div class="ring" style="--p:${total}"><span>${total}%</span></div>
+      <div class="stat-text"><b>${total===0&&!started.length?"עוד לא התחלת":total>=80?"אתה שולט בחומר":`התקדמת ב־${total}% מהשאלות`}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
+     </div>
+     <div class="actions">
+      <button class="primary review-btn" id="rev" ${started.length?"":"disabled"}>${ic("cycle")}<span>${started.length?"חזרה מהירה":"חזרה מהירה (אחרי נושא ראשון)"}</span></button>
+      <button class="review-btn" id="exm">${ic("grad")}<span>מבחן מסכם${S.exam&&HAS_H?" · סבב "+((S.exam.k||1)+1)+": שאלות הבנה":""}${S.exam?` · ציון אחרון ${S.exam.pct}`:""}</span></button>
+      <button class="review-btn" id="wk" ${started.length?"":"disabled"}>${ic("target")}<span>נושאים לחיזוק</span></button>
+      ${typeof SUM!=="undefined"?`<button class="review-btn" id="sum">${ic("doc")}<span>סיכום הקריאה</span></button>`:""}
+      ${CONFIG.podcast?`<button class="review-btn" id="pod"><span aria-hidden="true">🎧</span><span>פודקאסט${CONFIG.podcast.min?` · ${CONFIG.podcast.min} דק׳`:""}</span></button>`:""}
+     </div>
+     ${CONFIG.podcast?`<div id="podbox" class="podbox" hidden><p class="muted">פודקאסט שנוצר ב־Gemini Notebook מקריאת החובה. כמו כל סיכום אוטומטי, הוא עלול לטעות, והקריאה עצמה קובעת.</p><div class="podframe"></div></div>`:""}
+    </div>
+   </section>
+   <div class="grid" id="list"></div>
+   <div class="foot"><a href="../#mkt" style="color:var(--accent);font-weight:700;text-decoration:none">→ לקורס</a><span>${CONFIG.note}</span><button class="ghost" id="reset">איפוס התקדמות</button></div>
+  </div>`;
+  app.querySelectorAll(".actions svg").forEach(x=>x.style.cssText="width:20px;height:20px");
+  const list=app.querySelector("#list");
+  T.forEach((t,i)=>{const p=strength(t),pos=S.pos[t.id],dn=S.done[t.id],b=document.createElement("button");b.className="tcard";b.style.setProperty("--c",color(t));
+    const status=dn?`✓ הושלם · מבחן ${dn.r}/${dn.n}${t.hids.length?" · הבא: סבב "+rnd(t)+" (הבנה)":""}`:pos!=null?`באמצע · קטע ${pos+1} מתוך ${t.blocks.length}`:S.read[t.id]?"✓ נקרא":topicStarted(t)?"בתהליך":"לא התחלת";
+    b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(dn?"check":t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${dn&&!p?100*dn.r/dn.n:p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
+    if(dn)b.classList.add("done");
+    b.onclick=()=>topic(i,pos!=null?pos:0);list.appendChild(b)});
+  app.querySelector("#rev").onclick=review;{const sb=app.querySelector("#sum");if(sb)sb.onclick=summary}{const pb=app.querySelector("#pod");if(pb)pb.onclick=()=>{const bx=app.querySelector("#podbox");bx.hidden=!bx.hidden;const f=bx.querySelector(".podframe");if(!bx.hidden&&!f.firstChild)f.innerHTML=`<iframe src="https://drive.google.com/file/d/${CONFIG.podcast.id}/preview" allow="autoplay" title="פודקאסט" loading="lazy"></iframe>`}}app.querySelector("#exm").onclick=exam;app.querySelector("#wk").onclick=weakTopics;
+  const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{},pos:{},done:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
+  scrollTo(0,0);
+}
+
+function bar(title,n,i,label){
+  return `<div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">${label}</span></div><div class="steps">${Array.from({length:n},(_,k)=>`<i class="${k<=i?"on":""}"></i>`).join("")}</div></div><span class="eyebrow">${title}</span>`;
+}
+
+function topic(ti,bi){
+  const t=T[ti],blk=t.blocks[bi];document.body.style.setProperty("--c",color(t));
+  app.innerHTML=`<div class="stack">${bar(`נושא ${ti+1} · ${t.title}`,t.blocks.length+1,bi,`קטע ${bi+1} מתוך ${t.blocks.length}`)}
+   <article class="card fade"><h3>${blk.h}</h3>${acrExpand(blk.html)}</article><div id="slot"></div></div>`;
+  S.pos[t.id]=bi;S.at={ti,bi};save();
+  app.querySelector("#back").onclick=home;
+  const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;delete S.pos[t.id];S.at={ti,quiz:1};save();quiz(ti)}};
+  if(bi>0){const pb=document.createElement("button");pb.className="ghost";pb.textContent="→ הקטע הקודם";pb.style.marginTop="6px";pb.onclick=()=>topic(ti,bi-1);setTimeout(()=>slot.appendChild(pb))}
+  const slot=app.querySelector("#slot");
+  {const b=document.createElement("button");b.className="primary";b.textContent=bi+1<t.blocks.length?"המשך":`למבחן הנושא (${t.qids.length} שאלות)`;b.onclick=next;slot.appendChild(b)}
+  scrollTo(0,0);
+}
+
+function runSet(title,ids,c,onEnd){
+  let i=0,right=0;document.body.style.setProperty("--c",c);
+  const step=()=>{
+    if(i>=ids.length)return onEnd(right,ids.length);
+    const id=ids[i],from=T.find(t=>t.id===Q[id].t);
+    app.innerHTML=`<div class="stack">${bar(title,ids.length,i,`שאלה ${i+1} מתוך ${ids.length}`)}<div id="slot"></div></div>`;
+    app.querySelector("#back").onclick=home;
+    const card=qCard(id,ok=>{if(ok)right++;i++;step()},from.title);card.style.setProperty("--c",color(from));
+    app.querySelector("#slot").appendChild(card);scrollTo(0,0);
+  };step();
+}
+
+function quiz(ti){
+  const t=T[ti];
+  if(hardOn(t)){const weak=shuffle(t.qids.filter(id=>!mastered(id))).slice(0,2);
+    return runSet(`מבחן הנושא · סבב ${rnd(t)} · שאלות הבנה`,shuffle(shuffle(t.hids).slice(0,Math.max(8,t.qids.length)).concat(weak)),color(t),(r,n)=>done(r,n,ti))}
+  const prev=T.slice(0,ti).filter(topicStarted).flatMap(x=>x.qids);
+  const extra=shuffle(prev).sort((a,b)=>st(a).c-st(b).c).slice(0,2);
+  runSet(`מבחן סיום · ${t.title}`,shuffle(t.qids).concat(extra),color(t),(r,n)=>done(r,n,ti));
+}
+
+function review(){
+  const pool=T.filter(topicStarted).flatMap(t=>S.done[t.id]?t.qids.concat(t.hids):t.qids),now=Date.now();
+  const tw={};T.forEach(t=>tw[t.id]=(100-strength(t))/20);
+  const score=id=>{const s=S.q[id]||{n:0,c:0,w:0,t:0};return (s.n?0:2)+s.w*2+(s.c<2?3:0)+Math.min(3,(now-s.t)/864e5)+tw[Q[id].t]+Math.random()*2};
+  const ids=pool.map(id=>[id,score(id)]).sort((a,b)=>b[1]-a[1]).slice(0,12).map(x=>x[0]);
+  runSet("חזרה מהירה",shuffle(ids),"var(--accent)",(r,n)=>done(r,n,null));
+}
+
+const strength=t=>Math.round(100*t.qids.filter(id=>S.q[id]&&S.q[id].n&&S.q[id].c>0).length/t.qids.length);
+
+function practice(ti){const t=T[ti];if(hardOn(t))return quiz(ti);runSet(`תרגול · ${t.title}`,shuffle(t.qids),color(t),(r,n)=>done(r,n,ti))}
+
+function exam(){
+  const N=Math.min(allIds.length,Math.max(15,Math.min(20,T.length*3)));
+  const xh=S.exam&&HAS_H,pools=T.map(t=>xh&&t.hids.length?shuffle(t.hids).concat(shuffle(t.qids)):shuffle(t.qids)),ids=[];
+  for(let k=0;ids.length<N;k++)for(const p of pools){if(ids.length>=N)break;if(k<p.length)ids.push(p[k])}
+  const items=shuffle(ids).map(id=>{const vi=pickVariant(id),v=Q[id].v[vi];return{id,vi,v,opts:shuffle([v.a,...v.w]),pick:null}});
+  document.body.style.setProperty("--c","var(--accent)");
+  let i=0;
+  const step=()=>{
+    const it=items[i],from=T.find(t=>t.id===Q[it.id].t),last=i===items.length-1;
+    app.innerHTML=`<div class="stack">${bar(xh?`מבחן מסכם · סבב ${(S.exam.k||1)+1} · שאלות הבנה`:"מבחן מסכם",items.length,i,`שאלה ${i+1} מתוך ${items.length}`)}
+     <div class="q fade"><span class="eyebrow">${esc(from.title)}</span><div class="qtext">${esc(it.v.q)}</div>${acrNote(it.v.q,it.v.a,...it.v.w)}<div class="opts"></div>
+     <div class="row"><button class="primary" id="nx" ${it.pick==null?"disabled":""}>${last?"הגשה ובדיקה":"הבא"}</button>${i?`<button class="ghost" id="pv">הקודם</button>`:""}</div></div></div>`;
+    {const bk=app.querySelector("#back");bk.onclick=()=>{if(bk.dataset.sure)home();else{bk.dataset.sure=1;bk.textContent="לחץ שוב כדי לצאת (התשובות לא יישמרו)"}}}
+    const wrap=app.querySelector(".opts"),nx=app.querySelector("#nx");
+    it.opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt"+(it.pick===o?" sel":"");
+      b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+      b.onclick=()=>{it.pick=o;wrap.querySelectorAll(".opt").forEach(x=>x.classList.remove("sel"));b.classList.add("sel");nx.disabled=false};
+      wrap.appendChild(b)});
+    nx.onclick=()=>{if(last)grade(items);else{i++;step()}};
+    const pv=app.querySelector("#pv");if(pv)pv.onclick=()=>{i--;step()};
+    scrollTo(0,0);
+  };step();
+}
+
+function grade(items){
+  const now=Date.now();let r=0;const per={};
+  items.forEach(it=>{const ok=it.pick===it.v.a,s=st(it.id),tid=Q[it.id].t;s.n++;s.t=now;s.lv=it.vi;ok?(s.c++,r++):(s.c=0,s.w++);
+    it.ok=ok;(per[tid]=per[tid]||{r:0,n:0}).n++;if(ok)per[tid].r++});
+  const n=items.length,pct=Math.round(100*r/n);S.exam={pct,t:now,k:S.exam?(S.exam.k||1)+1:1};save();
+  const rows=T.filter(t=>per[t.id]).map(t=>{const p=per[t.id],q=Math.round(100*p.r/p.n);
+    return `<div class="trow" style="--c:${color(t)}"><span class="tt">${esc(t.title)}</span><div class="bar"><i style="width:${q}%"></i></div><span class="sc">${p.r}/${p.n}</span></div>`}).join("");
+  const wrong=items.filter(it=>!it.ok);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">ציון המבחן המסכם</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct}"><span>${pct}</span></div><div class="big">${r}/${n}</div></div>
+    <p>${pct>=90?"מצוין, אתה שולט בחומר.":pct>=70?"טוב. עבור על הטעויות למטה וחזור על הנושאים החלשים.":"כדאי לחזור על החומר. למטה תמצא את הטעויות, ולכל אחת כפתור לחזרה על הנושא."}</p>
+    <h3>לפי נושא</h3><div class="trows">${rows}</div>
+    <div class="row"><button class="primary" id="again">מבחן מסכם חדש</button><button id="hm">לכל הנושאים</button></div>
+   </article>
+   ${wrong.length?`<h3>הטעויות שלך (${wrong.length})</h3>`:`<p class="muted">לא היו טעויות.</p>`}
+   <div class="stack" id="wl"></div></div>`;
+  const wl=app.querySelector("#wl");
+  wrong.forEach(it=>{const ti=T.findIndex(t=>t.id===Q[it.id].t),t=T[ti],c=document.createElement("article");c.className="card rev";c.style.setProperty("--c",color(t));
+    c.innerHTML=`<span class="eyebrow">${esc(t.title)}</span><div class="qtext">${esc(it.v.q)}</div>${acrNote(it.v.q,it.v.a,it.pick,it.v.e)}
+     <div class="opt wrong" aria-disabled="true"><span class="k">${ic("x")}</span><span><b>התשובה שלך:</b> ${esc(it.pick)}</span></div>
+     <div class="opt right" aria-disabled="true"><span class="k">${ic("check")}</span><span><b>התשובה הנכונה:</b> ${esc(it.v.a)}</span></div>
+     <div class="fb no">${ic("bulb")}<div><strong>למה?</strong>${esc(it.v.e)}</div></div>
+     <div class="row"><button class="primary go">חזרה על הנושא: ${esc(t.title)}</button></div>`;
+    c.querySelector(".go").onclick=()=>topic(ti,0);wl.appendChild(c)});
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;app.querySelector("#again").onclick=exam;
+  scrollTo(0,0);
+}
+
+function weakTopics(){
+  document.body.style.setProperty("--c","var(--accent)");
+  const list=T.map((t,i)=>({t,i,s:strength(t),started:topicStarted(t)})).sort((a,b)=>(a.started-b.started)||(a.s-b.s));
+  const lab=x=>!x.started?"עוד לא תרגלת":x.s>=80?"חזק":x.s>=50?"בינוני":"צריך חיזוק";
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <span class="eyebrow">נושאים לחיזוק</span><p class="muted">הנושאים מסודרים מהחלש לחזק, לפי התשובות האחרונות שלך בכל שאלה.</p>
+   <div class="stack" id="wl"></div></div>`;
+  const wl=app.querySelector("#wl");
+  list.forEach(x=>{const c=document.createElement("article");c.className="card rev";c.style.setProperty("--c",color(x.t));
+    c.innerHTML=`<div class="trow"><span class="tt">${x.i+1}. ${esc(x.t.title)}</span><div class="bar"><i style="width:${x.s}%"></i></div><span class="sc">${x.started?x.s+"%":"—"}</span></div>
+     <span class="tag ${!x.started?"":x.s>=80?"good":x.s>=50?"mid":"low"}">${lab(x)}</span>
+     <div class="row"><button class="primary pr">תרגול שאלות הנושא</button><button class="rd">קריאה חוזרת</button></div>`;
+    c.querySelector(".pr").onclick=()=>practice(x.i);c.querySelector(".rd").onclick=()=>topic(x.i,0);wl.appendChild(c)});
+  app.querySelector("#back").onclick=home;scrollTo(0,0);
+}
+
+function done(r,n,ti){
+  if(ti!=null){const o=S.done[T[ti].id];S.done[T[ti].id]={r,n,k:o?(o.k||1)+1:1};}if(S.at){delete S.at}save();
+  const nextT=ti!=null&&ti+1<T.length?ti+1:null,pct=Math.round(100*r/n);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">${ti!=null?`סיום נושא ${ti+1} · ${T[ti].title}`:"סיום חזרה מהירה"}</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct};--accent:var(--c)"><span>${pct}%</span></div><div class="big">${r}/${n}</div></div>
+    <p>${r===n?"מצוין, הכל נכון.":r>=n*0.7?"טוב מאוד. מה שטעית בו יחזור בחזרה המהירה, בניסוח אחר.":"כדאי לעבור שוב על הנושא. השאלות שטעית בהן יחזרו בחזרה המהירה."}</p>
+    <div class="row">${nextT!=null?`<button class="primary" id="nx" style="--c:${color(T[nextT])}">לנושא הבא: ${T[nextT].title}</button>`:""}<button id="hm">לכל הנושאים</button></div>
+   </article></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;
+  const nx=app.querySelector("#nx");if(nx)nx.onclick=()=>topic(nextT,0);
+  scrollTo(0,0);
+}
+function summary(sec){
+  document.body.style.setProperty("--c","var(--accent)");
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">סיכום הקריאה</span></div></div>
+   <article class="card sum">${acrExpand(SUM)}</article>
+   <div class="row"><button class="primary" id="hm">חזרה לכל הנושאים</button></div></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;scrollTo(0,0);if(sec){const h=[...app.querySelectorAll(".sum h3")].find(x=>x.textContent.trim().startsWith(sec+"."));if(h)h.scrollIntoView()}
+}
+function absView(){
+  document.body.style.setProperty("--c","var(--accent)");
+  const tmp=document.createElement("div");tmp.innerHTML=SUM;const a=tmp.querySelector("#abs");
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">כותרת ותקציר</span></div></div>
+   <article class="card sum"><h2>${CONFIG.title}: כותרת ותקציר</h2><div class="key">לתרגול הזה קוראים <b>רק את הכותרת והתקציר</b>. זה מה שיש בעמוד הזה. הסיכום המלא של המאמר נמצא בכפתור ״סיכום הקריאה״ בלומדה.</div>${a?acrExpand(a.innerHTML):""}</article>
+   <div class="row"><button class="primary" id="hm">ללומדה</button><button id="full">לסיכום המלא</button></div></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;app.querySelector("#full").onclick=()=>summary();scrollTo(0,0);
+}
+const _h=location.hash;if(_h)history.replaceState(null,"",location.pathname+location.search);if(_h==="#abs"&&typeof SUM!=="undefined"&&SUM.includes('id="abs"'))absView();else if(_h.startsWith("#sum")&&typeof SUM!=="undefined")summary(+_h.slice(5)||0);else if(_h.startsWith("#topic-")&&T[+_h.slice(7)-1])topic(+_h.slice(7)-1,0);else if(_h==="#quiz")exam();else if(S.at&&T[S.at.ti]){const a=S.at;if(a.quiz)quiz(a.ti);else topic(a.ti,Math.min(a.bi||0,T[a.ti].blocks.length-1))}else home();
+</script>
+<script src="../_engine/ai-config.js"></script><script src="../_engine/ai.js"></script>
+</body>
+</html>
