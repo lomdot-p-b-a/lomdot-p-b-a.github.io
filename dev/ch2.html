@@ -103,8 +103,8 @@ figure{margin:0}
 .who{display:flex;gap:12px;align-items:flex-start}
 .who .av{flex:none;width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.15rem}
 .who .yr{font-size:.8rem;color:var(--muted)}
-.cpt{border:1px solid var(--line);border-inline-start:4px solid var(--c,var(--accent));border-radius:14px;padding:14px 16px;margin:12px 0;background:var(--surface)}.cpt-h{display:flex;gap:10px;align-items:center;font-size:1.08rem}.cpt-h svg{width:26px;height:26px;color:var(--c,var(--accent));flex:none}.cpt p{margin:.5rem 0 .7rem;line-height:1.75}.cpt p.cpt-d{font-weight:600;margin-bottom:.3rem}.cpt-ex{background:var(--raised);border-radius:10px;padding:10px 12px;line-height:1.7;font-size:.97rem}.cpt-ex b{color:var(--c,var(--accent))}
-.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.lec{display:inline-flex;align-items:center;gap:5px;font-size:.78rem;font-weight:700;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 40%,transparent);background:color-mix(in srgb,var(--accent) 8%,transparent);border-radius:999px;padding:2px 10px;margin:0 0 8px}.lec svg{width:14px;height:14px}.podbox{margin-top:12px;border:1px solid var(--line);border-radius:14px;padding:12px;background:var(--surface)}.podbox p{margin:0 0 8px;font-size:.9rem}.podframe iframe{width:100%;height:90px;border:0;border-radius:10px}.cpt{border:1px solid var(--line);border-inline-start:4px solid var(--c,var(--accent));border-radius:14px;padding:14px 16px;margin:12px 0;background:var(--surface)}.cpt-h{display:flex;gap:10px;align-items:center;font-size:1.08rem}.cpt-h svg{width:26px;height:26px;color:var(--c,var(--accent));flex:none}.cpt p{margin:.5rem 0 .7rem;line-height:1.75}.cpt p.cpt-d{font-weight:600;margin-bottom:.3rem}.cpt-ex{background:var(--raised);border-radius:10px;padding:10px 12px;line-height:1.7;font-size:.97rem}.cpt-ex b{color:var(--c,var(--accent))}
+.tiles>.cpt{grid-column:1/-1;margin:0}.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
 .tile{background:var(--raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
 .tile svg{width:32px;height:32px;color:var(--c)}
 .tile b{font-size:.98rem}
@@ -185,7 +185,7 @@ h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
 <body>
 <div class="wrap" id="app"></div>
 <script>
-const CONFIG={about:"איך כל שכבה בסביבה של הילד, מהמשפחה ועד המדינה, משפיעה על ההתפתחות שלו? הלומדה עוברת על המשפחה כמערכת, על מעמד סוציו־אקונומי ועוני, על שכונות ובתי ספר, על תרבות, ועל מדיניות ציבורית.",key:"lomda-dev-ch2",cover:"cover18",eyebrow:"פסיכולוגיה התפתחותית א' · פרק 2",title:"פרק 2 - יסודות גנטיים וסביבתיים",cite:`ברק, מאיירס ובייט־מרום (עורכות), <i>פסיכולוגיה התפתחותית: ינקות, ילדות והתבגרות</i>, כרך א, האוניברסיטה הפתוחה, 2022. עמ' ⁦92–111⁩ (ההקשרים הסביבתיים של ההתפתחות).`,note:"מבוסס על העמודים שבחובת הקריאה. המונחים באנגלית מופיעים בסוגריים."};
+const CONFIG={about:"איך כל שכבה בסביבה של הילד, מהמשפחה ועד המדינה, משפיעה על ההתפתחות שלו? הלומדה עוברת על המשפחה כמערכת, על מעמד סוציו־אקונומי ועוני, על שכונות ובתי ספר, על תרבות, ועל מדיניות ציבורית.",key:"lomda-dev-ch2",cover:"cover18",eyebrow:"פסיכולוגיה התפתחותית א' · פרק 2",title:"פרק 2 - יסודות גנטיים וסביבתיים",cite:`ברק, מאיירס ובייט־מרום (עורכות), <i>פסיכולוגיה התפתחותית: ינקות, ילדות והתבגרות</i>, כרך א, האוניברסיטה הפתוחה, 2022. עמ' ⁦92–111⁩ (ההקשרים הסביבתיים של ההתפתחות).`,note:"מבוסס על העמודים שבחובת הקריאה. המונחים באנגלית מופיעים בסוגריים.",podcast:{id:"1FSGxWHQ958sllclkjioZeFEgniAVx-fx",min:18}};
 const I={
  building:'<path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h2M14 8h2M8 12h2M14 12h2M10 21v-4h4v4"/>',
  people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
@@ -296,6 +296,8 @@ const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")
 const spectrum=(r,l,dot)=>`<div class="spectrum"><div class="track">${dot?'<span class="dot"></span>':""}</div><div class="ends"><span>${r}</span><span>${l}</span></div></div>`;
 document.head.insertAdjacentHTML("beforeend",'<style>.yn svg{width:16px;height:16px}</style>');
 
+
+const LEC=`<span class="lec">${ic("doc")}מהשיעור (מצגת)</span>`;
 const ACR={
 "AAI":["Adult Attachment Interview","ריאיון ההיקשרות למבוגרים"],
 "ABA":["","תבנית הברות שבה הראשונה והאחרונה זהות (גה טי גה)"],
@@ -743,7 +745,9 @@ function home(){
       <button class="review-btn" id="exm">${ic("grad")}<span>מבחן מסכם${S.exam&&HAS_H?" · סבב "+((S.exam.k||1)+1)+": שאלות הבנה":""}${S.exam?` · ציון אחרון ${S.exam.pct}`:""}</span></button>
       <button class="review-btn" id="wk" ${started.length?"":"disabled"}>${ic("target")}<span>נושאים לחיזוק</span></button>
       ${typeof SUM!=="undefined"?`<button class="review-btn" id="sum">${ic("doc")}<span>סיכום הקריאה</span></button>`:""}
+      ${CONFIG.podcast?`<button class="review-btn" id="pod"><span aria-hidden="true">🎧</span><span>פודקאסט${CONFIG.podcast.min?` · ${CONFIG.podcast.min} דק׳`:""}</span></button>`:""}
      </div>
+     ${CONFIG.podcast?`<div id="podbox" class="podbox" hidden><p class="muted">פודקאסט שנוצר ב־Gemini Notebook מקריאת החובה. כמו כל סיכום אוטומטי, הוא עלול לטעות, והקריאה עצמה קובעת.</p><div class="podframe"></div></div>`:""}
     </div>
    </section>
    <div class="grid" id="list"></div>
@@ -756,7 +760,7 @@ function home(){
     b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(dn?"check":t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${dn&&!p?100*dn.r/dn.n:p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
     if(dn)b.classList.add("done");
     b.onclick=()=>topic(i,pos!=null?pos:0);list.appendChild(b)});
-  app.querySelector("#rev").onclick=review;{const sb=app.querySelector("#sum");if(sb)sb.onclick=summary}app.querySelector("#exm").onclick=exam;app.querySelector("#wk").onclick=weakTopics;
+  app.querySelector("#rev").onclick=review;{const sb=app.querySelector("#sum");if(sb)sb.onclick=summary}{const pb=app.querySelector("#pod");if(pb)pb.onclick=()=>{const bx=app.querySelector("#podbox");bx.hidden=!bx.hidden;const f=bx.querySelector(".podframe");if(!bx.hidden&&!f.firstChild)f.innerHTML=`<iframe src="https://drive.google.com/file/d/${CONFIG.podcast.id}/preview" allow="autoplay" title="פודקאסט" loading="lazy"></iframe>`}}app.querySelector("#exm").onclick=exam;app.querySelector("#wk").onclick=weakTopics;
   const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{},pos:{},done:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
   scrollTo(0,0);
 }
