@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>לומדת חובת קריאה: תקשורת שיווקית</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Rubik:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: a study notebook. Home = illustrated cover + topic cards; topic = one reading card at a time, with a highlighter for key terms and drawn figures */
+:root{
+  --bg:#eef2f4; --surface:#ffffff; --raised:#f7f9fa; --ink:#15222a; --muted:#4c5b66; --line:#dbe2e6;
+  --accent:#2457a6; --mark:#ffe27a; --good:#23855a; --good-soft:#e2f4ea; --bad:#c2452d; --bad-soft:#fbe6e1;
+  --t1:#d35d36; --t2:#3667cf; --t3:#0e8a7c; --t4:#8448c9; --t5:#b9800c; --t6:#2a7fa6; --t7:#b4436c; --t8:#5a6b2e;
+  --display:"Suez One","Frank Ruhl Libre","David",serif;
+  --body:"Rubik","Arial Hebrew","Segoe UI",Arial,sans-serif;
+  --shadow:0 1px 2px rgba(21,34,42,.06),0 8px 24px rgba(21,34,42,.07);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10181d; --surface:#18232a; --raised:#1e2b33; --ink:#e8eef1; --muted:#9db0ba; --line:#2b3a43;
+  --accent:#7fa6ec; --mark:rgba(255,214,77,.32); --good:#5fd197; --good-soft:#173528; --bad:#f08a72; --bad-soft:#3b211b;
+  --t1:#f08a64; --t2:#7ea4f5; --t3:#4fcab9; --t4:#b58cf0; --t5:#e8b445; --t6:#6cc0e6; --t7:#ef8fb2; --t8:#b8cc7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;font-weight:500;line-height:1.75;direction:rtl}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
+p{margin:0}
+.stack{display:flex;flex-direction:column;gap:16px}
+.muted{color:var(--muted)}
+mark{background:linear-gradient(transparent 38%,var(--mark) 38%,var(--mark) 92%,transparent 92%);color:inherit;padding:0 2px;font-weight:600}
+button{font:inherit;cursor:pointer;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:11px 18px}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button[disabled]{opacity:.55;cursor:default}
+.primary{background:var(--c,var(--accent));border-color:var(--c,var(--accent));color:var(--surface);font-weight:600}
+.ghost{background:transparent;border:none;color:var(--muted);padding:6px 2px}
+.ghost:hover{color:var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.badge{display:inline-block;align-self:flex-start;font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:99px;background:var(--accent);color:var(--surface);margin-bottom:6px}.entitle{display:inline;unicode-bidi:isolate;font-family:Rubik,system-ui,sans-serif;font-weight:800}.hetitle{margin:4px 0 0;font-weight:700;font-size:1.05rem}.cite{text-align:right;margin:4px 0 0;font-size:.85rem;color:var(--muted)}.cite a{color:var(--accent)}
+.eyebrow{font-size:.8rem;letter-spacing:.05em;font-weight:600;color:var(--c,var(--muted))}
+
+/* home */
+.cover{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.cover-art{background:var(--raised);border-bottom:1px solid var(--line);padding:8px 8px 0}
+.cover-art svg{display:block;width:100%;height:auto;max-height:230px}
+.cover-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px}
+.cover h1{font-size:clamp(2rem,6vw,2.6rem);font-weight:900}
+.stats{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.ring{--p:0;width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center;flex:none}
+.ring span{width:50px;height:50px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.9rem;font-variant-numeric:tabular-nums}
+.stat-text{display:flex;flex-direction:column;line-height:1.35;flex:1;min-width:160px}
+.stat-text b{font-size:1.05rem}
+.review-btn{display:flex;align-items:center;gap:8px}
+.actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.actions button{justify-content:center}
+.opt.sel{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--raised))}
+.opt[aria-disabled]{cursor:default}
+.opt .k svg{width:16px;height:16px}
+.trows{display:flex;flex-direction:column;gap:10px;width:100%}
+.trow{display:grid;grid-template-columns:minmax(0,1fr) minmax(70px,30%) auto;gap:10px;align-items:center;width:100%}
+.trow .tt{font-family:inherit;font-size:1rem;font-weight:600;line-height:1.35}
+.trow .bar i{background:var(--c)}
+.trow .sc{font-variant-numeric:tabular-nums;font-weight:700;min-width:3ch;text-align:left}
+.card.rev{align-items:stretch}
+.tag{align-self:flex-start;font-size:.82rem;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--raised)}
+.tag.good{background:var(--good-soft);color:var(--good)} .tag.low{background:var(--bad-soft);color:var(--bad)} .tag.mid{background:color-mix(in srgb,var(--mark) 45%,var(--raised))}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.tcard{--c:var(--accent);text-align:right;padding:0;overflow:hidden;border:none;border-radius:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s}
+.tcard:hover{transform:translateY(-2px)}
+.tcard .band{background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.tcard .band svg{width:44px;height:44px}
+.tcard .n{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;opacity:.85}
+.tcard .body{padding:12px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tcard .t{font-weight:700;font-size:1.05rem;line-height:1.35}
+.bar{height:7px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--c);border-radius:4px}
+.meta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip{font-size:.75rem;padding:3px 10px;border-radius:99px;font-weight:600;background:color-mix(in srgb,var(--c,var(--accent)) 14%,transparent);color:var(--c,var(--accent));white-space:nowrap}
+.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+
+/* topic */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;display:flex;flex-direction:column;gap:8px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.steps{display:flex;gap:5px}
+.steps i{flex:1;height:5px;border-radius:3px;background:var(--line)}
+.steps i.on{background:var(--c)}
+.prog{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tt{font-size:1.6rem;font-weight:900}
+.card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px}
+.card h3{font-size:1.25rem;color:var(--c)}
+.fig{background:var(--raised);border-radius:14px;padding:10px;margin-inline:-4px}
+.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{font-size:.8rem;color:var(--muted);text-align:center;margin-top:4px}
+figure{margin:0}
+.def{border:1.5px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 6%,var(--surface));border-radius:14px;padding:14px 16px}
+.lbl{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:var(--c);margin-bottom:4px}
+.who{display:flex;gap:12px;align-items:flex-start}
+.who .av{flex:none;width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.15rem}
+.who .yr{font-size:.8rem;color:var(--muted)}
+.lec{display:inline-flex;align-items:center;gap:5px;font-size:.78rem;font-weight:700;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 40%,transparent);background:color-mix(in srgb,var(--accent) 8%,transparent);border-radius:999px;padding:2px 10px;margin:0 0 8px}.lec svg{width:14px;height:14px}.podbox{margin-top:12px;border:1px solid var(--line);border-radius:14px;padding:12px;background:var(--surface)}.podbox p{margin:0 0 8px;font-size:.9rem}.podframe iframe{width:100%;height:90px;border:0;border-radius:10px}.cpt{border:1px solid var(--line);border-inline-start:4px solid var(--c,var(--accent));border-radius:14px;padding:14px 16px;margin:12px 0;background:var(--surface)}.cpt-h{display:flex;gap:10px;align-items:center;font-size:1.08rem}.cpt-h svg{width:26px;height:26px;color:var(--c,var(--accent));flex:none}.cpt p{margin:.5rem 0 .7rem;line-height:1.75}.cpt p.cpt-d{font-weight:600;margin-bottom:.3rem}.cpt-ex{background:var(--raised);border-radius:10px;padding:10px 12px;line-height:1.7;font-size:.97rem}.cpt-ex b{color:var(--c,var(--accent))}
+.tiles>.cpt{grid-column:1/-1;margin:0}.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.tile{background:var(--raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile svg{width:32px;height:32px;color:var(--c)}
+.tile b{font-size:.98rem}
+.tile span{font-size:.88rem;color:var(--muted);line-height:1.45}
+.ex{background:var(--raised);border-radius:12px;padding:12px 14px;font-size:.95rem}
+.ex .lbl{color:var(--muted)}
+.yesno{display:flex;flex-wrap:wrap;gap:8px}
+.yn{padding:5px 12px;border-radius:99px;font-size:.88rem;font-weight:500;display:inline-flex;gap:6px;align-items:center}
+.yn.y{background:var(--good-soft);color:var(--good)} .yn.n{background:var(--bad-soft);color:var(--bad)}
+.spectrum{display:flex;flex-direction:column;gap:6px}
+.spectrum .track{height:12px;border-radius:6px;background:linear-gradient(90deg,var(--bad),var(--line) 50%,var(--good));position:relative}
+.spectrum .dot{position:absolute;top:50%;left:50%;width:20px;height:20px;border-radius:50%;background:var(--surface);border:3px solid var(--ink);transform:translate(-50%,-50%)}
+.spectrum .ends{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);gap:10px}
+.remember{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;border-top:1px dashed var(--line);padding-top:12px}
+.remember svg{flex:none;width:22px;height:22px;color:var(--c)}
+
+/* question */
+.q{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:12px}
+.qtext{font-weight:600;font-size:1.08rem;line-height:1.55}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{text-align:right;line-height:1.45;display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--raised);border:1.5px solid transparent}
+.opt:hover:not([disabled]){border-color:var(--c)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:8px;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.85rem;color:var(--c)}
+.opt.right{background:var(--good-soft);border-color:var(--good);opacity:1}
+.opt.right .k{background:var(--good);color:var(--surface)}
+.opt.wrong{background:var(--bad-soft);border-color:var(--bad);opacity:1}
+.opt.wrong .k{background:var(--bad);color:var(--surface)}
+.fb{padding:12px 14px;border-radius:12px;font-size:.95rem;display:flex;gap:10px;align-items:flex-start}
+.fb svg{flex:none;width:22px;height:22px;margin-top:2px}
+.fb.ok{background:var(--good-soft)} .fb.ok svg{color:var(--good)}
+.fb.no{background:var(--bad-soft)} .fb.no svg{color:var(--bad)}
+.fb strong{display:block}
+.big{font-family:var(--display);font-size:3.4rem;font-weight:900;color:var(--c);font-variant-numeric:tabular-nums;line-height:1}
+@media (prefers-reduced-motion:no-preference){.fade{animation:f .3s ease-out}@keyframes f{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+
+/* svg figure classes */
+.s-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.s-c{stroke:var(--c);stroke-width:2;fill:none}
+.f-c{fill:var(--c)}
+.f-soft{fill:color-mix(in srgb,var(--c) 16%,var(--surface))}
+.f-surf{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.f-ink{fill:var(--ink)}
+.f-mut{fill:var(--muted)}
+.f-inv{fill:var(--surface)}
+svg text{font-family:var(--body)}
+h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
+.card p,.def p,.tile span,.ex p{font-weight:500}
+.qtext{font-weight:700}
+.tile b,.who b{font-weight:700}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:.95rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.tbl th,.tbl td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl th{background:color-mix(in srgb,var(--c) 10%,var(--surface));color:var(--c);font-weight:700;font-size:.85rem}
+.tbl .in{color:var(--c);font-weight:700}.tbl .out{color:var(--muted);font-weight:700}
+.tblwrap{overflow-x:auto}
+.en{font-size:.82em;color:var(--muted);font-weight:500;direction:ltr;unicode-bidi:isolate}
+.ak{white-space:nowrap}
+.acr{font-size:.82em;color:var(--muted);font-weight:500}
+.acrnote{font-size:.85rem;color:var(--muted);background:color-mix(in srgb,var(--c,var(--accent)) 7%,var(--surface));border-radius:10px;padding:8px 12px;line-height:1.6}
+.tcard.done .band{background:color-mix(in srgb,var(--good) 16%,var(--surface))}
+.tcard.done .meta span:first-child{color:var(--good);font-weight:700}
+.card.sum{gap:6px;align-items:stretch}
+.card.sum h2{font-family:var(--display);font-size:1.5rem;margin:6px 0 2px;color:var(--accent)}
+.card.sum h3{margin:18px 0 4px;color:var(--accent);border-bottom:2px solid color-mix(in srgb,var(--accent) 25%,transparent);padding-bottom:4px}
+.card.sum h4{margin:10px 0 2px}
+.card.sum p,.card.sum li{line-height:1.75}
+.card.sum ul,.card.sum ol{margin:4px 0;padding-inline-start:22px}
+.card.sum .key{background:color-mix(in srgb,var(--accent) 9%,var(--surface));border-inline-start:4px solid var(--accent);border-radius:10px;padding:10px 14px;margin:8px 0}
+.card.sum .trap{background:color-mix(in srgb,var(--bad) 9%,var(--surface));border-inline-start:4px solid var(--bad);border-radius:10px;padding:10px 14px;margin:8px 0}
+.card.sum table{border-collapse:collapse;width:100%;font-size:.92rem;margin:6px 0}
+.card.sum th,.card.sum td{border:1px solid var(--line);padding:6px 8px;text-align:right;vertical-align:top}
+.card.sum th{background:color-mix(in srgb,var(--accent) 10%,var(--surface))}
+.card.sum .tw{overflow-x:auto}
+.about{margin:.6rem 0 0;line-height:1.65}.about b{color:var(--ink,inherit)}
+</style>
+<style>:root{--accent:#0e7c86}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent:#4cc9d4}}:root[data-theme="dark"]{--accent:#4cc9d4}</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const CONFIG={about:"איך מותג מדבר עם הלקוחות שלו? הלומדה עוברת על שמונת כלי התקשורת השיווקית ועל בחירת התמהיל, על תקשורת שיווקית משולבת, על נתח קול וקידום מכירות לצרכנים, לסוחרים ולעסקים, על אירועים, חוויות ויחסי ציבור, ועל שיווק מקוון, רשתות חברתיות, שיווק מפה לאוזן ושיווק בניידים.",key:"lomda-mkt-comm",cover:"cover59",eyebrow:"מבוא לניהול השיווק · שיעור 12",title:"תקשורת שיווקית: המונים ודיגיטל",cite:`קוטלר וקלר, <i>עקרונות ניהול השיווק</i>, האוניברסיטה הפתוחה, 2020. פרק 14 עמ' ⁦326–329⁩; פרק 15 עמ' ⁦340–347⁩; פרק 16 עמ' ⁦352–362⁩.`,note:"מבוסס על חובת הקריאה לשיעור 12 לפי הסילבוס. עמ' 340 מתחיל בסוף הדיון בתקציב הפרסום, והקריאה בפרק 15 נעצרת לפני טבלת הכלים של יחסי ציבור שיווקיים."};
+const I={
+ building:'<path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h2M14 8h2M8 12h2M14 12h2M10 21v-4h4v4"/>',
+ people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
+ cycle:'<path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/>',
+ pyramid:'<path d="M12 3L2.5 20h19z"/><path d="M8.2 10.5h7.6M5.5 15.2h13"/>',
+ chart:'<path d="M4 20V10M9.5 20V4M15 20v-7M20.5 20V8M2 20h20"/>',
+ gear:'<circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="7.5" stroke-dasharray="3.2 2.7" stroke-width="3.2"/>',
+ sprout:'<path d="M12 21v-9"/><path d="M12 14C7 14 4.5 11 4.5 6.5 9 6.5 12 9 12 14z"/><path d="M12 12c0-4.5 3-7 7.5-7 0 4.5-3 7-7.5 7z"/>',
+ scales:'<path d="M12 3v17M7 20h10M4 7h16"/><path d="M4 7l-2.5 6h5zM20 7l-2.5 6h5z"/>',
+ factory:'<path d="M3 21V10l5 3v-3l5 3V5h4v16zM1.5 21h21M17 9h4v12"/>',
+ question:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 1 1 3.6 2.4c-.8.4-1.1.9-1.1 1.8"/><path d="M12 17h.01"/>',
+ data:'<ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6M4.5 11.5v6c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8v-6"/>',
+ doc:'<path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/>',
+ split:'<circle cx="12" cy="4.5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="12" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/><path d="M12 6.7v10M12 11l-6 6M12 11l6 6"/>',
+ grad:'<path d="M1.5 9L12 4l10.5 5L12 14z"/><path d="M6 11.2V16c3.3 2.4 8.7 2.4 12 0v-4.8M21 10v5"/>',
+ copies:'<rect x="3" y="7" width="12" height="14" rx="2"/><path d="M7 4h11a2 2 0 0 1 2 2v12"/>',
+ link:'<rect x="2" y="8" width="11" height="8" rx="4"/><rect x="11" y="8" width="11" height="8" rx="4"/>',
+ hand:'<circle cx="8" cy="7" r="3"/><circle cx="16" cy="7" r="3"/><path d="M2.5 20c0-3.3 2.5-6 5.5-6 1.6 0 3 .7 4 1.9 1-1.2 2.4-1.9 4-1.9 3 0 5.5 2.7 5.5 6"/>',
+ target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',
+ id:'<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><circle cx="8.5" cy="11" r="2.3"/><path d="M5 16c.6-1.6 2-2.4 3.5-2.4S11.4 14.4 12 16M14.5 10h4M14.5 13.5h3"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>',
+ pie:'<path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/>',
+ cart:'<path d="M2 3h3l2.5 12h11l2-8H6.5"/><circle cx="9" cy="19.5" r="1.6"/><circle cx="17" cy="19.5" r="1.6"/>',
+ bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/>',
+ check:'<circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/>',
+ x:'<circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/>',
+ lock:'<rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>',
+ moon:'<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>',
+ brain:'<path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a2 2 0 0 0-3-1z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/>',
+ phone:'<rect x="6.5" y="2" width="11" height="20" rx="2.5"/><path d="M10.5 18.5h3"/>',
+ flask:'<path d="M9 2.5h6M10 2.5v6L4.5 19a2 2 0 0 0 1.8 2.9h11.4a2 2 0 0 0 1.8-2.9L14 8.5v-6"/><path d="M7 15h10"/>',
+ leaf:'<path d="M5 19C5 10 11 4 20 4c0 9-6 15-15 15z"/><path d="M5 19l8-8"/>'
+};
+const ic=(k,cls="")=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="${cls}" aria-hidden="true">${I[k]}</svg>`;
+
+const arrowDef=id=>`<defs><marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="f-c"/></marker></defs>`;
+
+const FIG={
+ cover59:()=>`<svg viewBox="0 0 400 228" role="img" aria-label="מגפון ובועות שיחה">
+  <circle cx="200" cy="114" r="96" class="f-soft"/>
+  <path d="M140 100 L196 78 V150 L140 128 Z" class="f-surf"/>
+  <rect x="124" y="100" width="18" height="28" rx="4" class="f-c"/>
+  <path d="M214 92 C234 102 234 126 214 136 M228 80 C258 98 258 130 228 148" class="s-c" fill="none" stroke-width="6" stroke-linecap="round"/>
+ </svg>`
+};
+const E=t=>`<span class="en">(${t})</span>`;
+const fig=(k,cap)=>`<figure class="fig">${FIG[k]()}${cap?`<figcaption>${cap}</figcaption>`:""}</figure>`;
+const def=(l,h)=>`<div class="def"><span class="lbl">${l}</span><p>${h}</p></div>`;
+const who=(a,n,y,h)=>`<div class="who"><span class="av">${a}</span><div><b>${n}</b> <span class="yr">${y}</span><p>${h}</p></div></div>`;
+const _dot=s=>{const t=String(s).replace(/<[^>]+>/g,"").trim();return /[.!?:׃…]$/.test(t)?s:s+"."};
+const tiles=a=>{const s=a.filter(x=>x.length<4),c=a.filter(x=>x.length>=4);return (s.length?`<div class="tiles">${s.map(([i,t,d])=>`<div class="tile">${ic(i)}<b>${t}</b><span>${d}</span></div>`).join("")}</div>`:"")+c.map(([i,t,d,x,e])=>`<div class="cpt"><div class="cpt-h">${ic(i)}<b>${t}</b></div>${String(d).replace(/<[^>]+>/g,"").trim()?`<p class="cpt-d">${_dot(d)}</p>`:""}${x?`<p>${x}</p>`:""}${e?`<div class="cpt-ex"><b>דוגמה:</b> ${e}</div>`:""}</div>`).join("")};
+const ex=h=>`<div class="ex"><span class="lbl">דוגמה</span><p>${h}</p></div>`;
+const rem=h=>`<div class="remember">${ic("bulb")}<p>${h}</p></div>`;
+const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")}${t}</span>`).join("")}${n.map(t=>`<span class="yn n">${ic("x")}${t}</span>`).join("")}</div>`;
+const spectrum=(r,l,dot)=>`<div class="spectrum"><div class="track">${dot?'<span class="dot"></span>':""}</div><div class="ends"><span>${r}</span><span>${l}</span></div></div>`;
+document.head.insertAdjacentHTML("beforeend",'<style>.yn svg{width:16px;height:16px}</style>');
+
+
+const LEC=`<span class="lec">${ic("doc")}מהשיעור (מצגת)</span>`;
+const ACR={
+"AAI":["Adult Attachment Interview","ריאיון ההיקשרות למבוגרים"],
+"ABA":["","תבנית הברות שבה הראשונה והאחרונה זהות (גה טי גה)"],
+"ABB":["","תבנית הברות שבה השתיים האחרונות זהות (וו פי פי)"],
+"ACh":["Acetylcholine","אצטילכולין"],
+"AChE":["Acetylcholinesterase","אצטילכולין־אסטראז, האנזים שמפרק אצטילכולין"],
+"ADD":["Attention Deficit Disorder","הפרעת קשב"],
+"ADHD":["Attention Deficit Hyperactivity Disorder","הפרעת קשב וריכוז עם היפראקטיביות"],
+"AI":["Artificial Intelligence","בינה מלאכותית"],
+"AMPA":["","סוג של קולטן גלוטמט יונוטרופי, הנפוץ ביותר"],
+"ANOVA":["Analysis of Variance","ניתוח שונות, מבחן סטטיסטי להשוואת כמה ממוצעים"],
+"AP5":["","חומר שחוסם את אתר הגלוטמט בקולטן NMDA"],
+"AST":["Attention Switching Task","משימת מעבר קשב בין כללים"],
+"ATP":["Adenosine Triphosphate","אדנוזין טריפוספט, מולקולת האנרגיה של התא"],
+"AVG":["","ארגון שערך את הסקר על ילדים והטלפונים של הוריהם"],
+"BCTI":["Belief in Conspiracy Theories Inventory","שאלון האמונה בתיאוריות קונספירציה"],
+"BEIP":["Bucharest Early Intervention Project","מחקר ההתערבות המוקדמת בבוקרשט"],
+"BRAIN":["Brain Research through Advancing Innovative Neurotechnologies","מיזם חקר המוח האמריקני"],
+"CANTAB":["Cambridge Neuropsychological Test Automated Battery","סוללת מבחנים נוירופסיכולוגיים ממוחשבת"],
+"CASQ":["Cleveland Adolescent Sleepiness Questionnaire","שאלון ישנוניות כללית"],
+"CB1":["Cannabinoid receptor 1","קולטן קנבינואידים מסוג 1, במוח"],
+"CBT":["Cognitive Behavioral Therapy","טיפול קוגניטיבי־התנהגותי"],
+"CCT":["Computerized Cognitive Training","אימון קוגניטיבי ממוחשב"],
+"CES-D":["Center for Epidemiologic Studies Depression scale","שאלון לדיכאון"],
+"CFA":["Confirmatory Factor Analysis","ניתוח גורמים מאשש"],
+"ChAT":["Choline Acetyltransferase","האנזים שבונה אצטילכולין"],
+"ChR2":["Channelrhodopsin-2","תעלה רגישה לאור כחול שמעוררת נוירון"],
+"CNS":["Central Nervous System","מערכת העצבים המרכזית: המוח ומוח השדרה"],
+"CR":["Conditioned Response","תגובה מותנית"],
+"CS":["Conditioned Stimulus","גירוי מותנה"],
+"CSF":["Cerebrospinal Fluid","נוזל המוח והשדרה"],
+"CT":["Computed Tomography","טומוגרפיה ממוחשבת, צילום רנטגן בפרוסות"],
+"DBS":["Deep Brain Stimulation","גרייה מוחית עמוקה"],
+"DMS":["Delayed Matching to Sample","משימת התאמה לדוגמה אחרי השהיה (זיכרון חזותי)"],
+"DNA":["Deoxyribonucleic Acid","החומר התורשתי, שנמצא בכרומוזומים"],
+"DQ":["Developmental Quotient","מנת הרמה ההתפתחותית"],
+"DRD4":["Dopamine Receptor D4","גן של קולטן דופמין מסוג D4"],
+"DSM-5":["DSM, 5th edition","המהדורה החמישית של המדריך האמריקני לאבחון הפרעות נפשיות"],
+"DSM-IV":["DSM, 4th edition","המהדורה הרביעית של המדריך לאבחון הפרעות נפשיות"],
+"DSM-III":["DSM, 3rd edition","המהדורה השלישית של המדריך לאבחון הפרעות נפשיות"],
+"5-HT1A":["","קולטן סרוטונין מסוג 1A"],
+"5-HT3":["","קולטן סרוטונין מסוג 3, יונוטרופי"],
+"MAO-A":["Monoamine Oxidase A","מונואמין אוקסידאז מסוג A"],
+"MAO-B":["Monoamine Oxidase B","מונואמין אוקסידאז מסוג B"],
+"GPT-4":["Generative Pre-trained Transformer 4","מודל שפה של OpenAI"],
+"DSM":["Diagnostic and Statistical Manual of Mental Disorders","המדריך האמריקני לאבחון הפרעות נפשיות"],
+"DTI":["Diffusion Tensor Imaging","הדמיה של מסילות אקסונים לפי תנועת המים"],
+"EEG":["Electroencephalogram","רישום הפעילות החשמלית של המוח מהקרקפת"],
+"EPSP":["Excitatory Postsynaptic Potential","פוטנציאל פוסט־סינפטי מעורר"],
+"ERA":["English and Romanian Adoptees study","מחקר המאומצים מרומניה לאנגליה"],
+"ERP":["Event-Related Potential","פוטנציאל מעורר: תגובה חשמלית במוח לאירוע מסוים"],
+"FDG":["Fluorodeoxyglucose","גלוקוז רדיואקטיבי שמשמש בסריקת PET"],
+"FDR":["False Discovery Rate","תיקון סטטיסטי להשוואות מרובות"],
+"fMRI":["functional MRI","MRI תפקודי, מודד פעילות לפי רמת החמצן בדם"],
+"GABA":["Gamma-Aminobutyric Acid","גאבא, הנוירוטרנסמיטר המעכב העיקרי"],
+"GABAA":["","קולטן גאבא מסוג A, תעלת כלוריד"],
+"GAD":["Glutamic Acid Decarboxylase","האנזים שבונה גאבא מגלוטמט"],
+"GE":["General Electric","חברת ג'נרל אלקטריק"],
+"GLOBE":["Global Leadership and Organizational Behavior Effectiveness","מחקר בין־לאומי על מנהיגות ותרבות"],
+"GPS":["Global Positioning System","מערכת ניווט לווייני"],
+"HOME":["Home Observation for Measurement of the Environment","תצפית בבית למדידת הסביבה"],
+"IACUC":["Institutional Animal Care and Use Committee","ועדה מוסדית לפיקוח על מחקר בבעלי חיים"],
+"ICD":["International Classification of Diseases","הסיווג הבין־לאומי של מחלות"],
+"ICV":["Intracerebroventricular","מתן לתוך חדרי המוח"],
+"IM":["Intramuscular","הזרקה לתוך שריר"],
+"IP":["Intraperitoneal","הזרקה לחלל הבטן"],
+"IPSP":["Inhibitory Postsynaptic Potential","פוטנציאל פוסט־סינפטי מעכב"],
+"IQ":["Intelligence Quotient","מנת משכל"],
+"IRB":["Institutional Review Board","ועדת אתיקה מוסדית למחקר בבני אדם"],
+"IV":["Intravenous","הזרקה לווריד"],
+"LA":["Long-acting","שחרור ממושך"],
+"LLMs":["Large Language Models","מודלי שפה גדולים"],
+"LMX":["Leader-Member Exchange","תיאוריית חילופי מנהיג־עובד"],
+"LPC":["Least Preferred Coworker","שאלון העמית הפחות מועדף"],
+"LPD":["Letter Position Dyslexia","דיסלקסיית מיקום אותיות"],
+"MAO":["Monoamine Oxidase","מונואמין אוקסידאז, האנזים שמפרק מונואמינים"],
+"MBO":["Management by Objectives","ניהול לפי יעדים"],
+"MDMA":["","אקסטזי"],
+"MDS":["","סוללה ממוחשבת שנותנת מנות לקשב, זיכרון, זיכרון עבודה ותפקוד ניהולי"],
+"AQ":["Attention Quotient","מנת קשב"],
+"EFQ":["Executive Function Quotient","מנת התפקוד הניהולי"],
+"MEG":["Magnetoencephalography","מגנטו־אנצפלוגרפיה, מדידת השדות המגנטיים של המוח"],
+"MMQ":["Multifactorial Memory Questionnaire","שאלון זיכרון רב־גורמי"],
+"MMQ-C":["Multifactorial Memory Questionnaire - Contentment","שביעות רצון מהזיכרון"],
+"MMQ-S":["Multifactorial Memory Questionnaire - Strategy","שימוש באסטרטגיות זיכרון"],
+"MPTP":["","רעלן שהורס נוירונים דופמינרגיים"],
+"MQ":["Memory Quotient","מנת זיכרון כללית"],
+"MRI":["Magnetic Resonance Imaging","הדמיית תהודה מגנטית"],
+"mRNA":["messenger RNA","RNA שליח, העתק של גן שמשמש לבניית חלבון"],
+"NBAS":["Neonatal Behavioral Assessment Scale","סולם ברזלטון להערכת התנהגות יילודים"],
+"NCCP":["National Center for Children in Poverty","המרכז הלאומי לילדים בעוני"],
+"NE":["Norepinephrine","נוראפינפרין"],
+"NICHD":["National Institute of Child Health and Human Development","המכון הלאומי האמריקני לבריאות הילד"],
+"NMDA":["N-methyl-D-aspartate","סוג של קולטן גלוטמט שמעביר סידן"],
+"NpHR":["Halorhodopsin","נשא רגיש לאור צהוב שמעכב נוירון"],
+"OCD":["Obsessive-Compulsive Disorder","הפרעה טורדנית־כפייתית"],
+"OCPD":["Obsessive-Compulsive Personality Disorder","הפרעת אישיות טורדנית־כפייתית"],
+"OECD":["Organisation for Economic Co-operation and Development","הארגון לשיתוף פעולה ולפיתוח כלכלי"],
+"PAG":["Periaqueductal Gray","החומר האפור המרכזי"],
+"PBS":["Public Broadcasting Service","רשת השידור הציבורית האמריקנית"],
+"PCP":["Phencyclidine","פנציקלידין, ״אבק מלאכים״"],
+"PET":["Positron Emission Tomography","טומוגרפיה בפליטת פוזיטרונים"],
+"PHA-L":["Phaseolus vulgaris leucoagglutinin","חומר לסימון קדומני של אקסונים"],
+"PNS":["Peripheral Nervous System","מערכת העצבים ההיקפית"],
+"PSD":["Parental Screen Distraction","הסחת מסך הורית"],
+"RAVLT":["Rey Auditory Verbal Learning Test","מבחן הלמידה המילולית של ריי"],
+"REM":["Rapid Eye Movement","שנת חלומות, שבה העיניים זזות מהר"],
+"RNA":["Ribonucleic Acid","חומצה ריבונוקלאית"],
+"RQ1":["Research Question 1","שאלת המחקר הראשונה"],
+"RQ2":["Research Question 2","שאלת המחקר השנייה"],
+"RQ3":["Research Question 3","שאלת המחקר השלישית"],
+"RQ4":["Research Question 4","שאלת המחקר הרביעית"],
+"RVP":["Rapid Visual Information Processing","משימת קשב מתמשך"],
+"SAT":["Separation Anxiety Test","מבחן חרדת הפרידה"],
+"SC":["Subcutaneous","הזרקה מתחת לעור"],
+"SES":["Socioeconomic Status","מעמד סוציו־אקונומי"],
+"SfN":["Society for Neuroscience","העמותה למדע העצב"],
+"SLT":["Situational Leadership Theory","תיאוריית המנהיגות המצבית"],
+"SMC":["Subjective Memory Complaints","תלונות זיכרון סובייקטיביות"],
+"SQUID":["Superconducting Quantum Interference Device","גלאי רגיש במיוחד לשדות מגנטיים"],
+"SR":["Slow Release","שחרור איטי"],
+"SSP":["Spatial Span","משימת טווח זיכרון מרחבי"],
+"SSRI":["Selective Serotonin Reuptake Inhibitor","מעכב סלקטיבי של קליטה חוזרת של סרוטונין"],
+"SSS":["Stanford Sleepiness Scale","סולם הישנוניות של סטנפורד, ישנוניות ברגע"],
+"STAI-S":["State-Trait Anxiety Inventory - State","שאלון חרדת מצב"],
+"SVZ":["Subventricular Zone","האזור התת־חדרי"],
+"THC":["Tetrahydrocannabinol","החומר הפעיל בקנאביס"],
+"THCCOOH":["","תוצר הפירוק של THC שנמדד בבדיקה"],
+"TMN":["Tuberomammillary Nucleus","גרעין הפקעת הדדי"],
+"TMS":["Transcranial Magnetic Stimulation","גרייה מגנטית חוצת גולגולת"],
+"UCR":["Unconditioned Response","תגובה לא מותנית"],
+"UCS":["Unconditioned Stimulus","גירוי לא מותנה"],
+"VMH":["Ventromedial Hypothalamus","ההיפותלמוס הגחוני־מדיאלי"],
+"VRM":["Verbal Recognition Memory","זיכרון זיהוי מילולי"],
+"VTA":["Ventral Tegmental Area","אזור הטגמנטום הגחוני"],
+"VZ":["Ventricular Zone","האזור החדרי"],
+"WMQ":["Working Memory Quotient","מנת זיכרון העבודה"],
+"5-HT":["5-hydroxytryptamine","סרוטונין"],
+"2-DG":["2-deoxyglucose","גלוקוז מסומן שנקלט ולא מתפרק"],
+"L-DOPA":["","מולקולת־הקדם של דופמין"],
+"6-OHDA":["6-hydroxydopamine","רעלן שהורס נוירונים דופמינרגיים ונוראדרנרגיים"]
+};
+const ACR_RE=new RegExp("(?<![A-Za-z0-9])(?<![A-Za-z0-9]-)("+Object.keys(ACR).sort((a,b)=>b.length-a.length).map(k=>k.replace(/[-]/g,"\\-")).join("|")+")(?![A-Za-z0-9])(?!-[A-Za-z0-9])","g");
+const acrText=k=>{const [en,he]=ACR[k];return en?`${he}; <bdi dir="ltr">${en}</bdi>`:he};
+function acrExpand(html){
+  const plain=html.replace(/<[^>]+>/g," ");const seen=new Set();
+  for(const k of Object.keys(ACR)){const [en,he]=ACR[k];if((he&&plain.includes(he))||(en&&plain.toLowerCase().includes(en.toLowerCase())))seen.add(k)}
+  let inSvg=0;
+  return html.split(/(<svg[\s\S]*?<\/svg>|<[^>]+>)/).map(p=>{if(p.startsWith("<"))return p;
+    return p.replace(ACR_RE,(m,k,off,str)=>{if(seen.has(k))return m;seen.add(k);
+      const before=str.slice(0,off),inP=before.lastIndexOf("(")>before.lastIndexOf(")");
+      return inP?`<bdi class="ak">${m}</bdi>: ${acrText(k)}`:`<bdi class="ak">${m}</bdi> <span class="acr">(${acrText(k)})</span>`})}).join("");
+}
+function acrNote(...texts){const s=texts.join(" "),f=new Set();let m;ACR_RE.lastIndex=0;while((m=ACR_RE.exec(s)))f.add(m[1]);
+  return f.size?`<div class="acrnote"><b>ראשי תיבות:</b> ${[...f].map(k=>`<bdi class="ak">${k}</bdi> = ${acrText(k)}`).join(" · ")}</div>`:""}
+const T=[
+ {id:"t1",icon:"pie",title:"תמהיל התקשורת השיווקית",blocks:[
+  {h:"שמונת הכלים ומה מאפיין כל אחד",html:`${def("על מה הנושא",`לעסק יש תקציב תקשורת אחד, ושמונה כלים לחלק אותו ביניהם. הנושא מציג את הכלים, ואיך בוחרים ביניהם.<br><b>מה נלמד כאן:</b> שמונת הכלים · שלושה גורמים לבחירה · מדידה · תקשורת שיווקית משולבת`)}${ex("בלומדה נלווה את <b>עדי</b>, מנהלת השיווק של ״פלא״, מותג גלידות שמשיק טעם חדש.")}<p>עסקים מחפשים כל הזמן להחליף כלי אחד בכלי יעיל יותר, למשל חלק מאנשי המכירות בפרסום ובדיוור. בגלל היכולת להחליף, צריך <b>תיאום</b> בין הפונקציות.</p><div class="tw"><table><tr><th>כלי</th><th>מה מאפיין אותו</th></tr><tr><td><b>פרסום</b></td><td>מגיע לקונים מפוזרים. בונה תדמית לטווח ארוך, או מניע מכירה מהירה. נוכחות מתמדת והבלטה דרמטית</td></tr><tr><td><b>קידום מכירות</b></td><td>קופונים, תחרויות ומתנות לתגובה חזקה ומהירה. מושך תשומת לב, נותן תמריץ, ומזמין לקנות עכשיו</td></tr><tr><td><b>אירועים וחוויות</b></td><td>רלוונטיים, הצרכן מעורב אישית. מכירה ״רכה״ ועקיפה</td></tr><tr><td><b>יחסי ציבור ודוברות</b></td><td>אמינות גבוהה, מגיעים למי שנמנע מפרסום, מספרים סיפור</td></tr><tr><td><b>שיווק מקוון וברשתות</b></td><td>עתיר מידע או בידור, אפשר לעדכן לפי התגובה, ומהיר</td></tr><tr><td><b>שיווק בניידים</b></td><td>רגיש לזמן ולמיקום, ומגיע בזמן ההחלטה</td></tr><tr><td><b>שיווק ישיר ובמסדי נתונים</b></td><td>מותאם אישית, קורא לפעולה, ותומך בתקשורת אחרת</td></tr><tr><td><b>מכירה אישית</b></td><td>הכי יעילה <b>בשלבים המאוחרים</b>: העדפה, שכנוע ופעולה. מותאמת לפרט, מבוססת יחסים ומכוונת לתגובה</td></tr></table></div>`,q:"e1"},
+  {h:"שלושה גורמים בבחירת התמהיל",html:`<p><b>1. סוג השוק</b>: לצרכנים מוציאים יותר על קידום מכירות ופרסום. לעסקים, יותר על מכירה אישית. אבל גם בשוק העסקי הפרסום חשוב (מציג, מסביר, מזכיר, מייצר ״מובילים״ ומחזק ביטחון). ובשוק הצרכנים, אנשי מכירות משכנעים מפיצים להחזיק יותר מלאי ומדף.</p><p><b>2. שלב המוכנות של הקונה</b> (איור 14.4):</p><div class="tw"><table><tr><th>שלב</th><th>הכלי היעיל ביותר</th></tr><tr><td><b>מודעות</b> ו<b>הבנה</b></td><td>פרסום ויחסי ציבור</td></tr><tr><td><b>שכנוע</b></td><td>מכירה אישית</td></tr><tr><td><b>הזמנה</b> (סגירה)</td><td>מכירה אישית וקידום מכירות</td></tr><tr><td><b>הזמנה חוזרת</b></td><td>מכירה אישית וקידום מכירות, ופחות פרסום תזכורת</td></tr></table></div><p>פעילויות מקוונות יכולות להשפיע בכל השלבים.</p><p><b>3. השלב במחזור חיי המוצר</b>:</p><ul><li><b>הצגה</b>: פרסום, אירועים ויחסי ציבור. אחריהם מכירה אישית להפצה, וקידום מכירות ושיווק ישיר להתנסות.</li><li><b>צמיחה</b>: הביקוש ממשיך מעצמו, בזכות פה לאוזן ושיווק הידודי.</li><li><b>בגרות</b>: אירועים, פרסום ומכירה אישית חשובים יותר.</li><li><b>דעיכה</b>: קידום מכירות נשאר חשוב, השאר פוחתים.</li></ul>${ex("״פלא״ משיקה טעם חדש. עדי מתחילה בפרסום ובאירוע השקה כדי לבנות מודעות, ומוסיפה טעימות בסופר כדי שינסו.")}`,q:"e2"},
+  {h:"מדידה ותקשורת שיווקית משולבת",html:`<p><b>מדידה</b>: שואלים את קהל המטרה אם זיהו את המסר או נזכרו בו, כמה פעמים ראו, מה זכרו, איך הרגישו, ומה העמדות לפני ואחרי. ואוספים גם <b>מדדים התנהגותיים</b>: כמה קנו, אהבו ודיברו על המוצר.</p>${def("מושג מפתח",`<mark>תקשורת שיווקית משולבת</mark> ${E("Integrated marketing communications, IMC")}, לפי איגוד הפרסום האמריקני: תהליך תכנון שמבטיח שכל המגעים של לקוח עם המותג יהיו <b>רלוונטיים</b> לו ו<b>עקביים לאורך זמן</b>. מטרתו בהירות, עקביות והשפעה מרבית.`)}<p><b>תיאום ערוצים</b>: משלבים ערוצים אישיים ולא אישיים במסעות <b>רב־כליים ורב־שלביים</b>. פרסום מייעל מבצעים ופניות מקוונות, ומודעות ועמדות שהפרסום יוצר עוזרות למכירה הישירה. כתובת אתר במודעה ועל האריזה שולחת אנשים לעוד מידע ולחנויות.</p><p><b>היתרונות</b>: יותר עקביות במסר, ערך מותג, והשפעה על המכירות. היא מכריחה את ההנהלה לחשוב על כל המגעים, ומטילה על מישהו את האחריות לאחד את התדמית והמסרים. המטרה: הלקוחות הנכונים, המסר הנכון, בזמן ובמקום הנכונים.</p>`,q:"e3"}
+ ]},
+ {id:"t2",icon:"cart",title:"פרסום וקידום מכירות",blocks:[
+  {h:"נתח קול, וקידום מכירות מול פרסום",html:`${def("על מה הנושא",`כמה להוציא על פרסום, ומה עושה קידום מכירות שפרסום לא עושה.<br><b>מה נלמד כאן:</b> נתח הוצאות ונתח קול · מדידת השפעה על מכירות · קידום מכירות · זיקת צרכן־מוצר · יעדים וכלים · תוכנית והערכה`)}<p><b>האם מוציאים מספיק על פרסום?</b> לפי איור 15.2, <b>נתח ההוצאות לפרסום</b> מייצר <b>נתח קול</b> (החלק של העסק מכל הפרסום למוצר), שכובש <b>נתח בתודעה ובלב</b>, ובסוף <b>נתח שוק</b>. את ההשפעה על המכירות מודדים בגישה <b>היסטורית</b> (מתאם סטטיסטי בין הוצאות ומכירות בעבר) או ב<b>ניסויים</b>.</p>${def("מושג מפתח",`<mark>קידום מכירות</mark> ${E("Sales promotion")}: כלי תמריץ, רובם קצרי טווח, לעורר קנייה מהירה או גדולה יותר אצל צרכנים או סוחרים. <b>הפרסום נותן סיבה לקנות, וקידום המכירות נותן תמריץ.</b>`)}<div class="tw"><table><tr><th>בונה זיקת צרכן־מוצר</th><th>לא בונה זיקה</th></tr><tr><td>מעביר מסר דרך המבצע, ובונה ערך מותג: <b>דוגמיות</b>, פרסים למתמידים, מתנות שקשורות למוצר. מקדונלד׳ס וסטארבקס מחלקות דוגמיות</td><td>מארזים בהוזלה, מתנות לא קשורות, תחרויות והגרלות, החזר כספי, הנחות לסוחרים</td></tr></table></div><ul><li>בשווקים שבהם <b>המוצרים דומים</b>: תגובה גבוהה בטווח הקצר, אבל כמעט בלי גידול קבוע בנתח.</li><li>בשווקים עם <b>הבדלים</b> בין מותגים: המבצעים יכולים לשנות נתחים לצמיתות.</li><li>צרכנים גם <b>אוגרים</b>: קונים מוקדם או יותר. אחרי המבצע המכירות עלולות לצלול.</li><li>תחום שצומח מהר: <b>קופונים דיגיטליים</b> (זולים, קלים לעדכון, ופדיון גבוה יותר).</li></ul>`,q:"e4"},
+  {h:"יעדים וכלים לצרכנים",html:`<p><b>ההחלטות</b>: יעדים, כלים, תוכנית, יישום ובקרה, והערכה. היעדים נגזרים מיעדי התקשורת, שנגזרים מיעדי השיווק.</p><div class="tw"><table><tr><th>יעדים מול...</th><th>דוגמאות</th></tr><tr><td><b>צרכנים</b></td><td>לקנות יותר או יחידות גדולות; התנסות של לא משתמשים; למשוך ״מחליפי מותגים״ מהמתחרים</td></tr><tr><td><b>קמעונאים</b></td><td>להחזיק פריטים חדשים ויותר מלאי; קנייה מחוץ לעונה; תגובה למבצעי מתחרים; נאמנות; חנויות חדשות</td></tr><tr><td><b>אנשי מכירות</b></td><td>לתמוך במוצר חדש; לחפש לקוחות חדשים; למכור מחוץ לעונה</td></tr></table></div><p><b>כלים לצרכנים</b> (טבלה 15.2):</p><ul><li><b>דוגמיות</b>: כמות חינם.</li><li><b>תלושים</b>: חיסכון נקוב ברכישה.</li><li><b>החזר כספי או זיכוי</b>: הנחה <b>אחרי</b> הקנייה, לפי הוכחת קנייה.</li><li><b>מבצעי הוזלה</b>: אריזה במחיר מוזל (שניים באחד), או <b>מארז בהנחה</b> של מוצרים קשורים (משחה ומברשת).</li><li><b>מתנות</b>: צמודה לאריזה, חינם בדואר, או <b>במכירת חיסול</b> (במחיר נמוך).</li><li><b>תוכניות למתמידים</b>, <b>פרסי נאמנות</b>.</li><li><b>תחרויות, הגרלות ומשחקים</b>: בתחרות שופטים בוחרים תשובה; בהגרלה רק נרשמים; במשחק מקבלים משהו בכל קנייה.</li><li><b>התנסות חינם</b>, <b>אחריות</b>.</li><li><b>קידום מקושר</b> (שני מותגים יחד), <b>קידום צולב</b> (מותג אחד מפרסם מותג שלא מתחרה בו).</li><li><b>תצוגות והדגמות</b> בנקודת המכירה.</li></ul>${rem("קידום מכירות יכול להיות <b>ביוזמת היצרן</b> (למשל החזר כספי בענף הרכב) או <b>ביוזמת הקמעונאי</b> (הוזלות ותלושי הרשת).")}`,q:"e5"},
+  {h:"כלים לסוחרים ולעסקים, ויישום",html:`<p>יצרנים מקדמים מכירות אצל <b>סוחרים</b> כדי ש(א) יחזיקו את המותג; (ב) יחזיקו יותר מלאי; (ג) יקדמו אותו בפרסום, תצוגה והוזלה; (ד) ״ידחפו״ אותו. הכלים (טבלה 15.3):</p>${tiles([["chart","הנחה","Price-off","הנחה ממחיר המחירון על כל ארגז שנרכש בתקופה מסוימת.",""],["hand","זיכוי","Allowance","תשלום תמורת הבלטה: <b>זיכוי לפרסום</b> או <b>זיכוי לתצוגה</b>.",""],["cart","סחורות חינם","Free goods","כמות נוספת למי שקונה כמות מסוימת או מקדם גודל מסוים.",""]])}<p><b>לעסקים ולאנשי המכירות</b> (טבלה 15.4):</p><ul><li><b>תערוכות וכנסים</b>: משווקים עסקיים מוציאים עליהם עד 35% מתקציב הקידום. חשובות לעסקים חדשים, אבל <b>העלות ליצירת קשר היא הגבוהה ביותר</b>.</li><li><b>תחרויות מכירה</b> לאנשי מכירות וסוכנים.</li><li><b>מוצרים פרסומיים מיוחדים</b>: עטים, לוחות שנה, מחזיקי מפתחות עם שם החברה.</li></ul><p><b>פיתוח התוכנית</b>: גודל התמריץ, תנאי השתתפות, משך, אמצעי הפצה, תזמון ותקציב. <b>העלות</b> = עלות מנהלית + (עלות התמריץ × היחידות שיימכרו). בתלושים, רק חלק קטן יפדו.</p><p><b>יישום</b>: <b>זמן היערכות</b> (ההכנות), ו<b>זמן המכירה</b>, מההשקה עד ש־95% מהסחורה אצל הצרכנים. <b>הערכה</b>: נתוני מכירות וסורקים, סקרי צרכנים, וניסויים.</p>`,q:"e6"}
+ ]},
+ {id:"t3",icon:"people",title:"אירועים, חוויות ויחסי ציבור",blocks:[
+  {h:"יעדי אירועים והחלטות על חסות",html:`${def("על מה הנושא",`איך מותג נכנס לרגעים המיוחדים של הלקוחות, ואיך מנהלים את היחסים עם הציבור.<br><b>מה נלמד כאן:</b> אווירה · שמונה יעדי אירועים · החלטות על חסות · שיווק חווייתי · יחסי ציבור · יחסי ציבור שיווקיים`)}<p>אירועים וחוויות בחסות העסק מעמיקים את היחסים עם שוק המטרה. <b>אווירה</b> היא ״סביבה ארוזה״ שמחזקת נטייה לקנות, כמו נברשות ושיש במלון יוקרה.</p><p><b>שמונה יעדים</b> לחסות על אירועים:</p><ol><li><b>הזדהות עם שוק מטרה</b> או סגנון חיים (Old Spice בכדורסל המכללות).</li><li><b>מודעות</b> לשם החברה או המוצר (מקדונלד׳ס וקסטרול במונדיאל).</li><li><b>אסוציאציות לתדמית המותג</b> (טויוטה טונדרה וטורנירי דיג).</li><li><b>חיזוק התדמית התאגידית</b> (ויזה והאולימפיאדה).</li><li><b>חוויות ותחושות</b> (אאודי באיירונמן 2).</li><li><b>מחויבות לקהילה</b>: שיווק הקשור למטרה חברתית.</li><li><b>בידור לקוחות ותגמול עובדים</b>.</li><li><b>קישור למסחור וקידום מכירות</b>: תחרויות, הגרלות.</li></ol>${rem("החסרונות: קשה לחזות את התוצאות, ואין שליטה. ויש צרכנים שמתרעמים על המסחור.")}<p><b>החלטות</b>: (1) <b>בחירת אירוע</b> שמתאים ליעדים ולשוק, עם תדמית רצויה. אידיאלי: ייחודי, בלי יותר מדי נותני חסות. (2) <b>תוכנית</b>: על פעילויות השיווק הנלוות כדאי להוציא <b>פי שניים או שלושה</b> מההוצאה על החסות עצמה. (3) <b>מדידה</b>: <b>צד ההיצע</b> (היקף הכיסוי, כמה שניות המותג נראה) מול <b>צד הביקוש</b> (ההשפעה על הידע של הצרכנים).</p><p><b>שיווק חווייתי</b>: מקשר את המוצר לחוויות ייחודיות. לפי סקר, ארבעה מכל חמישה מרגישים שאירוע חי מעסיק אותם יותר מכל תקשורת אחרת.</p>`,q:"e7"},
+  {h:"יחסי ציבור ויחסי ציבור שיווקיים",html:`${def("מושג מפתח",`<mark>ציבור</mark> ${E("Public")}: כל קבוצה עם עניין, או השפעה, על יכולת העסק להשיג את יעדיו. <b>יחסי ציבור</b> (PR): תוכניות לקידום התדמית או להגנה עליה.`)}<p>מחלקת יחסי ציבור טובה גם <b>מייעצת</b> להנהלה לאמץ תוכניות חיוביות ולוותר על דפוסים מפוקפקים, כדי שלא תהיה סיבה לפרסום שלילי. <b>חמישה תפקידים</b>: קשרי עיתונות; יחסי ציבור למוצר; תקשורת לתאגיד; <b>שתדלנות</b> מול מחוקקים; ייעוץ להנהלה.</p>${def("מושג מפתח",`<mark>יחסי ציבור שיווקיים</mark> ${E("Marketing public relations, MPR")}: משרתים את מחלקת השיווק. פעם קראו להם <b>פרסום פומבי</b>, שמשיג <b>שטח מערכתי</b> ולא שטח פרסומי בתשלום. אבל התפקיד שלהם רחב יותר.`)}<div class="tw"><table><tr><th>משימה</th><th>דוגמה מהספר</th></tr><tr><td>השקת מוצרים חדשים</td><td>Silly Bandz</td></tr><tr><td>מיצוב מחדש של מוצר בוגר</td><td>I Love New York</td></tr><tr><td>עניין בקטגוריה</td><td>ביצים, חלב, תה ומיץ תפוזים</td></tr><tr><td>השפעה על קבוצות ייחודיות</td><td>אירועים שכונתיים של מקדונלד׳ס</td></tr><tr><td>הגנה על מוצרים במשבר</td><td>טויוטה</td></tr><tr><td>בניית תדמית תאגידית</td><td>הנאומים של סטיב ג׳ובס</td></tr></table></div><p>עם הירידה בכוח הפרסום להמונים, יחסי ציבור שיווקיים יכולים להיות <b>יעילים כלכלית יותר מפרסום</b>, אבל צריך לתכנן אותם יחד איתו. ההחלטות: יעדים, מסרים וכלים, יישום והערכה.</p>`,q:"e8"}
+ ]},
+ {id:"t4",icon:"doc",title:"שיווק מקוון",blocks:[
+  {h:"ערוצים, יתרונות וחסרונות, ואתרים",html:`${def("על מה הנושא",`הערוצים הדיגיטליים צומחים הכי מהר. הנושא מציג את השיווק המקוון וכליו.<br><b>מה נלמד כאן:</b> בתשלום, בבעלות ושיתופי · יתרונות וחסרונות · 7 מרכיבי אתר · מיקרו־אתר · חיפוש, SEO, תצוגה ודואר`)}<p>הפתיחה של פרק 16: פפסי, עם ״Dewmocracy״ שבה הצרכנים בחרו טעם חדש, ותחרות הפרסומת של דוריטוס לסופרבול. השאלה היא לא רק ״איך נגיע ללקוחות״, אלא גם ״איך הם יגיעו אלינו, וזה לזה״.</p><div class="tw"><table><tr><th>ערוצים</th><th>מה זה</th></tr><tr><td><b>בתשלום</b></td><td>פרסום, תקשורת ויחסי ציבור, וקידום מכירות</td></tr><tr><td><b>בבעלות</b></td><td>בעיקר התקשורת המקוונת של העסק</td></tr><tr><td><b>שיתופיים</b></td><td>מה שמרוויחים <b>בלי תשלום ישיר</b>: כתבות, בלוגים ושיחות ברשתות</td></tr></table></div><div class="tw"><table><tr><th>יתרונות</th><th>חסרונות</th></tr><tr><td>מסרים מותאמים לתחומי עניין; קל למדוד (יוניקים, קליקים, זמן); <b>מיקום בהקשר</b> (באתרים קשורים); פרסומות לפי מילות חיפוש, בדיוק כשמתחילים לקנות</td><td>הצרכנים מסננים; קליקים מזויפים; אובדן שליטה, פריצה והשחתה</td></tr></table></div><p>היתרונות לרוב עדיפים, וכמחצית מזמן המדיה של אמריקנים מוקדש לעולם המקוון.</p><p><b>שבעה מרכיבים של אתר יעיל</b> (רייפורט וג׳וורסקי): <b>הקשר</b> (מתווה ועיצוב), <b>תוכן</b>, <b>קהילה</b>, <b>התאמה אישית</b>, <b>תקשורת</b>, <b>קישור</b> לאתרים אחרים, ו<b>מסחר</b>. המבקרים שופטים לפי קלות שימוש ואטרקטיביות.</p>${def("מושג מפתח",`<mark>מיקרו־אתר</mark> ${E("Microsite")}: דף או כמה דפים שמשלימים את האתר הראשי. מתאים למוצרים שהעניין בהם נמוך, כמו ביטוח: חברה מציבה מיקרו־אתר עם ייעוץ, באתר למכירת רכב משומש.`)}`,q:"e9"},
+  {h:"פרסומות חיפוש, תצוגה ודואר אלקטרוני",html:`${tiles([["question","קישור ממומן","Paid search, Pay-per-click: פרסומת שמופיעה ליד תוצאות החיפוש","המשווק מציע תשלום על מונחי חיפוש. המיקום נקבע לפי ההצעה ולפי הרלוונטיות. <b>משלמים רק על הקלקה</b>, ומי שכבר מחפש הוא לקוח מבטיח.",""],["chart","טיוב מנועי חיפוש","SEO: להופיע גבוה בתוצאות הלא ממומנות","מונחים <b>רחבים</b> טובים לבניית מותג, מונחים <b>ספציפיים</b> (דגם מסוים) טובים ל״מובילים״ ומכירות. להדגיש את המונחים באתר, ולהתאים את ההצעה לכל מילה לפי התשואה.",""],["copies","פרסומות תצוגה","Display ads, דגלונים: תיבות קטנות באתרים רלוונטיים","קהל גדול יותר עולה יותר. רק כ־5% מהזמן ברשת הוא חיפוש, ולכן לתצוגה יש פוטנציאל. <b>פרסומות בין־תאיות</b> קופצות בין דפים, ונתפסות כפולשניות.",""],["doc","דואר אלקטרוני","בשבריר מעלות השיווק הישיר","הערכה: תורם לרכישות פי שלושה לפחות מפרסומות ברשתות, וערך ההזמנה גבוה ב־17%. אבל הצרכנים מוצפים ומסננים. צריך להיות בזמן, ממוקד ורלוונטי. Gilt Groupe שולחת יותר מ־3,000 גרסאות.",""]])}${ex("עדי קונה את מונח החיפוש ״גלידה טבעונית״, ומשלמת רק כשמישהו לוחץ. במקביל היא שולחת מייל עם טעם חדש רק למי שקנה טבעוני בעבר.")}`,q:"e10"}
+ ]},
+ {id:"t5",icon:"phone",title:"רשתות, מפה לאוזן וניידים",blocks:[
+  {h:"רשתות חברתיות",html:`${def("מושג מפתח",`<mark>רשת חברתית</mark> ${E("Social media")}: כלים שבהם צרכנים משתפים מלל, תמונות, שמע ווידאו, ביניהם ועם עסקים. היא נותנת למותג <b>קול ונוכחות ציבורית</b>, מחזקת תקשורת אחרת בזול, ומעודדת חדשנות ורלוונטיות.`)}<p><b>שלוש פלטפורמות</b>:</p><ul><li><b>קהילות ופורומים</b>: חלקם של צרכנים, חלקם במימון עסקים. המידע זורם לשני הכיוונים ונותן תובנות.</li><li><b>בלוגים</b>: מחברים אנשים עם עניין משותף ומולידים מנהיגי דעה. ועדת הסחר מחייבת בלוגרים לחשוף קשרים עם משווקים. ויש צרכנים שמשתמשים בהם כדי ״לנקום״.</li><li><b>רשתות חברתיות</b>: פייסבוק, לינקדאין (אנשי מקצוע), טוויטר (140 תווים).</li></ul>${rem("ברשתות קשה יותר למשוך תשומת לב ולשכנע, כי אנשים באים להתחבר זה עם זה. ופרסומות עלולות להופיע ליד תוכן פוגעני. לכן עסקים גם <b>משתתפים</b> בקבוצות, ודף פייסבוק נעשה הכרחי.")}<p><b>מגבלות</b>: הרשת החברתית היא כמעט אף פעם לא המקור היחיד. היא פחות טובה למשיכת משתמשים חדשים. לפי DDB, יש הבדלים גדולים: נושאי תקשורת, צדקה ואופנה ״חברתיים״, מוצרי צריכה פחות. ורק <b>מעטים</b> רוצים ״שיחה״ עם מותג, ורק חלק מהזמן.</p>`,q:"e11"},
+  {h:"שיווק מפה לאוזן ושיווק בניידים",html:`<p>בניגוד לדעה המקובלת, לפי קלר ופיי, <b>90%</b> מהפרסום מפה לאוזן מתרחש <b>מחוץ לרשת</b>: 75% פנים אל פנים ו־15% בטלפון. ופה לאוזן ופרסום קשורים: הפרסום מניע את השיחה.</p>${def("מושג מפתח",`<mark>שיווק ויראלי</mark> ${E("Viral marketing")}: פה לאוזן מקוון, שמעודד צרכנים להעביר ברשת תוכן שהעסק פיתח.`)}<ul><li>להיות ״חדיש ומפתיע״ כמעט לא משפיע על שיחות פנים אל פנים. מדברים על מותגים <b>בולטים</b> שקל להיזכר בהם.</li><li>צרכנים מפיצים ביוזמתם <b>חוויות חיוביות</b> שלהם. שלילי הם מעבירים בעיקר כששמעו על חוויות של אחרים.</li><li>רוב התוכן לא הופך ויראלי: רק <b>4%</b> מגיעים ליותר מאדם אחד מעבר לנמען.</li><li><b>ביקורות</b> של לקוחות: לפי נילסן, המקור השני באמינותו, אחרי המלצת חברים ומשפחה.</li></ul>${ex("P&G רשמה יותר מחצי מיליון אימהות ל־Vocalpoint. לאימהות האלה יש קבוצות גדולות: הן מדברות עם 25 עד 30 נשים ביום, לעומת 5 בממוצע.")}<p><b>צעדים לבאזז חיובי</b>: לזהות <b>משפיענים</b> ולהשקיע בהם; לתת להם <b>דוגמאות</b> (שברולט וולט למשתמשים עם ציון Klout גבוה); לעבוד דרך משפיענים בקהילה (Fiesta Movement של פורד); לעודד המלצות; ולספק מידע שרוצים להעביר. <b>מדידה</b>: למשל, דופונט מודדת טווח, מהירות ונתח קול. פפסי הקימה ״מרכז בקרת משימה״ לגייטורייד.</p><p><b>שיווק בניידים</b>: ״המסך השלישי״. ב־2014 לשישה מכל עשרה אמריקנים היה טלפון חכם, והם בילו בו יותר מברדיו, מגזינים ועיתונים יחד. <b>יישומונים</b> מוסיפים נוחות וערך, ועוזרים לתוכניות נאמנות. <b>הצעות מבוססות מיקום</b> ללקוחות שהסכימו (Sonic Corp. שלחה הנחה כשהלקוח קרוב למסעדה). העיצוב: פשוט ותמציתי, מלל ב־50% מהמסך לכל היותר, וקריאה לפעולה בולטת.</p>`,q:"e12"}
+ ]},
+ {id:"tx",icon:"grad",title:"תרגול בסגנון המבחן",blocks:[
+  {h:"שאלות מסכמות",html:`${def("על מה הנושא",`שאלות שמחברות בין כלי התקשורת, קידום המכירות, האירועים והדיגיטל.`)}${rem("טיפ: פרסום = <b>סיבה</b> לקנות. קידום מכירות = <b>תמריץ</b> לקנות עכשיו.")}`,q:"ex"}
+ ]}
+];
+const Q={"e1": {"t": "t1", "v": [{"q": "איזה כלי הוא היעיל ביותר בשלבים המאוחרים של הקנייה?", "a": "מכירה אישית", "w": ["פרסום בטלוויזיה", "יחסי ציבור", "פרסומת תצוגה"], "e": "מכירה אישית יעילה במיוחד לבניית העדפה, שכנוע ודחף לפעולה."}, {"q": "לאיזה כלי יש אמינות גבוהה, ויכולת להגיע למי שנמנע מפרסום?", "a": "יחסי ציבור", "w": ["קידום מכירות", "שיווק בניידים", "מכירה אישית"], "e": "יחסי ציבור ודוברות: אמינות גבוהה, הגעה לנמנעים, וסיפור משכנע."}]}, "e2": {"t": "t1", "v": [{"q": "איזה כלי משפיע בעיקר על שלב השכנוע של הקונה?", "a": "מכירה אישית", "w": ["פרסום ויחסי ציבור", "קידום מכירות בלבד", "פרסום תזכורת"], "e": "לפי איור 14.4, השכנוע מושפע בעיקר ממכירה אישית."}, {"q": "משווקים לעסקים, לעומת משווקים לצרכנים, מוציאים יותר על:", "a": "מכירה אישית", "w": ["קידום מכירות", "פרסום המונים", "שיווק ויראלי"], "e": "לצרכנים: יותר קידום מכירות ופרסום. לעסקים: יותר מכירה אישית."}]}, "e3": {"t": "t1", "v": [{"q": "מה המטרה של תקשורת שיווקית משולבת?", "a": "מגעים רלוונטיים ועקביים", "w": ["כמה שיותר פרסומות בכל ערוץ", "להחליף את כל אנשי המכירות", "להוריד את תקציב התקשורת לאפס"], "e": "IMC מבטיחה שכל מגע עם המותג יהיה רלוונטי ועקבי, לבהירות והשפעה מרבית."}, {"q": "מה כולל ״מדד התנהגותי״ למדידת תקשורת?", "a": "כמה קנו ודיברו על המוצר", "w": ["כמה זכרו את המסר", "איך הרגישו כלפי המסר", "כמה פעמים ראו את המסר"], "e": "שאלות הזכירה וההרגשה הן מדדי תקשורת. מדדים התנהגותיים: כמה קנו, אהבו ודיברו."}]}, "e4": {"t": "t2", "v": [{"q": "מה ההבדל בין פרסום לקידום מכירות?", "a": "פרסום: סיבה; קידום: תמריץ", "w": ["פרסום: תמריץ; קידום: סיבה", "פרסום רק לעסקים, קידום רק לצרכנים", "אין שום הבדל ביניהם"], "e": "הפרסום מציע סיבה לקנות, וקידום המכירות מציע תמריץ."}, {"q": "איזה כלי קידום בונה זיקת צרכן־מוצר?", "a": "דוגמיות חינם", "w": ["הגרלה עם פרסים", "מתנה לא קשורה", "הנחה לסוחרים"], "e": "דוגמיות, פרסים למתמידים ומתנות קשורות מעבירים מסר דרך המבצע ובונים ערך מותג."}]}, "e5": {"t": "t2", "v": [{"q": "הצרכן שולח הוכחת קנייה ומקבל חלק מהמחיר בדואר. איזה כלי זה?", "a": "החזר כספי (זיכוי)", "w": ["תלוש הנחה בחנות", "מארז בהנחה", "מתנה צמודה לאריזה"], "e": "בהחזר כספי ההנחה ניתנת אחרי הקנייה, ולא בחנות."}, {"q": "משחת שיניים ומברשת נמכרות יחד בהנחה. איך נקרא זה?", "a": "מארז בהנחה", "w": ["אריזה מוזלת", "קידום צולב", "מתנה בדואר"], "e": "מארז בהנחה הוא צמד מוצרים קשורים שנמכרים יחד. אריזה מוזלת היא למשל שניים במחיר אחד."}]}, "e6": {"t": "t2", "v": [{"q": "יצרן משלם לקמעונאי על סידור תצוגה מיוחדת של המוצר. איזה כלי זה?", "a": "זיכוי לתצוגה", "w": ["סחורות חינם", "הנחת מחירון", "תחרות מכירות"], "e": "זיכוי (Allowance) הוא תשלום תמורת הבלטה: לפרסום או לתצוגה."}, {"q": "לפי הספר, מה נכון לגבי תערוכות ענפיות?", "a": "עלות יצירת קשר בהן הכי גבוהה", "w": ["הן הכלי הזול ביותר לעסקים", "הן מיועדות רק לצרכנים פרטיים", "אסור להציג בהן מוצרים חדשים"], "e": "תערוכות חשובות לעסקים חדשים, אבל העלות ליצירת קשר היא הגבוהה מכל האפשרויות."}]}, "e7": {"t": "t3", "v": [{"q": "ויזה נותנת חסות לאולימפיאדה ומטפחת רגש פטריוטי חיובי. איזה יעד זה בעיקר?", "a": "חיזוק התדמית התאגידית", "w": ["בידור לקוחות חשובים", "קישור למסחור ומבצעים", "הזדהות עם סגנון חיים"], "e": "חסות יכולה לשפר את התפיסה שהחברה חביבה ויוקרתית."}, {"q": "כמה כדאי להוציא על פעילויות השיווק שמלוות חסות?", "a": "פי שניים או שלושה מהחסות", "w": ["חצי מההוצאה על החסות", "בדיוק כמו ההוצאה על החסות", "שום דבר מעבר לחסות"], "e": "לפי הספר, על הפעילויות הנלוות כדאי להוציא לפחות פי שניים או שלושה."}]}, "e8": {"t": "t3", "v": [{"q": "מגעים עם מחוקקים כדי לקדם או להכשיל חקיקה. איזה תפקיד של יחסי ציבור זה?", "a": "שתדלנות מול הממשל", "w": ["קשרי עיתונות", "תקשורת לתאגיד", "יחסי ציבור למוצר"], "e": "חמשת התפקידים: קשרי עיתונות, יחסי ציבור למוצר, תקשורת לתאגיד, שתדלנות וייעוץ."}, {"q": "מה ההבדל בין ״פרסום פומבי״ לפרסום רגיל?", "a": "פומבי: שטח מערכתי; רגיל: בתשלום", "w": ["פומבי: בתשלום; רגיל: מערכתי", "פומבי רק בטלוויזיה, רגיל בעיתון", "אין ביניהם שום הבדל אמיתי"], "e": "פרסום פומבי משיג שטח מערכתי בכלי התקשורת, ולא שטח פרסומי בתשלום."}]}, "e9": {"t": "t4", "v": [{"q": "כתבה בעיתון ושיחות ברשתות על המותג, בלי תשלום ישיר. איזה ערוץ זה?", "a": "ערוץ שיתופי", "w": ["ערוץ בתשלום", "ערוץ בבעלות", "ערוץ ישיר"], "e": "ערוצים שיתופיים (Earned) הם מה שהעסק מרוויח מיחסי ציבור ומפה לאוזן בלי תשלום."}, {"q": "איזה מהבאים הוא חיסרון של שיווק מקוון לפי הספר?", "a": "קליקים מזויפים ואובדן שליטה", "w": ["קשה מאוד למדוד את ההשפעה", "אי אפשר להתאים מסרים אישית", "אין אפשרות לפרסם לפי חיפוש"], "e": "החסרונות: סינון, קליקים מזויפים, ואובדן שליטה, פריצה והשחתה."}]}, "e10": {"t": "t4", "v": [{"q": "על מה משלם המפרסם בקישור ממומן?", "a": "רק על הקלקות", "w": ["על כל הצגה", "על כל רכישה", "תשלום חודשי קבוע"], "e": "בקישור ממומן (Pay-per-click) משלמים רק כשמקליקים על הקישור."}, {"q": "לפי הספר, אילו מונחי חיפוש טובים ליצירת ״מובילים״ ומכירות?", "a": "מונחים ספציפיים", "w": ["מונחים רחבים", "מונחים מצחיקים", "מונחים באנגלית"], "e": "מונחים רחבים טובים לבניית מותג. ספציפיים, שמזהים דגם, טובים ל״מובילים״."}]}, "e11": {"t": "t5", "v": [{"q": "לפי הספר, מה נכון לגבי ״שיחות״ של צרכנים עם מותגים ברשתות?", "a": "רק מעטים רוצים, ורק חלק מהזמן", "w": ["כל הצרכנים רוצים לשוחח עם מותגים", "הצרכנים רוצים לשוחח רק עם מותגי צריכה", "הרשת היא תמיד המקור היחיד לתקשורת"], "e": "רק שיעור נמוך מעוניין בשיחה דו־סטרית, עם חלק מהמותגים, וחלק מהזמן."}, {"q": "לפי מחקר DDB, אילו מוצרים ״חברתיים״ פחות ברשת?", "a": "מוצרי צריכה", "w": ["אופנה", "ארגוני צדקה", "נושאי תקשורת"], "e": "נושאי תקשורת, צדקה ואופנה מעוררים יותר עניין וחיבור. מוצרי צריכה פחות."}]}, "e12": {"t": "t5", "v": [{"q": "לפי קלר ופיי, איפה מתרחש רוב הפרסום מפה לאוזן?", "a": "מחוץ לרשת, בעיקר פנים אל פנים", "w": ["ברשתות החברתיות, בעיקר בטוויטר", "בבלוגים ובפורומים המקוונים", "בהודעות טקסט בטלפון הנייד"], "e": "90% מחוץ לרשת: 75% פנים אל פנים ו־15% בטלפון."}, {"q": "שברולט נתנה מכונית לאנשים עם השפעה מקוונת גבוהה. איזה צעד לבאזז זה?", "a": "דוגמאות מוצר לאנשי מפתח", "w": ["עידוד ערוצי הפנייה מפה לאוזן", "מידע שהלקוחות רוצים להעביר", "מדידת נתח הקול ברשת"], "e": "אספקת דוגמאות מוצר לאנשי מפתח היא אחד הצעדים ליצירת באזז חיובי."}]}, "f1": {"t": "t1", "v": [{"q": "בשלב הצמיחה של המוצר, מה מניע את הביקוש לפי הספר?", "a": "פה לאוזן ושיווק הידודי", "w": ["פרסום מסיבי בטלוויזיה", "קידום מכירות לסוחרים", "מכירה אישית בלבד"], "e": "בצמיחה הביקוש נהנה מתנופה עצמית, בזכות פה לאוזן ושיווק הידודי."}, {"q": "איזה כלי נשאר חשוב גם בשלב הדעיכה?", "a": "קידום מכירות", "w": ["יחסי ציבור", "אירועים וחוויות", "פרסום המונים"], "e": "בדעיכה קידום המכירות נשאר חשוב, והחשיבות של שאר הכלים פוחתת."}]}, "f2": {"t": "t2", "v": [{"q": "מה קורה לקידום מכירות בשוק שבו המוצרים דומים מאוד?", "a": "תגובה בטווח הקצר, בלי גידול קבוע", "w": ["גידול קבוע בנתח השוק לאורך זמן", "אין שום תגובה גם בטווח הקצר", "המחירים בשוק עולים לצמיתות"], "e": "בשוק עם מוצרים דומים: תגובה גבוהה קצרה, וכמעט בלי שינוי קבוע בנתח."}, {"q": "מהו ״זמן המכירה״ של מבצע?", "a": "מההשקה עד ש־95% מהסחורה אצל הצרכנים", "w": ["הזמן שלוקח לתכנן ולהכין את המבצע", "הזמן שבו הקופונים תקפים בחנות", "הזמן שעובר עד שהמתחרה מגיב"], "e": "זמן ההיערכות הוא ההכנות. זמן המכירה מתחיל בהשקה ונגמר כש־95% מהסחורה נמכרה."}]}, "f3": {"t": "t3", "v": [{"q": "מה מודדת שיטת ״צד ההיצע״ בחסות?", "a": "את היקף הכיסוי התקשורתי", "w": ["את ההשפעה על ידע הצרכן", "את מספר העובדים שהשתתפו", "את מחיר הכרטיסים לאירוע"], "e": "צד ההיצע: כיסוי, כמו שניות של נראות. צד הביקוש: ההשפעה על ידע הצרכנים."}, {"q": "קמפיין I Love New York הוא דוגמה לאיזו משימה של יחסי ציבור שיווקיים?", "a": "מיצוב מחדש של מוצר בוגר", "w": ["השקת מוצר חדש לגמרי בשוק", "הגנה על מוצר במשבר", "בניית עניין בקטגוריה"], "e": "ניו יורק סבלה מתקשורת עוינת, והקמפיין מיצב אותה מחדש."}]}, "f4": {"t": "t4", "v": [{"q": "מה זה ״מיקרו־אתר״?", "a": "דפים שמשלימים את האתר הראשי", "w": ["אתר שמוכר רק מוצרים קטנים", "פרסומת קופצת בין דפים", "אתר שמיועד רק לניידים"], "e": "מיקרו־אתר משלים את האתר הראשי, ומתאים במיוחד למוצרים שהעניין בהם נמוך."}, {"q": "איזה מרכיב של אתר מתאר איך הוא מאפשר תקשורת בין המשתמשים?", "a": "קהילה", "w": ["הקשר", "קישור", "מסחר"], "e": "שבעת המרכיבים: הקשר, תוכן, קהילה, התאמה אישית, תקשורת, קישור ומסחר."}]}, "ex": {"t": "tx", "v": [{"q": "״פלא״ מחלקת טעימות חינם בסופר לטעם החדש. איזה כלי זה?", "a": "קידום מכירות (דוגמיות)", "w": ["יחסי ציבור שיווקיים בחנות", "פרסומת תצוגה ברשת", "מכירה אישית לסוחר"], "e": "דוגמיות הן כלי של קידום מכירות לצרכנים, שגם בונה זיקה."}, {"q": "על אריזת הגלידה של ״פלא״ מופיעה פרסומת למותג קפה של חברה אחרת, שלא מתחרה בה. מה זה?", "a": "קידום צולב", "w": ["קידום מקושר", "מתנה צמודה", "מארז בהנחה"], "e": "קידום צולב: מותג אחד משמש לפרסום מותג אחר שלא מתחרה בו."}]}};
+const SUM=`<h2>סיכום: תקשורת שיווקית - המונים ודיגיטל</h2>
+<div class="key"><b>על מה הקריאה?</b> פרק 14 עמ' 326–329, פרק 15 עמ' 340–347 ופרק 16 עמ' 352–362, לפי הסילבוס של שיעור 12: בחירת תמהיל התקשורת ותקשורת משולבת; קידום מכירות, אירועים ויחסי ציבור; ושיווק מקוון, רשתות, מפה לאוזן וניידים.</div>
+<h3>1. תמהיל התקשורת (פרק 14)</h3>
+<ul>
+<li><b>שמונה כלים</b>: פרסום (מפוזרים, תדמית או מכירה מהירה); קידום מכירות (תמריץ ותגובה מהירה); אירועים וחוויות (מעורבות, ״רך״); יחסי ציבור (אמינות); מקוון ורשתות (מידע, עדכון, מהירות); ניידים (זמן ומיקום); ישיר ומסדי נתונים (אישי, קריאה לפעולה); מכירה אישית (שלבים מאוחרים).</li>
+<li><b>שלושה גורמים</b>: <b>סוג השוק</b> (צרכנים: קידום ופרסום; עסקים: מכירה אישית); <b>מוכנות הקונה</b> (מודעות והבנה: פרסום ויח״צ; שכנוע: מכירה אישית; הזמנה: מכירה אישית וקידום); <b>מחזור החיים</b> (הצגה: פרסום, אירועים, יח״צ; צמיחה: פה לאוזן; בגרות: אירועים, פרסום, מכירה; דעיכה: קידום מכירות).</li>
+<li><b>מדידה</b>: זיהוי, זכירה, רגש, עמדות, ומדדים התנהגותיים.</li>
+<li><b>IMC</b>: מגעים רלוונטיים ועקביים. מסעות רב־כליים ורב־שלביים, תיאום מקוון ולא מקוון, אחריות על אחידות המסר.</li>
+</ul>
+<h3>2. פרסום וקידום מכירות (פרק 15)</h3>
+<ul>
+<li>נתח הוצאות ← <b>נתח קול</b> ← נתח בתודעה ובלב ← נתח שוק. מדידה היסטורית או בניסויים.</li>
+<li><b>קידום מכירות</b>: תמריץ קצר טווח (פרסום: סיבה). <b>זיקת צרכן־מוצר</b> (דוגמיות, פרסים, מתנות קשורות) מול כלים שלא בונים זיקה. בשוק דומה: אפקט קצר. בשוק מבודל: יכול לשנות נתחים. אגירה. קופונים דיגיטליים.</li>
+<li><b>יעדים</b> מול צרכנים, קמעונאים ואנשי מכירות.</li>
+<li><b>לצרכנים</b> (טבלה 15.2): דוגמיות, תלושים, החזר כספי, מבצעי הוזלה ומארזים, מתנות, מתמידים, תחרויות והגרלות, פרסי נאמנות, התנסות, אחריות, קידום מקושר וצולב, תצוגות.</li>
+<li><b>לסוחרים</b> (15.3): הנחה, זיכוי (פרסום, תצוגה), סחורות חינם. <b>לעסקים</b> (15.4): תערוכות (עלות קשר הגבוהה ביותר), תחרויות מכירה, מוצרים פרסומיים.</li>
+<li><b>תוכנית</b>: עלות מנהלית + תמריץ × יחידות. <b>זמן היערכות</b> ו<b>זמן מכירה</b> (עד 95%). הערכה: נתונים, סקרים, ניסויים.</li>
+</ul>
+<h3>3. אירועים, חוויות ויחסי ציבור</h3>
+<ul>
+<li><b>אווירה</b>: ״סביבה ארוזה״. <b>שמונה יעדים</b>: הזדהות, מודעות, אסוציאציות, תדמית תאגידית, חוויות, מחויבות חברתית, בידור ותגמול, מסחור. קשה לחזות ולשלוט.</li>
+<li><b>החלטות</b>: בחירת אירוע; תוכנית (פי 2–3 לפעילויות נלוות); מדידה בצד ההיצע (כיסוי) או הביקוש (ידע).</li>
+<li><b>שיווק חווייתי</b>: קישור לחוויות ייחודיות.</li>
+<li><b>יחסי ציבור</b>: חמישה תפקידים: עיתונות, מוצר, תאגיד, שתדלנות, ייעוץ. <b>יחסי ציבור שיווקיים</b>: מעבר ל״פרסום פומבי״ (שטח מערכתי). השקה, מיצוב מחדש, עניין בקטגוריה, קבוצות ייחודיות, משבר, תדמית. לעתים יעילים יותר מפרסום.</li>
+</ul>
+<h3>4. שיווק מקוון (פרק 16)</h3>
+<ul>
+<li>ערוצים <b>בתשלום</b>, <b>בבעלות</b> ו<b>שיתופיים</b>. יתרונות: התאמה, מדידה, מיקום בהקשר, חיפוש. חסרונות: סינון, קליקים מזויפים, אובדן שליטה.</li>
+<li><b>שבעה מרכיבי אתר</b>: הקשר, תוכן, קהילה, התאמה אישית, תקשורת, קישור, מסחר. <b>מיקרו־אתר</b>.</li>
+<li><b>קישור ממומן</b> (תשלום לפי הקלקה), <b>SEO</b> (רחב למותג, ספציפי למכירות), <b>תצוגה</b>, <b>בין־תאיות</b>, <b>דואר אלקטרוני</b>.</li>
+</ul>
+<h3>5. רשתות, מפה לאוזן וניידים</h3>
+<ul>
+<li><b>פלטפורמות</b>: קהילות ופורומים, בלוגים, רשתות. קשה לשכנע ברשת. כמעט אף פעם לא מקור יחיד. מעטים רוצים ״שיחה״ עם מותג.</li>
+<li><b>מפה לאוזן</b>: 90% מחוץ לרשת. <b>שיווק ויראלי</b>. רק 4% מהתוכן מתפשט. מדברים על מותגים בולטים. ביקורות: מקור שני באמינותו. Vocalpoint. צעדים: משפיענים, דוגמאות, קהילה, הפניות, מידע לשיתוף. מדידה ומעקב.</li>
+<li><b>ניידים</b>: ״המסך השלישי״. יישומונים, נאמנות, הצעות לפי מיקום (Sonic). עיצוב פשוט ותמציתי.</li>
+</ul>
+<div class="key"><b>השורה התחתונה: מה רוצים ממך</b><br>להכיר את מאפייני שמונת הכלים; להתאים כלי לסוג שוק, לשלב מוכנות ולשלב במחזור החיים; להסביר IMC; להבחין בין פרסום לקידום מכירות ולזהות כלי קידום לצרכנים, לסוחרים ולעסקים; למנות יעדי חסות ותפקידי יחסי ציבור; להבחין בין ערוצים בתשלום, בבעלות ושיתופיים ובין כלי השיווק המקוון; ולתאר עובדות מפתח על פה לאוזן.</div>`;
+if(typeof H!=="undefined")for(const k in H)Q[k]=Object.assign({},H[k],{lv:2});
+const isH=id=>Q[id].lv===2;
+for(const t of T){t.qids=Object.keys(Q).filter(k=>Q[k].t===t.id&&!isH(k));t.hids=Object.keys(Q).filter(k=>Q[k].t===t.id&&isH(k))}
+const HAS_H=T.some(t=>t.hids.length);
+const KEY=CONFIG.key;
+let S={q:{},read:{}};
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.q) S=s;}catch(e){}
+S.pos=S.pos||{};S.done=S.done||{};
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const st=id=>S.q[id]||(S.q[id]={n:0,c:0,w:0,t:0,lv:-1});
+const mastered=id=>(S.q[id]?.c||0)>=2;
+const topicPct=t=>Math.round(100*t.qids.filter(mastered).length/t.qids.length);
+const topicStarted=t=>S.read[t.id]||S.pos[t.id]!=null||t.qids.some(id=>S.q[id]&&S.q[id].n);
+const allIds=Object.keys(Q).filter(id=>!isH(id));
+const rnd=t=>S.done[t.id]?(S.done[t.id].k||1)+1:1;
+const hardOn=t=>rnd(t)>1&&t.hids.length>0;
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+const pickVariant=id=>{const s=st(id),n=Q[id].v.length;return n>1?(s.lv+1)%n:0};
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const color=t=>`var(--${t.id})`;
+const app=document.getElementById("app");
+const LET=["א","ב","ג","ד"];
+
+function qCard(id,onDone,label){
+  const vi=pickVariant(id),v=Q[id].v[vi],opts=shuffle([v.a,...v.w]);
+  const box=document.createElement("div");box.className="q fade";
+  box.innerHTML=(label?`<span class="eyebrow">${label}</span>`:"")+`<div class="qtext">${esc(v.q)}</div>${acrNote(v.q,v.a,...v.w)}<div class="opts"></div>`;
+  const wrap=box.querySelector(".opts");
+  opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt";b.dataset.a=o===v.a?"1":"";
+    b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+    b.onclick=()=>{const ok=o===v.a,s=st(id);s.n++;s.t=Date.now();s.lv=vi;ok?s.c++:(s.c=0,s.w++);save();
+      wrap.querySelectorAll("button").forEach(x=>{x.disabled=true;if(x.dataset.a)x.classList.add("right")});
+      if(!ok)b.classList.add("wrong");
+      const fb=document.createElement("div");fb.className="fb fade "+(ok?"ok":"no");
+      fb.innerHTML=`${ic(ok?"check":"x")}<div><strong>${ok?"נכון!":"לא בדיוק"}</strong>${esc(v.e)}</div>`;box.appendChild(fb);
+      const nx=document.createElement("button");nx.className="primary";nx.textContent="המשך";nx.style.alignSelf="flex-start";
+      nx.onclick=()=>onDone(ok);box.appendChild(nx);nx.focus({preventScroll:true});nx.scrollIntoView({block:"nearest",behavior:"smooth"});
+    };wrap.appendChild(b)});
+  return box;
+}
+
+function home(){
+  document.body.style.removeProperty("--c");if(S.at){delete S.at;save()}
+  const started=T.filter(topicStarted);
+  const total=Math.round(T.reduce((a,t)=>a+strength(t)*t.qids.length,0)/allIds.length);
+  const weak=allIds.filter(id=>S.q[id]&&S.q[id].n&&!mastered(id)).length;
+  app.innerHTML=`<div class="stack fade">
+   <section class="cover" style="--c:var(--accent)">
+    <div class="cover-art">${FIG[CONFIG.cover]()}</div>
+    <div class="cover-body">
+     <span class="eyebrow">${CONFIG.eyebrow}</span>
+     ${CONFIG.badge?`<span class="badge">${CONFIG.badge}</span>`:""}<h1>לומדת חובת קריאה: ${CONFIG.en?`<span dir="ltr" lang="en" class="entitle">${CONFIG.title}</span>`:CONFIG.title}</h1>${CONFIG.en&&CONFIG.he?`<p class="hetitle">${CONFIG.he}</p>`:""}${CONFIG.cite?`<p class="cite" dir="ltr">${CONFIG.cite}</p>`:""}
+     ${CONFIG.about?`<p class="about"><b>על מה הלומדה:</b> ${CONFIG.about}</p>`:`<p class="muted">קוראים קטע קצר, עונים על שאלה, ממשיכים. בסוף כל נושא יש מבחן קצר, ובסוף הלומדה מבחן מסכם עם ציון.${HAS_H?" מהסבב השני, המבחנים עוברים לשאלות הבנה: מקרים וסיפורים שצריך לזהות לאיזה רעיון הם שייכים.":""}</p>`}
+     <div class="stats">
+      <div class="ring" style="--p:${total}"><span>${total}%</span></div>
+      <div class="stat-text"><b>${total===0&&!started.length?"עוד לא התחלת":total>=80?"אתה שולט בחומר":`התקדמת ב־${total}% מהשאלות`}</b><span class="muted">${weak?`${weak} שאלות מחכות לחיזוק`:"שאלות שתטעה בהן יחזרו כאן"}</span></div>
+     </div>
+     <div class="actions">
+      <button class="primary review-btn" id="rev" ${started.length?"":"disabled"}>${ic("cycle")}<span>${started.length?"חזרה מהירה":"חזרה מהירה (אחרי נושא ראשון)"}</span></button>
+      <button class="review-btn" id="exm">${ic("grad")}<span>מבחן מסכם${S.exam&&HAS_H?" · סבב "+((S.exam.k||1)+1)+": שאלות הבנה":""}${S.exam?` · ציון אחרון ${S.exam.pct}`:""}</span></button>
+      <button class="review-btn" id="wk" ${started.length?"":"disabled"}>${ic("target")}<span>נושאים לחיזוק</span></button>
+      ${typeof SUM!=="undefined"?`<button class="review-btn" id="sum">${ic("doc")}<span>סיכום הקריאה</span></button>`:""}
+      ${CONFIG.podcast?`<button class="review-btn" id="pod"><span aria-hidden="true">🎧</span><span>פודקאסט${CONFIG.podcast.min?` · ${CONFIG.podcast.min} דק׳`:""}</span></button>`:""}
+     </div>
+     ${CONFIG.podcast?`<div id="podbox" class="podbox" hidden><p class="muted">פודקאסט שנוצר ב־Gemini Notebook מקריאת החובה. כמו כל סיכום אוטומטי, הוא עלול לטעות, והקריאה עצמה קובעת.</p><div class="podframe"></div></div>`:""}
+    </div>
+   </section>
+   <div class="grid" id="list"></div>
+   <div class="foot"><a href="../#mkt" style="color:var(--accent);font-weight:700;text-decoration:none">→ לקורס</a><span>${CONFIG.note}</span><button class="ghost" id="reset">איפוס התקדמות</button></div>
+  </div>`;
+  app.querySelectorAll(".actions svg").forEach(x=>x.style.cssText="width:20px;height:20px");
+  const list=app.querySelector("#list");
+  T.forEach((t,i)=>{const p=strength(t),pos=S.pos[t.id],dn=S.done[t.id],b=document.createElement("button");b.className="tcard";b.style.setProperty("--c",color(t));
+    const status=dn?`✓ הושלם · מבחן ${dn.r}/${dn.n}${t.hids.length?" · הבא: סבב "+rnd(t)+" (הבנה)":""}`:pos!=null?`באמצע · קטע ${pos+1} מתוך ${t.blocks.length}`:S.read[t.id]?"✓ נקרא":topicStarted(t)?"בתהליך":"לא התחלת";
+    b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(dn?"check":t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${dn&&!p?100*dn.r/dn.n:p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
+    if(dn)b.classList.add("done");
+    b.onclick=()=>topic(i,pos!=null?pos:0);list.appendChild(b)});
+  app.querySelector("#rev").onclick=review;{const sb=app.querySelector("#sum");if(sb)sb.onclick=summary}{const pb=app.querySelector("#pod");if(pb)pb.onclick=()=>{const bx=app.querySelector("#podbox");bx.hidden=!bx.hidden;const f=bx.querySelector(".podframe");if(!bx.hidden&&!f.firstChild)f.innerHTML=`<iframe src="https://drive.google.com/file/d/${CONFIG.podcast.id}/preview" allow="autoplay" title="פודקאסט" loading="lazy"></iframe>`}}app.querySelector("#exm").onclick=exam;app.querySelector("#wk").onclick=weakTopics;
+  const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{},pos:{},done:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
+  scrollTo(0,0);
+}
+
+function bar(title,n,i,label){
+  return `<div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">${label}</span></div><div class="steps">${Array.from({length:n},(_,k)=>`<i class="${k<=i?"on":""}"></i>`).join("")}</div></div><span class="eyebrow">${title}</span>`;
+}
+
+function topic(ti,bi){
+  const t=T[ti],blk=t.blocks[bi];document.body.style.setProperty("--c",color(t));
+  app.innerHTML=`<div class="stack">${bar(`נושא ${ti+1} · ${t.title}`,t.blocks.length+1,bi,`קטע ${bi+1} מתוך ${t.blocks.length}`)}
+   <article class="card fade"><h3>${blk.h}</h3>${acrExpand(blk.html)}</article><div id="slot"></div></div>`;
+  S.pos[t.id]=bi;S.at={ti,bi};save();
+  app.querySelector("#back").onclick=home;
+  const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;delete S.pos[t.id];S.at={ti,quiz:1};save();quiz(ti)}};
+  if(bi>0){const pb=document.createElement("button");pb.className="ghost";pb.textContent="→ הקטע הקודם";pb.style.marginTop="6px";pb.onclick=()=>topic(ti,bi-1);setTimeout(()=>slot.appendChild(pb))}
+  const slot=app.querySelector("#slot");
+  {const b=document.createElement("button");b.className="primary";b.textContent=bi+1<t.blocks.length?"המשך":`למבחן הנושא (${t.qids.length} שאלות)`;b.onclick=next;slot.appendChild(b)}
+  scrollTo(0,0);
+}
+
+function runSet(title,ids,c,onEnd){
+  let i=0,right=0;document.body.style.setProperty("--c",c);
+  const step=()=>{
+    if(i>=ids.length)return onEnd(right,ids.length);
+    const id=ids[i],from=T.find(t=>t.id===Q[id].t);
+    app.innerHTML=`<div class="stack">${bar(title,ids.length,i,`שאלה ${i+1} מתוך ${ids.length}`)}<div id="slot"></div></div>`;
+    app.querySelector("#back").onclick=home;
+    const card=qCard(id,ok=>{if(ok)right++;i++;step()},from.title);card.style.setProperty("--c",color(from));
+    app.querySelector("#slot").appendChild(card);scrollTo(0,0);
+  };step();
+}
+
+function quiz(ti){
+  const t=T[ti];
+  if(hardOn(t)){const weak=shuffle(t.qids.filter(id=>!mastered(id))).slice(0,2);
+    return runSet(`מבחן הנושא · סבב ${rnd(t)} · שאלות הבנה`,shuffle(shuffle(t.hids).slice(0,Math.max(8,t.qids.length)).concat(weak)),color(t),(r,n)=>done(r,n,ti))}
+  const prev=T.slice(0,ti).filter(topicStarted).flatMap(x=>x.qids);
+  const extra=shuffle(prev).sort((a,b)=>st(a).c-st(b).c).slice(0,2);
+  runSet(`מבחן סיום · ${t.title}`,shuffle(t.qids).concat(extra),color(t),(r,n)=>done(r,n,ti));
+}
+
+function review(){
+  const pool=T.filter(topicStarted).flatMap(t=>S.done[t.id]?t.qids.concat(t.hids):t.qids),now=Date.now();
+  const tw={};T.forEach(t=>tw[t.id]=(100-strength(t))/20);
+  const score=id=>{const s=S.q[id]||{n:0,c:0,w:0,t:0};return (s.n?0:2)+s.w*2+(s.c<2?3:0)+Math.min(3,(now-s.t)/864e5)+tw[Q[id].t]+Math.random()*2};
+  const ids=pool.map(id=>[id,score(id)]).sort((a,b)=>b[1]-a[1]).slice(0,12).map(x=>x[0]);
+  runSet("חזרה מהירה",shuffle(ids),"var(--accent)",(r,n)=>done(r,n,null));
+}
+
+const strength=t=>Math.round(100*t.qids.filter(id=>S.q[id]&&S.q[id].n&&S.q[id].c>0).length/t.qids.length);
+
+function practice(ti){const t=T[ti];if(hardOn(t))return quiz(ti);runSet(`תרגול · ${t.title}`,shuffle(t.qids),color(t),(r,n)=>done(r,n,ti))}
+
+function exam(){
+  const N=Math.min(allIds.length,Math.max(15,Math.min(20,T.length*3)));
+  const xh=S.exam&&HAS_H,pools=T.map(t=>xh&&t.hids.length?shuffle(t.hids).concat(shuffle(t.qids)):shuffle(t.qids)),ids=[];
+  for(let k=0;ids.length<N;k++)for(const p of pools){if(ids.length>=N)break;if(k<p.length)ids.push(p[k])}
+  const items=shuffle(ids).map(id=>{const vi=pickVariant(id),v=Q[id].v[vi];return{id,vi,v,opts:shuffle([v.a,...v.w]),pick:null}});
+  document.body.style.setProperty("--c","var(--accent)");
+  let i=0;
+  const step=()=>{
+    const it=items[i],from=T.find(t=>t.id===Q[it.id].t),last=i===items.length-1;
+    app.innerHTML=`<div class="stack">${bar(xh?`מבחן מסכם · סבב ${(S.exam.k||1)+1} · שאלות הבנה`:"מבחן מסכם",items.length,i,`שאלה ${i+1} מתוך ${items.length}`)}
+     <div class="q fade"><span class="eyebrow">${esc(from.title)}</span><div class="qtext">${esc(it.v.q)}</div>${acrNote(it.v.q,it.v.a,...it.v.w)}<div class="opts"></div>
+     <div class="row"><button class="primary" id="nx" ${it.pick==null?"disabled":""}>${last?"הגשה ובדיקה":"הבא"}</button>${i?`<button class="ghost" id="pv">הקודם</button>`:""}</div></div></div>`;
+    {const bk=app.querySelector("#back");bk.onclick=()=>{if(bk.dataset.sure)home();else{bk.dataset.sure=1;bk.textContent="לחץ שוב כדי לצאת (התשובות לא יישמרו)"}}}
+    const wrap=app.querySelector(".opts"),nx=app.querySelector("#nx");
+    it.opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt"+(it.pick===o?" sel":"");
+      b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+      b.onclick=()=>{it.pick=o;wrap.querySelectorAll(".opt").forEach(x=>x.classList.remove("sel"));b.classList.add("sel");nx.disabled=false};
+      wrap.appendChild(b)});
+    nx.onclick=()=>{if(last)grade(items);else{i++;step()}};
+    const pv=app.querySelector("#pv");if(pv)pv.onclick=()=>{i--;step()};
+    scrollTo(0,0);
+  };step();
+}
+
+function grade(items){
+  const now=Date.now();let r=0;const per={};
+  items.forEach(it=>{const ok=it.pick===it.v.a,s=st(it.id),tid=Q[it.id].t;s.n++;s.t=now;s.lv=it.vi;ok?(s.c++,r++):(s.c=0,s.w++);
+    it.ok=ok;(per[tid]=per[tid]||{r:0,n:0}).n++;if(ok)per[tid].r++});
+  const n=items.length,pct=Math.round(100*r/n);S.exam={pct,t:now,k:S.exam?(S.exam.k||1)+1:1};save();
+  const rows=T.filter(t=>per[t.id]).map(t=>{const p=per[t.id],q=Math.round(100*p.r/p.n);
+    return `<div class="trow" style="--c:${color(t)}"><span class="tt">${esc(t.title)}</span><div class="bar"><i style="width:${q}%"></i></div><span class="sc">${p.r}/${p.n}</span></div>`}).join("");
+  const wrong=items.filter(it=>!it.ok);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">ציון המבחן המסכם</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct}"><span>${pct}</span></div><div class="big">${r}/${n}</div></div>
+    <p>${pct>=90?"מצוין, אתה שולט בחומר.":pct>=70?"טוב. עבור על הטעויות למטה וחזור על הנושאים החלשים.":"כדאי לחזור על החומר. למטה תמצא את הטעויות, ולכל אחת כפתור לחזרה על הנושא."}</p>
+    <h3>לפי נושא</h3><div class="trows">${rows}</div>
+    <div class="row"><button class="primary" id="again">מבחן מסכם חדש</button><button id="hm">לכל הנושאים</button></div>
+   </article>
+   ${wrong.length?`<h3>הטעויות שלך (${wrong.length})</h3>`:`<p class="muted">לא היו טעויות.</p>`}
+   <div class="stack" id="wl"></div></div>`;
+  const wl=app.querySelector("#wl");
+  wrong.forEach(it=>{const ti=T.findIndex(t=>t.id===Q[it.id].t),t=T[ti],c=document.createElement("article");c.className="card rev";c.style.setProperty("--c",color(t));
+    c.innerHTML=`<span class="eyebrow">${esc(t.title)}</span><div class="qtext">${esc(it.v.q)}</div>${acrNote(it.v.q,it.v.a,it.pick,it.v.e)}
+     <div class="opt wrong" aria-disabled="true"><span class="k">${ic("x")}</span><span><b>התשובה שלך:</b> ${esc(it.pick)}</span></div>
+     <div class="opt right" aria-disabled="true"><span class="k">${ic("check")}</span><span><b>התשובה הנכונה:</b> ${esc(it.v.a)}</span></div>
+     <div class="fb no">${ic("bulb")}<div><strong>למה?</strong>${esc(it.v.e)}</div></div>
+     <div class="row"><button class="primary go">חזרה על הנושא: ${esc(t.title)}</button></div>`;
+    c.querySelector(".go").onclick=()=>topic(ti,0);wl.appendChild(c)});
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;app.querySelector("#again").onclick=exam;
+  scrollTo(0,0);
+}
+
+function weakTopics(){
+  document.body.style.setProperty("--c","var(--accent)");
+  const list=T.map((t,i)=>({t,i,s:strength(t),started:topicStarted(t)})).sort((a,b)=>(a.started-b.started)||(a.s-b.s));
+  const lab=x=>!x.started?"עוד לא תרגלת":x.s>=80?"חזק":x.s>=50?"בינוני":"צריך חיזוק";
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <span class="eyebrow">נושאים לחיזוק</span><p class="muted">הנושאים מסודרים מהחלש לחזק, לפי התשובות האחרונות שלך בכל שאלה.</p>
+   <div class="stack" id="wl"></div></div>`;
+  const wl=app.querySelector("#wl");
+  list.forEach(x=>{const c=document.createElement("article");c.className="card rev";c.style.setProperty("--c",color(x.t));
+    c.innerHTML=`<div class="trow"><span class="tt">${x.i+1}. ${esc(x.t.title)}</span><div class="bar"><i style="width:${x.s}%"></i></div><span class="sc">${x.started?x.s+"%":"—"}</span></div>
+     <span class="tag ${!x.started?"":x.s>=80?"good":x.s>=50?"mid":"low"}">${lab(x)}</span>
+     <div class="row"><button class="primary pr">תרגול שאלות הנושא</button><button class="rd">קריאה חוזרת</button></div>`;
+    c.querySelector(".pr").onclick=()=>practice(x.i);c.querySelector(".rd").onclick=()=>topic(x.i,0);wl.appendChild(c)});
+  app.querySelector("#back").onclick=home;scrollTo(0,0);
+}
+
+function done(r,n,ti){
+  if(ti!=null){const o=S.done[T[ti].id];S.done[T[ti].id]={r,n,k:o?(o.k||1)+1:1};}if(S.at){delete S.at}save();
+  const nextT=ti!=null&&ti+1<T.length?ti+1:null,pct=Math.round(100*r/n);
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button></div></div>
+   <article class="card" style="align-items:flex-start">
+    <span class="eyebrow">${ti!=null?`סיום נושא ${ti+1} · ${T[ti].title}`:"סיום חזרה מהירה"}</span>
+    <div class="row" style="gap:18px"><div class="ring" style="--p:${pct};--accent:var(--c)"><span>${pct}%</span></div><div class="big">${r}/${n}</div></div>
+    <p>${r===n?"מצוין, הכל נכון.":r>=n*0.7?"טוב מאוד. מה שטעית בו יחזור בחזרה המהירה, בניסוח אחר.":"כדאי לעבור שוב על הנושא. השאלות שטעית בהן יחזרו בחזרה המהירה."}</p>
+    <div class="row">${nextT!=null?`<button class="primary" id="nx" style="--c:${color(T[nextT])}">לנושא הבא: ${T[nextT].title}</button>`:""}<button id="hm">לכל הנושאים</button></div>
+   </article></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;
+  const nx=app.querySelector("#nx");if(nx)nx.onclick=()=>topic(nextT,0);
+  scrollTo(0,0);
+}
+function summary(sec){
+  document.body.style.setProperty("--c","var(--accent)");
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">סיכום הקריאה</span></div></div>
+   <article class="card sum">${acrExpand(SUM)}</article>
+   <div class="row"><button class="primary" id="hm">חזרה לכל הנושאים</button></div></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;scrollTo(0,0);if(sec){const h=[...app.querySelectorAll(".sum h3")].find(x=>x.textContent.trim().startsWith(sec+"."));if(h)h.scrollIntoView()}
+}
+function absView(){
+  document.body.style.setProperty("--c","var(--accent)");
+  const tmp=document.createElement("div");tmp.innerHTML=SUM;const a=tmp.querySelector("#abs");
+  app.innerHTML=`<div class="stack fade"><div class="topbar"><div class="topline"><button class="ghost" id="back">→ כל הנושאים</button><span class="prog">כותרת ותקציר</span></div></div>
+   <article class="card sum"><h2>${CONFIG.title}: כותרת ותקציר</h2><div class="key">לתרגול הזה קוראים <b>רק את הכותרת והתקציר</b>. זה מה שיש בעמוד הזה. הסיכום המלא של המאמר נמצא בכפתור ״סיכום הקריאה״ בלומדה.</div>${a?acrExpand(a.innerHTML):""}</article>
+   <div class="row"><button class="primary" id="hm">ללומדה</button><button id="full">לסיכום המלא</button></div></div>`;
+  app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;app.querySelector("#full").onclick=()=>summary();scrollTo(0,0);
+}
+const _h=location.hash;if(_h)history.replaceState(null,"",location.pathname+location.search);if(_h==="#abs"&&typeof SUM!=="undefined"&&SUM.includes('id="abs"'))absView();else if(_h.startsWith("#sum")&&typeof SUM!=="undefined")summary(+_h.slice(5)||0);else if(_h.startsWith("#topic-")&&T[+_h.slice(7)-1])topic(+_h.slice(7)-1,0);else if(_h==="#quiz")exam();else if(S.at&&T[S.at.ti]){const a=S.at;if(a.quiz)quiz(a.ti);else topic(a.ti,Math.min(a.bi||0,T[a.ti].blocks.length-1))}else home();
+</script>
+<script src="../_engine/ai-config.js"></script><script src="../_engine/ai.js"></script>
+</body>
+</html>
