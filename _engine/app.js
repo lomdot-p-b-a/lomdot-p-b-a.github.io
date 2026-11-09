@@ -87,14 +87,35 @@ function bar(title,n,i,label){
 function topic(ti,bi){
   const t=T[ti],blk=t.blocks[bi];document.body.style.setProperty("--c",color(t));
   app.innerHTML=`<div class="stack">${bar(`נושא ${ti+1} · ${t.title}`,t.blocks.length+1,bi,`קטע ${bi+1} מתוך ${t.blocks.length}`)}
-   <article class="card fade"><h3>${blk.h}</h3>${acrExpand(blk.html)}</article><div id="slot"></div></div>`;
+   <article class="card fade"><h3>${blk.h}</h3>${acrExpand(blk.html)}</article><div id="ck"></div><div id="slot"></div></div>`;
   S.pos[t.id]=bi;S.at={ti,bi};save();
   app.querySelector("#back").onclick=home;
   const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;delete S.pos[t.id];S.at={ti,quiz:1};save();quiz(ti)}};
   if(bi>0){const pb=document.createElement("button");pb.className="ghost";pb.textContent="→ הקטע הקודם";pb.style.marginTop="6px";pb.onclick=()=>topic(ti,bi-1);setTimeout(()=>slot.appendChild(pb))}
   const slot=app.querySelector("#slot");
   {const b=document.createElement("button");b.className="primary";b.textContent=bi+1<t.blocks.length?"המשך":`למבחן הנושא (${t.qids.length} שאלות)`;b.onclick=next;slot.appendChild(b)}
+  checkBox(t,bi);
   scrollTo(0,0);
+}
+
+function checkBox(t,bi){
+  const list=typeof K!=="undefined"&&K[t.id+":"+bi];const host=app.querySelector("#ck");if(!list||!host)return;
+  S.ck=S.ck||{};const key=t.id+":"+bi;
+  const show=i=>{const v=list[i],opts=shuffle([v.a,...v.w]);
+    host.innerHTML=`<div class="q ckq fade"><span class="eyebrow">בדיקת הבנה · שאלה ${i+1} מתוך ${list.length}</span><div class="qtext">${esc(v.q)}</div><p class="muted cknote">${i?"שאלה אחרונה על הקטע.":"לא בטוחים? עלו לטקסט וקראו שוב לפני שעונים."}</p><div class="opts"></div></div>`;
+    const box=host.firstChild,wrap=box.querySelector(".opts");
+    opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt";b.dataset.a=o===v.a?"1":"";
+      b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+      b.onclick=()=>{const ok=o===v.a;(S.ck[key]=S.ck[key]||[])[i]=ok?1:0;save();
+        wrap.querySelectorAll("button").forEach(x=>{x.disabled=true;if(x.dataset.a)x.classList.add("right")});
+        if(!ok)b.classList.add("wrong");
+        const fb=document.createElement("div");fb.className="fb fade "+(ok?"ok":"no");
+        fb.innerHTML=`${ic(ok?"check":"x")}<div><strong>${ok?"נכון!":"לא בדיוק"}</strong>${esc(v.e)}${ok?"":" <b>כדאי לחזור לטקסט למעלה ולקרוא שוב.</b>"}</div>`;box.appendChild(fb);
+        if(i+1<list.length){const nx=document.createElement("button");nx.className="ghost";nx.textContent=`לשאלה ${i+2} ←`;nx.style.alignSelf="flex-start";
+          nx.onclick=()=>{const y=scrollY;show(i+1);scrollTo(0,y)};box.appendChild(nx)}
+        else{const d=document.createElement("p");d.className="muted";d.style.margin="0";const r=(S.ck[key]||[]).filter(Boolean).length;d.textContent=`סיימתם את בדיקת ההבנה של הקטע (${r} מתוך ${list.length} נכון).`;box.appendChild(d)}
+      };wrap.appendChild(b)});
+  };show(0);
 }
 
 function runSet(title,ids,c,onEnd){
