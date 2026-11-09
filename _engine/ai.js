@@ -37,7 +37,7 @@
   fab.innerHTML = icon + "<span>שאל את העוזר</span>";
   const panel = document.createElement("section");
   panel.className = "ai-panel"; panel.hidden = true; panel.setAttribute("aria-label","עוזר לימוד");
-  panel.innerHTML = `<div class="ai-head"><b>עוזר לימוד<small>עונה לפי הסיכום של הלומדה הזו</small></b><button class="ai-x" type="button" aria-label="סגירה">×</button></div>
+  panel.innerHTML = `<div class="ai-head"><b>עוזר לימוד<small>עונה לפי חומר הקריאה והלומדה</small></b><button class="ai-x" type="button" aria-label="סגירה">×</button></div>
     <div class="ai-log"></div>
     <form class="ai-form"><textarea rows="1" placeholder="מה לא ברור? אפשר לשאול כל דבר…"></textarea><button type="submit">שלח</button></form>
     <div class="ai-note">התשובות נוצרות ע״י AI ועלולות לטעות. אל תכתבו פרטים אישיים.</div>`;
@@ -65,20 +65,39 @@
     const clone=app.cloneNode(true); clone.querySelectorAll(".ai-panel,.ai-fab,svg").forEach(e=>e.remove());
     return (clone.innerText||"").replace(/\s+\n/g,"\n").slice(0,2500);
   }
+  function lomdaText(){
+    const T=g("T")||[];
+    try{
+      return T.map((t,i)=>`## ${i+1}. ${t.title||""}\n`+(t.blocks||[]).map(b=>(b.h?`### ${b.h}\n`:"")+strip(b.html||"")).join("\n\n")).join("\n\n");
+    }catch(e){ return "" }
+  }
   function system(){
     const C=g("CONFIG")||{}, T=g("T")||[];
     const topics=T.map((t,i)=>(i+1)+". "+(t.title||"")).join("\n");
-    return `אתה עוזר לימוד לסטודנטים לתואר ראשון בפסיכולוגיה ומנהל עסקים, בתוך לומדה על: "${C.title||document.title}"${C.eyebrow?" ("+C.eyebrow+")":""}.
-ענה תמיד בעברית פשוטה וברורה, בלשון פנייה ניטרלית (לא בלשון נקבה או זכר מסוימת), בקצרה (בדרך כלל עד 150 מילים), עם דוגמה קטנה כשזה עוזר.
-התבסס על הסיכום של הלומדה שמופיע למטה. אם השאלה מבקשת לקשר בין נושאים, הסבר איך הם מתחברים לפי הסיכום.
-אם משהו לא מופיע בסיכום, אמור זאת במפורש ("זה לא מופיע בסיכום של הלומדה"), ורק אז אפשר להוסיף הסבר כללי קצר ולסמן אותו כ"ידע כללי, לא מהחומר".
-אל תמציא שמות חוקרים, מספרים או ממצאים. אל תיתן תשובות לשאלות המבחן של הלומדה ישירות; עזור להבין למה.
+    return `אתה עוזר לימוד אישי לסטודנטים לתואר ראשון בפסיכולוגיה ומנהל עסקים, בתוך לומדה על: "${C.title||document.title}"${C.eyebrow?" ("+C.eyebrow+")":""}.
+המטרה: שהסטודנט יבין באמת את החומר. ענה כמו מתרגל טוב: ברור, מדויק, בעברית פשוטה, בלשון פנייה ניטרלית (לא בלשון זכר או נקבה מסוימת).
+יש לך שלושה מקורות, לפי סדר הסמכות:
+1. חומר הקריאה עצמו (טקסט הספר או המאמר), אם הוא מצורף בסוף. זה המקור הראשי לעובדות, הגדרות, מחקרים ודוגמאות.
+2. תוכן הלומדה (ההסברים, הדוגמאות והתרגול שנבנו לפי הקריאה).
+3. הסיכום של הלומדה.
+איך לענות:
+- ענה ישירות על השאלה. אל תפתח ב"לפי הסיכום" או "לפי החומר"; פשוט הסבר.
+- כשמבקשים דוגמה: קודם הדוגמה מהספר (אם יש), ואז אפשר להוסיף דוגמה פשוטה מחיי היום־יום שממחישה את הרעיון, עם כותרת קצרה כמו "דוגמה להמחשה".
+- כשמבקשים להסביר מושג: הגדרה קצרה במילים פשוטות, למה זה חשוב, ודוגמה. אם יש מושג דומה שקל להתבלבל איתו, הסבר את ההבדל.
+- כשהשאלה על קשר בין נושאים, הסבר איך הם מתחברים.
+- אורך: בדרך כלל עד 200 מילים; אם ביקשו פירוט, אפשר יותר.
+- אם משהו לא מופיע בחומר, אמור את זה במשפט אחד, ואז אפשר להוסיף הסבר כללי קצר ולסמן אותו "ידע כללי, לא מהחומר של הקורס".
+- אל תמציא שמות חוקרים, מספרים או ממצאים. אל תצטט קטעים ארוכים מהספר; נסח במילים שלך.
+- בשאלות התרגול והמבחן של הלומדה: אל תיתן את התשובה הנכונה ישר; עזור לחשוב (רמז, שאלה מנחה), ואם הסטודנט כבר ענה, הסבר למה התשובה נכונה או לא.
 
 נושאי הלומדה:
 ${topics}
 
+=== תוכן הלומדה ===
+${lomdaText().slice(0,70000)}
+
 === הסיכום של הלומדה ===
-${summaryText().slice(0,60000)}`;
+${summaryText().slice(0,40000)}`;
   }
 
   // ---- chat ----
@@ -123,7 +142,7 @@ ${summaryText().slice(0,60000)}`;
     try{
       const r=await fetch(ENDPOINT,{
         method:"POST", headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({system:system(),contents:hist.slice(-12)})
+        body:JSON.stringify({system:system(),contents:hist.slice(-12),src:((g("CONFIG")||{}).key||"")})
       });
       const j=await r.json();
       if(!r.ok) throw new Error((j.error&&j.error.status)||("HTTP "+r.status));
