@@ -60,7 +60,9 @@ function home(){
       <button class="review-btn" id="exm">${ic("grad")}<span>מבחן מסכם${S.exam&&HAS_H?" · סבב "+((S.exam.k||1)+1)+": שאלות הבנה":""}${S.exam?` · ציון אחרון ${S.exam.pct}`:""}</span></button>
       <button class="review-btn" id="wk" ${started.length?"":"disabled"}>${ic("target")}<span>נושאים לחיזוק</span></button>
       ${typeof SUM!=="undefined"?`<button class="review-btn" id="sum">${ic("doc")}<span>סיכום הקריאה</span></button>`:""}
+      ${CONFIG.podcast?`<button class="review-btn" id="pod"><span aria-hidden="true">🎧</span><span>פודקאסט${CONFIG.podcast.min?` · ${CONFIG.podcast.min} דק׳`:""}</span></button>`:""}
      </div>
+     ${CONFIG.podcast?`<div id="podbox" class="podbox" hidden><p class="muted">פודקאסט שנוצר ב־Gemini Notebook מקריאת החובה. כמו כל סיכום אוטומטי, הוא עלול לטעות, והקריאה עצמה קובעת.</p><div class="podframe"></div></div>`:""}
     </div>
    </section>
    <div class="grid" id="list"></div>
@@ -73,7 +75,7 @@ function home(){
     b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(dn?"check":t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${dn&&!p?100*dn.r/dn.n:p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
     if(dn)b.classList.add("done");
     b.onclick=()=>topic(i,pos!=null?pos:0);list.appendChild(b)});
-  app.querySelector("#rev").onclick=review;{const sb=app.querySelector("#sum");if(sb)sb.onclick=summary}app.querySelector("#exm").onclick=exam;app.querySelector("#wk").onclick=weakTopics;
+  app.querySelector("#rev").onclick=review;{const sb=app.querySelector("#sum");if(sb)sb.onclick=summary}{const pb=app.querySelector("#pod");if(pb)pb.onclick=()=>{const bx=app.querySelector("#podbox");bx.hidden=!bx.hidden;const f=bx.querySelector(".podframe");if(!bx.hidden&&!f.firstChild)f.innerHTML=`<iframe src="https://drive.google.com/file/d/${CONFIG.podcast.id}/preview" allow="autoplay" title="פודקאסט" loading="lazy"></iframe>`}}app.querySelector("#exm").onclick=exam;app.querySelector("#wk").onclick=weakTopics;
   const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{},pos:{},done:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
   scrollTo(0,0);
 }
