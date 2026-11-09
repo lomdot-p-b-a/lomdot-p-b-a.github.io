@@ -172,8 +172,8 @@ const ic=k=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
 const COURSES=[
  {id:"mgmt",name:"מבוא לניהול ומבנה ארגוני",tag:"מנהל עסקים",items:[
    {title:"התופעה הארגונית",sub:"ארגונים · פרק 1",href:"org/ch1.html",key:"lomda-org-1",total:45,ord:1,when:"נושא 1 מתוך 8 · מבוא"},
-  {title:"מבנים ארגוניים",sub:"ארגונים · פרק 4",href:"org/ch4.html",key:"lomda-org-4",total:48,ord:2,when:"נושא 1 מתוך 8 · מבוא (ספר ארגונים פרק 4)"},
-   {title:"תפיסה וקבלת החלטות",sub:"פרק 6",href:"mgmt/ch6.html",key:"lomda-mgmt-ch6",total:39,ord:4,when:"נושא 3 · תפיסה וקבלת החלטות"},
+  {title:"מבנים ארגוניים",sub:"ארגונים · פרק 4",href:"org/ch4.html",key:"lomda-org-4",pod:12,total:48,ord:2,when:"נושא 1 מתוך 8 · מבוא (ספר ארגונים פרק 4)"},
+   {title:"תפיסה וקבלת החלטות",sub:"פרק 6",href:"mgmt/ch6.html",key:"lomda-mgmt-ch6",pod:14,total:39,ord:4,when:"נושא 3 · תפיסה וקבלת החלטות"},
    {title:"מוטיבציה",sub:"פרק 7",href:"mgmt/ch7.html",key:"lomda-mgmt-ch7",total:42,ord:5,when:"נושא 5 · עמ' 211–212, 215–219, 228"},
    {title:"קבוצות",sub:"פרק 9",href:"mgmt/ch9.html",key:"lomda-mgmt-ch9",total:44,ord:6,when:"נושא 6 · עמ' 276, 285–286, 296–297"},
    {title:"מנהיגות",sub:"פרק 12",href:"mgmt/ch12.html",key:"lomda-mgmt-ch12",total:41,ord:7,when:"נושא 7 · עמ' 376–379, 386, 393–397"},
@@ -203,7 +203,7 @@ const COURSES=[
   {type:"מאמר קריאה",en:true,title:"Durably reducing conspiracy beliefs through dialogues with AI",sub:"שיחות עם בינה מלאכותית מפחיתות אמונה בקונספירציות",href:"social/costello.html",key:"lomda-social-costello",total:45,ord:7,when:"מפגשים 11–13 · עמדות ושכנוע"},
   {type:"מאמר קריאה",en:true,title:"The headwinds/tailwinds asymmetry: An availability bias in assessments of barriers and blessings",sub:"רוח נגדית ורוח גבית: הטיית זמינות",href:"social/davidai.html",key:"lomda-social-davidai",total:52,ord:3.5,when:"מפגשים 5–6 · תהליכי חשיבה ושיפוט חברתי"},
   {type:"ספר הקורס · חובה",title:"מאיירס פרק 1: מבוא לפסיכולוגיה חברתית",sub:"רעיונות מרכזיים, ערכים, ״ידעתי זאת מזמן״ ושיטות מחקר",href:"social/myers1.html",key:"lomda-social-myers1",total:32,ord:1,when:"מפגשים 1–2 · כרך א׳, פרק 1"},
-  {type:"ספר הקורס · חובה",title:"מאיירס פרק 3 (חלק ב׳): ייחוס וציפיות",sub:"קלי, טעות הייחוס הבסיסית, נבואה המגשימה את עצמה",href:"social/myers2.html",key:"lomda-social-myers2",total:34,ord:2,when:"מפגשים 3–4 · עמ׳ 118–140"},
+  {type:"ספר הקורס · חובה",title:"מאיירס פרק 3 (חלק ב׳): ייחוס וציפיות",sub:"קלי, טעות הייחוס הבסיסית, נבואה המגשימה את עצמה",href:"social/myers2.html",key:"lomda-social-myers2",pod:22,total:34,ord:2,when:"מפגשים 3–4 · עמ׳ 118–140"},
   {type:"ספר הקורס · חובה",title:"מאיירס פרק 3 (חלק א׳): תפיסה ושיפוט חברתי",sub:"הטרמה, זיכרון, ביטחון יתר, היריסטיקות ואשליית שליטה",href:"social/myers3.html",key:"lomda-social-myers3",total:36,ord:3,when:"מפגשים 5–6 · עמ׳ 91–119"},
   {type:"ספר הקורס · חובה",title:"מאיירס פרק 2: העצמי בעולם החברתי",sub:"מושג העצמי, תרבות, הערכה עצמית, שליטה והטיה לטובת העצמי",href:"social/myers4.html",key:"lomda-social-myers4",total:44,ord:4,when:"מפגשים 7–8 · עמ׳ 39–89"},
   {type:"ספר הקורס · חובה",title:"מאיירס כרך ב׳ פרק 9: דעות קדומות",sub:"סטראוטיפים, זהות חברתית, מקורות קוגניטיביים ואיום הסטראוטיפ",href:"social/myers7.html",key:"lomda-social-myers7",total:38,ord:5,when:"מפגשים 9–10 · עמ׳ 372–426"},
@@ -212,7 +212,7 @@ const COURSES=[
  ]},
  {id:"dev",name:"פסיכולוגיה התפתחותית א'",tag:"פסיכולוגיה",items:[
   {title:"פרק 1 - היסטוריה, תיאוריה ואסטרטגיות מחקר",sub:"עמ' \u20663–13\u2069, \u206634–40\u2069, \u206642–64\u2069",href:"dev/ch1.html",key:"lomda-dev-ch1",total:60,ord:1,when:"שיעור 20.10 + 3.11 · מבוא",date:"2026-10-20"},
-  {title:"פרק 2 - יסודות גנטיים וסביבתיים",sub:"עמ' \u206692–111\u2069",href:"dev/ch2.html",key:"lomda-dev-ch2",total:50,ord:2,when:"שיעור 10.11 + 17.11 · ההקשרים הסביבתיים",date:"2026-11-10"},
+  {title:"פרק 2 - יסודות גנטיים וסביבתיים",sub:"עמ' \u206692–111\u2069",href:"dev/ch2.html",key:"lomda-dev-ch2",pod:18,total:50,ord:2,when:"שיעור 10.11 + 17.11 · ההקשרים הסביבתיים",date:"2026-11-10"},
   {title:"פרק 5 - למידה, התפתחות מוטורית ותפיסה בינקות",sub:"עמ' \u2066245–274\u2069",href:"dev/ch5.html",key:"lomda-dev-ch5",total:48,ord:3,when:"שיעור 24.11 · יחידה א־סינכרונית",date:"2026-11-24"},
   {title:"פרק 6 - פיאז'ה בינקות ומבחני משכל מוקדמים",sub:"עמ' \u2066279–297\u2069, \u2066311–319\u2069",href:"dev/ch6.html",key:"lomda-dev-ch6",total:45,ord:4,when:"שיעור 1.12 + 8.12 · התפתחות קוגניטיבית",date:"2026-12-01"},
   {title:"פרק 7 - רגשות, מזג והיקשרות בינקות",sub:"עמ' \u2066341–381\u2069",href:"dev/ch7.html",key:"lomda-dev-ch7",total:62,ord:8,when:"שיעור 5.1.27 · יחידה א־סינכרונית (מזג)",date:"2027-01-05"},
@@ -266,7 +266,7 @@ function lessonHTML(l,a,b){
   const mods=l.mods.map(ITEM).filter(Boolean);
   return `<div class="les${off?" off":""}" style="--c:var(--${l.c})"><div class="lhd"><b>${SHORT[l.c]} · <i>שיעור ${l.n}</i> · ${dm(date)}</b>${tags}</div>
    <div class="ltop">${l.topic}${l.note&&!l.est?` · ${l.note}`:""}</div>
-   ${mods.length?`<div class="lmods">${mods.map(it=>{const f=(l.focus||{})[it.key]||{};return `<div class="lmod"><span class="t"><span${it.en?' dir="ltr" lang="en"':""}>${it.title}</span><small>${it.sub}${f.sec?` · השבוע: סעיף ${f.sec} בסיכום`:""}${f.abs?" · השבוע: רק כותרת ותקציר":""}</small></span><span class="lbtns"><a href="${it.href}${f.t?"#topic-"+f.t:""}">לומדה</a><a href="${it.href}${f.abs?"#abs":"#sum"+(f.sec?"-"+f.sec:"")}">${f.abs?"כותרת ותקציר":"סיכום"}</a><a href="${it.href}#quiz">מבחן</a></span></div>`}).join("")}</div>`:`<div class="lnone">אין לומדה לשיעור הזה</div>`}</div>`;
+   ${mods.length?`<div class="lmods">${mods.map(it=>{const f=(l.focus||{})[it.key]||{};return `<div class="lmod"><span class="t"><span${it.en?' dir="ltr" lang="en"':""}>${it.title}</span><small>${it.sub}${f.sec?` · השבוע: סעיף ${f.sec} בסיכום`:""}${f.abs?" · השבוע: רק כותרת ותקציר":""}</small></span><span class="lbtns"><a href="${it.href}${f.t?"#topic-"+f.t:""}">לומדה</a><a href="${it.href}${f.abs?"#abs":"#sum"+(f.sec?"-"+f.sec:"")}">${f.abs?"כותרת ותקציר":"סיכום"}</a><a href="${it.href}#quiz">מבחן</a>${it.pod?`<a href="${it.href}#pod" title="פודקאסט · ${it.pod} דק׳" aria-label="פודקאסט, ${it.pod} דקות">🎧</a>`:""}</span></div>`}).join("")}</div>`:`<div class="lnone">אין לומדה לשיעור הזה</div>`}</div>`;
 }
 function renderWeek(){
   const box=document.getElementById("week");if(!box)return;

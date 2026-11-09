@@ -711,7 +711,7 @@ function home(){
     </div>
    </section>
    <div class="grid" id="list"></div>
-   <div class="foot"><a href="../#org" style="color:var(--accent);font-weight:700;text-decoration:none">→ לקורס</a><span>${CONFIG.note}</span><button class="ghost" id="reset">איפוס התקדמות</button></div>
+   <div class="foot"><a href="../#mgmt" style="color:var(--accent);font-weight:700;text-decoration:none">→ לקורס</a><span>${CONFIG.note}</span><button class="ghost" id="reset">איפוס התקדמות</button></div>
   </div>`;
   app.querySelectorAll(".actions svg").forEach(x=>x.style.cssText="width:20px;height:20px");
   const list=app.querySelector("#list");
@@ -874,7 +874,7 @@ function absView(){
    <div class="row"><button class="primary" id="hm">ללומדה</button><button id="full">לסיכום המלא</button></div></div>`;
   app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;app.querySelector("#full").onclick=()=>summary();scrollTo(0,0);
 }
-const _h=location.hash;if(_h)history.replaceState(null,"",location.pathname+location.search);if(_h==="#abs"&&typeof SUM!=="undefined"&&SUM.includes('id="abs"'))absView();else if(_h.startsWith("#sum")&&typeof SUM!=="undefined")summary(+_h.slice(5)||0);else if(_h.startsWith("#topic-")&&T[+_h.slice(7)-1])topic(+_h.slice(7)-1,0);else if(_h==="#quiz")exam();else if(S.at&&T[S.at.ti]){const a=S.at;if(a.quiz)quiz(a.ti);else topic(a.ti,Math.min(a.bi||0,T[a.ti].blocks.length-1))}else home();
+const _h=location.hash;if(_h)history.replaceState(null,"",location.pathname+location.search);if(_h==="#abs"&&typeof SUM!=="undefined"&&SUM.includes('id="abs"'))absView();else if(_h.startsWith("#sum")&&typeof SUM!=="undefined")summary(+_h.slice(5)||0);else if(_h.startsWith("#topic-")&&T[+_h.slice(7)-1])topic(+_h.slice(7)-1,0);else if(_h==="#quiz")exam();else if(_h==="#pod"&&CONFIG.podcast){home();const pb=document.querySelector("#pod");if(pb){pb.click();const bx=document.querySelector("#podbox");if(bx)bx.scrollIntoView({block:"center"})}}else if(S.at&&T[S.at.ti]){const a=S.at;if(a.quiz)quiz(a.ti);else topic(a.ti,Math.min(a.bi||0,T[a.ti].blocks.length-1))}else home();
 </script>
 <script src="../_engine/ai-config.js"></script><script src="../_engine/ai.js"></script>
 </body>
