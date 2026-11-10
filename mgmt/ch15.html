@@ -103,7 +103,7 @@ figure{margin:0}
 .who{display:flex;gap:12px;align-items:flex-start}
 .who .av{flex:none;width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.15rem}
 .who .yr{font-size:.8rem;color:var(--muted)}
-.cpt{border:1px solid var(--line);border-inline-start:4px solid var(--c,var(--accent));border-radius:14px;padding:14px 16px;margin:12px 0;background:var(--surface)}.cpt-h{display:flex;gap:10px;align-items:center;font-size:1.08rem}.cpt-h svg{width:26px;height:26px;color:var(--c,var(--accent));flex:none}.cpt p{margin:.5rem 0 .7rem;line-height:1.75}.cpt p.cpt-d{font-weight:600;margin-bottom:.3rem}.cpt-ex{background:var(--raised);border-radius:10px;padding:10px 12px;line-height:1.7;font-size:.97rem}.cpt-ex b{color:var(--c,var(--accent))}
+.lec{display:inline-flex;align-items:center;gap:5px;font-size:.78rem;font-weight:700;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 40%,transparent);background:color-mix(in srgb,var(--accent) 8%,transparent);border-radius:999px;padding:2px 10px;margin:0 0 8px}.lec svg{width:14px;height:14px}.podbox{margin-top:12px;border:1px solid var(--line);border-radius:14px;padding:12px;background:var(--surface)}.podbox p{margin:0 0 8px;font-size:.9rem}.podframe iframe{width:100%;height:90px;border:0;border-radius:10px}.cpt{border:1px solid var(--line);border-inline-start:4px solid var(--c,var(--accent));border-radius:14px;padding:14px 16px;margin:12px 0;background:var(--surface)}.cpt-h{display:flex;gap:10px;align-items:center;font-size:1.08rem}.cpt-h svg{width:26px;height:26px;color:var(--c,var(--accent));flex:none}.cpt p{margin:.5rem 0 .7rem;line-height:1.75}.cpt p.cpt-d{font-weight:600;margin-bottom:.3rem}.cpt-ex{background:var(--raised);border-radius:10px;padding:10px 12px;line-height:1.7;font-size:.97rem}.cpt-ex b{color:var(--c,var(--accent))}
 .tiles>.cpt{grid-column:1/-1;margin:0}.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
 .tile{background:var(--raised);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
 .tile svg{width:32px;height:32px;color:var(--c)}
@@ -179,6 +179,7 @@ h1,h2,h3,.big,.tcard .n,.who .av{font-weight:400}
 .card.sum th{background:color-mix(in srgb,var(--accent) 10%,var(--surface))}
 .card.sum .tw{overflow-x:auto}
 .about{margin:.6rem 0 0;line-height:1.65}.about b{color:var(--ink,inherit)}
+.ckq{border:1.5px dashed var(--c,var(--accent))}.cknote{margin:0;font-size:.88rem}
 </style>
 </head>
 <body>
@@ -268,6 +269,8 @@ const yn=(y,n)=>`<div class="yesno">${y.map(t=>`<span class="yn y">${ic("check")
 const spectrum=(r,l,dot)=>`<div class="spectrum"><div class="track">${dot?'<span class="dot"></span>':""}</div><div class="ends"><span>${r}</span><span>${l}</span></div></div>`;
 document.head.insertAdjacentHTML("beforeend",'<style>.yn svg{width:16px;height:16px}</style>');
 
+
+const LEC=`<span class="lec">${ic("doc")}מהשיעור (מצגת)</span>`;
 const ACR={
 "AAI":["Adult Attachment Interview","ריאיון ההיקשרות למבוגרים"],
 "ABA":["","תבנית הברות שבה הראשונה והאחרונה זהות (גה טי גה)"],
@@ -491,6 +494,7 @@ const Q={"s1":{"t":"t1","v":[{"q":"מנהלת שואלת: ״כמה אנשים א
 "h5":{"t":"t4","v":[{"q":"מה מאפיין ארגון ללא גבולות (GE)?","a":"שבירת גבולות אנכיים, אופקיים וחיצוניים","w":["ליבה קטנה וכל השאר במיקור חוץ","הגדלת שרשרת הפיקוד, הפורמליזציה והפיקוח","צמצום עובדים כדי להפוך לרזה"],"e":"השטחה (אנכי), צוותים חוצי־פונקציות (אופקי), שילוב לקוחות וספקים (חיצוני). ליבה קטנה = וירטואלי."}]},
 "h6":{"t":"t5","v":[{"q":"חברת תוכנה בסביבה תנודתית, עם טכנולוגיה לא שגרתית ואסטרטגיה של חדשנות. איזה מבנה מתאים?","a":"אורגני","w":["מכניסטי","ביורוקרטי","פשוט עם ריכוזיות גבוהה"],"e":"חדשנות, טכנולוגיה לא שגרתית וסביבה תנודתית ומורכבת מובילות כולן לאורגני."}]}};
 const H={"h1":{"t":"t1","v":[{"q":"במפעל אחד מנסר, אחד משייף ואחד צובע. איזה מרכיב מבני זה?","a":"התמחות","w":["מחלקתיות","פורמליזציה","ריכוזיות"],"e":"פורד ייצר כך מכונית כל 10 שניות."}]},"h2":{"t":"t2","v":[{"q":"מה קורה כשמגבירים התמחות מעבר לנקודה מסוימת?","a":"הפריון יורד בגלל שעמום ולחץ","w":["הפריון ממשיך לעלות בלי סוף","העובדים מרוצים יותר","הארגון נעשה אורגני יותר"],"e":"התמחות מעלה פריון רק עד נקודה מסוימת."}]},"h3":{"t":"t2","v":[{"q":"״עץ ודני״ מחלקת את החברה לחטיבת מטבחים וחטיבת משרדים. לפי מה המחלקתיות?","a":"מוצר","w":["פונקציה","אזור","תהליך"],"e":"היתרון: אחריות ברורה לכל מוצר."}]},"h4":{"t":"t2","v":[{"q":"מה עיקרון אחדות הפיקוד?","a":"לכל עובד ממונה אחד","w":["לכל מנהל עובד אחד","כל ההחלטות אצל המנכ״ל","כל העובדים באותה מחלקה"],"e":"כדי שלא יקבל הוראות סותרות. היום הוא חשוב פחות מבעבר."}]},"h5":{"t":"t2","v":[{"q":"מנהל אחד ל־20 עובדים, במקום ל־5. מה יקרה למבנה?","a":"פחות דרגים, ארגון שטוח","w":["יותר דרגים, ארגון גבוה","יותר מנהלי ביניים","פיקוח צמוד יותר"],"e":"המגמה היום היא טווחים רחבים."}]},"h6":{"t":"t2","v":[{"q":"נציג במוקד מקריא תסריט קבוע ולא יכול לסטות ממנו. איזה מרכיב גבוה כאן?","a":"פורמליזציה","w":["מחלקתיות","טווח פיקוח","ביזור"],"e":"פורמליזציה גבוהה = הרבה נהלים ומעט שיקול דעת."}]},"h7":{"t":"t2","v":[{"q":"כל מנהל חנות קובע מבצעים בעצמו. מה היתרון לפי הפרק?","a":"פותרים בעיות מהר יותר","w":["הכל אחיד בכל החנויות","ההנהלה שולטת בכל פרט","צריך פחות מנהלי חנויות"],"e":"בביזור גם יותר אנשים תורמים, והעובדים פחות מנוכרים."}]},"h8":{"t":"t3","v":[{"q":"״עץ ודני״ בהתחלה: מעט מחלקות, טווח רחב, וכל הסמכות אצל דני. מה החולשה של המבנה הזה?","a":"כשהעסק גדל, דני מוצף","w":["הוא איטי ויקר מאוד","יש בו יותר מדי נהלים","יש בו שני ממונים לכל עובד"],"e":"מבנה פשוט: מהיר, גמיש וזול, אבל החלטות נתקעות כשהארגון גדל."}]},"h9":{"t":"t3","v":[{"q":"מה מילת המפתח של הביורוקרטיה?","a":"סטנדרטיזציה","w":["גמישות","מיקור חוץ","צוותים מועצמים"],"e":"יעילה בפעילות שגרתית, אבל נוקשה כשמקרה לא מתאים לנוהל."}]},"h10":{"t":"t3","v":[{"q":"מהנדס בפרויקט המלון מדווח גם למנהל ההנדסה וגם למנהלת הפרויקט. איזה מבנה זה, ומה הוא שובר?","a":"מטריצה; אחדות פיקוד","w":["ביורוקרטיה; טווח פיקוח","מבנה פשוט; ריכוזיות","ארגון וירטואלי; התמחות"],"e":"החולשה: בלבול, מאבקי כוח ולחץ על העובד."}]},"h11":{"t":"t4","v":[{"q":"דני פותח מותג אונליין: הוא ומעצבת ואתר, וכל השאר אצל חברות חיצוניות. איזה מבנה זה?","a":"ארגון וירטואלי","w":["ארגון ללא גבולות","מטריצה","ביורוקרטיה"],"e":"ליבה קטנה וריכוזית מאוד, וכל השאר במיקור חוץ."}]},"h12":{"t":"t4","v":[{"q":"ארגון מחליף מחלקות בצוותים חוצי מחלקות, ומקיים קשר הדוק עם לקוחות וספקים. איזה מבנה זה?","a":"ללא גבולות","w":["ארגון וירטואלי","מטריצה","צמצום הארגון"],"e":"ג׳ק וולץ׳ (GE). שובר גבולות אנכיים, אופקיים וחיצוניים."}]},"h13":{"t":"t4","v":[{"q":"על מי נופל המחיר העיקרי של צמצום?","a":"על העובדים שנשארים","w":["על בעלי המניות","על הלקוחות הקבועים","על הספקים"],"e":"היעדרויות, לחץ ופחות מחויבות. ממליצים להודיע מראש ובאופן אישי."}]},"h14":{"t":"t5","v":[{"q":"דני רוצה להיות הכי זול בשוק. איזה מבנה מתאים?","a":"מכניסטי","w":["אורגני","ללא גבולות","משולב"],"e":"חדשנות ← אורגני. חיקוי ← משולב."}]},"h15":{"t":"t5","v":[{"q":"״עץ ודני״ מייצרת רק רהיטים בהזמנה אישית, כל אחד שונה. איזה מבנה מתאים?","a":"אורגני","w":["מכניסטי","ביורוקרטי","פשוט"],"e":"טכנולוגיה לא שגרתית ← אורגני. שגרתית ← מכניסטי."}]},"h16":{"t":"t5","v":[{"q":"חברה שנכנסת לשוק רק אחרי שאחרים הוכיחו את המוצר. איזה מבנה מתאים לה?","a":"משולב","w":["מכניסטי טהור","אורגני טהור","וירטואלי"],"e":"חיקוי: הדוק לפעילות הקיימת, גמיש לחדשה."}]},"h17":{"t":"t5","v":[{"q":"ארגון בסביבה תנודתית ומורכבת. לאן הוא צפוי לנטות?","a":"אורגני","w":["מכניסטי","ביורוקרטי","פשוט"],"e":"סביבה יציבה ופשוטה ← מכניסטי."}]},"h18":{"t":"t5","v":[{"q":"האם טווח פיקוח רחב משפר את הביצועים של כל העובדים?","a":"לא, ההשפעה תלויה באדם","w":["כן, תמיד ובכל ארגון","כן, אבל רק בארגון גדול","לא, הוא תמיד פוגע"],"e":"יש עובדים שרוצים מנהל זמין. אין מבנה שכולם מעדיפים."}]}};
+const K={"t1:0": [{"q": "״למי מדווחים עובדים וקבוצות?״ לאיזה מרכיב שייכת השאלה?", "a": "שרשרת פיקוד", "w": ["טווח פיקוח", "מחלקתיות", "פורמליזציה"], "e": "שרשרת הפיקוד מבהירה מי מדווח למי."}, {"q": "מה מגדיר מבנה ארגוני?", "a": "חלוקה, קיבוץ ותיאום של משימות", "w": ["כמה עובדים יש בארגון ובאיזה גיל", "איזה מוצר הארגון מוכר ובכמה", "מה התרבות והערכים של הארגון"], "e": "באופן פורמלי."}], "t2:0": [{"q": "מה קורה כשההתמחות עוברת נקודה מסוימת?", "a": "שעמום והיעדרויות מורידים פריון", "w": ["הפריון ממשיך לעלות ללא הגבלה", "העובדים נעשים מומחים בכל דבר", "הצורך במנהלים נעלם לגמרי"], "e": "התמחות מגדילה פריון רק עד נקודה מסוימת."}, {"q": "לקוחות פזורים על שטח גדול. איזה בסיס מחלקתיות מתאים?", "a": "אזור גיאוגרפי", "w": ["פונקציה מקצועית", "שלבי תהליך", "מוצר או שירות"], "e": "לכל אזור מענה משלו."}], "t2:1": [{"q": "למה טווח פיקוח רחב חוסך?", "a": "פחות דרגים ופחות מנהלים", "w": ["יותר דרגים ויותר מנהלים", "פיקוח צמוד יותר על כל עובד", "יותר תקשורת אנכית איטית"], "e": "בדוגמה: חיסכון של כ־800 מנהלים ושני דרגים."}, {"q": "נגר מקבל הוראות סותרות משני מנהלים. איזה עיקרון נפגע?", "a": "אחדות פיקוד", "w": ["טווח פיקוח", "פורמליזציה", "ביזור"], "e": "לכל עובד צריך להיות ממונה אחד בלבד."}], "t2:2": [{"q": "מה יתרון ארגון מבוזר?", "a": "פתרון בעיות מהיר ופחות ניכור", "w": ["כל ההחלטות בראש הארגון", "פחות אנשים תורמים להחלטות", "יותר כללים ונהלים כתובים"], "e": "יותר אנשים תורמים להחלטות."}, {"q": "נציג מוקד שמקריא תסריט קבוע. מה רמת הפורמליזציה?", "a": "גבוהה", "w": ["נמוכה", "מבוזרת", "אפסית"], "e": "תיאורי תפקיד מפורשים ושיקול דעת מועט."}], "t3:0": [{"q": "מה החולשה של מבנה פשוט כשהארגון גדל?", "a": "עומס מידע בראש מאט החלטות", "w": ["יותר מדי נהלים כתובים", "יותר מדי מחלקות ודרגים", "פיקוח צר מדי על עובדים"], "e": "האדם בראש נהיה צוואר בקבוק."}, {"q": "מה המילה המרכזית בביורוקרטיה?", "a": "סטנדרטיזציה", "w": ["גמישות", "אוטונומיה", "חדשנות"], "e": "ביצוע יעיל של פעילויות סטנדרטיות."}], "t3:1": [{"q": "איזה עיקרון שובר מבנה מטריצה?", "a": "אחדות פיקוד", "w": ["התמחות בעבודה", "טווח פיקוח רחב", "מחלקתיות לפי מוצר"], "e": "לכל עובד יש שני ממונים."}, {"q": "מה יתרון מבנה המטריצה?", "a": "תיאום וזרימת מידע בין מומחים", "w": ["בהירות מלאה בתפקידים ובאחריות", "מעט מאבקי כוח בין מנהלים", "ממונה אחד לכל עובד בארגון"], "e": "מומחים מכמה מחלקות עובדים יחד על פרויקט."}], "t4:0": [{"q": "מהו ארגון וירטואלי?", "a": "ליבה קטנה שמוציאה פונקציות למיקור חוץ", "w": ["ארגון ענק עם אלפי עובדים קבועים", "ארגון שעובד רק באינטרנט בלי אנשים", "ארגון שמבזר את כל ההחלטות למטה"], "e": "נקרא גם ארגון רשת או מודולרי."}, {"q": "מה חיסרון של ארגון וירטואלי?", "a": "אחריות לא ברורה בין שותפים", "w": ["עלות גבוהה של משרדים קבועים", "חוסר גמישות לשינויים מהירים", "צורך בהון גדול כדי להתחיל"], "e": "כשהכול נעשה דרך שותפים, קשה לדעת מי אחראי."}], "t4:1": [{"q": "צוות של מוכר, מעצבת ונגר מלווה לקוח מההזמנה ועד ההתקנה. איזה גבול בוטל?", "a": "אופקי", "w": ["אנכי", "חיצוני", "גיאוגרפי"], "e": "צוותים חוצי־פונקציות במקום מחלקות."}, {"q": "מה המחיר של צמצום אצל מי שנשאר?", "a": "לחץ והיעדרויות, ירידה במחויבות", "w": ["עלייה במחויבות ובשביעות רצון", "פחות לחץ ויותר זמן פנוי", "שכר גבוה יותר לכולם"], "e": "מומלץ להודיע מראש ובאופן אישי."}], "t5:0": [{"q": "מה מאפיין את המודל האורגני?", "a": "שטוח, מבוזר, עם פורמליזציה נמוכה", "w": ["היררכי, ריכוזי, עם כללים רבים", "טווח פיקוח צר ושרשרת פיקוד", "רשת מידע מוגבלת ומרוכזת"], "e": "דומה לארגון ללא גבולות."}, {"q": "למה דומה המודל המכניסטי?", "a": "לביורוקרטיה", "w": ["לארגון ללא גבולות", "לארגון וירטואלי", "למטריצה"], "e": "התמחות, ריכוזיות ופורמליזציה גבוהות."}], "t5:1": [{"q": "איזה מבנה מתאים לאסטרטגיית מזעור עלויות?", "a": "מכניסטי", "w": ["אורגני", "וירטואלי", "משולב"], "e": "בקרה הדוקה, התמחות ופורמליזציה גבוהות."}, {"q": "איזו טכנולוגיה מתאימה למבנה אורגני?", "a": "פעילות לא שגרתית", "w": ["פעילות שגרתית", "ייצור המוני", "קו הרכבה"], "e": "פעילות שגרתית מתאימה למבנה מכניסטי."}], "t5:2": [{"q": "מה המסקנה מהמחקר על השפעת המבנה על עובדים?", "a": "אי אפשר להכליל לכל העובדים", "w": ["כולם מעדיפים מבנה אורגני", "כולם מעדיפים מבנה מכניסטי", "המבנה לא משפיע על עובדים"], "e": "לא כולם מעדיפים את החופש של מבנה אורגני."}, {"q": "מה הכי חשוב לשביעות רצון בארגון מכניסטי?", "a": "הוגנות הנהלים", "w": ["צדק בין־אישי", "חופש מלא", "טווח רחב"], "e": "בארגון אורגני מעריכים יותר צדק בין־אישי."}]};
 const SUM=`<h2>סיכום: מבנים ארגוניים (רובינס, פרק 15)</h2>
 <div class="key"><b>על מה מדובר?</b> שני ארגונים עם אותם אנשים יכולים לעבוד אחרת לגמרי, רק בגלל <b>איך שהם מאורגנים</b>. מבנה ארגוני הוא ״השלד״ של הארגון: מי עושה מה, מי מדווח למי, ואיפה מחליטים. הפרק בנוי בארבעה שלבים:<br>1. <b>שישה ״כפתורים״</b> שמנהל מסובב כשהוא בונה מבנה.<br>2. <b>שלושה מבנים נפוצים</b> שנוצרים משילובים שלהם (פשוט, ביורוקרטיה, מטריצה).<br>3. <b>מבנים חדשים</b> שנועדו לגמישות (וירטואלי, ללא גבולות, צמצום).<br>4. <b>למה</b> כל ארגון בוחר מבנה אחר, ואיך זה משפיע על העובדים.<br>(הפרק משלים את פרק 4 בספר ״ארגונים״, שמבוסס על אותה דוגמה של ״עץ ודני״.)</div>
 
@@ -645,7 +649,9 @@ function home(){
       <button class="review-btn" id="exm">${ic("grad")}<span>מבחן מסכם${S.exam&&HAS_H?" · סבב "+((S.exam.k||1)+1)+": שאלות הבנה":""}${S.exam?` · ציון אחרון ${S.exam.pct}`:""}</span></button>
       <button class="review-btn" id="wk" ${started.length?"":"disabled"}>${ic("target")}<span>נושאים לחיזוק</span></button>
       ${typeof SUM!=="undefined"?`<button class="review-btn" id="sum">${ic("doc")}<span>סיכום הקריאה</span></button>`:""}
+      ${CONFIG.podcast?`<button class="review-btn" id="pod"><span aria-hidden="true">🎧</span><span>פודקאסט${CONFIG.podcast.min?` · ${CONFIG.podcast.min} דק׳`:""}</span></button>`:""}
      </div>
+     ${CONFIG.podcast?`<div id="podbox" class="podbox" hidden><p class="muted">פודקאסט שנוצר ב־Gemini Notebook מקריאת החובה. כמו כל סיכום אוטומטי, הוא עלול לטעות, והקריאה עצמה קובעת.</p><div class="podframe"></div></div>`:""}
     </div>
    </section>
    <div class="grid" id="list"></div>
@@ -658,7 +664,7 @@ function home(){
     b.innerHTML=`<div class="band"><span class="n">${i+1}</span>${ic(dn?"check":t.icon)}</div><div class="body"><span class="t">${t.title}</span><div style="flex:1"></div><div class="bar"><i style="width:${dn&&!p?100*dn.r/dn.n:p}%"></i></div><div class="meta"><span>${status}</span><span>${t.blocks.length} קטעים · ${p}%</span></div></div>`;
     if(dn)b.classList.add("done");
     b.onclick=()=>topic(i,pos!=null?pos:0);list.appendChild(b)});
-  app.querySelector("#rev").onclick=review;{const sb=app.querySelector("#sum");if(sb)sb.onclick=summary}app.querySelector("#exm").onclick=exam;app.querySelector("#wk").onclick=weakTopics;
+  app.querySelector("#rev").onclick=review;{const sb=app.querySelector("#sum");if(sb)sb.onclick=summary}{const pb=app.querySelector("#pod");if(pb)pb.onclick=()=>{const bx=app.querySelector("#podbox");bx.hidden=!bx.hidden;const f=bx.querySelector(".podframe");if(!bx.hidden&&!f.firstChild)f.innerHTML=`<iframe src="https://drive.google.com/file/d/${CONFIG.podcast.id}/preview" allow="autoplay" title="פודקאסט" loading="lazy"></iframe>`}}app.querySelector("#exm").onclick=exam;app.querySelector("#wk").onclick=weakTopics;
   const rs=app.querySelector("#reset");rs.onclick=()=>{if(rs.dataset.sure){S={q:{},read:{},pos:{},done:{}};save();home()}else{rs.dataset.sure=1;rs.textContent="לחץ שוב כדי לאפס"}};
   scrollTo(0,0);
 }
@@ -670,14 +676,35 @@ function bar(title,n,i,label){
 function topic(ti,bi){
   const t=T[ti],blk=t.blocks[bi];document.body.style.setProperty("--c",color(t));
   app.innerHTML=`<div class="stack">${bar(`נושא ${ti+1} · ${t.title}`,t.blocks.length+1,bi,`קטע ${bi+1} מתוך ${t.blocks.length}`)}
-   <article class="card fade"><h3>${blk.h}</h3>${acrExpand(blk.html)}</article><div id="slot"></div></div>`;
+   <article class="card fade"><h3>${blk.h}</h3>${acrExpand(blk.html)}</article><div id="ck"></div><div id="slot"></div></div>`;
   S.pos[t.id]=bi;S.at={ti,bi};save();
   app.querySelector("#back").onclick=home;
   const next=()=>{if(bi+1<t.blocks.length)topic(ti,bi+1);else{S.read[t.id]=1;delete S.pos[t.id];S.at={ti,quiz:1};save();quiz(ti)}};
   if(bi>0){const pb=document.createElement("button");pb.className="ghost";pb.textContent="→ הקטע הקודם";pb.style.marginTop="6px";pb.onclick=()=>topic(ti,bi-1);setTimeout(()=>slot.appendChild(pb))}
   const slot=app.querySelector("#slot");
   {const b=document.createElement("button");b.className="primary";b.textContent=bi+1<t.blocks.length?"המשך":`למבחן הנושא (${t.qids.length} שאלות)`;b.onclick=next;slot.appendChild(b)}
+  checkBox(t,bi);
   scrollTo(0,0);
+}
+
+function checkBox(t,bi){
+  const list=typeof K!=="undefined"&&K[t.id+":"+bi];const host=app.querySelector("#ck");if(!list||!host)return;
+  S.ck=S.ck||{};const key=t.id+":"+bi;
+  const show=i=>{const v=list[i],opts=shuffle([v.a,...v.w]);
+    host.innerHTML=`<div class="q ckq fade"><span class="eyebrow">בדיקת הבנה · שאלה ${i+1} מתוך ${list.length}</span><div class="qtext">${esc(v.q)}</div><p class="muted cknote">${i?"שאלה אחרונה על הקטע.":"לא בטוחים? עלו לטקסט וקראו שוב לפני שעונים."}</p><div class="opts"></div></div>`;
+    const box=host.firstChild,wrap=box.querySelector(".opts");
+    opts.forEach((o,k)=>{const b=document.createElement("button");b.className="opt";b.dataset.a=o===v.a?"1":"";
+      b.innerHTML=`<span class="k">${LET[k]}</span><span>${esc(o)}</span>`;
+      b.onclick=()=>{const ok=o===v.a;(S.ck[key]=S.ck[key]||[])[i]=ok?1:0;save();
+        wrap.querySelectorAll("button").forEach(x=>{x.disabled=true;if(x.dataset.a)x.classList.add("right")});
+        if(!ok)b.classList.add("wrong");
+        const fb=document.createElement("div");fb.className="fb fade "+(ok?"ok":"no");
+        fb.innerHTML=`${ic(ok?"check":"x")}<div><strong>${ok?"נכון!":"לא בדיוק"}</strong>${esc(v.e)}${ok?"":" <b>כדאי לחזור לטקסט למעלה ולקרוא שוב.</b>"}</div>`;box.appendChild(fb);
+        if(i+1<list.length){const nx=document.createElement("button");nx.className="ghost";nx.textContent=`לשאלה ${i+2} ←`;nx.style.alignSelf="flex-start";
+          nx.onclick=()=>{const y=scrollY;show(i+1);scrollTo(0,y)};box.appendChild(nx)}
+        else{const d=document.createElement("p");d.className="muted";d.style.margin="0";const r=(S.ck[key]||[]).filter(Boolean).length;d.textContent=`סיימתם את בדיקת ההבנה של הקטע (${r} מתוך ${list.length} נכון).`;box.appendChild(d)}
+      };wrap.appendChild(b)});
+  };show(0);
 }
 
 function runSet(title,ids,c,onEnd){
@@ -812,7 +839,7 @@ function absView(){
    <div class="row"><button class="primary" id="hm">ללומדה</button><button id="full">לסיכום המלא</button></div></div>`;
   app.querySelector("#back").onclick=home;app.querySelector("#hm").onclick=home;app.querySelector("#full").onclick=()=>summary();scrollTo(0,0);
 }
-const _h=location.hash;if(_h)history.replaceState(null,"",location.pathname+location.search);if(_h==="#abs"&&typeof SUM!=="undefined"&&SUM.includes('id="abs"'))absView();else if(_h.startsWith("#sum")&&typeof SUM!=="undefined")summary(+_h.slice(5)||0);else if(_h.startsWith("#topic-")&&T[+_h.slice(7)-1])topic(+_h.slice(7)-1,0);else if(_h==="#quiz")exam();else if(S.at&&T[S.at.ti]){const a=S.at;if(a.quiz)quiz(a.ti);else topic(a.ti,Math.min(a.bi||0,T[a.ti].blocks.length-1))}else home();
+const _h=location.hash;if(_h)history.replaceState(null,"",location.pathname+location.search);if(_h==="#abs"&&typeof SUM!=="undefined"&&SUM.includes('id="abs"'))absView();else if(_h.startsWith("#sum")&&typeof SUM!=="undefined")summary(+_h.slice(5)||0);else if(_h.startsWith("#topic-")&&T[+_h.slice(7)-1])topic(+_h.slice(7)-1,0);else if(_h==="#quiz")exam();else if(_h==="#pod"&&CONFIG.podcast){home();const pb=document.querySelector("#pod");if(pb){pb.click();const bx=document.querySelector("#podbox");if(bx)bx.scrollIntoView({block:"center"})}}else if(S.at&&T[S.at.ti]){const a=S.at;if(a.quiz)quiz(a.ti);else topic(a.ti,Math.min(a.bi||0,T[a.ti].blocks.length-1))}else home();
 </script>
 <script src="../_engine/ai-config.js"></script><script src="../_engine/ai.js"></script>
 </body>
