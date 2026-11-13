@@ -141,12 +141,18 @@ ${summaryText().slice(0,40000)}`;
     ta.value=""; send.disabled=true;
     const wait=bubble("ai-a","<span class='ai-dots'>חושב</span>");
     try{
-      const r=await fetch(ENDPOINT,{
-        method:"POST", headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({system:system(),contents:hist.slice(-12),src:((g("CONFIG")||{}).key||"")})
-      });
-      const j=await r.json();
-      if(!r.ok) throw new Error((j.error&&j.error.status)||("HTTP "+r.status));
+      const req=JSON.stringify({system:system(),contents:hist.slice(-12),src:((g("CONFIG")||{}).key||"")});
+      let r,j;
+      for(let i=0;i<2;i++){ // one automatic retry if the helper is busy or the connection drops
+        try{
+          r=await fetch(ENDPOINT,{method:"POST", headers:{"Content-Type":"application/json"}, body:req});
+          j=await r.json().catch(()=>({}));
+        }catch(err){ r=null; j={}; }
+        if(r&&r.ok) break;
+        if(r&&r.status===429) break;
+        if(i===0) await new Promise(res=>setTimeout(res,2500));
+      }
+      if(!r||!r.ok) throw new Error((j.error&&j.error.status)||("HTTP "+(r?r.status:0)));
       const a=(j.candidates&&j.candidates[0]&&j.candidates[0].content&&j.candidates[0].content.parts||[]).filter(p=>!p.thought).map(p=>p.text||"").join("").trim()||"לא התקבלה תשובה. נסה לנסח אחרת.";
       hist.push({role:"model",parts:[{text:a}]});
       wait.innerHTML=md(a);
