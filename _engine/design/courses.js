@@ -1,0 +1,73 @@
+const COURSES=[
+ {id:"mgmt",name:"מבוא לניהול ומבנה ארגוני",tag:"מנהל עסקים",items:[
+   {title:"התופעה הארגונית",sub:"ארגונים · פרק 1",href:"org/ch1.html",key:"lomda-org-1",pod:20,total:45,ord:1,when:"נושא 1 מתוך 8 · מבוא"},
+  {title:"מבנים ארגוניים",sub:"ארגונים · פרק 4",href:"org/ch4.html",key:"lomda-org-4",pod:12,total:48,ord:2,when:"נושא 1 מתוך 8 · מבוא (ספר ארגונים פרק 4)"},
+   {title:"תפיסה וקבלת החלטות",sub:"פרק 6",href:"mgmt/ch6.html",key:"lomda-mgmt-ch6",pod:14,total:39,ord:4,when:"נושא 3 · תפיסה וקבלת החלטות"},
+   {title:"מוטיבציה",sub:"פרק 7",href:"mgmt/ch7.html",key:"lomda-mgmt-ch7",pod:14,total:42,ord:5,when:"נושא 5 · עמ' 211–212, 215–219, 228"},
+   {title:"קבוצות",sub:"פרק 9",href:"mgmt/ch9.html",key:"lomda-mgmt-ch9",total:44,ord:6,when:"נושא 6 · עמ' 276, 285–286, 296–297"},
+   {title:"מנהיגות",sub:"פרק 12",href:"mgmt/ch12.html",key:"lomda-mgmt-ch12",pod:18,total:41,ord:7,when:"נושא 7 · עמ' 376–379, 386, 393–397"},
+   {title:"מבנים ארגוניים",sub:"פרק 15",href:"mgmt/ch15.html",key:"lomda-mgmt-ch15",pod:13,total:35,ord:3,when:"נושא 2 · למידה עצמית · עמ' 480–500, 502"},
+   {title:"תרבות ארגונית",sub:"פרק 16",href:"mgmt/ch16.html",key:"lomda-mgmt-ch16",total:38,ord:8,when:"נושא 8 · תרבות ארגונית"}
+ ]},
+ {id:"intro",name:"מבוא לפסיכולוגיה",tag:"פסיכולוגיה",items:[
+  {type:"מאמר חובת קריאה · בחירה 4/4",en:true,title:"Beneficial effects of a daytime nap on verbal memory in adolescents",sub:"תנומת צהריים וזיכרון מילולי אצל מתבגרים",href:"intro/ex3-1.html",key:"lomda-intro-ex3-1",total:32,ord:6,when:"בוחרים 1 מתוך 4 · תרגיל 3 · הגשה 6.1.27",date:"2027-01-06"},
+  {type:"מאמר חובת קריאה · בחירה 1/4",en:true,title:"Effects of smartphone-based memory training for older adults with subjective memory complaints: a randomized controlled trial",sub:"אימון זיכרון בסמארטפון למבוגרים עם תלונות זיכרון",href:"intro/ex3-2.html",key:"lomda-intro-ex3-2",total:34,ord:4,when:"בוחרים 1 מתוך 4 · תרגיל 3 · הגשה 6.1.27",date:"2027-01-06"},
+  {type:"מאמר חובת קריאה · בחירה 3/4",en:true,title:"One Month of Cannabis Abstinence in Adolescents and Young Adults is Associated with Improved Memory",sub:"חודש בלי קנאביס ושיפור בזיכרון",href:"intro/ex3-3.html",key:"lomda-intro-ex3-3",total:32,ord:5,when:"בוחרים 1 מתוך 4 · תרגיל 3 · הגשה 6.1.27",date:"2027-01-06"},
+  {type:"מאמר חובת קריאה · בחירה 2/4",en:true,title:"Sleep deprivation induces fragmented memory loss",sub:"חסך שינה ושכחה ״מפוצלת״",href:"intro/ex3-4.html",key:"lomda-intro-ex3-4",total:32,ord:4.5,when:"בוחרים 1 מתוך 4 · תרגיל 3 · הגשה 6.1.27",date:"2027-01-06"},
+  {type:"לומדת חובת קריאה · בחירה 1/4",title:"אגרנות כפייתית - אפשר לטפל בהסכמה",sub:"תיאור מקרה · עבודה סוציאלית בהסכמה",href:"intro/hoarding.html",key:"lomda-intro-hoarding",total:37,ord:7,when:"בוחרים 1 מתוך 4 · תרגול 12 (6.1.27)",date:"2027-01-06"},
+  {type:"לומדת חובת קריאה · בחירה 1/3",title:"רווקים ורווקות באי־החלטיות מתמשכת",sub:"קבלת החלטות ותגובות בזוגיות",href:"intro/singles.html",key:"lomda-intro-singles",total:42,ord:1,when:"בוחרים 1 מתוך 3 · תרגול 5 (17.11): כותרת ותקציר · תרגול 7 (2.12): מבוא ושיטה",date:"2026-11-17"},
+  {type:"לומדת חובת קריאה · בחירה 2/3",title:"האם מתילפנידאט (ריטלין) מסייע לבעלי דיסלקסיית שיכול אותיות ודיסלקסיה קשבית?",sub:"דיסלקסיה קשבית וטיפול בריטלין",href:"intro/ritalin.html",key:"lomda-intro-ritalin",total:40,ord:2,when:"בוחרים 1 מתוך 3 · תרגול 5 (17.11): כותרת ותקציר · תרגול 7 (2.12): מבוא ושיטה",date:"2026-11-17"},
+  {title:"עיצוב התנהגות בבית ספר לילדים קשיי חינוך",sub:"ניסוי בכלכלת אסימונים",href:"intro/tokens.html",key:"lomda-intro-tokens",total:41,ord:3,when:"חובה · תרגול 8 (9.12) ותרגול 10 (23.12)",date:"2026-12-09"},
+  {type:"לומדת חובת קריאה · בחירה 2/4",title:"אספרגר - הפרעת קשר ותקשורת",sub:"תיאור מקרה בטיפול פסיכולוגי",href:"intro/asperger.html",key:"lomda-intro-asperger",total:41,ord:8,when:"בוחרים 1 מתוך 4 · תרגול 12 (6.1.27)",date:"2027-01-06"},
+  {type:"לומדת חובת קריאה · בחירה 4/4",title:"טיפול בתנועה - סיוע לשיחות עם חולה הלוקה בסכיזופרניה",sub:"תיאור מקרה · תופעת ההחשה",href:"intro/movement.html",key:"lomda-intro-movement",total:37,ord:10,when:"בוחרים 1 מתוך 4 · תרגול 12 (6.1.27)",date:"2027-01-06"},
+  {type:"לומדת חובת קריאה · בחירה 3/4",title:"טיפול בילדה שחוותה התעללות מינית במשפחה - במסגרת קבוצת פסיכודרמה לילדים",sub:"תיאור מקרה · פסיכודרמה",href:"intro/psychodrama.html",key:"lomda-intro-psychodrama",total:41,ord:9,when:"בוחרים 1 מתוך 4 · תרגול 12 (6.1.27)",date:"2027-01-06"},
+  {type:"ספר הקורס · חובה",en:true,title:"Spielman, Ch. 2: Psychological Research",sub:"שיטות מחקר, מתאם, ניסוי ואתיקה",href:"intro/sp2.html",key:"lomda-intro-sp2",pod:30,total:38,ord:22,when:"חובה · ספר הקורס (Psychology 2e), פרק 2"},
+  {type:"ספר הקורס · חובה",en:true,title:"Spielman, Ch. 5: Sensation and Perception",sub:"ספים, ראייה, שמיעה, החושים האחרים וגשטלט",href:"intro/sp5.html",key:"lomda-intro-sp5",pod:17,total:34,ord:25,when:"חובה · ספר הקורס (Psychology 2e), פרק 5"},
+  {type:"ספר הקורס · חובה",en:true,title:"Spielman, Ch. 6: Learning",sub:"התניה קלאסית, התניה אופרנטית ולמידה מצפייה",href:"intro/sp6.html",key:"lomda-intro-sp6",pod:16,total:36,ord:26,when:"חובה · ספר הקורס (Psychology 2e), פרק 6"},
+  {type:"ספר הקורס · חובה",en:true,title:"Spielman, Ch. 8: Memory",sub:"קידוד, אחסון, שליפה, שכחה וזיכרונות כוזבים",href:"intro/sp8.html",key:"lomda-intro-sp8",pod:15,total:32,ord:28,when:"חובה · ספר הקורס (Psychology 2e), פרק 8"},
+  {type:"ספר הקורס · חובה",en:true,title:"Spielman, Ch. 14: Stress, Lifestyle, and Health",sub:"הערכת לחץ, הגוף בלחץ, מחלה, התמודדות ואושר",href:"intro/sp14.html",key:"lomda-intro-sp14",pod:23,total:34,ord:34,when:"חובה · ספר הקורס (Psychology 2e), פרק 14"},
+  {type:"ספר הקורס · חובה",en:true,title:"Spielman, Ch. 15: Psychological Disorders",sub:"אבחון, חרדה, OCD, PTSD, מצב רוח, סכיזופרניה ואישיות",href:"intro/sp15.html",key:"lomda-intro-sp15",pod:27,total:34,ord:35,when:"חובה · ספר הקורס (Psychology 2e), פרק 15"},
+ ]},
+ {id:"social",name:"פסיכולוגיה חברתית א'",tag:"פסיכולוגיה",items:[
+  {type:"מאמר קריאה",en:true,title:"Durably reducing conspiracy beliefs through dialogues with AI",sub:"שיחות עם בינה מלאכותית מפחיתות אמונה בקונספירציות",href:"social/costello.html",key:"lomda-social-costello",total:45,ord:7,when:"מפגשים 11–13 · עמדות ושכנוע"},
+  {type:"מאמר קריאה",en:true,title:"The headwinds/tailwinds asymmetry: An availability bias in assessments of barriers and blessings",sub:"רוח נגדית ורוח גבית: הטיית זמינות",href:"social/davidai.html",key:"lomda-social-davidai",pod:33,total:52,ord:3.5,when:"מפגשים 5–6 · תהליכי חשיבה ושיפוט חברתי"},
+  {type:"ספר הקורס · חובה",title:"מאיירס פרק 1: מבוא לפסיכולוגיה חברתית",sub:"רעיונות מרכזיים, ערכים, ״ידעתי זאת מזמן״ ושיטות מחקר",href:"social/myers1.html",key:"lomda-social-myers1",pod:14,total:32,ord:1,when:"מפגשים 1–2 · כרך א׳, פרק 1"},
+  {type:"ספר הקורס · חובה",title:"מאיירס פרק 3 (חלק ב׳): ייחוס וציפיות",sub:"קלי, טעות הייחוס הבסיסית, נבואה המגשימה את עצמה",href:"social/myers2.html",key:"lomda-social-myers2",pod:22,total:34,ord:2,when:"מפגשים 3–4 · עמ׳ 118–140"},
+  {type:"ספר הקורס · חובה",title:"מאיירס פרק 3 (חלק א׳): תפיסה ושיפוט חברתי",sub:"הטרמה, זיכרון, ביטחון יתר, היריסטיקות ואשליית שליטה",href:"social/myers3.html",key:"lomda-social-myers3",pod:18,total:36,ord:3,when:"מפגשים 5–6 · עמ׳ 91–119"},
+  {type:"ספר הקורס · חובה",title:"מאיירס פרק 2: העצמי בעולם החברתי",sub:"מושג העצמי, תרבות, הערכה עצמית, שליטה והטיה לטובת העצמי",href:"social/myers4.html",key:"lomda-social-myers4",pod:17,total:44,ord:4,when:"מפגשים 7–8 · עמ׳ 39–89"},
+  {type:"ספר הקורס · חובה",title:"מאיירס כרך ב׳ פרק 9: דעות קדומות",sub:"סטראוטיפים, זהות חברתית, מקורות קוגניטיביים ואיום הסטראוטיפ",href:"social/myers7.html",key:"lomda-social-myers7",total:38,ord:5,when:"מפגשים 9–10 · עמ׳ 372–426"},
+  {type:"ספר הקורס · חובה",title:"מאיירס פרק 4: התנהגות ועמדות",sub:"מתי עמדות מנבאות, רגל בדלת, דיסוננס, תפיסה עצמית והצדקת יתר",href:"social/myers5.html",key:"lomda-social-myers5",total:36,ord:6,when:"מפגשים 11–13 · עמ׳ 143–174"},
+  {type:"ספר הקורס · חובה",title:"מאיירס פרק 7: שכנוע",sub:"מסלול מרכזי והיקפי, מקור, מסר, ערוץ, קהל, כתות וחיסון עמדות",href:"social/myers6.html",key:"lomda-social-myers6",total:42,ord:6.5,when:"מפגשים 11–13 · עמ׳ 268–314"}
+ ]},
+ {id:"dev",name:"פסיכולוגיה התפתחותית א'",tag:"פסיכולוגיה",items:[
+  {title:"פרק 1 - היסטוריה, תיאוריה ואסטרטגיות מחקר",sub:"עמ' \u20663–13\u2069, \u206634–40\u2069, \u206642–64\u2069",href:"dev/ch1.html",key:"lomda-dev-ch1",pod:15,total:60,ord:1,when:"שיעור 20.10 + 3.11 · מבוא",date:"2026-10-20"},
+  {title:"פרק 2 - יסודות גנטיים וסביבתיים",sub:"עמ' \u206692–111\u2069",href:"dev/ch2.html",key:"lomda-dev-ch2",pod:18,total:50,ord:2,when:"שיעור 10.11 + 17.11 · ההקשרים הסביבתיים",date:"2026-11-10"},
+  {title:"פרק 5 - למידה, התפתחות מוטורית ותפיסה בינקות",sub:"עמ' \u2066245–274\u2069",href:"dev/ch5.html",key:"lomda-dev-ch5",pod:16,total:48,ord:3,when:"שיעור 24.11 · יחידה א־סינכרונית",date:"2026-11-24"},
+  {title:"פרק 6 - פיאז'ה בינקות ומבחני משכל מוקדמים",sub:"עמ' \u2066279–297\u2069, \u2066311–319\u2069",href:"dev/ch6.html",key:"lomda-dev-ch6",pod:15,total:45,ord:4,when:"שיעור 1.12 + 8.12 · התפתחות קוגניטיבית",date:"2026-12-01"},
+  {title:"פרק 7 - רגשות, מזג והיקשרות בינקות",sub:"עמ' \u2066341–381\u2069",href:"dev/ch7.html",key:"lomda-dev-ch7",total:62,ord:8,when:"שיעור 5.1.27 · יחידה א־סינכרונית (מזג)",date:"2027-01-05"},
+  {type:"מאמר · קריאת חובה",en:true,title:"VI. Sensitive Periods",sub:"תקופות רגישות: מה מלמדים ילדים שגדלו במוסדות",href:"dev/sensitive.html",key:"lomda-dev-sp",total:56,ord:5,when:"שיעור 15.12 · חסך אימהי",date:"2026-12-15"},
+  {type:"מאמר · קריאת חובה",en:true,title:"Evidence for Infants' Internal Working Models of Attachment",sub:"עדות למודלים פנימיים עובדים של היקשרות אצל תינוקות",href:"dev/iwm.html",key:"lomda-dev-iwm",total:26,ord:6,when:"שיעור 22.12 · תיאוריית ההתקשרות",date:"2026-12-22"},
+  {type:"מאמר · רשימת קריאה",en:true,title:"Balancing the Family and the Collective in Raising Children: Why Communal Sleeping in Kibbutzim Was Predestined to End",sub:"הלינה המשותפת בקיבוצים והיקשרות",href:"dev/kibbutz.html",key:"lomda-dev-kibbutz",total:59,ord:7,when:"שיעור 29.12 · נוכחות חובה + צפייה בסרט + תרגיל כיתה",date:"2026-12-29"},
+  {type:"מאמר · רשימת קריאה",en:true,title:"Impact of parents mobile device use on parent-child interaction: A literature review",sub:"הורים, סמארטפונים ואינטראקציה עם הילד",href:"dev/phones.html",key:"lomda-dev-phones",total:55,ord:9,when:"שיעור 12.1.27 · הורים וילדים במסכים",date:"2027-01-12"}
+ ]},
+ {id:"phys",name:"יסודות פיזיולוגיים של התנהגות",tag:"פסיכולוגיה",items:[
+  {title:"פרק 1 - מבוא",sub:"עמ' \u206617–43\u2069",href:"phys/ch1.html",key:"lomda-phys-ch1",pod:18,total:39,ord:1,when:"שבועות 1–2"},
+  {title:"פרק 2 - תאי מערכת העצבים, מבנם ותפקודיהם",sub:"עמ' \u206645–92\u2069",href:"phys/ch2.html",key:"lomda-phys-ch2",pod:18,total:53,ord:2,when:"שבועות 3–8"},
+  {title:"פרק 3 - מבנה מערכת העצבים",sub:"עמ' \u206693–138\u2069",href:"phys/ch3.html",key:"lomda-phys-ch3",total:44,ord:3,when:"שבועות 9–10"},
+  {title:"פרק 4 - פסיכופרמקולוגיה",sub:"עמ' \u2066139–184\u2069",href:"phys/ch4.html",key:"lomda-phys-ch4",total:48,ord:4,when:"שבוע 11"},
+  {title:"פרק 5 - שיטות וגישות במחקר",sub:"עמ' \u2066185–226\u2069",href:"phys/ch5.html",key:"lomda-phys-ch5",total:46,ord:5,when:"שבוע 12"}
+ ]},
+ {id:"mkt",name:"מבוא לניהול השיווק",tag:"מנהל עסקים",items:[
+  {title:"פרק 1 - הגדרת השיווק על פי המציאות החדשה",sub:"עמ' \u206623–41\u2069",href:"mkt/ch1.html",key:"lomda-mkt-ch1",total:18,ord:1,when:"שיעור 25.10 · מבוא ומושגי יסוד"},
+  {title:"ניתוח הסביבה והתכנון האסטרטגי",sub:"פרק 2 עמ' \u206647–55\u2069 · פרק 3 עמ' \u206678–85\u2069 · פרק 7 עמ' \u2066170–176\u2069",href:"mkt/env.html",key:"lomda-mkt-env",total:16,ord:2,when:"שיעור 1.11 · SWOT, PEST ותחרות"},
+  {title:"פרק 3 - מחקר שיווקי וחיזוי ביקושים",sub:"עמ' \u206665–77\u2069",href:"mkt/research.html",key:"lomda-mkt-research",pod:19,total:18,ord:3,when:"שיעור 8.11 (משוער) · מחקר שיווקי",date:"2026-11-08"},
+  {title:"פרק 5 - ניתוח שווקים צרכניים ועסקיים",sub:"עמ' \u2066109–135\u2069",href:"mkt/ch5.html",key:"lomda-mkt-ch5",pod:18,total:28,ord:6,when:"שיעור 15.11 (משוער) · התנהגות צרכנים",date:"2026-11-15"},
+  {title:"פרק 6 - זיהוי פלחי שוק ושוקי מטרה",sub:"עמ' \u2066143–156\u2069",href:"mkt/ch6.html",key:"lomda-mkt-ch6",pod:14,total:17,ord:7,when:"שיעור 22.11 (משוער) · פילוח ושוק מטרה",date:"2026-11-22"},
+  {title:"פרק 7 - בניית מיצוב המותג",sub:"עמ' \u2066161–169\u2069",href:"mkt/ch7.html",key:"lomda-mkt-ch7",pod:22,total:15,ord:8,when:"שיעור 29.11 (משוער) · מיצוב ובידול",date:"2026-11-29"},
+  {title:"מיתוג, ערך מותג ומחזור חיי המוצר",sub:"פרק 8 עמ' \u2066180–193\u2069 · פרק 9 עמ' \u2066212\u2069, \u2066222–224\u2069",href:"mkt/brand.html",key:"lomda-mkt-brand",pod:13,total:17,ord:9,when:"שיעור 6.12 (משוער) · מוצר ומיתוג",date:"2026-12-06"},
+  {title:"פרק 9 - אסטרטגיית מוצר: רמות, סיווג ובידול",sub:"עמ' \u2066203–208\u2069",href:"mkt/product.html",key:"lomda-mkt-product",pod:16,total:11,ord:10,when:"שיעור 13.12 (משוער) · אסטרטגיית מוצר",date:"2026-12-13"},
+  {title:"פרק 11 - אסטרטגיות ותוכניות המחרה",sub:"עמ' \u2066250–263\u2069, \u2066265\u2069",href:"mkt/price.html",key:"lomda-mkt-price",pod:18,total:18,ord:11,when:"שיעור 20.12 (משוער) · המחרה",date:"2026-12-20"},
+  {title:"ערוצי שיווק, קמעונות ולוגיסטיקה",sub:"פרק 12 עמ' \u2066274–276\u2069, \u2066285–286\u2069 · פרק 13 עמ' \u2066294–306\u2069",href:"mkt/channels.html",key:"lomda-mkt-channels",total:15,ord:12,when:"שיעור 27.12 (משוער) · ערוצים וקמעונות",date:"2026-12-27"},
+  {title:"תקשורת שיווקית: המונים ודיגיטל",sub:"פרק 14 עמ' \u2066326–329\u2069 · פרק 15 עמ' \u2066340–347\u2069 · פרק 16 עמ' \u2066352–362\u2069",href:"mkt/comm.html",key:"lomda-mkt-comm",total:17,ord:13,when:"שיעור 3.1 (משוער) · תקשורת שיווקית",date:"2027-01-03"},
+ ]}
+];

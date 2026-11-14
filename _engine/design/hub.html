@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>לומדות פסיכולוגיה ומנהל עסקים</title>
+<meta name="description" content="לומדות אינטראקטיביות לקורסים בפסיכולוגיה ומנהל עסקים">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+__FONTS__
+<link rel="stylesheet" href="../shared/hub-base.css">
+<link rel="stylesheet" href="skin.css">
+</head>
+<body>
+<header class="site">
+ <div class="in site-in">
+  <a class="brand" href="./" id="brand" aria-label="לומדות, דף הבית"><span class="mark" aria-hidden="true">ל</span><span class="bt"><b>לומדות</b><small>פסיכולוגיה ומנהל עסקים</small></span></a>
+  <span class="term">רופין · שנה א' · סמסטר א'</span>
+ </div>
+</header>
+<main><div class="in" id="view"></div></main>
+<script>
+const ICON={
+ mgmt:'<rect x="9" y="2.5" width="6" height="4.5" rx="1"/><rect x="2.5" y="16.5" width="5.5" height="4.5" rx="1"/><rect x="9.25" y="16.5" width="5.5" height="4.5" rx="1"/><rect x="16" y="16.5" width="5.5" height="4.5" rx="1"/><path d="M12 7v5M5.25 16.5V12h13.5v4.5M12 12v4.5"/>',
+ intro:'<path d="M12 3v18M5.5 5c0 5.5 2.6 8.5 6.5 8.5s6.5-3 6.5-8.5M8.5 21h7"/>',
+ social:'<circle cx="12" cy="5.5" r="2.5"/><circle cx="5" cy="17" r="2.5"/><circle cx="19" cy="17" r="2.5"/><path d="M10.7 7.7L6.3 14.8M13.3 7.7l4.4 7.1M7.5 17h9"/>',
+ dev:'<circle cx="5" cy="15" r="1.6"/><path d="M5 16.6V21"/><circle cx="12" cy="11" r="2"/><path d="M12 13v8"/><circle cx="19" cy="6" r="2.4"/><path d="M19 8.4V21M2 21h20"/>',
+ phys:'<circle cx="12" cy="12" r="3.2"/><path d="M12 8.8V3M9.2 10.4L4 7M14.8 10.4L20 7M10 14.6L6 20M14 14.6l4 5.4M12 3l-2 1.5M12 3l2 1.5M4 7l.5 2.4M20 7l-.5 2.4"/>',
+ mkt:'<path d="M3 4h2.5l2.2 10.5h10l2-7.5H6.6"/><circle cx="9" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/>',
+ cal:'<rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',
+ chev:'<path d="M6 9l6 6 6-6"/>',
+ arrowL:'<path d="M19 12H5M11 6l-6 6 6 6"/>',arrowR:'<path d="M5 12h14M13 6l6 6-6 6"/>',
+ head:'<path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="2.5" y="14" width="5" height="7" rx="1.8"/><rect x="16.5" y="14" width="5" height="7" rx="1.8"/>',
+ doc:'<path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/>',
+ grad:'<path d="M1.5 9L12 4l10.5 5L12 14z"/><path d="M6 11.2V16c3.3 2.4 8.7 2.4 12 0v-4.8M21 10v5"/>',
+ book:'<path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H11v17H5.5A1.5 1.5 0 0 0 4 21.5zM20 4.5A1.5 1.5 0 0 0 18.5 3H13v17h5.5a1.5 1.5 0 0 1 1.5 1.5z"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>'
+};
+const ic=k=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[k]}</svg>`;
+/*COURSES*/
+const ALL=COURSES.flatMap(c=>c.items.map(it=>Object.assign({course:c},it)));
+function load(key){try{return JSON.parse(localStorage.getItem(key)||"null")}catch(e){return null}}
+function stats(key){const s=load(key);if(!s||!s.q)return null;const v=Object.values(s.q);if(!v.some(x=>x.n))return null;return v.filter(x=>x.c>=2).length}
+const pct=it=>{const m=stats(it.key);return m==null?null:Math.min(100,Math.round(100*m/it.total))};
+const coursePct=c=>{const tot=c.items.reduce((a,i)=>a+i.total,0);if(!tot)return 0;return Math.round(100*c.items.reduce((a,i)=>a+(stats(i.key)||0),0)/tot)};
+const soon=d=>{if(!d)return "";const t=new Date(d+"T00:00"),now=new Date();now.setHours(0,0,0,0);const n=Math.round((t-now)/864e5);return n<0||n>14?"":n===0?"היום":n===1?"מחר":`בעוד ${n} ימים`};
+const view=document.getElementById("view");
+const word=n=>n===0?"אין עדיין לומדות":n===1?"לומדה אחת":`${n} לומדות`;
+const pods=items=>items.filter(i=>i.pod).length;
+const SHORT={mgmt:"מבוא לניהול",intro:"מבוא לפסיכולוגיה",social:"פסיכולוגיה חברתית",dev:"פסיכולוגיה התפתחותית",phys:"יסודות פיזיולוגיים",mkt:"ניהול השיווק"};
+const DAYS=["א׳","ב׳","ג׳","ד׳","ה׳","ו׳","ש׳"];
+let SCHED=null,wOff=0,wOpen=false;try{wOpen=localStorage.getItem("week-open")==="1"}catch(e){}
+fetch("schedule.json",{cache:"no-cache"}).then(r=>r.json()).then(d=>{SCHED=d.lessons||[];renderWeek()}).catch(()=>{SCHED=[];renderWeek()});
+const dm=iso=>{const [y,m,d]=iso.split("-").map(Number);return `${d}.${m}`};
+const dayOf=iso=>DAYS[new Date(iso+"T00:00").getDay()];
+const isoOf=t=>`${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,"0")}-${String(t.getDate()).padStart(2,"0")}`;
+function weekRange(off){const t=new Date();t.setHours(0,0,0,0);t.setDate(t.getDate()-t.getDay()+7*off);const e=new Date(t);e.setDate(e.getDate()+6);return [isoOf(t),isoOf(e)]}
+const ITEM=k=>ALL.find(i=>i.key===k)||null;
+const acts=(it,f={})=>`<a class="act main" href="${it.href}${f.t?"#topic-"+f.t:""}">${ic("book")}<span>לומדה</span></a><a class="act" href="${it.href}${f.abs?"#abs":"#sum"+(f.sec?"-"+f.sec:"")}">${ic("doc")}<span>${f.abs?"תקציר":"סיכום"}</span></a><a class="act" href="${it.href}#quiz">${ic("grad")}<span>מבחן</span></a>${it.pod?`<a class="act" href="${it.href}#pod" aria-label="פודקאסט, ${it.pod} דקות">${ic("head")}<span>${it.pod} דק׳</span></a>`:""}`;
+function lessonHTML(l,a,b){
+  const moved=l.status==="נדחה"&&l.newDate, here=moved&&l.newDate>=a&&l.newDate<=b;
+  const date=here?l.newDate:l.date, off=l.status==="בוטל"||(moved&&!here);
+  let tags="";
+  if(l.status==="בוטל")tags+=`<span class="tag warn">בוטל</span>`;
+  else if(moved&&!here)tags+=`<span class="tag warn">נדחה ל־${dm(l.newDate)}</span>`;
+  else if(here)tags+=`<span class="tag">נדחה מ־${dm(l.date)}</span>`;
+  if(l.est&&!l.status)tags+=`<span class="tag est">תאריך משוער</span>`;
+  const mods=l.mods.map(ITEM).filter(Boolean);
+  return `<li class="les${off?" off":""}" style="--c:var(--${l.c})"><div class="ldate"><b>${dayOf(date)}</b><span>${dm(date)}</span></div><div class="lmain"><div class="lhd"><span class="lcourse">${SHORT[l.c]} · שיעור ${l.n}</span>${tags}</div>
+   <div class="ltop">${l.topic}${l.note&&!l.est?` · ${l.note}`:""}</div>
+   ${mods.length?`<div class="lmods">${mods.map(it=>{const f=(l.focus||{})[it.key]||{};return `<div class="lmod"><span class="t"><span${it.en?' dir="ltr" lang="en"':""}>${it.title}</span><small>${it.sub}${f.sec?` · השבוע: סעיף ${f.sec} בסיכום`:""}${f.abs?" · השבוע: רק כותרת ותקציר":""}</small></span><span class="acts">${acts(it,f)}</span></div>`}).join("")}</div>`:`<div class="lnone">אין לומדה לשיעור הזה</div>`}</div></li>`;
+}
+function renderWeek(){
+  const box=document.getElementById("week");if(!box)return;
+  const [a,b]=weekRange(wOff);
+  const L=(SCHED||[]).filter(l=>(l.date>=a&&l.date<=b)||(l.newDate&&l.newDate>=a&&l.newDate<=b)).sort((x,y)=>((x.newDate>=a&&x.newDate<=b)?x.newDate:x.date).localeCompare((y.newDate>=a&&y.newDate<=b)?y.newDate:y.date));
+  const live=L.filter(l=>l.status!=="בוטל"&&!(l.status==="נדחה"&&l.newDate&&!(l.newDate>=a&&l.newDate<=b))).length;
+  const lab=wOff===0?"השבוע":wOff===1?"שבוע הבא":wOff===-1?"שבוע שעבר":wOff>0?`בעוד ${wOff} שבועות`:`לפני ${-wOff} שבועות`;
+  box.classList.toggle("open",wOpen);
+  box.innerHTML=`<button class="wtop" id="wtg" aria-expanded="${wOpen}"><span class="wico">${ic("cal")}</span><span class="wtt"><h2>מה לומדים השבוע?</h2><small><span dir="ltr">${dm(a)}–${dm(b)}</span> · ${SCHED==null?"טוען…":live?`${live} שיעורים`:"אין שיעורים"}${wOff?` · ${lab}`:""}</small></span><span class="wchev">${ic("chev")}</span></button>
+   ${wOpen?`<div class="wbody"><div class="wh"><div class="wnav"><button id="wprev">${ic("arrowR")}<span>הקודם</span></button><span class="wlab">${lab}</span><button id="wnext"><span>הבא</span>${ic("arrowL")}</button></div></div>
+   ${L.length?`<ol class="lessons">${L.map(l=>lessonHTML(l,a,b)).join("")}</ol>`:`<div class="wempty">${SCHED==null?"טוען את מערכת השעות…":"אין שיעורים בשבוע הזה."}</div>`}
+   ${wOff?`<div class="wnav center"><button id="wnow">חזרה לשבוע הנוכחי</button></div>`:""}
+   <div class="wfoot">לפי הסילבוסים. ביטולים ודחיות מתעדכנים אוטומטית מהודעות המכללה.</div></div>`:""}`;
+  box.classList.remove("swap");void box.offsetWidth;box.classList.add("swap");
+  box.querySelector("#wtg").onclick=()=>{wOpen=!wOpen;try{localStorage.setItem("week-open",wOpen?"1":"0")}catch(e){}renderWeek()};
+  const g=(id,f)=>{const e=box.querySelector(id);if(e)e.onclick=f};
+  g("#wprev",()=>{wOff--;renderWeek()});g("#wnext",()=>{wOff++;renderWeek()});g("#wnow",()=>{wOff=0;renderWeek()});
+}
+function lastActive(){
+  let best=null;
+  for(const it of ALL){const s=load(it.key);if(!s||!s.q)continue;const t=Math.max(0,...Object.values(s.q).map(x=>x.t||0));if(t&&(!best||t>best.t))best={it,t,s}}
+  return best;
+}
+function resumeHTML(){
+  const r=lastActive();if(!r)return "";
+  const it=r.it,p=pct(it)||0,at=r.s.at;
+  return `<a class="resume" href="${it.href}" style="--c:var(--${it.course.id})"><span class="rk">להמשיך מאיפה שעצרת</span><span class="rt"${it.en?' dir="ltr" lang="en"':""}>${it.title}</span><span class="rs">${it.course.name}${at&&at.ti!=null?` · נושא ${at.ti+1}`:""} · ${p}%</span><span class="rgo">${ic("arrowL")}</span></a>`;
+}
+function home(){
+  const n=ALL.length,np=pods(ALL);
+  view.innerHTML=`<div class="v-home">
+  <section class="intro"><div class="intro-text"><h1>חובות הקריאה של הסמסטר, בלומדות קצרות וברורות</h1><p class="lede">כל קריאת חובה הפכה ללומדה: קטעים קצרים עם איורים, בדיקת הבנה אחרי כל קטע, כרטיסיות לימוד, מפת חשיבה, סיכום, פודקאסט ומבחן מסכם עם ציון. מה שטועים בו חוזר בניסוח אחר עד שהוא נקלט.</p></div>
+   <dl class="facts"><div><dt>${n}</dt><dd>לומדות</dd></div><div><dt>${COURSES.length}</dt><dd>קורסים</dd></div><div><dt>${np}</dt><dd>פודקאסטים</dd></div></dl></section>
+  ${resumeHTML()}
+  <section id="week" class="week" aria-label="מערכת השבוע"></section>
+  <section class="csec"><div class="sec-h"><h2>הקורסים</h2><span>${COURSES.length} קורסים · ${word(n)}</span></div>
+  <div class="courses">${COURSES.map((c,k)=>{const p=coursePct(c);return `<a class="course" href="#${c.id}" style="--c:var(--${c.id});--i:${k}">
+    <span class="cicon">${ic(c.id)}</span><span class="ctag">${c.tag}</span><h3>${c.name}</h3>
+    <span class="cstats"><span>${word(c.items.length)}</span>${pods(c.items)?`<span>${pods(c.items)} פודקאסטים</span>`:""}</span>
+    <span class="cprog"><span class="bar"><i style="width:${p}%"></i></span><b>${p}%</b></span>
+    <span class="copen"><span>לקורס</span>${ic("arrowL")}</span></a>`}).join("")}</div></section>
+  <footer class="sfoot"><span>ההתקדמות נשמרת במכשיר שלכם בלבד.</span><span>חומר חדש עולה במהלך הסמסטר.</span></footer></div>`;
+  renderWeek();
+}
+function course(c){
+  const sorted=[...c.items].sort((a,b)=>(a.ord||99)-(b.ord||99)),p=coursePct(c);
+  view.innerHTML=`<div class="v-course" style="--c:var(--${c.id})"><nav class="crumbs"><a href="./" id="back">הקורסים</a><span aria-hidden="true">/</span><span>${c.name}</span></nav>
+   <header class="chero"><span class="cicon">${ic(c.id)}</span><div class="ch-t"><span class="ctag">${c.tag}</span><h1>${c.name}</h1><span class="cstats"><span>${word(c.items.length)}</span>${pods(c.items)?`<span>${pods(c.items)} פודקאסטים</span>`:""}<span>התקדמות ${p}%</span></span></div><span class="cprog"><span class="bar"><i style="width:${p}%"></i></span></span></header>
+   <p class="howto">בכל לומדה: קוראים קטע קצר ועונים על שאלת הבנה. בסוף כל נושא יש מבחן קצר, ובסוף הלומדה מבחן מסכם עם ציון. מהסבב השני המבחנים עוברים לשאלות הבנה על מקרים וסיפורים.</p>
+   ${c.items.length?`<ol class="mlist">${sorted.map((it,k)=>{const q=pct(it),sn=soon(it.date);return `<li class="mrow" style="--i:${k}"><div class="mr-main"><span class="mtype">${it.type||"לומדת חובת קריאה"}</span>
+     <a class="mname" href="${it.href}"${it.en?' dir="ltr" lang="en"':""}>${it.title}</a><span class="msub">${it.sub}</span>
+     ${it.when?`<span class="mwhen">${ic("cal")}<span>${it.when}</span>${sn?`<span class="soon">${sn}</span>`:""}</span>`:""}</div>
+     <div class="mr-side"><div class="mprog"><span class="bar"><i style="width:${q||0}%"></i></span><small>${q==null?"לא התחלת":q>=80?"שולט בחומר":"בתהליך"} · ${q||0}%</small></div><div class="acts">${acts(it)}</div></div></li>`}).join("")}</ol>`
+   :`<div class="empty">${ic("clock")}<span>הלומדה הראשונה בקורס הזה תעלה בקרוב</span></div>`}</div>`;
+  document.getElementById("back").onclick=e=>{e.preventDefault();location.hash=""};
+}
+function route(){const id=location.hash.slice(1),c=COURSES.find(x=>x.id===id);c?course(c):home();scrollTo({top:0,behavior:"instant"})}
+document.getElementById("brand").onclick=e=>{e.preventDefault();location.hash=""};
+addEventListener("hashchange",route);route();
+</script>
+</body>
+</html>

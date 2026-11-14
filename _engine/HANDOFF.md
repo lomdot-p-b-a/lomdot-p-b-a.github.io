@@ -1,5 +1,12 @@
 # הוראות המשך לשיחה הבאה (Claude)
 
+## עיצוב חדש (נובמבר 2026): קודם כול קראו את זה
+- העיצוב של הלומדות ושל דף הבית נמצא ב־`_engine/design/`: `mod-base.css` (לומדות), `hub-base.css` + `hub.html` (דף הבית), `skin.css` (צבעים וטוקנים משותפים), `courses.js` (מערך COURSES של דף הבית).
+- `app.js` הוא המקור של התנהגות הלומדה: מושגים לחיצים (tiles / cpt / def הופכים לכרטיסים, חוץ מ״על מה הנושא״), כרטיסיות לימוד, מפת חשיבה, מבחנים והנפשות.
+- כרטיסיות ומפות נבנות אוטומטית מההגדרות של הלומדה. קובץ ידני גובר: `mN_cards.js` (`const CARDS=[{t,f,q,b,ex}]`) או `mN_maps.js` (`const MAPS=[{id,topic,title,sub,root:{n,en,d,c:[...]}}]`). דוגמאות: m5_cards.js, m31_maps.js.
+- בנייה של הכול: `python _engine/rebuild_all.py` (בונה מחדש את head.html, את כל הלומדות ואת index.html). אין לערוך את index.html ישירות; מוסיפים לומדה ל־`design/courses.js` ובונים מחדש.
+- build.py קורא קבצים ב־UTF-8, ו־`node --check` רץ רק אם node מותקן.
+
 ## האתר
 - רפו: lomdot-p-b-a/lomdot-p-b-a.github.io (GitHub Pages, ענף main). אתר: https://lomdot-p-b-a.github.io
 - `index.html` = מרכז הקורסים. מערך `COURSES` עם הקורסים mgmt, intro, social, dev, phys. כל לומדה היא פריט `{title,sub,href,key,total[,type,en]}`.
