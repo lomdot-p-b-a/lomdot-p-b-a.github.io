@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02",
+ "updated": "2026-11-18",
  "note": "cancellations: status=בוטל; postponed: status=נדחה + newDate (YYYY-MM-DD)",
  "lessons": [
   {
@@ -70,7 +70,7 @@
    ],
    "status": "",
    "newDate": "",
-   "note": ""
+   "note": "יחידה א־סינכרונית במקום שיעור (הודעת המרצה 18/11, פתוחה עד 1/12)"
   },
   {
    "c": "dev",
